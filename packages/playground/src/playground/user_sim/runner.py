@@ -27,6 +27,7 @@ from playground.types import (
 )
 from playground.user_sim.chatbot_labels import chatbot_display_name
 from playground.user_sim.kickoff import get_goal_context
+from playground.user_sim.seed import ChatSeed, resolve_chat_seed
 from playground.user_sim.port import (
     ChatSessionPort,
     normalize_agent_turn,
@@ -167,13 +168,18 @@ def run_playground(
     persona_yaml_path: Optional[str] = None,
     repo_root: Optional[Path] = None,
     job_dir: Optional[Path] = None,
+    seed: Any = None,
 ) -> PlaygroundResult:
     def emit(event: Dict[str, Any]) -> None:
         if on_event is not None:
             on_event(event)
 
     assert_budget_allows_request(job_dir)
+    # A seeded trial replays one dataset row; an unseeded one lets the persona
+    # invent its own need, which stays the default for ad-hoc runs.
+    seed = resolve_chat_seed(seed)
     goal_context = get_goal_context("scenario_default")
+    kickoff_text = seed.kickoff_text() if seed is not None else goal_context.description
     chatbot_label = chatbot_display_name(config.application_id)
     task_bundle = _load_task_bundle(task_path=task_path, repo_root=repo_root)
     task_config = _load_chatbot_runtime_config(task_path=task_path, repo_root=repo_root)
@@ -191,12 +197,13 @@ def run_playground(
         persona,
         persona_yaml_path=persona_yaml_path,
         task_bundle=task_bundle,
+        kickoff=kickoff_text,
     )
     prompts = prompt_bundle(
         persona,
         persona_yaml_path=persona_yaml_path,
         task_bundle=task_bundle,
-        task_prompt=goal_context.description,
+        task_prompt=kickoff_text,
     )
     report_prompt = assemble_report_system_prompt(
         persona,
@@ -204,6 +211,8 @@ def run_playground(
         task_bundle=task_bundle,
     )
     emit({"type": "prompts", "prompts": prompts})
+    if seed is not None:
+        emit({"type": "seed", "seed": seed.to_dict()})
 
     transcript: List[PlaygroundTurn] = []
     action = sim.opening_action()
@@ -262,6 +271,7 @@ def run_playground(
         transcript=transcript,
         schema=self_report_schema,
         chatbot_label=chatbot_label,
+        seed=seed,
     )
 
     result = _chat_result_with_usage(
@@ -292,6 +302,7 @@ async def run_playground_async(
     persona_yaml_path: Optional[str] = None,
     repo_root: Optional[Path] = None,
     job_dir: Optional[Path] = None,
+    seed: Any = None,
 ) -> PlaygroundResult:
     """Like :func:`run_playground` but awaits async Harbor sidecar turns."""
 
@@ -300,7 +311,11 @@ async def run_playground_async(
             on_event(event)
 
     assert_budget_allows_request(job_dir)
+    # A seeded trial replays one dataset row; an unseeded one lets the persona
+    # invent its own need, which stays the default for ad-hoc runs.
+    seed = resolve_chat_seed(seed)
     goal_context = get_goal_context("scenario_default")
+    kickoff_text = seed.kickoff_text() if seed is not None else goal_context.description
     chatbot_label = chatbot_display_name(config.application_id)
     task_bundle = _load_task_bundle(task_path=task_path, repo_root=repo_root)
     task_config = _load_chatbot_runtime_config(task_path=task_path, repo_root=repo_root)
@@ -318,12 +333,13 @@ async def run_playground_async(
         persona,
         persona_yaml_path=persona_yaml_path,
         task_bundle=task_bundle,
+        kickoff=kickoff_text,
     )
     prompts = prompt_bundle(
         persona,
         persona_yaml_path=persona_yaml_path,
         task_bundle=task_bundle,
-        task_prompt=goal_context.description,
+        task_prompt=kickoff_text,
     )
     report_prompt = assemble_report_system_prompt(
         persona,
@@ -331,6 +347,8 @@ async def run_playground_async(
         task_bundle=task_bundle,
     )
     emit({"type": "prompts", "prompts": prompts})
+    if seed is not None:
+        emit({"type": "seed", "seed": seed.to_dict()})
 
     transcript: List[PlaygroundTurn] = []
     action = sim.opening_action()
@@ -389,6 +407,7 @@ async def run_playground_async(
         transcript=transcript,
         schema=self_report_schema,
         chatbot_label=chatbot_label,
+        seed=seed,
     )
 
     result = _chat_result_with_usage(

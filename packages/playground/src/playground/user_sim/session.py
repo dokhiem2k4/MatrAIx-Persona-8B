@@ -48,6 +48,7 @@ class UserSimSession:
         *,
         persona_yaml_path: Optional[str] = None,
         task_bundle: Optional[TaskContentBundle] = None,
+        kickoff: str = "",
     ) -> None:
         self._client = client
         self._persona = persona
@@ -57,6 +58,13 @@ class UserSimSession:
             persona_yaml_path=persona_yaml_path,
             task_bundle=task_bundle,
         )
+        # The kickoff has to be in the system prompt to have any effect. It used
+        # to be built by prompt_bundle() for the recorded ``prompts`` event only,
+        # which meant the simulator never actually saw it. Same heading here as
+        # there, so what is recorded is what was sent.
+        kickoff = (kickoff or "").strip()
+        if kickoff:
+            system = "{}\n\n## Application kickoff\n{}".format(system, kickoff)
         self._messages: List[Dict[str, Any]] = [{"role": "system", "content": system}]
         self.system_prompt = system
 

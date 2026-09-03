@@ -33,6 +33,7 @@ class PersonaUserSim(PersonaMixin, BaseAgent):
         logs_dir: Path,
         persona_path: str | None = None,
         persona_template_path: str | None = None,
+        seed: object | None = None,
         **kwargs,
     ) -> None:
         self._init_persona(
@@ -40,6 +41,10 @@ class PersonaUserSim(PersonaMixin, BaseAgent):
             AgentName.PERSONA_USER_SIM.value,
             persona_template_path=persona_template_path,
         )
+        # The stimulus row for this trial, bound per agent entry in the job
+        # config alongside persona_path. Absent means the persona invents its
+        # own need, which is the default for ad-hoc runs.
+        self._seed = seed
         super().__init__(logs_dir=logs_dir, **kwargs)
 
     async def setup(self, environment: BaseEnvironment) -> None:
@@ -63,6 +68,7 @@ class PersonaUserSim(PersonaMixin, BaseAgent):
             self._persona,
             model_name=self.model_name,
             on_event=on_event,
+            seed=self._seed,
         )
         from playground.llm_usage import apply_usage_dict_to_context
 

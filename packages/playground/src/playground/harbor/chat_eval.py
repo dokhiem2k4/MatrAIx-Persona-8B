@@ -204,10 +204,12 @@ class HarborSidecarChatSession:
         *,
         runtime: ChatbotTaskConfig,
         api_url: str,
+        headers: Optional[Dict[str, str]] = None,
     ) -> None:
         self._environment = environment
         self.config = config
         self.runtime = runtime
+        self._headers = dict(headers or {})
         self._api_url = api_url.rstrip("/")
         self._session_id: Optional[str] = None
         self.turns: List[Dict[str, Any]] = []
@@ -225,14 +227,22 @@ class HarborSidecarChatSession:
         url = "{}{}".format(self._api_url, path)
         payload = json.dumps(body or {}, ensure_ascii=False, separators=(",", ":"))
         encoded = base64.b64encode(payload.encode("utf-8")).decode("ascii")
+        # Task-declared auth/session headers. Base64 the mapping so a secret is
+        # never spliced into the shell command line, where it would show up in
+        # process listings and command logs.
+        encoded_headers = base64.b64encode(
+            json.dumps(self._headers, separators=(",", ":")).encode("utf-8")
+        ).decode("ascii")
         script = textwrap.dedent(
             """
             import base64, json, urllib.error, urllib.request
             body = base64.b64decode({encoded!r})
+            headers = {{"Content-Type": "application/json", "Accept": "application/json"}}
+            headers.update(json.loads(base64.b64decode({encoded_headers!r}).decode("utf-8")))
             req = urllib.request.Request(
                 {url!r},
                 data=body if {method!r} != "GET" else None,
-                headers={{"Content-Type": "application/json", "Accept": "application/json"}},
+                headers=headers,
                 method={method!r},
             )
             try:
@@ -242,7 +252,12 @@ class HarborSidecarChatSession:
                 detail = exc.read().decode("utf-8", errors="replace")
                 raise SystemExit("HTTP {{}}: {{}}".format(exc.code, detail)) from exc
             """
-        ).format(encoded=encoded, url=url, method=method)
+        ).format(
+            encoded=encoded,
+            encoded_headers=encoded_headers,
+            url=url,
+            method=method,
+        )
         command = "python3 -c {}".format(shlex.quote(script.strip()))
         # Retry transient sidecar/upstream failures (e.g. OpenAI connection blips
         # under batch concurrency) instead of failing the whole trial.
@@ -468,7 +483,17 @@ def create_harbor_chat_session(
     marker = trial_dir / ".sidecar_api_url"
     if marker.is_file():
         api_url = marker.read_text(encoding="utf-8").strip() or api_url
-    return HarborSidecarChatSession(environment, config, runtime=runtime, api_url=api_url)
+    # The trial directory name is unique per trial and traces straight back to
+    # the artifacts, which makes it the right value for a per-conversation
+    # session header.
+    headers = runtime.connection.resolve_headers(trial_id=trial_dir.name)
+    return HarborSidecarChatSession(
+        environment,
+        config,
+        runtime=runtime,
+        api_url=api_url,
+        headers=headers,
+    )
 
 
 def harbor_output_artifacts_from_result(
@@ -476,6 +501,7 @@ def harbor_output_artifacts_from_result(
     *,
     session_id: str,
     transcript_payload: Dict[str, Any],
+    seed: Any = None,
 ) -> Dict[str, Dict[str, Any]]:
     application_context = result.config.application_context or result.config.domain
     application_result_payload = {
@@ -484,6 +510,10 @@ def harbor_output_artifacts_from_result(
         "applicationContext": application_context,
         "turnCount": len(result.transcript),
     }
+    # Carry the stimulus alongside the outcome so feedback can be grouped by
+    # intent later without re-reading the job config that produced the trial.
+    if seed is not None:
+        application_result_payload["seed"] = seed.to_dict()
     return {
         "transcript.json": transcript_payload,
         "application_result.json": application_result_payload,
@@ -496,6 +526,7 @@ async def _write_output_artifacts(
     *,
     session: HarborChatSession,
     result: PlaygroundResult,
+    seed: Any = None,
 ) -> None:
     transcript_payload = await session.fetch_conversation_artifact()
     if not isinstance(transcript_payload, dict):
@@ -520,6 +551,7 @@ async def _write_output_artifacts(
         result,
         session_id=session.session_id or "harbor-chat",
         transcript_payload=transcript_payload,
+        seed=seed,
     )
     for filename, payload in artifacts.items():
         with tempfile.NamedTemporaryFile(
@@ -545,6 +577,7 @@ async def run_harbor_chat_eval(
     persona_yaml_path: Optional[str] = None,
     repo_root: Optional[Any] = None,
     job_dir: Optional[Any] = None,
+    seed: Any = None,
 ) -> PlaygroundResult:
     """Async chat eval loop using a Harbor sidecar session."""
     from playground.user_sim.runner import run_playground_async
@@ -560,6 +593,7 @@ async def run_harbor_chat_eval(
         persona_yaml_path=persona_yaml_path,
         repo_root=repo_root,
         job_dir=job_dir,
+        seed=seed,
     )
 
 
@@ -569,6 +603,7 @@ async def run_harbor_chat_eval_for_persona(
     *,
     model_name: str | None = None,
     on_event: Optional[Callable[[Dict[str, Any]], None]] = None,
+    seed: Any = None,
 ) -> tuple[PlaygroundResult, str]:
     """End-to-end Harbor chat eval for one loaded Harbor persona object."""
     from playground.harbor.playground import _repo_root
@@ -585,6 +620,11 @@ async def run_harbor_chat_eval_for_persona(
         repo_root=repo_root,
         model_name=model_name,
     )
+    # Resolve once here so the runner and the artifact writer see the same
+    # seed; resolve_chat_seed is idempotent on an already-built ChatSeed.
+    from playground.user_sim.seed import resolve_chat_seed
+
+    resolved_seed = resolve_chat_seed(seed)
     eval_persona = _eval_persona(persona)
     sut_description = (
         (bundle.context_markdown if bundle is not None else "")
@@ -612,8 +652,11 @@ async def run_harbor_chat_eval_for_persona(
         persona_yaml_path=persona_path,
         repo_root=repo_root,
         job_dir=trial_dir.parent,
+        seed=resolved_seed,
     )
     if on_event is not None:
         on_event({"type": "phase", "phase": "harbor_collecting_artifacts"})
-    await _write_output_artifacts(environment, session=session, result=result)
+    await _write_output_artifacts(
+        environment, session=session, result=result, seed=resolved_seed
+    )
     return result, session.session_id
