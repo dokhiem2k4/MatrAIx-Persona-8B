@@ -7,6 +7,7 @@ import json
 from backend.service.persona_pool_service import PersonaPoolService
 from backend.service.persona_taxonomy import build_production_filter_categories
 from backend.tests.test_persona_1m_pool import _write_tiny_release
+from persona.post_process.unified_dataset.schema import ATTRIBUTE_COUNT
 
 
 def test_build_production_filter_categories_covers_schema(tmp_path, monkeypatch):
@@ -19,7 +20,8 @@ def test_build_production_filter_categories_covers_schema(tmp_path, monkeypatch)
         persona_sources=["wiki", "synthetic"],
     )
     assert cats["personaSources"] == ["wiki", "synthetic"]
-    assert cats["devProfile"]["dimensionCount"] == 1290  # tiny schema still uses ATTRIBUTE_COUNT
+    # Tied to ATTRIBUTE_COUNT, not to the tiny fixture schema built above.
+    assert cats["devProfile"]["dimensionCount"] == ATTRIBUTE_COUNT
     groups = cats["devProfile"]["groups"]
     assert groups
     assert all(group.get("subgroups") for group in groups)

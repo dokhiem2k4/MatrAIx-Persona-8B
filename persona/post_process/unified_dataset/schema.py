@@ -11,7 +11,11 @@ import numpy as np
 import pyarrow as pa
 
 
-ATTRIBUTE_COUNT = 1290
+# Must match len(persona/schema/dimensions.json["dimensions"]). Raising it moves
+# the 4-bit packing boundary (ATTRIBUTE_BYTES 645 -> 646), so any packed index
+# built against the previous count has to be rebuilt -- the released parquet is
+# column-per-dimension and is unaffected.
+ATTRIBUTE_COUNT = 1291
 ATTRIBUTE_BYTES = (ATTRIBUTE_COUNT + 1) // 2
 NULL_BITMAP_BYTES = (ATTRIBUTE_COUNT + 7) // 8
 
@@ -92,7 +96,14 @@ class AttributeCodec:
                 codes[index] = value_map[value]
             except KeyError:
                 overrides.append({"field_index": index, "value": str(value)})
-        packed_codes = codes[0::2] | (codes[1::2] << 4)
+        # Two 4-bit codes per byte. With an odd ATTRIBUTE_COUNT the final byte
+        # has no high nibble, so pad it -- decode_row already reads the low
+        # nibbles as the longer half and ignores the padding.
+        low = codes[0::2]
+        high = codes[1::2]
+        if high.size < low.size:
+            high = np.append(high, np.zeros(low.size - high.size, dtype=np.uint8))
+        packed_codes = low | (high << 4)
         packed_nulls = np.packbits(nulls, bitorder="little")
         return (
             packed_codes.tobytes(),
