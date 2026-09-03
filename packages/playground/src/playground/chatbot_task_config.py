@@ -3,11 +3,14 @@
 from __future__ import annotations
 
 import os
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Mapping
 
 import yaml
+
+_ENV_PLACEHOLDER = re.compile(r"\$\{([A-Za-z_][A-Za-z0-9_]*)\}")
 
 from playground.chatbot_capabilities import (
     ChatbotCapability,
@@ -27,6 +30,39 @@ class ChatbotConnectionConfig:
     legacy_base_url_env: str = ""
     base_url: str = ""
     health_path: str = "/health"
+    # Authored as ``connection.headers`` in chatbot.yaml. Values may reference
+    # ``${ENV_VAR}`` so a shared secret stays in the environment rather than in
+    # a committed task file, and ``${TRIAL_ID}`` for anything the app expects to
+    # differ per conversation (a session key that leaks across trials would let
+    # one trial observe another trial's state).
+    headers: Mapping[str, str] = field(default_factory=dict)
+
+    def resolve_headers(
+        self,
+        env: Mapping[str, str] | None = None,
+        *,
+        trial_id: str = "",
+    ) -> dict[str, str]:
+        """Expand placeholders. A header whose value stays empty is dropped.
+
+        Dropping keeps an unconfigured secret from being sent as the literal
+        string ``${VITA_APP_PASSWORD}``, which reads as a puzzling auth failure
+        instead of an obviously missing variable.
+        """
+        scope = os.environ if env is None else env
+        resolved: dict[str, str] = {}
+        for name, raw in self.headers.items():
+            value = str(raw or "")
+            if "${TRIAL_ID}" in value:
+                value = value.replace("${TRIAL_ID}", trial_id)
+            for match in set(_ENV_PLACEHOLDER.findall(value)):
+                value = value.replace(
+                    "${{{}}}".format(match), str(scope.get(match, "")).strip()
+                )
+            value = value.strip()
+            if value:
+                resolved[str(name)] = value
+        return resolved
 
     def resolve_base_url(self, env: Mapping[str, str] | None = None) -> str:
         scope = env or os.environ
@@ -165,6 +201,10 @@ def _load_from_payload(payload: dict[str, Any]) -> ChatbotTaskConfig:
             legacy_base_url_env=_as_string(connection.get("legacyBaseUrlEnv")),
             base_url=_as_string(connection.get("baseUrl")),
             health_path=_as_string(connection.get("healthPath")) or "/health",
+            headers={
+                str(name): _as_string(value)
+                for name, value in _as_mapping(connection.get("headers")).items()
+            },
         ),
         protocol=ChatbotProtocolConfig(
             method=(_as_string(send.get("method")) or "POST").upper(),

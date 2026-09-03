@@ -10,6 +10,13 @@ connection:
   baseUrlEnv: VITA_ASSISTANT_API_URL
   baseUrl: http://127.0.0.1:3001
   healthPath: /health
+  headers:
+    # Shared app password of the deployed VoiceLab build. Empty env -> header
+    # omitted, which is what the unauthenticated local sidecar wants.
+    x-app-password: ${VITA_APP_PASSWORD}
+    # Vehicle state is keyed by this header. It MUST differ per trial: a shared
+    # value lets one conversation observe cabin state another one changed.
+    x-vehicle-session: ${TRIAL_ID}
 protocol:
   sendMessage:
     method: POST
