@@ -127,6 +127,10 @@ PERSONA_MODEL_KNOB_META: Dict[str, Dict[str, str]] = {
         "label": "Claude Haiku 4.5",
         "description": "Anthropic Claude Haiku 4.5 served through OpenRouter.",
     },
+    "openrouter/google/gemini-3.8-flash": {
+        "label": "Gemini 3.8 Flash",
+        "description": "Google Gemini 3.8 Flash served through OpenRouter.",
+    },
 }
 
 PERSONA_MODEL_OPTIONS = list(PERSONA_MODEL_KNOB_META.keys())
