@@ -8,6 +8,20 @@ from playground.llm_usage import JsonCompletion, usage_from_openai_completion
 
 _FENCE = re.compile(r"```(?:json)?\s*(?P<body>\{.*\})\s*```", re.DOTALL)
 DEFAULT_REQUEST_TIMEOUT_SECONDS = 180.0
+# One initial call plus two retries. Empty completions cluster around long
+# JSON envelopes; three attempts made a 24-trial stage-1 batch come back clean.
+EMPTY_COMPLETION_ATTEMPTS = 3
+
+
+def _log_empty_completion(model: str, attempt: int) -> None:
+    import logging
+
+    logging.getLogger(__name__).warning(
+        "empty completion from %s (attempt %d/%d); retrying",
+        model,
+        attempt,
+        EMPTY_COMPLETION_ATTEMPTS,
+    )
 
 
 def coerce_json(text: str) -> Dict[str, Any]:
@@ -92,8 +106,20 @@ class OpenAIChatClient:
         }
         if openai_model_supports_custom_temperature(self.model):
             kwargs["temperature"] = self.temperature
-        completion = self._client.chat.completions.create(**kwargs)
-        data = coerce_json(completion.choices[0].message.content)
+        # Reasoning models occasionally return an empty completion: the thinking
+        # budget is spent before any content is emitted. It is transient -- the
+        # same prompt succeeds on a retry -- but one occurrence otherwise kills
+        # a whole trial along with everything already spent on it.
+        completion = None
+        content = ""
+        for attempt in range(EMPTY_COMPLETION_ATTEMPTS):
+            completion = self._client.chat.completions.create(**kwargs)
+            content = (completion.choices[0].message.content or "").strip()
+            if content:
+                break
+            if attempt + 1 < EMPTY_COMPLETION_ATTEMPTS:
+                _log_empty_completion(self.model, attempt + 1)
+        data = coerce_json(content)
         usage = usage_from_openai_completion(
             completion, model=self.model, provider=self.provider
         )
