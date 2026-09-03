@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "matraix.trial_evaluation",
+  "contexts": [
+    {
+      "key": "task_outcome.primary",
+      "label": "Task outcome",
+      "contextType": "task_outcome",
+      "facets": [
+        {
+          "key": "outcome_status",
+          "label": "Outcome status",
+          "role": "primary",
+          "kind": "categorical",
+          "value": "partially_resolved"
+        },
+        {
+          "key": "resolution_basis",
+          "label": "Resolution basis",
+          "role": "control",
+          "kind": "categorical",
+          "value": "user_feedback"
+        },
+        {
+          "key": "customer_message_count",
+          "label": "Customer messages",
+          "role": "metric",
+          "kind": "continuous",
+          "value": 4
+        },
+        {
+          "key": "support_message_count",
+          "label": "Vita assistant messages",
+          "role": "metric",
+          "kind": "continuous",
+          "value": 4
+        },
+        {
+          "key": "outcome_reason",
+          "label": "Outcome reason",
+          "role": "explanation",
+          "kind": "textual",
+          "value": "Số điểm 8 phản ánh sự cân bằng giữa một điểm trừ nhỏ ở turn 1 (không hỗ trợ gửi tin nhắn danh bạ, dù hiểu là do hạn chế phần cứng hoặc bảo mật xe) và điểm cộng rất lớn ở turn 2 & 3 khi hệ thống điều khiển xe (điều hòa, kiểm tra pin và áp suất lốp TPMS) hoạt động mượt mà, chính xác tuyệt đối, đáp ứng hoàn hảo tiêu chí hiệu suất cao của một người bận rộn như tôi."
+        }
+      ]
+    },
+    {
+      "key": "user_feedback.primary",
+      "label": "User feedback",
+      "contextType": "user_feedback",
+      "facets": [
+        {
+          "key": "overall_experience_rating",
+          "label": "Overall experience rating",
+          "role": "primary",
+          "kind": "continuous",
+          "value": 8
+        },
+        {
+          "key": "clarification_questions_useful",
+          "label": "Clarification / confirmation useful",
+          "role": "primary",
+          "kind": "categorical",
+          "value": "true"
+        },
+        {
+          "key": "need_constraint_satisfaction",
+          "label": "Need satisfaction",
+          "role": "evidence",
+          "kind": "categorical",
+          "value": "partially"
+        },
+        {
+          "key": "personal_preference_satisfaction",
+          "label": "Preference satisfaction",
+          "role": "evidence",
+          "kind": "categorical",
+          "value": "yes"
+        }
+      ]
+    }
+  ]
+}

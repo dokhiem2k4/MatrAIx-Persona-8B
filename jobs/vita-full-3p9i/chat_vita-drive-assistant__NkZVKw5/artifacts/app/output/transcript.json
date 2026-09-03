@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, ngoài trời oi quá, chỉnh giúp mình nhiệt độ bên ghế lái xuống 22 độ với nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt nhiệt độ ghế lái 22 độ."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Tiện thể kiểm tra hộ mình dung lượng pin còn lại bao nhiêu phần trăm nhé."
+    },
+    {
+      "role": "support",
+      "content": "Pin xe mình hiện còn 78%."
+    },
+    {
+      "role": "customer",
+      "content": "Tuyệt vời. Cảm ơn Vita nhé, mình chạy tiếp đây."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn. Chúc bạn lái xe an toàn, mình luôn ở đây khi cần."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

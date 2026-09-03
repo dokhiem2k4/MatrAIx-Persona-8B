@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 10,
+  "seed": {
+    "rowId": "row-0216",
+    "scenario": "Tôi đang lái xe trên đường đến sân bóng đá để kịp trận đấu chiều nay, cần gọi gấp cho anh Nam nên phải tìm liên hệ ngay.",
+    "firstInput": "Tìm liên hệ anh Nam.",
+    "intentCode": "communication_media",
+    "subintentCode": "contact_resolution",
+    "subintentName": "Xác định liên hệ",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62706e3ac3c2"
+  }
+}

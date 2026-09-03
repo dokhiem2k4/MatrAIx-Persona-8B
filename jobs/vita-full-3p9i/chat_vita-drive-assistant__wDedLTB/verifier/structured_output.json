@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "matraix.trial_evaluation",
+  "contexts": [
+    {
+      "key": "task_outcome.primary",
+      "label": "Task outcome",
+      "contextType": "task_outcome",
+      "facets": [
+        {
+          "key": "outcome_status",
+          "label": "Outcome status",
+          "role": "primary",
+          "kind": "categorical",
+          "value": "partially_resolved"
+        },
+        {
+          "key": "resolution_basis",
+          "label": "Resolution basis",
+          "role": "control",
+          "kind": "categorical",
+          "value": "user_feedback"
+        },
+        {
+          "key": "customer_message_count",
+          "label": "Customer messages",
+          "role": "metric",
+          "kind": "continuous",
+          "value": 4
+        },
+        {
+          "key": "support_message_count",
+          "label": "Vita assistant messages",
+          "role": "metric",
+          "kind": "continuous",
+          "value": 4
+        },
+        {
+          "key": "outcome_reason",
+          "label": "Outcome reason",
+          "role": "explanation",
+          "kind": "textual",
+          "value": "Điểm 8 hoàn toàn xứng đáng vì ở turn 3 và turn 4, Vita đã rất nhạy bén sửa lỗi tìm trạm sạc quá xa ở ban đầu bằng cách tìm trạm sát bên trong bán kính 5km, đồng thời thực thi lệnh chuyển hướng và chỉnh điều hòa rất chính xác. Tôi không cho điểm 10 tuyệt đối vì ở turn 1 trợ lý không hỗ trợ được việc lập lịch họp khiến tôi phải tự xoay xở khi đang lái xe vội."
+        }
+      ]
+    },
+    {
+      "key": "user_feedback.primary",
+      "label": "User feedback",
+      "contextType": "user_feedback",
+      "facets": [
+        {
+          "key": "overall_experience_rating",
+          "label": "Overall experience rating",
+          "role": "primary",
+          "kind": "continuous",
+          "value": 8
+        },
+        {
+          "key": "clarification_questions_useful",
+          "label": "Clarification / confirmation useful",
+          "role": "primary",
+          "kind": "categorical",
+          "value": "true"
+        },
+        {
+          "key": "need_constraint_satisfaction",
+          "label": "Need satisfaction",
+          "role": "evidence",
+          "kind": "categorical",
+          "value": "partially"
+        },
+        {
+          "key": "personal_preference_satisfaction",
+          "label": "Preference satisfaction",
+          "role": "evidence",
+          "kind": "categorical",
+          "value": "yes"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 2,
+  "seed": {
+    "rowId": "row-0384",
+    "scenario": "Tôi đang lái xe trên một đoạn đường vắng vào buổi chiều muộn, cảm giác hơi buồn ngủ nên cần một chút giải trí nhẹ nhàng.",
+    "firstInput": "Vita kể cho tôi nghe một câu chuyện cười thật ngắn đi.",
+    "intentCode": "general_qa_conversation",
+    "subintentCode": "conversation_entertainment",
+    "subintentName": "Trò chuyện và giải trí",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-9f3c655902f2"
+  }
+}

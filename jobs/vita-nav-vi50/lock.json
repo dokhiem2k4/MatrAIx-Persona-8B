@@ -1,0 +1,2030 @@
+{
+    "schema_version": 1,
+    "created_at": "2026-09-03T06:04:34.074920Z",
+    "harbor": {
+        "version": "0.1.0",
+        "is_editable": false
+    },
+    "invocation": [
+        "/home/khiemdm/orca/workspaces/MatrAIx-Persona-8B/pearleye/.venv/bin/matraix",
+        "run",
+        "-c",
+        "configs/jobs/application-task-job-recipe/vita-nav-vi50.yaml"
+    ],
+    "n_concurrent_trials": 6,
+    "retry": {
+        "max_retries": 0,
+        "exclude_exceptions": [
+            "VerifierTimeoutError",
+            "VerifierOutputParseError",
+            "RewardFileEmptyError",
+            "RewardFileNotFoundError",
+            "AgentTimeoutError"
+        ],
+        "wait_multiplier": 1.0,
+        "min_wait_sec": 1.0,
+        "max_wait_sec": 60.0
+    },
+    "trials": [
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-b57fbfbc4db4.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-d20c0b585f9d.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-181c1dbce6a8.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-62c08cb727c5.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-c7d411b60b2b.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-0252555c74ec.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-4531fd26332b.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-fe8967c0a406.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-62706e3ac3c2.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-d936fa2b4210.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-9f3c655902f2.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-59113b69156a.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-dd72fce32aef.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-556a9a65a1e2.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-d0efb6f72525.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-df730028a176.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-1175585eaeb6.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-e928755675b4.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-d8e20a0e098d.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-7cbd4c469d1f.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-1017a50f1bd1.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-3ff6de48f2e9.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-ebad458a7193.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-f7114d83bc29.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-1e5b10312ea9.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-3fab2bbd20bf.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-f1765fdee4db.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-489f7e1f89f6.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-fb41fee1773e.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-aab18d7fe550.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-06b01bce6e84.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-5482e4978d75.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-03f1a2246b12.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-2fa1f9cb3d01.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-b9f8a1acf731.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-4b13bdad5480.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-cdbe1fe93522.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-f98e23a29fdc.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-0e5b3b1175e6.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-48f61334c87f.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-35a8fdcdf89f.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-9cfba6de491d.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-14dd39c0f15a.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-016c4266ec52.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-079b85aa736c.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-7854ad087e2c.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-5f9918988a1c.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-aa9fb2271b44.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-e142f0196dbe.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:250b3cd823aa1d57d5138d1f63f13ceaaece1a41452fc682b9201e825b52d0a3",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-2c816f5d88fd.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        }
+    ]
+}

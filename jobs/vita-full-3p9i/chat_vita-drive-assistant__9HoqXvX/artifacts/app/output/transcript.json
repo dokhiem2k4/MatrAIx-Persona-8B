@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, kiểm tra lịch trình hôm nay cho tôi xem có cuộc họp nào quan trọng vào buổi chiều không nhé."
+    },
+    {
+      "role": "support",
+      "content": "Xin lỗi bạn, hiện tại mình chưa có khả năng truy cập lịch trình cá nhân hay cuộc họp của bạn. Hệ thống trên xe không kết nối với lịch Google, Outlook hay ứng dụng quản lý công việc. Bạn có thể kiểm tra nhanh trên điện thoại nhé. Nếu cần mình hỗ trợ việc gì khác trên xe như điều hòa, dẫn đường hay giải trí thì cứ nói mình."
+    },
+    {
+      "role": "customer",
+      "content": "Không sao, thế chỉnh giúp tôi nhiệt độ điều hòa xuống 22 độ C và bật quạt gió mức trung bình nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã chỉnh nhiệt độ điều hòa xuống 22°C và bật quạt gió mức trung bình rồi bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Tiện thể kiểm tra hộ tôi áp suất lốp 4 bánh xem sao nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Các chỉ số đều trong ngưỡng an toàn."
+    },
+    {
+      "role": "customer",
+      "content": "Tốt lắm. Giữ nguyên trạng thái này và bật giúp tôi một bản nhạc nhẹ nhàng không lời nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã mở nhạc nhẹ nhàng không lời."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

@@ -1,0 +1,10 @@
+{
+  "needConstraintSatisfaction": "no",
+  "needNotes": "Dựa vào turn 1 và turn 2, Vita hoàn toàn sai lệch khi nhận định xe đang đỗ ở số P trong khi tôi đang lái xe với tốc độ 90 km/h trên cao tốc. Sang turn 3 và turn 4, hệ thống tiếp tục đưa ra các mốc thời gian vô lý như đi 60 km mất gần 200 phút, khiến yêu cầu tìm trạm sạc nhanh trong vòng 10-15 phút để kịp lịch họp giao ban của tôi hoàn toàn bị phá hỏng.",
+  "personalPreferenceSatisfaction": "no",
+  "preferenceNotes": "Ở turn 2 và turn 3, cách trả lời cứng nhắc, máy móc và có phần cãi lại tài xế của Vita ('Xe bạn đang đỗ ở số P rồi, không chạy đâu ạ') không phù hợp với tiêu chuẩn kỷ luật, sự tập trung cao độ và phong cách quyết đoán của một cán bộ kỳ cựu đang cần hiệu suất công việc tuyệt đối.",
+  "overallExperienceRating": 2,
+  "reason": "Điểm 2 là cực kỳ thấp vì trợ lý ảo mắc lỗi nghiêm trọng về nhận thức không gian/vận tốc của xe (nhầm lẫn giữa đang chạy 90 km/h và đang đỗ ở số P ở turn 2), đồng thời đưa ra các chỉ dẫn thời gian phi thực tế (turn 3) làm tôi suýt lỡ việc quan trọng. Trợ lý chỉ được vớt vát chút ít ở việc thực hiện lệnh hủy lộ trình ở turn 4.",
+  "askedUsefulClarificationQuestions": false,
+  "clarifyingNotes": "Trợ lý không hề đưa ra câu hỏi làm rõ hữu ích nào mà thay vào đó lại khẳng định sai lệch về trạng thái an toàn của xe (cho rằng xe đang ở số P trong turn 2) và không có cơ chế kiểm tra chéo cảm biến tốc độ thực tế trước khi đề xuất lộ trình."
+}

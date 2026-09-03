@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita nhé! Đang lái xe thế này thì anh có thể nhờ em hỗ trợ những gì nhỉ?"
+    },
+    {
+      "role": "support",
+      "content": "Chào anh! Mình có thể giúp anh điều khiển điều hòa, cửa kính, đèn, khóa cửa, gương, cốp sau, ghế massage/thông gió, và kiểm tra thông tin xe như pin, nhiệt độ, tốc độ. Anh cần gì cứ nói nhé!"
+    },
+    {
+      "role": "customer",
+      "content": "Thời tiết sớm hơi se lạnh, Vita chỉnh giúp anh nhiệt độ vùng ghế lái lên 23 độ với bật sấy ghế nhẹ nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa và chỉnh nhiệt độ vùng ghế lái lên 23°C rồi anh nhé. Tuy nhiên, xe hiện không hỗ trợ bật sấy ghế bằng giọng nói, anh thông cảm."
+    },
+    {
+      "role": "customer",
+      "content": "Thế à, vậy em tăng quạt gió thêm một mức giúp anh nhé. Tiện thể kiểm tra giúp anh xem pin hiện tại còn bao nhiêu phần trăm nha."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tăng quạt gió lên mức 3. Pin hiện tại còn 85% bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "85% là thoải mái chạy sáng nay rồi. Cảm ơn Vita nhiều nha, giờ anh tập trung lái xe đây!"
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn anh! Chúc anh lái xe an toàn và vui vẻ. Mình luôn sẵn sàng hỗ trợ khi cần nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

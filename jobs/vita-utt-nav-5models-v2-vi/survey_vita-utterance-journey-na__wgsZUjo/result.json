@@ -1,0 +1,121 @@
+{
+    "id": "20872ef9-1edb-4e10-ac47-ec06efdb9be6",
+    "task_name": "application/vita-utterance-journey-navigation-places",
+    "trial_name": "survey_vita-utterance-journey-na__wgsZUjo",
+    "trial_uri": "file:///home/khiemdm/orca/workspaces/MatrAIx-Persona-8B/pearleye/jobs/vita-utt-nav-5models-v2-vi/survey_vita-utterance-journey-na__wgsZUjo",
+    "task_id": {
+        "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+    },
+    "source": null,
+    "task_checksum": "db1f14b6058bf6386f347a4ce8ee6cd2a3173bcd6ea30ab5e9374bbb0c6605c5",
+    "config": {
+        "task": {
+            "path": "application/tasks/survey_vita-utterance-journey-navigation-places",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "survey_vita-utterance-journey-na__wgsZUjo",
+        "trials_dir": "jobs/vita-utt-nav-5models-v2-vi",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "persona-json-survey",
+            "import_path": null,
+            "model_name": "openrouter/ag/claude-opus-4-6-thinking",
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "persona_path": "persona/datasets/matraix-persona-dev-sample/persona_0164.yaml",
+                "model_info": {
+                    "max_input_tokens": 72000,
+                    "max_output_tokens": 16384
+                }
+            },
+            "env": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "host",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "env": {},
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {},
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "71967d73-c3ff-4f5b-82dc-6b25ca8863d3"
+    },
+    "agent_info": {
+        "name": "persona-json-survey",
+        "version": "1.0.0",
+        "model_info": {
+            "name": "ag/claude-opus-4-6-thinking",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 19675,
+        "n_cache_tokens": null,
+        "n_output_tokens": 1414,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": {
+            "request_id": "chatcmpl-msg_vrtx_011CefuaXMeNMEFDjC7hJioA",
+            "model": "ag/claude-opus-4-6-thinking",
+            "provider": "openrouter"
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-09-03T04:52:56.638162Z",
+    "finished_at": "2026-09-03T04:53:28.225641Z",
+    "environment_setup": {
+        "started_at": "2026-09-03T04:52:56.643916Z",
+        "finished_at": "2026-09-03T04:52:56.644280Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-03T04:52:56.644318Z",
+        "finished_at": "2026-09-03T04:52:56.644349Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-03T04:52:56.644404Z",
+        "finished_at": "2026-09-03T04:53:28.185115Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-03T04:53:28.188219Z",
+        "finished_at": "2026-09-03T04:53:28.225572Z"
+    },
+    "step_results": null
+}

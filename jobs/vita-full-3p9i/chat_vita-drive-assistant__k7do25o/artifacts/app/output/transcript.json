@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, giúp tôi lên lịch họp giao ban vào lúc chín giờ sáng mai nhé."
+    },
+    {
+      "role": "support",
+      "content": "Chào bạn, mình rất muốn giúp nhưng hiện tại mình chưa có khả năng quản lý lịch họp hay đặt lịch hẹn. Mình chỉ hỗ trợ các tác vụ trong xe như điều khiển điều hòa, cửa sổ, đèn, dẫn đường, giải trí và tra cứu thông tin. Bạn có thể dùng điện thoại để đặt lịch họp giao ban ngày mai nhé. Còn nếu cần mình giúp việc gì khác trong xe thì cứ nói nhé!"
+    },
+    {
+      "role": "customer",
+      "content": "À, tôi hiểu rồi. Vậy chuyển sang điều hòa giúp tôi, chỉnh nhiệt độ bên ghế lái xuống hai mươi độ C và bật chế độ thông gió ghế nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa, chỉnh nhiệt độ ghế lái xuống 20 độ C và bật thông gió ghế."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita, thao tác rất nhanh gọn. Tiện thể kiểm tra hộ tôi áp suất lốp 4 bánh xem sao nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Các chỉ số đều trong ngưỡng an toàn."
+    },
+    {
+      "role": "customer",
+      "content": "Tuyệt vời, cảm ơn Vita nhiều. Thế thì ổn rồi, tiếp tục giữ tuyến đường này giúp tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Vâng, mình sẽ giữ tuyến đường hiện tại. Có gì cần thêm bạn cứ nói nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

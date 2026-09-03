@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "matraix.trial_evaluation",
+  "contexts": [
+    {
+      "key": "task_outcome.primary",
+      "label": "Task outcome",
+      "contextType": "task_outcome",
+      "facets": [
+        {
+          "key": "outcome_status",
+          "label": "Outcome status",
+          "role": "primary",
+          "kind": "categorical",
+          "value": "partially_resolved"
+        },
+        {
+          "key": "resolution_basis",
+          "label": "Resolution basis",
+          "role": "control",
+          "kind": "categorical",
+          "value": "user_feedback"
+        },
+        {
+          "key": "customer_message_count",
+          "label": "Customer messages",
+          "role": "metric",
+          "kind": "continuous",
+          "value": 4
+        },
+        {
+          "key": "support_message_count",
+          "label": "Vita assistant messages",
+          "role": "metric",
+          "kind": "continuous",
+          "value": 4
+        },
+        {
+          "key": "outcome_reason",
+          "label": "Outcome reason",
+          "role": "explanation",
+          "kind": "textual",
+          "value": "Điểm 7 phản ánh sự cân bằng: Vita thực hiện đúng yêu cầu về thông tin lốp và định vị (turn 3, turn 4), nhưng bị trừ điểm ở turn 3 vì quên mất ngữ cảnh điểm đến vừa nhắc ở turn 2, làm gián đoạn dòng suy nghĩ và thao tác của người lái."
+        }
+      ]
+    },
+    {
+      "key": "user_feedback.primary",
+      "label": "User feedback",
+      "contextType": "user_feedback",
+      "facets": [
+        {
+          "key": "overall_experience_rating",
+          "label": "Overall experience rating",
+          "role": "primary",
+          "kind": "continuous",
+          "value": 7
+        },
+        {
+          "key": "clarification_questions_useful",
+          "label": "Clarification / confirmation useful",
+          "role": "primary",
+          "kind": "categorical",
+          "value": "true"
+        },
+        {
+          "key": "need_constraint_satisfaction",
+          "label": "Need satisfaction",
+          "role": "evidence",
+          "kind": "categorical",
+          "value": "partially"
+        },
+        {
+          "key": "personal_preference_satisfaction",
+          "label": "Preference satisfaction",
+          "role": "evidence",
+          "kind": "categorical",
+          "value": "yes"
+        }
+      ]
+    }
+  ]
+}

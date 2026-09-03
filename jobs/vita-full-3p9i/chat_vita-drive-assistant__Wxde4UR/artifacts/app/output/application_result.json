@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 4,
+  "seed": {
+    "rowId": "row-0696",
+    "scenario": "Tôi đang lái xe trên đường vành đai để kịp lịch trình cá nhân, lòng thầm nghĩ về chế độ bảo hành của xe.",
+    "firstInput": "Bảo hành ô tô điện VinFast thế nào.",
+    "intentCode": "vinfast_vingroup_brands",
+    "subintentCode": "vinfast_sales_policies",
+    "subintentName": "Giá bán, chính sách và chương trình VinFast",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-9f3c655902f2"
+  }
+}

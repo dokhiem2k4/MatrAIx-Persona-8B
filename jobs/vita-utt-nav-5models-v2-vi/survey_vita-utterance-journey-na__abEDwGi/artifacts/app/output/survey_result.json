@@ -1,0 +1,1245 @@
+{
+  "instrument": {
+    "id": "vita_utterance_journey_navigation_places",
+    "title": "Vita — diễn đạt lại câu lệnh (journey_navigation_places)"
+  },
+  "answers": [
+    {
+      "questionId": "q0",
+      "value": "Vita, dẫn tôi đến trạm xăng gần nhất.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q1",
+      "value": "Vita, tìm quán phở gần đây và dẫn đường đến đó cho tôi.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q2",
+      "value": "Vita, dẫn tôi đến bãi đỗ xe gần chợ Bến Thành, và nếu có nhiều lựa chọn thì cho tôi biết nhé.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q3",
+      "value": "Vita, tìm quán cà phê gần đây cho tôi.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q4",
+      "value": "Vita, dẫn đường đến Bảo tàng Chứng tích Chiến tranh cho tôi.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q5",
+      "value": "Vita, tìm nhà hàng Việt Nam gần đây để ăn trưa và đề xuất cho tôi vài lựa chọn tốt nhé.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q6",
+      "value": "Vita, chuyển sang đường tránh cao tốc.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q7",
+      "value": "Vita, đổi sang tuyến đường ít kẹt xe hơn cho tôi.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q8",
+      "value": "Vita, thêm Bưu điện Trung tâm Thành phố vào tuyến đường hiện tại như một điểm dừng.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q9",
+      "value": "Vita, lập tuyến đến Hồ Hoàn Kiếm.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q10",
+      "value": "Vita, bỏ điểm dừng ở chợ Bến Thành ra khỏi hành trình.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q11",
+      "value": "Vita, lập tuyến đến sân bay Nội Bài, ưu tiên đường cao tốc và cho tôi biết thêm các lựa chọn nếu có.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q12",
+      "value": "Vita, còn bao lâu nữa đến nơi?",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q13",
+      "value": "Vita, giao thông phía trước đang thế nào?",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q14",
+      "value": "Vita, dự kiến mấy giờ tôi đến sân bay?",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q15",
+      "value": "Vita, nếu xuất phát ngay bây giờ thì bao lâu tôi đến công ty?",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q16",
+      "value": "Vita, kiểm tra tình hình giao thông đến sân bay và cho tôi biết giờ đến dự kiến trước khi tôi lên đường.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q17",
+      "value": "Vita, nếu xuất phát ngay thì tôi đến trung tâm hội nghị lúc mấy giờ, và giao thông đường đó hiện tại thế nào?",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q18",
+      "value": "Vita, hướng dẫn vào bãi đỗ của tòa nhà.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q19",
+      "value": "Vita, chỉ đường vào bãi đỗ xe tại điểm đến cho tôi.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q20",
+      "value": "Vita, sắp tới khách sạn rồi, hướng dẫn tôi vào khu đón trả khách và cho biết thêm thông tin nếu cần.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q21",
+      "value": "Vita, kết thúc hành trình.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q22",
+      "value": "Vita, tôi đã đỗ xe xong, kết thúc chuyến đi.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q23",
+      "value": "Vita, lưu vị trí đỗ xe hiện tại cho tôi, và nếu có thể ghi chú thêm thông tin gì hữu ích thì làm luôn nhé.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q24",
+      "value": "Vita, Huế nổi tiếng món gì?",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q25",
+      "value": "Vita, phố cổ Hội An có điểm gì đặc sắc?",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q26",
+      "value": "Vita, Đà Lạt mùa này có đặc sản gì đáng thử, và có gợi ý thêm chỗ nào ngon không?",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q27",
+      "value": "Vita, chợ Bến Thành được xây từ năm nào?",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q28",
+      "value": "Vita, Tràng An ở Ninh Bình có gì nổi bật?",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q29",
+      "value": "Vita, tôi đang ở Sa Pa, buổi tối ở đây có gì thú vị, và có gợi ý cụ thể nào cho tôi không?",
+      "rationale": "",
+      "confidence": null
+    }
+  ],
+  "trajectory": [
+    {
+      "timestamp": "2026-09-03T04:53:28Z",
+      "actor": "system",
+      "action": "survey_started",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "instrumentTitle": "Vita — diễn đạt lại câu lệnh (journey_navigation_places)",
+        "numQuestions": 30
+      },
+      "outcome": {
+        "status": "started"
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:29Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q0",
+        "questionIndex": 1,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Tìm điểm đến/POI.\nMột người dùng khác đã nói với trợ lý xe: \"Dẫn đường đến trạm xăng gần nhất.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:30Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q0",
+        "questionIndex": 1,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "questionId": "q0",
+        "value": "Vita, dẫn tôi đến trạm xăng gần nhất.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:31Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q1",
+        "questionIndex": 2,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Tìm điểm đến/POI.\nMột người dùng khác đã nói với trợ lý xe: \"Tìm một quán phở gần đây rồi dẫn đường tới đó.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:32Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q1",
+        "questionIndex": 2,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "questionId": "q1",
+        "value": "Vita, tìm quán phở gần đây và dẫn đường đến đó cho tôi.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:33Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q2",
+        "questionIndex": 3,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Tìm điểm đến/POI.\nMột người dùng khác đã nói với trợ lý xe: \"Đưa tôi đến bãi đỗ xe gần chợ Bến Thành.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:34Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q2",
+        "questionIndex": 3,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "questionId": "q2",
+        "value": "Vita, dẫn tôi đến bãi đỗ xe gần chợ Bến Thành, và nếu có nhiều lựa chọn thì cho tôi biết nhé.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:35Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q3",
+        "questionIndex": 4,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Tìm điểm đến/POI.\nMột người dùng khác đã nói với trợ lý xe: \"Tìm một quán cà phê gần đây để tôi đến.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:36Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q3",
+        "questionIndex": 4,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "questionId": "q3",
+        "value": "Vita, tìm quán cà phê gần đây cho tôi.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:37Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q4",
+        "questionIndex": 5,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Tìm điểm đến/POI.\nMột người dùng khác đã nói với trợ lý xe: \"Dẫn đường đến Bảo tàng Chứng tích Chiến tranh.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:38Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q4",
+        "questionIndex": 5,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "questionId": "q4",
+        "value": "Vita, dẫn đường đến Bảo tàng Chứng tích Chiến tranh cho tôi.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:39Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q5",
+        "questionIndex": 6,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Tìm điểm đến/POI.\nMột người dùng khác đã nói với trợ lý xe: \"Tìm giúp tôi một nhà hàng Việt Nam gần đây để ăn trưa.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:40Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q5",
+        "questionIndex": 6,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "questionId": "q5",
+        "value": "Vita, tìm nhà hàng Việt Nam gần đây để ăn trưa và đề xuất cho tôi vài lựa chọn tốt nhé.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:41Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q6",
+        "questionIndex": 7,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Lập và thay đổi tuyến.\nMột người dùng khác đã nói với trợ lý xe: \"Đổi tuyến hiện tại sang đường tránh cao tốc.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:42Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q6",
+        "questionIndex": 7,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "questionId": "q6",
+        "value": "Vita, chuyển sang đường tránh cao tốc.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:43Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q7",
+        "questionIndex": 8,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Lập và thay đổi tuyến.\nMột người dùng khác đã nói với trợ lý xe: \"Đổi tuyến hiện tại sang đường ít ùn tắc hơn giúp tôi.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:44Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q7",
+        "questionIndex": 8,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "questionId": "q7",
+        "value": "Vita, đổi sang tuyến đường ít kẹt xe hơn cho tôi.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:45Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q8",
+        "questionIndex": 9,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Lập và thay đổi tuyến.\nMột người dùng khác đã nói với trợ lý xe: \"Thêm Bưu điện Trung tâm Thành phố làm điểm dừng trên tuyến hiện tại.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:46Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q8",
+        "questionIndex": 9,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "questionId": "q8",
+        "value": "Vita, thêm Bưu điện Trung tâm Thành phố vào tuyến đường hiện tại như một điểm dừng.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:47Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q9",
+        "questionIndex": 10,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Lập và thay đổi tuyến.\nMột người dùng khác đã nói với trợ lý xe: \"Lập tuyến từ đây đến Hồ Hoàn Kiếm.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:48Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q9",
+        "questionIndex": 10,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "questionId": "q9",
+        "value": "Vita, lập tuyến đến Hồ Hoàn Kiếm.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:49Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q10",
+        "questionIndex": 11,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Lập và thay đổi tuyến.\nMột người dùng khác đã nói với trợ lý xe: \"Xóa điểm dừng ở chợ Bến Thành khỏi hành trình.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:50Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q10",
+        "questionIndex": 11,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "questionId": "q10",
+        "value": "Vita, bỏ điểm dừng ở chợ Bến Thành ra khỏi hành trình.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:51Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q11",
+        "questionIndex": 12,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Lập và thay đổi tuyến.\nMột người dùng khác đã nói với trợ lý xe: \"Lập tuyến đến sân bay Nội Bài và ưu tiên đường cao tốc.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:52Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q11",
+        "questionIndex": 12,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "questionId": "q11",
+        "value": "Vita, lập tuyến đến sân bay Nội Bài, ưu tiên đường cao tốc và cho tôi biết thêm các lựa chọn nếu có.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:53Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q12",
+        "questionIndex": 13,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nMột người dùng khác đã nói với trợ lý xe: \"Còn bao lâu nữa thì tới nơi?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:54Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q12",
+        "questionIndex": 13,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "questionId": "q12",
+        "value": "Vita, còn bao lâu nữa đến nơi?",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:55Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q13",
+        "questionIndex": 14,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nMột người dùng khác đã nói với trợ lý xe: \"Tình hình giao thông phía trước thế nào?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:56Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q13",
+        "questionIndex": 14,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "questionId": "q13",
+        "value": "Vita, giao thông phía trước đang thế nào?",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:57Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q14",
+        "questionIndex": 15,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nMột người dùng khác đã nói với trợ lý xe: \"Mấy giờ tôi sẽ đến sân bay?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:58Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q14",
+        "questionIndex": 15,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "questionId": "q14",
+        "value": "Vita, dự kiến mấy giờ tôi đến sân bay?",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:53:59Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q15",
+        "questionIndex": 16,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nMột người dùng khác đã nói với trợ lý xe: \"Xe đang đỗ đây, nếu khởi hành bây giờ thì bao lâu nữa tôi đến công ty?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:00Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q15",
+        "questionIndex": 16,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "questionId": "q15",
+        "value": "Vita, nếu xuất phát ngay bây giờ thì bao lâu tôi đến công ty?",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:01Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q16",
+        "questionIndex": 17,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nMột người dùng khác đã nói với trợ lý xe: \"Trước khi đi, kiểm tra giúp tôi tình hình giao thông đến sân bay và giờ đến dự kiến.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:02Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q16",
+        "questionIndex": 17,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "questionId": "q16",
+        "value": "Vita, kiểm tra tình hình giao thông đến sân bay và cho tôi biết giờ đến dự kiến trước khi tôi lên đường.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:03Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q17",
+        "questionIndex": 18,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nMột người dùng khác đã nói với trợ lý xe: \"Nếu xuất phát ngay thì mấy giờ tôi tới trung tâm hội nghị?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:04Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q17",
+        "questionIndex": 18,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "questionId": "q17",
+        "value": "Vita, nếu xuất phát ngay thì tôi đến trung tâm hội nghị lúc mấy giờ, và giao thông đường đó hiện tại thế nào?",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:05Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q18",
+        "questionIndex": 19,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Đỗ xe/đến nơi.\nMột người dùng khác đã nói với trợ lý xe: \"Tôi sắp đến rồi, bật hướng dẫn vào bãi đỗ của tòa nhà nhé.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:06Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q18",
+        "questionIndex": 19,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "questionId": "q18",
+        "value": "Vita, hướng dẫn vào bãi đỗ của tòa nhà.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:07Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q19",
+        "questionIndex": 20,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Đỗ xe/đến nơi.\nMột người dùng khác đã nói với trợ lý xe: \"Gần tới nơi rồi, chỉ đường vào bãi đỗ xe tại điểm đến giúp tôi.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:08Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q19",
+        "questionIndex": 20,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "questionId": "q19",
+        "value": "Vita, chỉ đường vào bãi đỗ xe tại điểm đến cho tôi.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:09Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q20",
+        "questionIndex": 21,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Đỗ xe/đến nơi.\nMột người dùng khác đã nói với trợ lý xe: \"Tôi sắp tới khách sạn, hướng dẫn tôi vào khu đón trả khách nhé.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:10Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q20",
+        "questionIndex": 21,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "questionId": "q20",
+        "value": "Vita, sắp tới khách sạn rồi, hướng dẫn tôi vào khu đón trả khách và cho biết thêm thông tin nếu cần.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:11Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q21",
+        "questionIndex": 22,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Đỗ xe/đến nơi.\nMột người dùng khác đã nói với trợ lý xe: \"Tôi đã đỗ xe rồi, kết thúc hành trình nhé.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:12Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q21",
+        "questionIndex": 22,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "questionId": "q21",
+        "value": "Vita, kết thúc hành trình.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:13Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q22",
+        "questionIndex": 23,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Đỗ xe/đến nơi.\nMột người dùng khác đã nói với trợ lý xe: \"Tôi đỗ xe xong rồi, kết thúc chuyến đi giúp tôi.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:14Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q22",
+        "questionIndex": 23,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "questionId": "q22",
+        "value": "Vita, tôi đã đỗ xe xong, kết thúc chuyến đi.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:15Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q23",
+        "questionIndex": 24,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Đỗ xe/đến nơi.\nMột người dùng khác đã nói với trợ lý xe: \"Đến nơi rồi, lưu vị trí đỗ xe này giúp tôi.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:16Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q23",
+        "questionIndex": 24,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "questionId": "q23",
+        "value": "Vita, lưu vị trí đỗ xe hiện tại cho tôi, và nếu có thể ghi chú thêm thông tin gì hữu ích thì làm luôn nhé.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:17Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q24",
+        "questionIndex": 25,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Thông tin địa phương/du lịch.\nMột người dùng khác đã nói với trợ lý xe: \"Huế nổi tiếng với món ăn nào?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:18Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q24",
+        "questionIndex": 25,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "questionId": "q24",
+        "value": "Vita, Huế nổi tiếng món gì?",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:19Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q25",
+        "questionIndex": 26,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Thông tin địa phương/du lịch.\nMột người dùng khác đã nói với trợ lý xe: \"Phố cổ Hội An có gì đặc sắc vậy?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:20Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q25",
+        "questionIndex": 26,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "questionId": "q25",
+        "value": "Vita, phố cổ Hội An có điểm gì đặc sắc?",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:21Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q26",
+        "questionIndex": 27,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Thông tin địa phương/du lịch.\nMột người dùng khác đã nói với trợ lý xe: \"Đà Lạt mùa này có đặc sản gì đáng thử?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:22Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q26",
+        "questionIndex": 27,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "questionId": "q26",
+        "value": "Vita, Đà Lạt mùa này có đặc sản gì đáng thử, và có gợi ý thêm chỗ nào ngon không?",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:23Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q27",
+        "questionIndex": 28,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Thông tin địa phương/du lịch.\nMột người dùng khác đã nói với trợ lý xe: \"Chợ Bến Thành được xây từ bao giờ?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:24Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q27",
+        "questionIndex": 28,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "questionId": "q27",
+        "value": "Vita, chợ Bến Thành được xây từ năm nào?",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:25Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q28",
+        "questionIndex": 29,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Thông tin địa phương/du lịch.\nMột người dùng khác đã nói với trợ lý xe: \"Ở Ninh Bình, Tràng An có gì nổi bật?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:26Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q28",
+        "questionIndex": 29,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "questionId": "q28",
+        "value": "Vita, Tràng An ở Ninh Bình có gì nổi bật?",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:27Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q29",
+        "questionIndex": 30,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Thông tin địa phương/du lịch.\nMột người dùng khác đã nói với trợ lý xe: \"Tôi đang đỗ xe ở Sa Pa, buổi tối ở đây có gì thú vị?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nBẮT BUỘC trả lời BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:28Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q29",
+        "questionIndex": 30,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "questionId": "q29",
+        "value": "Vita, tôi đang ở Sa Pa, buổi tối ở đây có gì thú vị, và có gợi ý cụ thể nào cho tôi không?",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:54:29Z",
+      "actor": "system",
+      "action": "survey_completed",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places"
+      },
+      "outcome": {
+        "numAnswered": 30,
+        "missingRequiredQuestionIds": [],
+        "valid": true
+      }
+    }
+  ],
+  "usage": {
+    "n_input_tokens": 13970,
+    "n_output_tokens": 1727,
+    "cost_usd": 0.067815,
+    "request_id": "chatcmpl-msg_vrtx_011CefuccBf6xaqoP3DkGsWs",
+    "model": "ag/claude-sonnet-4-6",
+    "provider": "openrouter",
+    "cost_source": "estimated"
+  }
+}

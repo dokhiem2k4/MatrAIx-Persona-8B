@@ -1,0 +1,48 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, gọi ngay cho anh Nam giúp tôi cái, tôi đang lái xe đến chỗ tập bóng bàn mà gấp quá rồi."
+    },
+    {
+      "role": "support",
+      "content": "Xe mình hiện tại không hỗ trợ gọi điện thoại hay truy cập danh bạ bạn nhé. Tính năng gọi điện chưa được tích hợp trên hệ thống này. Mình có thể giúp bạn việc khác được không? Ví dụ như mở Google Maps dẫn đường đến chỗ tập bóng bàn chẳng hạn?"
+    },
+    {
+      "role": "customer",
+      "content": "Thế à, vậy thôi bạn tìm giúp tôi quán cà phê nào gần đây nhất đi, để tôi ghé qua ngồi chờ một lát cho đỡ nôn nao."
+    },
+    {
+      "role": "support",
+      "content": "Mình tìm thấy quán Laika Cafe ngay tại tòa Technopark, Vinhomes Ocean Park. Bạn có muốn mình chỉ đường đến đó không?"
+    },
+    {
+      "role": "customer",
+      "content": "Ừ, bật giúp tôi bản đồ đến đấy nhé. Tiện thể chỉnh điều hòa giảm xuống 21 độ giúp tôi cho tỉnh táo một chút."
+    },
+    {
+      "role": "support",
+      "content": "Được rồi, để mình xử lý cả hai việc cho bạn. Trước tiên, mình cần biết \"đến đấy\" là đâu nhỉ? Bạn muốn đến địa điểm nào?"
+    },
+    {
+      "role": "customer",
+      "content": "Đến cái quán Laika Cafe mà bạn vừa tìm hộ tôi ấy. Với lại chỉnh giúp tôi cái điều hòa xuống 21 độ luôn nha."
+    },
+    {
+      "role": "support",
+      "content": "Đã tìm đường đến Laika Cafe, cách đây 14.5 km, mất khoảng 18 phút. Và điều hòa ghế lái đã được chỉnh xuống 21°C rồi bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita nhé, thế là ổn rồi đấy. Tôi bắt đầu thấy thoải mái hơn rồi."
+    },
+    {
+      "role": "support",
+      "content": "Có gì đâu bạn, mình luôn sẵn sàng giúp bạn thoải mái trên mọi hành trình. Cần gì thêm cứ nói mình nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

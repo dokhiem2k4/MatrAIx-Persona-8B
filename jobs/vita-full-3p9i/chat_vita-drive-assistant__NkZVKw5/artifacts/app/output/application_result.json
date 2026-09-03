@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 3,
+  "seed": {
+    "rowId": "row-0060",
+    "scenario": "Tôi đang lái xe một mình trên đường vành đai để đến buổi họp chiến lược với ban quản lý, thời tiết ngoài trời khá oi bức.",
+    "firstInput": "Chỉnh điều hòa ghế lái xuống 22 độ.",
+    "intentCode": "cabin_vehicle_control",
+    "subintentCode": "climate",
+    "subintentName": "Điều hòa",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62706e3ac3c2"
+  }
+}

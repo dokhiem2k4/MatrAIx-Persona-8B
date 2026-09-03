@@ -1,0 +1,48 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, đang lái xe thế này tôi muốn tắt ngay quyền truy cập vị trí của trợ lý để đảm bảo riêng tư nhé."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn đã quan tâm đến quyền riêng tư. Tuy nhiên, mình cần nói rõ: trên xe VF9, trợ lý Vita không có một công tắc riêng để \"tắt quyền truy cập vị trí\" theo cách bạn có thể làm trên điện thoại. Vị trí GPS được tích hợp vào hệ thống xe và cần cho các chức năng cơ bản như dẫn đường, cứu hộ khẩn cấp, và một số tính năng an toàn. Mình không thể vô hiệu hóa hoàn toàn GPS từ cabin. Nếu bạn muốn hạn chế chia sẻ vị trí, có một số cách: - Dừng dẫn đường hiện tại nếu đang có hành trình đang chạy. - Tắt eSIM/Wi-Fi để ngắt kết nối dữ liệu ra ngoài, nhưng việc này cũng ảnh hưởng đến các dịch vụ trực tuyến khác. Bạn muốn mình thực hiện bước nào trong số này không?"
+    },
+    {
+      "role": "customer",
+      "content": "Tôi không muốn ngắt kết nối xe hay tắt tính năng online chung chung, chỉ muốn chặn không cho ứng dụng bên ngoài hoặc lịch sử lộ diện thôi. Có chế độ ẩn danh hay giấu lịch sử di chuyển không Vita?"
+    },
+    {
+      "role": "support",
+      "content": "Mình hiểu ý bạn. Bạn muốn giữ kết nối online của xe nhưng không muốn lộ lịch sử di chuyển hay dữ liệu cá nhân cho ứng dụng bên ngoài. Hiện tại, VF9 của bạn có chế độ Valet – khi bật lên, xe sẽ khóa màn hình trung tâm, ẩn dữ liệu cá nhân, lịch sử điều hướng và giới hạn quyền truy cập của người khác. Chế độ này phù hợp khi bạn giao xe cho người lạ (như nhân viên đỗ xe) và không muốn họ thấy thông tin riêng tư. Bạn có muốn mình bật chế độ Valet không?"
+    },
+    {
+      "role": "customer",
+      "content": "Không phải giao xe cho ai đâu, tôi chỉ cần dùng xe hằng ngày mà không bị lưu vết lịch sử di chuyển hoặc chia sẻ vị trí cho các app bên ngoài thôi. Có cách nào xóa nhanh lịch sử tìm kiếm hay bật chế độ riêng tư toàn bộ tài khoản lái xe không?"
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn đã chia sẻ rõ nhu cầu. Mình hiểu bạn muốn dùng xe hằng ngày nhưng không muốn lưu vết lịch sử di chuyển hay chia sẻ vị trí cho ứng dụng bên ngoài. Về những gì mình có thể giúp ngay trên xe: - Chế độ Valet : Xe có chế độ Valet, khi bật sẽ giới hạn quyền truy cập vào dữ liệu cá nhân và một số tính năng trên màn hình. Tuy nhiên, chế độ này được thiết kế chủ yếu cho việc giao xe cho người khác lái tạm thời, không phải là chế độ riêng tư toàn diện cho tài khoản lái xe hằng ngày. - Xóa lịch sử tìm kiếm hay bật chế độ riêng tư toàn bộ tài khoản : Hiện tại mình không có công cụ để xóa lịch sử tìm kiếm trên hệ thống IVI hay bật chế độ riêng tư toàn diện cho tài khoản người lái. Đây là các cài đặt nằm trong phần quản lý tài khoản và quyền riêng tư trên màn hình trung tâm. Gợi ý : Bạn có thể vào phần Cài đặt → Quyền riêng tư trên màn hình cảm ứng để kiểm tra các tùy chọn về chia sẻ vị trí, lịch sử hành trình và quyền của ứng dụng bên ngoài. Nếu cần thêm chi tiết, mình có thể tra cứu hướng dẫn cụ thể cho dòng VF9. Bạn có muốn mình tra thêm thông tin về cài đặt riêng tư trên VF9 không?"
+    },
+    {
+      "role": "customer",
+      "content": "Ừ, tra cứu giúp tôi cách tắt chia sẻ dữ liệu và vị trí với app bên ngoài trong phần Cài đặt của VF9 xem cụ thể các bước thế nào nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tra cứu nhưng chưa tìm thấy hướng dẫn cụ thể về cách tắt chia sẻ dữ liệu và vị trí với app bên ngoài trên VF9. Bạn có thể thử vào Cài đặt > Vị trí > Quyền truy cập vị trí của ứng dụng để rà soát và điều chỉnh quyền cho từng app nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Được rồi, tôi sẽ tự kiểm tra trên màn hình trung tâm sau. Cảm ơn bạn."
+    },
+    {
+      "role": "support",
+      "content": "Không có gì bạn. Mình sẵn sàng khi cần nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

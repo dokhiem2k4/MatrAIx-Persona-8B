@@ -1,0 +1,64 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, xe mình pin còn hơi thấp đấy, giúp anh tìm giúp tuyến đường đi tiếp có trạm sạc phù hợp trên đường nhé."
+    },
+    {
+      "role": "support",
+      "content": "Xin lỗi, mình chưa tra được nội dung này nên chưa dám kể. Bạn thử hỏi lại nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Ý anh là tìm trạm sạc nhanh VinFast gần nhất trên lộ trình phía trước ấy, em tìm lại giúp anh nhé."
+    },
+    {
+      "role": "support",
+      "content": "Để mình tìm trạm sạc nhanh VinFast gần nhất trên lộ trình phía trước cho bạn. Trước tiên, mình cần biết điểm đến hiện tại của bạn. Hiện xe chưa có điểm đến nào được thiết lập trong navigation. Bạn đang muốn đi đâu ạ?"
+    },
+    {
+      "role": "customer",
+      "content": "Anh đang chạy về trung tâm Hà Nội, em chọn trạm sạc nào tiện nhất trên đường giúp anh nha."
+    },
+    {
+      "role": "support",
+      "content": "Để mình tìm trạm sạc tiện nhất trên đường từ vị trí hiện tại về trung tâm Hà Nội. Trước tiên, mình cần biết vị trí hiện tại và điểm đến cụ thể. Hiện tại xe đang ở Tòa Technopark, Hà Nội. Nhưng mình cần biết điểm đến cụ thể ở trung tâm Hà Nội mà anh muốn tới – ví dụ Hồ Gươm, Nhà hát Lớn, hay khu vực nào khác ạ?"
+    },
+    {
+      "role": "customer",
+      "content": "Cho anh điểm đến là khu vực Hồ Gươm nhé. Đồng thời kiểm tra luôn áp suất lốp 4 bánh hộ anh xem có ổn không."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt điểm đến Hồ Gươm, cách đây khoảng 14 km, mất tầm 17 phút lái xe. Còn kiểm tra áp suất lốp thì mình chưa có dữ liệu từ cảm biến để báo cho bạn ngay được."
+    },
+    {
+      "role": "customer",
+      "content": "Được rồi, thế em dẫn đường giúp anh qua trạm sạc nào tiện nhất trên đường về Hồ Gươm nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tìm thấy một số trạm sạc VinFast gần khu vực Hồ Gươm và dọc đường, nhưng chưa có thông tin cụ thể về trạm tiện nhất trên lộ trình từ Technopark. Bạn có thể dùng ứng dụng VinFast hoặc Google Maps để chọn trạm phù hợp nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Thôi không sao, em cứ bật hướng dẫn đường đi nhanh nhất về Hồ Gươm cho anh nhé."
+    },
+    {
+      "role": "support",
+      "content": "Hiện tại xe đã đang dẫn đường đến Hồ Gươm rồi bạn nhé. Tuyến đường hiện tại dài 13.9 km, dự kiến mất khoảng 17 phút, và đang ở chế độ lái xe thông thường. Bạn có muốn mình chuyển sang chế độ tránh thu phí để tìm tuyến khác không?"
+    },
+    {
+      "role": "customer",
+      "content": "Không cần đâu em, cứ giữ nguyên tuyến đường hiện tại giúp anh là được."
+    },
+    {
+      "role": "support",
+      "content": "Vâng, mình sẽ giữ nguyên tuyến đường hiện tại. Anh cứ lái tiếp nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

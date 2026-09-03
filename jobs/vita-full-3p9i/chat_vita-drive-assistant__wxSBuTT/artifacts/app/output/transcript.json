@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, nay Chủ nhật mà xe tôi có chút trục trặc cần kiểm tra gấp, em xem hộ mấy xưởng dịch vụ VinFast nào gần đây đang mở cửa làm việc không?"
+    },
+    {
+      "role": "support",
+      "content": "đã thực hiện web_search; timed out; đã thực hiện web_search."
+    },
+    {
+      "role": "customer",
+      "content": "Hình như mạng bị lỗi hay sao mà em tìm chưa ra vậy Vita? Kiểm tra lại giúp anh xem xưởng nào quanh khu vực Hà Nội còn mở cửa nhé."
+    },
+    {
+      "role": "support",
+      "content": "Để tìm xưởng sửa chữa ô tô quanh Hà Nội còn mở cửa, mình cần tra thông tin bên ngoài. Cho mình hỏi thêm một chút: anh đang cần tìm xưởng sửa chữa ô tô nói chung, hay cụ thể là xưởng dịch vụ của VinFast ạ?"
+    },
+    {
+      "role": "customer",
+      "content": "Bắc buộc phải là xưởng dịch vụ chính hãng của VinFast chứ, em tìm kỹ lại xem xưởng nào quanh đây đang trực ngày nghỉ nhé."
+    },
+    {
+      "role": "support",
+      "content": "timed out; đã thực hiện web_search."
+    },
+    {
+      "role": "customer",
+      "content": "Hình như hệ thống tìm kiếm của em đang bị lỗi kết nối rồi Vita. Thôi để lát anh tự gọi tổng đài hỏi vậy, giờ em bật giúp anh bài nhạc sôi động nào để anh đỡ căng thẳng khi lái xe nào."
+    },
+    {
+      "role": "support",
+      "content": "Đã mở nhạc sôi động EDM vui tươi."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

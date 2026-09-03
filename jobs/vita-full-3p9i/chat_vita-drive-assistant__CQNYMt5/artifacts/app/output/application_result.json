@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 6,
+  "seed": {
+    "rowId": "row-0750",
+    "scenario": "Tôi đang lái xe trên tuyến đường chính để đến buổi họp chiến lược quan trọng, tính bảo mật hành trình cần được đặt lên hàng đầu. Tôi muốn tạm ngưng việc chia sẻ vị trí để bảo đảm sự riêng tư.",
+    "firstInput": "Vita, tôi đang lái xe, hãy tắt ngay quyền truy cập vị trí của trợ lý.",
+    "intentCode": "vita_profile_settings",
+    "subintentCode": "permissions_privacy_data",
+    "subintentName": "Quyền truy cập, quyền riêng tư và dữ liệu",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

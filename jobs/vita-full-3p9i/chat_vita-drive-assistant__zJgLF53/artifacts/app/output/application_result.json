@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 5,
+  "seed": {
+    "rowId": "row-0162",
+    "scenario": "Tôi đang lái xe ra sân vận động để kịp buổi tập bóng bàn buổi sáng, lòng hơi nôn nao vì sợ đến muộn. Trên xe không có ai khác, tôi cần gọi điện gấp cho anh Nam.",
+    "firstInput": "Vita, gọi ngay cho anh Nam nhé.",
+    "intentCode": "communication_media",
+    "subintentCode": "calling",
+    "subintentName": "Gọi điện",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-9f3c655902f2"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita, điều chỉnh giúp tôi nhiệt độ bên ghế lái xuống 22 độ và bật quạt gió mạnh lên chút, trong xe hơi oi bức."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã bật điều hòa, chỉnh nhiệt độ ghế lái xuống 22°C và tăng quạt gió lên mức mạnh hơn rồi, hy vọng xe sẽ mát nhanh."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Tiện thể kiểm tra hộ tôi áp suất lốp 4 bánh xem có ổn định không nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Cả bốn bánh đều trong ngưỡng ổn định."
+    },
+    {
+      "role": "customer",
+      "content": "Rất tốt, cảm ơn thông tin của Vita. Bây giờ hãy tìm giúp tôi trạm sạc điện VinFast nào gần nhất trên đường đi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tìm và đặt lộ trình đến trạm sạc VinFast gần nhất, cách đây khoảng 10 km, dự kiến đến nơi trong 12 phút."
+    },
+    {
+      "role": "customer",
+      "content": "Được rồi, tạm thời chưa cần ghé trạm sạc lúc này, hãy hủy lộ trình đó giúp tôi và tiếp tục hướng dẫn đường tới trung tâm hội nghị thành phố nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã hủy lộ trình đến trạm sạc và bắt đầu dẫn đường đến trung tâm hội nghị thành phố, cách đây 24 km, ước tính 29 phút."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

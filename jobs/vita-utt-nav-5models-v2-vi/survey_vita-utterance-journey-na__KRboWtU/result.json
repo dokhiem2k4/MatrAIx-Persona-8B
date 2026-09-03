@@ -1,0 +1,121 @@
+{
+    "id": "d2fe5d7c-333d-43b4-8005-6268e646ee66",
+    "task_name": "application/vita-utterance-journey-navigation-places",
+    "trial_name": "survey_vita-utterance-journey-na__KRboWtU",
+    "trial_uri": "file:///home/khiemdm/orca/workspaces/MatrAIx-Persona-8B/pearleye/jobs/vita-utt-nav-5models-v2-vi/survey_vita-utterance-journey-na__KRboWtU",
+    "task_id": {
+        "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+    },
+    "source": null,
+    "task_checksum": "db1f14b6058bf6386f347a4ce8ee6cd2a3173bcd6ea30ab5e9374bbb0c6605c5",
+    "config": {
+        "task": {
+            "path": "application/tasks/survey_vita-utterance-journey-navigation-places",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "survey_vita-utterance-journey-na__KRboWtU",
+        "trials_dir": "jobs/vita-utt-nav-5models-v2-vi",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "persona-json-survey",
+            "import_path": null,
+            "model_name": "openrouter/ag/gemini-3-flash",
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "persona_path": "persona/datasets/matraix-persona-dev-sample/persona_0071.yaml",
+                "model_info": {
+                    "max_input_tokens": 72000,
+                    "max_output_tokens": 16384
+                }
+            },
+            "env": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "host",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "env": {},
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {},
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "71967d73-c3ff-4f5b-82dc-6b25ca8863d3"
+    },
+    "agent_info": {
+        "name": "persona-json-survey",
+        "version": "1.0.0",
+        "model_info": {
+            "name": "ag/gemini-3-flash",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 11186,
+        "n_cache_tokens": null,
+        "n_output_tokens": 1122,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": {
+            "request_id": "chatcmpl-o_2YaoC7D73Hg8UPh8__4Aw",
+            "model": "ag/gemini-3-flash",
+            "provider": "openrouter"
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-09-03T04:54:58.156876Z",
+    "finished_at": "2026-09-03T04:55:03.953405Z",
+    "environment_setup": {
+        "started_at": "2026-09-03T04:54:58.162546Z",
+        "finished_at": "2026-09-03T04:54:58.162950Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-03T04:54:58.162976Z",
+        "finished_at": "2026-09-03T04:54:58.163000Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-03T04:54:58.163049Z",
+        "finished_at": "2026-09-03T04:55:03.904255Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-03T04:55:03.907126Z",
+        "finished_at": "2026-09-03T04:55:03.953341Z"
+    },
+    "step_results": null
+}

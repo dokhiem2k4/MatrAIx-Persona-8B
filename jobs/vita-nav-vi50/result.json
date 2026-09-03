@@ -1,0 +1,109 @@
+{
+    "id": "dff6f043-3ebe-4614-9315-f87077c763d0",
+    "started_at": "2026-09-03T13:04:33.513183",
+    "updated_at": "2026-09-03T13:26:35.187797",
+    "finished_at": "2026-09-03T13:26:35.187797",
+    "n_total_trials": 50,
+    "stats": {
+        "n_completed_trials": 50,
+        "n_errored_trials": 49,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "persona-json-survey__ag/claude-sonnet-4-6__adhoc": {
+                "n_trials": 1,
+                "n_errors": 49,
+                "metrics": [
+                    {
+                        "mean": 0.02
+                    }
+                ],
+                "pass_at_k": {
+                    "2": 0.040000000000000036,
+                    "4": 0.08000000000000007,
+                    "5": 0.10000000000000009,
+                    "8": 0.16000000000000014,
+                    "10": 0.20000000000000018,
+                    "15": 0.30000000000000016,
+                    "16": 0.3200000000000002,
+                    "20": 0.40000000000000024,
+                    "25": 0.5000000000000002,
+                    "30": 0.6000000000000002,
+                    "32": 0.6400000000000002,
+                    "35": 0.7000000000000002,
+                    "40": 0.8,
+                    "45": 0.9,
+                    "50": 1.0
+                },
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "survey_vita-utterance-journey-na__kSPVEhb"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "VerifierTimeoutError": [
+                        "survey_vita-utterance-journey-na__NBQRske",
+                        "survey_vita-utterance-journey-na__wZxEdyX",
+                        "survey_vita-utterance-journey-na__LXWKsDF",
+                        "survey_vita-utterance-journey-na__AeUdeGn",
+                        "survey_vita-utterance-journey-na__t9t5sPZ",
+                        "survey_vita-utterance-journey-na__UP977Ge",
+                        "survey_vita-utterance-journey-na__gPriXfb",
+                        "survey_vita-utterance-journey-na__LfBvoBp",
+                        "survey_vita-utterance-journey-na__G5CDmgU",
+                        "survey_vita-utterance-journey-na__kYWqSTT",
+                        "survey_vita-utterance-journey-na__L36PfJH"
+                    ],
+                    "RateLimitError": [
+                        "survey_vita-utterance-journey-na__9hCfhGW",
+                        "survey_vita-utterance-journey-na__3xJMykb",
+                        "survey_vita-utterance-journey-na__ekAenVm",
+                        "survey_vita-utterance-journey-na__QxdSfTY",
+                        "survey_vita-utterance-journey-na__gWUzcXc",
+                        "survey_vita-utterance-journey-na__WnkhBsK",
+                        "survey_vita-utterance-journey-na__SzsWdXp",
+                        "survey_vita-utterance-journey-na__ixo6yZ6",
+                        "survey_vita-utterance-journey-na__JTUqadf",
+                        "survey_vita-utterance-journey-na__VKqU8sY",
+                        "survey_vita-utterance-journey-na__XhZNUL3",
+                        "survey_vita-utterance-journey-na__9Kh9M3P",
+                        "survey_vita-utterance-journey-na__FzuZK5H",
+                        "survey_vita-utterance-journey-na__bPuMuBv",
+                        "survey_vita-utterance-journey-na__43xc3Ad",
+                        "survey_vita-utterance-journey-na__cwS6nvP",
+                        "survey_vita-utterance-journey-na__sqY6wbh",
+                        "survey_vita-utterance-journey-na__t2yCp3x",
+                        "survey_vita-utterance-journey-na__J4AkqHw",
+                        "survey_vita-utterance-journey-na__YEz6GcJ",
+                        "survey_vita-utterance-journey-na__twudBZ6",
+                        "survey_vita-utterance-journey-na__wBpyVed",
+                        "survey_vita-utterance-journey-na__fA4mmMs",
+                        "survey_vita-utterance-journey-na__WDQWGsv",
+                        "survey_vita-utterance-journey-na__dVkMawQ",
+                        "survey_vita-utterance-journey-na__AWZKnhG",
+                        "survey_vita-utterance-journey-na__FP6JRvb",
+                        "survey_vita-utterance-journey-na__6osf7fx",
+                        "survey_vita-utterance-journey-na__M5StpfX",
+                        "survey_vita-utterance-journey-na__YnUZf7e",
+                        "survey_vita-utterance-journey-na__y8QNTAi",
+                        "survey_vita-utterance-journey-na__KiYeBxd",
+                        "survey_vita-utterance-journey-na__knKDnek",
+                        "survey_vita-utterance-journey-na__cf4sigE",
+                        "survey_vita-utterance-journey-na__mBUrkZ2",
+                        "survey_vita-utterance-journey-na__zDUSDZF",
+                        "survey_vita-utterance-journey-na__FkqjkuE",
+                        "survey_vita-utterance-journey-na__rDucNgG"
+                    ]
+                }
+            }
+        },
+        "n_input_tokens": 294470,
+        "n_cache_tokens": null,
+        "n_output_tokens": 54443,
+        "cost_usd": 1.7000550000000003
+    }
+}

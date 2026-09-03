@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 4,
+  "seed": {
+    "rowId": "row-0756",
+    "scenario": "Tôi đang lái chiếc VF9 đi đến nhà thi đấu để tập bóng bàn buổi sáng, thong thả một mình trên phố đông. Tâm trạng tôi rất tốt và muốn xem trợ lý xe có thể hỗ trợ những việc gì.",
+    "firstInput": "Vita ơi, tôi có thể nhờ bạn làm những gì?",
+    "intentCode": "vita_profile_settings",
+    "subintentCode": "vita_capabilities_usage",
+    "subintentName": "Khả năng và cách sử dụng ViTa",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-9f3c655902f2"
+  }
+}

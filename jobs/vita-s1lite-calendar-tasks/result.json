@@ -1,0 +1,43 @@
+{
+    "id": "849b9356-ef93-43e7-8c28-307904317c55",
+    "started_at": "2026-09-03T15:59:27.535820",
+    "updated_at": "2026-09-03T15:59:52.680110",
+    "finished_at": "2026-09-03T15:59:52.680110",
+    "n_total_trials": 3,
+    "stats": {
+        "n_completed_trials": 3,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "persona-json-survey__google/gemini-3.5-flash-lite__adhoc": {
+                "n_trials": 3,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "pass_at_k": {
+                    "2": 1.0
+                },
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "survey_vita-utterance-calendar-t__iSnjKwi",
+                            "survey_vita-utterance-calendar-t__B79hRGh",
+                            "survey_vita-utterance-calendar-t__gBuwdE8"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 34155,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 6529,
+        "cost_usd": 0.026569000000000002
+    }
+}

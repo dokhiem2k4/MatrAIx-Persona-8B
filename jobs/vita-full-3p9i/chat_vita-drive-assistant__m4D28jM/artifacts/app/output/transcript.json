@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Ê Vita, thêm giúp anh việc cần làm vào danh sách nhé: gửi báo cáo doanh số gấp."
+    },
+    {
+      "role": "support",
+      "content": "Xe của mình không hỗ trợ tạo danh sách việc cần làm hay ghi chú bạn nhé. Mình có thể giúp bạn những việc khác như dẫn đường, bật nhạc, điều chỉnh điều hòa hoặc tra cứu thông tin. Bạn cần mình giúp gì thêm không?"
+    },
+    {
+      "role": "customer",
+      "content": "Thế thì chỉnh giúp anh điều hòa hàng ghế lái xuống 21 độ với, hơi nóng."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt nhiệt độ ghế lái 21 độ."
+    },
+    {
+      "role": "customer",
+      "content": "Kiểm tra giúp anh xem áp suất lốp xe thế nào rồi Vita."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: lốp trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Các chỉ số đều trong ngưỡng an toàn."
+    },
+    {
+      "role": "customer",
+      "content": "Tuyệt vời, cảm ơn em. Giữ nguyên thế nhé."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn. Mình luôn sẵn sàng khi bạn cần."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "matraix.trial_evaluation",
+  "contexts": [
+    {
+      "key": "task_outcome.primary",
+      "label": "Task outcome",
+      "contextType": "task_outcome",
+      "facets": [
+        {
+          "key": "outcome_status",
+          "label": "Outcome status",
+          "role": "primary",
+          "kind": "categorical",
+          "value": "partially_resolved"
+        },
+        {
+          "key": "resolution_basis",
+          "label": "Resolution basis",
+          "role": "control",
+          "kind": "categorical",
+          "value": "user_feedback"
+        },
+        {
+          "key": "customer_message_count",
+          "label": "Customer messages",
+          "role": "metric",
+          "kind": "continuous",
+          "value": 4
+        },
+        {
+          "key": "support_message_count",
+          "label": "Vita assistant messages",
+          "role": "metric",
+          "kind": "continuous",
+          "value": 4
+        },
+        {
+          "key": "outcome_reason",
+          "label": "Outcome reason",
+          "role": "explanation",
+          "kind": "textual",
+          "value": "Điểm 8 phản ánh sự cân bằng: Vita phản hồi thông tin pin và áp suất lốp chính xác ở turn 2, thực thi lệnh điều hòa và thông gió nhanh gọn ở turn 3-4. Tuy nhiên, việc nhầm lẫn nhỏ về tính năng sưởi ghế ở turn 3 khiến trải nghiệm chưa đạt tuyệt đối 10 điểm theo tiêu chuẩn khắt khe của một người hành động có kỷ luật."
+        }
+      ]
+    },
+    {
+      "key": "user_feedback.primary",
+      "label": "User feedback",
+      "contextType": "user_feedback",
+      "facets": [
+        {
+          "key": "overall_experience_rating",
+          "label": "Overall experience rating",
+          "role": "primary",
+          "kind": "continuous",
+          "value": 8
+        },
+        {
+          "key": "clarification_questions_useful",
+          "label": "Clarification / confirmation useful",
+          "role": "primary",
+          "kind": "categorical",
+          "value": "false"
+        },
+        {
+          "key": "need_constraint_satisfaction",
+          "label": "Need satisfaction",
+          "role": "evidence",
+          "kind": "categorical",
+          "value": "partially"
+        },
+        {
+          "key": "personal_preference_satisfaction",
+          "label": "Preference satisfaction",
+          "role": "evidence",
+          "kind": "categorical",
+          "value": "yes"
+        }
+      ]
+    }
+  ]
+}

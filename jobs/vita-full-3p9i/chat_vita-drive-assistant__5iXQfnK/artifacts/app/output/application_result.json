@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 3,
+  "seed": {
+    "rowId": "row-0432",
+    "scenario": "Tôi đang lái xe qua các tuyến phố nội đô để đến chỗ hẹn gặp khách hàng, trời hơi âm u nên tôi muốn biết liệu lát nữa có mưa hay không.",
+    "firstInput": "Vita xem giúp ngoài trời lúc này có đang mưa không.",
+    "intentCode": "general_qa_conversation",
+    "subintentCode": "weather_news",
+    "subintentName": "Thời tiết/tin tức",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62706e3ac3c2"
+  }
+}

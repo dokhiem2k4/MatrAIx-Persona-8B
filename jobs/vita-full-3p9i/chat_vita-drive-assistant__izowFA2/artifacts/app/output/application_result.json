@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 5,
+  "seed": {
+    "rowId": "row-0288",
+    "scenario": "Tôi đang lái xe trên đường vành đai để đến buổi họp chiến lược quan trọng, tâm trạng khá tập trung và nghiêm túc.",
+    "firstInput": "Kiểm tra phạm vi di chuyển.",
+    "intentCode": "energy_charging",
+    "subintentCode": "range_sufficiency",
+    "subintentName": "Phạm vi di chuyển",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

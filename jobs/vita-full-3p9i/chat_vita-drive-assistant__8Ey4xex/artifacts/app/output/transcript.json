@@ -1,0 +1,48 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, gọi ngay cho anh Nam giúp anh cái nhé, đang vội ra sân bóng rồi."
+    },
+    {
+      "role": "support",
+      "content": "Xe mình hiện không hỗ trợ gọi điện thoại hay quản lý danh bạ bạn nhé. Mình có thể giúp bạn những việc khác như mở Google Maps dẫn đường ra sân bóng, hoặc bật điều hòa trước khi đi. Bạn cần mình giúp gì không?"
+    },
+    {
+      "role": "customer",
+      "content": "Thế thôi bỏ qua đi em. Tìm giúp anh trạm sạc nào gần nhất dọc đường đi xem nào."
+    },
+    {
+      "role": "support",
+      "content": "Xe đang đỗ, mình chưa thấy có lộ trình nào đang hoạt động. Bạn muốn đặt điểm đến trước để mình tìm trạm sạc dọc đường nhé?"
+    },
+    {
+      "role": "customer",
+      "content": "Ừ đúng rồi, em tìm đường giúp anh đến Sân bóng Bộ Công An trên đường Phạm Văn Đồng nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã tìm đường đến Sân bóng Bộ Công An trên đường Phạm Văn Đồng, cách đây 38 km, dự kiến mất khoảng 122 phút. Mình đã bắt đầu dẫn đường cho bạn."
+    },
+    {
+      "role": "customer",
+      "content": "Được rồi, thế giờ tìm giúp anh trạm sạc điện nào gần nhất dọc theo tuyến đường này nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tìm và cập nhật lộ trình đến trạm sạc điện gần nhất dọc đường đến Sân bóng Bộ Công An. Tổng quãng đường khoảng 60,5 km, thời gian dự kiến 194 phút. Bạn có thể bắt đầu di chuyển."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em, thế là ổn rồi đấy. Chỉnh giúp anh nhiệt độ điều hòa xuống 22 độ và bật quạt gió mức trung bình nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa, chỉnh nhiệt độ xuống 22°C và quạt gió mức trung bình rồi anh nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

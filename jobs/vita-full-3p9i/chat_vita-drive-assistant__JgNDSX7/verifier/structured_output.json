@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "matraix.trial_evaluation",
+  "contexts": [
+    {
+      "key": "task_outcome.primary",
+      "label": "Task outcome",
+      "contextType": "task_outcome",
+      "facets": [
+        {
+          "key": "outcome_status",
+          "label": "Outcome status",
+          "role": "primary",
+          "kind": "categorical",
+          "value": "partially_resolved"
+        },
+        {
+          "key": "resolution_basis",
+          "label": "Resolution basis",
+          "role": "control",
+          "kind": "categorical",
+          "value": "user_feedback"
+        },
+        {
+          "key": "customer_message_count",
+          "label": "Customer messages",
+          "role": "metric",
+          "kind": "continuous",
+          "value": 6
+        },
+        {
+          "key": "support_message_count",
+          "label": "Vita assistant messages",
+          "role": "metric",
+          "kind": "continuous",
+          "value": 6
+        },
+        {
+          "key": "outcome_reason",
+          "label": "Outcome reason",
+          "role": "explanation",
+          "kind": "textual",
+          "value": "Điểm 7 phản ánh một trải nghiệm làm việc tốt về sau nhưng có khởi đầu chưa thật sự trơn tru. Cụ thể, turn 1 và turn 2 lộ rõ điểm yếu về ngữ cảnh khi Vita bắt người dùng phải thao tác vòng vo thay vì hướng dẫn thông minh ngay từ đầu. Đặc biệt, sự cố ở turn 5 khi Vita hỏi lại \"Bạn muốn bật gì ạ?\" (dù turn 4 đã nêu rõ) làm giảm độ tin cậy đối với một hệ thống điều khiển buồng lái cao cấp. Tuy nhiên, khả năng thực thi lệnh chính xác ở turn 6 và sự tuân thủ quy tắc an toàn giúp lấy lại phần lớn điểm số."
+        }
+      ]
+    },
+    {
+      "key": "user_feedback.primary",
+      "label": "User feedback",
+      "contextType": "user_feedback",
+      "facets": [
+        {
+          "key": "overall_experience_rating",
+          "label": "Overall experience rating",
+          "role": "primary",
+          "kind": "continuous",
+          "value": 7
+        },
+        {
+          "key": "clarification_questions_useful",
+          "label": "Clarification / confirmation useful",
+          "role": "primary",
+          "kind": "categorical",
+          "value": "true"
+        },
+        {
+          "key": "need_constraint_satisfaction",
+          "label": "Need satisfaction",
+          "role": "evidence",
+          "kind": "categorical",
+          "value": "partially"
+        },
+        {
+          "key": "personal_preference_satisfaction",
+          "label": "Preference satisfaction",
+          "role": "evidence",
+          "kind": "categorical",
+          "value": "partially"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita, kết nối Bluetooth với điện thoại giúp tôi để phát nhạc nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật Bluetooth cho bạn rồi. Bạn có thể vào danh sách thiết bị trên xe để ghép nối với điện thoại."
+    },
+    {
+      "role": "customer",
+      "content": "Tôi ghép nối từ trước rồi, kết nối luôn thiết bị của tôi đi."
+    },
+    {
+      "role": "support",
+      "content": "Bạn muốn kết nối thiết bị qua Bluetooth, Wi-Fi hay eSIM ạ?"
+    },
+    {
+      "role": "customer",
+      "content": "Kết nối Bluetooth với chiếc điện thoại chính của tôi đang để trong xe ấy."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật Bluetooth cho xe rồi bạn nhé. Điện thoại chính của bạn sẽ tự động kết nối khi ở gần xe."
+    },
+    {
+      "role": "customer",
+      "content": "Được rồi, thử phát danh sách nhạc đi xem được chưa."
+    },
+    {
+      "role": "support",
+      "content": "Đã mở danh sách nhạc."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

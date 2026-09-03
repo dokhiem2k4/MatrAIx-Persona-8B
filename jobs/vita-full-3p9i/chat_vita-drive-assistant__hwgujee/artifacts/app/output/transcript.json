@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, tắt nhạc giúp tôi với, đoạn này đông quá cần tập trung."
+    },
+    {
+      "role": "support",
+      "content": "Đã tắt tiếng."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Tiện thể bật giúp tôi quạt gió ghế lái lên một chút nhé, trời nóng quá."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt thông gió ghế mức 2."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita, vừa vặn lắm. À, kiểm tra giúp tôi dung lượng pin còn bao nhiêu phần trăm nhé."
+    },
+    {
+      "role": "support",
+      "content": "Pin hiện còn 78%."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

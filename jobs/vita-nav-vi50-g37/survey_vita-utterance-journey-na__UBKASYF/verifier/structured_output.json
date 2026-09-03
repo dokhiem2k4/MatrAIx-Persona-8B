@@ -1,0 +1,1436 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "matraix.trial_evaluation",
+  "taskType": "survey",
+  "presenceCheck": {
+    "passed": true,
+    "requiredArtifacts": [
+      "survey_result.json"
+    ],
+    "missingArtifacts": []
+  },
+  "sourceArtifacts": {
+    "surveyResult": "/app/output/survey_result.json"
+  },
+  "contexts": [
+    {
+      "key": "question.q0",
+      "label": "q0",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang tự lái xe đi kiểm tra tiến độ dự án hạ tầng ở ngoại thành và kim xăng bắt đầu báo mức cảnh báo. Lịch họp đầu giờ chiều rất sát nên tôi cần tìm trạm nhiên liệu gần nhất mà không làm gián đoạn lịch trình."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q1",
+      "label": "q1",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, tìm và dẫn đường cho tôi đến cây xăng gần nhất."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q2",
+      "label": "q2",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Sau buổi làm việc kéo dài tại ủy ban nhân dân quận, tôi tranh thủ lái xe đi ăn trưa một mình. Tôi muốn tìm một quán ăn quen thuộc, nhanh gọn để kịp về cơ quan xử lý công văn."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q3",
+      "label": "q3",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, tìm giúp tôi một quán phở truyền thống gần khu vực này và dẫn đường tới đó."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q4",
+      "label": "q4",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang di chuyển vào khu trung tâm thành phố để dự phiên họp tham vấn về quy hoạch đô thị. Mật độ giao thông khu vực này rất cao nên tôi cần tìm một điểm đỗ xe kiên cố, an toàn và đúng quy chuẩn."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q5",
+      "label": "q5",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, điều hướng giúp tôi đến bãi đỗ xe ô tô gần khu vực chợ Bến Thành."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q6",
+      "label": "q6",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi vừa kết thúc cuộc trao đổi với đối tác và đang ngồi trong xe đỗ bên đường. Tôi cần một không gian yên tĩnh, lịch sự gần đây để rà soát lại các tài liệu quy hoạch trước cuộc gặp cấp cao tiếp theo."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q7",
+      "label": "q7",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, tìm cho tôi một quán cà phê yên tĩnh gần đây."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q8",
+      "label": "q8",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe trước cổng cơ quan vào ngày nghỉ cuối tuần, chuẩn bị đi thăm lại một số hiện vật lịch sử chiến trường xưa. Tâm trạng tôi khá trầm lắng khi nhớ về những năm tháng quân ngũ và các đồng đội cũ."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q9",
+      "label": "q9",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, hãy dẫn đường cho tôi đến Bảo tàng Chứng tích Chiến tranh."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q10",
+      "label": "q10",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang dừng xe gần khu liên cơ quan và chuẩn bị tiếp đón một đồng nghiệp lâu năm trong ngành quốc phòng. Tôi muốn chọn một nhà hàng ẩm thực truyền thống trang trọng, lịch sự để vừa dùng bữa vừa trao đổi công việc."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q11",
+      "label": "q11",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, hãy tìm giúp tôi một nhà hàng ẩm thực Việt Nam lịch sự quanh đây để dùng bữa trưa."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q12",
+      "label": "q12",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe thị sát hướng tuyến giao thông liên tỉnh nhưng quan sát thấy lưu lượng trên cao tốc bắt đầu ùn ứ cục bộ. Tôi muốn chuyển hướng sang tuyến đường tránh để duy trì tốc độ và bảo đảm an toàn di chuyển."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q13",
+      "label": "q13",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, đổi lộ trình hiện tại sang đường tránh, không đi cao tốc."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q14",
+      "label": "q14",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang trên đường đến dự cuộc họp sơ kết công tác tại sở ban ngành, nhưng phía trước bắt đầu có hiện tượng tắc nghẽn kéo dài. Tôi cần tối ưu hóa thời gian di chuyển để bảo đảm có mặt đúng giờ quy định."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q15",
+      "label": "q15",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, kiểm tra và chuyển sang lộ trình thông thoáng hơn giúp tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q16",
+      "label": "q16",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang di chuyển trên trục đường chính qua trung tâm và cần gửi gấp một tập tài liệu hành chính quan trọng qua đường bưu điện. Tôi muốn bổ sung điểm dừng này vào tuyến đường đang đi mà không làm xáo trộn lộ trình tổng thể."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q17",
+      "label": "q17",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, thêm Bưu điện Trung tâm Thành phố làm điểm dừng trên hành trình hiện tại."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q18",
+      "label": "q18",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe tại khuôn viên khách sạn sau chuyến công tác dài ngày và chuẩn bị di chuyển tới trung tâm hành chính cạnh Hồ Hoàn Kiếm. Tôi muốn thiết lập ngay tuyến đường chính xác nhất trước khi nổ máy xuất phát."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q19",
+      "label": "q19",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, thiết lập lộ trình từ đây đến Hồ Hoàn Kiếm."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q20",
+      "label": "q20",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang dừng xe kiểm tra lại lịch trình và nhận được thông báo buổi trao đổi tại khu vực chợ Bến Thành đã hoãn lại. Tôi muốn cập nhật lại tuyến đường để di chuyển thẳng đến điểm công tác kế tiếp."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q21",
+      "label": "q21",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, xóa điểm dừng tại chợ Bến Thành khỏi hành trình giúp tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q22",
+      "label": "q22",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang ngồi trong xe tại trụ sở, chuẩn bị lên đường ra sân bay để thực hiện chuyến công vụ đột xuất. Thời gian rất khẩn trương nên tôi cần một hành trình tối ưu qua tuyến cao tốc để đảm bảo tính kỷ luật về giờ giấc."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q23",
+      "label": "q23",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, lập lộ trình đưa tôi ra sân bay Nội Bài, ưu tiên đi đường cao tốc."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q24",
+      "label": "q24",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe một mình trên đường đến phiên họp tham mưu của cơ quan. Do tính chất cuộc họp đòi hỏi sự chuẩn xác tuyệt đối về mặt thời gian, tôi cần nắm rõ thời lượng còn lại của chuyến đi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q25",
+      "label": "q25",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, còn bao nhiêu phút nữa thì tới nơi?"
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q26",
+      "label": "q26",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang điều khiển xe trên trục đường vành đai và nhận thấy mật độ xe cơ giới phía trước bắt đầu dày đặc. Tôi cần đánh giá tình hình giao thông để chủ động phương án xử lý."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q27",
+      "label": "q27",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, báo cáo tình hình giao thông trên đoạn đường phía trước giúp tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q28",
+      "label": "q28",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang chở tài liệu quan trọng ra sân bay để bàn giao kịp chuyến bay chuyên cơ đầu giờ chiều. Tôi cần biết thời điểm chính xác xe sẽ tới sảnh ga để phối hợp nhịp nhàng với bộ phận lễ tân."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q29",
+      "label": "q29",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, ước tính chính xác mấy giờ tôi sẽ có mặt tại sân bay?"
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q30",
+      "label": "q30",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang ngồi trong xe tại bãi đỗ chung cư vào sáng sớm, chuẩn bị di chuyển đến cơ quan đầu não trước giờ giao ban. Tôi muốn dự tính thời gian di chuyển để sắp xếp công việc trong ngày cho khoa học."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q31",
+      "label": "q31",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, nếu xuất phát ngay bây giờ thì mất bao lâu để tôi đến cơ quan?"
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q32",
+      "label": "q32",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe trước cổng trụ sở đơn vị, chuẩn bị xuất phát đi đón đoàn cán bộ cấp cao hạ cánh tại sân bay. Tôi cần kiểm tra trước toàn bộ tình trạng đường sá và giờ đến dự kiến để đảm bảo đón tiếp đúng nghi thức."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q33",
+      "label": "q33",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, kiểm tra tình hình tuyến đường ra sân bay và báo giờ đến dự kiến giúp tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q34",
+      "label": "q34",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang dừng xe xem lại báo cáo quy hoạch phân khu trước khi đến trung tâm hội nghị quốc tế tham dự diễn đàn. Tôi cần biết mốc thời gian đến nơi chính xác để chủ động việc vào hội trường."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q35",
+      "label": "q35",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, nếu tôi đi ngay bây giờ thì dự kiến mấy giờ sẽ tới trung tâm hội nghị?"
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q36",
+      "label": "q36",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe tiếp cận tòa nhà trung tâm hành chính và chuẩn bị rẽ vào khu vực bãi đỗ. Tôi muốn nhận chỉ dẫn chuẩn xác để vào đúng luồng hầm kiểm soát an ninh."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q37",
+      "label": "q37",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, bật chỉ dẫn lối vào bãi đỗ xe của tòa nhà."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q38",
+      "label": "q38",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang giảm tốc độ khi xe chỉ còn cách trụ sở làm việc khoảng vài trăm mét. Tôi cần trợ lý chỉ rõ lối vào khu vực đỗ xe nội bộ để không gây cản trở giao thông xung quanh."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q39",
+      "label": "q39",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, gần tới nơi rồi, chỉ đường vào bãi đỗ xe tại điểm đến giúp tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q40",
+      "label": "q40",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe đưa một chuyên gia cao cấp tới khách sạn quốc tế để lưu trú trước kỳ hội thảo. Tôi cần tiếp cận đúng sảnh đón trả khách danh dự một cách thuận lợi và trang trọng nhất."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q41",
+      "label": "q41",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, tôi sắp tới khách sạn, hãy dẫn đường cho tôi vào khu vực đón trả khách."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q42",
+      "label": "q42",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đã đưa xe vào đúng vị trí đỗ quy định trong nhà để xe của cơ quan. Tôi chuẩn bị tắt máy và kiểm tra lại cặp tài liệu trước khi bước vào phòng họp."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q43",
+      "label": "q43",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, xe đã đỗ xong, kết thúc hành trình dẫn đường."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q44",
+      "label": "q44",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Sau hành trình dài từ địa bàn khảo sát trở về, tôi đã đưa xe vào vị trí an toàn tại bãi đỗ trung tâm. Tôi muốn hoàn tất phiên dẫn đường để hệ thống lưu lại các thông số di chuyển."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q45",
+      "label": "q45",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, tôi đỗ xe xong rồi, kết thúc chuyến đi giúp tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q46",
+      "label": "q46",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi vừa đỗ xe tại một tầng hầm rộng lớn của khu phức hợp đa chức năng sau chuyến công tác. Tôi cần lưu lại vị trí chính xác để dễ dàng tìm xe sau khi kết thúc buổi làm việc kéo dài đến tối."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q47",
+      "label": "q47",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, lưu lại vị trí đỗ xe hiện tại này vào hệ thống giúp tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q48",
+      "label": "q48",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang tự lái xe công tác dọc tuyến miền Trung qua địa phận Thừa Thiên Huế. Trên đường đi thong thả, tôi muốn tìm hiểu thêm về văn hóa ẩm thực truyền thống lâu đời của vùng đất cố đô."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q49",
+      "label": "q49",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, vùng đất Huế nổi tiếng nhất với những món ăn truyền thống nào?"
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q50",
+      "label": "q50",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe khảo sát quy hoạch hạ tầng bảo tồn đô thị ven biển Quảng Nam. Tôi muốn nghe tóm tắt về các giá trị lịch sử và không gian kiến trúc truyền thống làm nên bản sắc của phố cổ Hội An."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q51",
+      "label": "q51",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, tóm tắt giúp tôi những nét đặc sắc về lịch sử và kiến trúc của phố cổ Hội An."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q52",
+      "label": "q52",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe lên công tác tại vùng cao nguyên Lâm Đồng trong tâm trạng khá thoải mái. Tôi muốn tìm hiểu các sản vật nông nghiệp chất lượng cao theo mùa để mua gửi tặng các đồng đội cựu chiến binh."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q53",
+      "label": "q53",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, thời điểm này ở Đà Lạt có những đặc sản nông sản nào đáng để trải nghiệm?"
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q54",
+      "label": "q54",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang dừng xe bên quảng trường trung tâm để nghiên cứu tài liệu về lịch sử phát triển đô thị Sài Gòn qua các thời kỳ. Tôi muốn kiểm chứng lại mốc thời gian xây dựng chuẩn xác của công trình chợ Bến Thành."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q55",
+      "label": "q55",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, chợ Bến Thành được xây dựng chính xác vào năm nào?"
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q56",
+      "label": "q56",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang dừng chân nghỉ tại Ninh Bình trong chuyến khảo sát thực địa về quy hoạch không gian danh thắng kết hợp bảo vệ cảnh quan. Tôi muốn nắm rõ các nét tiêu biểu về mặt địa mạo và lịch sử của khu vực Tràng An."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q57",
+      "label": "q57",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, quần thể danh thắng Tràng An ở Ninh Bình có những giá trị lịch sử và cảnh quan nào nổi bật?"
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q58",
+      "label": "q58",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Sau một ngày làm việc về công tác quản lý biên giới, tôi đang đỗ xe nghỉ ngơi tại trung tâm thị xã Sa Pa. Tôi muốn tìm hiểu một số hoạt động văn hóa cộng đồng bản địa vào buổi tối để đi dạo thư giãn."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q59",
+      "label": "q59",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, tôi đang đỗ xe tại Sa Pa, buổi tối ở đây có những hoạt động văn hóa nào đáng chú ý?"
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "survey.summary",
+      "label": "Survey summary",
+      "contextType": "trial_summary",
+      "facets": [
+        {
+          "key": "answer_count",
+          "label": "Answer count",
+          "role": "score",
+          "kind": "numerical",
+          "value": 60
+        },
+        {
+          "key": "trajectory_event_count",
+          "label": "Trajectory event count",
+          "role": "score",
+          "kind": "numerical",
+          "value": 122
+        }
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "key": "question.q0.response",
+      "label": "Selected response",
+      "group": "question.q0",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang tự lái xe đi kiểm tra tiến độ dự án hạ tầng ở ngoại thành và kim xăng bắt đầu báo mức cảnh báo. Lịch họp đầu giờ chiều rất sát nên tôi cần tìm trạm nhiên liệu gần nhất mà không làm gián đoạn lịch trình."
+    },
+    {
+      "key": "question.q1.response",
+      "label": "Selected response",
+      "group": "question.q1",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, tìm và dẫn đường cho tôi đến cây xăng gần nhất."
+    },
+    {
+      "key": "question.q2.response",
+      "label": "Selected response",
+      "group": "question.q2",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Sau buổi làm việc kéo dài tại ủy ban nhân dân quận, tôi tranh thủ lái xe đi ăn trưa một mình. Tôi muốn tìm một quán ăn quen thuộc, nhanh gọn để kịp về cơ quan xử lý công văn."
+    },
+    {
+      "key": "question.q3.response",
+      "label": "Selected response",
+      "group": "question.q3",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, tìm giúp tôi một quán phở truyền thống gần khu vực này và dẫn đường tới đó."
+    },
+    {
+      "key": "question.q4.response",
+      "label": "Selected response",
+      "group": "question.q4",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang di chuyển vào khu trung tâm thành phố để dự phiên họp tham vấn về quy hoạch đô thị. Mật độ giao thông khu vực này rất cao nên tôi cần tìm một điểm đỗ xe kiên cố, an toàn và đúng quy chuẩn."
+    },
+    {
+      "key": "question.q5.response",
+      "label": "Selected response",
+      "group": "question.q5",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, điều hướng giúp tôi đến bãi đỗ xe ô tô gần khu vực chợ Bến Thành."
+    },
+    {
+      "key": "question.q6.response",
+      "label": "Selected response",
+      "group": "question.q6",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi vừa kết thúc cuộc trao đổi với đối tác và đang ngồi trong xe đỗ bên đường. Tôi cần một không gian yên tĩnh, lịch sự gần đây để rà soát lại các tài liệu quy hoạch trước cuộc gặp cấp cao tiếp theo."
+    },
+    {
+      "key": "question.q7.response",
+      "label": "Selected response",
+      "group": "question.q7",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, tìm cho tôi một quán cà phê yên tĩnh gần đây."
+    },
+    {
+      "key": "question.q8.response",
+      "label": "Selected response",
+      "group": "question.q8",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe trước cổng cơ quan vào ngày nghỉ cuối tuần, chuẩn bị đi thăm lại một số hiện vật lịch sử chiến trường xưa. Tâm trạng tôi khá trầm lắng khi nhớ về những năm tháng quân ngũ và các đồng đội cũ."
+    },
+    {
+      "key": "question.q9.response",
+      "label": "Selected response",
+      "group": "question.q9",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, hãy dẫn đường cho tôi đến Bảo tàng Chứng tích Chiến tranh."
+    },
+    {
+      "key": "question.q10.response",
+      "label": "Selected response",
+      "group": "question.q10",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang dừng xe gần khu liên cơ quan và chuẩn bị tiếp đón một đồng nghiệp lâu năm trong ngành quốc phòng. Tôi muốn chọn một nhà hàng ẩm thực truyền thống trang trọng, lịch sự để vừa dùng bữa vừa trao đổi công việc."
+    },
+    {
+      "key": "question.q11.response",
+      "label": "Selected response",
+      "group": "question.q11",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, hãy tìm giúp tôi một nhà hàng ẩm thực Việt Nam lịch sự quanh đây để dùng bữa trưa."
+    },
+    {
+      "key": "question.q12.response",
+      "label": "Selected response",
+      "group": "question.q12",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe thị sát hướng tuyến giao thông liên tỉnh nhưng quan sát thấy lưu lượng trên cao tốc bắt đầu ùn ứ cục bộ. Tôi muốn chuyển hướng sang tuyến đường tránh để duy trì tốc độ và bảo đảm an toàn di chuyển."
+    },
+    {
+      "key": "question.q13.response",
+      "label": "Selected response",
+      "group": "question.q13",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, đổi lộ trình hiện tại sang đường tránh, không đi cao tốc."
+    },
+    {
+      "key": "question.q14.response",
+      "label": "Selected response",
+      "group": "question.q14",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang trên đường đến dự cuộc họp sơ kết công tác tại sở ban ngành, nhưng phía trước bắt đầu có hiện tượng tắc nghẽn kéo dài. Tôi cần tối ưu hóa thời gian di chuyển để bảo đảm có mặt đúng giờ quy định."
+    },
+    {
+      "key": "question.q15.response",
+      "label": "Selected response",
+      "group": "question.q15",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, kiểm tra và chuyển sang lộ trình thông thoáng hơn giúp tôi."
+    },
+    {
+      "key": "question.q16.response",
+      "label": "Selected response",
+      "group": "question.q16",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang di chuyển trên trục đường chính qua trung tâm và cần gửi gấp một tập tài liệu hành chính quan trọng qua đường bưu điện. Tôi muốn bổ sung điểm dừng này vào tuyến đường đang đi mà không làm xáo trộn lộ trình tổng thể."
+    },
+    {
+      "key": "question.q17.response",
+      "label": "Selected response",
+      "group": "question.q17",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, thêm Bưu điện Trung tâm Thành phố làm điểm dừng trên hành trình hiện tại."
+    },
+    {
+      "key": "question.q18.response",
+      "label": "Selected response",
+      "group": "question.q18",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe tại khuôn viên khách sạn sau chuyến công tác dài ngày và chuẩn bị di chuyển tới trung tâm hành chính cạnh Hồ Hoàn Kiếm. Tôi muốn thiết lập ngay tuyến đường chính xác nhất trước khi nổ máy xuất phát."
+    },
+    {
+      "key": "question.q19.response",
+      "label": "Selected response",
+      "group": "question.q19",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, thiết lập lộ trình từ đây đến Hồ Hoàn Kiếm."
+    },
+    {
+      "key": "question.q20.response",
+      "label": "Selected response",
+      "group": "question.q20",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang dừng xe kiểm tra lại lịch trình và nhận được thông báo buổi trao đổi tại khu vực chợ Bến Thành đã hoãn lại. Tôi muốn cập nhật lại tuyến đường để di chuyển thẳng đến điểm công tác kế tiếp."
+    },
+    {
+      "key": "question.q21.response",
+      "label": "Selected response",
+      "group": "question.q21",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, xóa điểm dừng tại chợ Bến Thành khỏi hành trình giúp tôi."
+    },
+    {
+      "key": "question.q22.response",
+      "label": "Selected response",
+      "group": "question.q22",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang ngồi trong xe tại trụ sở, chuẩn bị lên đường ra sân bay để thực hiện chuyến công vụ đột xuất. Thời gian rất khẩn trương nên tôi cần một hành trình tối ưu qua tuyến cao tốc để đảm bảo tính kỷ luật về giờ giấc."
+    },
+    {
+      "key": "question.q23.response",
+      "label": "Selected response",
+      "group": "question.q23",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, lập lộ trình đưa tôi ra sân bay Nội Bài, ưu tiên đi đường cao tốc."
+    },
+    {
+      "key": "question.q24.response",
+      "label": "Selected response",
+      "group": "question.q24",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe một mình trên đường đến phiên họp tham mưu của cơ quan. Do tính chất cuộc họp đòi hỏi sự chuẩn xác tuyệt đối về mặt thời gian, tôi cần nắm rõ thời lượng còn lại của chuyến đi."
+    },
+    {
+      "key": "question.q25.response",
+      "label": "Selected response",
+      "group": "question.q25",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, còn bao nhiêu phút nữa thì tới nơi?"
+    },
+    {
+      "key": "question.q26.response",
+      "label": "Selected response",
+      "group": "question.q26",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang điều khiển xe trên trục đường vành đai và nhận thấy mật độ xe cơ giới phía trước bắt đầu dày đặc. Tôi cần đánh giá tình hình giao thông để chủ động phương án xử lý."
+    },
+    {
+      "key": "question.q27.response",
+      "label": "Selected response",
+      "group": "question.q27",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, báo cáo tình hình giao thông trên đoạn đường phía trước giúp tôi."
+    },
+    {
+      "key": "question.q28.response",
+      "label": "Selected response",
+      "group": "question.q28",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang chở tài liệu quan trọng ra sân bay để bàn giao kịp chuyến bay chuyên cơ đầu giờ chiều. Tôi cần biết thời điểm chính xác xe sẽ tới sảnh ga để phối hợp nhịp nhàng với bộ phận lễ tân."
+    },
+    {
+      "key": "question.q29.response",
+      "label": "Selected response",
+      "group": "question.q29",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, ước tính chính xác mấy giờ tôi sẽ có mặt tại sân bay?"
+    },
+    {
+      "key": "question.q30.response",
+      "label": "Selected response",
+      "group": "question.q30",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang ngồi trong xe tại bãi đỗ chung cư vào sáng sớm, chuẩn bị di chuyển đến cơ quan đầu não trước giờ giao ban. Tôi muốn dự tính thời gian di chuyển để sắp xếp công việc trong ngày cho khoa học."
+    },
+    {
+      "key": "question.q31.response",
+      "label": "Selected response",
+      "group": "question.q31",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, nếu xuất phát ngay bây giờ thì mất bao lâu để tôi đến cơ quan?"
+    },
+    {
+      "key": "question.q32.response",
+      "label": "Selected response",
+      "group": "question.q32",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe trước cổng trụ sở đơn vị, chuẩn bị xuất phát đi đón đoàn cán bộ cấp cao hạ cánh tại sân bay. Tôi cần kiểm tra trước toàn bộ tình trạng đường sá và giờ đến dự kiến để đảm bảo đón tiếp đúng nghi thức."
+    },
+    {
+      "key": "question.q33.response",
+      "label": "Selected response",
+      "group": "question.q33",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, kiểm tra tình hình tuyến đường ra sân bay và báo giờ đến dự kiến giúp tôi."
+    },
+    {
+      "key": "question.q34.response",
+      "label": "Selected response",
+      "group": "question.q34",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang dừng xe xem lại báo cáo quy hoạch phân khu trước khi đến trung tâm hội nghị quốc tế tham dự diễn đàn. Tôi cần biết mốc thời gian đến nơi chính xác để chủ động việc vào hội trường."
+    },
+    {
+      "key": "question.q35.response",
+      "label": "Selected response",
+      "group": "question.q35",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, nếu tôi đi ngay bây giờ thì dự kiến mấy giờ sẽ tới trung tâm hội nghị?"
+    },
+    {
+      "key": "question.q36.response",
+      "label": "Selected response",
+      "group": "question.q36",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe tiếp cận tòa nhà trung tâm hành chính và chuẩn bị rẽ vào khu vực bãi đỗ. Tôi muốn nhận chỉ dẫn chuẩn xác để vào đúng luồng hầm kiểm soát an ninh."
+    },
+    {
+      "key": "question.q37.response",
+      "label": "Selected response",
+      "group": "question.q37",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, bật chỉ dẫn lối vào bãi đỗ xe của tòa nhà."
+    },
+    {
+      "key": "question.q38.response",
+      "label": "Selected response",
+      "group": "question.q38",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang giảm tốc độ khi xe chỉ còn cách trụ sở làm việc khoảng vài trăm mét. Tôi cần trợ lý chỉ rõ lối vào khu vực đỗ xe nội bộ để không gây cản trở giao thông xung quanh."
+    },
+    {
+      "key": "question.q39.response",
+      "label": "Selected response",
+      "group": "question.q39",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, gần tới nơi rồi, chỉ đường vào bãi đỗ xe tại điểm đến giúp tôi."
+    },
+    {
+      "key": "question.q40.response",
+      "label": "Selected response",
+      "group": "question.q40",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe đưa một chuyên gia cao cấp tới khách sạn quốc tế để lưu trú trước kỳ hội thảo. Tôi cần tiếp cận đúng sảnh đón trả khách danh dự một cách thuận lợi và trang trọng nhất."
+    },
+    {
+      "key": "question.q41.response",
+      "label": "Selected response",
+      "group": "question.q41",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, tôi sắp tới khách sạn, hãy dẫn đường cho tôi vào khu vực đón trả khách."
+    },
+    {
+      "key": "question.q42.response",
+      "label": "Selected response",
+      "group": "question.q42",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đã đưa xe vào đúng vị trí đỗ quy định trong nhà để xe của cơ quan. Tôi chuẩn bị tắt máy và kiểm tra lại cặp tài liệu trước khi bước vào phòng họp."
+    },
+    {
+      "key": "question.q43.response",
+      "label": "Selected response",
+      "group": "question.q43",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, xe đã đỗ xong, kết thúc hành trình dẫn đường."
+    },
+    {
+      "key": "question.q44.response",
+      "label": "Selected response",
+      "group": "question.q44",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Sau hành trình dài từ địa bàn khảo sát trở về, tôi đã đưa xe vào vị trí an toàn tại bãi đỗ trung tâm. Tôi muốn hoàn tất phiên dẫn đường để hệ thống lưu lại các thông số di chuyển."
+    },
+    {
+      "key": "question.q45.response",
+      "label": "Selected response",
+      "group": "question.q45",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, tôi đỗ xe xong rồi, kết thúc chuyến đi giúp tôi."
+    },
+    {
+      "key": "question.q46.response",
+      "label": "Selected response",
+      "group": "question.q46",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi vừa đỗ xe tại một tầng hầm rộng lớn của khu phức hợp đa chức năng sau chuyến công tác. Tôi cần lưu lại vị trí chính xác để dễ dàng tìm xe sau khi kết thúc buổi làm việc kéo dài đến tối."
+    },
+    {
+      "key": "question.q47.response",
+      "label": "Selected response",
+      "group": "question.q47",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, lưu lại vị trí đỗ xe hiện tại này vào hệ thống giúp tôi."
+    },
+    {
+      "key": "question.q48.response",
+      "label": "Selected response",
+      "group": "question.q48",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang tự lái xe công tác dọc tuyến miền Trung qua địa phận Thừa Thiên Huế. Trên đường đi thong thả, tôi muốn tìm hiểu thêm về văn hóa ẩm thực truyền thống lâu đời của vùng đất cố đô."
+    },
+    {
+      "key": "question.q49.response",
+      "label": "Selected response",
+      "group": "question.q49",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, vùng đất Huế nổi tiếng nhất với những món ăn truyền thống nào?"
+    },
+    {
+      "key": "question.q50.response",
+      "label": "Selected response",
+      "group": "question.q50",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe khảo sát quy hoạch hạ tầng bảo tồn đô thị ven biển Quảng Nam. Tôi muốn nghe tóm tắt về các giá trị lịch sử và không gian kiến trúc truyền thống làm nên bản sắc của phố cổ Hội An."
+    },
+    {
+      "key": "question.q51.response",
+      "label": "Selected response",
+      "group": "question.q51",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, tóm tắt giúp tôi những nét đặc sắc về lịch sử và kiến trúc của phố cổ Hội An."
+    },
+    {
+      "key": "question.q52.response",
+      "label": "Selected response",
+      "group": "question.q52",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe lên công tác tại vùng cao nguyên Lâm Đồng trong tâm trạng khá thoải mái. Tôi muốn tìm hiểu các sản vật nông nghiệp chất lượng cao theo mùa để mua gửi tặng các đồng đội cựu chiến binh."
+    },
+    {
+      "key": "question.q53.response",
+      "label": "Selected response",
+      "group": "question.q53",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, thời điểm này ở Đà Lạt có những đặc sản nông sản nào đáng để trải nghiệm?"
+    },
+    {
+      "key": "question.q54.response",
+      "label": "Selected response",
+      "group": "question.q54",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang dừng xe bên quảng trường trung tâm để nghiên cứu tài liệu về lịch sử phát triển đô thị Sài Gòn qua các thời kỳ. Tôi muốn kiểm chứng lại mốc thời gian xây dựng chuẩn xác của công trình chợ Bến Thành."
+    },
+    {
+      "key": "question.q55.response",
+      "label": "Selected response",
+      "group": "question.q55",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, chợ Bến Thành được xây dựng chính xác vào năm nào?"
+    },
+    {
+      "key": "question.q56.response",
+      "label": "Selected response",
+      "group": "question.q56",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang dừng chân nghỉ tại Ninh Bình trong chuyến khảo sát thực địa về quy hoạch không gian danh thắng kết hợp bảo vệ cảnh quan. Tôi muốn nắm rõ các nét tiêu biểu về mặt địa mạo và lịch sử của khu vực Tràng An."
+    },
+    {
+      "key": "question.q57.response",
+      "label": "Selected response",
+      "group": "question.q57",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, quần thể danh thắng Tràng An ở Ninh Bình có những giá trị lịch sử và cảnh quan nào nổi bật?"
+    },
+    {
+      "key": "question.q58.response",
+      "label": "Selected response",
+      "group": "question.q58",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Sau một ngày làm việc về công tác quản lý biên giới, tôi đang đỗ xe nghỉ ngơi tại trung tâm thị xã Sa Pa. Tôi muốn tìm hiểu một số hoạt động văn hóa cộng đồng bản địa vào buổi tối để đi dạo thư giãn."
+    },
+    {
+      "key": "question.q59.response",
+      "label": "Selected response",
+      "group": "question.q59",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, tôi đang đỗ xe tại Sa Pa, buổi tối ở đây có những hoạt động văn hóa nào đáng chú ý?"
+    },
+    {
+      "key": "survey.summary.answer_count",
+      "label": "Answer count",
+      "group": "survey.summary",
+      "role": "score",
+      "kind": "numerical",
+      "value": 60
+    },
+    {
+      "key": "survey.summary.trajectory_event_count",
+      "label": "Trajectory event count",
+      "group": "survey.summary",
+      "role": "score",
+      "kind": "numerical",
+      "value": 122
+    }
+  ]
+}

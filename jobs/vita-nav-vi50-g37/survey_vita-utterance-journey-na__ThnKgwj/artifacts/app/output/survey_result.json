@@ -1,0 +1,2443 @@
+{
+  "instrument": {
+    "id": "vita_utterance_journey_navigation_places",
+    "title": "Vita — bối cảnh & câu mở đầu (journey_navigation_places)"
+  },
+  "answers": [
+    {
+      "questionId": "q0",
+      "value": "Tôi đang lái xe một mình đến trung tâm huấn luyện thể thao vào sáng sớm và nhận thấy xe của đơn vị sắp hết nhiên liệu. Tôi đang cần ghé nhanh vào một trạm xăng gần nhất trên tuyến đường này để kịp giờ buổi tập.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q1",
+      "value": "Vita, tìm giúp tôi trạm xăng gần nhất trên tuyến đường này.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q2",
+      "value": "Sau buổi tập bóng đá cường độ cao cùng đội, tôi chở vợ đi ăn sáng để nạp lại năng lượng trước ca làm việc tiếp theo. Tôi muốn tìm một quán phở sạch sẽ, chất lượng ở khu vực lân cận mà không mất nhiều thời gian di chuyển.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q3",
+      "value": "Vita ơi, tìm một quán phở ngon gần đây và dẫn đường giúp tôi nhé.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q4",
+      "value": "Tôi đang trên đường vào trung tâm thành phố để gặp đối tác tổ chức sự kiện thể thao gần khu vực chợ Bến Thành trong giờ cao điểm. Tôi cần tìm một bãi đỗ xe an toàn, thuận tiện ngay gần đó để vào họp đúng giờ.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q5",
+      "value": "Vita, hãy tìm và dẫn đường cho tôi đến bãi đỗ xe gần chợ Bến Thành còn chỗ trống nhé.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q6",
+      "value": "Tôi vừa hoàn thành buổi kiểm tra thể lực cho các vận động viên và đang ngồi nghỉ trong xe tại bãi đỗ của sân vận động. Tôi muốn tìm một quán cà phê yên tĩnh gần đây để ngồi phân tích dữ liệu chuyên môn.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q7",
+      "value": "Vita, tìm cho tôi một quán cà phê yên tĩnh gần vị trí này.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q8",
+      "value": "Tôi cùng vợ chuẩn bị xuất phát từ nhà để đưa một người bạn là chuyên gia thể thao quốc tế đi tham quan văn hóa tại thành phố. Chúng tôi có một buổi sáng thong thả và muốn đến thẳng Bảo tàng Chứng tích Chiến tranh.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q9",
+      "value": "Vita, mở dẫn đường đến Bảo tàng Chứng tích Chiến tranh giúp tôi.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q10",
+      "value": "Tôi đang đỗ xe bên ngoài trung tâm thi đấu thể thao sau buổi họp chuyên môn kéo dài đến trưa. Tôi muốn tìm một nhà hàng món Việt thanh đạm, dinh dưỡng tốt ở gần đây để dùng bữa trưa cùng đồng nghiệp.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q11",
+      "value": "Vita, gợi ý giúp tôi một nhà hàng món Việt dinh dưỡng, lịch sự gần đây để ăn trưa nhé.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q12",
+      "value": "Tôi đang trên đường di chuyển liên tỉnh để tham dự hội thảo khoa học thể thao và muốn lái xe thư thả ngắm cảnh thay vì đi cao tốc. Tâm trạng tôi khá thoải mái vì đã chủ động đi sớm trước giờ khai mạc.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q13",
+      "value": "Vita, chuyển tuyến đường hiện tại sang đường tránh không đi cao tốc.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q14",
+      "value": "Tôi đang lái xe đến sân tập để điều hành buổi tập chiến thuật quan trọng của đội và thấy phía trước bắt đầu đông xe. Tôi không muốn bị muộn giờ và cần một lộ trình thông thoáng hơn.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q15",
+      "value": "Vita ơi, đổi giúp tôi sang lộ trình nào ít ùn tắc hơn để đến sân tập kịp giờ.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q16",
+      "value": "Tôi đang trên đường đến văn phòng làm việc thì chợt nhớ cần gửi tài liệu hồ sơ thi đấu gấp. Tôi muốn ghé qua Bưu điện Trung tâm Thành phố trước khi tiếp tục hành trình.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q17",
+      "value": "Vita, thêm Bưu điện Trung tâm Thành phố làm điểm dừng trên tuyến này giúp tôi nhé.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q18",
+      "value": "Tôi đang đỗ xe tại sảnh khách sạn sau chuyến công tác tại Hà Nội và chuẩn bị đi dạo quanh trung tâm. Tôi muốn bắt đầu hành trình đến thẳng Hồ Hoàn Kiếm một cách nhanh gọn và chuẩn xác.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q19",
+      "value": "Vita, lập lộ trình từ đây đến Hồ Hoàn Kiếm.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q20",
+      "value": "Tôi đang đỗ xe chờ vợ trước cửa nhà và vừa nhận được thông báo đối tác dời địa điểm hẹn công việc. Tôi muốn hủy điểm dừng trung gian ở chợ Bến Thành để đi thẳng đến điểm đến cuối cùng.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q21",
+      "value": "Vita giúp tôi hủy điểm dừng ở chợ Bến Thành trên lộ trình đã lên nhé.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q22",
+      "value": "Tôi đang ở bãi đỗ xe của câu lạc bộ, chuẩn bị lên đường đưa đoàn vận động viên ra sân bay Nội Bài để bay đi thi đấu quốc tế. Vì lịch trình chuyến bay rất chặt chẽ, tôi muốn đi tuyến đường cao tốc thông suốt nhất.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q23",
+      "value": "Vita, hãy thiết lập tuyến đường đi sân bay Nội Bài và ưu tiên chọn đường cao tốc giúp tôi.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q24",
+      "value": "Tôi đang lái xe đưa vợ về nhà sau một ngày làm việc bận rộn tại trung tâm thể thao. Đường phố bắt đầu lên đèn và tôi muốn biết chính xác thời gian còn lại của hành trình.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q25",
+      "value": "Vita, còn bao nhiêu phút nữa thì xe đến nơi?",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q26",
+      "value": "Tôi đang di chuyển trên trục đường chính đến sân vận động để kịp buổi họp giao ban kỹ thuật trước trận đấu. Nhìn dòng xe phía xa có dấu hiệu chậm lại, tôi muốn nắm rõ tình hình giao thông phía trước.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q27",
+      "value": "Vita, kiểm tra giúp tôi tình hình giao thông đoạn đường phía trước có bị tắc không.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q28",
+      "value": "Tôi đang lái xe đưa một đồng nghiệp ra sân bay để kịp chuyến bay khảo sát địa điểm tập huấn. Do giờ cao điểm buổi chiều khá đông đúc, tôi cần tính toán giờ đến nơi để bạn chủ động làm thủ tục.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q29",
+      "value": "Vita, tính giúp tôi dự kiến mấy giờ mình sẽ có mặt ở sân bay nhé.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q30",
+      "value": "Tôi đang ngồi trong xe tại bãi đỗ khu căn hộ vào sáng sớm, chuẩn bị xuất phát đến văn phòng điều hành thể thao. Tôi muốn ước lượng thời gian di chuyển để sắp xếp họp trực tuyến với ban huấn luyện.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q31",
+      "value": "Vita, nếu đi ngay bây giờ thì mất bao lâu để đến công ty?",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q32",
+      "value": "Tôi đang đỗ xe trước cổng trung tâm huấn luyện, chuẩn bị chở đoàn chuyên gia ra sân bay đón chuyến bay trưa. Tôi cần kiểm tra mật độ giao thông và thời gian dự kiến đến nơi để chắc chắn không bị trễ giờ bay.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q33",
+      "value": "Vita, kiểm tra giúp tôi tình hình đường xá ra sân bay và dự kiến mấy giờ đến nơi nhé.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q34",
+      "value": "Tôi đang ngồi trên xe chuẩn bị đến tham dự lễ vinh danh thể thao thường niên tại trung tâm hội nghị. Tôi muốn đảm bảo thời gian xuất phát chuẩn xác để kịp đón tiếp đối tác trước giờ khai mạc.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q35",
+      "value": "Vita ơi, nếu mình xuất phát ngay lúc này thì khoảng mấy giờ tôi sẽ tới trung tâm hội nghị?",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q36",
+      "value": "Tôi đang lái xe đến gần tòa nhà văn phòng của liên đoàn thể thao để chuẩn bị cho buổi làm việc buổi chiều. Tôi cần chỉ dẫn vào lối hầm gửi xe một cách chuẩn xác và nhanh gọn.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q37",
+      "value": "Vita, bật chỉ đường vào bãi đỗ xe của tòa nhà giúp tôi.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q38",
+      "value": "Tôi cùng vợ đang đến gần khu liên hợp thể thao để theo dõi một giải đấu giao hữu cuối tuần. Khi xe còn cách điểm đến vài trăm mét, tôi muốn tìm lối vào bãi đỗ xe dành cho khách.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q39",
+      "value": "Vita ơi, xe sắp tới nơi rồi, chỉ giúp tôi lối vào bãi đỗ xe ở đây nhé.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q40",
+      "value": "Tôi đang lái xe đưa một vận động viên về lại khách sạn nghỉ ngơi sau buổi thi đấu căng thẳng. Tôi cần tiếp cận đúng sảnh đón trả khách để bạn xuống xe thuận tiện và an toàn nhất.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q41",
+      "value": "Vita, tôi sắp tới khách sạn rồi, hãy hướng dẫn tôi đi vào sảnh đón trả khách nhé.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q42",
+      "value": "Tôi vừa đỗ xe gọn gàng vào vị trí quy định tại trung tâm thể thao sau một ngày làm việc dài. Tôi chuẩn bị tắt máy và hoàn tất lộ trình di chuyển hôm nay.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q43",
+      "value": "Vita, tôi đã đỗ xe xong, kết thúc hành trình.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q44",
+      "value": "Tôi và vợ vừa đỗ xe an toàn tại bãi xe trung tâm thương mại để chuẩn bị đi ăn tối cuối tuần cùng nhau. Tâm trạng tôi rất vui vẻ và thư thái sau một tuần làm việc hiệu quả.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q45",
+      "value": "Vita, mình đã đỗ xe xong rồi, bạn kết thúc chuyến đi giúp tôi nhé.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q46",
+      "value": "Tôi vừa đỗ xe vào một góc ở tầng hầm rộng lớn của sân vận động đa năng trước giờ diễn ra sự kiện thể thao lớn. Tôi muốn lưu lại chính xác vị trí đỗ để sau khi tan trận đấu dễ dàng tìm lại xe.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q47",
+      "value": "Vita, xe đã đỗ ở đây rồi, bạn ghi nhớ và lưu lại vị trí đỗ này giúp tôi nhé.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q48",
+      "value": "Tôi đang lái xe đưa đội tuyển đi giao lưu tập huấn tại Huế và muốn tìm hiểu nhanh về ẩm thực đặc trưng của địa phương. Tôi muốn thông tin ngắn gọn để chuẩn bị thực đơn bổ sung phù hợp cho đoàn.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q49",
+      "value": "Vita, ẩm thực Huế có những món ăn đặc sản nổi tiếng nào?",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q50",
+      "value": "Tôi đang cùng vợ lái xe trên cung đường ven biển hướng về Hội An trong kỳ nghỉ ngắn sau mùa giải. Cả hai chúng tôi đều hào hứng muốn tìm hiểu thêm về nét văn hóa đặc sắc của phố cổ.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q51",
+      "value": "Vita, chia sẻ giúp tôi xem phố cổ Hội An có những nét đặc sắc gì nổi bật nhé.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q52",
+      "value": "Tôi đang chở vợ đi nghỉ dưỡng tại Đà Lạt sau đợt tập huấn thể lực dài ngày. Tôi muốn tìm hiểu xem thời điểm này trên Đà Lạt có những loại nông sản tươi ngon hay món ăn đặc sản nào phù hợp.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q53",
+      "value": "Vita, thời điểm này ở Đà Lạt có đặc sản hoặc món ngon nào đáng để trải nghiệm không?",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q54",
+      "value": "Tôi đang đỗ xe chờ đón đối tác gần khu vực trung tâm quận 1 và nhìn ra kiến trúc biểu tượng của chợ Bến Thành. Tôi muốn tra cứu nhanh một thông tin lịch sử chuẩn xác về địa danh này.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q55",
+      "value": "Vita, chợ Bến Thành được xây dựng vào năm nào?",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q56",
+      "value": "Tôi đang đỗ xe tại điểm nghỉ chân ở Ninh Bình trong chuyến đi khảo sát cung đường chạy bộ dã ngoại. Tôi muốn tìm hiểu kỹ hơn về các điểm nhấn cảnh quan của quần thể Tràng An để lên kế hoạch hoạt động.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q57",
+      "value": "Vita, giới thiệu giúp tôi những điểm nổi bật nhất của danh thắng Tràng An ở Ninh Bình nhé.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q58",
+      "value": "Tôi đang đỗ xe tại thị trấn Sa Pa cùng vợ sau khi hoàn thành chuyến đi bộ dã ngoại buổi chiều. Chúng tôi muốn tìm một vài hoạt động văn hóa hoặc ẩm thực thú vị để trải nghiệm vào buổi tối.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q59",
+      "value": "Vita ơi, chúng tôi đang đỗ xe ở Sa Pa, buổi tối ở đây có những hoạt động hay địa điểm nào thú vị để trải nghiệm không?",
+      "rationale": "",
+      "confidence": null
+    }
+  ],
+  "trajectory": [
+    {
+      "timestamp": "2026-09-03T07:17:17Z",
+      "actor": "system",
+      "action": "survey_started",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "instrumentTitle": "Vita — bối cảnh & câu mở đầu (journey_navigation_places)",
+        "numQuestions": 60
+      },
+      "outcome": {
+        "status": "started"
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:18Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q0",
+        "questionIndex": 1,
+        "questionType": "free_text",
+        "construct": "destination_poi__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Tìm điểm đến/POI.\nTham khảo — một người dùng khác đã nói: \"Dẫn đường đến trạm xăng gần nhất.\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:19Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q0",
+        "questionIndex": 1,
+        "questionType": "free_text",
+        "construct": "destination_poi__scenario"
+      },
+      "outcome": {
+        "questionId": "q0",
+        "value": "Tôi đang lái xe một mình đến trung tâm huấn luyện thể thao vào sáng sớm và nhận thấy xe của đơn vị sắp hết nhiên liệu. Tôi đang cần ghé nhanh vào một trạm xăng gần nhất trên tuyến đường này để kịp giờ buổi tập.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:20Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q1",
+        "questionIndex": 2,
+        "questionType": "free_text",
+        "construct": "destination_poi__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Tìm điểm đến/POI.\nTham khảo — một người dùng khác đã nói: \"Dẫn đường đến trạm xăng gần nhất.\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:21Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q1",
+        "questionIndex": 2,
+        "questionType": "free_text",
+        "construct": "destination_poi__first_input"
+      },
+      "outcome": {
+        "questionId": "q1",
+        "value": "Vita, tìm giúp tôi trạm xăng gần nhất trên tuyến đường này.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:22Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q2",
+        "questionIndex": 3,
+        "questionType": "free_text",
+        "construct": "destination_poi__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Tìm điểm đến/POI.\nTham khảo — một người dùng khác đã nói: \"Tìm một quán phở gần đây rồi dẫn đường tới đó.\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:23Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q2",
+        "questionIndex": 3,
+        "questionType": "free_text",
+        "construct": "destination_poi__scenario"
+      },
+      "outcome": {
+        "questionId": "q2",
+        "value": "Sau buổi tập bóng đá cường độ cao cùng đội, tôi chở vợ đi ăn sáng để nạp lại năng lượng trước ca làm việc tiếp theo. Tôi muốn tìm một quán phở sạch sẽ, chất lượng ở khu vực lân cận mà không mất nhiều thời gian di chuyển.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:24Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q3",
+        "questionIndex": 4,
+        "questionType": "free_text",
+        "construct": "destination_poi__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Tìm điểm đến/POI.\nTham khảo — một người dùng khác đã nói: \"Tìm một quán phở gần đây rồi dẫn đường tới đó.\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:25Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q3",
+        "questionIndex": 4,
+        "questionType": "free_text",
+        "construct": "destination_poi__first_input"
+      },
+      "outcome": {
+        "questionId": "q3",
+        "value": "Vita ơi, tìm một quán phở ngon gần đây và dẫn đường giúp tôi nhé.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:26Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q4",
+        "questionIndex": 5,
+        "questionType": "free_text",
+        "construct": "destination_poi__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Tìm điểm đến/POI.\nTham khảo — một người dùng khác đã nói: \"Đưa tôi đến bãi đỗ xe gần chợ Bến Thành.\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:27Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q4",
+        "questionIndex": 5,
+        "questionType": "free_text",
+        "construct": "destination_poi__scenario"
+      },
+      "outcome": {
+        "questionId": "q4",
+        "value": "Tôi đang trên đường vào trung tâm thành phố để gặp đối tác tổ chức sự kiện thể thao gần khu vực chợ Bến Thành trong giờ cao điểm. Tôi cần tìm một bãi đỗ xe an toàn, thuận tiện ngay gần đó để vào họp đúng giờ.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:28Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q5",
+        "questionIndex": 6,
+        "questionType": "free_text",
+        "construct": "destination_poi__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Tìm điểm đến/POI.\nTham khảo — một người dùng khác đã nói: \"Đưa tôi đến bãi đỗ xe gần chợ Bến Thành.\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:29Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q5",
+        "questionIndex": 6,
+        "questionType": "free_text",
+        "construct": "destination_poi__first_input"
+      },
+      "outcome": {
+        "questionId": "q5",
+        "value": "Vita, hãy tìm và dẫn đường cho tôi đến bãi đỗ xe gần chợ Bến Thành còn chỗ trống nhé.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:30Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q6",
+        "questionIndex": 7,
+        "questionType": "free_text",
+        "construct": "destination_poi__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Tìm điểm đến/POI.\nTham khảo — một người dùng khác đã nói: \"Tìm một quán cà phê gần đây để tôi đến.\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:31Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q6",
+        "questionIndex": 7,
+        "questionType": "free_text",
+        "construct": "destination_poi__scenario"
+      },
+      "outcome": {
+        "questionId": "q6",
+        "value": "Tôi vừa hoàn thành buổi kiểm tra thể lực cho các vận động viên và đang ngồi nghỉ trong xe tại bãi đỗ của sân vận động. Tôi muốn tìm một quán cà phê yên tĩnh gần đây để ngồi phân tích dữ liệu chuyên môn.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:32Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q7",
+        "questionIndex": 8,
+        "questionType": "free_text",
+        "construct": "destination_poi__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Tìm điểm đến/POI.\nTham khảo — một người dùng khác đã nói: \"Tìm một quán cà phê gần đây để tôi đến.\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:33Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q7",
+        "questionIndex": 8,
+        "questionType": "free_text",
+        "construct": "destination_poi__first_input"
+      },
+      "outcome": {
+        "questionId": "q7",
+        "value": "Vita, tìm cho tôi một quán cà phê yên tĩnh gần vị trí này.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:34Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q8",
+        "questionIndex": 9,
+        "questionType": "free_text",
+        "construct": "destination_poi__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Tìm điểm đến/POI.\nTham khảo — một người dùng khác đã nói: \"Dẫn đường đến Bảo tàng Chứng tích Chiến tranh.\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:35Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q8",
+        "questionIndex": 9,
+        "questionType": "free_text",
+        "construct": "destination_poi__scenario"
+      },
+      "outcome": {
+        "questionId": "q8",
+        "value": "Tôi cùng vợ chuẩn bị xuất phát từ nhà để đưa một người bạn là chuyên gia thể thao quốc tế đi tham quan văn hóa tại thành phố. Chúng tôi có một buổi sáng thong thả và muốn đến thẳng Bảo tàng Chứng tích Chiến tranh.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:36Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q9",
+        "questionIndex": 10,
+        "questionType": "free_text",
+        "construct": "destination_poi__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Tìm điểm đến/POI.\nTham khảo — một người dùng khác đã nói: \"Dẫn đường đến Bảo tàng Chứng tích Chiến tranh.\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:37Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q9",
+        "questionIndex": 10,
+        "questionType": "free_text",
+        "construct": "destination_poi__first_input"
+      },
+      "outcome": {
+        "questionId": "q9",
+        "value": "Vita, mở dẫn đường đến Bảo tàng Chứng tích Chiến tranh giúp tôi.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:38Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q10",
+        "questionIndex": 11,
+        "questionType": "free_text",
+        "construct": "destination_poi__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Tìm điểm đến/POI.\nTham khảo — một người dùng khác đã nói: \"Tìm giúp tôi một nhà hàng Việt Nam gần đây để ăn trưa.\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:39Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q10",
+        "questionIndex": 11,
+        "questionType": "free_text",
+        "construct": "destination_poi__scenario"
+      },
+      "outcome": {
+        "questionId": "q10",
+        "value": "Tôi đang đỗ xe bên ngoài trung tâm thi đấu thể thao sau buổi họp chuyên môn kéo dài đến trưa. Tôi muốn tìm một nhà hàng món Việt thanh đạm, dinh dưỡng tốt ở gần đây để dùng bữa trưa cùng đồng nghiệp.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:40Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q11",
+        "questionIndex": 12,
+        "questionType": "free_text",
+        "construct": "destination_poi__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Tìm điểm đến/POI.\nTham khảo — một người dùng khác đã nói: \"Tìm giúp tôi một nhà hàng Việt Nam gần đây để ăn trưa.\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:41Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q11",
+        "questionIndex": 12,
+        "questionType": "free_text",
+        "construct": "destination_poi__first_input"
+      },
+      "outcome": {
+        "questionId": "q11",
+        "value": "Vita, gợi ý giúp tôi một nhà hàng món Việt dinh dưỡng, lịch sự gần đây để ăn trưa nhé.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:42Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q12",
+        "questionIndex": 13,
+        "questionType": "free_text",
+        "construct": "route_management__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Lập và thay đổi tuyến.\nTham khảo — một người dùng khác đã nói: \"Đổi tuyến hiện tại sang đường tránh cao tốc.\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:43Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q12",
+        "questionIndex": 13,
+        "questionType": "free_text",
+        "construct": "route_management__scenario"
+      },
+      "outcome": {
+        "questionId": "q12",
+        "value": "Tôi đang trên đường di chuyển liên tỉnh để tham dự hội thảo khoa học thể thao và muốn lái xe thư thả ngắm cảnh thay vì đi cao tốc. Tâm trạng tôi khá thoải mái vì đã chủ động đi sớm trước giờ khai mạc.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:44Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q13",
+        "questionIndex": 14,
+        "questionType": "free_text",
+        "construct": "route_management__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Lập và thay đổi tuyến.\nTham khảo — một người dùng khác đã nói: \"Đổi tuyến hiện tại sang đường tránh cao tốc.\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:45Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q13",
+        "questionIndex": 14,
+        "questionType": "free_text",
+        "construct": "route_management__first_input"
+      },
+      "outcome": {
+        "questionId": "q13",
+        "value": "Vita, chuyển tuyến đường hiện tại sang đường tránh không đi cao tốc.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:46Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q14",
+        "questionIndex": 15,
+        "questionType": "free_text",
+        "construct": "route_management__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Lập và thay đổi tuyến.\nTham khảo — một người dùng khác đã nói: \"Đổi tuyến hiện tại sang đường ít ùn tắc hơn giúp tôi.\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:47Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q14",
+        "questionIndex": 15,
+        "questionType": "free_text",
+        "construct": "route_management__scenario"
+      },
+      "outcome": {
+        "questionId": "q14",
+        "value": "Tôi đang lái xe đến sân tập để điều hành buổi tập chiến thuật quan trọng của đội và thấy phía trước bắt đầu đông xe. Tôi không muốn bị muộn giờ và cần một lộ trình thông thoáng hơn.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:48Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q15",
+        "questionIndex": 16,
+        "questionType": "free_text",
+        "construct": "route_management__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Lập và thay đổi tuyến.\nTham khảo — một người dùng khác đã nói: \"Đổi tuyến hiện tại sang đường ít ùn tắc hơn giúp tôi.\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:49Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q15",
+        "questionIndex": 16,
+        "questionType": "free_text",
+        "construct": "route_management__first_input"
+      },
+      "outcome": {
+        "questionId": "q15",
+        "value": "Vita ơi, đổi giúp tôi sang lộ trình nào ít ùn tắc hơn để đến sân tập kịp giờ.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:50Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q16",
+        "questionIndex": 17,
+        "questionType": "free_text",
+        "construct": "route_management__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Lập và thay đổi tuyến.\nTham khảo — một người dùng khác đã nói: \"Thêm Bưu điện Trung tâm Thành phố làm điểm dừng trên tuyến hiện tại.\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:51Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q16",
+        "questionIndex": 17,
+        "questionType": "free_text",
+        "construct": "route_management__scenario"
+      },
+      "outcome": {
+        "questionId": "q16",
+        "value": "Tôi đang trên đường đến văn phòng làm việc thì chợt nhớ cần gửi tài liệu hồ sơ thi đấu gấp. Tôi muốn ghé qua Bưu điện Trung tâm Thành phố trước khi tiếp tục hành trình.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:52Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q17",
+        "questionIndex": 18,
+        "questionType": "free_text",
+        "construct": "route_management__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Lập và thay đổi tuyến.\nTham khảo — một người dùng khác đã nói: \"Thêm Bưu điện Trung tâm Thành phố làm điểm dừng trên tuyến hiện tại.\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:53Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q17",
+        "questionIndex": 18,
+        "questionType": "free_text",
+        "construct": "route_management__first_input"
+      },
+      "outcome": {
+        "questionId": "q17",
+        "value": "Vita, thêm Bưu điện Trung tâm Thành phố làm điểm dừng trên tuyến này giúp tôi nhé.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:54Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q18",
+        "questionIndex": 19,
+        "questionType": "free_text",
+        "construct": "route_management__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Lập và thay đổi tuyến.\nTham khảo — một người dùng khác đã nói: \"Lập tuyến từ đây đến Hồ Hoàn Kiếm.\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:55Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q18",
+        "questionIndex": 19,
+        "questionType": "free_text",
+        "construct": "route_management__scenario"
+      },
+      "outcome": {
+        "questionId": "q18",
+        "value": "Tôi đang đỗ xe tại sảnh khách sạn sau chuyến công tác tại Hà Nội và chuẩn bị đi dạo quanh trung tâm. Tôi muốn bắt đầu hành trình đến thẳng Hồ Hoàn Kiếm một cách nhanh gọn và chuẩn xác.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:56Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q19",
+        "questionIndex": 20,
+        "questionType": "free_text",
+        "construct": "route_management__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Lập và thay đổi tuyến.\nTham khảo — một người dùng khác đã nói: \"Lập tuyến từ đây đến Hồ Hoàn Kiếm.\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:57Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q19",
+        "questionIndex": 20,
+        "questionType": "free_text",
+        "construct": "route_management__first_input"
+      },
+      "outcome": {
+        "questionId": "q19",
+        "value": "Vita, lập lộ trình từ đây đến Hồ Hoàn Kiếm.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:58Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q20",
+        "questionIndex": 21,
+        "questionType": "free_text",
+        "construct": "route_management__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Lập và thay đổi tuyến.\nTham khảo — một người dùng khác đã nói: \"Xóa điểm dừng ở chợ Bến Thành khỏi hành trình.\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:17:59Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q20",
+        "questionIndex": 21,
+        "questionType": "free_text",
+        "construct": "route_management__scenario"
+      },
+      "outcome": {
+        "questionId": "q20",
+        "value": "Tôi đang đỗ xe chờ vợ trước cửa nhà và vừa nhận được thông báo đối tác dời địa điểm hẹn công việc. Tôi muốn hủy điểm dừng trung gian ở chợ Bến Thành để đi thẳng đến điểm đến cuối cùng.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:00Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q21",
+        "questionIndex": 22,
+        "questionType": "free_text",
+        "construct": "route_management__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Lập và thay đổi tuyến.\nTham khảo — một người dùng khác đã nói: \"Xóa điểm dừng ở chợ Bến Thành khỏi hành trình.\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:01Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q21",
+        "questionIndex": 22,
+        "questionType": "free_text",
+        "construct": "route_management__first_input"
+      },
+      "outcome": {
+        "questionId": "q21",
+        "value": "Vita giúp tôi hủy điểm dừng ở chợ Bến Thành trên lộ trình đã lên nhé.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:02Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q22",
+        "questionIndex": 23,
+        "questionType": "free_text",
+        "construct": "route_management__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Lập và thay đổi tuyến.\nTham khảo — một người dùng khác đã nói: \"Lập tuyến đến sân bay Nội Bài và ưu tiên đường cao tốc.\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:03Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q22",
+        "questionIndex": 23,
+        "questionType": "free_text",
+        "construct": "route_management__scenario"
+      },
+      "outcome": {
+        "questionId": "q22",
+        "value": "Tôi đang ở bãi đỗ xe của câu lạc bộ, chuẩn bị lên đường đưa đoàn vận động viên ra sân bay Nội Bài để bay đi thi đấu quốc tế. Vì lịch trình chuyến bay rất chặt chẽ, tôi muốn đi tuyến đường cao tốc thông suốt nhất.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:04Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q23",
+        "questionIndex": 24,
+        "questionType": "free_text",
+        "construct": "route_management__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Lập và thay đổi tuyến.\nTham khảo — một người dùng khác đã nói: \"Lập tuyến đến sân bay Nội Bài và ưu tiên đường cao tốc.\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:05Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q23",
+        "questionIndex": 24,
+        "questionType": "free_text",
+        "construct": "route_management__first_input"
+      },
+      "outcome": {
+        "questionId": "q23",
+        "value": "Vita, hãy thiết lập tuyến đường đi sân bay Nội Bài và ưu tiên chọn đường cao tốc giúp tôi.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:06Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q24",
+        "questionIndex": 25,
+        "questionType": "free_text",
+        "construct": "traffic_eta__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nTham khảo — một người dùng khác đã nói: \"Còn bao lâu nữa thì tới nơi?\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:07Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q24",
+        "questionIndex": 25,
+        "questionType": "free_text",
+        "construct": "traffic_eta__scenario"
+      },
+      "outcome": {
+        "questionId": "q24",
+        "value": "Tôi đang lái xe đưa vợ về nhà sau một ngày làm việc bận rộn tại trung tâm thể thao. Đường phố bắt đầu lên đèn và tôi muốn biết chính xác thời gian còn lại của hành trình.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:08Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q25",
+        "questionIndex": 26,
+        "questionType": "free_text",
+        "construct": "traffic_eta__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nTham khảo — một người dùng khác đã nói: \"Còn bao lâu nữa thì tới nơi?\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:09Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q25",
+        "questionIndex": 26,
+        "questionType": "free_text",
+        "construct": "traffic_eta__first_input"
+      },
+      "outcome": {
+        "questionId": "q25",
+        "value": "Vita, còn bao nhiêu phút nữa thì xe đến nơi?",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:10Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q26",
+        "questionIndex": 27,
+        "questionType": "free_text",
+        "construct": "traffic_eta__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nTham khảo — một người dùng khác đã nói: \"Tình hình giao thông phía trước thế nào?\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:11Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q26",
+        "questionIndex": 27,
+        "questionType": "free_text",
+        "construct": "traffic_eta__scenario"
+      },
+      "outcome": {
+        "questionId": "q26",
+        "value": "Tôi đang di chuyển trên trục đường chính đến sân vận động để kịp buổi họp giao ban kỹ thuật trước trận đấu. Nhìn dòng xe phía xa có dấu hiệu chậm lại, tôi muốn nắm rõ tình hình giao thông phía trước.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:12Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q27",
+        "questionIndex": 28,
+        "questionType": "free_text",
+        "construct": "traffic_eta__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nTham khảo — một người dùng khác đã nói: \"Tình hình giao thông phía trước thế nào?\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:13Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q27",
+        "questionIndex": 28,
+        "questionType": "free_text",
+        "construct": "traffic_eta__first_input"
+      },
+      "outcome": {
+        "questionId": "q27",
+        "value": "Vita, kiểm tra giúp tôi tình hình giao thông đoạn đường phía trước có bị tắc không.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:14Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q28",
+        "questionIndex": 29,
+        "questionType": "free_text",
+        "construct": "traffic_eta__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nTham khảo — một người dùng khác đã nói: \"Mấy giờ tôi sẽ đến sân bay?\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:15Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q28",
+        "questionIndex": 29,
+        "questionType": "free_text",
+        "construct": "traffic_eta__scenario"
+      },
+      "outcome": {
+        "questionId": "q28",
+        "value": "Tôi đang lái xe đưa một đồng nghiệp ra sân bay để kịp chuyến bay khảo sát địa điểm tập huấn. Do giờ cao điểm buổi chiều khá đông đúc, tôi cần tính toán giờ đến nơi để bạn chủ động làm thủ tục.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:16Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q29",
+        "questionIndex": 30,
+        "questionType": "free_text",
+        "construct": "traffic_eta__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nTham khảo — một người dùng khác đã nói: \"Mấy giờ tôi sẽ đến sân bay?\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:17Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q29",
+        "questionIndex": 30,
+        "questionType": "free_text",
+        "construct": "traffic_eta__first_input"
+      },
+      "outcome": {
+        "questionId": "q29",
+        "value": "Vita, tính giúp tôi dự kiến mấy giờ mình sẽ có mặt ở sân bay nhé.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:18Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q30",
+        "questionIndex": 31,
+        "questionType": "free_text",
+        "construct": "traffic_eta__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nTham khảo — một người dùng khác đã nói: \"Xe đang đỗ đây, nếu khởi hành bây giờ thì bao lâu nữa tôi đến công ty?\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:19Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q30",
+        "questionIndex": 31,
+        "questionType": "free_text",
+        "construct": "traffic_eta__scenario"
+      },
+      "outcome": {
+        "questionId": "q30",
+        "value": "Tôi đang ngồi trong xe tại bãi đỗ khu căn hộ vào sáng sớm, chuẩn bị xuất phát đến văn phòng điều hành thể thao. Tôi muốn ước lượng thời gian di chuyển để sắp xếp họp trực tuyến với ban huấn luyện.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:20Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q31",
+        "questionIndex": 32,
+        "questionType": "free_text",
+        "construct": "traffic_eta__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nTham khảo — một người dùng khác đã nói: \"Xe đang đỗ đây, nếu khởi hành bây giờ thì bao lâu nữa tôi đến công ty?\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:21Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q31",
+        "questionIndex": 32,
+        "questionType": "free_text",
+        "construct": "traffic_eta__first_input"
+      },
+      "outcome": {
+        "questionId": "q31",
+        "value": "Vita, nếu đi ngay bây giờ thì mất bao lâu để đến công ty?",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:22Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q32",
+        "questionIndex": 33,
+        "questionType": "free_text",
+        "construct": "traffic_eta__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nTham khảo — một người dùng khác đã nói: \"Trước khi đi, kiểm tra giúp tôi tình hình giao thông đến sân bay và giờ đến dự kiến.\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:23Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q32",
+        "questionIndex": 33,
+        "questionType": "free_text",
+        "construct": "traffic_eta__scenario"
+      },
+      "outcome": {
+        "questionId": "q32",
+        "value": "Tôi đang đỗ xe trước cổng trung tâm huấn luyện, chuẩn bị chở đoàn chuyên gia ra sân bay đón chuyến bay trưa. Tôi cần kiểm tra mật độ giao thông và thời gian dự kiến đến nơi để chắc chắn không bị trễ giờ bay.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:24Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q33",
+        "questionIndex": 34,
+        "questionType": "free_text",
+        "construct": "traffic_eta__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nTham khảo — một người dùng khác đã nói: \"Trước khi đi, kiểm tra giúp tôi tình hình giao thông đến sân bay và giờ đến dự kiến.\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:25Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q33",
+        "questionIndex": 34,
+        "questionType": "free_text",
+        "construct": "traffic_eta__first_input"
+      },
+      "outcome": {
+        "questionId": "q33",
+        "value": "Vita, kiểm tra giúp tôi tình hình đường xá ra sân bay và dự kiến mấy giờ đến nơi nhé.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:26Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q34",
+        "questionIndex": 35,
+        "questionType": "free_text",
+        "construct": "traffic_eta__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nTham khảo — một người dùng khác đã nói: \"Nếu xuất phát ngay thì mấy giờ tôi tới trung tâm hội nghị?\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:27Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q34",
+        "questionIndex": 35,
+        "questionType": "free_text",
+        "construct": "traffic_eta__scenario"
+      },
+      "outcome": {
+        "questionId": "q34",
+        "value": "Tôi đang ngồi trên xe chuẩn bị đến tham dự lễ vinh danh thể thao thường niên tại trung tâm hội nghị. Tôi muốn đảm bảo thời gian xuất phát chuẩn xác để kịp đón tiếp đối tác trước giờ khai mạc.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:28Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q35",
+        "questionIndex": 36,
+        "questionType": "free_text",
+        "construct": "traffic_eta__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nTham khảo — một người dùng khác đã nói: \"Nếu xuất phát ngay thì mấy giờ tôi tới trung tâm hội nghị?\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:29Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q35",
+        "questionIndex": 36,
+        "questionType": "free_text",
+        "construct": "traffic_eta__first_input"
+      },
+      "outcome": {
+        "questionId": "q35",
+        "value": "Vita ơi, nếu mình xuất phát ngay lúc này thì khoảng mấy giờ tôi sẽ tới trung tâm hội nghị?",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:30Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q36",
+        "questionIndex": 37,
+        "questionType": "free_text",
+        "construct": "parking_arrival__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Đỗ xe/đến nơi.\nTham khảo — một người dùng khác đã nói: \"Tôi sắp đến rồi, bật hướng dẫn vào bãi đỗ của tòa nhà nhé.\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:31Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q36",
+        "questionIndex": 37,
+        "questionType": "free_text",
+        "construct": "parking_arrival__scenario"
+      },
+      "outcome": {
+        "questionId": "q36",
+        "value": "Tôi đang lái xe đến gần tòa nhà văn phòng của liên đoàn thể thao để chuẩn bị cho buổi làm việc buổi chiều. Tôi cần chỉ dẫn vào lối hầm gửi xe một cách chuẩn xác và nhanh gọn.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:32Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q37",
+        "questionIndex": 38,
+        "questionType": "free_text",
+        "construct": "parking_arrival__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Đỗ xe/đến nơi.\nTham khảo — một người dùng khác đã nói: \"Tôi sắp đến rồi, bật hướng dẫn vào bãi đỗ của tòa nhà nhé.\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:33Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q37",
+        "questionIndex": 38,
+        "questionType": "free_text",
+        "construct": "parking_arrival__first_input"
+      },
+      "outcome": {
+        "questionId": "q37",
+        "value": "Vita, bật chỉ đường vào bãi đỗ xe của tòa nhà giúp tôi.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:34Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q38",
+        "questionIndex": 39,
+        "questionType": "free_text",
+        "construct": "parking_arrival__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Đỗ xe/đến nơi.\nTham khảo — một người dùng khác đã nói: \"Gần tới nơi rồi, chỉ đường vào bãi đỗ xe tại điểm đến giúp tôi.\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:35Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q38",
+        "questionIndex": 39,
+        "questionType": "free_text",
+        "construct": "parking_arrival__scenario"
+      },
+      "outcome": {
+        "questionId": "q38",
+        "value": "Tôi cùng vợ đang đến gần khu liên hợp thể thao để theo dõi một giải đấu giao hữu cuối tuần. Khi xe còn cách điểm đến vài trăm mét, tôi muốn tìm lối vào bãi đỗ xe dành cho khách.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:36Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q39",
+        "questionIndex": 40,
+        "questionType": "free_text",
+        "construct": "parking_arrival__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Đỗ xe/đến nơi.\nTham khảo — một người dùng khác đã nói: \"Gần tới nơi rồi, chỉ đường vào bãi đỗ xe tại điểm đến giúp tôi.\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:37Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q39",
+        "questionIndex": 40,
+        "questionType": "free_text",
+        "construct": "parking_arrival__first_input"
+      },
+      "outcome": {
+        "questionId": "q39",
+        "value": "Vita ơi, xe sắp tới nơi rồi, chỉ giúp tôi lối vào bãi đỗ xe ở đây nhé.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:38Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q40",
+        "questionIndex": 41,
+        "questionType": "free_text",
+        "construct": "parking_arrival__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Đỗ xe/đến nơi.\nTham khảo — một người dùng khác đã nói: \"Tôi sắp tới khách sạn, hướng dẫn tôi vào khu đón trả khách nhé.\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:39Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q40",
+        "questionIndex": 41,
+        "questionType": "free_text",
+        "construct": "parking_arrival__scenario"
+      },
+      "outcome": {
+        "questionId": "q40",
+        "value": "Tôi đang lái xe đưa một vận động viên về lại khách sạn nghỉ ngơi sau buổi thi đấu căng thẳng. Tôi cần tiếp cận đúng sảnh đón trả khách để bạn xuống xe thuận tiện và an toàn nhất.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:40Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q41",
+        "questionIndex": 42,
+        "questionType": "free_text",
+        "construct": "parking_arrival__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Đỗ xe/đến nơi.\nTham khảo — một người dùng khác đã nói: \"Tôi sắp tới khách sạn, hướng dẫn tôi vào khu đón trả khách nhé.\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:41Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q41",
+        "questionIndex": 42,
+        "questionType": "free_text",
+        "construct": "parking_arrival__first_input"
+      },
+      "outcome": {
+        "questionId": "q41",
+        "value": "Vita, tôi sắp tới khách sạn rồi, hãy hướng dẫn tôi đi vào sảnh đón trả khách nhé.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:42Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q42",
+        "questionIndex": 43,
+        "questionType": "free_text",
+        "construct": "parking_arrival__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Đỗ xe/đến nơi.\nTham khảo — một người dùng khác đã nói: \"Tôi đã đỗ xe rồi, kết thúc hành trình nhé.\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:43Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q42",
+        "questionIndex": 43,
+        "questionType": "free_text",
+        "construct": "parking_arrival__scenario"
+      },
+      "outcome": {
+        "questionId": "q42",
+        "value": "Tôi vừa đỗ xe gọn gàng vào vị trí quy định tại trung tâm thể thao sau một ngày làm việc dài. Tôi chuẩn bị tắt máy và hoàn tất lộ trình di chuyển hôm nay.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:44Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q43",
+        "questionIndex": 44,
+        "questionType": "free_text",
+        "construct": "parking_arrival__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Đỗ xe/đến nơi.\nTham khảo — một người dùng khác đã nói: \"Tôi đã đỗ xe rồi, kết thúc hành trình nhé.\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:45Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q43",
+        "questionIndex": 44,
+        "questionType": "free_text",
+        "construct": "parking_arrival__first_input"
+      },
+      "outcome": {
+        "questionId": "q43",
+        "value": "Vita, tôi đã đỗ xe xong, kết thúc hành trình.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:46Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q44",
+        "questionIndex": 45,
+        "questionType": "free_text",
+        "construct": "parking_arrival__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Đỗ xe/đến nơi.\nTham khảo — một người dùng khác đã nói: \"Tôi đỗ xe xong rồi, kết thúc chuyến đi giúp tôi.\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:47Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q44",
+        "questionIndex": 45,
+        "questionType": "free_text",
+        "construct": "parking_arrival__scenario"
+      },
+      "outcome": {
+        "questionId": "q44",
+        "value": "Tôi và vợ vừa đỗ xe an toàn tại bãi xe trung tâm thương mại để chuẩn bị đi ăn tối cuối tuần cùng nhau. Tâm trạng tôi rất vui vẻ và thư thái sau một tuần làm việc hiệu quả.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:48Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q45",
+        "questionIndex": 46,
+        "questionType": "free_text",
+        "construct": "parking_arrival__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Đỗ xe/đến nơi.\nTham khảo — một người dùng khác đã nói: \"Tôi đỗ xe xong rồi, kết thúc chuyến đi giúp tôi.\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:49Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q45",
+        "questionIndex": 46,
+        "questionType": "free_text",
+        "construct": "parking_arrival__first_input"
+      },
+      "outcome": {
+        "questionId": "q45",
+        "value": "Vita, mình đã đỗ xe xong rồi, bạn kết thúc chuyến đi giúp tôi nhé.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:50Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q46",
+        "questionIndex": 47,
+        "questionType": "free_text",
+        "construct": "parking_arrival__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Đỗ xe/đến nơi.\nTham khảo — một người dùng khác đã nói: \"Đến nơi rồi, lưu vị trí đỗ xe này giúp tôi.\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:51Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q46",
+        "questionIndex": 47,
+        "questionType": "free_text",
+        "construct": "parking_arrival__scenario"
+      },
+      "outcome": {
+        "questionId": "q46",
+        "value": "Tôi vừa đỗ xe vào một góc ở tầng hầm rộng lớn của sân vận động đa năng trước giờ diễn ra sự kiện thể thao lớn. Tôi muốn lưu lại chính xác vị trí đỗ để sau khi tan trận đấu dễ dàng tìm lại xe.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:52Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q47",
+        "questionIndex": 48,
+        "questionType": "free_text",
+        "construct": "parking_arrival__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Đỗ xe/đến nơi.\nTham khảo — một người dùng khác đã nói: \"Đến nơi rồi, lưu vị trí đỗ xe này giúp tôi.\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:53Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q47",
+        "questionIndex": 48,
+        "questionType": "free_text",
+        "construct": "parking_arrival__first_input"
+      },
+      "outcome": {
+        "questionId": "q47",
+        "value": "Vita, xe đã đỗ ở đây rồi, bạn ghi nhớ và lưu lại vị trí đỗ này giúp tôi nhé.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:54Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q48",
+        "questionIndex": 49,
+        "questionType": "free_text",
+        "construct": "local_travel_information__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Thông tin địa phương/du lịch.\nTham khảo — một người dùng khác đã nói: \"Huế nổi tiếng với món ăn nào?\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:55Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q48",
+        "questionIndex": 49,
+        "questionType": "free_text",
+        "construct": "local_travel_information__scenario"
+      },
+      "outcome": {
+        "questionId": "q48",
+        "value": "Tôi đang lái xe đưa đội tuyển đi giao lưu tập huấn tại Huế và muốn tìm hiểu nhanh về ẩm thực đặc trưng của địa phương. Tôi muốn thông tin ngắn gọn để chuẩn bị thực đơn bổ sung phù hợp cho đoàn.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:56Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q49",
+        "questionIndex": 50,
+        "questionType": "free_text",
+        "construct": "local_travel_information__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Thông tin địa phương/du lịch.\nTham khảo — một người dùng khác đã nói: \"Huế nổi tiếng với món ăn nào?\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:57Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q49",
+        "questionIndex": 50,
+        "questionType": "free_text",
+        "construct": "local_travel_information__first_input"
+      },
+      "outcome": {
+        "questionId": "q49",
+        "value": "Vita, ẩm thực Huế có những món ăn đặc sản nổi tiếng nào?",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:58Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q50",
+        "questionIndex": 51,
+        "questionType": "free_text",
+        "construct": "local_travel_information__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Thông tin địa phương/du lịch.\nTham khảo — một người dùng khác đã nói: \"Phố cổ Hội An có gì đặc sắc vậy?\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:18:59Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q50",
+        "questionIndex": 51,
+        "questionType": "free_text",
+        "construct": "local_travel_information__scenario"
+      },
+      "outcome": {
+        "questionId": "q50",
+        "value": "Tôi đang cùng vợ lái xe trên cung đường ven biển hướng về Hội An trong kỳ nghỉ ngắn sau mùa giải. Cả hai chúng tôi đều hào hứng muốn tìm hiểu thêm về nét văn hóa đặc sắc của phố cổ.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:19:00Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q51",
+        "questionIndex": 52,
+        "questionType": "free_text",
+        "construct": "local_travel_information__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Thông tin địa phương/du lịch.\nTham khảo — một người dùng khác đã nói: \"Phố cổ Hội An có gì đặc sắc vậy?\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:19:01Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q51",
+        "questionIndex": 52,
+        "questionType": "free_text",
+        "construct": "local_travel_information__first_input"
+      },
+      "outcome": {
+        "questionId": "q51",
+        "value": "Vita, chia sẻ giúp tôi xem phố cổ Hội An có những nét đặc sắc gì nổi bật nhé.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:19:02Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q52",
+        "questionIndex": 53,
+        "questionType": "free_text",
+        "construct": "local_travel_information__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Thông tin địa phương/du lịch.\nTham khảo — một người dùng khác đã nói: \"Đà Lạt mùa này có đặc sản gì đáng thử?\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:19:03Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q52",
+        "questionIndex": 53,
+        "questionType": "free_text",
+        "construct": "local_travel_information__scenario"
+      },
+      "outcome": {
+        "questionId": "q52",
+        "value": "Tôi đang chở vợ đi nghỉ dưỡng tại Đà Lạt sau đợt tập huấn thể lực dài ngày. Tôi muốn tìm hiểu xem thời điểm này trên Đà Lạt có những loại nông sản tươi ngon hay món ăn đặc sản nào phù hợp.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:19:04Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q53",
+        "questionIndex": 54,
+        "questionType": "free_text",
+        "construct": "local_travel_information__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Thông tin địa phương/du lịch.\nTham khảo — một người dùng khác đã nói: \"Đà Lạt mùa này có đặc sản gì đáng thử?\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:19:05Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q53",
+        "questionIndex": 54,
+        "questionType": "free_text",
+        "construct": "local_travel_information__first_input"
+      },
+      "outcome": {
+        "questionId": "q53",
+        "value": "Vita, thời điểm này ở Đà Lạt có đặc sản hoặc món ngon nào đáng để trải nghiệm không?",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:19:06Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q54",
+        "questionIndex": 55,
+        "questionType": "free_text",
+        "construct": "local_travel_information__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Thông tin địa phương/du lịch.\nTham khảo — một người dùng khác đã nói: \"Chợ Bến Thành được xây từ bao giờ?\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:19:07Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q54",
+        "questionIndex": 55,
+        "questionType": "free_text",
+        "construct": "local_travel_information__scenario"
+      },
+      "outcome": {
+        "questionId": "q54",
+        "value": "Tôi đang đỗ xe chờ đón đối tác gần khu vực trung tâm quận 1 và nhìn ra kiến trúc biểu tượng của chợ Bến Thành. Tôi muốn tra cứu nhanh một thông tin lịch sử chuẩn xác về địa danh này.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:19:08Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q55",
+        "questionIndex": 56,
+        "questionType": "free_text",
+        "construct": "local_travel_information__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Thông tin địa phương/du lịch.\nTham khảo — một người dùng khác đã nói: \"Chợ Bến Thành được xây từ bao giờ?\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:19:09Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q55",
+        "questionIndex": 56,
+        "questionType": "free_text",
+        "construct": "local_travel_information__first_input"
+      },
+      "outcome": {
+        "questionId": "q55",
+        "value": "Vita, chợ Bến Thành được xây dựng vào năm nào?",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:19:10Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q56",
+        "questionIndex": 57,
+        "questionType": "free_text",
+        "construct": "local_travel_information__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Thông tin địa phương/du lịch.\nTham khảo — một người dùng khác đã nói: \"Ở Ninh Bình, Tràng An có gì nổi bật?\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:19:11Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q56",
+        "questionIndex": 57,
+        "questionType": "free_text",
+        "construct": "local_travel_information__scenario"
+      },
+      "outcome": {
+        "questionId": "q56",
+        "value": "Tôi đang đỗ xe tại điểm nghỉ chân ở Ninh Bình trong chuyến đi khảo sát cung đường chạy bộ dã ngoại. Tôi muốn tìm hiểu kỹ hơn về các điểm nhấn cảnh quan của quần thể Tràng An để lên kế hoạch hoạt động.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:19:12Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q57",
+        "questionIndex": 58,
+        "questionType": "free_text",
+        "construct": "local_travel_information__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Thông tin địa phương/du lịch.\nTham khảo — một người dùng khác đã nói: \"Ở Ninh Bình, Tràng An có gì nổi bật?\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:19:13Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q57",
+        "questionIndex": 58,
+        "questionType": "free_text",
+        "construct": "local_travel_information__first_input"
+      },
+      "outcome": {
+        "questionId": "q57",
+        "value": "Vita, giới thiệu giúp tôi những điểm nổi bật nhất của danh thắng Tràng An ở Ninh Bình nhé.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:19:14Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q58",
+        "questionIndex": 59,
+        "questionType": "free_text",
+        "construct": "local_travel_information__scenario"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Thông tin địa phương/du lịch.\nTham khảo — một người dùng khác đã nói: \"Tôi đang đỗ xe ở Sa Pa, buổi tối ở đây có gì thú vị?\"\n\nHãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của bạn.\nKhông viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:19:15Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q58",
+        "questionIndex": 59,
+        "questionType": "free_text",
+        "construct": "local_travel_information__scenario"
+      },
+      "outcome": {
+        "questionId": "q58",
+        "value": "Tôi đang đỗ xe tại thị trấn Sa Pa cùng vợ sau khi hoàn thành chuyến đi bộ dã ngoại buổi chiều. Chúng tôi muốn tìm một vài hoạt động văn hóa hoặc ẩm thực thú vị để trải nghiệm vào buổi tối.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:19:16Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q59",
+        "questionIndex": 60,
+        "questionType": "free_text",
+        "construct": "local_travel_information__first_input"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Thông tin địa phương/du lịch.\nTham khảo — một người dùng khác đã nói: \"Tôi đang đỗ xe ở Sa Pa, buổi tối ở đây có gì thú vị?\"\n\nTrong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.\nKhông giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:19:17Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q59",
+        "questionIndex": 60,
+        "questionType": "free_text",
+        "construct": "local_travel_information__first_input"
+      },
+      "outcome": {
+        "questionId": "q59",
+        "value": "Vita ơi, chúng tôi đang đỗ xe ở Sa Pa, buổi tối ở đây có những hoạt động hay địa điểm nào thú vị để trải nghiệm không?",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T07:19:18Z",
+      "actor": "system",
+      "action": "survey_completed",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places"
+      },
+      "outcome": {
+        "numAnswered": 60,
+        "missingRequiredQuestionIds": [],
+        "valid": true
+      }
+    }
+  ],
+  "usage": {
+    "n_input_tokens": 21209,
+    "n_output_tokens": 3451,
+    "request_id": "chatcmpl-_h6ZaqTAIMr44-EP_b2_sAo",
+    "model": "ag/gemini-3.7-flash-high",
+    "provider": "openrouter"
+  }
+}

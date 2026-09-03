@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 7,
+  "seed": {
+    "rowId": "row-0054",
+    "scenario": "Tôi đang lái xe trên đường cao tốc hướng về ngoại thành và muốn tối ưu hóa hiệu suất năng lượng của xe.",
+    "firstInput": "Chuyển xe sang chế độ lái Eco.",
+    "intentCode": "cabin_vehicle_control",
+    "subintentCode": "supported_vehicle_settings",
+    "subintentName": "Thiết lập xe được hỗ trợ",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita, ngắt kết nối Bluetooth với điện thoại của tôi giúp tôi ngay nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã ngắt kết nối Bluetooth với điện thoại của bạn rồi."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Giờ chuyển sang chế độ không làm phiền giúp tôi, tôi đang tập trung lái xe."
+    },
+    {
+      "role": "support",
+      "content": "Xe VF9 hiện tại không có chế độ \"Không làm phiền\" (Do Not Disturb) trong danh sách các chế độ đặc biệt được hỗ trợ. Các chế độ đặc biệt mình có thể bật cho bạn gồm: camp, pet, valet, nap, zen . Bạn có muốn mình kích hoạt một trong những chế độ này không?"
+    },
+    {
+      "role": "customer",
+      "content": "Không cần đâu Vita, cứ để vậy đi. Chuyển nhiệt độ điều hòa xuống 22 độ và bật quạt gió mức 2 cho tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa, chỉnh nhiệt độ xuống 22°C và quạt gió mức 2 cho bạn rồi nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Kiểm tra giúp tôi áp suất lốp xe hiện tại xem có ổn định không."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: lốp trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Các chỉ số đều trong ngưỡng an toàn, bạn yên tâm nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Tốt lắm, cảm ơn Vita."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn. Có gì cần mình giúp thì cứ nói nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

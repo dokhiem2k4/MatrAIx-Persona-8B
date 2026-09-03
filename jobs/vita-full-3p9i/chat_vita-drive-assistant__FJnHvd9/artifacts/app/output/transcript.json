@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, đang lái xe thấy hơi căng thẳng chút, mở cho anh bài nhạc nào sôi động để xả stress cái xem nào."
+    },
+    {
+      "role": "support",
+      "content": "Đã mở nhạc sôi động EDM vui tươi xả stress."
+    },
+    {
+      "role": "customer",
+      "content": "Âm lượng hơi nhỏ đấy Vita ơi, tăng lên một chút nữa giúp anh nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã chỉnh âm lượng về 55%."
+    },
+    {
+      "role": "customer",
+      "content": "Nghe được đấy, chuẩn gu anh thích. Tiện thể kiểm tra hộ anh xem pin xe còn khoảng bao nhiêu phần trăm nhé."
+    },
+    {
+      "role": "support",
+      "content": "Pin xe hiện còn 78% bạn ạ, đi được khoảng 312 km nữa."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

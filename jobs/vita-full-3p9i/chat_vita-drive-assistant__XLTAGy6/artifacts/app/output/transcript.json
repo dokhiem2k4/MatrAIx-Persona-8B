@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, chuyển sang hồ sơ của tôi và xác nhận ngắn gọn giúp tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Để chuyển hồ sơ, mình cần biết tên hồ sơ của bạn. Bạn muốn chuyển sang hồ sơ nào?"
+    },
+    {
+      "role": "customer",
+      "content": "Hồ sơ tên là Siti Putra nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã ghi nhớ, mình sẽ gọi bạn là Siti Putra."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Tiện thể bật giúp tôi điều hòa 24 độ C và quạt gió mức 2 nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa 24°C và quạt gió mức 2 cho bạn."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

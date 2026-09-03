@@ -1,0 +1,80 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, em đặt giúp anh lịch bảo dưỡng định kỳ cho xe vào sáng thứ Bảy tuần này nhé."
+    },
+    {
+      "role": "support",
+      "content": "Xe mình hiện không hỗ trợ đặt lịch bảo dưỡng qua trợ lý giọng nói. Bạn có thể liên hệ trực tiếp đại lý VinFast gần nhất để đặt lịch nhé. Mình có thể giúp bạn tìm đại lý VinFast gần đây hoặc mở Google Maps dẫn đường đến đó. Bạn có muốn mình làm vậy không?"
+    },
+    {
+      "role": "customer",
+      "content": "Thôi được, em tìm giúp anh đại lý VinFast nào gần đây nhất nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình tìm thấy showroom VinFast Ocean Park tại TTTM Vincom Ocean Park, Kiêu Kỵ, Gia Lâm, Hà Nội. Đó là đại lý gần nhất."
+    },
+    {
+      "role": "customer",
+      "content": "Ừ, em mở bản đồ dẫn đường đến đấy giúp anh luôn nhé."
+    },
+    {
+      "role": "support",
+      "content": "Anh muốn đến đâu ạ? Anh cho em địa chỉ hoặc tên địa điểm cụ thể nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Đến cái showroom VinFast Ocean Park mà em vừa tìm cho anh lúc nãy ấy."
+    },
+    {
+      "role": "support",
+      "content": "Đã tìm thấy showroom VinFast Ocean Park và mở đường đi từ Tòa Technopark. Khoảng cách 10.784 km, thời gian dự kiến 7711 phút. Bạn đã sẵn sàng lên đường chưa?"
+    },
+    {
+      "role": "customer",
+      "content": "7.000 mấy phút gì mà lâu thế em? Chắc hệ thống bị lỗi thời gian rồi."
+    },
+    {
+      "role": "support",
+      "content": "Mình thấy thông tin trên xe hiện tại: thời gian thực là 16:23 thứ Năm, ngày 3 tháng 9 năm 2026. Còn thời gian đến đích theo chỉ đường là 7.711 phút, tương đương khoảng 5,3 ngày. Con số này có vẻ bất thường, mình nghĩ hệ thống định vị hoặc lộ trình có vấn đề. Bạn muốn mình kiểm tra lại chỉ đường không?"
+    },
+    {
+      "role": "customer",
+      "content": "Ừ, em kiểm tra và tính lại giúp anh xem thế nào chứ hơn 5 ngày mới tới thì vô lý quá."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã kiểm tra lại, tuyến đường từ Tòa Technopark đến showroom VinFast Ocean Park dài hơn 10.700 km, thời gian dự kiến khoảng 7711 phút, tương đương hơn 5 ngày. Mình đã dừng dẫn đường cũ và mở lại tuyến này trên Google Maps để bạn xem chi tiết nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Hơn 10 nghìn cây số mà đi từ Gia Lâm sang Ocean Park thì vô lý quá, chắc bản đồ đang bị lỗi định vị điểm xuất phát rồi. Thôi em tắt giúp anh đi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã tắt chỉ đường cho anh rồi. Có vẻ bản đồ bị lỗi định vị, anh có thể thử bật lại GPS hoặc khởi động lại xe để kiểm tra nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em, để anh tự xem lại sau. Giờ thì tắt màn hình bản đồ đi giúp anh nhé."
+    },
+    {
+      "role": "support",
+      "content": "Hiện tại mình chưa có khả năng tắt màn hình bản đồ trực tiếp. Bạn có thể dùng nút vật lý hoặc cảm ứng trên màn hình trung tâm để tắt hoặc chuyển sang giao diện khác nhé. Nếu bạn muốn dừng điều hướng hiện tại, mình có thể giúp bạn dừng导航 đang chạy. Bạn có cần mình làm việc đó không?"
+    },
+    {
+      "role": "customer",
+      "content": "Được rồi, thế để anh tự xử lý vậy. Cảm ơn em nhé."
+    },
+    {
+      "role": "support",
+      "content": "Không có gì đâu anh. Có cần gì thêm thì cứ gọi mình nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

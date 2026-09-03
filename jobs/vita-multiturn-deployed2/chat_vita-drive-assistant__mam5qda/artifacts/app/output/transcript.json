@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita, kiểm tra giúp tôi trạm sạc xe điện gần vị trí hiện tại nhất."
+    },
+    {
+      "role": "support",
+      "content": "Mình tìm thấy trạm sạc VinFast gần nhất ở hầm B2 và B3 tòa Technopark, Vinhomes Ocean Park, Gia Lâm, đang hoạt động bình thường."
+    },
+    {
+      "role": "customer",
+      "content": "Lên lộ trình dẫn đường đến Technopark giúp tôi. Tiện thể kiểm tra xem mức pin hiện tại của xe còn bao nhiêu phần trăm?"
+    },
+    {
+      "role": "support",
+      "content": "Xe hiện đang ở Tòa Technopark, Hà Nội rồi bạn ạ. Mình không cần dẫn đường đến nơi mình đang đứng đâu. Còn về pin: xe hiện còn 78% , tương đương khoảng 312 km phạm vi di chuyển. Bạn muốn đến một địa điểm khác không?"
+    },
+    {
+      "role": "customer",
+      "content": "À, vậy tôi nhầm vị trí xuất phát. Giảm điều hòa vùng lái xuống 22 độ và bật thông gió ghế lái giúp tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã bật điều hòa, chỉnh nhiệt độ vùng lái xuống 22°C và bật thông gió ghế lái cho bạn rồi nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

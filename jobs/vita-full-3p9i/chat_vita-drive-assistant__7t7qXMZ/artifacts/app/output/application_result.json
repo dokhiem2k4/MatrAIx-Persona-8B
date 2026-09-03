@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 8,
+  "seed": {
+    "rowId": "row-0258",
+    "scenario": "Tôi đang lái xe một mình trên đại lộ, cần liên hệ gấp với một cộng sự cũ để trao đổi tài liệu.",
+    "firstInput": "Tìm giúp liên hệ anh Nam.",
+    "intentCode": "communication_media",
+    "subintentCode": "contact_resolution",
+    "subintentName": "Xác định liên hệ",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

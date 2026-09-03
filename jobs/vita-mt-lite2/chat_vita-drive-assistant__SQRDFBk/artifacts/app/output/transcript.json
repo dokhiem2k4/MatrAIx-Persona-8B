@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, kiểm tra lại giúp tôi tuyến đường này xem có cách nào tránh đoạn cao tốc đang bị kẹt xe phía trước không, tôi đang vội có việc gấp."
+    },
+    {
+      "role": "support",
+      "content": "Để mình kiểm tra tình trạng giao thông trên tuyến đường của bạn trước nhé. Trước tiên, cho mình xác nhận: hiện tại xe chưa có điều hướng nào đang chạy. Bạn muốn mình tra cứu giao thông đến đâu ạ? Bạn định đi đến điểm nào?"
+    },
+    {
+      "role": "customer",
+      "content": "Tôi đang đi Tòa án Nhân dân Thành phố. Tìm ngay cho tôi lộ trình thay thế tránh đoạn kẹt này nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã tìm lộ trình thay thế đến Tòa án Nhân dân Thành phố Hà Nội, khoảng 19,8 km, ước tính 23 phút. Bạn kiểm tra màn hình nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita, tuyến đường này đi ổn đấy. Tiện thể bật giùm tôi điều hòa hàng ghế trước lên 22 độ và quạt gió mức trung bình nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa, chỉnh nhiệt độ hàng ghế trước lên 22°C và quạt gió mức trung bình rồi bạn nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

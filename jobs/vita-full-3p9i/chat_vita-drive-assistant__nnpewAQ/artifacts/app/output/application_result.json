@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 4,
+  "seed": {
+    "rowId": "row-0630",
+    "scenario": "Tôi đang lái chiếc VF9 trên đường vành đai để đến văn phòng tổng cục, tâm trạng tập trung và không muốn bị làm phiền nhiều.",
+    "firstInput": "Vita, liệt kê nhanh các dòng ô tô điện của hãng xem.",
+    "intentCode": "vinfast_vingroup_brands",
+    "subintentCode": "vinfast_brand_products",
+    "subintentName": "Thương hiệu và sản phẩm VinFast",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

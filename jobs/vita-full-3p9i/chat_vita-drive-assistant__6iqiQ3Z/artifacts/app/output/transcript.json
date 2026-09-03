@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, tự nhiên trời đổ mưa rào rồi, bật giúp tôi gạt mưa ở mức thấp để giữ tầm nhìn nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã bật gạt mưa ở mức thấp cho bạn rồi nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn bạn. Tiện thể kiểm tra hộ tôi áp suất lốp 4 bánh xem có ổn định không nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Cả bốn bánh đều trong ngưỡng ổn định, bạn yên tâm nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Tốt quá, cảm ơn Vita. Giờ chỉnh giúp tôi nhiệt độ điều hòa xuống 22 độ C và bật chế độ gió thổi chân nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã bật điều hòa, chỉnh nhiệt độ xuống 22°C và chuyển chế độ gió thổi chân rồi bạn nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

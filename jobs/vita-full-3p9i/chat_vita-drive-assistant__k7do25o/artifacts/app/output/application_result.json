@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 4,
+  "seed": {
+    "rowId": "row-0144",
+    "scenario": "Tôi đang lái xe trên đường vành đai để đến điểm kiểm tra dự án, thời gian khá gấp gáp nên cần xử lý công việc nhanh gọn.",
+    "firstInput": "Lên lịch họp giao ban lúc chín giờ sáng mai.",
+    "intentCode": "calendar_tasks",
+    "subintentCode": "calendar_create_update_cancel",
+    "subintentName": "Tạo/sửa/hủy lịch",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

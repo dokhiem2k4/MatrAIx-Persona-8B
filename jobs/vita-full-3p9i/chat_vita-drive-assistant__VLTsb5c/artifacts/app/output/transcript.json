@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, tắt hộ tôi mấy cái thông báo tin nhắn nổi trên màn hình đi, đang lái xe tập trung chút nào."
+    },
+    {
+      "role": "support",
+      "content": "Xe mình không có tính năng quản lý thông báo tin nhắn trên màn hình. Bạn có thể kiểm tra trong phần cài đặt của điện thoại đang kết nối với xe, hoặc vào mục thông báo trong menu cài đặt trên màn hình trung tâm để tắt nhé. Mình có thể giúp gì thêm cho bạn không?"
+    },
+    {
+      "role": "customer",
+      "content": "Thế thì chỉnh giúp tôi điều hòa hàng ghế lái xuống 21 độ và bật gió hướng mặt nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt nhiệt độ ghế lái 21 độ."
+    },
+    {
+      "role": "customer",
+      "content": "Còn gió hướng mặt nữa, bạn bật luôn giúp tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã chuyển luồng gió sang chế độ face."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 5,
+  "seed": {
+    "rowId": "row-0066",
+    "scenario": "Tôi đang lái xe đi kiểm tra các cơ sở đối tác trong thành phố, lưng hơi mồ hôi vì ngồi lái liên tục.",
+    "firstInput": "Bật làm mát ghế lái mức 2.",
+    "intentCode": "cabin_vehicle_control",
+    "subintentCode": "seat_comfort",
+    "subintentName": "Ghế và tiện nghi",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62706e3ac3c2"
+  }
+}

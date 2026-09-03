@@ -1,0 +1,48 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, em kiểm tra giúp anh xem theo nguồn chính thức hiện nay nước ta có tổng cộng bao nhiêu tỉnh thành nhé, và nhớ dẫn nguồn giúp anh."
+    },
+    {
+      "role": "support",
+      "content": "Theo nguồn chính thức từ Cổng Thông tin điện tử Chính phủ, từ ngày 12/6/2025, cả nước có 34 đơn vị hành chính cấp tỉnh, gồm 28 tỉnh và 6 thành phố trực thuộc Trung ương."
+    },
+    {
+      "role": "customer",
+      "content": "Ồ, con số này có vẻ hơi lạ đấy em. Vita xem lại giúp anh số liệu của Tổng cục Thống kê hoặc Bộ Nội vụ xem thế nào nhé."
+    },
+    {
+      "role": "support",
+      "content": "Anh đang nhắc đến con số nào ạ? Anh có thể nói rõ hơn về số liệu anh đang quan tâm không, để em tra cứu chính xác giúp anh."
+    },
+    {
+      "role": "customer",
+      "content": "Ý anh là Tổng cục Thống kê hay Bộ Nội vụ Việt Nam ấy em, em tra lại số liệu chuẩn giúp anh nhé."
+    },
+    {
+      "role": "support",
+      "content": "Dạ, để em tra lại số liệu chuẩn cho anh. Nhưng anh chưa nói rõ anh đang muốn tra số liệu gì ạ. Anh cần số liệu về dân số, kinh tế, hay lĩnh vực nào khác ạ?"
+    },
+    {
+      "role": "customer",
+      "content": "Anh đang cần biết tổng số tỉnh thành phố trực thuộc Trung ương theo dữ liệu chính thức của Tổng cục Thống kê hoặc Bộ Nội vụ thôi em."
+    },
+    {
+      "role": "support",
+      "content": "Theo dữ liệu chính thức từ Bộ Nội vụ và các nghị quyết của Quốc hội, hiện nay cả nước có 34 đơn vị hành chính cấp tỉnh, gồm 28 tỉnh và 6 thành phố trực thuộc Trung ương."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em nhé, thông tin thế là rõ rồi. Anh nắm được rồi."
+    },
+    {
+      "role": "support",
+      "content": "Có gì cần hỗ trợ thêm bạn cứ nói nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

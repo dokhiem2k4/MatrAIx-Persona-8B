@@ -1,0 +1,56 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, cho tôi hỏi mình còn khoảng bao lâu nữa thì tới đích vậy?"
+    },
+    {
+      "role": "support",
+      "content": "Hiện tại xe chưa có điểm đến nào được đặt, nên mình chưa thể tính thời gian đến đích được. Bạn muốn đi đâu thì nói mình nhé."
+    },
+    {
+      "role": "customer",
+      "content": "À đúng rồi, tôi quên chưa cài lộ trình. Nhờ Vita tìm giúp trạm sạc gần nhất trên tuyến đường này nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình chưa thấy tuyến đường nào đang được điều hướng. Bạn có thể đặt điểm đến trước, rồi mình sẽ tìm trạm sạc dọc đường nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Vậy nhờ Vita đặt điểm đến là Trung tâm Hội nghị Quốc gia giúp tôi, rồi tìm trạm sạc gần nhất luôn nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã đặt điểm đến là Trung tâm Hội nghị Quốc gia và tìm trạm sạc gần nhất, cả hai đều đã sẵn sàng trên bản đồ."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Tiện thể chỉnh giúp tôi nhiệt độ điều hòa bên ghế lái xuống 20 độ và bật thông gió ghế nhé."
+    },
+    {
+      "role": "support",
+      "content": "Rất tiếc, hiện tại điều hòa trên xe đang tắt. Bạn có muốn mình bật điều hòa trước rồi chỉnh nhiệt độ ghế lái xuống 20°C và bật thông gió ghế luôn không?"
+    },
+    {
+      "role": "customer",
+      "content": "Đúng rồi, bật luôn giúp tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Bạn muốn bật gì ạ?"
+    },
+    {
+      "role": "customer",
+      "content": "Bật điều hòa lên, rồi chỉnh nhiệt độ ghế lái xuống 20 độ và bật thông gió ghế luôn giúp tôi."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa, chỉnh nhiệt độ ghế lái xuống 20°C và bật thông gió ghế rồi bạn nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

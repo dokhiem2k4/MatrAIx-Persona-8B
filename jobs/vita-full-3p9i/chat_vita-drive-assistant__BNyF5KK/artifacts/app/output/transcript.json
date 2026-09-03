@@ -1,0 +1,56 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, anh cần em ghi chú lại một việc gấp: Nhắc anh giao báo cáo tiến độ quy hoạch cho phòng tổng hợp ngay khi đến nơi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Chào bạn, mình hiểu bạn muốn được nhắc nhở về việc giao báo cáo. Tuy nhiên, mình chưa có khả năng tạo lời nhắc hoặc báo thức cho các công việc cá nhân như thế này. Thay vào đó, bạn có thể: - Đặt báo thức hoặc reminder trên điện thoại của mình - Ghi chú nhanh vào giấy hoặc ứng dụng ghi chú Mình có thể giúp bạn những việc khác trên xe như điều hướng, điều chỉnh điều hòa, hoặc tra cứu thông tin. Bạn cần gì thêm không?"
+    },
+    {
+      "role": "customer",
+      "content": "Được rồi, vậy em bật giúp anh điều hòa giảm xuống 20 độ nhé, trời hơi oi."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em, nhưng em điều chỉnh thêm hướng gió thổi trực tiếp vào mặt và tăng quạt gió lên mức trung bình giúp anh nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã chuyển luồng gió sang chế độ face."
+    },
+    {
+      "role": "customer",
+      "content": "Còn quạt gió thì sao em, tăng lên mức trung bình giúp anh luôn nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt quạt gió mức 4."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em, thế là vừa vặn rồi. Em theo dõi giúp anh áp suất lốp 4 bánh xem có ổn định không nhé."
+    },
+    {
+      "role": "support",
+      "content": "Dạ, áp suất lốp hiện tại: trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Cả bốn bánh đều trong ngưỡng ổn định, anh yên tâm nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Tốt lắm, cảm ơn em. Anh đã kiểm tra xong các thông số cần thiết."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn anh. Nếu cần gì thêm, anh cứ nói mình nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

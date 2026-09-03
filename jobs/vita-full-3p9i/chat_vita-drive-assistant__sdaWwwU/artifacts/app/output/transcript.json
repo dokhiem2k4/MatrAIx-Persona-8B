@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita, sao kính xe tự nhiên bị mờ sương thế này, trời mưa lớn quá tôi cần nhìn rõ đường đi."
+    },
+    {
+      "role": "support",
+      "content": "VF9 baseline không hỗ trợ sưởi kính trước."
+    },
+    {
+      "role": "customer",
+      "content": "Sao lại không hỗ trợ? Xe cao cấp thế này mà không bật sấy kính trước được thì làm sao tôi quan sát được khi trời mưa lớn? Cô chỉnh giúp tôi hướng gió thổi lên kính lái và bật sấy kính sau xem thế nào."
+    },
+    {
+      "role": "support",
+      "content": "Đã chuyển hướng gió lên kính lái và bật sấy kính sau."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn, như thế này thì đỡ mờ hơn rồi. Tiện thể kiểm tra hộ tôi áp suất lốp 4 bánh xem có ổn định không nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Cả bốn bánh đều trong ngưỡng ổn định, bạn yên tâm nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Tốt rồi, cảm ơn hệ thống. Tôi tập trung lái xe tiếp đây."
+    },
+    {
+      "role": "support",
+      "content": "Vâng, bạn tập trung lái an toàn nhé. Mình luôn sẵn sàng hỗ trợ khi cần."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

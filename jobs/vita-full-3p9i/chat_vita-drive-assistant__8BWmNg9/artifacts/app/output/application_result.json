@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 4,
+  "seed": {
+    "rowId": "row-0294",
+    "scenario": "Tôi đang lái xe gấp trên tuyến đường chính để kịp lịch họp giao ban, năng lượng tập trung cao độ.",
+    "firstInput": "Tìm trạm sạc nhanh.",
+    "intentCode": "energy_charging",
+    "subintentCode": "charger_search",
+    "subintentName": "Tìm trạm sạc",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

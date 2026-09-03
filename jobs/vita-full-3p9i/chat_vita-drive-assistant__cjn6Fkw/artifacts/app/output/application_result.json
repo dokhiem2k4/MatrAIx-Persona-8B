@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 4,
+  "seed": {
+    "rowId": "row-0804",
+    "scenario": "Tôi đang lái xe đưa vợ con đi chơi cuối tuần và đang cần chuyển nhanh sang cấu hình cá nhân quen thuộc mà không mất thời gian.",
+    "firstInput": "Tôi đang lái xe, chuyển sang hồ sơ của tôi và xác nhận thật ngắn thôi.",
+    "intentCode": "vita_profile_settings",
+    "subintentCode": "user_profile_account",
+    "subintentName": "Hồ sơ và tài khoản người dùng",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62706e3ac3c2"
+  }
+}

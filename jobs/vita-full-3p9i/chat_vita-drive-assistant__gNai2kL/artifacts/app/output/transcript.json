@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita này, hình như động cơ có tiếng rung hơi lạ khi chạy ở tốc độ cao. Kiểm tra giúp tôi xem có vấn đề gì không."
+    },
+    {
+      "role": "support",
+      "content": "Xe đang đỗ ở P, tốc độ 0 km/h nên mình không thể kiểm tra động cơ khi chạy tốc độ cao. Bạn hãy chạy thử và yêu cầu lại nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Tôi đang chạy trên cao tốc mà, sao lại báo là đang đỗ ở P? Kiểm tra lại cảm biến hoặc trạng thái xe đi."
+    },
+    {
+      "role": "support",
+      "content": "Mình hiểu bạn thấy khó hiểu. Tuy nhiên, dữ liệu mình nhận được từ xe cho thấy cần số đang ở P và tốc độ là 0 km/h. Mình không có khả năng kiểm tra hay can thiệp vào cảm biến xe. Bạn vui lòng kiểm tra lại trên màn hình hoặc liên hệ bộ phận kỹ thuật để được hỗ trợ nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Màn hình trung tâm rõ ràng đang báo tôi chạy hơn 90 km/h ở số D, sao hệ thống của cô lại đọc sai dữ liệu như vậy? Thử reset lại mô-đun chẩn đoán xem nào."
+    },
+    {
+      "role": "support",
+      "content": "Tôi hiểu bạn đang thấy khó chịu khi có sự khác biệt giữa những gì hiển thị trên màn hình trung tâm và dữ liệu tôi đọc được. Tuy nhiên, tôi cần làm rõ một vài điểm: Thứ nhất, dữ liệu tôi đọc từ hệ thống cho thấy xe đang ở số P và đứng yên (0 km/h) , không phải đang chạy ở số D. Có thể bạn đang nhìn vào một màn hình khác hoặc có sự nhầm lẫn. Thứ hai, tôi không có khả năng reset mô-đun chẩn đoán . Đây là chức năng nằm ngoài phạm vi của trợ lý giọng nói trên xe. Việc can thiệp vào hệ thống chẩn đoán cần được thực hiện bởi kỹ thuật viên tại trung tâm dịch vụ. Nếu bạn thực sự thấy có sự bất thường trên màn hình, mình khuyên bạn nên chụp ảnh lại và liên hệ với trung tâm dịch vụ VinFast để được kiểm tra."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

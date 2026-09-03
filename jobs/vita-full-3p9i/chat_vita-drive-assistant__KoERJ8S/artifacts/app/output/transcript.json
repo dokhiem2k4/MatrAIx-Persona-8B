@@ -1,0 +1,48 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, tìm giúp tôi trạm sạc điện gần nhất trên tuyến đường này với nhé, tôi đang cần sạc gấp để kịp giờ hẹn."
+    },
+    {
+      "role": "support",
+      "content": "Xe đang đỗ ở P, pin 78% đi được 312 km, nhưng chưa có tuyến đường nào đang hoạt động. Bạn muốn mình tìm trạm sạc gần vị trí hiện tại hay thiết lập điểm đến trước?"
+    },
+    {
+      "role": "customer",
+      "content": "Tôi đang lái xe trên cao tốc mà, xe đang ở chế độ D chứ không phải P đâu. Tìm trạm sạc nhanh DC gần nhất trên đường đi giúp tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã tìm và dẫn đường đến trạm sạc nhanh DC gần nhất trên đường đi, cách 35 km, dự kiến đến sau 1 tiếng 53 phút."
+    },
+    {
+      "role": "customer",
+      "content": "Tệ thế, sao tới hơn tiếng rưỡi lận? Có trạm nào gần hơn hoặc tuyến đường nào nhanh hơn không, tôi sắp muộn họp mất rồi."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tìm được trạm sạc nhanh DC gần hơn, cách đây 26 km, dự kiến đến trong 84 phút. Tuyến đường này nhanh hơn tuyến cũ gần nửa tiếng đấy bạn."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita, thế này thì đỡ hơn rồi. Hướng dẫn đường đi luôn giúp tôi nhé, và nhân tiện tăng nhiệt độ điều hòa lên một chút cho dễ chịu."
+    },
+    {
+      "role": "support",
+      "content": "Chào bạn, rất vui vì bạn thấy dễ chịu hơn rồi! Mình thấy điều hòa hiện đang tắt. Bạn muốn mình bật điều hòa lên và tăng nhiệt độ lên bao nhiêu độ ạ?"
+    },
+    {
+      "role": "customer",
+      "content": "Ủa, điều hòa vẫn đang bật mà sao lại tắt nhỉ? Thôi bật lên giúp tôi 24 độ và bật luôn tính năng thông gió ghế lái cho thoải mái nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa 24°C và thông gió ghế lái rồi bạn nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

@@ -1,0 +1,1436 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "matraix.trial_evaluation",
+  "taskType": "survey",
+  "presenceCheck": {
+    "passed": true,
+    "requiredArtifacts": [
+      "survey_result.json"
+    ],
+    "missingArtifacts": []
+  },
+  "sourceArtifacts": {
+    "surveyResult": "/app/output/survey_result.json"
+  },
+  "contexts": [
+    {
+      "key": "question.q0",
+      "label": "q0",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe đi mua ít đồ chuẩn bị cho buổi tập bóng bàn buổi chiều, lòng thầm nghĩ không biết giá vàng hôm nay biến động ra sao. Đường xá lúc này hơi vắng nên tôi muốn kiểm tra nhanh một chút."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q1",
+      "label": "q1",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita tra giúp tôi giá vàng hôm nay."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q2",
+      "label": "q2",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe thong thả trên đường phố đông đúc để đến buổi gặp mặt câu lạc bộ thể thao, tâm trạng khá thoải mái và muốn tìm xem tối nay có chương trình ca nhạc nào thú vị không."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q3",
+      "label": "q3",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita tìm hộ tôi xem tối nay ở Đà Nẵng có sự kiện âm nhạc nào diễn ra không nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q4",
+      "label": "q4",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe vượt đèo để đi công việc riêng, trời hơi âm u và tôi muốn nắm trước tình hình giao thông phía trước để chủ động thời gian."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q5",
+      "label": "q5",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita kiểm tra giúp tôi tình hình kẹt xe trên đèo Bảo Lộc lúc này đi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q6",
+      "label": "q6",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe tạm bên đường để chờ xem lại lịch trình cá nhân, tranh thủ tìm một quán cà phê yên tĩnh có chỗ đậu ô tô rộng rãi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q7",
+      "label": "q7",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita tìm quán cà phê nào gần đây có chỗ đậu ô tô hộ tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q8",
+      "label": "q8",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang ngồi trong xe khi xe đỗ ở bãi gửi xe, chuẩn bị cho chuyến đi chơi cuối tuần cùng bạn bè và muốn tham khảo trước giá vé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q9",
+      "label": "q9",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita tra giúp tôi giá vé hiện tại của khu du lịch Bà Nà Hills nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q10",
+      "label": "q10",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe nghỉ ngơi sau một quãng đường di chuyển dài, muốn kiểm tra xem xung quanh khu vực này có trạm sạc điện nào mới không."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q11",
+      "label": "q11",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita tìm các trạm sạc ô tô điện mới nhất quanh đây giúp tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q12",
+      "label": "q12",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe dưới trời mưa phùn, kính xe có hiện tượng hơi mờ khiến tôi tò mò về nguyên nhân vật lý của hiện tượng này."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q13",
+      "label": "q13",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita cho tôi biết vì sao kính ô tô lại bị mờ khi trời mưa."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q14",
+      "label": "q14",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang tập trung lái xe trên đường cao tốc thì thấy đèn cảnh báo ắc quy sáng lên trên bảng đồng hồ, trong lòng hơi lo lắng chút ít."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q15",
+      "label": "q15",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita giải thích giúp tôi đèn cảnh báo hình bình ắc quy trên bảng đồng hồ có nghĩa là gì."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q16",
+      "label": "q16",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe trên hành trình dài về quê, cảm thấy cơ thể cần một khoảng nghỉ hợp lý để duy trì sự tỉnh táo."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q17",
+      "label": "q17",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita cho tôi biết lái xe đường dài thì khoảng bao lâu nên nghỉ một lần."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q18",
+      "label": "q18",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe chờ người nhà mua ít đồ ở góc phố, ngước nhìn bầu trời trong xanh và tự nhiên muốn ôn lại một chút kiến thức cũ."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q19",
+      "label": "q19",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita trả lời nhanh vì sao bầu trời lại có màu xanh."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q20",
+      "label": "q20",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe trong gara nhà để chuẩn bị kiểm tra bảo dưỡng sơ bộ chiếc VF9 của mình trước chuyến đi xa."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q21",
+      "label": "q21",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita cho tôi biết tại sao phải để động cơ nguội trước khi kiểm tra nước làm mát."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q22",
+      "label": "q22",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang ngồi đỗ xe thư giãn dưới bóng cây râm mát, đọc sách và muốn tìm hiểu thêm về các hiện tượng tự nhiên quanh ta."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q23",
+      "label": "q23",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita giải thích giúp tôi hiện tượng thủy triều hoạt động thế nào đi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q24",
+      "label": "q24",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe trên đường phố nội đô, cảm thấy thời tiết có vẻ hơi chuyển đổi nên muốn kiểm tra nhanh tình hình bên ngoài."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q25",
+      "label": "q25",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita xem ngoài trời bây giờ có mưa không."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q26",
+      "label": "q26",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe đi làm buổi sáng sớm, đường phố khá đông đúc và tôi muốn cập nhật nhanh các thông tin thời sự mới nhất."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q27",
+      "label": "q27",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita tổng hợp giúp tôi tin tức mới nhất sáng nay đi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q28",
+      "label": "q28",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe trên đường cao tốc hướng về miền Trung, muốn nắm trước tình hình thời tiết tại điểm đến để chuẩn bị trang phục."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q29",
+      "label": "q29",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita cho tôi biết thời tiết chiều nay ở Đà Nẵng thế nào nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q30",
+      "label": "q30",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe ở bãi đỗ trước nhà, chuẩn bị bước ra ngoài và muốn biết chính xác nhiệt độ ngoài trời để mặc thêm áo."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q31",
+      "label": "q31",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita xem hôm nay ngoài này có lạnh lắm không."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q32",
+      "label": "q32",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe đợi bạn bè tại điểm hẹn, nhìn ra ngoài trời thấy mây đen kéo đến nên muốn kiểm tra khả năng có mưa."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q33",
+      "label": "q33",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita kiểm tra xem hôm nay trời có mưa không giúp tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q34",
+      "label": "q34",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang ngồi trong xe đỗ ở sân cơ quan, thảnh thơi nhấp ngụm trà và điểm lại các sự kiện đáng chú ý trong ngày."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q35",
+      "label": "q35",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita cập nhật giúp tôi những tin tức mới nhất hôm nay."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q36",
+      "label": "q36",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe trên tuyến quốc lộ đi tỉnh, muốn kiểm tra thông tin chính thống về hành chính để làm tài liệu tham khảo công việc."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q37",
+      "label": "q37",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita xác minh theo nguồn chính thức xem Việt Nam hiện có bao nhiêu tỉnh thành và nhớ dẫn nguồn nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q38",
+      "label": "q38",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe trên cao tốc, muốn chắc chắn về quy định tốc độ mới nhất của cơ quan nhà nước để tuân thủ thật tốt."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q39",
+      "label": "q39",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita kiểm chứng giúp tôi bằng nguồn nhà nước quy định tốc độ tối đa trên cao tốc Việt Nam là bao nhiêu."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q40",
+      "label": "q40",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe qua khu đô thị đông đúc, cần biết chính xác mức giới hạn tốc độ theo luật hiện hành để điều khiển xe an toàn."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q41",
+      "label": "q41",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita cho biết tốc độ tối đa của ô tô trong khu đông dân cư theo quy định chính thức là bao nhiêu."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q42",
+      "label": "q42",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe chờ người thân ở khu di tích, tranh thủ tra cứu thông tin văn hóa chính thống từ các tổ chức quốc tế lớn."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q43",
+      "label": "q43",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita cho biết Việt Nam có bao nhiêu di sản thế giới được UNESCO công nhận theo dữ liệu mới nhất."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q44",
+      "label": "q44",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe nghỉ ngơi, nhân tiện muốn tìm hiểu lại các khuyến nghị y tế chính thức về vận động thể chất cho người lớn tuổi như mình."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q45",
+      "label": "q45",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita tra cứu nguồn WHO xem người lớn nên vận động thể chất bao nhiêu phút mỗi tuần."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q46",
+      "label": "q46",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe thư giãn trong khuôn viên râm mát, chợt tò mò về các dữ liệu thiên văn học chính thống từ các cơ quan nghiên cứu vũ trụ."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q47",
+      "label": "q47",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita kiểm tra nguồn NASA xem một ngày trên Sao Hỏa dài bao lâu và dẫn nguồn giúp tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q48",
+      "label": "q48",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe trên một đoạn đường vắng vào buổi chiều muộn, cảm giác hơi buồn ngủ nên cần một chút giải trí nhẹ nhàng."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q49",
+      "label": "q49",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita kể cho tôi nghe một câu chuyện cười thật ngắn đi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q50",
+      "label": "q50",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe trên đường đi thăm người quen ở tỉnh xa, muốn nghe vài mẩu chuyện vui để chuyến đi thêm phần hào hứng."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q51",
+      "label": "q51",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita kể tôi nghe một câu chuyện vui để chuyến đi bớt nhàm chán nào."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q52",
+      "label": "q52",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe đường dài trong đêm, cần trò chuyện vài câu để giữ tinh thần luôn tỉnh táo và tập trung cao độ."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q53",
+      "label": "q53",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita trò chuyện với tôi vài câu cho tỉnh táo khi lái xe nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q54",
+      "label": "q54",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe bên đường chờ đồng nghiệp ra xe, thời gian rảnh rỗi nên muốn tìm thứ gì đó vui vẻ để giải trí."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q55",
+      "label": "q55",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita trong lúc chờ đợi, kể tôi nghe một câu chuyện vui ngắn nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q56",
+      "label": "q56",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe ngay ngắn trong bãi đỗ của công viên, thảnh thơi ngồi nghỉ và muốn thưởng thức vài mẩu chuyện hài hước."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q57",
+      "label": "q57",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita xe đang đỗ rồi, kể tôi nghe một câu chuyện vui nho nhỏ đi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q58",
+      "label": "q58",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang ngồi trong xe chờ người nhà mua sắm trong siêu thị, thời gian khá dài nên muốn tìm một trò chơi đố vui để giải trí."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q59",
+      "label": "q59",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita nghĩ ra trò gì vui để chơi cùng tôi trong lúc đợi người nhà đi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "survey.summary",
+      "label": "Survey summary",
+      "contextType": "trial_summary",
+      "facets": [
+        {
+          "key": "answer_count",
+          "label": "Answer count",
+          "role": "score",
+          "kind": "numerical",
+          "value": 60
+        },
+        {
+          "key": "trajectory_event_count",
+          "label": "Trajectory event count",
+          "role": "score",
+          "kind": "numerical",
+          "value": 122
+        }
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "key": "question.q0.response",
+      "label": "Selected response",
+      "group": "question.q0",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe đi mua ít đồ chuẩn bị cho buổi tập bóng bàn buổi chiều, lòng thầm nghĩ không biết giá vàng hôm nay biến động ra sao. Đường xá lúc này hơi vắng nên tôi muốn kiểm tra nhanh một chút."
+    },
+    {
+      "key": "question.q1.response",
+      "label": "Selected response",
+      "group": "question.q1",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita tra giúp tôi giá vàng hôm nay."
+    },
+    {
+      "key": "question.q2.response",
+      "label": "Selected response",
+      "group": "question.q2",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe thong thả trên đường phố đông đúc để đến buổi gặp mặt câu lạc bộ thể thao, tâm trạng khá thoải mái và muốn tìm xem tối nay có chương trình ca nhạc nào thú vị không."
+    },
+    {
+      "key": "question.q3.response",
+      "label": "Selected response",
+      "group": "question.q3",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita tìm hộ tôi xem tối nay ở Đà Nẵng có sự kiện âm nhạc nào diễn ra không nhé."
+    },
+    {
+      "key": "question.q4.response",
+      "label": "Selected response",
+      "group": "question.q4",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe vượt đèo để đi công việc riêng, trời hơi âm u và tôi muốn nắm trước tình hình giao thông phía trước để chủ động thời gian."
+    },
+    {
+      "key": "question.q5.response",
+      "label": "Selected response",
+      "group": "question.q5",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita kiểm tra giúp tôi tình hình kẹt xe trên đèo Bảo Lộc lúc này đi."
+    },
+    {
+      "key": "question.q6.response",
+      "label": "Selected response",
+      "group": "question.q6",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe tạm bên đường để chờ xem lại lịch trình cá nhân, tranh thủ tìm một quán cà phê yên tĩnh có chỗ đậu ô tô rộng rãi."
+    },
+    {
+      "key": "question.q7.response",
+      "label": "Selected response",
+      "group": "question.q7",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita tìm quán cà phê nào gần đây có chỗ đậu ô tô hộ tôi."
+    },
+    {
+      "key": "question.q8.response",
+      "label": "Selected response",
+      "group": "question.q8",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang ngồi trong xe khi xe đỗ ở bãi gửi xe, chuẩn bị cho chuyến đi chơi cuối tuần cùng bạn bè và muốn tham khảo trước giá vé."
+    },
+    {
+      "key": "question.q9.response",
+      "label": "Selected response",
+      "group": "question.q9",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita tra giúp tôi giá vé hiện tại của khu du lịch Bà Nà Hills nhé."
+    },
+    {
+      "key": "question.q10.response",
+      "label": "Selected response",
+      "group": "question.q10",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe nghỉ ngơi sau một quãng đường di chuyển dài, muốn kiểm tra xem xung quanh khu vực này có trạm sạc điện nào mới không."
+    },
+    {
+      "key": "question.q11.response",
+      "label": "Selected response",
+      "group": "question.q11",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita tìm các trạm sạc ô tô điện mới nhất quanh đây giúp tôi."
+    },
+    {
+      "key": "question.q12.response",
+      "label": "Selected response",
+      "group": "question.q12",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe dưới trời mưa phùn, kính xe có hiện tượng hơi mờ khiến tôi tò mò về nguyên nhân vật lý của hiện tượng này."
+    },
+    {
+      "key": "question.q13.response",
+      "label": "Selected response",
+      "group": "question.q13",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita cho tôi biết vì sao kính ô tô lại bị mờ khi trời mưa."
+    },
+    {
+      "key": "question.q14.response",
+      "label": "Selected response",
+      "group": "question.q14",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang tập trung lái xe trên đường cao tốc thì thấy đèn cảnh báo ắc quy sáng lên trên bảng đồng hồ, trong lòng hơi lo lắng chút ít."
+    },
+    {
+      "key": "question.q15.response",
+      "label": "Selected response",
+      "group": "question.q15",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita giải thích giúp tôi đèn cảnh báo hình bình ắc quy trên bảng đồng hồ có nghĩa là gì."
+    },
+    {
+      "key": "question.q16.response",
+      "label": "Selected response",
+      "group": "question.q16",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe trên hành trình dài về quê, cảm thấy cơ thể cần một khoảng nghỉ hợp lý để duy trì sự tỉnh táo."
+    },
+    {
+      "key": "question.q17.response",
+      "label": "Selected response",
+      "group": "question.q17",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita cho tôi biết lái xe đường dài thì khoảng bao lâu nên nghỉ một lần."
+    },
+    {
+      "key": "question.q18.response",
+      "label": "Selected response",
+      "group": "question.q18",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe chờ người nhà mua ít đồ ở góc phố, ngước nhìn bầu trời trong xanh và tự nhiên muốn ôn lại một chút kiến thức cũ."
+    },
+    {
+      "key": "question.q19.response",
+      "label": "Selected response",
+      "group": "question.q19",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita trả lời nhanh vì sao bầu trời lại có màu xanh."
+    },
+    {
+      "key": "question.q20.response",
+      "label": "Selected response",
+      "group": "question.q20",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe trong gara nhà để chuẩn bị kiểm tra bảo dưỡng sơ bộ chiếc VF9 của mình trước chuyến đi xa."
+    },
+    {
+      "key": "question.q21.response",
+      "label": "Selected response",
+      "group": "question.q21",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita cho tôi biết tại sao phải để động cơ nguội trước khi kiểm tra nước làm mát."
+    },
+    {
+      "key": "question.q22.response",
+      "label": "Selected response",
+      "group": "question.q22",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang ngồi đỗ xe thư giãn dưới bóng cây râm mát, đọc sách và muốn tìm hiểu thêm về các hiện tượng tự nhiên quanh ta."
+    },
+    {
+      "key": "question.q23.response",
+      "label": "Selected response",
+      "group": "question.q23",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita giải thích giúp tôi hiện tượng thủy triều hoạt động thế nào đi."
+    },
+    {
+      "key": "question.q24.response",
+      "label": "Selected response",
+      "group": "question.q24",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe trên đường phố nội đô, cảm thấy thời tiết có vẻ hơi chuyển đổi nên muốn kiểm tra nhanh tình hình bên ngoài."
+    },
+    {
+      "key": "question.q25.response",
+      "label": "Selected response",
+      "group": "question.q25",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita xem ngoài trời bây giờ có mưa không."
+    },
+    {
+      "key": "question.q26.response",
+      "label": "Selected response",
+      "group": "question.q26",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe đi làm buổi sáng sớm, đường phố khá đông đúc và tôi muốn cập nhật nhanh các thông tin thời sự mới nhất."
+    },
+    {
+      "key": "question.q27.response",
+      "label": "Selected response",
+      "group": "question.q27",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita tổng hợp giúp tôi tin tức mới nhất sáng nay đi."
+    },
+    {
+      "key": "question.q28.response",
+      "label": "Selected response",
+      "group": "question.q28",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe trên đường cao tốc hướng về miền Trung, muốn nắm trước tình hình thời tiết tại điểm đến để chuẩn bị trang phục."
+    },
+    {
+      "key": "question.q29.response",
+      "label": "Selected response",
+      "group": "question.q29",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita cho tôi biết thời tiết chiều nay ở Đà Nẵng thế nào nhé."
+    },
+    {
+      "key": "question.q30.response",
+      "label": "Selected response",
+      "group": "question.q30",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe ở bãi đỗ trước nhà, chuẩn bị bước ra ngoài và muốn biết chính xác nhiệt độ ngoài trời để mặc thêm áo."
+    },
+    {
+      "key": "question.q31.response",
+      "label": "Selected response",
+      "group": "question.q31",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita xem hôm nay ngoài này có lạnh lắm không."
+    },
+    {
+      "key": "question.q32.response",
+      "label": "Selected response",
+      "group": "question.q32",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe đợi bạn bè tại điểm hẹn, nhìn ra ngoài trời thấy mây đen kéo đến nên muốn kiểm tra khả năng có mưa."
+    },
+    {
+      "key": "question.q33.response",
+      "label": "Selected response",
+      "group": "question.q33",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita kiểm tra xem hôm nay trời có mưa không giúp tôi."
+    },
+    {
+      "key": "question.q34.response",
+      "label": "Selected response",
+      "group": "question.q34",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang ngồi trong xe đỗ ở sân cơ quan, thảnh thơi nhấp ngụm trà và điểm lại các sự kiện đáng chú ý trong ngày."
+    },
+    {
+      "key": "question.q35.response",
+      "label": "Selected response",
+      "group": "question.q35",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita cập nhật giúp tôi những tin tức mới nhất hôm nay."
+    },
+    {
+      "key": "question.q36.response",
+      "label": "Selected response",
+      "group": "question.q36",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe trên tuyến quốc lộ đi tỉnh, muốn kiểm tra thông tin chính thống về hành chính để làm tài liệu tham khảo công việc."
+    },
+    {
+      "key": "question.q37.response",
+      "label": "Selected response",
+      "group": "question.q37",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita xác minh theo nguồn chính thức xem Việt Nam hiện có bao nhiêu tỉnh thành và nhớ dẫn nguồn nhé."
+    },
+    {
+      "key": "question.q38.response",
+      "label": "Selected response",
+      "group": "question.q38",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe trên cao tốc, muốn chắc chắn về quy định tốc độ mới nhất của cơ quan nhà nước để tuân thủ thật tốt."
+    },
+    {
+      "key": "question.q39.response",
+      "label": "Selected response",
+      "group": "question.q39",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita kiểm chứng giúp tôi bằng nguồn nhà nước quy định tốc độ tối đa trên cao tốc Việt Nam là bao nhiêu."
+    },
+    {
+      "key": "question.q40.response",
+      "label": "Selected response",
+      "group": "question.q40",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe qua khu đô thị đông đúc, cần biết chính xác mức giới hạn tốc độ theo luật hiện hành để điều khiển xe an toàn."
+    },
+    {
+      "key": "question.q41.response",
+      "label": "Selected response",
+      "group": "question.q41",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita cho biết tốc độ tối đa của ô tô trong khu đông dân cư theo quy định chính thức là bao nhiêu."
+    },
+    {
+      "key": "question.q42.response",
+      "label": "Selected response",
+      "group": "question.q42",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe chờ người thân ở khu di tích, tranh thủ tra cứu thông tin văn hóa chính thống từ các tổ chức quốc tế lớn."
+    },
+    {
+      "key": "question.q43.response",
+      "label": "Selected response",
+      "group": "question.q43",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita cho biết Việt Nam có bao nhiêu di sản thế giới được UNESCO công nhận theo dữ liệu mới nhất."
+    },
+    {
+      "key": "question.q44.response",
+      "label": "Selected response",
+      "group": "question.q44",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe nghỉ ngơi, nhân tiện muốn tìm hiểu lại các khuyến nghị y tế chính thức về vận động thể chất cho người lớn tuổi như mình."
+    },
+    {
+      "key": "question.q45.response",
+      "label": "Selected response",
+      "group": "question.q45",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita tra cứu nguồn WHO xem người lớn nên vận động thể chất bao nhiêu phút mỗi tuần."
+    },
+    {
+      "key": "question.q46.response",
+      "label": "Selected response",
+      "group": "question.q46",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe thư giãn trong khuôn viên râm mát, chợt tò mò về các dữ liệu thiên văn học chính thống từ các cơ quan nghiên cứu vũ trụ."
+    },
+    {
+      "key": "question.q47.response",
+      "label": "Selected response",
+      "group": "question.q47",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita kiểm tra nguồn NASA xem một ngày trên Sao Hỏa dài bao lâu và dẫn nguồn giúp tôi."
+    },
+    {
+      "key": "question.q48.response",
+      "label": "Selected response",
+      "group": "question.q48",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe trên một đoạn đường vắng vào buổi chiều muộn, cảm giác hơi buồn ngủ nên cần một chút giải trí nhẹ nhàng."
+    },
+    {
+      "key": "question.q49.response",
+      "label": "Selected response",
+      "group": "question.q49",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita kể cho tôi nghe một câu chuyện cười thật ngắn đi."
+    },
+    {
+      "key": "question.q50.response",
+      "label": "Selected response",
+      "group": "question.q50",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe trên đường đi thăm người quen ở tỉnh xa, muốn nghe vài mẩu chuyện vui để chuyến đi thêm phần hào hứng."
+    },
+    {
+      "key": "question.q51.response",
+      "label": "Selected response",
+      "group": "question.q51",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita kể tôi nghe một câu chuyện vui để chuyến đi bớt nhàm chán nào."
+    },
+    {
+      "key": "question.q52.response",
+      "label": "Selected response",
+      "group": "question.q52",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe đường dài trong đêm, cần trò chuyện vài câu để giữ tinh thần luôn tỉnh táo và tập trung cao độ."
+    },
+    {
+      "key": "question.q53.response",
+      "label": "Selected response",
+      "group": "question.q53",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita trò chuyện với tôi vài câu cho tỉnh táo khi lái xe nhé."
+    },
+    {
+      "key": "question.q54.response",
+      "label": "Selected response",
+      "group": "question.q54",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe bên đường chờ đồng nghiệp ra xe, thời gian rảnh rỗi nên muốn tìm thứ gì đó vui vẻ để giải trí."
+    },
+    {
+      "key": "question.q55.response",
+      "label": "Selected response",
+      "group": "question.q55",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita trong lúc chờ đợi, kể tôi nghe một câu chuyện vui ngắn nhé."
+    },
+    {
+      "key": "question.q56.response",
+      "label": "Selected response",
+      "group": "question.q56",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe ngay ngắn trong bãi đỗ của công viên, thảnh thơi ngồi nghỉ và muốn thưởng thức vài mẩu chuyện hài hước."
+    },
+    {
+      "key": "question.q57.response",
+      "label": "Selected response",
+      "group": "question.q57",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita xe đang đỗ rồi, kể tôi nghe một câu chuyện vui nho nhỏ đi."
+    },
+    {
+      "key": "question.q58.response",
+      "label": "Selected response",
+      "group": "question.q58",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang ngồi trong xe chờ người nhà mua sắm trong siêu thị, thời gian khá dài nên muốn tìm một trò chơi đố vui để giải trí."
+    },
+    {
+      "key": "question.q59.response",
+      "label": "Selected response",
+      "group": "question.q59",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita nghĩ ra trò gì vui để chơi cùng tôi trong lúc đợi người nhà đi."
+    },
+    {
+      "key": "survey.summary.answer_count",
+      "label": "Answer count",
+      "group": "survey.summary",
+      "role": "score",
+      "kind": "numerical",
+      "value": 60
+    },
+    {
+      "key": "survey.summary.trajectory_event_count",
+      "label": "Trajectory event count",
+      "group": "survey.summary",
+      "role": "score",
+      "kind": "numerical",
+      "value": 122
+    }
+  ]
+}

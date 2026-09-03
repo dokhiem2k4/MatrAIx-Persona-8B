@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita, xem gần đây có trạm xăng nào không, chỉ đường gấp cho tôi."
+    },
+    {
+      "role": "support",
+      "content": "Để mình tra nhanh các trạm xăng gần vị trí hiện tại của bạn. Trước tiên, mình cần xác nhận: bạn đang ở gần Tòa Technopark, Hà Nội phải không? Và bạn muốn tìm trạm xăng gần nhất để đổ xăng cho xe khác, hay bạn đang cần trạm sạc cho chiếc VF9 này?"
+    },
+    {
+      "role": "customer",
+      "content": "À quên mất, bận quá lú lẫn, xe điện thì tìm trạm sạc chứ. Đúng, tôi đang ở khu Technopark, tìm ngay trạm sạc nhanh nào gần nhất đi. Sẵn tiện báo luôn pin xe còn bao nhiêu %?"
+    },
+    {
+      "role": "support",
+      "content": "Pin xe bạn còn 78%, đi được khoảng 312 km. Mình đã tìm và bắt đầu dẫn đường đến trạm sạc nhanh gần nhất, cách khoảng 41 km, dự kiến mất 131 phút."
+    },
+    {
+      "role": "customer",
+      "content": "Pin còn 78% thì sạc làm gì nữa, hủy dẫn đường ngay đi. Tiện thể bật thông gió ghế lái mức 2 và hạ điều hòa xuống 21 độ cho tôi."
+    },
+    {
+      "role": "support",
+      "content": ":"
+    },
+    {
+      "role": "customer",
+      "content": "Sao thế Vita? Chưa nghe rõ à? Tôi bảo hủy dẫn đường, bật thông gió ghế lái mức 2 và hạ điều hòa xuống 21 độ."
+    },
+    {
+      "role": "support",
+      "content": "Đã hủy dẫn đường, bật thông gió ghế lái mức 2 và hạ nhiệt điều hòa xuống 21°C."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

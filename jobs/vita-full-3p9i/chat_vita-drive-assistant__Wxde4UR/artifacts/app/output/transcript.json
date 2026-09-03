@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, cho tôi hỏi chính sách bảo hành xe điện VinFast VF9 của mình hiện tại ra sao nhỉ?"
+    },
+    {
+      "role": "support",
+      "content": "Chào bạn! Theo thông tin mình tra được, xe VinFast VF9 có chính sách bảo hành 10 năm hoặc 200.000 km, tùy điều kiện nào đến trước. Pin xe nếu mua lần đầu cũng được bảo hành tương tự, nhưng nếu xe dùng cho dịch vụ thương mại thì thời hạn bảo hành pin còn 3 năm hoặc 100.000 km."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita, thế còn riêng phần pin cao áp thuê thì có chính sách gì đặc biệt không em?"
+    },
+    {
+      "role": "support",
+      "content": "Mình vừa tra cứu thì thấy từ 01/03/2025, VinFast đã dừng dịch vụ cho thuê pin ô tô điện rồi bạn ạ. Các khách hàng đang thuê pin trước đó vẫn có thể tiếp tục sử dụng theo hợp đồng cũ, nhưng không có chính sách thuê pin cao áp riêng cho năm 2026."
+    },
+    {
+      "role": "customer",
+      "content": "À thế à, tôi nhớ rồi. Giờ chỉnh giúp tôi điều hòa bên ghế lái thấp xuống 2 độ nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt nhiệt độ ghế lái 20 độ."
+    },
+    {
+      "role": "customer",
+      "content": "Tuyệt vời, cảm ơn Vita nhiều nhé. Mọi thứ ổn rồi!"
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn! Có gì cần mình hỗ trợ thêm thì cứ nói nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

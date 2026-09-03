@@ -1,0 +1,133 @@
+{
+    "id": "f1729549-bd9a-44aa-8372-bdbaa1a8a640",
+    "task_name": "application/vita-drive-assistant",
+    "trial_name": "chat_vita-drive-assistant__QMemnn8",
+    "trial_uri": "file:///home/khiemdm/orca/workspaces/MatrAIx-Persona-8B/pearleye/jobs/vita-full-3p9i/chat_vita-drive-assistant__QMemnn8",
+    "task_id": {
+        "path": "application/tasks/chat_vita-drive-assistant"
+    },
+    "source": null,
+    "task_checksum": "7ec689831c62a5dc3e84d0d6cce044da1360c427bd015f5da54dfc62b5dc8f83",
+    "config": {
+        "task": {
+            "path": "application/tasks/chat_vita-drive-assistant",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "chat_vita-drive-assistant__QMemnn8",
+        "trials_dir": "jobs/vita-full-3p9i",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "persona-user-sim",
+            "import_path": null,
+            "model_name": "openrouter/google/gemini-3.5-flash-lite",
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-62c08cb727c5.yaml",
+                "seed": {
+                    "row_id": "row-0720",
+                    "scenario": "Tôi đang lái chiếc VF9 trên đại lộ đông đúc để đến buổi họp chiến lược với cơ quan cấp trên, tâm trạng tập trung và có chút vội vã. Xe đang ở chế độ yên tĩnh nên tôi chỉ muốn nắm bắt nhanh gọn các tính năng cốt lõi của Vita.",
+                    "first_input": "Vita, khi đang lái xe tôi có thể dùng những tính năng gì?",
+                    "intent_code": "vita_profile_settings",
+                    "subintent_code": "vita_capabilities_usage",
+                    "subintent_name": "Khả năng và cách sử dụng ViTa",
+                    "vehicle_state": "driving",
+                    "ASSISTANT_MODE": "quiet",
+                    "persona_id": "wiki-62c08cb727c5"
+                },
+                "model_info": {
+                    "max_input_tokens": 72000,
+                    "max_output_tokens": 16384
+                }
+            },
+            "env": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "host",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "env": {},
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {},
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "5e8d9843-08a8-4205-87a0-b5f811078438"
+    },
+    "agent_info": {
+        "name": "persona-user-sim",
+        "version": "1.0.0",
+        "model_info": {
+            "name": "google/gemini-3.5-flash-lite",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 19637,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 585,
+        "cost_usd": 0.0073536,
+        "rollout_details": null,
+        "metadata": {
+            "request_id": "gen-1788427672-TaQPJdo9gbcpuHhL6Ou6",
+            "model": "google/gemini-3.5-flash-lite",
+            "provider": "openrouter",
+            "cost_source": "provider"
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-09-03T09:27:11.908638Z",
+    "finished_at": "2026-09-03T09:28:16.089911Z",
+    "environment_setup": {
+        "started_at": "2026-09-03T09:27:11.917043Z",
+        "finished_at": "2026-09-03T09:27:11.917306Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-03T09:27:11.917325Z",
+        "finished_at": "2026-09-03T09:27:11.917341Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-03T09:27:11.917374Z",
+        "finished_at": "2026-09-03T09:28:04.455437Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-03T09:28:14.317198Z",
+        "finished_at": "2026-09-03T09:28:16.089824Z"
+    },
+    "step_results": null
+}

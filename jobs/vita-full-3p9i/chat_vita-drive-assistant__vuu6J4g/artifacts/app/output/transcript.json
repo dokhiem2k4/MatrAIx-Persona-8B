@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, xem giúp anh còn bao lâu nữa thì mới tới điểm hẹn vậy em?"
+    },
+    {
+      "role": "support",
+      "content": "Hiện tại xe chưa có điểm đến nào được đặt trên bản đồ, nên mình chưa thể tính thời gian đến nơi được. Bạn muốn đi đâu thì nói mình nhé."
+    },
+    {
+      "role": "customer",
+      "content": "À, anh quên mất. Em tìm giúp anh đường đến Câu lạc bộ Bóng bàn Thăng Long nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã tìm thấy Câu lạc bộ Bóng bàn Thăng Long ở Hà Nội và đang mở đường đi từ Tòa Technopark, cách khoảng 35,5 km, dự kiến 114 phút. Bạn đã sẵn sàng lên đường chưa?"
+    },
+    {
+      "role": "customer",
+      "content": "Hơi xa nhỉ, nhưng không sao. Em mở giúp anh bài nhạc sôi động nào đó để nghe cho tỉnh táo nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã mở nhạc sôi động EDM."
+    },
+    {
+      "role": "customer",
+      "content": "Nghe nhạc này thấy tỉnh hẳn người đấy. Cảm ơn em nhé, giờ thì cứ thế đi thôi."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn. Mình sẽ tiếp tục phát nhạc như hiện tại. Chúc bạn lái xe vui vẻ."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

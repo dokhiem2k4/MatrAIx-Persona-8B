@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, tôi đang lái xe đến gần tòa nhà văn phòng rồi, bạn tìm giúp lối vào bãi đỗ xe ngầm để tôi chạy vào nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tìm thông tin về bãi đỗ xe ngầm tòa Technopark, nhưng chưa có chỉ dẫn cụ thể về lối vào. Mình đã đặt chỉ đường đến tòa nhà, bạn chạy theo dẫn đường trên màn hình nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Được rồi, thế bạn chỉnh giúp tôi điều hòa hơi mát lên một chút và giảm quạt gió xuống cho đỡ ồn nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã bật điều hòa, chỉnh nhiệt độ ghế lái xuống 20 độ và giảm quạt gió xuống mức thấp nhất để đỡ ồn rồi bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita, tiện thể kiểm tra giúp tôi áp suất lốp 4 bánh xem có bình thường không nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Cả bốn bánh đều trong ngưỡng bình thường, bạn yên tâm nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

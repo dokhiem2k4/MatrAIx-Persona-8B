@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita, tôi muốn đặt lịch bảo dưỡng định kỳ xe vào sáng thứ Bảy tuần này nhé."
+    },
+    {
+      "role": "support",
+      "content": "Rất tiếc, hiện tại mình chưa hỗ trợ đặt lịch bảo dưỡng hay lịch hẹn trên xe. Bạn có thể liên hệ trực tiếp với đại lý VinFast gần nhất để đặt lịch bảo dưỡng nhé. Nếu bạn cần mình tìm đường đến đại lý VinFast, mình sẵn sàng hỗ trợ ngay."
+    },
+    {
+      "role": "customer",
+      "content": "Vậy được rồi, hãy tìm giúp tôi đại lý VinFast gần nhất trên đường đi để tôi ghé qua hỏi trực tiếp vậy."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tìm thấy đại lý VinFast Ocean Park tại Gia Lâm, Hà Nội, cách vị trí hiện tại không xa. Bạn có muốn mình đặt làm điểm đến trên bản đồ không?"
+    },
+    {
+      "role": "customer",
+      "content": "Được, hãy đặt làm điểm đến giúp tôi nhé. Đồng thời kiểm tra luôn áp suất lốp 4 bánh xem sao."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã kiểm tra áp suất lốp: bánh trước trái và phải đều 2.4 bar, bánh sau trái 2.3 bar, bánh sau phải 2.4 bar. Còn điểm đến bạn muốn đặt ở đâu?"
+    },
+    {
+      "role": "customer",
+      "content": "Ý tôi là đại lý VinFast Ocean Park mà vừa nãy bạn tìm thấy ấy, cài luôn điểm đó vào hệ thống giúp tôi."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt điểm đến là Đại lý VinFast Ocean Park, cách đây 16,7 km, dự kiến 18 phút lái xe."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

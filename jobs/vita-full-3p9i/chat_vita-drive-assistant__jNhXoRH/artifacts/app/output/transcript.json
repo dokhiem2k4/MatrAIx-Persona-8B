@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, đoạn đường này bụi quá, đóng giúp tôi toàn bộ các cửa kính lại ngay nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã chỉnh tất cả cửa sổ về 0%."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Tiện thể bật giúp tôi chế độ lấy gió trong và tăng mức quạt gió lên một nấc nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật chế độ lấy gió trong và tăng quạt gió lên một nấc nhé bạn."
+    },
+    {
+      "role": "customer",
+      "content": "Tốt lắm, bạn kiểm tra giúp tôi dung lượng pin còn lại và phạm vi di chuyển ước tính hiện tại luôn nhé."
+    },
+    {
+      "role": "support",
+      "content": "Pin hiện còn 78%, phạm vi di chuyển ước tính khoảng 312 km."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn thông tin từ Vita. Chuyến đi này mọi thứ đều ổn định, bạn cứ tiếp tục duy trì trạng thái này nhé."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn. Mình sẽ tiếp tục theo dõi và duy trì mọi thứ ổn định. Chúc bạn lái xe an toàn!"
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

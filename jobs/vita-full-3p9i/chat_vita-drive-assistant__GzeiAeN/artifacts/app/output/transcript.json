@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, cho anh hỏi xe VF9 này có tổng cộng mấy túi khí vậy em?"
+    },
+    {
+      "role": "support",
+      "content": "Dạ, xe VF9 có tổng cộng 11 túi khí an toàn bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Ủa, 11 túi khí lận hả em? Mà giờ anh đang lái xe hơi mỏi lưng chút, em bật chế độ massage ghế lái giúp anh nha."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật massage ghế chế độ relax."
+    },
+    {
+      "role": "customer",
+      "content": "Êm người hẳn đấy, cảm ơn em nha. Tiện thể kiểm tra giùm anh áp suất lốp 4 bánh xem sao em ơi."
+    },
+    {
+      "role": "support",
+      "content": "Dạ, áp suất lốp hiện tại: trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Cảm ơn anh, có gì cần mình hỗ trợ thêm không ạ?"
+    },
+    {
+      "role": "customer",
+      "content": "Lốp ổn áp cả rồi, không cần gì thêm đâu em. Cảm ơn em nhé!"
+    },
+    {
+      "role": "support",
+      "content": "Dạ không có gì ạ. Có gì cần bạn cứ nói mình nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

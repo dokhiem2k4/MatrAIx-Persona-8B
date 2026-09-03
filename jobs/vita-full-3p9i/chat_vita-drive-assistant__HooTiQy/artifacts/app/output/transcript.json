@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, em kiểm tra giúp anh xem hiện tại nước mình có tổng cộng bao nhiêu tỉnh thành nhé."
+    },
+    {
+      "role": "support",
+      "content": "Tính đến tháng 4 năm 2026, Việt Nam có 34 tỉnh thành, gồm 27 tỉnh và 7 thành phố trực thuộc trung ương bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Chờ đã, 34 tỉnh thành là sao em? Từ trước tới nay Việt Nam mình có 63 tỉnh thành cơ mà, em kiểm tra lại nguồn chính thức xem nào."
+    },
+    {
+      "role": "support",
+      "content": "Dạ, mình đã kiểm tra lại từ nguồn chính thức. Theo Wikipedia và Cổng thông tin Chính phủ, từ ngày 12/6/2025, Việt Nam đã thực hiện sắp xếp lại đơn vị hành chính, và tính đến 30/4/2026, cả nước có 34 đơn vị hành chính cấp tỉnh, gồm 27 tỉnh và 7 thành phố trực thuộc Trung ương. Thông tin này đã được cập nhật chính thức rồi bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Ừ đúng rồi, anh quên mất đợt cải cách hành chính vừa rồi. Cảm ơn em đã cập nhật chuẩn xác nhé."
+    },
+    {
+      "role": "support",
+      "content": "Không có gì đâu anh. Có gì cần mình hỗ trợ thêm không ạ?"
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

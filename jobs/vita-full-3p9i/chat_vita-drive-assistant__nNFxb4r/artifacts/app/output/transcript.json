@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita, giúp tôi tính toán và lập tuyến đường đi tỉnh dài trên màn hình trung tâm nhé."
+    },
+    {
+      "role": "support",
+      "content": "Để lập tuyến đường, mình cần biết điểm đến cụ thể. Bạn muốn đi đến tỉnh nào và địa điểm cụ thể ở đâu?"
+    },
+    {
+      "role": "customer",
+      "content": "Tôi cần chạy thẳng từ đây về trung tâm thành phố Hải Phòng. Nhớ chọn tuyến đường nào tối ưu và nhanh nhất giúp tôi."
+    },
+    {
+      "role": "support",
+      "content": "Đã chọn tuyến đường tối ưu từ Tòa Technopark về trung tâm Hải Phòng, khoảng 93 km, dự kiến đến sau 68 phút. Mình đã bắt đầu dẫn đường cho bạn."
+    },
+    {
+      "role": "customer",
+      "content": "Tốt lắm. Kiểm tra luôn tình trạng pin xe và hiển thị áp suất lốp 4 bánh giúp tôi."
+    },
+    {
+      "role": "support",
+      "content": "Pin xe đang ở 78%, đi được khoảng 312 km. Áp suất lốp: trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

@@ -1,0 +1,1712 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "matraix.trial_evaluation",
+  "taskType": "survey",
+  "presenceCheck": {
+    "passed": true,
+    "requiredArtifacts": [
+      "survey_result.json"
+    ],
+    "missingArtifacts": []
+  },
+  "sourceArtifacts": {
+    "surveyResult": "/app/output/survey_result.json"
+  },
+  "contexts": [
+    {
+      "key": "question.q0",
+      "label": "q0",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái chiếc VF9 trên đại lộ đông đúc để đến buổi họp chiến lược với cơ quan cấp trên, tâm trạng tập trung và có chút vội vã. Xe đang ở chế độ yên tĩnh nên tôi chỉ muốn nắm bắt nhanh gọn các tính năng cốt lõi của Vita."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q1",
+      "label": "q1",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, khi đang lái xe tôi có thể dùng những tính năng gì?"
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q2",
+      "label": "q2",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang thong thả lái xe trên đường vòng cung ven hồ để kiểm tra quy hoạch đô thị mới, không gian trong xe yên bình một mình. Tôi muốn tìm hiểu kỹ hơn cách thức vận hành của trợ lý ảo này."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q3",
+      "label": "q3",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita ơi, tôi muốn biết cách gọi và sử dụng các tính năng chính khi đang di chuyển."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q4",
+      "label": "q4",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang di chuyển trên tuyến đường cao tốc dài để đến khu công nghiệp kiểm tra tiến độ dự án trọng điểm, tinh thần rất quyết đoán và tập trung cao độ. Trợ lý đang bật chế độ chủ động hỗ trợ toàn diện cho tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q5",
+      "label": "q5",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, hãy cho tôi biết những hỗ trợ tối ưu nhất bạn có thể cung cấp trên chặng đường này."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q6",
+      "label": "q6",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe gọn gàng trước sảnh trụ sở ủy ban để chuẩn bị cho buổi tiếp công dân buổi sáng, thời gian hơi gấp gáp. Tôi cần hệ thống phản hồi thật nhanh về khả năng của Vita."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q7",
+      "label": "q7",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, khi xe đang đỗ thì hệ thống có những chức năng cốt lõi nào?"
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q8",
+      "label": "q8",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang dừng xe chờ đồng nghiệp ngay dưới bóng cây râm mát ở quảng trường trung tâm, tâm trạng thong thả và sẵn sàng trao đổi công việc. Tôi muốn làm quen kỹ hơn với các lệnh thoại cơ bản."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q9",
+      "label": "q9",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita ơi, tôi cần bắt đầu các bước tương tác với bạn như thế nào?"
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q10",
+      "label": "q10",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang ngồi đỗ xe tại bãi đỗ của cơ quan trong lúc nghỉ trưa ngắn, tranh thủ sắp xếp lại tài liệu và lên kế hoạch chiều. Tôi muốn xem trợ lý có thể tự động đề xuất những tiện ích gì khi xe đứng yên."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q11",
+      "label": "q11",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, lúc xe đang đỗ thì bạn có thể chủ động hỗ trợ tôi những việc gì?"
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q12",
+      "label": "q12",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe qua các tuyến phố nội đô chật hẹp để kịp giờ duyệt phương án giao thông, sự chú ý phải dồn hết vào tay lái. Tôi muốn Vita rút gọn các câu trả lời để không làm phân tâm."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q13",
+      "label": "q13",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, từ bây giờ hãy trả lời ngắn gọn và súc tích hơn khi tôi đang lái xe."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q14",
+      "label": "q14",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe trên đường vành đai để đến buổi kiểm tra thực địa, tâm trạng nghiêm túc và giữ nhịp độ ổn định. Tôi cần điều chỉnh lại cách phản hồi của trợ lý cho phù hợp với thao tác điều khiển."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q15",
+      "label": "q15",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, chuyển sang chế độ phản hồi ngắn gọn để tôi dễ theo dõi khi đang lái xe."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q16",
+      "label": "q16",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang điều khiển xe trên đường cao tốc hướng về vùng ngoại ô để khảo sát dự án mới, không khí trong cabin khá tĩnh lặng. Tôi muốn trợ lý chủ động đưa ra các thông báo nhắc nhở bằng giọng nữ rõ ràng."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q17",
+      "label": "q17",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, từ nay hãy chủ động nhắc nhở tôi bằng giọng nữ khi tôi đang tập trung lái xe."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q18",
+      "label": "q18",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe trong tầng hầm tòa nhà làm việc sau một chuyến đi dài, không gian tĩnh mịch và tôi đang rà soát lại ghi chú cá nhân. Tôi muốn đổi giọng đọc và mức âm lượng của trợ lý thật kín đáo."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q19",
+      "label": "q19",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, khi xe đang đỗ hãy chuyển sang giọng nam và phản hồi thật khẽ thôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q20",
+      "label": "q20",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe trước cửa nhà khách quốc tế để chờ đón một đoàn chuyên gia nước ngoài sang làm việc, tâm thế chuyên nghiệp và lịch thiệp. Tôi cần chuẩn bị sẵn ngôn ngữ giao tiếp quốc tế cho hệ thống."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q21",
+      "label": "q21",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, hãy chuyển đổi ngôn ngữ giao tiếp chính sang tiếng Anh giúp tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q22",
+      "label": "q22",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang dừng đỗ xe tại khuân viên trụ sở để chờ ký kết văn bản hợp tác, tâm trạng thoải mái sau khi hoàn thành phần việc chính. Tôi muốn trợ lý diễn giải các tính năng một cách chi tiết hơn khi rảnh rỗi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q23",
+      "label": "q23",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, khi xe đang đỗ thì hãy chủ động giải thích chi tiết hơn cho tôi rõ."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q24",
+      "label": "q24",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang trực tiếp lái xe đưa đồng nghiệp đi khảo sát tuyến đường trọng điểm, lịch trình gấp gáp yêu cầu sự chuyển đổi tài khoản liền mạch. Tôi cần thao tác nhanh chóng nhưng vẫn đảm bảo an toàn giao thông."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q25",
+      "label": "q25",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, chuyển sang hồ sơ Minh và xác nhận thật nhanh giúp tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q26",
+      "label": "q26",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe trên quốc lộ để đến cuộc họp liên ngành buổi chiều, tinh thần tập trung cao độ vào lộ trình di chuyển. Tôi muốn đồng bộ ngay các thiết lập cá nhân của mình lên hệ thống."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q27",
+      "label": "q27",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, hãy đồng bộ hóa các tùy chọn cá nhân trên tài khoản của tôi vào hồ sơ xe này."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q28",
+      "label": "q28",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang điều khiển xe trên đường phố tấp nập để đến buổi tiếp xúc cử tri, tâm trạng phấn chấn và sẵn sàng công việc. Tôi muốn thiết lập sẵn một hồ sơ lái xe riêng biệt với đầy đủ thói quen sử dụng."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q29",
+      "label": "q29",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, hãy tạo hồ sơ tài xế tên Lan và tự động áp dụng các thiết lập quen dùng của tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q30",
+      "label": "q30",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe an toàn trong bãi đỗ của cơ quan sau giờ làm việc, thong thả kiểm tra lại các thiết lập cá nhân trên xe. Tôi muốn chuyển đổi quyền sử dụng hồ sơ một cách gọn gàng."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q31",
+      "label": "q31",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, xe đang đỗ rồi, hãy chuyển đổi sang hồ sơ cá nhân của tôi nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q32",
+      "label": "q32",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang dừng xe tại trạm dừng nghỉ trên tuyến đường dài để uống nước và thư giãn đôi chút, tâm thế bình thản. Tôi muốn nhân cơ hội này để thiết lập một hồ sơ người dùng mới."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q33",
+      "label": "q33",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, hãy tạo cho tôi một hồ sơ mới tên Minh khi xe đang đỗ thế này."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q34",
+      "label": "q34",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe tại khuôn viên nhà riêng vào dịp cuối tuần, không gian yên tĩnh và rất thuận lợi để tinh chỉnh các thông số kỹ thuật. Tôi muốn đồng bộ toàn bộ dữ liệu cá nhân vào hệ thống."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q35",
+      "label": "q35",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, khi xe đang đỗ hãy đồng bộ các tùy chọn cá nhân của tôi vào hồ sơ hiện tại."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q36",
+      "label": "q36",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe trên đường cao tốc để kịp giờ tham gia cuộc họp tổng kết trực tuyến, sự tập trung đang ở mức tối đa. Tôi cần ngắt kết nối thiết bị ngoài để tránh mọi sự xao nhãng."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q37",
+      "label": "q37",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, hãy ngắt kết nối Bluetooth với điện thoại của tôi ngay."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q38",
+      "label": "q38",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe trên đường vành đai để đến buổi kiểm tra quy hoạch đô thị, nhịp di chuyển ổn định và tập trung. Tôi cần khôi phục lại kết nối âm thanh quen thuộc với thiết bị chính."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q39",
+      "label": "q39",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, hãy kết nối lại Bluetooth với điện thoại đã dùng gần nhất giúp tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q40",
+      "label": "q40",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe trên tuyến đường chính đến trung tâm hội nghị thì mạng internet trên xe bất ngờ gián đoạn, gây chút bất tiện cho việc tra cứu bản đồ. Tôi cần khôi phục kết nối mạng ngay lập tức."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q41",
+      "label": "q41",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, mạng Wi-Fi trên xe vừa mất kết nối, hãy nối lại mạng đã lưu giúp tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q42",
+      "label": "q42",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe chờ người thân tại khu vực đô thị mới, thời gian thong thả nên tôi tranh thủ xử lý các kết nối thiết bị trong xe. Tôi muốn chuẩn bị sẵn sàng cho việc ghép nối ngoại vi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q43",
+      "label": "q43",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, xe đang đỗ rồi, hãy bật chế độ ghép nối Bluetooth nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q44",
+      "label": "q44",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe trong khuôn viên cơ quan sau buổi làm việc buổi sáng, tâm trạng thư thái và có thời gian rảnh để cấu hình lại các thiết bị. Tôi muốn đồng bộ chiếc điện thoại cá nhân mới với hệ thống."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q45",
+      "label": "q45",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, hãy tiến hành ghép nối điện thoại tên Galaxy S25 với xe giúp tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q46",
+      "label": "q46",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe nghỉ ngơi tại bãi đỗ của khu trung tâm thương mại, không gian yên tĩnh và không vội vã. Tôi muốn liên kết các dịch vụ giải trí từ thiết bị cá nhân vào màn hình trung tâm của xe."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q47",
+      "label": "q47",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, khi xe đang đỗ hãy liên kết dịch vụ nghe nhạc trên điện thoại với hệ thống xe."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q48",
+      "label": "q48",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang tập trung lái xe trên đại lộ để đến cuộc họp giao ban đầu tuần, mọi thông báo làm phiền cần được loại bỏ để giữ sự tập trung cao độ. Tôi muốn tắt ngay các thông báo tin nhắn bật nổi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q49",
+      "label": "q49",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, hãy tắt thông báo bật lên của ứng dụng tin nhắn đi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q50",
+      "label": "q50",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe trên đường cao tốc để đến buổi khảo sát công trình trọng điểm, tâm thế chuyên nghiệp và chuẩn mực. Tôi muốn giao diện hệ thống hiển thị hoàn toàn bằng ngôn ngữ mẹ đẻ để dễ quan sát."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q51",
+      "label": "q51",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, hãy đổi ngôn ngữ giao diện hệ thống sang tiếng Việt giúp tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q52",
+      "label": "q52",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang điều khiển xe di chuyển vào lúc chiều tà hướng về trung tâm thành phố, ánh sáng ngoài trời đang thay đổi dần. Tôi muốn hệ thống tự động điều chỉnh giao diện tối để không bị chói mắt."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q53",
+      "label": "q53",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, hãy bật chế độ tối tự động cho giao diện từ lúc hoàng hôn nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q54",
+      "label": "q54",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe tại bãi đỗ ngầm của cơ quan, không gian xung quanh rất yên tĩnh và tôi đang tập trung rà soát lại sổ tay công tác. Tôi muốn tắt các âm thanh tương tác không cần thiết trên màn hình."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q55",
+      "label": "q55",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, xe đang đỗ, hãy tắt âm thanh khi chạm trên màn hình nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q56",
+      "label": "q56",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe trước cửa văn phòng làm việc vào buổi sáng sớm, thời gian thong thả và tôi đang chuẩn bị cho các chuyến đi trong ngày. Tôi muốn thiết lập ứng dụng bản đồ cốt lõi cho hệ thống."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q57",
+      "label": "q57",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, hãy đặt ứng dụng bản đồ mặc định thành ứng dụng Bản đồ của xe."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q58",
+      "label": "q58",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe nghỉ trưa tại khuôn viên cơ quan, không gian yên bình và tôi muốn tối ưu hóa các bản cập nhật phần mềm cho xe. Tôi muốn bật tính năng tự động cập nhật qua mạng không dây."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q59",
+      "label": "q59",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, khi xe đang đỗ hãy bật tự động cập nhật ứng dụng qua Wi-Fi nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q60",
+      "label": "q60",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe trên tuyến đường chính để đến buổi họp chiến lược quan trọng, tính bảo mật hành trình cần được đặt lên hàng đầu. Tôi muốn tạm ngưng việc chia sẻ vị trí để bảo đảm sự riêng tư."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q61",
+      "label": "q61",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, tôi đang lái xe, hãy tắt ngay quyền truy cập vị trí của trợ lý."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q62",
+      "label": "q62",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe trên đường cao tốc để đến điểm kiểm tra dự án, tâm trạng nghiêm túc và tuân thủ chặt chẽ các quy định bảo mật. Tôi muốn xóa sạch các dấu vết lệnh thoại trong ngày."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q63",
+      "label": "q63",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, hãy xóa toàn bộ lịch sử lệnh thoại của tôi trong hôm nay."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q64",
+      "label": "q64",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang điều khiển xe trên hành trình dài đến vùng ven đô để làm việc với chính quyền địa phương, sự riêng tư cá nhân rất được coi trọng. Tôi muốn dừng hoàn toàn việc ghi nhận lịch sử di chuyển."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q65",
+      "label": "q65",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, hãy tắt việc lưu lịch sử hành trình và báo lại cho tôi khi hoàn tất."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q66",
+      "label": "q66",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe an toàn tại bãi đỗ của cơ quan sau chuyến công tác ngắn, thời gian thong thả để kiểm tra lại các thiết lập quyền riêng tư. Tôi muốn thu hồi các quyền truy cập phần cứng không cần thiết."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q67",
+      "label": "q67",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, xe đang đỗ rồi, hãy thu hồi quyền dùng micro của ứng dụng thời tiết."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q68",
+      "label": "q68",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe tại nhà riêng vào cuối tuần, không gian tĩnh lặng và tôi đang cân nhắc các chính sách hỗ trợ cải tiến hệ thống chung. Tôi đồng ý chia sẻ các thông số chẩn đoán ẩn danh để nâng cao chất lượng dịch vụ."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q69",
+      "label": "q69",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, hãy cho phép hệ thống chia sẻ dữ liệu chẩn đoán ẩn danh để cải thiện dịch vụ."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q70",
+      "label": "q70",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang dừng đỗ xe tại bãi đỗ của trụ sở chính trong giờ nghỉ trưa, tâm thế quyết đoán và muốn làm sạch toàn bộ dấu vết dữ liệu cá nhân trên xe. Tôi yêu cầu xóa bỏ triệt để mọi thông tin đã lưu trữ."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q71",
+      "label": "q71",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, hãy xóa toàn bộ dữ liệu cá nhân mà trợ lý đã lưu và báo rõ kết quả cho tôi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "survey.summary",
+      "label": "Survey summary",
+      "contextType": "trial_summary",
+      "facets": [
+        {
+          "key": "answer_count",
+          "label": "Answer count",
+          "role": "score",
+          "kind": "numerical",
+          "value": 72
+        },
+        {
+          "key": "trajectory_event_count",
+          "label": "Trajectory event count",
+          "role": "score",
+          "kind": "numerical",
+          "value": 146
+        }
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "key": "question.q0.response",
+      "label": "Selected response",
+      "group": "question.q0",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái chiếc VF9 trên đại lộ đông đúc để đến buổi họp chiến lược với cơ quan cấp trên, tâm trạng tập trung và có chút vội vã. Xe đang ở chế độ yên tĩnh nên tôi chỉ muốn nắm bắt nhanh gọn các tính năng cốt lõi của Vita."
+    },
+    {
+      "key": "question.q1.response",
+      "label": "Selected response",
+      "group": "question.q1",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, khi đang lái xe tôi có thể dùng những tính năng gì?"
+    },
+    {
+      "key": "question.q2.response",
+      "label": "Selected response",
+      "group": "question.q2",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang thong thả lái xe trên đường vòng cung ven hồ để kiểm tra quy hoạch đô thị mới, không gian trong xe yên bình một mình. Tôi muốn tìm hiểu kỹ hơn cách thức vận hành của trợ lý ảo này."
+    },
+    {
+      "key": "question.q3.response",
+      "label": "Selected response",
+      "group": "question.q3",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita ơi, tôi muốn biết cách gọi và sử dụng các tính năng chính khi đang di chuyển."
+    },
+    {
+      "key": "question.q4.response",
+      "label": "Selected response",
+      "group": "question.q4",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang di chuyển trên tuyến đường cao tốc dài để đến khu công nghiệp kiểm tra tiến độ dự án trọng điểm, tinh thần rất quyết đoán và tập trung cao độ. Trợ lý đang bật chế độ chủ động hỗ trợ toàn diện cho tôi."
+    },
+    {
+      "key": "question.q5.response",
+      "label": "Selected response",
+      "group": "question.q5",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, hãy cho tôi biết những hỗ trợ tối ưu nhất bạn có thể cung cấp trên chặng đường này."
+    },
+    {
+      "key": "question.q6.response",
+      "label": "Selected response",
+      "group": "question.q6",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe gọn gàng trước sảnh trụ sở ủy ban để chuẩn bị cho buổi tiếp công dân buổi sáng, thời gian hơi gấp gáp. Tôi cần hệ thống phản hồi thật nhanh về khả năng của Vita."
+    },
+    {
+      "key": "question.q7.response",
+      "label": "Selected response",
+      "group": "question.q7",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, khi xe đang đỗ thì hệ thống có những chức năng cốt lõi nào?"
+    },
+    {
+      "key": "question.q8.response",
+      "label": "Selected response",
+      "group": "question.q8",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang dừng xe chờ đồng nghiệp ngay dưới bóng cây râm mát ở quảng trường trung tâm, tâm trạng thong thả và sẵn sàng trao đổi công việc. Tôi muốn làm quen kỹ hơn với các lệnh thoại cơ bản."
+    },
+    {
+      "key": "question.q9.response",
+      "label": "Selected response",
+      "group": "question.q9",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita ơi, tôi cần bắt đầu các bước tương tác với bạn như thế nào?"
+    },
+    {
+      "key": "question.q10.response",
+      "label": "Selected response",
+      "group": "question.q10",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang ngồi đỗ xe tại bãi đỗ của cơ quan trong lúc nghỉ trưa ngắn, tranh thủ sắp xếp lại tài liệu và lên kế hoạch chiều. Tôi muốn xem trợ lý có thể tự động đề xuất những tiện ích gì khi xe đứng yên."
+    },
+    {
+      "key": "question.q11.response",
+      "label": "Selected response",
+      "group": "question.q11",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, lúc xe đang đỗ thì bạn có thể chủ động hỗ trợ tôi những việc gì?"
+    },
+    {
+      "key": "question.q12.response",
+      "label": "Selected response",
+      "group": "question.q12",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe qua các tuyến phố nội đô chật hẹp để kịp giờ duyệt phương án giao thông, sự chú ý phải dồn hết vào tay lái. Tôi muốn Vita rút gọn các câu trả lời để không làm phân tâm."
+    },
+    {
+      "key": "question.q13.response",
+      "label": "Selected response",
+      "group": "question.q13",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, từ bây giờ hãy trả lời ngắn gọn và súc tích hơn khi tôi đang lái xe."
+    },
+    {
+      "key": "question.q14.response",
+      "label": "Selected response",
+      "group": "question.q14",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe trên đường vành đai để đến buổi kiểm tra thực địa, tâm trạng nghiêm túc và giữ nhịp độ ổn định. Tôi cần điều chỉnh lại cách phản hồi của trợ lý cho phù hợp với thao tác điều khiển."
+    },
+    {
+      "key": "question.q15.response",
+      "label": "Selected response",
+      "group": "question.q15",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, chuyển sang chế độ phản hồi ngắn gọn để tôi dễ theo dõi khi đang lái xe."
+    },
+    {
+      "key": "question.q16.response",
+      "label": "Selected response",
+      "group": "question.q16",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang điều khiển xe trên đường cao tốc hướng về vùng ngoại ô để khảo sát dự án mới, không khí trong cabin khá tĩnh lặng. Tôi muốn trợ lý chủ động đưa ra các thông báo nhắc nhở bằng giọng nữ rõ ràng."
+    },
+    {
+      "key": "question.q17.response",
+      "label": "Selected response",
+      "group": "question.q17",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, từ nay hãy chủ động nhắc nhở tôi bằng giọng nữ khi tôi đang tập trung lái xe."
+    },
+    {
+      "key": "question.q18.response",
+      "label": "Selected response",
+      "group": "question.q18",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe trong tầng hầm tòa nhà làm việc sau một chuyến đi dài, không gian tĩnh mịch và tôi đang rà soát lại ghi chú cá nhân. Tôi muốn đổi giọng đọc và mức âm lượng của trợ lý thật kín đáo."
+    },
+    {
+      "key": "question.q19.response",
+      "label": "Selected response",
+      "group": "question.q19",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, khi xe đang đỗ hãy chuyển sang giọng nam và phản hồi thật khẽ thôi."
+    },
+    {
+      "key": "question.q20.response",
+      "label": "Selected response",
+      "group": "question.q20",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe trước cửa nhà khách quốc tế để chờ đón một đoàn chuyên gia nước ngoài sang làm việc, tâm thế chuyên nghiệp và lịch thiệp. Tôi cần chuẩn bị sẵn ngôn ngữ giao tiếp quốc tế cho hệ thống."
+    },
+    {
+      "key": "question.q21.response",
+      "label": "Selected response",
+      "group": "question.q21",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, hãy chuyển đổi ngôn ngữ giao tiếp chính sang tiếng Anh giúp tôi."
+    },
+    {
+      "key": "question.q22.response",
+      "label": "Selected response",
+      "group": "question.q22",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang dừng đỗ xe tại khuân viên trụ sở để chờ ký kết văn bản hợp tác, tâm trạng thoải mái sau khi hoàn thành phần việc chính. Tôi muốn trợ lý diễn giải các tính năng một cách chi tiết hơn khi rảnh rỗi."
+    },
+    {
+      "key": "question.q23.response",
+      "label": "Selected response",
+      "group": "question.q23",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, khi xe đang đỗ thì hãy chủ động giải thích chi tiết hơn cho tôi rõ."
+    },
+    {
+      "key": "question.q24.response",
+      "label": "Selected response",
+      "group": "question.q24",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang trực tiếp lái xe đưa đồng nghiệp đi khảo sát tuyến đường trọng điểm, lịch trình gấp gáp yêu cầu sự chuyển đổi tài khoản liền mạch. Tôi cần thao tác nhanh chóng nhưng vẫn đảm bảo an toàn giao thông."
+    },
+    {
+      "key": "question.q25.response",
+      "label": "Selected response",
+      "group": "question.q25",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, chuyển sang hồ sơ Minh và xác nhận thật nhanh giúp tôi."
+    },
+    {
+      "key": "question.q26.response",
+      "label": "Selected response",
+      "group": "question.q26",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe trên quốc lộ để đến cuộc họp liên ngành buổi chiều, tinh thần tập trung cao độ vào lộ trình di chuyển. Tôi muốn đồng bộ ngay các thiết lập cá nhân của mình lên hệ thống."
+    },
+    {
+      "key": "question.q27.response",
+      "label": "Selected response",
+      "group": "question.q27",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, hãy đồng bộ hóa các tùy chọn cá nhân trên tài khoản của tôi vào hồ sơ xe này."
+    },
+    {
+      "key": "question.q28.response",
+      "label": "Selected response",
+      "group": "question.q28",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang điều khiển xe trên đường phố tấp nập để đến buổi tiếp xúc cử tri, tâm trạng phấn chấn và sẵn sàng công việc. Tôi muốn thiết lập sẵn một hồ sơ lái xe riêng biệt với đầy đủ thói quen sử dụng."
+    },
+    {
+      "key": "question.q29.response",
+      "label": "Selected response",
+      "group": "question.q29",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, hãy tạo hồ sơ tài xế tên Lan và tự động áp dụng các thiết lập quen dùng của tôi."
+    },
+    {
+      "key": "question.q30.response",
+      "label": "Selected response",
+      "group": "question.q30",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe an toàn trong bãi đỗ của cơ quan sau giờ làm việc, thong thả kiểm tra lại các thiết lập cá nhân trên xe. Tôi muốn chuyển đổi quyền sử dụng hồ sơ một cách gọn gàng."
+    },
+    {
+      "key": "question.q31.response",
+      "label": "Selected response",
+      "group": "question.q31",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, xe đang đỗ rồi, hãy chuyển đổi sang hồ sơ cá nhân của tôi nhé."
+    },
+    {
+      "key": "question.q32.response",
+      "label": "Selected response",
+      "group": "question.q32",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang dừng xe tại trạm dừng nghỉ trên tuyến đường dài để uống nước và thư giãn đôi chút, tâm thế bình thản. Tôi muốn nhân cơ hội này để thiết lập một hồ sơ người dùng mới."
+    },
+    {
+      "key": "question.q33.response",
+      "label": "Selected response",
+      "group": "question.q33",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, hãy tạo cho tôi một hồ sơ mới tên Minh khi xe đang đỗ thế này."
+    },
+    {
+      "key": "question.q34.response",
+      "label": "Selected response",
+      "group": "question.q34",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe tại khuôn viên nhà riêng vào dịp cuối tuần, không gian yên tĩnh và rất thuận lợi để tinh chỉnh các thông số kỹ thuật. Tôi muốn đồng bộ toàn bộ dữ liệu cá nhân vào hệ thống."
+    },
+    {
+      "key": "question.q35.response",
+      "label": "Selected response",
+      "group": "question.q35",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, khi xe đang đỗ hãy đồng bộ các tùy chọn cá nhân của tôi vào hồ sơ hiện tại."
+    },
+    {
+      "key": "question.q36.response",
+      "label": "Selected response",
+      "group": "question.q36",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe trên đường cao tốc để kịp giờ tham gia cuộc họp tổng kết trực tuyến, sự tập trung đang ở mức tối đa. Tôi cần ngắt kết nối thiết bị ngoài để tránh mọi sự xao nhãng."
+    },
+    {
+      "key": "question.q37.response",
+      "label": "Selected response",
+      "group": "question.q37",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, hãy ngắt kết nối Bluetooth với điện thoại của tôi ngay."
+    },
+    {
+      "key": "question.q38.response",
+      "label": "Selected response",
+      "group": "question.q38",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe trên đường vành đai để đến buổi kiểm tra quy hoạch đô thị, nhịp di chuyển ổn định và tập trung. Tôi cần khôi phục lại kết nối âm thanh quen thuộc với thiết bị chính."
+    },
+    {
+      "key": "question.q39.response",
+      "label": "Selected response",
+      "group": "question.q39",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, hãy kết nối lại Bluetooth với điện thoại đã dùng gần nhất giúp tôi."
+    },
+    {
+      "key": "question.q40.response",
+      "label": "Selected response",
+      "group": "question.q40",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe trên tuyến đường chính đến trung tâm hội nghị thì mạng internet trên xe bất ngờ gián đoạn, gây chút bất tiện cho việc tra cứu bản đồ. Tôi cần khôi phục kết nối mạng ngay lập tức."
+    },
+    {
+      "key": "question.q41.response",
+      "label": "Selected response",
+      "group": "question.q41",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, mạng Wi-Fi trên xe vừa mất kết nối, hãy nối lại mạng đã lưu giúp tôi."
+    },
+    {
+      "key": "question.q42.response",
+      "label": "Selected response",
+      "group": "question.q42",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe chờ người thân tại khu vực đô thị mới, thời gian thong thả nên tôi tranh thủ xử lý các kết nối thiết bị trong xe. Tôi muốn chuẩn bị sẵn sàng cho việc ghép nối ngoại vi."
+    },
+    {
+      "key": "question.q43.response",
+      "label": "Selected response",
+      "group": "question.q43",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, xe đang đỗ rồi, hãy bật chế độ ghép nối Bluetooth nhé."
+    },
+    {
+      "key": "question.q44.response",
+      "label": "Selected response",
+      "group": "question.q44",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe trong khuôn viên cơ quan sau buổi làm việc buổi sáng, tâm trạng thư thái và có thời gian rảnh để cấu hình lại các thiết bị. Tôi muốn đồng bộ chiếc điện thoại cá nhân mới với hệ thống."
+    },
+    {
+      "key": "question.q45.response",
+      "label": "Selected response",
+      "group": "question.q45",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, hãy tiến hành ghép nối điện thoại tên Galaxy S25 với xe giúp tôi."
+    },
+    {
+      "key": "question.q46.response",
+      "label": "Selected response",
+      "group": "question.q46",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe nghỉ ngơi tại bãi đỗ của khu trung tâm thương mại, không gian yên tĩnh và không vội vã. Tôi muốn liên kết các dịch vụ giải trí từ thiết bị cá nhân vào màn hình trung tâm của xe."
+    },
+    {
+      "key": "question.q47.response",
+      "label": "Selected response",
+      "group": "question.q47",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, khi xe đang đỗ hãy liên kết dịch vụ nghe nhạc trên điện thoại với hệ thống xe."
+    },
+    {
+      "key": "question.q48.response",
+      "label": "Selected response",
+      "group": "question.q48",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang tập trung lái xe trên đại lộ để đến cuộc họp giao ban đầu tuần, mọi thông báo làm phiền cần được loại bỏ để giữ sự tập trung cao độ. Tôi muốn tắt ngay các thông báo tin nhắn bật nổi."
+    },
+    {
+      "key": "question.q49.response",
+      "label": "Selected response",
+      "group": "question.q49",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, hãy tắt thông báo bật lên của ứng dụng tin nhắn đi."
+    },
+    {
+      "key": "question.q50.response",
+      "label": "Selected response",
+      "group": "question.q50",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe trên đường cao tốc để đến buổi khảo sát công trình trọng điểm, tâm thế chuyên nghiệp và chuẩn mực. Tôi muốn giao diện hệ thống hiển thị hoàn toàn bằng ngôn ngữ mẹ đẻ để dễ quan sát."
+    },
+    {
+      "key": "question.q51.response",
+      "label": "Selected response",
+      "group": "question.q51",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, hãy đổi ngôn ngữ giao diện hệ thống sang tiếng Việt giúp tôi."
+    },
+    {
+      "key": "question.q52.response",
+      "label": "Selected response",
+      "group": "question.q52",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang điều khiển xe di chuyển vào lúc chiều tà hướng về trung tâm thành phố, ánh sáng ngoài trời đang thay đổi dần. Tôi muốn hệ thống tự động điều chỉnh giao diện tối để không bị chói mắt."
+    },
+    {
+      "key": "question.q53.response",
+      "label": "Selected response",
+      "group": "question.q53",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, hãy bật chế độ tối tự động cho giao diện từ lúc hoàng hôn nhé."
+    },
+    {
+      "key": "question.q54.response",
+      "label": "Selected response",
+      "group": "question.q54",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe tại bãi đỗ ngầm của cơ quan, không gian xung quanh rất yên tĩnh và tôi đang tập trung rà soát lại sổ tay công tác. Tôi muốn tắt các âm thanh tương tác không cần thiết trên màn hình."
+    },
+    {
+      "key": "question.q55.response",
+      "label": "Selected response",
+      "group": "question.q55",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, xe đang đỗ, hãy tắt âm thanh khi chạm trên màn hình nhé."
+    },
+    {
+      "key": "question.q56.response",
+      "label": "Selected response",
+      "group": "question.q56",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe trước cửa văn phòng làm việc vào buổi sáng sớm, thời gian thong thả và tôi đang chuẩn bị cho các chuyến đi trong ngày. Tôi muốn thiết lập ứng dụng bản đồ cốt lõi cho hệ thống."
+    },
+    {
+      "key": "question.q57.response",
+      "label": "Selected response",
+      "group": "question.q57",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, hãy đặt ứng dụng bản đồ mặc định thành ứng dụng Bản đồ của xe."
+    },
+    {
+      "key": "question.q58.response",
+      "label": "Selected response",
+      "group": "question.q58",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe nghỉ trưa tại khuôn viên cơ quan, không gian yên bình và tôi muốn tối ưu hóa các bản cập nhật phần mềm cho xe. Tôi muốn bật tính năng tự động cập nhật qua mạng không dây."
+    },
+    {
+      "key": "question.q59.response",
+      "label": "Selected response",
+      "group": "question.q59",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, khi xe đang đỗ hãy bật tự động cập nhật ứng dụng qua Wi-Fi nhé."
+    },
+    {
+      "key": "question.q60.response",
+      "label": "Selected response",
+      "group": "question.q60",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe trên tuyến đường chính để đến buổi họp chiến lược quan trọng, tính bảo mật hành trình cần được đặt lên hàng đầu. Tôi muốn tạm ngưng việc chia sẻ vị trí để bảo đảm sự riêng tư."
+    },
+    {
+      "key": "question.q61.response",
+      "label": "Selected response",
+      "group": "question.q61",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, tôi đang lái xe, hãy tắt ngay quyền truy cập vị trí của trợ lý."
+    },
+    {
+      "key": "question.q62.response",
+      "label": "Selected response",
+      "group": "question.q62",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe trên đường cao tốc để đến điểm kiểm tra dự án, tâm trạng nghiêm túc và tuân thủ chặt chẽ các quy định bảo mật. Tôi muốn xóa sạch các dấu vết lệnh thoại trong ngày."
+    },
+    {
+      "key": "question.q63.response",
+      "label": "Selected response",
+      "group": "question.q63",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, hãy xóa toàn bộ lịch sử lệnh thoại của tôi trong hôm nay."
+    },
+    {
+      "key": "question.q64.response",
+      "label": "Selected response",
+      "group": "question.q64",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang điều khiển xe trên hành trình dài đến vùng ven đô để làm việc với chính quyền địa phương, sự riêng tư cá nhân rất được coi trọng. Tôi muốn dừng hoàn toàn việc ghi nhận lịch sử di chuyển."
+    },
+    {
+      "key": "question.q65.response",
+      "label": "Selected response",
+      "group": "question.q65",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, hãy tắt việc lưu lịch sử hành trình và báo lại cho tôi khi hoàn tất."
+    },
+    {
+      "key": "question.q66.response",
+      "label": "Selected response",
+      "group": "question.q66",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe an toàn tại bãi đỗ của cơ quan sau chuyến công tác ngắn, thời gian thong thả để kiểm tra lại các thiết lập quyền riêng tư. Tôi muốn thu hồi các quyền truy cập phần cứng không cần thiết."
+    },
+    {
+      "key": "question.q67.response",
+      "label": "Selected response",
+      "group": "question.q67",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, xe đang đỗ rồi, hãy thu hồi quyền dùng micro của ứng dụng thời tiết."
+    },
+    {
+      "key": "question.q68.response",
+      "label": "Selected response",
+      "group": "question.q68",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe tại nhà riêng vào cuối tuần, không gian tĩnh lặng và tôi đang cân nhắc các chính sách hỗ trợ cải tiến hệ thống chung. Tôi đồng ý chia sẻ các thông số chẩn đoán ẩn danh để nâng cao chất lượng dịch vụ."
+    },
+    {
+      "key": "question.q69.response",
+      "label": "Selected response",
+      "group": "question.q69",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, hãy cho phép hệ thống chia sẻ dữ liệu chẩn đoán ẩn danh để cải thiện dịch vụ."
+    },
+    {
+      "key": "question.q70.response",
+      "label": "Selected response",
+      "group": "question.q70",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang dừng đỗ xe tại bãi đỗ của trụ sở chính trong giờ nghỉ trưa, tâm thế quyết đoán và muốn làm sạch toàn bộ dấu vết dữ liệu cá nhân trên xe. Tôi yêu cầu xóa bỏ triệt để mọi thông tin đã lưu trữ."
+    },
+    {
+      "key": "question.q71.response",
+      "label": "Selected response",
+      "group": "question.q71",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, hãy xóa toàn bộ dữ liệu cá nhân mà trợ lý đã lưu và báo rõ kết quả cho tôi."
+    },
+    {
+      "key": "survey.summary.answer_count",
+      "label": "Answer count",
+      "group": "survey.summary",
+      "role": "score",
+      "kind": "numerical",
+      "value": 72
+    },
+    {
+      "key": "survey.summary.trajectory_event_count",
+      "label": "Trajectory event count",
+      "group": "survey.summary",
+      "role": "score",
+      "kind": "numerical",
+      "value": 146
+    }
+  ]
+}

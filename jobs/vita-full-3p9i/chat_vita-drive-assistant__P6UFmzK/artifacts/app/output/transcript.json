@@ -1,0 +1,24 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, xe này có tổng cộng bao nhiêu túi khí vậy em?"
+    },
+    {
+      "role": "support",
+      "content": "Xe VF9 của mình được trang bị tổng cộng 11 túi khí an toàn bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Nhiều phết nhỉ. Tiện thể kiểm tra hộ anh áp suất lốp 4 bánh xem sao nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Tất cả đều trong ngưỡng an toàn."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

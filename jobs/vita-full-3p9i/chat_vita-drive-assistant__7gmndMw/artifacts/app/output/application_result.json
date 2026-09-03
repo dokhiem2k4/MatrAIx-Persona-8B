@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 5,
+  "seed": {
+    "rowId": "row-0366",
+    "scenario": "Tôi đang lái xe dưới trời mưa phùn, kính xe có hiện tượng hơi mờ khiến tôi tò mò về nguyên nhân vật lý của hiện tượng này.",
+    "firstInput": "Vita cho tôi biết vì sao kính ô tô lại bị mờ khi trời mưa.",
+    "intentCode": "general_qa_conversation",
+    "subintentCode": "general_qa",
+    "subintentName": "Hỏi đáp",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-9f3c655902f2"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, kiểm tra nhanh hộ anh trạng thái xe thế nào, có ổn không em?"
+    },
+    {
+      "role": "support",
+      "content": "Xe đang đỗ ở P, tốc độ 0. Pin 78%, đi được 312 km. Nhiệt độ trong xe 22°C, ngoài trời 31°C. Các cửa và kính đều đóng. Điều hòa đang tắt. Nhìn chung xe ổn, anh yên tâm."
+    },
+    {
+      "role": "customer",
+      "content": "Anh đang chuẩn bị vào cao tốc để đi họp gấp, bật giùm anh điều hòa 21 độ và mở nhạc gì sôi động chút đi em."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa 21°C và mở nhạc sôi động rồi, chúc bạn lái xe an toàn và suôn sẻ trên cao tốc nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Nhạc này được đấy. À quên, kiểm tra giùm anh áp suất lốp 4 bánh xem sao nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Cả bốn bánh đều ổn."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em, mọi thứ ổn rồi. Anh tập trung lái xe đây."
+    },
+    {
+      "role": "support",
+      "content": "Vâng, anh lái xe an toàn nhé. Có gì cần cứ gọi em."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

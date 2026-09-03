@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 4,
+  "seed": {
+    "rowId": "row-0744",
+    "scenario": "Tôi đang tập trung lái xe trên đại lộ để đến cuộc họp giao ban đầu tuần, mọi thông báo làm phiền cần được loại bỏ để giữ sự tập trung cao độ. Tôi muốn tắt ngay các thông báo tin nhắn bật nổi.",
+    "firstInput": "Vita, hãy tắt thông báo bật lên của ứng dụng tin nhắn đi.",
+    "intentCode": "vita_profile_settings",
+    "subintentCode": "system_app_settings",
+    "subintentName": "Cài đặt hệ thống và ứng dụng",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

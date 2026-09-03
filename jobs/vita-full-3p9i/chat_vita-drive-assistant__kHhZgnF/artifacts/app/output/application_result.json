@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 6,
+  "seed": {
+    "rowId": "row-0282",
+    "scenario": "Tôi đang lái xe qua khu vực đông dân cư, cần giảm âm lượng để dễ quan sát tín hiệu giao thông.",
+    "firstInput": "Giảm âm lượng xuống một chút.",
+    "intentCode": "communication_media",
+    "subintentCode": "volume_audio_zone",
+    "subintentName": "Âm lượng/vùng âm thanh",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

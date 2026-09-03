@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, hiển thị nhanh giúp tôi thông tin về các dòng ô tô điện hiện tại của hãng nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tra thông tin. Hiện tại VinFast có các dòng xe điện: VF 3, VF 5, VF 6, VF 7, VF 8, VF 9, VF MPV 7, và các dòng thương mại như Minio Green, Herio Green, Nerio Green, Limo Green, EC Van. Bạn có muốn tìm hiểu thêm về dòng nào không?"
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn, hiện tại tôi đang lái chiếc VF9 nên muốn tập trung cầm lái, bạn chỉnh giúp điều hòa ghế lái xuống 21 độ và bật quạt gió mức 2 nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa, chỉnh nhiệt độ ghế lái xuống 21°C và quạt gió mức 2. Bạn lái an toàn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Kiểm tra giúp tôi áp suất lốp 4 bánh xem ổn định chưa nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: lốp trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Cả bốn bánh đều trong ngưỡng ổn định, bạn yên tâm nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Rất tốt, cảm ơn bạn. Giờ giữ yên không gian yên tĩnh giúp tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Vâng, mình sẽ giữ yên lặng. Bạn cứ thoải mái nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, kết nối giúp anh điện thoại qua Bluetooth để nghe nhạc nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật Bluetooth cho bạn rồi, giờ bạn có thể kết nối điện thoại để nghe nhạc."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em. Tiện thể kiểm tra hộ anh xem pin xe còn bao nhiêu phần trăm và áp suất lốp thế nào nhé."
+    },
+    {
+      "role": "support",
+      "content": "Pin xe còn 78%, đi được khoảng 312 km. Áp suất lốp: trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Tất cả đều ổn."
+    },
+    {
+      "role": "customer",
+      "content": "Tốt quá, cảm ơn Vita nhé. Anh chạy tiếp đây."
+    },
+    {
+      "role": "support",
+      "content": "Có gì cần cứ gọi mình nhé. Chúc anh lái xe an toàn!"
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

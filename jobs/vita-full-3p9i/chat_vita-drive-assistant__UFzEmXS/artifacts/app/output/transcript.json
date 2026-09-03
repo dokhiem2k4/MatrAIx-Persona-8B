@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, cô cho tôi biết nhanh chính sách bảo hành hiện tại dành cho dòng xe điện VinFast được không? Tôi đang lái xe gấp nên cứ nói ngắn gọn, súc tích giúp nhé."
+    },
+    {
+      "role": "support",
+      "content": ":"
+    },
+    {
+      "role": "customer",
+      "content": "Vita hình như lỗi kết nối rồi hay sao không thấy phản hồi gì thế? Nói lại giúp tôi về chính sách bảo hành pin và xe với."
+    },
+    {
+      "role": "support",
+      "content": "Mình vừa tra được thông tin bảo hành cho VF 9: xe và pin cao áp mua lần đầu đều được bảo hành 10 năm hoặc 200.000 km, tùy điều kiện nào đến trước. Nếu xe dùng cho dịch vụ thương mại thì thời hạn là 3 năm hoặc 100.000 km."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn cô, thông tin rất rõ ràng và đúng ý tôi. Giờ chỉnh giúp tôi nhiệt độ điều hòa hàng ghế lái xuống 21 độ và bật thông gió ghế nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã chỉnh nhiệt độ hàng ghế lái xuống 21°C và bật thông gió ghế cho bạn nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, đang lái xe qua đoạn Huế mà bụng đói quá, ở đây nổi tiếng với những món ăn đặc sản nào thế em?"
+    },
+    {
+      "role": "support",
+      "content": "Huế nổi tiếng với nhiều món ngon lắm bạn ơi, như bún bò Huế, cơm hến, bánh bèo, bánh nậm, bánh lọc, nem lụi và cả trăm loại chè nữa. Đang lái xe qua đây, bạn có thể ghé vào một quán bún bò hoặc cơm hến dọc đường để thử ngay nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Nghe hấp dẫn đấy, em chỉ giùm anh quán bún bò nào gần đây nhất mà rộng rãi, dễ đậu xe ô tô VF9 nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình tìm thấy quán Bún Huế O Tâm ở Long Biên và Bún Chả Làng Việt ở Garden City có bãi đỗ xe rộng, nhưng không có quán bún bò nào gần Technopark vừa rộng rãi vừa dễ đỗ VF9. Bạn muốn mình chỉ đường tới một trong hai quán đó không?"
+    },
+    {
+      "role": "customer",
+      "content": "Khoan đã, anh đang lái xe qua miền Trung đoạn qua Huế cơ mà, sao lại gợi ý ra tận Hà Nội thế? Tìm lại quán nào ngay tại Huế giúp anh nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tìm được một số quán ngon ở Huế, nổi bật có bún bò bà Bê nấu bằng bếp củi hơn 60 năm, bánh bèo nậm lọc Bà Đỏ, và quán cơm O Én. Bạn muốn nghe thêm chi tiết về quán nào không?"
+    },
+    {
+      "role": "customer",
+      "content": "Bún bò bà Bê nghe hay đấy, em đặt làm điểm đến trên bản đồ rồi dẫn đường cho anh tới đó nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã tìm thấy Bún bò bà Bê và bắt đầu dẫn đường đến đó rồi bạn nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

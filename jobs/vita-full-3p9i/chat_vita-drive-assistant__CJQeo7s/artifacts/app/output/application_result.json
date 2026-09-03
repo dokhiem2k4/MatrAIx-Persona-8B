@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 4,
+  "seed": {
+    "rowId": "row-0558",
+    "scenario": "Tôi đang lái xe trên tuyến đường chính để đến cuộc họp giao ban đầu tuần, tinh thần tập trung cao độ và đúng giờ.",
+    "firstInput": "Vita, đặt lịch bảo dưỡng định kỳ vào sáng thứ Bảy.",
+    "intentCode": "my_car",
+    "subintentCode": "maintenance_service",
+    "subintentName": "Bảo dưỡng/dịch vụ",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

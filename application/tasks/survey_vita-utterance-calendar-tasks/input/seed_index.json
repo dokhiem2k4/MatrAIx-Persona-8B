@@ -1,0 +1,482 @@
+[
+  {
+    "questionId": "q0",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_query",
+    "subintent_name": "Tra cứu",
+    "seed_input": "Hôm nay tôi còn lịch gì không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q1",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_query",
+    "subintent_name": "Tra cứu",
+    "seed_input": "Hôm nay tôi còn lịch gì không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q2",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_query",
+    "subintent_name": "Tra cứu",
+    "seed_input": "Đọc giúp tôi lịch hẹn tiếp theo.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q3",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_query",
+    "subintent_name": "Tra cứu",
+    "seed_input": "Đọc giúp tôi lịch hẹn tiếp theo.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q4",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_query",
+    "subintent_name": "Tra cứu",
+    "seed_input": "Chiều nay tôi có lịch gì?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q5",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_query",
+    "subintent_name": "Tra cứu",
+    "seed_input": "Chiều nay tôi có lịch gì?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q6",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_query",
+    "subintent_name": "Tra cứu",
+    "seed_input": "Ngày mai tôi có cuộc hẹn nào không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q7",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_query",
+    "subintent_name": "Tra cứu",
+    "seed_input": "Ngày mai tôi có cuộc hẹn nào không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q8",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_query",
+    "subintent_name": "Tra cứu",
+    "seed_input": "Cho tôi biết các lịch đã có vào sáng mai.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q9",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_query",
+    "subintent_name": "Tra cứu",
+    "seed_input": "Cho tôi biết các lịch đã có vào sáng mai.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q10",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_query",
+    "subintent_name": "Tra cứu",
+    "seed_input": "Cuối tuần này lịch của tôi thế nào?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q11",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_query",
+    "subintent_name": "Tra cứu",
+    "seed_input": "Cuối tuần này lịch của tôi thế nào?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q12",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_create_update_cancel",
+    "subintent_name": "Tạo/sửa/hủy lịch",
+    "seed_input": "Tạo lịch họp nhóm lúc 9 giờ sáng mai giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q13",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_create_update_cancel",
+    "subintent_name": "Tạo/sửa/hủy lịch",
+    "seed_input": "Tạo lịch họp nhóm lúc 9 giờ sáng mai giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q14",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_create_update_cancel",
+    "subintent_name": "Tạo/sửa/hủy lịch",
+    "seed_input": "Dời lịch khám răng chiều mai từ 2 giờ sang 3 giờ nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q15",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_create_update_cancel",
+    "subintent_name": "Tạo/sửa/hủy lịch",
+    "seed_input": "Dời lịch khám răng chiều mai từ 2 giờ sang 3 giờ nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q16",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_create_update_cancel",
+    "subintent_name": "Tạo/sửa/hủy lịch",
+    "seed_input": "Hủy cuộc hẹn với anh Minh lúc 4 giờ chiều nay.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q17",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_create_update_cancel",
+    "subintent_name": "Tạo/sửa/hủy lịch",
+    "seed_input": "Hủy cuộc hẹn với anh Minh lúc 4 giờ chiều nay.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q18",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_create_update_cancel",
+    "subintent_name": "Tạo/sửa/hủy lịch",
+    "seed_input": "Thêm lịch ăn tối với gia đình lúc 7 giờ tối thứ Bảy.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q19",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_create_update_cancel",
+    "subintent_name": "Tạo/sửa/hủy lịch",
+    "seed_input": "Thêm lịch ăn tối với gia đình lúc 7 giờ tối thứ Bảy.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q20",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_create_update_cancel",
+    "subintent_name": "Tạo/sửa/hủy lịch",
+    "seed_input": "Đổi tên lịch chiều thứ Sáu từ gặp khách hàng thành gặp đối tác.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q21",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_create_update_cancel",
+    "subintent_name": "Tạo/sửa/hủy lịch",
+    "seed_input": "Đổi tên lịch chiều thứ Sáu từ gặp khách hàng thành gặp đối tác.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q22",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_create_update_cancel",
+    "subintent_name": "Tạo/sửa/hủy lịch",
+    "seed_input": "Tạo lịch bảo dưỡng xe lúc 8 giờ sáng thứ Hai tuần tới.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q23",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "calendar_create_update_cancel",
+    "subintent_name": "Tạo/sửa/hủy lịch",
+    "seed_input": "Tạo lịch bảo dưỡng xe lúc 8 giờ sáng thứ Hai tuần tới.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q24",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "task_management",
+    "subintent_name": "Việc cần làm",
+    "seed_input": "Thêm việc cần làm là gửi báo cáo doanh số.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q25",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "task_management",
+    "subintent_name": "Việc cần làm",
+    "seed_input": "Thêm việc cần làm là gửi báo cáo doanh số.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q26",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "task_management",
+    "subintent_name": "Việc cần làm",
+    "seed_input": "Thêm việc kiểm tra áp suất lốp vào danh sách cần làm.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q27",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "task_management",
+    "subintent_name": "Việc cần làm",
+    "seed_input": "Thêm việc kiểm tra áp suất lốp vào danh sách cần làm.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q28",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "task_management",
+    "subintent_name": "Việc cần làm",
+    "seed_input": "Đánh dấu việc gọi cho gara là đã hoàn thành.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q29",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "task_management",
+    "subintent_name": "Việc cần làm",
+    "seed_input": "Đánh dấu việc gọi cho gara là đã hoàn thành.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q30",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "task_management",
+    "subintent_name": "Việc cần làm",
+    "seed_input": "Xóa việc rửa xe khỏi danh sách cần làm.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q31",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "task_management",
+    "subintent_name": "Việc cần làm",
+    "seed_input": "Xóa việc rửa xe khỏi danh sách cần làm.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q32",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "task_management",
+    "subintent_name": "Việc cần làm",
+    "seed_input": "Đổi việc mua nước rửa kính thành mua nước làm mát.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q33",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "task_management",
+    "subintent_name": "Việc cần làm",
+    "seed_input": "Đổi việc mua nước rửa kính thành mua nước làm mát.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q34",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "task_management",
+    "subintent_name": "Việc cần làm",
+    "seed_input": "Thêm việc kiểm tra áp suất lốp vào danh sách việc cần làm giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q35",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "task_management",
+    "subintent_name": "Việc cần làm",
+    "seed_input": "Thêm việc kiểm tra áp suất lốp vào danh sách việc cần làm giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q36",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "contextual_reminder",
+    "subintent_name": "Nhắc theo thời gian, vị trí, hành trình hoặc trạng thái xe",
+    "seed_input": "Khi tôi lái xe đến gần nhà thì nhắc tôi ghé mua sữa nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q37",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "contextual_reminder",
+    "subintent_name": "Nhắc theo thời gian, vị trí, hành trình hoặc trạng thái xe",
+    "seed_input": "Khi tôi lái xe đến gần nhà thì nhắc tôi ghé mua sữa nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q38",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "contextual_reminder",
+    "subintent_name": "Nhắc theo thời gian, vị trí, hành trình hoặc trạng thái xe",
+    "seed_input": "Khi tôi đến gần trạm xăng trên đường thì nhắc tôi đổ xăng nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q39",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "contextual_reminder",
+    "subintent_name": "Nhắc theo thời gian, vị trí, hành trình hoặc trạng thái xe",
+    "seed_input": "Khi tôi đến gần trạm xăng trên đường thì nhắc tôi đổ xăng nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q40",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "contextual_reminder",
+    "subintent_name": "Nhắc theo thời gian, vị trí, hành trình hoặc trạng thái xe",
+    "seed_input": "Nhắc tôi gọi cho mẹ ngay khi tôi đỗ xe xong nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q41",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "contextual_reminder",
+    "subintent_name": "Nhắc theo thời gian, vị trí, hành trình hoặc trạng thái xe",
+    "seed_input": "Nhắc tôi gọi cho mẹ ngay khi tôi đỗ xe xong nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q42",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "contextual_reminder",
+    "subintent_name": "Nhắc theo thời gian, vị trí, hành trình hoặc trạng thái xe",
+    "seed_input": "Khi xe rời bãi đỗ, nhắc tôi gọi cho anh Minh.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q43",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "contextual_reminder",
+    "subintent_name": "Nhắc theo thời gian, vị trí, hành trình hoặc trạng thái xe",
+    "seed_input": "Khi xe rời bãi đỗ, nhắc tôi gọi cho anh Minh.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q44",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "contextual_reminder",
+    "subintent_name": "Nhắc theo thời gian, vị trí, hành trình hoặc trạng thái xe",
+    "seed_input": "Lúc tôi lái xe đến gần siêu thị, nhắc tôi mua sữa nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q45",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "contextual_reminder",
+    "subintent_name": "Nhắc theo thời gian, vị trí, hành trình hoặc trạng thái xe",
+    "seed_input": "Lúc tôi lái xe đến gần siêu thị, nhắc tôi mua sữa nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q46",
+    "field": "scenario",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "contextual_reminder",
+    "subintent_name": "Nhắc theo thời gian, vị trí, hành trình hoặc trạng thái xe",
+    "seed_input": "Khi tôi đỗ xe ở công ty vào sáng mai, nhắc tôi mang tài liệu lên văn phòng.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q47",
+    "field": "first_input",
+    "intent_code": "calendar_tasks",
+    "subintent_code": "contextual_reminder",
+    "subintent_name": "Nhắc theo thời gian, vị trí, hành trình hoặc trạng thái xe",
+    "seed_input": "Khi tôi đỗ xe ở công ty vào sáng mai, nhắc tôi mang tài liệu lên văn phòng.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  }
+]

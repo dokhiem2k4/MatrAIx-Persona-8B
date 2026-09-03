@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 5,
+  "seed": {
+    "rowId": "row-0738",
+    "scenario": "Tôi đang lái xe trên đường cao tốc để kịp giờ tham gia cuộc họp tổng kết trực tuyến, sự tập trung đang ở mức tối đa. Tôi cần ngắt kết nối thiết bị ngoài để tránh mọi sự xao nhãng.",
+    "firstInput": "Vita, hãy ngắt kết nối Bluetooth với điện thoại của tôi ngay.",
+    "intentCode": "vita_profile_settings",
+    "subintentCode": "device_service_connectivity",
+    "subintentName": "Kết nối thiết bị và dịch vụ",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

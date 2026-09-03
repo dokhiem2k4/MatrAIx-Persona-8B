@@ -1,0 +1,1243 @@
+{
+  "instrument": {
+    "id": "vita_utterance_journey_navigation_places",
+    "title": "Vita — diễn đạt lại câu lệnh (journey_navigation_places)"
+  },
+  "answers": [
+    {
+      "questionId": "q0",
+      "value": "Busca el punto de repostaje más cercano.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q1",
+      "value": "Localiza un sitio de pho en el radio actual y enruta hacia allá.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q2",
+      "value": "Fija las coordenadas de un parking cerca del mercado Ben Thanh.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q3",
+      "value": "Muestra cafeterías en este perímetro.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q4",
+      "value": "Inicia la navegación hacia el Museo de los Vestigios de la Guerra de Vietnam.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q5",
+      "value": "Rastrea restaurantes de gastronomía local en esta zona para almorzar.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q6",
+      "value": "Recalcula el itinerario excluyendo las vías de peaje y autopistas.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q7",
+      "value": "Optimiza la ruta actual para minimizar la congestión del tráfico.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q8",
+      "value": "Inserta la Oficina Central de Correos como waypoint en el trayecto activo.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q9",
+      "value": "Genera la ruta desde este punto hasta el lago Hoan Kiem.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q10",
+      "value": "Elimina el waypoint del mercado Ben Thanh de la ruta programada.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q11",
+      "value": "Configura la ruta al aeropuerto de Noi Bai priorizando vías rápidas.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q12",
+      "value": "Dame el ETA al destino.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q13",
+      "value": "Reporta la densidad del tráfico en el vector actual.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q14",
+      "value": "Confirma la hora estimada de llegada a la terminal del aeropuerto.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q15",
+      "value": "Calcula el tiempo de tránsito hacia la oficina si arranco el motor ahora.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q16",
+      "value": "Analiza la telemetría del tráfico y el ETA hacia el aeropuerto antes de iniciar la marcha.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q17",
+      "value": "Proyecta la hora de llegada al centro de convenciones asumiendo salida inmediata.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q18",
+      "value": "Activa la asistencia de aproximación para el estacionamiento del edificio.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q19",
+      "value": "Muestra el vector de entrada al parking del destino final.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q20",
+      "value": "Enruta hacia la zona de carga y descarga del hotel.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q21",
+      "value": "Finaliza la sesión de navegación actual.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q22",
+      "value": "Cierra el itinerario activo, vehículo estacionado.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q23",
+      "value": "Registra las coordenadas actuales como punto de estacionamiento.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q24",
+      "value": "Enumera la gastronomía representativa de la región de Hue.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q25",
+      "value": "Extrae los puntos de interés histórico del casco antiguo de Hoi An.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q26",
+      "value": "Identifica los productos estacionales relevantes en Da Lat.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q27",
+      "value": "Proporciona el año de construcción de la infraestructura del mercado Ben Thanh.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q28",
+      "value": "Resume las características geológicas y turísticas de Trang An en Ninh Binh.",
+      "rationale": "",
+      "confidence": null
+    },
+    {
+      "questionId": "q29",
+      "value": "Lista las actividades operativas en Sa Pa durante el horario nocturno.",
+      "rationale": "",
+      "confidence": null
+    }
+  ],
+  "trajectory": [
+    {
+      "timestamp": "2026-09-03T04:13:56Z",
+      "actor": "system",
+      "action": "survey_started",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "instrumentTitle": "Vita — diễn đạt lại câu lệnh (journey_navigation_places)",
+        "numQuestions": 30
+      },
+      "outcome": {
+        "status": "started"
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:13:57Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q0",
+        "questionIndex": 1,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Tìm điểm đến/POI.\nMột người dùng khác đã nói với trợ lý xe: \"Dẫn đường đến trạm xăng gần nhất.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:13:58Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q0",
+        "questionIndex": 1,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "questionId": "q0",
+        "value": "Busca el punto de repostaje más cercano.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:13:59Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q1",
+        "questionIndex": 2,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Tìm điểm đến/POI.\nMột người dùng khác đã nói với trợ lý xe: \"Tìm một quán phở gần đây rồi dẫn đường tới đó.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:00Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q1",
+        "questionIndex": 2,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "questionId": "q1",
+        "value": "Localiza un sitio de pho en el radio actual y enruta hacia allá.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:01Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q2",
+        "questionIndex": 3,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Tìm điểm đến/POI.\nMột người dùng khác đã nói với trợ lý xe: \"Đưa tôi đến bãi đỗ xe gần chợ Bến Thành.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:02Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q2",
+        "questionIndex": 3,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "questionId": "q2",
+        "value": "Fija las coordenadas de un parking cerca del mercado Ben Thanh.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:03Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q3",
+        "questionIndex": 4,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Tìm điểm đến/POI.\nMột người dùng khác đã nói với trợ lý xe: \"Tìm một quán cà phê gần đây để tôi đến.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:04Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q3",
+        "questionIndex": 4,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "questionId": "q3",
+        "value": "Muestra cafeterías en este perímetro.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:05Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q4",
+        "questionIndex": 5,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Tìm điểm đến/POI.\nMột người dùng khác đã nói với trợ lý xe: \"Dẫn đường đến Bảo tàng Chứng tích Chiến tranh.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:06Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q4",
+        "questionIndex": 5,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "questionId": "q4",
+        "value": "Inicia la navegación hacia el Museo de los Vestigios de la Guerra de Vietnam.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:07Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q5",
+        "questionIndex": 6,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Tìm điểm đến/POI.\nMột người dùng khác đã nói với trợ lý xe: \"Tìm giúp tôi một nhà hàng Việt Nam gần đây để ăn trưa.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:08Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q5",
+        "questionIndex": 6,
+        "questionType": "free_text",
+        "construct": "destination_poi"
+      },
+      "outcome": {
+        "questionId": "q5",
+        "value": "Rastrea restaurantes de gastronomía local en esta zona para almorzar.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:09Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q6",
+        "questionIndex": 7,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Lập và thay đổi tuyến.\nMột người dùng khác đã nói với trợ lý xe: \"Đổi tuyến hiện tại sang đường tránh cao tốc.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:10Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q6",
+        "questionIndex": 7,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "questionId": "q6",
+        "value": "Recalcula el itinerario excluyendo las vías de peaje y autopistas.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:11Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q7",
+        "questionIndex": 8,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Lập và thay đổi tuyến.\nMột người dùng khác đã nói với trợ lý xe: \"Đổi tuyến hiện tại sang đường ít ùn tắc hơn giúp tôi.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:12Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q7",
+        "questionIndex": 8,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "questionId": "q7",
+        "value": "Optimiza la ruta actual para minimizar la congestión del tráfico.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:13Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q8",
+        "questionIndex": 9,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Lập và thay đổi tuyến.\nMột người dùng khác đã nói với trợ lý xe: \"Thêm Bưu điện Trung tâm Thành phố làm điểm dừng trên tuyến hiện tại.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:14Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q8",
+        "questionIndex": 9,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "questionId": "q8",
+        "value": "Inserta la Oficina Central de Correos como waypoint en el trayecto activo.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:15Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q9",
+        "questionIndex": 10,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Lập và thay đổi tuyến.\nMột người dùng khác đã nói với trợ lý xe: \"Lập tuyến từ đây đến Hồ Hoàn Kiếm.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:16Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q9",
+        "questionIndex": 10,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "questionId": "q9",
+        "value": "Genera la ruta desde este punto hasta el lago Hoan Kiem.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:17Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q10",
+        "questionIndex": 11,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Lập và thay đổi tuyến.\nMột người dùng khác đã nói với trợ lý xe: \"Xóa điểm dừng ở chợ Bến Thành khỏi hành trình.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:18Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q10",
+        "questionIndex": 11,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "questionId": "q10",
+        "value": "Elimina el waypoint del mercado Ben Thanh de la ruta programada.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:19Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q11",
+        "questionIndex": 12,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Lập và thay đổi tuyến.\nMột người dùng khác đã nói với trợ lý xe: \"Lập tuyến đến sân bay Nội Bài và ưu tiên đường cao tốc.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:20Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q11",
+        "questionIndex": 12,
+        "questionType": "free_text",
+        "construct": "route_management"
+      },
+      "outcome": {
+        "questionId": "q11",
+        "value": "Configura la ruta al aeropuerto de Noi Bai priorizando vías rápidas.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:21Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q12",
+        "questionIndex": 13,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nMột người dùng khác đã nói với trợ lý xe: \"Còn bao lâu nữa thì tới nơi?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:22Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q12",
+        "questionIndex": 13,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "questionId": "q12",
+        "value": "Dame el ETA al destino.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:23Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q13",
+        "questionIndex": 14,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nMột người dùng khác đã nói với trợ lý xe: \"Tình hình giao thông phía trước thế nào?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:24Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q13",
+        "questionIndex": 14,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "questionId": "q13",
+        "value": "Reporta la densidad del tráfico en el vector actual.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:25Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q14",
+        "questionIndex": 15,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nMột người dùng khác đã nói với trợ lý xe: \"Mấy giờ tôi sẽ đến sân bay?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:26Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q14",
+        "questionIndex": 15,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "questionId": "q14",
+        "value": "Confirma la hora estimada de llegada a la terminal del aeropuerto.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:27Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q15",
+        "questionIndex": 16,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nMột người dùng khác đã nói với trợ lý xe: \"Xe đang đỗ đây, nếu khởi hành bây giờ thì bao lâu nữa tôi đến công ty?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:28Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q15",
+        "questionIndex": 16,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "questionId": "q15",
+        "value": "Calcula el tiempo de tránsito hacia la oficina si arranco el motor ahora.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:29Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q16",
+        "questionIndex": 17,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nMột người dùng khác đã nói với trợ lý xe: \"Trước khi đi, kiểm tra giúp tôi tình hình giao thông đến sân bay và giờ đến dự kiến.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:30Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q16",
+        "questionIndex": 17,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "questionId": "q16",
+        "value": "Analiza la telemetría del tráfico y el ETA hacia el aeropuerto antes de iniciar la marcha.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:31Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q17",
+        "questionIndex": 18,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Giao thông và thời gian dự kiến đến nơi (ETA).\nMột người dùng khác đã nói với trợ lý xe: \"Nếu xuất phát ngay thì mấy giờ tôi tới trung tâm hội nghị?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:32Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q17",
+        "questionIndex": 18,
+        "questionType": "free_text",
+        "construct": "traffic_eta"
+      },
+      "outcome": {
+        "questionId": "q17",
+        "value": "Proyecta la hora de llegada al centro de convenciones asumiendo salida inmediata.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:33Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q18",
+        "questionIndex": 19,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Đỗ xe/đến nơi.\nMột người dùng khác đã nói với trợ lý xe: \"Tôi sắp đến rồi, bật hướng dẫn vào bãi đỗ của tòa nhà nhé.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:34Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q18",
+        "questionIndex": 19,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "questionId": "q18",
+        "value": "Activa la asistencia de aproximación para el estacionamiento del edificio.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:35Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q19",
+        "questionIndex": 20,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Đỗ xe/đến nơi.\nMột người dùng khác đã nói với trợ lý xe: \"Gần tới nơi rồi, chỉ đường vào bãi đỗ xe tại điểm đến giúp tôi.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:36Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q19",
+        "questionIndex": 20,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "questionId": "q19",
+        "value": "Muestra el vector de entrada al parking del destino final.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:37Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q20",
+        "questionIndex": 21,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Đỗ xe/đến nơi.\nMột người dùng khác đã nói với trợ lý xe: \"Tôi sắp tới khách sạn, hướng dẫn tôi vào khu đón trả khách nhé.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:38Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q20",
+        "questionIndex": 21,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "questionId": "q20",
+        "value": "Enruta hacia la zona de carga y descarga del hotel.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:39Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q21",
+        "questionIndex": 22,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Đỗ xe/đến nơi.\nMột người dùng khác đã nói với trợ lý xe: \"Tôi đã đỗ xe rồi, kết thúc hành trình nhé.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:40Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q21",
+        "questionIndex": 22,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "questionId": "q21",
+        "value": "Finaliza la sesión de navegación actual.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:41Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q22",
+        "questionIndex": 23,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Đỗ xe/đến nơi.\nMột người dùng khác đã nói với trợ lý xe: \"Tôi đỗ xe xong rồi, kết thúc chuyến đi giúp tôi.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:42Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q22",
+        "questionIndex": 23,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "questionId": "q22",
+        "value": "Cierra el itinerario activo, vehículo estacionado.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:43Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q23",
+        "questionIndex": 24,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Đỗ xe/đến nơi.\nMột người dùng khác đã nói với trợ lý xe: \"Đến nơi rồi, lưu vị trí đỗ xe này giúp tôi.\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:44Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q23",
+        "questionIndex": 24,
+        "questionType": "free_text",
+        "construct": "parking_arrival"
+      },
+      "outcome": {
+        "questionId": "q23",
+        "value": "Registra las coordenadas actuales como punto de estacionamiento.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:45Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q24",
+        "questionIndex": 25,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Thông tin địa phương/du lịch.\nMột người dùng khác đã nói với trợ lý xe: \"Huế nổi tiếng với món ăn nào?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:46Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q24",
+        "questionIndex": 25,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "questionId": "q24",
+        "value": "Enumera la gastronomía representativa de la región de Hue.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:47Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q25",
+        "questionIndex": 26,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Thông tin địa phương/du lịch.\nMột người dùng khác đã nói với trợ lý xe: \"Phố cổ Hội An có gì đặc sắc vậy?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:48Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q25",
+        "questionIndex": 26,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "questionId": "q25",
+        "value": "Extrae los puntos de interés histórico del casco antiguo de Hoi An.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:49Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q26",
+        "questionIndex": 27,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Thông tin địa phương/du lịch.\nMột người dùng khác đã nói với trợ lý xe: \"Đà Lạt mùa này có đặc sản gì đáng thử?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:50Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q26",
+        "questionIndex": 27,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "questionId": "q26",
+        "value": "Identifica los productos estacionales relevantes en Da Lat.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:51Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q27",
+        "questionIndex": 28,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]\nBạn đang muốn: Thông tin địa phương/du lịch.\nMột người dùng khác đã nói với trợ lý xe: \"Chợ Bến Thành được xây từ bao giờ?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:52Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q27",
+        "questionIndex": 28,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "questionId": "q27",
+        "value": "Proporciona el año de construcción de la infraestructura del mercado Ben Thanh.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:53Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q28",
+        "questionIndex": 29,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]\nBạn đang muốn: Thông tin địa phương/du lịch.\nMột người dùng khác đã nói với trợ lý xe: \"Ở Ninh Bình, Tràng An có gì nổi bật?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:54Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q28",
+        "questionIndex": 29,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "questionId": "q28",
+        "value": "Resume las características geológicas y turísticas de Trang An en Ninh Binh.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:55Z",
+      "actor": "assistant",
+      "action": "ask_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q29",
+        "questionIndex": 30,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "prompt": "[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]\nBạn đang muốn: Thông tin địa phương/du lịch.\nMột người dùng khác đã nói với trợ lý xe: \"Tôi đang đỗ xe ở Sa Pa, buổi tối ở đây có gì thú vị?\"\nNếu là BẠN, trong đúng tình huống trên, bạn sẽ nói câu đó như thế nào? Viết đúng MỘT câu mà bạn thực sự sẽ nói ra bằng giọng của chính mình — giữ nguyên ý định, nhưng dùng cách xưng hô, mức độ lịch sự và độ dài tự nhiên với bạn.",
+        "options": []
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:56Z",
+      "actor": "user",
+      "action": "answer_question",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places",
+        "questionId": "q29",
+        "questionIndex": 30,
+        "questionType": "free_text",
+        "construct": "local_travel_information"
+      },
+      "outcome": {
+        "questionId": "q29",
+        "value": "Lista las actividades operativas en Sa Pa durante el horario nocturno.",
+        "rationale": "",
+        "confidence": null
+      }
+    },
+    {
+      "timestamp": "2026-09-03T04:14:57Z",
+      "actor": "system",
+      "action": "survey_completed",
+      "context": {
+        "instrumentId": "vita_utterance_journey_navigation_places"
+      },
+      "outcome": {
+        "numAnswered": 30,
+        "missingRequiredQuestionIds": [],
+        "valid": true
+      }
+    }
+  ],
+  "usage": {
+    "n_input_tokens": 18583,
+    "n_output_tokens": 1149,
+    "request_id": "chatcmpl-BfSYaqa4N6C3g8UPrJmp2Qw",
+    "model": "ag/gemini-3.1-pro-low",
+    "provider": "openrouter"
+  }
+}

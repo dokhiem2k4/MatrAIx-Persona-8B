@@ -1,0 +1,602 @@
+[
+  {
+    "questionId": "q0",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "destination_poi",
+    "subintent_name": "Tìm điểm đến/POI",
+    "seed_input": "Dẫn đường đến trạm xăng gần nhất.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q1",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "destination_poi",
+    "subintent_name": "Tìm điểm đến/POI",
+    "seed_input": "Dẫn đường đến trạm xăng gần nhất.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q2",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "destination_poi",
+    "subintent_name": "Tìm điểm đến/POI",
+    "seed_input": "Tìm một quán phở gần đây rồi dẫn đường tới đó.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q3",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "destination_poi",
+    "subintent_name": "Tìm điểm đến/POI",
+    "seed_input": "Tìm một quán phở gần đây rồi dẫn đường tới đó.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q4",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "destination_poi",
+    "subintent_name": "Tìm điểm đến/POI",
+    "seed_input": "Đưa tôi đến bãi đỗ xe gần chợ Bến Thành.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q5",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "destination_poi",
+    "subintent_name": "Tìm điểm đến/POI",
+    "seed_input": "Đưa tôi đến bãi đỗ xe gần chợ Bến Thành.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q6",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "destination_poi",
+    "subintent_name": "Tìm điểm đến/POI",
+    "seed_input": "Tìm một quán cà phê gần đây để tôi đến.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q7",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "destination_poi",
+    "subintent_name": "Tìm điểm đến/POI",
+    "seed_input": "Tìm một quán cà phê gần đây để tôi đến.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q8",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "destination_poi",
+    "subintent_name": "Tìm điểm đến/POI",
+    "seed_input": "Dẫn đường đến Bảo tàng Chứng tích Chiến tranh.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q9",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "destination_poi",
+    "subintent_name": "Tìm điểm đến/POI",
+    "seed_input": "Dẫn đường đến Bảo tàng Chứng tích Chiến tranh.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q10",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "destination_poi",
+    "subintent_name": "Tìm điểm đến/POI",
+    "seed_input": "Tìm giúp tôi một nhà hàng Việt Nam gần đây để ăn trưa.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q11",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "destination_poi",
+    "subintent_name": "Tìm điểm đến/POI",
+    "seed_input": "Tìm giúp tôi một nhà hàng Việt Nam gần đây để ăn trưa.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q12",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "route_management",
+    "subintent_name": "Lập và thay đổi tuyến",
+    "seed_input": "Đổi tuyến hiện tại sang đường tránh cao tốc.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q13",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "route_management",
+    "subintent_name": "Lập và thay đổi tuyến",
+    "seed_input": "Đổi tuyến hiện tại sang đường tránh cao tốc.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q14",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "route_management",
+    "subintent_name": "Lập và thay đổi tuyến",
+    "seed_input": "Đổi tuyến hiện tại sang đường ít ùn tắc hơn giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q15",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "route_management",
+    "subintent_name": "Lập và thay đổi tuyến",
+    "seed_input": "Đổi tuyến hiện tại sang đường ít ùn tắc hơn giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q16",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "route_management",
+    "subintent_name": "Lập và thay đổi tuyến",
+    "seed_input": "Thêm Bưu điện Trung tâm Thành phố làm điểm dừng trên tuyến hiện tại.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q17",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "route_management",
+    "subintent_name": "Lập và thay đổi tuyến",
+    "seed_input": "Thêm Bưu điện Trung tâm Thành phố làm điểm dừng trên tuyến hiện tại.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q18",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "route_management",
+    "subintent_name": "Lập và thay đổi tuyến",
+    "seed_input": "Lập tuyến từ đây đến Hồ Hoàn Kiếm.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q19",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "route_management",
+    "subintent_name": "Lập và thay đổi tuyến",
+    "seed_input": "Lập tuyến từ đây đến Hồ Hoàn Kiếm.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q20",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "route_management",
+    "subintent_name": "Lập và thay đổi tuyến",
+    "seed_input": "Xóa điểm dừng ở chợ Bến Thành khỏi hành trình.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q21",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "route_management",
+    "subintent_name": "Lập và thay đổi tuyến",
+    "seed_input": "Xóa điểm dừng ở chợ Bến Thành khỏi hành trình.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q22",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "route_management",
+    "subintent_name": "Lập và thay đổi tuyến",
+    "seed_input": "Lập tuyến đến sân bay Nội Bài và ưu tiên đường cao tốc.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q23",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "route_management",
+    "subintent_name": "Lập và thay đổi tuyến",
+    "seed_input": "Lập tuyến đến sân bay Nội Bài và ưu tiên đường cao tốc.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q24",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "traffic_eta",
+    "subintent_name": "Giao thông và thời gian dự kiến đến nơi (ETA)",
+    "seed_input": "Còn bao lâu nữa thì tới nơi?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q25",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "traffic_eta",
+    "subintent_name": "Giao thông và thời gian dự kiến đến nơi (ETA)",
+    "seed_input": "Còn bao lâu nữa thì tới nơi?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q26",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "traffic_eta",
+    "subintent_name": "Giao thông và thời gian dự kiến đến nơi (ETA)",
+    "seed_input": "Tình hình giao thông phía trước thế nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q27",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "traffic_eta",
+    "subintent_name": "Giao thông và thời gian dự kiến đến nơi (ETA)",
+    "seed_input": "Tình hình giao thông phía trước thế nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q28",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "traffic_eta",
+    "subintent_name": "Giao thông và thời gian dự kiến đến nơi (ETA)",
+    "seed_input": "Mấy giờ tôi sẽ đến sân bay?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q29",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "traffic_eta",
+    "subintent_name": "Giao thông và thời gian dự kiến đến nơi (ETA)",
+    "seed_input": "Mấy giờ tôi sẽ đến sân bay?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q30",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "traffic_eta",
+    "subintent_name": "Giao thông và thời gian dự kiến đến nơi (ETA)",
+    "seed_input": "Xe đang đỗ đây, nếu khởi hành bây giờ thì bao lâu nữa tôi đến công ty?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q31",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "traffic_eta",
+    "subintent_name": "Giao thông và thời gian dự kiến đến nơi (ETA)",
+    "seed_input": "Xe đang đỗ đây, nếu khởi hành bây giờ thì bao lâu nữa tôi đến công ty?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q32",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "traffic_eta",
+    "subintent_name": "Giao thông và thời gian dự kiến đến nơi (ETA)",
+    "seed_input": "Trước khi đi, kiểm tra giúp tôi tình hình giao thông đến sân bay và giờ đến dự kiến.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q33",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "traffic_eta",
+    "subintent_name": "Giao thông và thời gian dự kiến đến nơi (ETA)",
+    "seed_input": "Trước khi đi, kiểm tra giúp tôi tình hình giao thông đến sân bay và giờ đến dự kiến.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q34",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "traffic_eta",
+    "subintent_name": "Giao thông và thời gian dự kiến đến nơi (ETA)",
+    "seed_input": "Nếu xuất phát ngay thì mấy giờ tôi tới trung tâm hội nghị?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q35",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "traffic_eta",
+    "subintent_name": "Giao thông và thời gian dự kiến đến nơi (ETA)",
+    "seed_input": "Nếu xuất phát ngay thì mấy giờ tôi tới trung tâm hội nghị?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q36",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "parking_arrival",
+    "subintent_name": "Đỗ xe/đến nơi",
+    "seed_input": "Tôi sắp đến rồi, bật hướng dẫn vào bãi đỗ của tòa nhà nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q37",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "parking_arrival",
+    "subintent_name": "Đỗ xe/đến nơi",
+    "seed_input": "Tôi sắp đến rồi, bật hướng dẫn vào bãi đỗ của tòa nhà nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q38",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "parking_arrival",
+    "subintent_name": "Đỗ xe/đến nơi",
+    "seed_input": "Gần tới nơi rồi, chỉ đường vào bãi đỗ xe tại điểm đến giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q39",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "parking_arrival",
+    "subintent_name": "Đỗ xe/đến nơi",
+    "seed_input": "Gần tới nơi rồi, chỉ đường vào bãi đỗ xe tại điểm đến giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q40",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "parking_arrival",
+    "subintent_name": "Đỗ xe/đến nơi",
+    "seed_input": "Tôi sắp tới khách sạn, hướng dẫn tôi vào khu đón trả khách nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q41",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "parking_arrival",
+    "subintent_name": "Đỗ xe/đến nơi",
+    "seed_input": "Tôi sắp tới khách sạn, hướng dẫn tôi vào khu đón trả khách nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q42",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "parking_arrival",
+    "subintent_name": "Đỗ xe/đến nơi",
+    "seed_input": "Tôi đã đỗ xe rồi, kết thúc hành trình nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q43",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "parking_arrival",
+    "subintent_name": "Đỗ xe/đến nơi",
+    "seed_input": "Tôi đã đỗ xe rồi, kết thúc hành trình nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q44",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "parking_arrival",
+    "subintent_name": "Đỗ xe/đến nơi",
+    "seed_input": "Tôi đỗ xe xong rồi, kết thúc chuyến đi giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q45",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "parking_arrival",
+    "subintent_name": "Đỗ xe/đến nơi",
+    "seed_input": "Tôi đỗ xe xong rồi, kết thúc chuyến đi giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q46",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "parking_arrival",
+    "subintent_name": "Đỗ xe/đến nơi",
+    "seed_input": "Đến nơi rồi, lưu vị trí đỗ xe này giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q47",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "parking_arrival",
+    "subintent_name": "Đỗ xe/đến nơi",
+    "seed_input": "Đến nơi rồi, lưu vị trí đỗ xe này giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q48",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "local_travel_information",
+    "subintent_name": "Thông tin địa phương/du lịch",
+    "seed_input": "Huế nổi tiếng với món ăn nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q49",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "local_travel_information",
+    "subintent_name": "Thông tin địa phương/du lịch",
+    "seed_input": "Huế nổi tiếng với món ăn nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q50",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "local_travel_information",
+    "subintent_name": "Thông tin địa phương/du lịch",
+    "seed_input": "Phố cổ Hội An có gì đặc sắc vậy?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q51",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "local_travel_information",
+    "subintent_name": "Thông tin địa phương/du lịch",
+    "seed_input": "Phố cổ Hội An có gì đặc sắc vậy?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q52",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "local_travel_information",
+    "subintent_name": "Thông tin địa phương/du lịch",
+    "seed_input": "Đà Lạt mùa này có đặc sản gì đáng thử?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q53",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "local_travel_information",
+    "subintent_name": "Thông tin địa phương/du lịch",
+    "seed_input": "Đà Lạt mùa này có đặc sản gì đáng thử?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q54",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "local_travel_information",
+    "subintent_name": "Thông tin địa phương/du lịch",
+    "seed_input": "Chợ Bến Thành được xây từ bao giờ?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q55",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "local_travel_information",
+    "subintent_name": "Thông tin địa phương/du lịch",
+    "seed_input": "Chợ Bến Thành được xây từ bao giờ?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q56",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "local_travel_information",
+    "subintent_name": "Thông tin địa phương/du lịch",
+    "seed_input": "Ở Ninh Bình, Tràng An có gì nổi bật?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q57",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "local_travel_information",
+    "subintent_name": "Thông tin địa phương/du lịch",
+    "seed_input": "Ở Ninh Bình, Tràng An có gì nổi bật?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q58",
+    "field": "scenario",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "local_travel_information",
+    "subintent_name": "Thông tin địa phương/du lịch",
+    "seed_input": "Tôi đang đỗ xe ở Sa Pa, buổi tối ở đây có gì thú vị?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q59",
+    "field": "first_input",
+    "intent_code": "journey_navigation_places",
+    "subintent_code": "local_travel_information",
+    "subintent_name": "Thông tin địa phương/du lịch",
+    "seed_input": "Tôi đang đỗ xe ở Sa Pa, buổi tối ở đây có gì thú vị?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  }
+]

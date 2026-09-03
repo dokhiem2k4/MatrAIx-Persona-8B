@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 3,
+  "seed": {
+    "rowId": "row-0708",
+    "scenario": "Tôi đang lái xe trên đường cao tốc hướng về tỉnh bên, đầu óc suy nghĩ vẩn vơ về quy mô các tập đoàn lớn.",
+    "firstInput": "Vingroup hoạt động trong những lĩnh vực nào.",
+    "intentCode": "vinfast_vingroup_brands",
+    "subintentCode": "vingroup_corporate_information",
+    "subintentName": "Thông tin Tập đoàn Vingroup",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-9f3c655902f2"
+  }
+}

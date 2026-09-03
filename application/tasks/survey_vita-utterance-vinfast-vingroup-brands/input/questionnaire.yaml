@@ -1,0 +1,982 @@
+schemaVersion: '1.0'
+id: vita_utterance_vinfast_vingroup_brands
+title: Vita — bối cảnh & câu mở đầu (vinfast_vingroup_brands)
+description: Với mỗi tình huống dùng trợ lý xe VinFast VF9, persona tự dựng bối cảnh của mình rồi viết
+  câu đầu tiên mở đầu hội thoại.
+questions:
+- id: q0
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Thương hiệu và sản phẩm VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "VinFast hiện có những dòng ô tô điện nào?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_brand_products__scenario
+  required: true
+- id: q1
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Thương hiệu và sản phẩm VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "VinFast hiện có những dòng ô tô điện nào?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_brand_products__first_input
+  required: true
+- id: q2
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Thương hiệu và sản phẩm VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "VinFast hiện có những dòng ô tô điện nào vậy?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_brand_products__scenario
+  required: true
+- id: q3
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Thương hiệu và sản phẩm VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "VinFast hiện có những dòng ô tô điện nào vậy?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_brand_products__first_input
+  required: true
+- id: q4
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Thương hiệu và sản phẩm VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Đang lái xe, cho tôi biết nhanh VF 6 phù hợp với nhóm khách
+    hàng nào."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_brand_products__scenario
+  required: true
+- id: q5
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Thương hiệu và sản phẩm VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Đang lái xe, cho tôi biết nhanh VF 6 phù hợp với nhóm khách
+    hàng nào."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_brand_products__first_input
+  required: true
+- id: q6
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Thương hiệu và sản phẩm VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "VinFast có bán xe máy điện không?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_brand_products__scenario
+  required: true
+- id: q7
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Thương hiệu và sản phẩm VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "VinFast có bán xe máy điện không?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_brand_products__first_input
+  required: true
+- id: q8
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Thương hiệu và sản phẩm VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "VF 8 và VF 9 khác nhau chủ yếu ở điểm nào?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_brand_products__scenario
+  required: true
+- id: q9
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Thương hiệu và sản phẩm VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "VF 8 và VF 9 khác nhau chủ yếu ở điểm nào?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_brand_products__first_input
+  required: true
+- id: q10
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Thương hiệu và sản phẩm VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Tôi đang đỗ xe, giới thiệu giúp một mẫu VinFast nhỏ gọn để
+    đi trong thành phố."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_brand_products__scenario
+  required: true
+- id: q11
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Thương hiệu và sản phẩm VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Tôi đang đỗ xe, giới thiệu giúp một mẫu VinFast nhỏ gọn để
+    đi trong thành phố."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_brand_products__first_input
+  required: true
+- id: q12
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Giá bán, chính sách và chương trình VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Bảo hành ô tô điện VinFast thế nào?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_sales_policies__scenario
+  required: true
+- id: q13
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Giá bán, chính sách và chương trình VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Bảo hành ô tô điện VinFast thế nào?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_sales_policies__first_input
+  required: true
+- id: q14
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Giá bán, chính sách và chương trình VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Giá xe VinFast có bao gồm pin chưa?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_sales_policies__scenario
+  required: true
+- id: q15
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Giá bán, chính sách và chương trình VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Giá xe VinFast có bao gồm pin chưa?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_sales_policies__first_input
+  required: true
+- id: q16
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Giá bán, chính sách và chương trình VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "VinFast hiện có ưu đãi gì cho người mua xe điện?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_sales_policies__scenario
+  required: true
+- id: q17
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Giá bán, chính sách và chương trình VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "VinFast hiện có ưu đãi gì cho người mua xe điện?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_sales_policies__first_input
+  required: true
+- id: q18
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Giá bán, chính sách và chương trình VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "VinFast VF 6 hiện có giá bán bao nhiêu?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_sales_policies__scenario
+  required: true
+- id: q19
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Giá bán, chính sách và chương trình VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "VinFast VF 6 hiện có giá bán bao nhiêu?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_sales_policies__first_input
+  required: true
+- id: q20
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Giá bán, chính sách và chương trình VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Chính sách bảo hành pin của ô tô điện VinFast như thế nào?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_sales_policies__scenario
+  required: true
+- id: q21
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Giá bán, chính sách và chương trình VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Chính sách bảo hành pin của ô tô điện VinFast như thế nào?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_sales_policies__first_input
+  required: true
+- id: q22
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Giá bán, chính sách và chương trình VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Hiện VinFast có chương trình ưu đãi nào cho khách mua xe
+    mới không?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_sales_policies__scenario
+  required: true
+- id: q23
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Giá bán, chính sách và chương trình VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Hiện VinFast có chương trình ưu đãi nào cho khách mua xe
+    mới không?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_sales_policies__first_input
+  required: true
+- id: q24
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Hệ thống bán hàng và dịch vụ VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "VinFast có xưởng dịch vụ nào làm việc vào Chủ nhật không?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_service_network__scenario
+  required: true
+- id: q25
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Hệ thống bán hàng và dịch vụ VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "VinFast có xưởng dịch vụ nào làm việc vào Chủ nhật không?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_service_network__first_input
+  required: true
+- id: q26
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Hệ thống bán hàng và dịch vụ VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Showroom VinFast gần khu vực tôi đang đi có mở cửa tối nay
+    không?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_service_network__scenario
+  required: true
+- id: q27
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Hệ thống bán hàng và dịch vụ VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Showroom VinFast gần khu vực tôi đang đi có mở cửa tối nay
+    không?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_service_network__first_input
+  required: true
+- id: q28
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Hệ thống bán hàng và dịch vụ VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Xe tôi vừa báo lỗi giữa đường, VinFast có dịch vụ cứu hộ
+    không?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_service_network__scenario
+  required: true
+- id: q29
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Hệ thống bán hàng và dịch vụ VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Xe tôi vừa báo lỗi giữa đường, VinFast có dịch vụ cứu hộ
+    không?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_service_network__first_input
+  required: true
+- id: q30
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Hệ thống bán hàng và dịch vụ VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Tôi muốn mang xe đi sửa ở xưởng VinFast, cần đặt lịch trước
+    không?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_service_network__scenario
+  required: true
+- id: q31
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Hệ thống bán hàng và dịch vụ VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Tôi muốn mang xe đi sửa ở xưởng VinFast, cần đặt lịch trước
+    không?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_service_network__first_input
+  required: true
+- id: q32
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Hệ thống bán hàng và dịch vụ VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "VinFast có những loại cơ sở dịch vụ nào vậy?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_service_network__scenario
+  required: true
+- id: q33
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Hệ thống bán hàng và dịch vụ VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "VinFast có những loại cơ sở dịch vụ nào vậy?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_service_network__first_input
+  required: true
+- id: q34
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Hệ thống bán hàng và dịch vụ VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Xe tôi cần bảo dưỡng thì có thể mang đến đâu trong hệ thống
+    VinFast?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_service_network__scenario
+  required: true
+- id: q35
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Hệ thống bán hàng và dịch vụ VinFast.
+
+    Tham khảo — một người dùng khác đã nói: "Xe tôi cần bảo dưỡng thì có thể mang đến đâu trong hệ thống
+    VinFast?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vinfast_service_network__first_input
+  required: true
+- id: q36
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Thông tin Tập đoàn Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "Vingroup hoạt động trong những lĩnh vực nào?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_corporate_information__scenario
+  required: true
+- id: q37
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Thông tin Tập đoàn Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "Vingroup hoạt động trong những lĩnh vực nào?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_corporate_information__first_input
+  required: true
+- id: q38
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Thông tin Tập đoàn Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "Giới thiệu ngắn gọn cho tôi về Tập đoàn Vingroup."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_corporate_information__scenario
+  required: true
+- id: q39
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Thông tin Tập đoàn Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "Giới thiệu ngắn gọn cho tôi về Tập đoàn Vingroup."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_corporate_information__first_input
+  required: true
+- id: q40
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Thông tin Tập đoàn Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "Vingroup có nguồn gốc hình thành như thế nào?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_corporate_information__scenario
+  required: true
+- id: q41
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Thông tin Tập đoàn Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "Vingroup có nguồn gốc hình thành như thế nào?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_corporate_information__first_input
+  required: true
+- id: q42
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Thông tin Tập đoàn Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "Vingroup là doanh nghiệp gì?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_corporate_information__scenario
+  required: true
+- id: q43
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Thông tin Tập đoàn Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "Vingroup là doanh nghiệp gì?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_corporate_information__first_input
+  required: true
+- id: q44
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Thông tin Tập đoàn Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "Cho tôi biết vài nét về lịch sử phát triển của Vingroup."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_corporate_information__scenario
+  required: true
+- id: q45
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Thông tin Tập đoàn Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "Cho tôi biết vài nét về lịch sử phát triển của Vingroup."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_corporate_information__first_input
+  required: true
+- id: q46
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Thông tin Tập đoàn Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "Các mảng hoạt động chính của Vingroup hiện gồm những nhóm
+    nào?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_corporate_information__scenario
+  required: true
+- id: q47
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Thông tin Tập đoàn Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "Các mảng hoạt động chính của Vingroup hiện gồm những nhóm
+    nào?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_corporate_information__first_input
+  required: true
+- id: q48
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Các thương hiệu thành viên Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "Đang lái xe, cho tôi biết Vinmec cung cấp dịch vụ gì?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_member_brands__scenario
+  required: true
+- id: q49
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Các thương hiệu thành viên Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "Đang lái xe, cho tôi biết Vinmec cung cấp dịch vụ gì?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_member_brands__first_input
+  required: true
+- id: q50
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Các thương hiệu thành viên Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "Vinhomes phát triển những loại hình bất động sản nào?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_member_brands__scenario
+  required: true
+- id: q51
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Các thương hiệu thành viên Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "Vinhomes phát triển những loại hình bất động sản nào?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_member_brands__first_input
+  required: true
+- id: q52
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Các thương hiệu thành viên Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "Vinpearl có những dịch vụ nghỉ dưỡng nào?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_member_brands__scenario
+  required: true
+- id: q53
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Các thương hiệu thành viên Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "Vinpearl có những dịch vụ nghỉ dưỡng nào?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_member_brands__first_input
+  required: true
+- id: q54
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Các thương hiệu thành viên Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "VinSchool là trường học hay trung tâm đào tạo?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_member_brands__scenario
+  required: true
+- id: q55
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Các thương hiệu thành viên Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "VinSchool là trường học hay trung tâm đào tạo?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_member_brands__first_input
+  required: true
+- id: q56
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Các thương hiệu thành viên Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "VinUniversity đào tạo những lĩnh vực nào?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_member_brands__scenario
+  required: true
+- id: q57
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Các thương hiệu thành viên Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "VinUniversity đào tạo những lĩnh vực nào?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_member_brands__first_input
+  required: true
+- id: q58
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Các thương hiệu thành viên Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "So sánh giúp tôi dịch vụ của Vinmec và Vinpearl."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_member_brands__scenario
+  required: true
+- id: q59
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Các thương hiệu thành viên Vingroup.
+
+    Tham khảo — một người dùng khác đã nói: "So sánh giúp tôi dịch vụ của Vinmec và Vinpearl."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: vingroup_member_brands__first_input
+  required: true

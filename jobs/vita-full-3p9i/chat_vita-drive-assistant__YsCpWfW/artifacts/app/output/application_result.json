@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 5,
+  "seed": {
+    "rowId": "row-0186",
+    "scenario": "Tôi đang tập trung lái xe trên đoạn đường đông đúc thì bản nhạc hiện tại phát ra hơi lớn và làm tôi mất tập trung. Tôi cần tạm dừng ngay lập tức.",
+    "firstInput": "Tạm dừng nhạc.",
+    "intentCode": "communication_media",
+    "subintentCode": "playback_control",
+    "subintentName": "Điều khiển phát",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-9f3c655902f2"
+  }
+}

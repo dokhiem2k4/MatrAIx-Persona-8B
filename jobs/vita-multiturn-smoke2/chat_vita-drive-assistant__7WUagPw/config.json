@@ -1,0 +1,76 @@
+{
+    "task": {
+        "path": "application/tasks/chat_vita-drive-assistant",
+        "git_url": null,
+        "git_commit_id": null,
+        "name": null,
+        "ref": null,
+        "overwrite": false,
+        "download_dir": null,
+        "source": null
+    },
+    "trial_name": "chat_vita-drive-assistant__7WUagPw",
+    "trials_dir": "jobs/vita-multiturn-smoke2",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+        "name": "persona-user-sim",
+        "import_path": null,
+        "model_name": "openrouter/google/gemini-3.8-flash",
+        "skills": [],
+        "override_timeout_sec": null,
+        "override_setup_timeout_sec": null,
+        "max_timeout_sec": null,
+        "extra_allowed_hosts": [],
+        "kwargs": {
+            "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-0252555c74ec.yaml",
+            "seed": {
+                "row_id": "row-0120",
+                "scenario": "Tôi đang lái xe một mình trên đường về sau buổi họp kéo dài, đột nhiên nhận ra pin điện thoại gần hết và cần tìm trạm sạc gấp.",
+                "first_input": "Vita, tìm trạm sạc xe điện gần nhất.",
+                "intent_code": "journey_navigation_places",
+                "subintent_code": "destination_poi",
+                "subintent_name": "Tìm điểm đến/POI",
+                "vehicle_state": "driving",
+                "ASSISTANT_MODE": "quiet",
+                "persona_id": "wiki-0252555c74ec"
+            },
+            "model_info": {
+                "max_input_tokens": 72000,
+                "max_output_tokens": 16384
+            }
+        },
+        "env": {},
+        "mcp_servers": []
+    },
+    "environment": {
+        "type": "host",
+        "import_path": null,
+        "force_build": false,
+        "delete": true,
+        "cpu_enforcement_policy": "auto",
+        "memory_enforcement_policy": "auto",
+        "override_cpus": null,
+        "override_memory_mb": null,
+        "override_storage_mb": null,
+        "override_gpus": null,
+        "override_tpu": null,
+        "mounts": null,
+        "extra_docker_compose": [],
+        "env": {},
+        "kwargs": {},
+        "extra_allowed_hosts": []
+    },
+    "verifier": {
+        "override_timeout_sec": null,
+        "max_timeout_sec": null,
+        "env": {},
+        "disable": false
+    },
+    "artifacts": [],
+    "extra_instruction_paths": [],
+    "job_id": "ac7b2c98-b30f-41fc-83fe-69a77d3545bd"
+}

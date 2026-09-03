@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, tự dưng thấy đèn cảnh báo lốp xe trên màn hình sáng lên, không biết có vấn đề gì không nhỉ?"
+    },
+    {
+      "role": "support",
+      "content": "Mình thấy áp suất lốp hiện tại: trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Các chỉ số này đều trong ngưỡng bình thường. Đèn cảnh báo có thể do cảm biến tạm thời hoặc lốp non nhẹ. Bạn kiểm tra kỹ khi dừng xe an toàn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Thế còn mức pin xe hiện tại thì sao, có đủ đi quãng đường dài tiếp theo không?"
+    },
+    {
+      "role": "support",
+      "content": "Pin xe hiện tại ở mức 78%, ước tính đi được 312 km. Bạn có thể dựa vào con số này để tính xem có đủ cho chặng tiếp theo không nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Thế thì thoải mái rồi. Tiện thể bật giúp anh bài nhạc không lời nhẹ nhàng để thư thái tinh thần lúc lái xe nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã mở nhạc không lời nhẹ nhàng thư giãn lái xe."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

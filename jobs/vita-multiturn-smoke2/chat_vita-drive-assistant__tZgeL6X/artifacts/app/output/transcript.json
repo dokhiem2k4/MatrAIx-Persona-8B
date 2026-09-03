@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita, tìm lại lộ trình đến tòa án giúp tôi nhưng không đi đường cao tốc, đoạn này đang kẹt cứng rồi."
+    },
+    {
+      "role": "support",
+      "content": "Pha/cốt đang tắt, đèn đọc tắt, ambient tắt."
+    },
+    {
+      "role": "customer",
+      "content": "Tôi đâu có hỏi về đèn xe? Tôi đang vội đến tòa án, hãy tìm ngay tuyến đường khác tránh cao tốc để không bị kẹt xe."
+    },
+    {
+      "role": "support",
+      "content": "Pha/cốt đang tắt, đèn đọc tắt, ambient tắt."
+    },
+    {
+      "role": "customer",
+      "content": "Hệ thống bị đơ à? Tôi đang bảo đổi lộ trình bản đồ tránh tắc đường, sao cứ lặp lại tình trạng đèn thế?"
+    },
+    {
+      "role": "support",
+      "content": "Bạn muốn mình dẫn đường tới đâu?"
+    },
+    {
+      "role": "customer",
+      "content": "Dẫn đường đến Tòa án Nhân dân thành phố, nhớ chọn tuyến đường nhanh nhất và tránh đoạn cao tốc đang kẹt xe."
+    },
+    {
+      "role": "support",
+      "content": "Đã dẫn đường đến Tòa án Nhân dân thành phố, nhớ chọn tuyến đường nhanh nhất và."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

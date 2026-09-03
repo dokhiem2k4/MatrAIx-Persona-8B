@@ -1,0 +1,64 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, nhắn giúp anh cho cô Lan là anh bị kẹt xe trên cao tốc nên sẽ đến muộn khoảng mười phút nhé."
+    },
+    {
+      "role": "support",
+      "content": "Xe của mình hiện không hỗ trợ gửi tin nhắn hay thực hiện cuộc gọi, nên mình không thể nhắn giúp bạn cho cô Lan được. Bạn có thể dùng điện thoại cá nhân để nhắn nhanh khi dừng xe an toàn nhé. Cần mình giúp gì thêm không?"
+    },
+    {
+      "role": "customer",
+      "content": "Được rồi, thế em mở giúp anh nhiệt độ điều hòa hàng ghế lái giảm xuống hai độ và tăng âm lượng nhạc lên một chút cho tỉnh táo nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa, giảm nhiệt ghế lái xuống 20 độ và tăng âm lượng nhạc lên 55. Bạn lái xe tỉnh táo nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Không phải giảm nhiệt độ ghế, mà là giảm nhiệt độ điều hòa chung xuống hai độ cơ em ơi. Với lại nhiệt độ lúc nãy đang ổn rồi, em chỉnh lại nhiệt độ điều hòa về lại mức ban đầu hộ anh nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã giảm nhiệt độ điều hòa chung xuống 2 độ, sau đó đưa về mức ban đầu."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em. Giờ em tìm hộ anh trạm sạc điện gần nhất trên tuyến đường này nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình chưa thấy tuyến đường nào đang được kích hoạt để tìm trạm sạc. Bạn có thể cho mình biết điểm đến hoặc bắt đầu điều hướng trước không?"
+    },
+    {
+      "role": "customer",
+      "content": "Anh đang chạy hướng về Trung tâm Hội nghị Quốc gia, em định vị trạm sạc nhanh dọc đường giúp anh nhé."
+    },
+    {
+      "role": "support",
+      "content": ":"
+    },
+    {
+      "role": "customer",
+      "content": "Vita ơi, em nghe thấy không? Có lỗi hiển thị gì à, tìm giúp anh trạm sạc nhanh hướng về Trung tâm Hội nghị Quốc gia nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tìm được trạm sạc nhanh trên đường tới Trung tâm Hội nghị Quốc gia. Từ vị trí hiện tại, tuyến đường dài khoảng 60 km, dự kiến đến nơi trong 194 phút. Mình đã cập nhật lộ trình rồi nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em. Anh thấy ổn rồi, thế nhé."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn anh. Chúc anh lái xe an toàn, có gì cần cứ gọi mình nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

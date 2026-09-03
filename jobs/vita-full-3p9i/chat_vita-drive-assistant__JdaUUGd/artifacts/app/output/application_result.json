@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 3,
+  "seed": {
+    "rowId": "row-0168",
+    "scenario": "Tôi đang lái xe trên đường cao tốc để đến cuộc họp quan trọng, tình hình giao thông hơi đông khiến tôi có chút lo lắng. Tôi cần gửi tin nhắn thông báo đến Lan về việc sẽ đến muộn.",
+    "firstInput": "Nhắn cho Lan là tôi đến muộn mười phút.",
+    "intentCode": "communication_media",
+    "subintentCode": "messaging",
+    "subintentName": "Nhắn tin",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-9f3c655902f2"
+  }
+}

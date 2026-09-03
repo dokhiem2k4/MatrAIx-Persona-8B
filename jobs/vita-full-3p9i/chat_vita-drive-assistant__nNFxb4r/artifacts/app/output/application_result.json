@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 3,
+  "seed": {
+    "rowId": "row-0300",
+    "scenario": "Tôi đang lái xe trên tuyến quốc lộ để chuyển công tác liên tỉnh, tác phong dứt khoát và tập trung cao độ.",
+    "firstInput": "Lập tuyến đường dài.",
+    "intentCode": "energy_charging",
+    "subintentCode": "ev_routing",
+    "subintentName": "Lập tuyến EV",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

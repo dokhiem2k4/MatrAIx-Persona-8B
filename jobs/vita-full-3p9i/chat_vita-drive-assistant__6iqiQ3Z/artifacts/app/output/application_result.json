@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 3,
+  "seed": {
+    "rowId": "row-0048",
+    "scenario": "Tôi đang lái xe thì trời bất ngờ đổ những hạt mưa đầu mùa, tầm nhìn bắt đầu bị ảnh hưởng.",
+    "firstInput": "Bật gạt mưa mức thấp.",
+    "intentCode": "cabin_vehicle_control",
+    "subintentCode": "lights_mirrors_wipers",
+    "subintentName": "Đèn/gương/gạt mưa",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 3,
+  "seed": {
+    "rowId": "row-0354",
+    "scenario": "Tôi đang lái xe trên đường và muốn kiểm tra xem quá trình nạp năng lượng diễn ra thế nào.",
+    "firstInput": "Cho tôi biết tình trạng sạc hiện tại.",
+    "intentCode": "energy_charging",
+    "subintentCode": "charging_status",
+    "subintentName": "Trạng thái sạc",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-9f3c655902f2"
+  }
+}

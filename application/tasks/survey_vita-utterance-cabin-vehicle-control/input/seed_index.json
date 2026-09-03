@@ -1,0 +1,602 @@
+[
+  {
+    "questionId": "q0",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "climate",
+    "subintent_name": "Điều hòa",
+    "seed_input": "Giảm nhiệt độ điều hòa bên tài xế xuống 22 độ.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q1",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "climate",
+    "subintent_name": "Điều hòa",
+    "seed_input": "Giảm nhiệt độ điều hòa bên tài xế xuống 22 độ.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q2",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "climate",
+    "subintent_name": "Điều hòa",
+    "seed_input": "Tăng nhiệt độ điều hòa bên ghế phụ lên 24 độ giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q3",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "climate",
+    "subintent_name": "Điều hòa",
+    "seed_input": "Tăng nhiệt độ điều hòa bên ghế phụ lên 24 độ giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q4",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "climate",
+    "subintent_name": "Điều hòa",
+    "seed_input": "Tăng nhiệt độ điều hòa bên ghế phụ lên 25 độ giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q5",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "climate",
+    "subintent_name": "Điều hòa",
+    "seed_input": "Tăng nhiệt độ điều hòa bên ghế phụ lên 25 độ giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q6",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "climate",
+    "subintent_name": "Điều hòa",
+    "seed_input": "Đặt điều hòa bên lái xuống 24 độ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q7",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "climate",
+    "subintent_name": "Điều hòa",
+    "seed_input": "Đặt điều hòa bên lái xuống 24 độ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q8",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "climate",
+    "subintent_name": "Điều hòa",
+    "seed_input": "Xe đang đỗ, chỉnh điều hòa bên ghế lái xuống 22 độ giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q9",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "climate",
+    "subintent_name": "Điều hòa",
+    "seed_input": "Xe đang đỗ, chỉnh điều hòa bên ghế lái xuống 22 độ giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q10",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "climate",
+    "subintent_name": "Điều hòa",
+    "seed_input": "Trước khi khởi hành, bật điều hòa tự động ở 24 độ nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q11",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "climate",
+    "subintent_name": "Điều hòa",
+    "seed_input": "Trước khi khởi hành, bật điều hòa tự động ở 24 độ nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q12",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "seat_comfort",
+    "subintent_name": "Ghế và tiện nghi",
+    "seed_input": "Bật làm mát ghế lái mức 2.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q13",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "seat_comfort",
+    "subintent_name": "Ghế và tiện nghi",
+    "seed_input": "Bật làm mát ghế lái mức 2.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q14",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "seat_comfort",
+    "subintent_name": "Ghế và tiện nghi",
+    "seed_input": "Chỉnh tựa lưng ghế lái ngả thêm một chút.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q15",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "seat_comfort",
+    "subintent_name": "Ghế và tiện nghi",
+    "seed_input": "Chỉnh tựa lưng ghế lái ngả thêm một chút.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q16",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "seat_comfort",
+    "subintent_name": "Ghế và tiện nghi",
+    "seed_input": "Tôi hơi mỏi lưng, bật massage ghế lái giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q17",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "seat_comfort",
+    "subintent_name": "Ghế và tiện nghi",
+    "seed_input": "Tôi hơi mỏi lưng, bật massage ghế lái giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q18",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "seat_comfort",
+    "subintent_name": "Ghế và tiện nghi",
+    "seed_input": "Tắt sưởi ghế phụ phía trước.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q19",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "seat_comfort",
+    "subintent_name": "Ghế và tiện nghi",
+    "seed_input": "Tắt sưởi ghế phụ phía trước.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q20",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "seat_comfort",
+    "subintent_name": "Ghế và tiện nghi",
+    "seed_input": "Xe đang đỗ rồi, đưa ghế lái về vị trí thư giãn nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q21",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "seat_comfort",
+    "subintent_name": "Ghế và tiện nghi",
+    "seed_input": "Xe đang đỗ rồi, đưa ghế lái về vị trí thư giãn nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q22",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "seat_comfort",
+    "subintent_name": "Ghế và tiện nghi",
+    "seed_input": "Bật sưởi ghế lái mức thấp trong lúc tôi chờ nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q23",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "seat_comfort",
+    "subintent_name": "Ghế và tiện nghi",
+    "seed_input": "Bật sưởi ghế lái mức thấp trong lúc tôi chờ nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q24",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "doors_windows_trunk",
+    "subintent_name": "Cửa/kính/cốp",
+    "seed_input": "Đóng hết cửa kính lại giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q25",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "doors_windows_trunk",
+    "subintent_name": "Cửa/kính/cốp",
+    "seed_input": "Đóng hết cửa kính lại giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q26",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "doors_windows_trunk",
+    "subintent_name": "Cửa/kính/cốp",
+    "seed_input": "Hạ kính cửa bên phụ phía trước xuống một nửa.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q27",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "doors_windows_trunk",
+    "subintent_name": "Cửa/kính/cốp",
+    "seed_input": "Hạ kính cửa bên phụ phía trước xuống một nửa.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q28",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "doors_windows_trunk",
+    "subintent_name": "Cửa/kính/cốp",
+    "seed_input": "Mở kính cửa ghế lái xuống một nửa giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q29",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "doors_windows_trunk",
+    "subintent_name": "Cửa/kính/cốp",
+    "seed_input": "Mở kính cửa ghế lái xuống một nửa giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q30",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "doors_windows_trunk",
+    "subintent_name": "Cửa/kính/cốp",
+    "seed_input": "Đóng cốp xe giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q31",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "doors_windows_trunk",
+    "subintent_name": "Cửa/kính/cốp",
+    "seed_input": "Đóng cốp xe giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q32",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "doors_windows_trunk",
+    "subintent_name": "Cửa/kính/cốp",
+    "seed_input": "Hạ kính cửa ghế lái xuống một nửa.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q33",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "doors_windows_trunk",
+    "subintent_name": "Cửa/kính/cốp",
+    "seed_input": "Hạ kính cửa ghế lái xuống một nửa.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q34",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "doors_windows_trunk",
+    "subintent_name": "Cửa/kính/cốp",
+    "seed_input": "Khóa tất cả cửa xe.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q35",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "doors_windows_trunk",
+    "subintent_name": "Cửa/kính/cốp",
+    "seed_input": "Khóa tất cả cửa xe.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q36",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "lights_mirrors_wipers",
+    "subintent_name": "Đèn/gương/gạt mưa",
+    "seed_input": "Bật gạt mưa mức thấp.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q37",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "lights_mirrors_wipers",
+    "subintent_name": "Đèn/gương/gạt mưa",
+    "seed_input": "Bật gạt mưa mức thấp.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q38",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "lights_mirrors_wipers",
+    "subintent_name": "Đèn/gương/gạt mưa",
+    "seed_input": "Trời bắt đầu mưa rồi, bật gạt mưa phía trước ở tốc độ vừa giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q39",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "lights_mirrors_wipers",
+    "subintent_name": "Đèn/gương/gạt mưa",
+    "seed_input": "Trời bắt đầu mưa rồi, bật gạt mưa phía trước ở tốc độ vừa giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q40",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "lights_mirrors_wipers",
+    "subintent_name": "Đèn/gương/gạt mưa",
+    "seed_input": "Tối quá, bật đèn chiếu gần giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q41",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "lights_mirrors_wipers",
+    "subintent_name": "Đèn/gương/gạt mưa",
+    "seed_input": "Tối quá, bật đèn chiếu gần giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q42",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "lights_mirrors_wipers",
+    "subintent_name": "Đèn/gương/gạt mưa",
+    "seed_input": "Gập hai gương chiếu hậu lại.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q43",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "lights_mirrors_wipers",
+    "subintent_name": "Đèn/gương/gạt mưa",
+    "seed_input": "Gập hai gương chiếu hậu lại.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q44",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "lights_mirrors_wipers",
+    "subintent_name": "Đèn/gương/gạt mưa",
+    "seed_input": "Bật đèn trong cabin giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q45",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "lights_mirrors_wipers",
+    "subintent_name": "Đèn/gương/gạt mưa",
+    "seed_input": "Bật đèn trong cabin giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q46",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "lights_mirrors_wipers",
+    "subintent_name": "Đèn/gương/gạt mưa",
+    "seed_input": "Xe đỗ rồi, chỉnh cả hai gương về vị trí mặc định nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q47",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "lights_mirrors_wipers",
+    "subintent_name": "Đèn/gương/gạt mưa",
+    "seed_input": "Xe đỗ rồi, chỉnh cả hai gương về vị trí mặc định nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q48",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "supported_vehicle_settings",
+    "subintent_name": "Thiết lập xe được hỗ trợ",
+    "seed_input": "Chuyển xe sang chế độ lái Eco.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q49",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "supported_vehicle_settings",
+    "subintent_name": "Thiết lập xe được hỗ trợ",
+    "seed_input": "Chuyển xe sang chế độ lái Eco.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q50",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "supported_vehicle_settings",
+    "subintent_name": "Thiết lập xe được hỗ trợ",
+    "seed_input": "Tăng mức phanh tái sinh lên cao.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q51",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "supported_vehicle_settings",
+    "subintent_name": "Thiết lập xe được hỗ trợ",
+    "seed_input": "Tăng mức phanh tái sinh lên cao.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q52",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "supported_vehicle_settings",
+    "subintent_name": "Thiết lập xe được hỗ trợ",
+    "seed_input": "Đặt vô lăng sang mức trợ lực nhẹ giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q53",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "supported_vehicle_settings",
+    "subintent_name": "Thiết lập xe được hỗ trợ",
+    "seed_input": "Đặt vô lăng sang mức trợ lực nhẹ giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q54",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "supported_vehicle_settings",
+    "subintent_name": "Thiết lập xe được hỗ trợ",
+    "seed_input": "Bật chế độ tự động khóa xe khi tôi bắt đầu chạy nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q55",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "supported_vehicle_settings",
+    "subintent_name": "Thiết lập xe được hỗ trợ",
+    "seed_input": "Bật chế độ tự động khóa xe khi tôi bắt đầu chạy nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q56",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "supported_vehicle_settings",
+    "subintent_name": "Thiết lập xe được hỗ trợ",
+    "seed_input": "Đặt thời gian tự tắt nguồn phụ kiện sau khi đỗ xe thành mười phút.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q57",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "supported_vehicle_settings",
+    "subintent_name": "Thiết lập xe được hỗ trợ",
+    "seed_input": "Đặt thời gian tự tắt nguồn phụ kiện sau khi đỗ xe thành mười phút.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q58",
+    "field": "scenario",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "supported_vehicle_settings",
+    "subintent_name": "Thiết lập xe được hỗ trợ",
+    "seed_input": "Bật cảnh báo bỏ quên đồ ở hàng ghế sau giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q59",
+    "field": "first_input",
+    "intent_code": "cabin_vehicle_control",
+    "subintent_code": "supported_vehicle_settings",
+    "subintent_name": "Thiết lập xe được hỗ trợ",
+    "seed_input": "Bật cảnh báo bỏ quên đồ ở hàng ghế sau giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  }
+]

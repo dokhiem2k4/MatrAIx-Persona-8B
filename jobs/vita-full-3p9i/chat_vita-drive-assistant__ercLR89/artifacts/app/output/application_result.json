@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 7,
+  "seed": {
+    "rowId": "row-0348",
+    "scenario": "Tôi đang lái xe đi chơi xa cùng gia đình, mức pin hơi thấp nên cần lập lại lộ trình di chuyển.",
+    "firstInput": "Pin còn thấp, lập tuyến đi tiếp có điểm sạc phù hợp giúp tôi.",
+    "intentCode": "energy_charging",
+    "subintentCode": "ev_routing",
+    "subintentName": "Lập tuyến EV",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-9f3c655902f2"
+  }
+}

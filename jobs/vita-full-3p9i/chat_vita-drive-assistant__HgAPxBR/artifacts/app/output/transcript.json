@@ -1,0 +1,48 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, bật thông gió ghế lái giúp tôi nhé, hơi mỏi lưng rồi."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt thông gió ghế mức 2."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Tiện thể chỉnh điều hòa giảm xuống 22 độ và tăng quạt gió lên giúp tôi cho tỉnh táo nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã bật điều hòa, chỉnh nhiệt độ xuống 22°C và tăng quạt gió lên mức 3 rồi nhé. Hy vọng bạn tỉnh táo hơn!"
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita, không gian thoáng mát hơn nhiều rồi. Kiểm tra giúp tôi áp suất lốp 4 bánh xem ổn định chưa nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Cả bốn bánh đều trong ngưỡng ổn định, bạn yên tâm nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Tốt quá, cảm ơn Vita nhiều. Chúc tôi tìm trạm sạc gần nhất trên tuyến đường này luôn nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã kiểm tra, hiện tại xe chưa có lộ trình đang chạy. Bạn muốn mình tìm trạm sạc gần vị trí hiện tại hay thiết lập điểm đến trước nhé?"
+    },
+    {
+      "role": "customer",
+      "content": "Tìm trạm sạc quanh đây giúp tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tìm và mở đường dẫn đến trạm sạc xe điện gần đây cho bạn rồi nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

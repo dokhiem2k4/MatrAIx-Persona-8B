@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, anh chuẩn bị tới văn phòng rồi, mở giúp anh chỉ đường vào hầm gửi xe với nhé."
+    },
+    {
+      "role": "support",
+      "content": "Để mình mở Google Maps dẫn đường vào hầm gửi xe. Trước tiên cho mình hỏi: hầm gửi xe của tòa nhà nào vậy anh? Hay anh muốn dẫn tới hầm gửi xe của Technopark luôn ạ?"
+    },
+    {
+      "role": "customer",
+      "content": "Ở tòa nhà Technopark đó em, mở chỉ đường vào hầm luôn giúp anh nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã mở chỉ đường đến hầm gửi xe tòa Technopark cho bạn rồi nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em, tiện tay bật giúp anh chế độ massage nhẹ ghế lái luôn nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật massage ghế chế độ relax."
+    },
+    {
+      "role": "customer",
+      "content": "Tuyệt quá, cảm ơn em nhiều nhé."
+    },
+    {
+      "role": "support",
+      "content": "Có gì đâu bạn, mình luôn sẵn sàng giúp bạn."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

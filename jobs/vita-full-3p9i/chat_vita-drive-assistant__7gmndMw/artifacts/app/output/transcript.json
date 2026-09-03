@@ -1,0 +1,48 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, em có biết vì sao khi trời mưa phùn ngoài trời thì kính xe lại hay bị mờ hơi nước ở bên trong không?"
+    },
+    {
+      "role": "support",
+      "content": "Khi trời mưa phùn, độ ẩm ngoài trời cao, hơi nước trong cabin gặp kính lạnh sẽ ngưng tụ thành sương. Mình có thể bật sấy kính hoặc điều hòa chế độ lấy gió ngoài để hết mờ nhanh hơn. Bạn cần mình bật giúp không?"
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em, giải thích rất khoa học. Em bật giúp anh sấy kính trước và chỉnh điều hòa lấy gió ngoài nhé."
+    },
+    {
+      "role": "support",
+      "content": "VF9 baseline không hỗ trợ sưởi kính trước; đã thực hiện set_air_recirculation."
+    },
+    {
+      "role": "customer",
+      "content": "Ủa, xe VinFast VF9 mà lại không có sấy kính trước sao em? Thế em bật hộ anh quạt gió thổi thẳng lên kính lái để làm khô đi."
+    },
+    {
+      "role": "support",
+      "content": "Đã chuyển luồng gió sang chế độ defrost."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em, thế này thì kính đỡ mờ hẳn rồi. À, sẵn tiện em kiểm tra hộ anh áp suất lốp 4 bánh xem sao nhé."
+    },
+    {
+      "role": "support",
+      "content": "Dạ, áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Cảm ơn anh đã tin tưởng ạ."
+    },
+    {
+      "role": "customer",
+      "content": "Mọi thứ đều ổn cả, cảm ơn em nhiều nhé!"
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn! Có gì cần mình hỗ trợ thêm thì cứ nói nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

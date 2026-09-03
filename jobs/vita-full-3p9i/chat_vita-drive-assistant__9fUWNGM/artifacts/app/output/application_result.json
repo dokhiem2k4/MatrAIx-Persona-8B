@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 4,
+  "seed": {
+    "rowId": "row-0504",
+    "scenario": "Tôi đang lái xe qua miền Trung và muốn tìm hiểu nhanh về văn hóa ẩm thực cố đô.",
+    "firstInput": "Huế nổi tiếng với món ăn nào?",
+    "intentCode": "journey_navigation_places",
+    "subintentCode": "local_travel_information",
+    "subintentName": "Thông tin địa phương/du lịch",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-9f3c655902f2"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, đường đi đoạn này vắng quá, em kể cho anh nghe một câu chuyện vui ngắn gọn để anh giữ tinh thần tỉnh táo nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình tìm thấy một câu chuyện vui nè: Thầy giáo hỏi Tí: “Ai là con của cha mẹ em, mà lại không phải là anh chị em ruột của em?” Tí trả lời: “Đó là em, Tí ạ”. Thầy rất hài lòng. Hy vọng giúp bạn tỉnh táo hơn trên đường."
+    },
+    {
+      "role": "customer",
+      "content": "Câu chuyện cũng được đấy. Nhân tiện, em kiểm tra giúp anh dung lượng pin xe hiện tại còn bao nhiêu phần trăm nhé."
+    },
+    {
+      "role": "support",
+      "content": "Pin xe mình hiện còn 78% bạn ạ, đi được khoảng 312 km nữa."
+    },
+    {
+      "role": "customer",
+      "content": "Tốt rồi. Em bật giúp anh điều hòa hàng ghế lái giảm xuống 22 độ C và tăng quạt gió lên mức trung bình nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa, chỉnh nhiệt độ hàng ghế lái xuống 22°C và tăng quạt gió lên mức trung bình rồi bạn nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

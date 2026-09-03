@@ -1,0 +1,48 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, pin xe sắp yếu rồi, tìm giúp tôi trạm sạc nào gần nhất trên tuyến đường cao tốc này nhé."
+    },
+    {
+      "role": "support",
+      "content": "Xe đang đỗ và pin còn 78%, đi được 312 km, chưa có điểm đến trên bản đồ. Bạn muốn đặt điểm đến là trạm sạc gần nhất trên cao tốc nào nhỉ?"
+    },
+    {
+      "role": "customer",
+      "content": "Đâu mà 78%, xe tôi đang chạy cao tốc và pin thực tế còn dưới 20% rồi. Bạn tìm lại trạm sạc gần nhất trên tuyến cao tốc Long Thành đi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tìm thấy trạm sạc gần nhất trên cao tốc Long Thành – Dầu Giây: Trạm dừng nghỉ Cao tốc Số 1 tại Km 41+100, xã Sông Nhạn, huyện Cẩm Mỹ, Đồng Nai. Ngoài ra, gần khu vực Long Thành còn có trạm VinFast tại Vincom+ Long Thành (251 Lê Duẩn) và trạm sạc tại Cửa hàng xăng dầu KCN Long Thành."
+    },
+    {
+      "role": "customer",
+      "content": "Chọn luôn trạm dừng nghỉ Km 41+100 trên cao tốc Long Thành giúp tôi nhé, đồng thời bật luôn chế độ lái Eco để tiết kiệm pin tối đa."
+    },
+    {
+      "role": "support",
+      "content": "Đã chọn trạm dừng nghỉ Km 41+100 trên cao tốc Long Thành và bắt đầu chỉ đường. Tuy nhiên, chế độ lái Eco hiện chưa thể bật do xe đang di chuyển. Bạn vui lòng chuyển về số P để mình kích hoạt nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Tôi đang chạy tốc độ cao trên cao tốc thế này thì làm sao về số P được. Thôi được rồi, bạn bật giúp sưởi ghế nhẹ một chút và chỉnh quạt gió lên mức vừa nhé."
+    },
+    {
+      "role": "support",
+      "content": "Xe mình không hỗ trợ sưởi ghế bạn nhé. Còn quạt gió thì mình sẽ chỉnh lên mức 3 – mức vừa phải, được không?"
+    },
+    {
+      "role": "customer",
+      "content": "Được, bạn chỉnh quạt gió mức 3 giúp tôi. Cảm ơn Vita nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt quạt gió mức 3."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

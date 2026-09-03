@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 4,
+  "seed": {
+    "rowId": "row-0042",
+    "scenario": "Tôi đang lái xe qua đoạn đường đang thi công nhiều bụi bẩn, cần đóng kín các cửa sổ ngay lập tức.",
+    "firstInput": "Đóng hết cửa kính lại.",
+    "intentCode": "cabin_vehicle_control",
+    "subintentCode": "doors_windows_trunk",
+    "subintentName": "Cửa/kính/cốp",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

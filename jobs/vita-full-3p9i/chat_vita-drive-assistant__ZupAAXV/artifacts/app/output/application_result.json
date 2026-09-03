@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 6,
+  "seed": {
+    "rowId": "row-0534",
+    "scenario": "Tôi đang lái xe qua các vùng đất mới, lòng đầy hứng thú với lịch sử và văn hóa địa phương.",
+    "firstInput": "Vita cho biết Huế nổi tiếng với những món ăn nào.",
+    "intentCode": "journey_navigation_places",
+    "subintentCode": "local_travel_information",
+    "subintentName": "Thông tin địa phương/du lịch",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

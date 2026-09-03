@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 4,
+  "seed": {
+    "rowId": "row-0138",
+    "scenario": "Tôi đang lái xe một mình trên đường cao tốc để đến văn phòng tỉnh ủy chuẩn bị cho cuộc họp chiến lược định kỳ, tâm trạng khá tập trung và nghiêm túc.",
+    "firstInput": "Kiểm tra lịch trình hôm nay cho tôi.",
+    "intentCode": "calendar_tasks",
+    "subintentCode": "calendar_query",
+    "subintentName": "Tra cứu",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, kết nối điện thoại qua Bluetooth giúp tôi với, tôi muốn bật danh sách nhạc nghe chút cho thư thái."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật Bluetooth thành công. Bạn có thể ghép nối điện thoại và mở danh sách nhạc nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Tiện thể kiểm tra hộ tôi luôn áp suất lốp 4 bánh xem sao nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Các chỉ số đều trong ngưỡng an toàn."
+    },
+    {
+      "role": "customer",
+      "content": "Tốt quá, cảm ơn Vita nha. Giờ hạ nhiệt độ điều hòa bên ghế lái xuống 21 độ giúp tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt nhiệt độ ghế lái 21 độ."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, cho tôi hỏi chiếc VF9 này trang bị tổng cộng bao nhiêu túi khí vậy?"
+    },
+    {
+      "role": "support",
+      "content": "VF9 được trang bị tổng cộng 11 túi khí an toàn, bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "11 túi khí, khá đầy đủ và an toàn cho một chiếc xe cỡ lớn thế này. Nhân tiện, kiểm tra giùm tôi áp suất lốp 4 bánh xem sao."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Các chỉ số đều trong ngưỡng an toàn."
+    },
+    {
+      "role": "customer",
+      "content": "Tốt lắm. Giữ nguyên nhiệt độ điều hòa 22 độ cho khu vực của tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Nhiệt độ bên lái đang là 22°C rồi, mình giữ nguyên nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}
