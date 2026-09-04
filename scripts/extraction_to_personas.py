@@ -137,7 +137,20 @@ def main() -> int:
         )
 
     manifest = {
+        # ``count`` is the key PersonaPoolService reads; a manifest without it
+        # reports a pool of 0 and never falls through to counting the files.
+        "count": len(personas),
+        "kind": "dataset",
         "datasetId": args.out.name,
+        # ``personas`` is what load_manifest reads; without it the loader
+        # returns an empty list and never falls through to globbing, so the
+        # pool counts but cannot be opened. Filenames rather than dicts: given
+        # a dict, load_manifest takes it verbatim and never opens the YAML, so
+        # display_name and dimensions go missing and the card falls back to a
+        # synthesised name.
+        "personas": [
+            "persona_{}.yaml".format(p.persona_id) for p in personas
+        ],
         "sourceShard": str(args.shard),
         "sourceRef": args.source_ref,
         "assignmentType": args.assignment_type,

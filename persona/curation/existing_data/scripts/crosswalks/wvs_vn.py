@@ -117,13 +117,61 @@ def _primary_language(row):
 
 
 def _urbanicity(row):
-    """Binary Urban/Rural cannot place someone on the four-way schema scale."""
-    token = _token(row, "H_URBRURAL", "h_urbrural", "urbrural")
-    if not token:
-        return None
-    if token.startswith("2") or "rural" in token:
+    """Settlement type, not the binary Urban/Rural flag.
+
+    ``H_URBRURAL`` is two-way and cannot place anyone on the schema's four-way
+    scale, so an earlier version of this crosswalk left urbanicity null for
+    every urban respondent -- which is most of them. ``H_SETTLEMENT`` carries
+    the five-way breakdown the schema actually wants.
+    """
+    token = _token(row, "H_SETTLEMENT", "h_settlement")
+    for needle, label in (
+        ("capital city", "Dense urban"),
+        ("regional center", "Dense urban"),
+        ("district center", "Small town"),
+        ("another city", "Small town"),
+        ("village", "Rural"),
+    ):
+        if needle in token:
+            return label
+    # Fall back to the binary flag: Rural is unambiguous, Urban is not.
+    binary = _token(row, "H_URBRURAL", "h_urbrural", "urbrural")
+    if binary.startswith("2") or "rural" in binary:
         return "Rural"
     return None
+
+
+#: Provinces the schema names individually. The 4-bit attribute packing caps a
+#: dimension at 16 values while the WVS sample covers 18 provinces, so the three
+#: smallest -- Quang Nam, Dak Lak, Gia Lai -- resolve to "Other" rather than
+#: being dropped. All five centrally-governed cities are kept: that is where
+#: traffic, parking and journey length differ most for an in-car assistant.
+_NAMED_LOCALITIES = (
+    "ha noi", "ho chi minh", "hai phong", "da nang", "can tho",
+    "thanh hoa", "an giang", "nghe an", "tien giang", "son la",
+    "hoa binh", "dong nai", "hai duong", "thai binh", "binh duong",
+)
+
+
+def _locality(row):
+    """Province as reported in 2020 -- NOT wired into CROSSWALK.
+
+    Vietnam merged its 63 provinces into 34 units on 1 July 2025, so several
+    provinces this survey names (Hai Duong, Binh Duong, Thai Binh) no longer
+    exist. Mapping them onto current units needs the official merger table;
+    guessing would put real respondents in the wrong place. Kept here because
+    the raw values remain useful if that table is added later.
+    """
+    token = _token(row, "N_REGION_ISO", "n_region_iso", "N_TOWN", "n_town")
+    if not token:
+        return None
+    # Labels read "VN-HN Ha Noi" or "VN: Ha Noi".
+    name = token.split(" ", 1)[-1].strip() if " " in token else token
+    name = name.replace("vn:", "").strip()
+    for province in _NAMED_LOCALITIES:
+        if province in name:
+            return province.title()
+    return "Other"
 
 
 def _children(row):
