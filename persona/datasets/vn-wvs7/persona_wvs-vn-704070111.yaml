@@ -1,0 +1,102 @@
+persona_id: wvs-vn-704070111
+version: '1.0'
+source: wvs_wave7_vnm_2020
+display_name: VN 704070111 (Man, 18-24)
+dimensions:
+  age_bracket: 18-24
+  cult_vietnam: Native
+  demo_children_count: None
+  demo_citizenship_status: Citizen by birth
+  demo_employment_status: Full-time
+  demo_marital_status: Single
+  demo_religion_affiliation: None
+  gender_identity: Man
+  highest_education: Associate's
+  lang_vietnamese: Native
+  primary_language: Vietnamese
+  region: Southeast Asia
+  religiosity: Spiritual
+  socioeconomic_band: Middle
+  trust_level: Skeptical
+grounding:
+  age_bracket:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070111
+    confidence: 1.0
+  cult_vietnam:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070111
+    confidence: 1.0
+  demo_children_count:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070111
+    confidence: 1.0
+  demo_citizenship_status:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070111
+    confidence: 1.0
+  demo_employment_status:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070111
+    confidence: 1.0
+  demo_marital_status:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070111
+    confidence: 1.0
+  demo_religion_affiliation:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070111
+    confidence: 1.0
+  gender_identity:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070111
+    confidence: 1.0
+  highest_education:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070111
+    confidence: 1.0
+  lang_vietnamese:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070111
+    confidence: 1.0
+  primary_language:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070111
+    confidence: 1.0
+  region:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070111
+    confidence: 1.0
+  religiosity:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070111
+    confidence: 1.0
+  socioeconomic_band:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070111
+    confidence: 1.0
+  trust_level:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070111
+    confidence: 1.0
+grounding_summary:
+  scoreable: 15
+  byAssignmentType:
+    observed: 15
+  sources:
+  - wvs_wave7_vnm_2020

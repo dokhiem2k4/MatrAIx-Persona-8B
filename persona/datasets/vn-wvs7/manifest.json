@@ -1,0 +1,20 @@
+{
+  "datasetId": "vn-wvs7",
+  "sourceShard": "persona/curation/existing_data/raw/wvs_vn/extraction_v1/shard_00.jsonl.gz",
+  "sourceRef": "wvs_wave7_vnm_2020",
+  "assignmentType": "observed",
+  "personaCount": 1200,
+  "skippedBelowMinDims": 0,
+  "grounding": {
+    "personas": 1200,
+    "scoreableMean": 15.69,
+    "scoreableMin": 13,
+    "scoreableMax": 17,
+    "byAssignmentType": {
+      "observed": 18833
+    },
+    "sources": [
+      "wvs_wave7_vnm_2020"
+    ]
+  }
+}
