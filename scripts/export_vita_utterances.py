@@ -122,7 +122,9 @@ def main() -> None:
         rows.extend(pending.values())
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    with args.output.open("w", encoding="utf-8", newline="") as handle:
+    # utf-8-sig so Excel reads the Vietnamese rows as UTF-8 instead of falling
+    # back to the machine's ANSI codepage. Readers use utf-8-sig too.
+    with args.output.open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=COLUMNS)
         writer.writeheader()
         writer.writerows(rows)

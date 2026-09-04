@@ -145,7 +145,10 @@ def main() -> int:
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     csv_path = args.out.with_suffix(".csv")
-    with csv_path.open("w", encoding="utf-8", newline="") as handle:
+    # utf-8-sig, not utf-8: the rows are Vietnamese, and Excel decodes a
+    # BOM-less CSV with the machine's ANSI codepage -- "Tôi" arrives as
+    # "TÃ´i". The BOM is how Excel is told the file is UTF-8.
+    with csv_path.open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=COLUMNS, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(rows)

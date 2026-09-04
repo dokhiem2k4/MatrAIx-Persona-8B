@@ -282,7 +282,9 @@ def main() -> int:
     parser.add_argument("--jobs-dir", default="jobs")
     args = parser.parse_args()
 
-    with args.dataset.open(encoding="utf-8") as handle:
+    # utf-8-sig reads both BOM-prefixed and plain UTF-8; plain utf-8 would turn
+    # the first header into "﻿intent_code" and silently blank that column.
+    with args.dataset.open(encoding="utf-8-sig") as handle:
         rows = list(csv.DictReader(handle))
     if not rows:
         parser.error("dataset {} has no rows".format(args.dataset))

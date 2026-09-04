@@ -74,7 +74,9 @@ def export_job(job_dir: Path, out_csv: Path) -> list[dict[str, str]]:
         raise RuntimeError(
             "export failed for {}: {}".format(job_dir, (result.stderr or "").strip()[:300])
         )
-    with out_csv.open(encoding="utf-8") as handle:
+    # utf-8-sig reads both BOM-prefixed and plain UTF-8; plain utf-8 would turn
+    # the first header into "﻿intent_code" and silently blank that column.
+    with out_csv.open(encoding="utf-8-sig") as handle:
         return list(csv.DictReader(handle))
 
 
@@ -108,7 +110,9 @@ def main() -> int:
             merged.extend(usable)
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    with args.out.open("w", encoding="utf-8", newline="") as handle:
+    # utf-8-sig: this workbook is opened in Excel, which decodes a BOM-less
+    # CSV with the machine's ANSI codepage and mangles every Vietnamese row.
+    with args.out.open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=COLUMNS, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(merged)
