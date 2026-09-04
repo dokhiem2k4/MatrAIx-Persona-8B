@@ -1,6 +1,32 @@
 persona_id: vn-drv-032
 version: '1.0'
 source: vn-driver
+sources:
+  full_dag:
+    values: 1266
+    assignment_types:
+      generated: 1266
+    measured: false
+  wvs_wave7_vnm_2020:
+    values: 16
+    assignment_types:
+      observed: 16
+    measured: true
+  vn_driver_survey_2026:
+    values: 8
+    assignment_types:
+      observed: 8
+    measured: true
+  vn_names:
+    values: 1
+    assignment_types:
+      generated: 1
+    measured: false
+  vn_localities:
+    values: 1
+    assignment_types:
+      generated: 1
+    measured: false
 display_name: Lý Thị Lan
 dimensions:
   acad_algebra: Interested

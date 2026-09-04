@@ -1,6 +1,32 @@
 persona_id: vn-drv-005
 version: '1.0'
 source: vn-driver
+sources:
+  full_dag:
+    values: 1265
+    assignment_types:
+      generated: 1265
+    measured: false
+  wvs_wave7_vnm_2020:
+    values: 17
+    assignment_types:
+      observed: 17
+    measured: true
+  vn_driver_survey_2026:
+    values: 8
+    assignment_types:
+      observed: 8
+    measured: true
+  vn_names:
+    values: 1
+    assignment_types:
+      generated: 1
+    measured: false
+  vn_localities:
+    values: 1
+    assignment_types:
+      generated: 1
+    measured: false
 display_name: Hồ Thị Thanh
 dimensions:
   acad_algebra: Interested

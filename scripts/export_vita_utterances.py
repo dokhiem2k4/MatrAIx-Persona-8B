@@ -127,7 +127,7 @@ def main() -> None:
         writer.writeheader()
         writer.writerows(rows)
 
-    print(f"{len(rows)} dòng → {args.output}")
+    print(f"{len(rows)} rows -> {args.output}")
     by_model: dict[str, int] = {}
     for row in rows:
         by_model[row["model"]] = by_model.get(row["model"], 0) + 1

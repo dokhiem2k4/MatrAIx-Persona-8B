@@ -37,7 +37,7 @@ PICK = """
   // Innermost match: the outer wrapper also "contains" the text but has no handler.
   const hit = cands[cands.length - 1];
   hit.click();
-  return 'picked <' + hit.tagName + '> ' + (hit.textContent||'').trim().slice(0,40) + ' | ứng viên=' + cands.length;
+  return 'picked <' + hit.tagName + '> ' + (hit.textContent||'').trim().slice(0,40) + ' | candidates=' + cands.length;
 })()
 """
 
@@ -103,7 +103,7 @@ async def main() -> int:
             await asyncio.sleep(6)
             print("  picker:", await ev(OPEN_PICKER))
             await asyncio.sleep(1.5)
-            print("  chọn  :", await ev(PICK % json.dumps(WANT_POOL)))
+            print("  select:", await ev(PICK % json.dumps(WANT_POOL)))
             await asyncio.sleep(5)
 
             for _ in range(20):
@@ -116,16 +116,16 @@ async def main() -> int:
                     print()
                     for c in cards:
                         n, cd, ch = c["name"], c["code"], c["chip"]
-                        print("  TÊN {:>4}px (cần {:>4}px) {} {!r}".format(
-                            n["w"], n["need"], "CẮT CHỮ" if n["clipped"] else "đủ    ", n["text"][:26]))
+                        print("  NAME {:>4}px (needs {:>4}px) {} {!r}".format(
+                            n["w"], n["need"], "CLIPPED" if n["clipped"] else "fits   ", n["text"][:26]))
                     bad = [c for c in cards if c["name"]["w"] == 0 or not c["name"]["text"]]
                     clip = [c for c in cards if c["name"]["clipped"]]
                     print()
-                    print("tên rộng 0px: {}/{} | tên bị cắt chữ: {}/{}".format(
+                    print("zero-width names: {}/{} | clipped names: {}/{}".format(
                         len(bad), len(cards), len(clip), len(cards)))
                     return 1 if (bad or clip) else 0
                 await asyncio.sleep(1.5)
-            print("không tìm thấy thẻ persona nào")
+            print("no persona cards found on the page")
             return 2
     finally:
         proc.terminate()

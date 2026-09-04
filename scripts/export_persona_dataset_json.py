@@ -45,54 +45,6 @@ SUMMARY_KEYS = (
     "domain", "life_stage", "intent",
 )
 
-#: The schema's 43 categories, for the by-name layout. The English original is
-#: kept in the file's `nhomChieu` legend, so nothing is lost by translating.
-CATEGORY_VI = {
-    "Demographic: Core": "Nhân khẩu: Cơ bản",
-    "Demographic: Life Events": "Nhân khẩu: Biến cố cuộc đời",
-    "Demographic: Cultural": "Nhân khẩu: Văn hoá",
-    "Demographic: Family": "Nhân khẩu: Gia đình",
-    "Linguistic: Language": "Ngôn ngữ: Thứ tiếng",
-    "Linguistic: Communication": "Ngôn ngữ: Cách giao tiếp",
-    "Learning: Academic": "Học tập: Kiến thức hàn lâm",
-    "Learning: Style": "Học tập: Phong cách học",
-    "Professional: Career": "Nghề nghiệp: Sự nghiệp",
-    "Professional: Industry": "Nghề nghiệp: Ngành",
-    "Expertise: Domains": "Chuyên môn: Lĩnh vực",
-    "Expertise: Skills": "Chuyên môn: Kỹ năng",
-    "Skills: Tools": "Kỹ năng: Công cụ",
-    "Skills: Programming": "Kỹ năng: Lập trình",
-    "Personality: Big Five": "Tính cách: Big Five",
-    "Personality: Character": "Tính cách: Phẩm chất",
-    "Personality: MBTI": "Tính cách: MBTI",
-    "Personality: Relationships": "Tính cách: Quan hệ",
-    "Worldview: Beliefs": "Thế giới quan: Niềm tin",
-    "Values & Motivation": "Giá trị & Động lực",
-    "Risk & Decision": "Rủi ro & Ra quyết định",
-    "State: Emotional": "Trạng thái: Cảm xúc",
-    "Behavior: Habits": "Hành vi: Thói quen",
-    "Behavior: Preferences": "Hành vi: Sở thích",
-    "Behavior: Time": "Hành vi: Thời gian",
-    "Behavior: Work": "Hành vi: Công việc",
-    "Interests: Media": "Sở thích: Truyền thông",
-    "Interests: Topics": "Sở thích: Chủ đề",
-    "Interests: Culture": "Sở thích: Văn hoá",
-    "Interests: Hobbies": "Sở thích: Thú vui",
-    "Interests: Sports": "Sở thích: Thể thao",
-    "Interests: Food": "Sở thích: Ẩm thực",
-    "Health: Physical": "Sức khoẻ: Thể chất",
-    "Health: Fitness": "Sức khoẻ: Rèn luyện",
-    "Health: Lifestyle": "Sức khoẻ: Lối sống",
-    "Developer: AI Workflow Tasks": "Lập trình viên: Tác vụ AI",
-    "Developer: Agent Adoption": "Lập trình viên: Dùng agent",
-    "Developer: Code Maintenance": "Lập trình viên: Bảo trì mã",
-    "Developer: AI Adoption": "Lập trình viên: Tiếp nhận AI",
-    "Developer: Technology Evaluation": "Lập trình viên: Đánh giá công nghệ",
-    "Developer: Open Source Behavior": "Lập trình viên: Mã nguồn mở",
-    "Developer: Professional Context": "Lập trình viên: Bối cảnh nghề",
-    "Developer: Community Behavior": "Lập trình viên: Cộng đồng",
-}
-
 
 def build_catalog(used: list[str]) -> dict:
     """Describe every dimension present, so the file explains itself."""
@@ -123,6 +75,14 @@ def build_by_name(pool: Path) -> dict:
     program and unreadable for a person. Here each person gets a summary, then
     the dimensions they actually answered, then everything the graph generated
     grouped by subject area.
+
+    Keys and group names are English, matching the schema. Vietnamese is
+    display, and display belongs in a label pack the UI applies at render
+    time -- not baked into the field names of a data file, where it would
+    fork the schema per locale and break every consumer that does not read
+    Vietnamese. Each entry carries `labelVi` so a reader still gets the
+    Vietnamese, and the UI keeps rendering from `dimensions.labels.vi.json`
+    exactly as before.
     """
     personas = load_personas(pool)
     if not personas:
@@ -142,8 +102,7 @@ def build_by_name(pool: Path) -> dict:
         return (val_label_vi.get(key) or {}).get(str(value), value)
 
     def cat(key: str) -> str:
-        raw = (spec.get(key) or {}).get("category") or "Other"
-        return CATEGORY_VI.get(raw, raw)
+        return (spec.get(key) or {}).get("category") or "Other"
 
     people: dict = {}
     for p in personas:
@@ -154,41 +113,56 @@ def build_by_name(pool: Path) -> dict:
 
         # Two personas can share a generated name, so the key carries the id.
         # Keying on the name alone would silently drop one of them.
-        person_key = "{} — {}".format(p["name"], p["id"])
+        person_key = "{} ({})".format(p["name"], p["id"])
 
         measured: dict = {}
         for k in obs_keys:
             if k not in p["dims"]:
                 continue
             meta = p["grounding"].get(k) or {}
-            measured[_unique(measured, lab(k), k)] = {
-                "chieu": k,
-                "giaTri": val(k, p["dims"][k]),
-                "giaTriGoc": p["dims"][k],
-                "nguon": meta.get("source_ref"),
-                "bangChung": meta.get("evidence"),
+            measured[k] = {
+                "label": (spec.get(k) or {}).get("label", k),
+                "labelVi": lab(k),
+                "value": p["dims"][k],
+                "valueVi": val(k, p["dims"][k]),
+                "source": meta.get("source_ref"),
+                "evidence": meta.get("evidence"),
             }
 
         generated: dict = {}
         for k in sorted(p["dims"]):
             if k in obs_set:
                 continue
-            group = generated.setdefault(cat(k), {})
-            group[_unique(group, lab(k), k)] = val(k, p["dims"][k])
+            generated.setdefault(cat(k), {})[k] = {
+                "label": (spec.get(k) or {}).get("label", k),
+                "labelVi": lab(k),
+                "value": p["dims"][k],
+                "valueVi": val(k, p["dims"][k]),
+            }
 
         people[person_key] = {
-            "ma": p["id"],
-            "ten": p["name"],
-            "tomTat": {
-                lab(k): val(k, p["dims"][k]) for k in SUMMARY_KEYS if p["dims"].get(k)
+            "personaId": p["id"],
+            "displayName": p["name"],
+            "pool": p["source"],
+            "sources": p.get("sources") or {},
+            "groundingSummary": p["summary"],
+            "summary": {
+                k: {
+                    "label": (spec.get(k) or {}).get("label", k),
+                    "labelVi": lab(k),
+                    "value": p["dims"][k],
+                    "valueVi": val(k, p["dims"][k]),
+                }
+                for k in SUMMARY_KEYS
+                if p["dims"].get(k)
             },
-            "soChieu": {
-                "doDuoc": len(measured),
-                "sinhRa": sum(len(g) for g in generated.values()),
-                "tong": len(p["dims"]),
+            "dimensionCounts": {
+                "measured": len(measured),
+                "generated": sum(len(g) for g in generated.values()),
+                "total": len(p["dims"]),
             },
-            "doDuocTuNguoiThat": measured,
-            "sinhRaTuDoThi": generated,
+            "measured": measured,
+            "generated": generated,
         }
 
     return {
@@ -196,28 +170,27 @@ def build_by_name(pool: Path) -> dict:
         "datasetId": manifest.get("datasetId") or pool.name,
         "personaCount": len(personas),
         "dimensionCount": rep["dimension_count"],
-        "cachDoc": {
-            "nguoi": "Khoá là 'Tên — mã persona'. Hai người có thể trùng tên nên mã luôn đi kèm.",
-            "tomTat": "Vài chiều chính, để nhìn phát biết ngay là ai.",
-            "doDuocTuNguoiThat": "Các chiều là câu trả lời của người thật. Chỉ những chiều này là "
-                                 "số liệu đo; mỗi chiều ghi rõ nguồn và bằng chứng.",
-            "sinhRaTuDoThi": "Phần còn lại, lấy mẫu từ đồ thị tổng hợp có ghim các chiều đã đo. "
-                             "Nhất quán với phần đo được, nhưng KHÔNG phải số liệu đo và không "
-                             "bao giờ được tính điểm.",
-            "giaTriGoc": "Giá trị tiếng Anh đúng như trong schema, dùng khi cần lọc/so khớp bằng máy.",
+        "howToRead": {
+            "people": "Keyed by 'Display name (personaId)'. Two personas can share a generated "
+                      "name, so the id is always part of the key.",
+            "summary": "A few headline dimensions, enough to recognise who this is.",
+            "measured": "Dimensions a real respondent answered. These are the ONLY measurements "
+                        "in the file; each carries its source and evidence.",
+            "generated": "Everything else, sampled from the synthesis graph with the measured "
+                         "dimensions pinned, grouped by the schema's subject categories. "
+                         "Consistent with the measured layer but NOT measurement, and never "
+                         "scoreable.",
+            "labels": "Keys and `value` are the canonical English schema values -- filter and "
+                      "join on those. `labelVi` and `valueVi` are display text from "
+                      "persona/schema/labels/dimensions.labels.vi.json, the same pack the web UI "
+                      "renders from.",
+            "sources": "Per persona: how many values each source supplied, and whether that "
+                       "source is measurement or generation.",
         },
         "provenance": flat["provenance"],
         "overlap": flat["overlap"],
-        "nhomChieu": {vi: en for en, vi in CATEGORY_VI.items()},
-        "nguoi": people,
+        "people": people,
     }
-
-
-def _unique(bucket: dict, label: str, key: str) -> str:
-    """Keep a readable label as the key without ever overwriting a sibling."""
-    if label not in bucket:
-        return label
-    return "{} ({})".format(label, key)
 
 
 def build(pool: Path, *, catalog: bool) -> dict:

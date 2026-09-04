@@ -150,12 +150,40 @@ class GroundedPersona:
     def sources(self) -> list[str]:
         return sorted({g.source_ref for g in self.grounding.values() if g.source_ref})
 
+    def source_breakdown(self) -> dict[str, dict[str, Any]]:
+        """Per source: how many values it supplied, and under which types.
+
+        A bare list of source names invites the reading that they all carry
+        equal weight. They do not -- one survey answers a dozen dimensions
+        while the graph fills over a thousand -- so the counts travel with the
+        names.
+        """
+        by_ref: dict[str, dict[str, int]] = {}
+        for g in self.grounding.values():
+            if not g.source_ref:
+                continue
+            entry = by_ref.setdefault(g.source_ref, {})
+            entry[g.assignment_type] = entry.get(g.assignment_type, 0) + 1
+        return {
+            ref: {
+                "values": sum(counts.values()),
+                "assignment_types": dict(sorted(counts.items())),
+                "measured": any(t in SCOREABLE for t in counts),
+            }
+            for ref, counts in sorted(by_ref.items(), key=lambda kv: -sum(kv[1].values()))
+        }
+
     def to_yaml_dict(self) -> dict[str, Any]:
         """Payload for the persona YAML. `grounding` sits beside `dimensions`."""
         return {
             "persona_id": self.persona_id,
             "version": self.version,
             "source": self.source or "+".join(self.sources()) or "unknown",
+            # Where every value in this file came from, at the top where it is
+            # read. `source` above is only the short pool label, and the full
+            # list otherwise sits in grounding_summary -- below 1,291 lines of
+            # dimensions, which is nowhere.
+            "sources": self.source_breakdown(),
             "display_name": self.display_name,
             "dimensions": dict(sorted(self.dimensions.items())),
             "grounding": {

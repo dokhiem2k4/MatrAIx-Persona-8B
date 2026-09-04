@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
-"""Kiểm tra persona tài xế Việt Nam theo chuẩn vn_driver_persona.
+"""Check Vietnamese driver personas against the vn_driver_persona standard.
 
-Chuẩn: persona/human_extraction/standards/vn_driver_persona_v1.json
+Standard: persona/human_extraction/standards/vn_driver_persona_v1.json
 
-Bổ sung cho validate_extraction.py chứ không thay thế. Cái kia kiểm tra tính hợp
-lệ với schema; cái này kiểm tra thêm ba thứ mà một bộ persona dùng để chấm trợ lý
-trên xe bắt buộc phải có:
+Complements validate_extraction.py rather than replacing it. That one checks
+schema validity; this checks the three things a persona set used to score an
+in-car assistant cannot do without:
 
-  1. Đủ Tier A       -- thiếu một chiều là persona đó không so sánh được với
-                        persona khác trên chiều ấy.
-  2. Đủ điều kiện    -- người không lái xe thì không chấm trợ lý trên xe.
-  3. Độ phủ đồng đều -- trên 541 persona hiện có, độ phủ dao động 7-1290 chiều.
-                        Chênh lệch đó biến thành biến gây nhiễu khi đọc điểm.
+  1. Tier A complete  -- a missing dimension means that persona cannot be
+                         compared with any other on it.
+  2. Eligibility      -- someone who does not drive cannot rate a car assistant.
+  3. Coverage parity  -- across the 541 personas on hand, coverage ranges from
+                         7 to 1,290 dimensions. That gap becomes a confound
+                         when the scores are read.
 
-Dùng:
+Usage:
     uv run python scripts/validate_vn_driver_persona.py --input drivers.jsonl
     uv run python scripts/validate_vn_driver_persona.py --input 'persona/datasets/**/persona_*.yaml'
 """
@@ -35,10 +36,10 @@ SCHEMA = REPO_ROOT / "persona/schema/dimensions.json"
 
 
 def load_records(pattern: str) -> Iterator[tuple[str, dict[str, Any]]]:
-    """Yield (nhãn, dimensions) từ .jsonl(.gz) hoặc persona YAML."""
+    """Yield (label, dimensions) from .jsonl(.gz) or persona YAML."""
     paths = sorted(glob.glob(pattern, recursive=True))
     if not paths:
-        raise SystemExit("không khớp file nào: {}".format(pattern))
+        raise SystemExit("no files matched: {}".format(pattern))
     for path in paths:
         p = Path(path)
         if p.suffix in {".jsonl", ".gz"} or p.name.endswith(".jsonl.gz"):
@@ -63,14 +64,14 @@ def load_records(pattern: str) -> Iterator[tuple[str, dict[str, Any]]]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--input", required=True, help="glob tới jsonl(.gz) hoặc persona yaml")
+    parser.add_argument("--input", required=True, help="glob for jsonl(.gz) or persona yaml")
     parser.add_argument("--standard", type=Path, default=STANDARD)
     parser.add_argument("--schema", type=Path, default=SCHEMA)
     parser.add_argument("--max-report", type=int, default=12)
     parser.add_argument(
         "--skip-eligibility",
         action="store_true",
-        help="bỏ qua kiểm tra biết-lái-xe (dùng khi soi kho persona cũ)",
+        help="skip the drives-a-car check (for auditing older persona pools)",
     )
     args = parser.parse_args()
 
@@ -93,17 +94,17 @@ def main() -> int:
         for dim_id, value in dims.items():
             spec = schema.get(dim_id)
             if spec is None:
-                bad_values.append("{}: {} = khoá ngoài schema".format(label, dim_id))
+                bad_values.append("{}: {} = key not in schema".format(label, dim_id))
                 continue
             if value is None:
                 continue
             text = str(value)
-            # "None" chỉ là rác khi enum của chiều đó không nhận nó.
+            # "None" is only junk when the dimension's enum does not admit it.
             if text in forbidden and text not in map(str, spec["values"]):
-                bad_values.append("{}: {} = {!r} (chuỗi rác, phải là null)".format(label, dim_id, text))
+                bad_values.append("{}: {} = {!r} (junk string, should be null)".format(label, dim_id, text))
                 continue
             if text not in map(str, spec["values"]):
-                bad_values.append("{}: {} = {!r} (ngoài enum)".format(label, dim_id, text))
+                bad_values.append("{}: {} = {!r} (outside enum)".format(label, dim_id, text))
                 continue
             filled += 1
         grounded.append(filled)
@@ -118,12 +119,12 @@ def main() -> int:
             if status not in elig["mustBeOneOf"]:
                 ineligible.append("{}: {} = {!r}".format(label, elig["dimension"], status or None))
 
-    print("chuẩn      : {} v{}".format(std["standardId"], std["version"]))
-    print("persona    : {}".format(n))
+    print("standard   : {} v{}".format(std["standardId"], std["version"]))
+    print("personas   : {}".format(n))
     if grounded:
         stdev = statistics.pstdev(grounded) if len(grounded) > 1 else 0.0
         print(
-            "độ phủ     : TB {:.1f} | min {} | max {} | độ lệch {:.1f}".format(
+            "coverage   : mean {:.1f} | min {} | max {} | stdev {:.1f}".format(
                 statistics.mean(grounded), min(grounded), max(grounded), stdev
             )
         )
@@ -131,54 +132,54 @@ def main() -> int:
     errors = 0
 
     incomplete = {d: c for d, c in missing_counts.items() if c}
-    print("\n-- Tier A ({} chiều bắt buộc) --".format(len(tier_a)))
+    print("\n-- Tier A ({} required dimensions) --".format(len(tier_a)))
     if incomplete:
         errors += sum(incomplete.values())
         for dim_id, c in sorted(incomplete.items(), key=lambda kv: -kv[1])[: args.max_report]:
-            print("   THIẾU  {:28s} {}/{} persona".format(dim_id, c, n))
+            print("   MISSING  {:28s} {}/{} personas".format(dim_id, c, n))
         if len(incomplete) > args.max_report:
-            print("   ... còn {} chiều nữa".format(len(incomplete) - args.max_report))
+            print("   ... and {} more dimensions".format(len(incomplete) - args.max_report))
     else:
-        print("   OK — đủ ở toàn bộ persona")
+        print("   OK -- complete on every persona")
 
-    print("\n-- Giá trị hợp lệ --")
+    print("\n-- Value validity --")
     if bad_values:
         errors += len(bad_values)
-        print("   {} giá trị không hợp lệ".format(len(bad_values)))
+        print("   {} invalid values".format(len(bad_values)))
         for line in bad_values[: args.max_report]:
             print("   {}".format(line))
         if len(bad_values) > args.max_report:
-            print("   ... còn {} lỗi nữa".format(len(bad_values) - args.max_report))
+            print("   ... and {} more".format(len(bad_values) - args.max_report))
     else:
-        print("   OK — mọi giá trị nằm trong enum")
+        print("   OK -- every value is inside its enum")
 
     if not args.skip_eligibility:
-        print("\n-- Đủ điều kiện lái xe --")
+        print("\n-- Driving eligibility --")
         if ineligible:
             errors += len(ineligible)
-            print("   {}/{} persona không lái xe".format(len(ineligible), n))
+            print("   {}/{} personas do not drive".format(len(ineligible), n))
             for line in ineligible[: args.max_report]:
                 print("   {}".format(line))
         else:
-            print("   OK — mọi persona đều lái xe")
+            print("   OK -- every persona drives")
 
-    print("\n-- Độ phủ đồng đều --")
+    print("\n-- Coverage parity --")
     limit = std["coverageParity"]["maxGroundedStdevInBatch"]
     if len(grounded) > 1:
         stdev = statistics.pstdev(grounded)
         if stdev > limit:
             errors += 1
             print(
-                "   LỆCH  độ lệch chuẩn {:.1f} > ngưỡng {} — chênh lệch độ phủ sẽ lẫn vào điểm số".format(
+                "   SKEWED  stdev {:.1f} > limit {} -- uneven coverage will leak into the scores".format(
                     stdev, limit
                 )
             )
         else:
-            print("   OK — độ lệch chuẩn {:.1f} <= {}".format(stdev, limit))
+            print("   OK -- stdev {:.1f} <= {}".format(stdev, limit))
     else:
-        print("   (bỏ qua, chỉ có 1 persona)")
+        print("   (skipped, only one persona)")
 
-    print("\n{}".format("ĐẠT" if errors == 0 else "KHÔNG ĐẠT — {} lỗi".format(errors)))
+    print("\n{}".format("PASS" if errors == 0 else "FAIL -- {} problem(s)".format(errors)))
     return 0 if errors == 0 else 1
 
 

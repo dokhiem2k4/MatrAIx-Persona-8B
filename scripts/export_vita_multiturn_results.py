@@ -112,7 +112,7 @@ def summarise(rows: list[dict[str, Any]]) -> None:
         len(ratings), mean(ratings), min(ratings), max(ratings)
     ))
     spread = Counter(ratings)
-    print("  phân bố: " + "  ".join(
+    print("  spread: " + "  ".join(
         "{}:{}".format(score, spread[score]) for score in sorted(spread)
     ))
 
