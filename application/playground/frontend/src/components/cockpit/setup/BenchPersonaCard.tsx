@@ -95,19 +95,38 @@ export function BenchPersonaCard({
 
         <div className="min-w-0 flex-1">
           <div className="flex items-start justify-between gap-2">
-            <div className="min-w-0 flex-1 text-left">
+            {/* min-w-[5rem], not min-w-0: this block holds the identity, so it
+                is the one thing on the card that must never be squeezed away.
+                Both lines truncate, so a flex row that hands all the width to
+                the chip beside them renders the card with no name and no id --
+                which is exactly what a long source value used to do. */}
+            <div className="min-w-[7rem] flex-1 text-left">
               <div className="min-w-0">
                 <p className="truncate font-display text-[15px] font-semibold leading-tight text-text-main">
                   {displayName}
                 </p>
-                <p className="mt-1 font-mono text-[11px] tracking-wide text-text-dim">
+                {/* Truncate like the name above. Short ids ("persona-0042")
+                    fit on one line, but a longer one ("persona-vn-drv-001")
+                    wraps to four, overflows the header block and pushes the
+                    name out of the card entirely. */}
+                <p
+                  className="mt-1 truncate font-mono text-[11px] tracking-wide text-text-dim"
+                  title={codename}
+                >
                   {codename}
                 </p>
               </div>
             </div>
-            <div className="flex shrink-0 items-center gap-1">
+            {/* The chip yields before the name does: it can shrink to nothing
+                and its full value stays available on hover. */}
+            <div className="flex min-w-0 shrink items-center gap-1">
               {persona.source ? (
-                <ToneChip tone="neutral" muted className={CHIP_TEXT_CLASS}>
+                <ToneChip
+                  tone="neutral"
+                  muted
+                  className={`${CHIP_TEXT_CLASS} min-w-0 max-w-[4.5rem] truncate`}
+                  title={persona.source}
+                >
                   {persona.source}
                 </ToneChip>
               ) : null}
