@@ -98,9 +98,9 @@ def _unpack_codes(
     packed = np.frombuffer(memoryview(attributes), dtype=np.uint8)
     if packed.size < ATTRIBUTE_BYTES:
         raise ValueError(f"attributes width {packed.size} < expected {ATTRIBUTE_BYTES}")
-    codes = np.empty(ATTRIBUTE_COUNT, dtype=np.uint8)
-    codes[0::2] = packed[:ATTRIBUTE_BYTES] & 0x0F
-    codes[1::2] = (packed[: (ATTRIBUTE_COUNT // 2)] >> 4) & 0x0F
+    # One byte per attribute (see unified_dataset.schema). The previous layout
+    # packed two 4-bit codes per byte and capped a dimension at 16 values.
+    codes = packed[:ATTRIBUTE_COUNT].astype(np.uint8, copy=True)
     nulls = np.zeros(ATTRIBUTE_COUNT, dtype=np.uint8)
     if null_bitmap is not None:
         bits = np.frombuffer(memoryview(null_bitmap), dtype=np.uint8)
