@@ -129,6 +129,7 @@
     "subject_specialty": {
       "label": "Chuyên ngành",
       "values": {
+        "Machine learning": "Học máy",
         "Cardiology": "Tim mạch",
         "Constitutional law": "Luật hiến pháp",
         "Quant trading": "Giao dịch định lượng",
@@ -176,6 +177,7 @@
     "academic_field": {
       "label": "Lĩnh vực học thuật",
       "values": {
+        "Medicine": "Y khoa",
         "Law": "Luật",
         "Business": "Kinh doanh",
         "Humanities": "Nhân văn",
@@ -188,6 +190,7 @@
       "label": "Cấp độ tổ chức",
       "values": {
         "Top-tier research": "Nghiên cứu hàng đầu",
+        "Mid-tier university": "Đại học tầm trung",
         "Community college": "Cao đẳng cộng đồng",
         "Online / bootcamp": "Trực tuyến / bootcamp",
         "Self-taught": "Tự học",
@@ -209,6 +212,7 @@
       "values": {
         "Student / intern": "Sinh viên / Thực tập sinh",
         "Entry": "Nhập môn",
+        "Mid": "Cấp trung",
         "Senior": "Cấp cao",
         "Lead / Principal": "Trưởng nhóm/Chính",
         "Manager": "Quản lý",
@@ -224,6 +228,8 @@
       "values": {
         "Solo / freelance": "Làm độc lập / tự do",
         "Startup (<50)": "Startup (<50 người)",
+        "SMB (50-500)": "DNVVN (50-500)",
+        "Mid (500-5k)": "Tầm trung (500-5k)",
         "Enterprise (5k+)": "Doanh nghiệp lớn (5k+)",
         "Public sector": "Khu vực công",
         "Academia": "Giới hàn lâm"
@@ -236,6 +242,8 @@
         "Product": "Sản phẩm",
         "Research": "Nghiên cứu",
         "Design": "Thiết kế",
+        "Sales / GTM": "Kinh doanh / GTM",
+        "Marketing": "Tiếp thị",
         "Operations": "Vận hành",
         "Finance": "Tài chính",
         "HR": "Nhân sự",
@@ -271,8 +279,10 @@
     "major_life_events": {
       "label": "Sự kiện lớn trong đời",
       "values": {
+        "Migration / immigration": "Di cư / nhập cư",
         "Started a business": "Từng khởi nghiệp",
         "Health journey": "Hành trình sức khỏe",
+        "Military service": "Phục vụ quân đội",
         "Caregiving": "Chăm sóc",
         "Bereavement": "Tang chế",
         "Major relocation": "Chuyển nhà lớn",
@@ -287,7 +297,9 @@
         "South Asian": "Người Nam Á",
         "Latin": "Tiếng Latinh",
         "African": "Người châu Phi",
-        "Indigenous": "Bản địa"
+        "Middle Eastern": "Trung Đông",
+        "Indigenous": "Bản địa",
+        "Mixed / diaspora": "Pha trộn / hải ngoại"
       }
     },
     "tech_savviness": {
@@ -451,6 +463,7 @@
       "label": "Áp lực thời gian",
       "values": {
         "No rush": "Không vội",
+        "Moderate": "Vừa phải",
         "Deadline": "Hạn chót",
         "Emergency": "Khẩn cấp"
       }
@@ -468,6 +481,7 @@
       "label": "Ngữ cảnh thiết bị",
       "values": {
         "Desktop, focused": "Máy bàn, tập trung",
+        "Mobile, on-the-go": "Di động, khi di chuyển",
         "Voice assistant": "Trợ lý giọng nói",
         "Accessibility tool": "Công cụ trợ năng",
         "Low-bandwidth": "Băng thông thấp"
@@ -501,7 +515,8 @@
         "Visual": "Trực quan",
         "Auditory": "Thính giác",
         "Reading / writing": "Đọc / viết",
-        "Kinesthetic": "Vận động"
+        "Kinesthetic": "Vận động",
+        "Mixed": "Kết hợp"
       }
     },
     "media_diet": {
@@ -511,7 +526,8 @@
         "News": "Tin tức",
         "Social-media-heavy": "Dùng mạng xã hội nhiều",
         "Long-form": "Dạng dài",
-        "Video-first": "Ưu tiên video"
+        "Video-first": "Ưu tiên video",
+        "Minimal": "Rất ít"
       }
     },
     "economic_motivation": {
@@ -7762,6 +7778,7 @@
       "values": {
         "None": "Không có",
         "Low": "Thấp",
+        "Moderate": "Trung bình",
         "High": "Cao"
       }
     },
@@ -7781,7 +7798,8 @@
         "Researcher": "Nhà nghiên cứu",
         "Impulse buyer": "Mua sắm bốc đồng",
         "Bargain hunter": "Thích săn hàng rẻ",
-        "Brand loyal": "Trung thành với thương hiệu"
+        "Brand loyal": "Trung thành với thương hiệu",
+        "Minimalist": "Tối giản"
       }
     },
     "lstyle_travel_freq": {
@@ -7966,7 +7984,10 @@
       }
     },
     "lstyle_device_ecosystem": {
-      "label": "Hệ sinh thái thiết bị"
+      "label": "Hệ sinh thái thiết bị",
+      "values": {
+        "Mixed": "Kết hợp"
+      }
     },
     "lstyle_browser": {
       "label": "Trình duyệt chính",
@@ -7981,6 +8002,7 @@
       "values": {
         "Credit card": "Thẻ tín dụng",
         "Debit card": "Thẻ ghi nợ",
+        "Mobile wallet": "Ví điện tử",
         "Cash": "Tiền mặt",
         "BNPL": "Mua trước trả sau"
       }
@@ -7989,6 +8011,7 @@
       "label": "Phong cách ngân hàng",
       "values": {
         "Traditional bank": "Ngân hàng truyền thống",
+        "Neobank": "Ngân hàng số",
         "Credit union": "Quỹ tín dụng",
         "Mostly cash": "Chủ yếu tiền mặt",
         "Unbanked": "Không có tài khoản ngân hàng"
@@ -8112,6 +8135,7 @@
       "values": {
         "Very high": "Rất cao",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "None": "Không có"
       }
@@ -8131,6 +8155,7 @@
       "values": {
         "Very high": "Rất cao",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "None": "Không có"
       }
@@ -8150,6 +8175,7 @@
       "values": {
         "Very high": "Rất cao",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "None": "Không có"
       }
@@ -8169,6 +8195,7 @@
       "values": {
         "Very high": "Rất cao",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "None": "Không có"
       }
@@ -8178,6 +8205,7 @@
       "values": {
         "Very high": "Rất cao",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "None": "Không có"
       }
@@ -8187,6 +8215,7 @@
       "values": {
         "Very high": "Rất cao",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "None": "Không có"
       }
@@ -8206,6 +8235,7 @@
       "values": {
         "Very high": "Rất cao",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "None": "Không có"
       }
@@ -8215,6 +8245,7 @@
       "values": {
         "Very high": "Rất cao",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "None": "Không có"
       }
@@ -8224,6 +8255,7 @@
       "values": {
         "Very high": "Rất cao",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "None": "Không có"
       }
@@ -8233,6 +8265,7 @@
       "values": {
         "Very high": "Rất cao",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "None": "Không có"
       }
@@ -8300,6 +8333,7 @@
       "values": {
         "Very high": "Rất cao",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "None": "Không có"
       }
@@ -8318,6 +8352,7 @@
       "values": {
         "Strongly visual": "Thiên về trực quan",
         "Visual": "Trực quan",
+        "Mixed": "Cân bằng",
         "Verbal": "Bằng lời",
         "Strongly verbal": "Thiên về ngôn từ"
       }
@@ -8345,6 +8380,7 @@
       "values": {
         "Very high": "Rất cao",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "None": "Không có"
       }
@@ -8354,6 +8390,7 @@
       "values": {
         "Very high": "Rất cao",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "None": "Không có"
       }
@@ -8372,6 +8409,7 @@
       "label": "Mức dùng thuật ngữ",
       "values": {
         "Heavy": "Nặng",
+        "Moderate": "Vừa phải",
         "Light": "Nhẹ",
         "Avoids jargon": "Tránh biệt ngữ"
       }
@@ -8380,6 +8418,7 @@
       "label": "Sử dụng emoji / biểu cảm",
       "values": {
         "Heavy": "Nặng",
+        "Moderate": "Vừa phải",
         "Rare": "Hiếm",
         "Never": "Không bao giờ"
       }
@@ -8416,6 +8455,8 @@
       "label": "Khả năng di chuyển",
       "values": {
         "Full": "Đầy đủ",
+        "Mild limitation": "Hạn chế nhẹ",
+        "Moderate limitation": "Hạn chế vừa",
         "Uses mobility aid": "Dùng dụng cụ hỗ trợ đi lại"
       }
     },
@@ -8431,6 +8472,8 @@
       "label": "Thính giác",
       "values": {
         "Normal": "Bình thường",
+        "Mild loss": "Giảm nhẹ",
+        "Moderate loss": "Giảm vừa",
         "Deaf / hard of hearing": "Khiếm thính"
       }
     },
@@ -8464,6 +8507,7 @@
       "values": {
         "Very high": "Rất cao",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "None": "Không có"
       }
@@ -8473,6 +8517,7 @@
       "values": {
         "Very high": "Rất cao",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "None": "Không có"
       }
@@ -8490,6 +8535,8 @@
       "label": "Đau mãn tính",
       "values": {
         "None": "Không có",
+        "Mild": "Nhẹ",
+        "Moderate": "Vừa",
         "Severe": "Nghiêm trọng"
       }
     },
@@ -8508,6 +8555,7 @@
         "None": "Không có",
         "Allergy": "Dị ứng",
         "Religious": "Có tôn giáo",
+        "Medical": "Y tế",
         "Ethical": "Đạo đức"
       }
     },
@@ -8534,6 +8582,7 @@
       "values": {
         "Very high": "Rất cao",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "None": "Không có"
       }
@@ -8543,6 +8592,7 @@
       "values": {
         "Comprehensive": "Toàn diện",
         "Basic": "Cơ bản",
+        "Minimal": "Tối thiểu",
         "Uninsured": "Không có bảo hiểm"
       }
     },
@@ -8560,6 +8610,7 @@
       "values": {
         "Very high": "Rất cao",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "None": "Không có"
       }
@@ -8594,6 +8645,7 @@
       "label": "Nhạy cảm chuyển động",
       "values": {
         "None": "Không có",
+        "Mild": "Nhẹ",
         "Strong (reduced motion)": "Mạnh (giảm chuyển động)"
       }
     },
@@ -8601,6 +8653,7 @@
       "label": "Tình trạng chú ý",
       "values": {
         "None": "Không có",
+        "Mild": "Nhẹ",
         "Diagnosed": "Đã chẩn đoán"
       }
     },
@@ -9544,6 +9597,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9553,6 +9607,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9562,6 +9617,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9571,6 +9627,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9580,6 +9637,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9589,6 +9647,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9598,6 +9657,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9607,6 +9667,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9616,6 +9677,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9625,6 +9687,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9634,6 +9697,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9643,6 +9707,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9652,6 +9717,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9661,6 +9727,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9670,6 +9737,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9679,6 +9747,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9688,6 +9757,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9697,6 +9767,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9706,6 +9777,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9715,6 +9787,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9724,6 +9797,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9733,6 +9807,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9742,6 +9817,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9751,6 +9827,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9760,6 +9837,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9769,6 +9847,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9778,6 +9857,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9787,6 +9867,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9796,6 +9877,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9805,6 +9887,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9814,6 +9897,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9823,6 +9907,7 @@
       "values": {
         "Signature": "Chữ ký",
         "Strong": "Mạnh",
+        "Moderate": "Vừa phải",
         "Slight": "Nhẹ",
         "Absent": "Vắng mặt"
       }
@@ -9832,6 +9917,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9840,6 +9927,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9848,6 +9937,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9856,6 +9947,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9864,6 +9957,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9872,6 +9967,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9880,6 +9977,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9888,6 +9987,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9896,6 +9997,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9904,6 +10007,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9912,6 +10017,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9920,6 +10027,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9928,6 +10037,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9936,6 +10047,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9944,6 +10057,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9952,6 +10067,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9960,6 +10077,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9968,6 +10087,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9976,6 +10097,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9984,6 +10107,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -9992,6 +10117,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -10000,6 +10127,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -10008,6 +10137,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -10016,6 +10147,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -10024,6 +10157,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -10032,6 +10167,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -10040,6 +10177,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -10048,6 +10187,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -10056,6 +10197,8 @@
       "values": {
         "Core value": "Giá trị cốt lõi",
         "Important": "Quan trọng",
+        "Moderate": "Vừa phải",
+        "Minor": "Thứ yếu",
         "Irrelevant": "Không liên quan"
       }
     },
@@ -10374,6 +10517,7 @@
       "values": {
         "Strongly team": "Thích làm việc nhóm",
         "Team-leaning": "Hướng về đội nhóm",
+        "Mixed": "Cân bằng",
         "Solo-leaning": "Thiên về độc lập",
         "Strongly solo": "Thích độc lập tuyệt đối"
       }
@@ -10565,6 +10709,7 @@
     "demo_household_income": {
       "label": "Mức thu nhập hộ gia đình",
       "values": {
+        "<$25k": "Dưới 25k USD",
         "$25k-50k": "25k-50k USD",
         "$50k-100k": "50k-100k USD",
         "$100k-200k": "100k-200k USD",
@@ -10600,6 +10745,7 @@
       "values": {
         "Gen Alpha": "Thế hệ Alpha",
         "Gen Z": "Thế hệ Z",
+        "Millennial": "Thế hệ Millennial",
         "Gen X": "Thế hệ X",
         "Boomer": "Thế hệ Baby Boomer",
         "Silent": "Im lặng"
@@ -10651,6 +10797,7 @@
         "East Asian": "Người Đông Á",
         "South Asian": "Người Nam Á",
         "Southeast Asian": "Người Đông Nam Á",
+        "Middle Eastern": "Trung Đông",
         "Indigenous": "Bản địa",
         "Pacific Islander": "Đảo Thái Bình Dương",
         "Multiracial": "Đa chủng tộc"
@@ -10664,7 +10811,8 @@
         "Sensory": "Giác quan",
         "Cognitive": "Nhận thức",
         "Chronic illness": "Bệnh mãn tính",
-        "Multiple": "Nhiều"
+        "Multiple": "Nhiều",
+        "Prefers not to say": "Không muốn tiết lộ"
       }
     },
     "demo_veteran_status": {
@@ -10672,7 +10820,8 @@
         "Civilian": "Dân sự",
         "Active duty": "Tại ngũ",
         "Reserve / guard": "Dự trữ / bảo vệ",
-        "Veteran": "Kỳ cựu"
+        "Veteran": "Kỳ cựu",
+        "Military family": "Gia đình quân nhân"
       }
     },
     "demo_birth_order": {
@@ -10680,6 +10829,7 @@
       "values": {
         "Only child": "Con một",
         "Eldest": "Con cả",
+        "Middle": "Con giữa",
         "Youngest": "Trẻ nhất",
         "Twin / multiple": "Sinh đôi / nhiều"
       }
@@ -10689,7 +10839,8 @@
       "values": {
         "Same as primary": "Giống chính",
         "Bilingual home": "Nhà song ngữ",
-        "Heritage language": "Ngôn ngữ di sản"
+        "Heritage language": "Ngôn ngữ di sản",
+        "Mixed languages": "Nhiều ngôn ngữ pha trộn"
       }
     },
     "demo_political_engagement": {
@@ -10801,6 +10952,7 @@
       "label": "Nghịch cảnh từng đối mặt",
       "values": {
         "Sheltered": "Được bảo bọc",
+        "Minor setbacks": "Trắc trở nhỏ",
         "Significant struggles": "Gặp khó khăn lớn",
         "Overcame major hardship": "Vượt khó khăn lớn",
         "Ongoing hardship": "Khó khăn tiếp diễn"
@@ -10822,7 +10974,8 @@
         "Never served": "Chưa từng phục vụ",
         "Served briefly": "Phục vụ ngắn hạn",
         "Career veteran": "Kỳ cựu sự nghiệp",
-        "Combat veteran": "Cựu chiến binh"
+        "Combat veteran": "Cựu chiến binh",
+        "Military family": "Gia đình quân nhân"
       }
     },
     "lifex_entrepreneurship_history": {
@@ -10865,6 +11018,7 @@
         "Recovered from illness": "Hồi phục sau bệnh",
         "Manages chronic condition": "Quản lý bệnh mạn tính",
         "Major surgery / injury": "Phẫu thuật / chấn thương lớn",
+        "Mental health journey": "Hành trình sức khỏe tinh thần",
         "Caregiving for others": "Chăm sóc người khác"
       }
     },
@@ -10937,6 +11091,7 @@
         "Near-miss / accident": "Suýt va chạm / tai nạn",
         "Spiritual awakening": "Thức tỉnh tâm linh",
         "Reinvention": "Tái phát minh",
+        "Mentor encounter": "Gặp người dẫn dắt",
         "No single one": "Không có cái nào"
       }
     },
@@ -10966,6 +11121,7 @@
         "Extensive inline comments": "Bình luận nội tuyến nhiều",
         "Sparse inline comments": "Ít chú thích trong dòng",
         "Self-documenting code preference": "Thích mã tự tài liệu hóa",
+        "Mixed approach": "Cách tiếp cận kết hợp",
         "Docstring/documentation blocks only": "Chỉ docstring/khối tài liệu",
         "No comments": "Không có bình luận"
       }
@@ -10984,6 +11140,8 @@
       "label": "Độ dài tên trong code",
       "values": {
         "Highly verbose (long descriptive names)": "Dài dòng cao (tên mô tả dài)",
+        "Moderately verbose": "Dài dòng vừa phải",
+        "Mixed (context-dependent)": "Kết hợp (tùy ngữ cảnh)",
         "Terse abbreviated names": "Tên viết tắt ngắn gọn",
         "Single-letter names": "Tên một ký tự"
       }
@@ -11004,6 +11162,7 @@
         "Functional programming style": "Lập trình hàm",
         "Object-oriented design": "Thiết kế hướng đối tượng",
         "Procedural imperative": "Mệnh lệnh thủ tục",
+        "Mixed paradigm": "Kết hợp nhiều mô hình",
         "Data-driven": "Dựa trên dữ liệu"
       }
     },
@@ -11012,6 +11171,7 @@
       "values": {
         "Very small functions (5-10 lines)": "Hàm rất nhỏ (5-10 dòng)",
         "Small functions (10-30 lines)": "Hàm nhỏ (10-30 dòng)",
+        "Medium functions (30-100 lines)": "Hàm trung bình (30-100 dòng)",
         "Large functions (100+ lines)": "Hàm lớn (100+ dòng)",
         "Varies by context": "Tùy theo bối cảnh"
       }
@@ -11022,6 +11182,7 @@
         "Defensive with try/catch everywhere": "Bảo thủ với try/catch khắp nơi",
         "Explicit error returns/validation": "Trả về lỗi/xác thực rõ ràng",
         "Graceful degradation and recovery": "Giảm cấp và phục hồi mượt mà",
+        "Minimal error handling": "Xử lý lỗi tối thiểu",
         "Silent failure tolerance": "Chịu lỗi ngầm"
       }
     },
@@ -11029,7 +11190,9 @@
       "label": "Trừu tượng hóa & Tổng quát hóa",
       "values": {
         "Highly abstract and generic": "Trừu tượng và chung chung",
+        "Moderate abstraction": "Trừu tượng vừa phải",
         "Concrete problem-specific solutions": "Giải pháp cụ thể theo vấn đề",
+        "Mixed approach": "Cách tiếp cận kết hợp",
         "No premature abstraction": "Không trừu tượng hóa sớm"
       }
     },
@@ -11058,6 +11221,8 @@
       "values": {
         "Test-driven development (TDD)": "Phát triển hướng kiểm thử (TDD)",
         "Comprehensive unit test coverage": "Độ bao phủ unit test toàn diện",
+        "Mix of unit and integration tests": "Kết hợp unit test và integration test",
+        "Minimal testing": "Kiểm thử tối thiểu",
         "No tests": "Không có bài test"
       }
     },
@@ -11885,6 +12050,7 @@
         "Front-end developer": "Lập trình viên Front-end",
         "Back-end developer": "Lập trình viên Back-end",
         "Full-stack developer": "Lập trình viên Full-stack",
+        "Mobile developer": "Lập trình viên di động",
         "Data / ML developer": "Lập trình viên Dữ liệu / ML",
         "DevOps / SRE / infrastructure": "DevOps / SRE / hạ tầng",
         "Security engineer": "Kỹ sư bảo mật",
@@ -11903,7 +12069,8 @@
         "Independent / freelance work": "Làm việc độc lập/freelance",
         "Open-source / community work": "Mã nguồn mở / cộng đồng",
         "Academic / student work": "Học thuật / sinh viên",
-        "Personal projects": "Dự án cá nhân"
+        "Personal projects": "Dự án cá nhân",
+        "Mixed contexts": "Nhiều ngữ cảnh kết hợp"
       }
     },
     "dev_ic_manager_orientation": {
@@ -11920,7 +12087,9 @@
     "dev_toolchain_complexity": {
       "label": "Độ phức tạp chuỗi công cụ lập trình",
       "values": {
+        "Minimal toolchain": "Chuỗi công cụ tối thiểu",
         "Focused small stack": "Ngăn xếp nhỏ tập trung",
+        "Moderate multi-tool workflow": "Quy trình đa công cụ vừa phải",
         "Large integrated toolchain": "Chuỗi công cụ tích hợp lớn",
         "Highly fragmented toolchain": "Chuỗi công cụ phân mảnh cao"
       }
@@ -11930,7 +12099,9 @@
       "values": {
         "IDE / editor": "IDE / trình soạn thảo",
         "Browser / cloud workspace": "Không gian làm việc trình duyệt/đám mây",
-        "Notebook environment": "Môi trường notebook"
+        "Notebook environment": "Môi trường notebook",
+        "Mobile / embedded hardware workflow": "Quy trình di động / phần cứng nhúng",
+        "Mixed surfaces": "Nhiều môi trường kết hợp"
       }
     },
     "coding_ai_usage_frequency": {
@@ -11978,7 +12149,9 @@
       "label": "Nhận thức đe dọa việc làm từ AI",
       "values": {
         "No perceived threat": "Không thấy mối đe dọa",
+        "Minor long-term concern": "Lo ngại nhỏ dài hạn",
         "Unsure / mixed": "Không chắc / hỗn hợp",
+        "Moderate threat concern": "Lo ngại mối đe dọa vừa",
         "Serious threat concern": "Lo ngại mối đe dọa lớn"
       }
     },
@@ -12019,6 +12192,7 @@
       "label": "Tác động quy trình của agent",
       "values": {
         "Major productivity increase": "Tăng năng suất lớn",
+        "Moderate productivity increase": "Tăng năng suất vừa phải",
         "Small targeted improvement": "Cải tiến nhỏ có mục tiêu",
         "No clear change": "Không đổi rõ rệt",
         "Negative / slowdown": "Tiêu cực / chậm lại"
@@ -12053,7 +12227,8 @@
         "Concise summary only": "Chỉ tóm tắt ngắn gọn",
         "Explain decisions and tradeoffs": "Giải thích quyết định và đánh đổi",
         "Detailed step-by-step reasoning": "Lập luận từng bước chi tiết",
-        "Show diffs / tests first": "Hiện diff / test trước"
+        "Show diffs / tests first": "Hiện diff / test trước",
+        "Minimal explanation unless asked": "Giải thích tối thiểu trừ khi được hỏi"
       }
     },
     "coding_agent_context_sharing_comfort": {
@@ -12102,6 +12277,7 @@
       "values": {
         "Very low tolerance": "Chịu đựng rất kém",
         "Low tolerance with easy rollback": "Khó chấp nhận khi dễ hoàn tác",
+        "Moderate tolerance for prototypes": "Chấp nhận vừa phải với bản thử",
         "High tolerance for experimental work": "Chịu khó thử nghiệm cao",
         "Does not use agents": "Không dùng agent"
       }
@@ -12243,6 +12419,7 @@
       "values": {
         "Critical": "Chỉ trích / Quan trọng",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "Not a factor": "Không phải yếu tố"
       }
@@ -12252,6 +12429,7 @@
       "values": {
         "Critical": "Chỉ trích / Quan trọng",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "Not a factor": "Không phải yếu tố"
       }
@@ -12261,6 +12439,7 @@
       "values": {
         "Critical": "Chỉ trích / Quan trọng",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "Not a factor": "Không phải yếu tố"
       }
@@ -12270,6 +12449,7 @@
       "values": {
         "Critical": "Chỉ trích / Quan trọng",
         "High": "Cao",
+        "Moderate": "Trung bình",
         "Low": "Thấp",
         "Not a factor": "Không phải yếu tố"
       }
@@ -12279,6 +12459,8 @@
       "values": {
         "Hard blocker": "Trở ngại lớn",
         "Major concern": "Mối lo lớn",
+        "Moderate concern": "Mối lo vừa",
+        "Minor concern": "Mối lo nhỏ",
         "Not a concern": "Không đáng ngại"
       }
     },
@@ -12287,6 +12469,8 @@
       "values": {
         "Hard blocker": "Trở ngại lớn",
         "Major concern": "Mối lo lớn",
+        "Moderate concern": "Mối lo vừa",
+        "Minor concern": "Mối lo nhỏ",
         "Not a concern": "Không đáng ngại"
       }
     },
@@ -12295,6 +12479,8 @@
       "values": {
         "Hard blocker": "Trở ngại lớn",
         "Major concern": "Mối lo lớn",
+        "Moderate concern": "Mối lo vừa",
+        "Minor concern": "Mối lo nhỏ",
         "Not a concern": "Không đáng ngại"
       }
     },
@@ -12303,6 +12489,8 @@
       "values": {
         "Hard blocker": "Trở ngại lớn",
         "Major concern": "Mối lo lớn",
+        "Moderate concern": "Mối lo vừa",
+        "Minor concern": "Mối lo nhỏ",
         "Not a concern": "Không đáng ngại"
       }
     },
@@ -12335,7 +12523,8 @@
         "Search docs first": "Tìm tài liệu trước",
         "Search Stack Overflow / Q&A first": "Tìm Stack Overflow / Q&A trước",
         "Ask teammates first": "Hỏi đồng đội trước",
-        "Experiment / debug first": "Thử nghiệm / gỡ lỗi trước"
+        "Experiment / debug first": "Thử nghiệm / gỡ lỗi trước",
+        "Mixed strategy": "Chiến lược kết hợp"
       }
     },
     "developer_problem_profile": {
@@ -12377,6 +12566,7 @@
       "label": "Phong cách cộng tác pull request",
       "values": {
         "Small focused PRs": "PR nhỏ tập trung",
+        "Moderate scoped PRs": "PR phạm vi vừa",
         "Large feature PRs": "PR tính năng lớn",
         "Draft / iterative PRs": "PR nháp / lặp",
         "Review-only participant": "Chỉ tham gia review",
@@ -12429,6 +12619,7 @@
       "values": {
         "Very low": "Rất thấp",
         "Low": "Thấp",
+        "Moderate": "Trung bình",
         "High": "Cao",
         "Very high": "Rất cao"
       }
@@ -12437,6 +12628,7 @@
       "label": "Sở thích tính mô-đun code",
       "values": {
         "Highly modular small components": "Linh kiện nhỏ mô-đun cao",
+        "Moderately modular": "Mô-đun vừa phải",
         "Feature-file oriented": "Hướng tệp tính năng",
         "Monolithic / simple structure": "Nguyên khối / đơn giản",
         "Context-dependent": "Phụ thuộc ngữ cảnh"
@@ -12457,6 +12649,7 @@
       "values": {
         "Stable public API first": "Ưu tiên API công khai ổn định",
         "Internal ergonomics first": "Ưu tiên tiện ích nội bộ",
+        "Minimal API surface": "Bề mặt API tối thiểu",
         "Rapid iteration over stability": "Lặp nhanh hơn sự ổn định",
         "Framework-convention driven": "Theo quy ước framework"
       }
@@ -12477,12 +12670,14 @@
         "Structured logging / metrics by default": "Log/metric có cấu trúc mặc định",
         "Logs important flows / errors": "Ghi log luồng / lỗi quan trọng",
         "Adds observability when debugging": "Thêm khả năng quan sát khi gỡ lỗi",
+        "Minimal observability": "Khả năng quan sát tối thiểu",
         "Not applicable": "Không áp dụng"
       }
     },
     "bug_fix_scope_preference": {
       "label": "Mức độ sửa lỗi",
       "values": {
+        "Minimal targeted patch": "Bản vá tối thiểu có mục tiêu",
         "Patch plus adjacent cleanup": "Bản vá và dọn dẹp",
         "Root-cause / systemic fix": "Sửa tận gốc / toàn diện",
         "Broad refactor while fixing": "Tái cấu trúc rộng khi sửa",
