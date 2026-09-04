@@ -10,6 +10,9 @@ connection:
   baseUrlEnv: VITA_ASSISTANT_API_URL
   baseUrl: http://127.0.0.1:3001
   healthPath: /health
+  headers:
+    x-app-password: "${VITA_APP_PASSWORD}"
+    x-vehicle-session: "${TRIAL_ID}"
 protocol:
   sendMessage:
     method: POST
