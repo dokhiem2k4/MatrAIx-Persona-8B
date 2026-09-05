@@ -21,6 +21,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import sys
 from pathlib import Path
 from typing import Any
@@ -37,7 +38,13 @@ from matraix.persona_agent_context import (  # noqa: E402
 
 DEFAULT_TASK = "application/tasks/chat_vita-drive-assistant"
 DEFAULT_AGENT = "persona-user-sim"
-DEFAULT_MODEL = "openrouter/google/gemini-3.5-flash-lite"
+# The model id belongs to whichever endpoint OPENROUTER_API_BASE points at --
+# OpenRouter wants "google/gemini-...", Google's own OpenAI-compatible endpoint
+# 404s on that and wants the bare id. Reading the env keeps one repo working
+# against both, the way the locale-pack scripts already do.
+DEFAULT_MODEL = os.environ.get(
+    "MATRIX_PERSONA_MODEL", "openrouter/google/gemini-3.5-flash-lite"
+)
 PERSONA_ROOT = "persona/datasets"
 
 # Columns copied onto the seed. Everything else in the workbook is provenance
@@ -58,14 +65,22 @@ class PersonaLookupError(RuntimeError):
     """Raised when a dataset row names a persona with no file on disk."""
 
 
-def build_persona_index(repo_root: Path) -> dict[str, str]:
+def build_persona_index(repo_root: Path, pool: str | None = None) -> dict[str, str]:
     """Map ``persona_id`` -> repo-relative yaml path.
 
     The same persona can appear in several cohorts; take the lexicographically
     first path so a given dataset always generates the same job.
+
+    That tie-break is silent, though, and once two pools hold the same
+    persona_ids -- an original and a revised copy -- it always resolves to
+    whichever sorts first, with no way to ask for the other. ``pool`` names the
+    directory under ``persona/datasets`` to search instead.
     """
+    root = repo_root / PERSONA_ROOT / pool if pool else repo_root / PERSONA_ROOT
+    if not root.is_dir():
+        raise PersonaLookupError("persona pool not found: {}".format(root))
     index: dict[str, str] = {}
-    for path in sorted((repo_root / PERSONA_ROOT).rglob("persona_*.yaml")):
+    for path in sorted(root.rglob("persona_*.yaml")):
         persona_id = path.stem[len("persona_") :]
         index.setdefault(persona_id, str(path.relative_to(repo_root)))
     return index
@@ -279,6 +294,13 @@ def main() -> int:
         help="keep only the first N personas in dataset order (all their rows)",
     )
     parser.add_argument("--n-concurrent", type=int, default=1)
+    parser.add_argument(
+        "--persona-pool",
+        help=(
+            "directory under persona/datasets to resolve personas from; "
+            "without it the first pool in sort order silently wins"
+        ),
+    )
     parser.add_argument("--jobs-dir", default="jobs")
     args = parser.parse_args()
 
@@ -304,7 +326,7 @@ def main() -> int:
     try:
         agents = build_agents(
             selected,
-            persona_index=build_persona_index(REPO_ROOT),
+            persona_index=build_persona_index(REPO_ROOT, args.persona_pool),
             agent_name=args.agent,
             model_name=args.model,
         )

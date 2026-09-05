@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import argparse
 import glob
+import os
 import sys
 from pathlib import Path
 
@@ -32,13 +33,22 @@ from matraix.persona_agent_context import (  # noqa: E402
 
 TASK_GLOB = "application/tasks/survey_vita-utterance-*"
 AGENT = "persona-json-survey"
-DEFAULT_MODEL = "openrouter/google/gemini-3.5-flash-lite"
+# The model id belongs to whichever endpoint OPENROUTER_API_BASE points at --
+# OpenRouter wants "google/gemini-...", Google's own OpenAI-compatible endpoint
+# 404s on that and wants the bare id. Reading the env keeps one repo working
+# against both, the way the locale-pack scripts already do.
+DEFAULT_MODEL = os.environ.get(
+    "MATRIX_PERSONA_MODEL", "openrouter/google/gemini-3.5-flash-lite"
+)
 
 
-def persona_path_for(persona_id: str) -> str:
+def persona_path_for(persona_id: str, pool: str | None = None) -> str:
+    # Without ``pool`` the first path in sort order wins silently, which is
+    # wrong once two pools carry the same persona_ids.
+    root = "persona/datasets/{}/**".format(pool) if pool else "persona/datasets/**"
     matches = sorted(
         glob.glob(
-            str(REPO_ROOT / "persona/datasets/**" / f"persona_{persona_id}.yaml"),
+            str(REPO_ROOT / root / f"persona_{persona_id}.yaml"),
             recursive=True,
         )
     )
@@ -52,13 +62,17 @@ def main() -> int:
     parser.add_argument("--persona", action="append", required=True, dest="personas")
     parser.add_argument("--skip-intent", action="append", default=[], dest="skips")
     parser.add_argument("--model", default=DEFAULT_MODEL)
+    parser.add_argument(
+        "--persona-pool",
+        help="directory under persona/datasets to resolve personas from",
+    )
     parser.add_argument("--out-dir", type=Path, required=True)
     parser.add_argument("--job-prefix", default="vita-s1")
     parser.add_argument("--n-concurrent", type=int, default=3)
     args = parser.parse_args()
 
     paths = [str(Path(p).relative_to(REPO_ROOT)) for p in sorted(glob.glob(str(REPO_ROOT / TASK_GLOB)))]
-    persona_paths = [persona_path_for(p) for p in args.personas]
+    persona_paths = [persona_path_for(p, args.persona_pool) for p in args.personas]
     args.out_dir.mkdir(parents=True, exist_ok=True)
 
     written = []

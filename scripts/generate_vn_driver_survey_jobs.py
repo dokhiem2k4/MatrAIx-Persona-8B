@@ -17,6 +17,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import os
 from pathlib import Path
 
 import yaml
@@ -89,7 +90,12 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--pool", type=Path, default=REPO_ROOT / "persona/datasets/vn-drivers")
     ap.add_argument("--out", type=Path, default=REPO_ROOT / "configs/jobs/vn-driver-surveys")
-    ap.add_argument("--model", default="openrouter/google/gemini-3.5-flash-lite")
+    ap.add_argument(
+        "--model",
+        default=os.environ.get(
+            "MATRIX_PERSONA_MODEL", "openrouter/google/gemini-3.5-flash-lite"
+        ),
+    )
     ap.add_argument("--concurrency", type=int, default=8)
     ap.add_argument("--limit", type=int, default=None, help="use only the first N personas")
     args = ap.parse_args()
