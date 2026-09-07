@@ -41,6 +41,7 @@ def classify_case_integrity(case: dict[str, Any], first_user_message: str) -> st
 
 DECISION_KEY = "decision"
 TOOL_CALLS_KEY = "toolCalls"
+TOOL_RESULTS_KEY = "toolResults"
 
 
 def _exposure_value(exposure: Any, key: str) -> Any:
@@ -51,15 +52,57 @@ def _exposure_value(exposure: Any, key: str) -> Any:
 
 
 def observed_decision(exposure: Any) -> tuple[str, str]:
-    """Return ``(decision, source)``; source is ``structured`` or ``unavailable``.
+    """Return ``(decision, source)`` when the SUT names the decision itself.
 
-    There is deliberately no guessing branch: an assistant reply that carries no
-    structured decision is reported as unknown rather than classified by keyword,
-    which would silently invent data.
+    Kept for deployments that expose a ``decision`` field. The VoiceLab
+    deployment does not, so this falls through to ``decision_from_signals``.
     """
     value = _exposure_value(exposure, DECISION_KEY)
     text = str(value or "").strip()
     return (text, "structured") if text else ("", "unavailable")
+
+
+def observed_tool_names(exposure: Any) -> list[str]:
+    """Tool names the vehicle actually ran, from ``vehicle.results``."""
+    results = _exposure_value(exposure, TOOL_RESULTS_KEY) or []
+    names = {
+        str(r.get("tool") or "").strip()
+        for r in results
+        if isinstance(r, dict) and str(r.get("tool") or "").strip()
+    }
+    return sorted(names)
+
+
+def decision_from_signals(exposure: Any) -> tuple[str, str]:
+    """Derive the decision class from the deployment's metadata signals.
+
+    Source is ``derived``, never ``structured``: these are typed signals the
+    assistant emits about its own turn, but the mapping to the dataset's five
+    classes is this file's judgement, not the deployment's.
+
+    Two classes are deliberately NOT derived. A plain conversational answer and
+    a refusal both surface as a completed turn with no tool and no flag, so
+    picking one would invent data; those stay ``unknown``.
+    """
+    if not exposure:
+        return ("", "unavailable")
+
+    def flag(key: str) -> bool:
+        return _exposure_value(exposure, key) is True
+
+    # Order matters: a turn can raise several flags, and a missing precondition
+    # is the more specific, more actionable answer than a generic clarification.
+    if flag("needsPermission"):
+        return ("guide_precondition", "derived")
+    if flag("needsFollowUp") or flag("needsConfirmation"):
+        return ("clarify_or_offer", "derived")
+
+    results = _exposure_value(exposure, TOOL_RESULTS_KEY) or []
+    if results:
+        failed = any(isinstance(r, dict) and r.get("success") is False for r in results)
+        return ("defer_retry" if failed else "execute", "derived")
+
+    return ("", "unknown")
 
 
 def _call_signature(call: Any) -> tuple[str, str]:
@@ -95,21 +138,30 @@ def build_evaluation_payload(
     exposure = observation.get("structured_exposure") or []
     expected = dict(case.get("expected") or {})
 
+    # Prefer a decision the SUT names itself; fall back to deriving one from its
+    # metadata signals. Both paths label their source so a report can say how
+    # much of the number is inference.
     decision, decision_source = observed_decision(exposure)
-    if decision_source == "unavailable":
-        decision_match = "unknown"
+    if decision_source != "structured":
+        decision, decision_source = decision_from_signals(exposure)
+    if decision_source in ("unavailable", "unknown"):
+        decision_match = decision_source
     else:
         decision_match = (
             "match" if decision == str(expected.get("decision") or "") else "mismatch"
         )
 
-    observed_calls = _exposure_value(exposure, TOOL_CALLS_KEY) or []
-    if decision_source == "unavailable" and not observed_calls:
-        tool_match = "unknown"
-    elif tool_calls_match(expected.get("tool_calls"), observed_calls):
-        tool_match = "match"
+    # The deployment reports the tools it ran by name only, under a naming
+    # scheme the golden dataset does not share. Cases that expect NO tool are
+    # still checkable exactly -- and that is 301 of the 364.
+    observed_tools = observed_tool_names(exposure)
+    expected_calls = expected.get("tool_calls") or []
+    if not exposure:
+        tool_match = "unavailable"
+    elif not expected_calls:
+        tool_match = "match" if not observed_tools else "mismatch"
     else:
-        tool_match = "mismatch"
+        tool_match = "unmapped"
 
     integrity = classify_case_integrity(
         case, str(observation.get("first_user_message") or "")
@@ -133,6 +185,8 @@ def build_evaluation_payload(
                 _facet("input_constraint", "Ràng buộc đầu vào", "control", "categorical", str(case.get("input_constraint") or "")),
                 _facet("expected_decision", "Quyết định kỳ vọng", "evidence", "categorical", str(expected.get("decision") or "")),
                 _facet("observed_decision", "Quyết định quan sát", "evidence", "categorical", decision),
+                _facet("observed_tools", "Tool đã chạy", "evidence", "textual", ", ".join(observed_tools)),
+                _facet("sut_intent", "Intent SUT nhận", "evidence", "categorical", str(_exposure_value(exposure, "intent") or "")),
                 _facet("turn_count", "Số lượt", "metric", "continuous", int(observation.get("turn_count") or 0)),
             ],
         }

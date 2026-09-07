@@ -78,17 +78,32 @@ def main() -> int:
     )
 
     facets = facets_of(payload)
-    if facets["decision_match"] != "match" or facets["tool_call_match"] != "match":
-        fail(
-            "case {} expected {!r} but observed {!r} "
-            "(decision_match={}, tool_call_match={}, source={}, integrity={})".format(
-                facets["case_id"],
+    # Say which of the two gates blocked, and why. "expected execute but
+    # observed execute" reads as nonsense when the real blocker is the tool
+    # name table, so name the actual reason first.
+    reasons = []
+    if facets["decision_match"] != "match":
+        reasons.append(
+            "decision {} (expected {!r}, observed {!r}, source {})".format(
+                facets["decision_match"],
                 facets["expected_decision"],
                 facets["observed_decision"],
-                facets["decision_match"],
-                facets["tool_call_match"],
                 facets["decision_source"],
+            )
+        )
+    if facets["tool_call_match"] != "match":
+        detail = {
+            "unmapped": "golden tool names are not mapped to the deployment's names yet",
+            "unavailable": "the SUT returned no structured signals",
+        }.get(facets["tool_call_match"], "observed [{}]".format(facets["observed_tools"]))
+        reasons.append("tool_call {} -- {}".format(facets["tool_call_match"], detail))
+    if reasons:
+        fail(
+            "case {} ({}, integrity {}): {}".format(
+                facets["case_id"],
+                facets["error_type"],
                 facets["case_integrity"],
+                "; ".join(reasons),
             )
         )
     print("PASS: case {} matched".format(facets["case_id"]))

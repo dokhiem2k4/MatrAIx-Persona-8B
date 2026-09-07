@@ -36,13 +36,35 @@ protocol:
     sessionIdField: sessionId
     replyField: assistantText
 structuredExposure:
+  # The deployment exposes no `decision` field. What it does expose is a
+  # metadata block of typed signals plus the vehicle tool results, and those
+  # are enough to derive most of the five decision classes. Selectors are plain
+  # dot-paths (structured_exposure.py:8), not JSONPath.
   fields:
-    - key: decision
-      label: Assistant decision
-      selector: decision
-    - key: toolCalls
-      label: Tool calls
-      selector: toolCalls
+    - key: intent
+      label: Intent
+      selector: metadata.intent
+    - key: turnStatus
+      label: Turn status
+      selector: metadata.turnStatus
+    - key: needsFollowUp
+      label: Needs follow-up
+      selector: metadata.needsFollowUp
+    - key: needsConfirmation
+      label: Needs confirmation
+      selector: metadata.needsConfirmation
+    - key: needsPermission
+      label: Needs permission
+      selector: metadata.needsPermission
+    - key: riskLevel
+      label: Risk level
+      selector: metadata.riskLevel
+    - key: assistantProfileId
+      label: Assistant profile
+      selector: metadata.assistantProfileId
+    - key: toolResults
+      label: Vehicle tool results
+      selector: vehicle.results
       format: json
 artifacts:
   transcript: transcript.json

@@ -174,8 +174,10 @@ def test_payload_marks_unknown_when_decision_unavailable():
         },
     }
     facets = _facets(build_evaluation_payload(case_run, None))
-    assert facets["decision_match"] == "unknown"
-    assert facets["tool_call_match"] == "unknown"
+    # Nothing came back at all -> unavailable, which is a different problem from
+    # "the SUT answered but its signals do not separate the two classes".
+    assert facets["decision_match"] == "unavailable"
+    assert facets["tool_call_match"] == "unavailable"
     assert facets["decision_source"] == "unavailable"
 
 
@@ -205,3 +207,103 @@ def test_integrity_heuristic_has_no_false_positives_on_the_real_dataset():
     assert verdicts.count("violated") == 0
     assert verdicts.count("not_applicable") == 212
     assert verdicts.count("ok") == 152
+
+
+from case_scoring import (  # noqa: E402
+    decision_from_signals,
+    observed_tool_names,
+)
+
+
+def _exp(**kw):
+    return [{"key": k, "value": v} for k, v in kw.items()]
+
+
+def test_permission_signal_maps_to_guide_precondition():
+    assert decision_from_signals(_exp(needsPermission=True)) == ("guide_precondition", "derived")
+
+
+def test_follow_up_signal_maps_to_clarify():
+    assert decision_from_signals(_exp(needsFollowUp=True)) == ("clarify_or_offer", "derived")
+
+
+def test_confirmation_signal_maps_to_clarify():
+    assert decision_from_signals(_exp(needsConfirmation=True)) == ("clarify_or_offer", "derived")
+
+
+def test_permission_wins_over_follow_up():
+    got, _ = decision_from_signals(_exp(needsPermission=True, needsFollowUp=True))
+    assert got == "guide_precondition"
+
+
+def test_successful_tool_run_maps_to_execute():
+    exposure = _exp(turnStatus="completed", toolResults=[{"success": True, "tool": "set_hvac_temperature"}])
+    assert decision_from_signals(exposure) == ("execute", "derived")
+
+
+def test_failed_tool_run_maps_to_defer_retry():
+    exposure = _exp(turnStatus="completed", toolResults=[{"success": False, "tool": "set_hvac_temperature"}])
+    assert decision_from_signals(exposure) == ("defer_retry", "derived")
+
+
+def test_plain_answer_stays_unknown_because_metadata_cannot_tell():
+    """A conversational answer and a refusal look identical in metadata.
+
+    Forcing one of them would invent data, so this stays unknown on purpose.
+    """
+    assert decision_from_signals(_exp(turnStatus="completed", intent="general_qa")) == ("", "unknown")
+
+
+def test_empty_exposure_is_unavailable_not_unknown():
+    assert decision_from_signals([]) == ("", "unavailable")
+
+
+def test_observed_tool_names_read_from_vehicle_results():
+    exposure = _exp(toolResults=[{"success": True, "tool": "set_hvac_temperature"},
+                                 {"success": True, "tool": "get_vehicle_state"}])
+    assert observed_tool_names(exposure) == ["get_vehicle_state", "set_hvac_temperature"]
+
+
+def test_observed_tool_names_empty_when_no_tool_ran():
+    assert observed_tool_names(_exp(turnStatus="completed")) == []
+
+
+CASE_NO_TOOL = {
+    "case_id": "vg_0137",
+    "case": {"case_id": "vg_0137", "case_type": "unhappy", "group": "understanding",
+             "error_type": "missing_information", "subintent_code": "destination_poi",
+             "input_constraint": "omit_detail", "user_input": "Dẫn tôi đến đó",
+             "expected": {"decision": "clarify_or_offer", "tool_calls": []}},
+    "observation": {"first_user_message": "Dẫn giúp em tới chỗ đó với",
+                    "first_assistant_message": "Em chưa rõ ạ.",
+                    "structured_exposure": _exp(needsFollowUp=True, turnStatus="completed"),
+                    "turn_count": 2},
+}
+
+
+def test_derived_decision_scores_a_no_tool_case_end_to_end():
+    f = _facets(build_evaluation_payload(CASE_NO_TOOL, None))
+    assert f["decision_match"] == "match"
+    assert f["decision_source"] == "derived"
+    assert f["tool_call_match"] == "match"      # kỳ vọng rỗng, SUT không chạy tool
+
+
+def test_unexpected_tool_run_is_caught_without_any_name_mapping():
+    case = {**CASE_NO_TOOL, "observation": {**CASE_NO_TOOL["observation"],
+            "structured_exposure": _exp(needsFollowUp=True,
+                                        toolResults=[{"success": True, "tool": "set_hvac_temperature"}])}}
+    f = _facets(build_evaluation_payload(case, None))
+    assert f["tool_call_match"] == "mismatch"
+    assert f["observed_tools"] == "set_hvac_temperature"
+
+
+def test_case_expecting_a_tool_is_unmapped_until_the_name_table_exists():
+    case = {**CASE_NO_TOOL,
+            "case": {**CASE_NO_TOOL["case"],
+                     "expected": {"decision": "execute", "tool_calls": [{"module": "climate", "key": "set_temperature"}]}},
+            "observation": {**CASE_NO_TOOL["observation"],
+                            "structured_exposure": _exp(turnStatus="completed",
+                                                        toolResults=[{"success": True, "tool": "set_hvac_temperature"}])}}
+    f = _facets(build_evaluation_payload(case, None))
+    assert f["decision_match"] == "match"       # execute suy được
+    assert f["tool_call_match"] == "unmapped"   # tên tool chưa ánh xạ
