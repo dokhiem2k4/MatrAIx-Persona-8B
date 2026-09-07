@@ -5,6 +5,8 @@ from __future__ import annotations
 import re
 from typing import Any
 
+from tool_mapping import map_expected_tools
+
 _NUMBER = re.compile(r"\d+")
 # A capitalised word that is not the first word of a sentence reads as a proper
 # noun in Vietnamese, which is how a persona usually leaks a withheld place name.
@@ -156,12 +158,21 @@ def build_evaluation_payload(
     # still checkable exactly -- and that is 301 of the 364.
     observed_tools = observed_tool_names(exposure)
     expected_calls = expected.get("tool_calls") or []
+    wanted, no_equivalent, unmapped = map_expected_tools(expected_calls)
     if not exposure:
         tool_match = "unavailable"
     elif not expected_calls:
+        # 306 of the 364 cases land here, and they are exact: the assistant
+        # either touched the vehicle when it should not have, or it did not.
         tool_match = "match" if not observed_tools else "mismatch"
-    else:
+    elif unmapped:
         tool_match = "unmapped"
+    elif no_equivalent:
+        # The dataset expects a capability this deployment does not ship. No
+        # assistant could pass, so this is a product gap, not a wrong answer.
+        tool_match = "no_equivalent"
+    else:
+        tool_match = "match" if wanted == set(observed_tools) else "mismatch"
 
     integrity = classify_case_integrity(
         case, str(observation.get("first_user_message") or "")

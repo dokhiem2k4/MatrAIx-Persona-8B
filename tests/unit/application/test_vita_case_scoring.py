@@ -297,13 +297,99 @@ def test_unexpected_tool_run_is_caught_without_any_name_mapping():
     assert f["observed_tools"] == "set_hvac_temperature"
 
 
-def test_case_expecting_a_tool_is_unmapped_until_the_name_table_exists():
+def test_a_call_outside_the_table_is_unmapped_never_guessed():
+    """An unknown call must stall the score, not be scored as a mismatch."""
     case = {**CASE_NO_TOOL,
             "case": {**CASE_NO_TOOL["case"],
-                     "expected": {"decision": "execute", "tool_calls": [{"module": "climate", "key": "set_temperature"}]}},
+                     "expected": {"decision": "execute",
+                                  "tool_calls": [{"module": "brand_new", "key": "not_in_table"}]}},
             "observation": {**CASE_NO_TOOL["observation"],
                             "structured_exposure": _exp(turnStatus="completed",
                                                         toolResults=[{"success": True, "tool": "set_hvac_temperature"}])}}
     f = _facets(build_evaluation_payload(case, None))
-    assert f["decision_match"] == "match"       # execute suy được
-    assert f["tool_call_match"] == "unmapped"   # tên tool chưa ánh xạ
+    assert f["decision_match"] == "match"
+    assert f["tool_call_match"] == "unmapped"
+
+
+from tool_mapping import NO_EQUIVALENT, TOOL_BY_GOLDEN_CALL, map_expected_tools  # noqa: E402
+
+
+def test_every_golden_call_in_the_table_targets_a_real_tool_or_is_marked_absent():
+    """A typo in the table would silently score every affected case wrong."""
+    import json
+
+    real = {
+        t["name"]
+        for t in json.loads(
+            (
+                Path(__file__).resolve().parents[3]
+                / "application/tasks/chat_0709-vita-drive-golden-error-recovery/tests/real_tools.json"
+            ).read_text(encoding="utf-8")
+        )["tools"]
+    }
+    for gid, target in TOOL_BY_GOLDEN_CALL.items():
+        assert target == NO_EQUIVALENT or target in real, (gid, target)
+
+
+def test_every_expected_call_in_the_dataset_is_covered_by_the_table():
+    ids = {
+        "{}.{}".format(t["module"], t["key"])
+        for c in _dataset_cases()
+        for t in c["expected"]["tool_calls"]
+    }
+    assert ids - set(TOOL_BY_GOLDEN_CALL) == set()
+
+
+def _dataset_cases():
+    import json
+
+    path = (
+        Path(__file__).resolve().parents[3]
+        / "application/tasks/chat_0709-vita-drive-golden-error-recovery/input/cases.jsonl"
+    )
+    with path.open(encoding="utf-8") as handle:
+        return [json.loads(line) for line in handle if line.strip()]
+
+
+def test_mapped_case_scores_match_when_the_right_tool_ran():
+    case = {
+        "case_id": "vg_x",
+        "case": {"case_id": "vg_x", "case_type": "happy", "group": "no_error",
+                 "error_type": "happy_case", "subintent_code": "climate",
+                 "input_constraint": "none", "user_input": "x",
+                 "expected": {"decision": "execute",
+                              "tool_calls": [{"module": "climate", "key": "set_temperature"}]}},
+        "observation": {"first_user_message": "x", "first_assistant_message": "ok",
+                        "structured_exposure": _exp(turnStatus="completed",
+                            toolResults=[{"success": True, "tool": "set_hvac_temperature"}]),
+                        "turn_count": 1},
+    }
+    f = _facets(build_evaluation_payload(case, None))
+    assert f["tool_call_match"] == "match"
+    assert f["decision_match"] == "match"
+
+
+def test_capability_gap_is_labelled_not_scored_as_a_wrong_answer():
+    case = {
+        "case_id": "vg_y",
+        "case": {"case_id": "vg_y", "case_type": "happy", "group": "no_error",
+                 "error_type": "happy_case", "subintent_code": "calling",
+                 "input_constraint": "none", "user_input": "x",
+                 "expected": {"decision": "execute",
+                              "tool_calls": [{"module": "phone", "key": "make_call"}]}},
+        "observation": {"first_user_message": "x", "first_assistant_message": "ok",
+                        "structured_exposure": _exp(turnStatus="completed"),
+                        "turn_count": 1},
+    }
+    assert _facets(build_evaluation_payload(case, None))["tool_call_match"] == "no_equivalent"
+
+
+def test_map_reports_the_three_outcomes_separately():
+    names, missing, unknown = map_expected_tools(
+        [{"module": "climate", "key": "set_temperature"},
+         {"module": "phone", "key": "make_call"},
+         {"module": "nope", "key": "nope"}]
+    )
+    assert names == {"set_hvac_temperature"}
+    assert missing == ["phone.make_call"]
+    assert unknown == ["nope.nope"]
