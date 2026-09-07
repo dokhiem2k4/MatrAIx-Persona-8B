@@ -32,6 +32,7 @@ DOMAIN_COMMERCE = "commerce"
 DOMAIN_COMMERCE_RETAIL = "commerce-retail"
 DOMAIN_ARTS_CULTURE = "arts-culture"
 DOMAIN_EDUCATION = "education"
+DOMAIN_AUTOMOTIVE_AI = "automotive-ai"
 
 APPLICATION_TASK_METADATA: dict[str, dict[str, object]] = {
     "chat_meal-planning-nutrition": {
@@ -56,6 +57,17 @@ APPLICATION_TASK_METADATA: dict[str, dict[str, object]] = {
             "wouldStillContinueUse",
             "openbb",
             "multi turn chat",
+        ],
+    },
+    "chat_vita-drive-error-recovery": {
+        "type": "chatbot",
+        "domain": DOMAIN_AUTOMOTIVE_AI,
+        "tags": [
+            "in-cabin assistant",
+            "error handling",
+            "fallback",
+            "golden dataset",
+            "single turn",
         ],
     },
     "example-chat-api_support_chatbot": {

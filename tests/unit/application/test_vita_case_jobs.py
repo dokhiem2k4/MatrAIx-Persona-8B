@@ -31,3 +31,41 @@ def test_case_varies_fastest_so_a_truncated_run_still_spans_personas():
 def test_empty_inputs_produce_no_entries():
     assert build_case_agent_entries([], ["vg_0001"], "m") == []
     assert build_case_agent_entries(["p/a.yaml"], [], "m") == []
+
+
+from application.scripts.generate_vita_case_job import build_recipe, load_case_ids  # noqa: E402
+
+
+def test_smoke_selection_covers_every_error_type():
+    import json
+    from pathlib import Path
+
+    repo_root = Path(__file__).resolve().parents[3]
+    cases_path = repo_root / "application/tasks/chat_vita-drive-error-recovery/input/cases.jsonl"
+    error_type_by_id = {}
+    with cases_path.open(encoding="utf-8") as handle:
+        for line in handle:
+            if line.strip():
+                case = json.loads(line)
+                error_type_by_id[case["case_id"]] = case["error_type"]
+
+    picked = load_case_ids(per_error_type=2)
+    assert len(picked) == 20
+    assert len({error_type_by_id[case_id] for case_id in picked}) == 10
+
+
+def test_all_cases_selection_returns_the_whole_dataset():
+    assert len(load_case_ids(per_error_type=None)) == 364
+
+
+def test_recipe_shape_matches_the_job_contract():
+    recipe = build_recipe(
+        job_name="j",
+        model_name="m",
+        persona_paths=["persona/datasets/matraix-persona-dev-sample/persona_0042.yaml"],
+        case_ids=["vg_0001", "vg_0002"],
+    )
+    assert recipe["job_name"] == "j"
+    assert recipe["tasks"] == [{"path": "application/tasks/chat_vita-drive-error-recovery"}]
+    assert len(recipe["agents"]) == 2
+    assert recipe["agents"][0]["kwargs"]["case_id"] == "vg_0001"
