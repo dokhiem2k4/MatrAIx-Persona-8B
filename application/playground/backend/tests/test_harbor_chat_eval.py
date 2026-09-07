@@ -380,3 +380,50 @@ async def test_run_harbor_chat_eval_for_persona_writes_output_artifacts(
     assert uploaded["/app/output/transcript.json"]["sessionId"] == "sess-1"
     assert uploaded["/app/output/application_result.json"]["turnCount"] == 2
     assert uploaded["/app/output/user_feedback.json"]["overallExperienceRating"] == 8
+
+
+from playground.case_binding import resolve_session_body
+
+
+def _body(static_body, session_body, case):
+    return {**dict(static_body), **resolve_session_body(session_body, case)}
+
+
+def test_body_unchanged_when_no_session_body():
+    assert _body({"drivingContext": "driving"}, {}, None) == {"drivingContext": "driving"}
+
+
+def test_body_unchanged_for_case_without_state():
+    case = {"state": {"network_connectivity": None, "service_state": None}}
+    body = _body(
+        {"drivingContext": "driving"},
+        {
+            "networkConnectivity": "${case.state.network_connectivity}",
+            "serviceState": "${case.state.service_state}",
+        },
+        case,
+    )
+    assert body == {"drivingContext": "driving"}
+
+
+def test_body_carries_state_when_case_has_it():
+    case = {"state": {"network_connectivity": "offline", "service_state": None}}
+    body = _body(
+        {"drivingContext": "driving"},
+        {
+            "networkConnectivity": "${case.state.network_connectivity}",
+            "serviceState": "${case.state.service_state}",
+        },
+        case,
+    )
+    assert body == {"drivingContext": "driving", "networkConnectivity": "offline"}
+
+
+def test_session_body_overrides_static_body_on_key_clash():
+    case = {"state": {"vehicle_state": "driving"}}
+    body = _body(
+        {"drivingContext": "parking"},
+        {"drivingContext": "${case.state.vehicle_state}"},
+        case,
+    )
+    assert body == {"drivingContext": "driving"}

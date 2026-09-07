@@ -30,6 +30,10 @@ from playground.structured_exposure import (
 from playground.task_content_bundle import (
     load_task_content_bundle_for_task_path,
 )
+from playground.case_binding import (
+    build_case_run_artifact,
+    resolve_session_body,
+)
 from playground.persona_model import resolve_persona_model
 from playground.types import (
     Persona,
@@ -211,6 +215,7 @@ class HarborSidecarChatSession:
         self._api_url = api_url.rstrip("/")
         self._session_id: Optional[str] = None
         self.turns: List[Dict[str, Any]] = []
+        self.assigned_case: Optional[Dict[str, Any]] = None
 
     async def _request_json(
         self,
@@ -277,6 +282,7 @@ class HarborSidecarChatSession:
         protocol = self.runtime.protocol
         context_value = config_context(self.config)
         body: Dict[str, Any] = dict(protocol.static_body)
+        body.update(resolve_session_body(protocol.session_body, self.assigned_case))
         if protocol.session_id_field:
             body[protocol.session_id_field] = self._session_id
         if protocol.message_field:
@@ -315,6 +321,9 @@ class HarborSidecarChatSession:
 
         context_value = config_context(self.config)
         body: Dict[str, Any] = dict(self.runtime.protocol.static_body)
+        body.update(
+            resolve_session_body(self.runtime.protocol.session_body, self.assigned_case)
+        )
         if self._session_id:
             body["sessionId"] = self._session_id
         if tool_name == "upload_image":
