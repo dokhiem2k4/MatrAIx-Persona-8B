@@ -107,3 +107,9 @@ def test_missing_model_name_everywhere_raises():
 
     with pytest.raises(SystemExit):
         resolve_model_name(None, {})
+
+
+def test_chat_trials_run_on_the_host_not_in_docker():
+    """A docker trial container cannot resolve DNS, so the SUT call dies."""
+    recipe = build_recipe(job_name="j", model_name="m", persona_paths=["p.yaml"], case_ids=["vg_0001"])
+    assert recipe["environment"]["type"] == "host"

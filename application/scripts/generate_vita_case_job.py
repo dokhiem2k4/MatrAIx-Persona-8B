@@ -84,7 +84,12 @@ def build_recipe(
         "timeout_multiplier": 1.0,
         "n_concurrent_trials": 2,
         "quiet": False,
-        "environment": {"type": "docker", "delete": True},
+        # host, not docker. A chat trial drives an external HTTP SUT and needs
+        # no sandbox of its own; inside the docker environment the trial
+        # container cannot resolve DNS, so every SUT call dies with
+        # "Temporary failure in name resolution". This mirrors what the
+        # Playground backend emits for the user_sim_chat trial profile.
+        "environment": {"type": "host", "delete": True},
         "agents": build_case_agent_entries(persona_paths, case_ids, model_name),
         "tasks": [{"path": TASK_PATH}],
     }
