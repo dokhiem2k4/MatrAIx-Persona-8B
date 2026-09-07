@@ -1,0 +1,44 @@
+transport: external_http
+runtimeDefaults:
+  applicationId: vita_drive_assistant
+  applicationContext: in_cabin_driving
+  domain: automotive_ai
+  maxTurns: 2
+capabilities:
+  - text_chat
+connection:
+  baseUrlEnv: VITA_ASSISTANT_API_URL
+  baseUrl: http://127.0.0.1:3001
+  healthPath: /health
+protocol:
+  sendMessage:
+    method: POST
+    path: /api/chat
+    sessionIdField: sessionId
+    messageField: message
+    titleField: ""
+    botTypeField: ""
+    staticBody:
+      drivingContext: driving
+    sessionBody:
+      dataAvailability: ${case.state.data_availability}
+      vehicleSensor: ${case.state.vehicle_sensor}
+      networkConnectivity: ${case.state.network_connectivity}
+      serviceState: ${case.state.service_state}
+      vehicleState: ${case.state.vehicle_state}
+  response:
+    sessionIdField: sessionId
+    replyField: assistantText
+structuredExposure:
+  fields:
+    - key: decision
+      label: Assistant decision
+      selector: decision
+    - key: toolCalls
+      label: Tool calls
+      selector: toolCalls
+      format: json
+artifacts:
+  transcript: transcript.json
+  applicationResult: application_result.json
+  feedback: user_feedback.json
