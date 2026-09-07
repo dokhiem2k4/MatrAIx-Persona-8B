@@ -94,3 +94,46 @@ def test_harbor_chat_task_config_from_env_uses_task_path(tmp_path, monkeypatch) 
     assert config.connection.base_url == "http://support-api:8000"
     assert config.runtime_defaults.application_id == "acme_support_api"
     assert config.protocol.static_body["applicationContext"] == "customer_support"
+
+
+def test_session_body_is_parsed(tmp_path) -> None:
+    task_dir = tmp_path / "application" / "tasks" / "chat_vita-drive-error-recovery" / "input"
+    task_dir.mkdir(parents=True)
+    (task_dir / "chatbot.yaml").write_text(
+        "\n".join(
+            [
+                "transport: external_http",
+                "protocol:",
+                "  sendMessage:",
+                "    staticBody:",
+                "      drivingContext: driving",
+                "    sessionBody:",
+                "      networkConnectivity: ${case.state.network_connectivity}",
+                "      serviceState: ${case.state.service_state}",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    config = load_chatbot_task_config_for_task_path(
+        "application/tasks/chat_vita-drive-error-recovery", repo_root=tmp_path
+    )
+    assert config is not None
+    assert config.protocol.static_body == {"drivingContext": "driving"}
+    assert config.protocol.session_body == {
+        "networkConnectivity": "${case.state.network_connectivity}",
+        "serviceState": "${case.state.service_state}",
+    }
+
+
+def test_session_body_defaults_to_empty(tmp_path) -> None:
+    task_dir = tmp_path / "application" / "tasks" / "chat_legacy" / "input"
+    task_dir.mkdir(parents=True)
+    (task_dir / "chatbot.yaml").write_text(
+        "transport: external_http\nprotocol:\n  sendMessage:\n    path: /api/chat\n",
+        encoding="utf-8",
+    )
+    config = load_chatbot_task_config_for_task_path(
+        "application/tasks/chat_legacy", repo_root=tmp_path
+    )
+    assert config is not None
+    assert config.protocol.session_body == {}

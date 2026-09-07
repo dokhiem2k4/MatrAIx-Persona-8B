@@ -55,6 +55,7 @@ class ChatbotProtocolConfig:
     domain_field: str = ""
     context_field: str = ""
     static_body: dict[str, Any] = field(default_factory=dict)
+    session_body: dict[str, Any] = field(default_factory=dict)
     response_session_id_field: str = "sessionId"
     response_reply_field: str = "reply"
     response_turn_field: str = "turn"
@@ -177,6 +178,7 @@ def _load_from_payload(payload: dict[str, Any]) -> ChatbotTaskConfig:
             domain_field=_as_string(send.get("domainField")),
             context_field=_as_string(send.get("contextField")),
             static_body=_as_mapping(send.get("staticBody")),
+            session_body=_as_mapping(send.get("sessionBody")),
             response_session_id_field=(
                 _as_string(response.get("sessionIdField")) or "sessionId"
             ),
