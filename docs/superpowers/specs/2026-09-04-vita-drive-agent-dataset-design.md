@@ -5,8 +5,8 @@ Date: 2026-09-04
 ## Goal
 
 Produce the same three-file dataset as `data/vita-*-3p9i.*`, but driven by the
-VN-Drives persona pool against the deployed Vita agent at
-`https://136.110.11.55.nip.io`.
+VN-Drives persona pool against the deployed Vita agent, whose address and
+app password come from the environment rather than this file.
 
 Outputs:
 
@@ -84,8 +84,8 @@ Run environment:
 
 ```
 MATRIX_CHATBOT_TASK_PATH=application/tasks/chat_vita-drive-agent
-VITA_ASSISTANT_API_URL=https://136.110.11.55.nip.io
-VITA_APP_PASSWORD=test123
+VITA_ASSISTANT_API_URL=<deployment host>
+VITA_APP_PASSWORD=<deployment app password>
 OPENROUTER_API_KEY=<from application/playground/.env.local>
 ```
 
