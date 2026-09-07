@@ -10,6 +10,12 @@ connection:
   baseUrlEnv: VITA_ASSISTANT_API_URL
   baseUrl: http://127.0.0.1:3001
   healthPath: /health
+  headers:
+    # Secret stays in the environment; this file is committed.
+    x-app-password: ${VITA_APP_PASSWORD}
+    # Per-trial vehicle session. A shared session would let one trial observe
+    # the vehicle state another trial mutated.
+    x-vehicle-session: ${TRIAL_ID}
 protocol:
   sendMessage:
     method: POST
