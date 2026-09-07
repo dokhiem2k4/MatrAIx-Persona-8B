@@ -35,7 +35,7 @@ Ba bộ đã được khảo sát. Chỉ bộ 1 phục vụ được mục tiêu
 | Phân bố | 304 unhappy / 60 happy |
 | Taxonomy | 60 subintent, 10 `error_type`, 10 `group` |
 | Nhãn chấm | `expected_decision` — 5 lớp |
-| Tool call | `expected_tool_calls` JSON hợp lệ, 31 module; chỉ có ở happy case |
+| Tool call | `expected_tool_calls` 31 module; 58 case có, tất cả đều là `execute` |
 | State | 5 cột, **đúng 10 tổ hợp**, mỗi tổ hợp nhiễu một trục |
 
 Phân bố `expected_decision`: `clarify_or_offer` 155, `defer_retry` 115,
@@ -191,6 +191,12 @@ phải bảo "đừng tự sửa năm 1850 thành 1993".
 Converter phải fail cứng nếu: `expected_tool_calls` không parse được JSON,
 `expected_decision` nằm ngoài 5 lớp, hoặc gặp subintent không có trong bảng map.
 
+Một chỗ phải chuẩn hoá: **2 trong 364 dòng viết tool call bằng
+`action`/`parameters` thay vì `key`/`params`** (`vg_0064`, và dòng `Gọi điện`
+trong nhóm happy). Cùng ngữ nghĩa, khác cách viết. Converter chấp nhận alias đã
+biết rồi chuẩn hoá về `{module, key, params}`, nhưng **vẫn bắt buộc có `module`
+và `key`** sau khi chuẩn hoá — không nới lỏng luật.
+
 ## 6. Khối 2 — Gán case (dùng chung cả ba task)
 
 ### `packages/playground/src/playground/user_sim/kickoff.py`
@@ -339,8 +345,14 @@ ghi `reward.txt` 1/0.
    Nguồn `observed_decision`: ưu tiên field structured từ `structuredExposure`;
    không có thì LLM-judge phân loại từ reply. Ghi `decision_source` vào facet.
 
-2. **`tool_call_match`** — so `module` + `key`. 304 case unhappy kỳ vọng rỗng,
-   đây là assertion mạnh và rẻ. Không so `params` ở phiên bản đầu.
+2. **`tool_call_match`** — so `module` + `key`. Không so `params` ở phiên bản đầu.
+
+   Bất biến đã kiểm chứng trên dữ liệu thật: **58 case có tool call thì cả 58 đều
+   là `execute`, và 301 case không phải `execute` đều rỗng.** `case_type` *không*
+   dự đoán được điều này — 6 dòng unhappy vẫn có tool call (nhóm
+   `vehicle_state_unavailable`: cảm biến không đọc được nhưng lệnh vẫn gửi đi
+   được), và 8 dòng happy không có tool call nào (trả lời thuần hội thoại).
+   Mỗi case nhiều nhất một tool call.
 
 3. **`case_integrity`** — với 152 case có `input_constraint` khác `none`, kiểm tra
    persona có phá vỡ ràng buộc đầu vào không. Giá trị: `ok` / `violated` /

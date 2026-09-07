@@ -108,3 +108,35 @@ def test_malformed_tool_calls_raises():
 def test_unknown_subintent_raises():
     with pytest.raises(ConversionError):
         build_case_record({**HAPPY_ROW, "subintent": "Chưa có nhãn này"}, 0)
+
+
+def test_action_and_parameters_are_normalized_to_key_and_params():
+    """Two golden rows spell the tool call with ``action``/``parameters``."""
+    row = {
+        **HAPPY_ROW,
+        "subintent": "Gọi điện",
+        "expected_tool_calls": '[{"module": "phone", "action": "make_call", "parameters": {"contact_name": "anh Tuấn"}}]',
+    }
+    assert build_case_record(row, 0)["expected"]["tool_calls"] == [
+        {"module": "phone", "key": "make_call", "params": {"contact_name": "anh Tuấn"}}
+    ]
+
+
+def test_action_alias_without_parameters_defaults_to_empty_params():
+    row = {
+        **HAPPY_ROW,
+        "expected_tool_calls": '[{"module": "climate", "action": "increase_temperature"}]',
+    }
+    assert build_case_record(row, 0)["expected"]["tool_calls"] == [
+        {"module": "climate", "key": "increase_temperature", "params": {}}
+    ]
+
+
+def test_tool_call_without_any_key_spelling_still_raises():
+    with pytest.raises(ConversionError):
+        build_case_record({**HAPPY_ROW, "expected_tool_calls": '[{"module": "phone"}]'}, 0)
+
+
+def test_tool_call_without_module_still_raises():
+    with pytest.raises(ConversionError):
+        build_case_record({**HAPPY_ROW, "expected_tool_calls": '[{"key": "make_call"}]'}, 0)

@@ -1,0 +1,242 @@
+{
+  "ambiguous_request": {
+    "parent_intent_code": "fallback_handling",
+    "label_vi": "Yêu cầu mơ hồ/thiếu thông tin"
+  },
+  "calendar_create_update_cancel": {
+    "parent_intent_code": "calendar_tasks",
+    "label_vi": "Tạo/sửa/hủy lịch"
+  },
+  "calendar_query": {
+    "parent_intent_code": "calendar_tasks",
+    "label_vi": "Tra cứu"
+  },
+  "calling": {
+    "parent_intent_code": "communication_media",
+    "label_vi": "Gọi điện"
+  },
+  "charger_search": {
+    "parent_intent_code": "energy_charging",
+    "label_vi": "Tìm trạm sạc"
+  },
+  "charging_status": {
+    "parent_intent_code": "energy_charging",
+    "label_vi": "Trạng thái sạc"
+  },
+  "climate": {
+    "parent_intent_code": "cabin_vehicle_control",
+    "label_vi": "Điều hòa"
+  },
+  "comparison_recommendation": {
+    "parent_intent_code": "general_qa_conversation",
+    "label_vi": "So sánh và gợi ý lựa chọn"
+  },
+  "contact_resolution": {
+    "parent_intent_code": "communication_media",
+    "label_vi": "Xác định liên hệ"
+  },
+  "content_discovery": {
+    "parent_intent_code": "communication_media",
+    "label_vi": "Tìm nội dung"
+  },
+  "contextual_reminder": {
+    "parent_intent_code": "calendar_tasks",
+    "label_vi": "Nhắc theo thời gian, vị trí, hành trình hoặc trạng thái xe"
+  },
+  "conversation_entertainment": {
+    "parent_intent_code": "general_qa_conversation",
+    "label_vi": "Trò chuyện và giải trí"
+  },
+  "decision_support": {
+    "parent_intent_code": "general_qa_conversation",
+    "label_vi": "Hỗ trợ ra quyết định"
+  },
+  "destination_poi": {
+    "parent_intent_code": "journey_navigation_places",
+    "label_vi": "Tìm điểm đến/POI"
+  },
+  "device_service_connectivity": {
+    "parent_intent_code": "vita_profile_settings",
+    "label_vi": "Kết nối thiết bị và dịch vụ"
+  },
+  "diagnostics": {
+    "parent_intent_code": "my_car",
+    "label_vi": "Chẩn đoán"
+  },
+  "doors_windows_trunk": {
+    "parent_intent_code": "cabin_vehicle_control",
+    "label_vi": "Cửa/kính/cốp"
+  },
+  "ev_routing": {
+    "parent_intent_code": "energy_charging",
+    "label_vi": "Lập tuyến EV"
+  },
+  "expert_consultation": {
+    "parent_intent_code": "general_qa_conversation",
+    "label_vi": "Tư vấn chuyên sâu"
+  },
+  "followup_deep_dive": {
+    "parent_intent_code": "general_qa_conversation",
+    "label_vi": "Hỏi sâu nối tiếp"
+  },
+  "food_ordering": {
+    "parent_intent_code": "services_commerce",
+    "label_vi": "Đặt món ăn"
+  },
+  "general_qa": {
+    "parent_intent_code": "general_qa_conversation",
+    "label_vi": "Hỏi đáp"
+  },
+  "lights_mirrors_wipers": {
+    "parent_intent_code": "cabin_vehicle_control",
+    "label_vi": "Đèn/gương/gạt mưa"
+  },
+  "local_travel_information": {
+    "parent_intent_code": "journey_navigation_places",
+    "label_vi": "Thông tin địa phương/du lịch"
+  },
+  "maintenance_service": {
+    "parent_intent_code": "my_car",
+    "label_vi": "Bảo dưỡng/dịch vụ"
+  },
+  "messaging": {
+    "parent_intent_code": "communication_media",
+    "label_vi": "Nhắn tin"
+  },
+  "needs_more_information": {
+    "parent_intent_code": "fallback_handling",
+    "label_vi": "Cần thêm thông tin"
+  },
+  "parking_arrival": {
+    "parent_intent_code": "journey_navigation_places",
+    "label_vi": "Đỗ xe/đến nơi"
+  },
+  "permissions_privacy_data": {
+    "parent_intent_code": "vita_profile_settings",
+    "label_vi": "Quyền truy cập, quyền riêng tư và dữ liệu"
+  },
+  "playback_control": {
+    "parent_intent_code": "communication_media",
+    "label_vi": "Điều khiển phát"
+  },
+  "range_sufficiency": {
+    "parent_intent_code": "energy_charging",
+    "label_vi": "Phạm vi di chuyển"
+  },
+  "rate_limited": {
+    "parent_intent_code": "fallback_handling",
+    "label_vi": "Too many requests"
+  },
+  "restaurant_reservation": {
+    "parent_intent_code": "services_commerce",
+    "label_vi": "Đặt chỗ/nhà hàng"
+  },
+  "ride_service_booking": {
+    "parent_intent_code": "services_commerce",
+    "label_vi": "Đặt dịch vụ xe"
+  },
+  "route_management": {
+    "parent_intent_code": "journey_navigation_places",
+    "label_vi": "Lập và thay đổi tuyến"
+  },
+  "seat_comfort": {
+    "parent_intent_code": "cabin_vehicle_control",
+    "label_vi": "Ghế và tiện nghi"
+  },
+  "shopping_payment": {
+    "parent_intent_code": "services_commerce",
+    "label_vi": "Mua sắm/thanh toán"
+  },
+  "source_queue": {
+    "parent_intent_code": "communication_media",
+    "label_vi": "Nguồn/danh sách phát"
+  },
+  "supported_vehicle_settings": {
+    "parent_intent_code": "cabin_vehicle_control",
+    "label_vi": "Thiết lập xe được hỗ trợ"
+  },
+  "system_app_settings": {
+    "parent_intent_code": "vita_profile_settings",
+    "label_vi": "Cài đặt hệ thống và ứng dụng"
+  },
+  "task_management": {
+    "parent_intent_code": "calendar_tasks",
+    "label_vi": "Việc cần làm"
+  },
+  "ticket_hotel_booking": {
+    "parent_intent_code": "services_commerce",
+    "label_vi": "Đặt vé/khách sạn"
+  },
+  "traffic_eta": {
+    "parent_intent_code": "journey_navigation_places",
+    "label_vi": "Giao thông và thời gian dự kiến đến nơi (ETA)"
+  },
+  "unintelligible_input": {
+    "parent_intent_code": "fallback_handling",
+    "label_vi": "Câu vô nghĩa/nhiễu nhận dạng"
+  },
+  "unsupported_intent": {
+    "parent_intent_code": "fallback_handling",
+    "label_vi": "Unsupported intent"
+  },
+  "user_profile_account": {
+    "parent_intent_code": "vita_profile_settings",
+    "label_vi": "Hồ sơ và tài khoản người dùng"
+  },
+  "vehicle_information": {
+    "parent_intent_code": "my_car",
+    "label_vi": "Thông tin xe"
+  },
+  "vehicle_status": {
+    "parent_intent_code": "my_car",
+    "label_vi": "Trạng thái xe"
+  },
+  "verified_fact_qa": {
+    "parent_intent_code": "general_qa_conversation",
+    "label_vi": "Hỏi đáp có nguồn kiểm chứng"
+  },
+  "vinfast_brand_products": {
+    "parent_intent_code": "vinfast_vingroup_brands",
+    "label_vi": "Thương hiệu và sản phẩm VinFast"
+  },
+  "vinfast_sales_policies": {
+    "parent_intent_code": "vinfast_vingroup_brands",
+    "label_vi": "Giá bán, chính sách và chương trình VinFast"
+  },
+  "vinfast_service_network": {
+    "parent_intent_code": "vinfast_vingroup_brands",
+    "label_vi": "Hệ thống bán hàng và dịch vụ VinFast"
+  },
+  "vingroup_corporate_information": {
+    "parent_intent_code": "vinfast_vingroup_brands",
+    "label_vi": "Thông tin Tập đoàn Vingroup"
+  },
+  "vingroup_member_brands": {
+    "parent_intent_code": "vinfast_vingroup_brands",
+    "label_vi": "Các thương hiệu thành viên Vingroup"
+  },
+  "vita_capabilities_usage": {
+    "parent_intent_code": "vita_profile_settings",
+    "label_vi": "Khả năng và cách sử dụng ViTa"
+  },
+  "vita_preferences": {
+    "parent_intent_code": "vita_profile_settings",
+    "label_vi": "Tùy chọn tương tác với ViTa"
+  },
+  "volume_audio_zone": {
+    "parent_intent_code": "communication_media",
+    "label_vi": "Âm lượng/vùng âm thanh"
+  },
+  "warning_explanation": {
+    "parent_intent_code": "my_car",
+    "label_vi": "Giải thích cảnh báo"
+  },
+  "weather_news": {
+    "parent_intent_code": "general_qa_conversation",
+    "label_vi": "Thời tiết/tin tức"
+  },
+  "web_search": {
+    "parent_intent_code": "general_qa_conversation",
+    "label_vi": "Tra cứu Web"
+  }
+}

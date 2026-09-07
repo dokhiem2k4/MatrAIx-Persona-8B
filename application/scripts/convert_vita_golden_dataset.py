@@ -106,12 +106,22 @@ def _parse_tool_calls(raw: Any) -> list[dict[str, Any]]:
         raise ConversionError("expected_tool_calls is not valid JSON: {}".format(exc)) from None
     if not isinstance(parsed, list):
         raise ConversionError("expected_tool_calls must be a JSON array")
+    calls: list[dict[str, Any]] = []
     for entry in parsed:
         if not isinstance(entry, dict):
             raise ConversionError("every tool call must be a JSON object")
-        if not _text(entry.get("module")) or not _text(entry.get("key")):
+        # Two golden rows spell the call as action/parameters instead of
+        # key/params. Same meaning, different wording, so normalize rather than
+        # reject -- the module+key requirement below still holds.
+        module = _text(entry.get("module"))
+        key = _text(entry.get("key")) or _text(entry.get("action"))
+        if not module or not key:
             raise ConversionError("every tool call needs a non-empty module and key")
-    return parsed
+        params = entry.get("params")
+        if params is None:
+            params = entry.get("parameters")
+        calls.append({"module": module, "key": key, "params": params or {}})
+    return calls
 
 
 def build_case_record(row: dict[str, Any], index: int) -> dict[str, Any]:
