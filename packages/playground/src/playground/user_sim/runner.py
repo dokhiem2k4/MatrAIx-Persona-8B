@@ -404,6 +404,14 @@ async def run_playground_async(
         emit({"type": "seed", "seed": seed.to_dict()})
 
     transcript: List[PlaygroundTurn] = []
+    # Bind per-conversation settings before the first message. A
+    # deployment that only honours them through its own endpoint would
+    # otherwise run every trial at its default setting.
+    setup = getattr(session, "run_session_setup", None)
+    if setup is not None:
+        setup_result = await setup()
+        if setup_result is not None:
+            emit({"type": "session_setup", "response": setup_result})
     action = sim.opening_action()
     emit({"type": "phase", "phase": "persona_kickoff"})
 

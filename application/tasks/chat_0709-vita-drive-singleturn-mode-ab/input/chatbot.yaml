@@ -17,6 +17,14 @@ connection:
     # the vehicle state another trial mutated.
     x-vehicle-session: ${TRIAL_ID}
 protocol:
+  # The deployment ignores assistantProfileId sent beside a message -- proven by
+  # two identical replies for profiles `normal` and `cheeky`. It only binds the
+  # profile through its own endpoint, so the trial calls that first.
+  sessionSetup:
+    method: POST
+    path: /api/persona/session
+    body:
+      assistantProfileId: ${case.state.assistant_profile_id}
   sendMessage:
     method: POST
     path: /api/chat
@@ -28,10 +36,20 @@ protocol:
     sessionBody:
       drivingContext: ${case.state.vehicle_state}
       vehicleState: ${case.state.vehicle_state}
-      assistantProfileId: ${case.state.assistant_profile_id}
   response:
     sessionIdField: sessionId
     replyField: assistantText
+structuredExposure:
+  # Needed to prove the requested profile actually took effect. Without it the
+  # grid could report "no difference between profiles" when the real cause is
+  # that no profile was ever switched on.
+  fields:
+    - key: assistantProfileId
+      label: Profile SUT chạy
+      selector: metadata.assistantProfileId
+    - key: intent
+      label: Intent
+      selector: metadata.intent
 artifacts:
   transcript: transcript.json
   applicationResult: application_result.json

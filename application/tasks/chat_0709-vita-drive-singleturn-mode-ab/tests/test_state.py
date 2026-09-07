@@ -71,9 +71,20 @@ def main() -> int:
     # produced usable data", never "the assistant was right".
     if facets["replied"] != "yes":
         fail("case {} produced no assistant reply".format(facets["case_id"]))
-    for key in ("assistant_mode", "vehicle_state"):
+    for key in ("assistant_profile_id", "vehicle_state"):
         if not facets.get(key):
             fail("case {} is missing experiment factor {}".format(facets["case_id"], key))
+    # Fail loudly rather than contribute a cell that silently ran the default
+    # profile: a grid full of those would report "the profiles are the same".
+    if facets.get("profile_applied") == "no":
+        fail(
+            "case {} asked for profile {!r} but the deployment served {!r}; "
+            "this trial does not measure the factor".format(
+                facets["case_id"],
+                str(facets.get("assistant_profile_id")),
+                str(facets.get("served_profile")),
+            )
+        )
     print(
         "PASS: case {} ({} / {}) replied with {} chars".format(
             facets["case_id"], facets["assistant_mode"], facets["vehicle_state"],

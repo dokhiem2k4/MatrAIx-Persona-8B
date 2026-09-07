@@ -8,6 +8,7 @@
         { "id": "assistant_mode.by_vehicle_state", "facetKey": "vehicle_state", "title": "Trạng thái xe" },
         { "id": "assistant_mode.reply_length", "facetKey": "reply_char_count", "title": "Độ dài phản hồi" },
         { "id": "assistant_mode.replied", "facetKey": "replied", "title": "Có phản hồi" },
+        { "id": "assistant_mode.profile_applied", "facetKey": "profile_applied", "title": "Profile có hiệu lực" },
         { "id": "assistant_mode.by_parent_intent", "facetKey": "parent_intent_code", "title": "Nhóm intent" }
       ]
     },

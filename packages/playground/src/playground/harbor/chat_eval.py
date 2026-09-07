@@ -293,6 +293,34 @@ class HarborSidecarChatSession:
             )
         )
 
+    async def run_session_setup(self) -> Optional[Dict[str, Any]]:
+        """Bind per-conversation settings before the first message.
+
+        Some deployments ignore a setting sent beside a message and only honour
+        it through their own endpoint. Without this call the factor under test
+        silently stays at its default and every cell of the experiment returns
+        the same answer.
+        """
+        protocol = self.runtime.protocol
+        if not protocol.setup_path:
+            return None
+        body: Dict[str, Any] = resolve_session_body(
+            protocol.setup_body, self.assigned_case
+        )
+        if not body:
+            # Nothing resolved, so there is nothing to bind. Calling anyway
+            # would create a session with default settings and hide that.
+            return None
+        if self._session_id:
+            body.setdefault("sessionId", self._session_id)
+        response = await self._request_json(
+            protocol.setup_method, protocol.setup_path, body=body
+        )
+        session_id = response.get(protocol.response_session_id_field)
+        if session_id:
+            self._session_id = str(session_id)
+        return response
+
     async def run_turn_sync(self, message: str) -> Dict[str, Any]:
         protocol = self.runtime.protocol
         context_value = config_context(self.config)

@@ -137,3 +137,48 @@ def test_session_body_defaults_to_empty(tmp_path) -> None:
     )
     assert config is not None
     assert config.protocol.session_body == {}
+
+
+def test_session_setup_is_parsed(tmp_path) -> None:
+    task_dir = tmp_path / "application" / "tasks" / "chat_setup" / "input"
+    task_dir.mkdir(parents=True)
+    (task_dir / "chatbot.yaml").write_text(
+        "\n".join(
+            [
+                "transport: external_http",
+                "protocol:",
+                "  sessionSetup:",
+                "    method: POST",
+                "    path: /api/persona/session",
+                "    body:",
+                "      assistantProfileId: ${case.state.assistant_profile_id}",
+                "  sendMessage:",
+                "    path: /api/chat",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    config = load_chatbot_task_config_for_task_path(
+        "application/tasks/chat_setup", repo_root=tmp_path
+    )
+    assert config is not None
+    assert config.protocol.setup_path == "/api/persona/session"
+    assert config.protocol.setup_method == "POST"
+    assert config.protocol.setup_body == {
+        "assistantProfileId": "${case.state.assistant_profile_id}"
+    }
+
+
+def test_session_setup_defaults_to_disabled(tmp_path) -> None:
+    task_dir = tmp_path / "application" / "tasks" / "chat_plain" / "input"
+    task_dir.mkdir(parents=True)
+    (task_dir / "chatbot.yaml").write_text(
+        "transport: external_http\nprotocol:\n  sendMessage:\n    path: /api/chat\n",
+        encoding="utf-8",
+    )
+    config = load_chatbot_task_config_for_task_path(
+        "application/tasks/chat_plain", repo_root=tmp_path
+    )
+    assert config is not None
+    assert config.protocol.setup_path == ""
+    assert config.protocol.setup_body == {}

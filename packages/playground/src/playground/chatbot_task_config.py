@@ -92,6 +92,13 @@ class ChatbotProtocolConfig:
     context_field: str = ""
     static_body: dict[str, Any] = field(default_factory=dict)
     session_body: dict[str, Any] = field(default_factory=dict)
+    # Authored as ``protocol.sessionSetup`` in chatbot.yaml. Some deployments
+    # bind per-conversation settings through their own endpoint rather than
+    # accepting them beside each message, so the task needs one call before the
+    # first turn. Empty ``setup_path`` means no setup call, which is the default.
+    setup_method: str = "POST"
+    setup_path: str = ""
+    setup_body: dict[str, Any] = field(default_factory=dict)
     response_session_id_field: str = "sessionId"
     response_reply_field: str = "reply"
     response_turn_field: str = "turn"
@@ -162,6 +169,7 @@ def _load_from_payload(payload: dict[str, Any]) -> ChatbotTaskConfig:
     protocol = _as_mapping(payload.get("protocol"))
     structured_exposure = _as_mapping(payload.get("structuredExposure"))
     send = _as_mapping(protocol.get("sendMessage"))
+    setup = _as_mapping(protocol.get("sessionSetup"))
     response = _as_mapping(protocol.get("response"))
     artifacts = {
         str(key): _as_string(value)
@@ -219,6 +227,9 @@ def _load_from_payload(payload: dict[str, Any]) -> ChatbotTaskConfig:
             context_field=_as_string(send.get("contextField")),
             static_body=_as_mapping(send.get("staticBody")),
             session_body=_as_mapping(send.get("sessionBody")),
+            setup_method=(_as_string(setup.get("method")) or "POST").upper(),
+            setup_path=_as_string(setup.get("path")),
+            setup_body=_as_mapping(setup.get("body")),
             response_session_id_field=(
                 _as_string(response.get("sessionIdField")) or "sessionId"
             ),

@@ -89,3 +89,35 @@ def test_feedback_context_is_appended_when_present():
     assert fb["overall_experience_rating"] == 7
     assert fb["need_constraint_satisfaction"] == "yes"
     assert fb["personal_preference_satisfaction"] == "partially"
+
+
+from mode_ab_scoring import profile_applied  # noqa: E402
+
+
+def test_profile_applied_when_served_matches_requested():
+    case = {"state": {"assistant_profile_id": "cheeky"}}
+    assert profile_applied(case, [{"key": "assistantProfileId", "value": "cheeky"}]) == "yes"
+
+
+def test_profile_not_applied_is_caught_loudly():
+    """The deployment answering as `normal` for a `cheeky` case must show up."""
+    case = {"state": {"assistant_profile_id": "cheeky"}}
+    assert profile_applied(case, [{"key": "assistantProfileId", "value": "normal"}]) == "no"
+
+
+def test_profile_unknown_when_the_sut_says_nothing():
+    case = {"state": {"assistant_profile_id": "cheeky"}}
+    assert profile_applied(case, []) == "unknown"
+
+
+def test_payload_reports_whether_the_factor_took_effect():
+    case_run = {
+        **CASE_RUN,
+        "case": {**CASE_RUN["case"],
+                 "state": {**CASE_RUN["case"]["state"], "assistant_profile_id": "cheeky"}},
+        "observation": {**CASE_RUN["observation"],
+                        "structured_exposure": [{"key": "assistantProfileId", "value": "normal"}]},
+    }
+    f = _facets(build_evaluation_payload(case_run, None))
+    assert f["profile_applied"] == "no"
+    assert f["served_profile"] == "normal"

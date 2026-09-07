@@ -15,6 +15,24 @@ from __future__ import annotations
 from typing import Any
 
 
+def profile_applied(case: dict[str, Any], exposure: Any) -> str:
+    """Did the deployment actually run the profile this case asked for?
+
+    The whole experiment is worthless if it did not: every cell would hold the
+    same default profile and the grid would report that seven personalities are
+    indistinguishable, when in truth none of them was ever switched on. So this
+    is checked per trial and reported, never assumed.
+    """
+    wanted = str((case.get("state") or {}).get("assistant_profile_id") or "").strip()
+    served = ""
+    for field in exposure or ():
+        if isinstance(field, dict) and str(field.get("key") or "") == "assistantProfileId":
+            served = str(field.get("value") or "").strip()
+    if not wanted or not served:
+        return "unknown"
+    return "yes" if wanted == served else "no"
+
+
 def reply_length(first_assistant_message: str) -> int:
     """Character count of the assistant's first reply."""
     return len((first_assistant_message or "").strip())
@@ -52,6 +70,8 @@ def build_evaluation_payload(
                 _facet("vehicle_state", "Trạng thái xe", "primary", "categorical", str(state.get("vehicle_state") or "")),
                 _facet("reply_char_count", "Độ dài phản hồi", "metric", "continuous", reply_length(reply)),
                 _facet("replied", "Có phản hồi", "control", "categorical", "yes" if reply.strip() else "no"),
+                _facet("profile_applied", "Profile có hiệu lực", "control", "categorical", profile_applied(case, observation.get("structured_exposure"))),
+                _facet("served_profile", "Profile SUT chạy", "evidence", "categorical", str(next((f.get("value") for f in (observation.get("structured_exposure") or []) if isinstance(f, dict) and f.get("key") == "assistantProfileId"), "") or "")),
                 _facet("turn_count", "Số lượt", "metric", "continuous", int(observation.get("turn_count") or 0)),
                 _facet("case_id", "Case", "control", "categorical", str(case.get("case_id") or "")),
                 _facet("subintent_code", "Subintent", "control", "categorical", str(case.get("subintent_code") or "")),
