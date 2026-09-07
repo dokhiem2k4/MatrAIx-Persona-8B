@@ -8,7 +8,12 @@ from __future__ import annotations
 
 from typing import Any
 
-AGENT_NAME = "persona-claude-code"
+# Chatbot tasks run the user-sim agent, not persona-claude-code. The latter
+# launches the real Claude Code CLI inside the container, which only accepts
+# Anthropic models and its own login -- an OpenRouter model id makes it exit
+# with "unrecognized_model" and "Not logged in". Mapping fixed at
+# harbor_job_service.py:51.
+AGENT_NAME = "persona-user-sim"
 
 
 def build_case_agent_entries(

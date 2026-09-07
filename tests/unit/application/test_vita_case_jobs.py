@@ -6,6 +6,12 @@ def test_produces_the_full_cross_product():
     assert len(entries) == 4
 
 
+def test_agent_is_the_user_sim_not_the_claude_code_runner():
+    """persona-claude-code runs the real CLI and rejects OpenRouter models."""
+    entries = build_case_agent_entries(["p/a.yaml"], ["vg_0001"], "openrouter/x/y")
+    assert entries[0]["name"] == "persona-user-sim"
+
+
 def test_each_entry_carries_persona_and_case():
     entries = build_case_agent_entries(["p/a.yaml"], ["vg_0001"], "anthropic/claude-haiku-4-5")
     assert entries[0]["model_name"] == "anthropic/claude-haiku-4-5"
