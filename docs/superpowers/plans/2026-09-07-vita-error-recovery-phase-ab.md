@@ -2226,8 +2226,8 @@ def test_produces_the_full_cross_product():
 
 
 def test_each_entry_carries_persona_and_case():
-    entries = build_case_agent_entries(["p/a.yaml"], ["vg_0001"], "anthropic/claude-haiku-4-5")
-    assert entries[0]["model_name"] == "anthropic/claude-haiku-4-5"
+    entries = build_case_agent_entries(["p/a.yaml"], ["vg_0001"], "openrouter/google/gemini-3.5-flash-lite")
+    assert entries[0]["model_name"] == "openrouter/google/gemini-3.5-flash-lite"
     assert entries[0]["kwargs"] == {"persona_path": "p/a.yaml", "case_id": "vg_0001"}
 
 
@@ -2311,7 +2311,7 @@ Expected: 20 case_id, hai case cho mỗi nhóm trong 10 nhóm lỗi.
 
 - [ ] **Step 2: Sinh hai recipe, cùng persona cùng case, khác model**
 
-Recipe `-8b` đặt `model_name` là model 8B; recipe `-baseline` đặt `anthropic/claude-haiku-4-5`. Cùng một `persona_path` và cùng 20 `case_id` ở cả hai, để hiệu số giữa hai lượt chỉ đến từ model.
+Recipe `-8b` đặt `model_name` là model 8B; recipe `-baseline` đặt `openrouter/google/gemini-3.5-flash-lite`. Cùng một `persona_path` và cùng 20 `case_id` ở cả hai, để hiệu số giữa hai lượt chỉ đến từ model.
 
 - [ ] **Step 3: Chạy cả hai**
 

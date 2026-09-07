@@ -69,3 +69,35 @@ def test_recipe_shape_matches_the_job_contract():
     assert recipe["tasks"] == [{"path": "application/tasks/chat_0709-vita-drive-golden-error-recovery"}]
     assert len(recipe["agents"]) == 2
     assert recipe["agents"][0]["kwargs"]["case_id"] == "vg_0001"
+
+
+from application.scripts.generate_vita_case_job import (  # noqa: E402
+    credential_env_for_model,
+    resolve_model_name,
+)
+
+
+def test_credential_env_is_derived_from_the_model_prefix():
+    assert credential_env_for_model("openrouter/anthropic/claude-haiku-4.5") == "OPENROUTER_API_KEY"
+    assert credential_env_for_model("anthropic/claude-haiku-4-5") == "ANTHROPIC_API_KEY"
+    assert credential_env_for_model("openai/gpt-4o-mini") == "OPENAI_API_KEY"
+    assert credential_env_for_model("dashscope/qwen3.6-plus") == "DASHSCOPE_API_KEY"
+
+
+def test_unknown_provider_has_no_known_credential_env():
+    assert credential_env_for_model("some-local-model") is None
+
+
+def test_model_name_falls_back_to_the_configured_persona_model():
+    assert resolve_model_name(None, {"MATRIX_PERSONA_MODEL": "openrouter/x/y"}) == "openrouter/x/y"
+
+
+def test_explicit_model_name_wins_over_the_environment():
+    assert resolve_model_name("openrouter/a/b", {"MATRIX_PERSONA_MODEL": "openrouter/x/y"}) == "openrouter/a/b"
+
+
+def test_missing_model_name_everywhere_raises():
+    import pytest
+
+    with pytest.raises(SystemExit):
+        resolve_model_name(None, {})

@@ -2,7 +2,7 @@
 
     uv run python application/scripts/generate_vita_case_job.py \
         --job-name appSim-0709-vita-golden-error-recovery-smoke-baseline \
-        --model-name anthropic/claude-haiku-4-5 \
+        --model-name openrouter/anthropic/claude-haiku-4.5 \
         --personas persona/datasets/matraix-persona-dev-sample/persona_0042.yaml \
         --smoke-per-error-type 2
 
@@ -15,12 +15,43 @@ import argparse
 import collections
 import itertools
 import json
+import os
 from pathlib import Path
-from typing import Any
+from typing import Any, Mapping
 
 import yaml
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+
+# Which credential each provider prefix needs. Checked before a run, never
+# during one: a job that dies on a missing key still burns wall clock and,
+# depending on the provider, tokens for the trials that did start.
+CREDENTIAL_ENV_BY_PREFIX = {
+    "openrouter/": "OPENROUTER_API_KEY",
+    "anthropic/": "ANTHROPIC_API_KEY",
+    "openai/": "OPENAI_API_KEY",
+    "dashscope/": "DASHSCOPE_API_KEY",
+}
+
+
+def credential_env_for_model(model_name: str) -> str | None:
+    """Return the env var this model needs, or ``None`` when unknown."""
+    value = (model_name or "").strip()
+    for prefix, env_name in CREDENTIAL_ENV_BY_PREFIX.items():
+        if value.startswith(prefix):
+            return env_name
+    return None
+
+
+def resolve_model_name(explicit: str | None, env: Mapping[str, str]) -> str:
+    """Explicit flag wins, else fall back to the configured persona model."""
+    value = (explicit or "").strip() or str(env.get("MATRIX_PERSONA_MODEL") or "").strip()
+    if not value:
+        raise SystemExit(
+            "no model: pass --model-name or set MATRIX_PERSONA_MODEL "
+            "(application/playground/.env.local)"
+        )
+    return value
 TASK_PATH = "application/tasks/chat_0709-vita-drive-golden-error-recovery"
 RECIPE_DIR = REPO_ROOT / "configs/jobs/application-task-job-recipe"
 
@@ -62,12 +93,14 @@ def build_recipe(
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--job-name", required=True)
-    parser.add_argument("--model-name", required=True)
+    parser.add_argument("--model-name", default=None)
     parser.add_argument("--personas", required=True, nargs="+")
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--smoke-per-error-type", type=int)
     group.add_argument("--all-cases", action="store_true")
     args = parser.parse_args()
+
+    model_name = resolve_model_name(args.model_name, os.environ)
 
     case_ids = load_case_ids(
         per_error_type=None if args.all_cases else args.smoke_per_error_type
@@ -78,7 +111,7 @@ def main() -> int:
 
     recipe = build_recipe(
         job_name=args.job_name,
-        model_name=args.model_name,
+        model_name=model_name,
         persona_paths=list(args.personas),
         case_ids=case_ids,
     )
@@ -93,11 +126,22 @@ def main() -> int:
             len(args.personas),
             len(case_ids),
             len(recipe["agents"]),
-            args.model_name,
+            model_name,
         )
     )
     path.write_text(header + yaml.safe_dump(recipe, sort_keys=False, allow_unicode=True), encoding="utf-8")
     print("wrote {} ({} trials)".format(path, len(recipe["agents"])))
+
+    needed = credential_env_for_model(model_name)
+    if needed is None:
+        print("model {}: unknown provider, cannot check credentials".format(model_name))
+    elif os.environ.get(needed, "").strip():
+        print("model {}: {} is set".format(model_name, needed))
+    else:
+        print(
+            "model {}: {} is NOT set -- this job would fail. "
+            "Fix it before running, not after.".format(model_name, needed)
+        )
     return 0
 
 
