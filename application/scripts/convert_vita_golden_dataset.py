@@ -4,7 +4,7 @@ Run offline; the source workbook is not committed to the repository:
 
     uv run --with openpyxl python application/scripts/convert_vita_golden_dataset.py \
         --source "/path/to/golden_singleturn_cover intent_happy&fallback.xlsx" \
-        --out-dir application/tasks/chat_vita-drive-error-recovery/input
+        --out-dir application/tasks/chat_vita-drive-golden-error-recovery/input
 """
 
 from __future__ import annotations

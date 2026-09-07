@@ -2,13 +2,13 @@ version = "1.0"
 artifacts = [ "/app/output",]
 
 [task]
-name = "application/vita-drive-assistant-mode-ab"
+name = "application/vita-drive-golden-error-recovery"
 
 [metadata]
-difficulty = "medium"
+difficulty = "hard"
 type = "chatbot"
 domain = "automotive-ai"
-tags = [ "in-cabin assistant", "assistant mode", "a-b grid", "driving distraction", "single turn",]
+tags = [ "in-cabin assistant", "error handling", "fallback", "golden dataset", "single turn",]
 
 [verifier]
 timeout_sec = 300.0

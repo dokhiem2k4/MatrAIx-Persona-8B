@@ -1,4 +1,4 @@
-# chat_vita-drive-assistant-mode-ab
+# chat_vita-drive-singleturn-mode-ab
 
 Đo ảnh hưởng của **chế độ trợ lý × trạng thái xe** lên trải nghiệm người dùng,
 trên bộ Vita Demo 276 case.

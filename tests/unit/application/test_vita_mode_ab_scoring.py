@@ -5,7 +5,7 @@ sys.path.insert(
     0,
     str(
         Path(__file__).resolve().parents[3]
-        / "application/tasks/chat_vita-drive-assistant-mode-ab/tests"
+        / "application/tasks/chat_vita-drive-singleturn-mode-ab/tests"
     ),
 )
 
