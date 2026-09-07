@@ -36,6 +36,7 @@ COLUMNS = [
     "seed_input",
     "persona_id",
     "persona_name",
+    "persona_profile",
     "model",
 ]
 
