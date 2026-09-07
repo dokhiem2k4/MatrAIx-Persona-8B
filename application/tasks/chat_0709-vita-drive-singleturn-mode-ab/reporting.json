@@ -4,7 +4,7 @@
     {
       "match": { "contextType": "assistant_mode" },
       "distributions": [
-        { "id": "assistant_mode.by_mode", "facetKey": "assistant_mode", "title": "Chế độ trợ lý" },
+        { "id": "assistant_mode.by_profile", "facetKey": "assistant_profile_id", "title": "Profile trợ lý" },
         { "id": "assistant_mode.by_vehicle_state", "facetKey": "vehicle_state", "title": "Trạng thái xe" },
         { "id": "assistant_mode.reply_length", "facetKey": "reply_char_count", "title": "Độ dài phản hồi" },
         { "id": "assistant_mode.replied", "facetKey": "replied", "title": "Có phản hồi" },

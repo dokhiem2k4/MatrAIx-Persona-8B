@@ -28,7 +28,7 @@ protocol:
     sessionBody:
       drivingContext: ${case.state.vehicle_state}
       vehicleState: ${case.state.vehicle_state}
-      assistantMode: ${case.state.assistant_mode}
+      assistantProfileId: ${case.state.assistant_profile_id}
   response:
     sessionIdField: sessionId
     replyField: assistantText

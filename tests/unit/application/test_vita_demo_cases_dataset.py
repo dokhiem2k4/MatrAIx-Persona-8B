@@ -14,11 +14,11 @@ def _cases():
 
 
 def test_row_count_matches_spec():
-    assert len(_cases()) == 276
+    assert len(_cases()) == 644  # 92 (subintent x vehicle_state) x 7 profile
 
 
 def test_case_ids_are_unique():
-    assert len({case["case_id"] for case in _cases()}) == 276
+    assert len({case["case_id"] for case in _cases()}) == 644
 
 
 def test_the_factorial_grid_is_perfectly_balanced():
@@ -27,16 +27,28 @@ def test_the_factorial_grid_is_perfectly_balanced():
     Comparing cells is only valid without reweighting while this holds.
     """
     cells = collections.Counter(
-        (case["state"]["assistant_mode"], case["state"]["vehicle_state"]) for case in _cases()
+        (case["state"]["assistant_profile_id"], case["state"]["vehicle_state"]) for case in _cases()
     )
-    assert len(cells) == 6
+    assert len(cells) == 14          # 7 profile x 2 vehicle_state
     assert set(cells.values()) == {46}
+
+
+def test_profiles_are_the_ones_the_deployment_exposes():
+    """A factor the SUT does not have would make every cell identical."""
+    from application.scripts.convert_vita_demo_dataset import REAL_PROFILES
+
+    assert {c["state"]["assistant_profile_id"] for c in _cases()} == set(REAL_PROFILES)
+
+
+def test_no_case_still_carries_the_dead_assistant_mode_factor():
+    for case in _cases():
+        assert "assistant_mode" not in case["state"], case["case_id"]
 
 
 def test_every_cell_covers_all_46_subintents():
     by_cell = collections.defaultdict(set)
     for case in _cases():
-        key = (case["state"]["assistant_mode"], case["state"]["vehicle_state"])
+        key = (case["state"]["assistant_profile_id"], case["state"]["vehicle_state"])
         by_cell[key].add(case["subintent_code"])
     assert {len(codes) for codes in by_cell.values()} == {46}
 

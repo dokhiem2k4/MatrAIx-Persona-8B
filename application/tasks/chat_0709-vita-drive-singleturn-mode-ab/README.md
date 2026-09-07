@@ -3,9 +3,33 @@
 Đo ảnh hưởng của **chế độ trợ lý × trạng thái xe** lên trải nghiệm người dùng,
 trên bộ Vita Demo 276 case.
 
-Lưới giai thừa **cân bằng tuyệt đối**: 46 subintent × `vehicle_state`
-(driving/parking) × `ASSISTANT_MODE` (quiet/balance/proactive) = 276, mỗi ô
-đúng 46 case. So sánh giữa các ô hợp lệ mà không cần cân lại trọng số.
+Lưới giai thừa **cân bằng tuyệt đối**: 92 tổ hợp (46 subintent × `vehicle_state`
+driving/parking) × **7 profile thật của trợ lý** = 644, mỗi ô đúng 46 case.
+So sánh giữa các ô hợp lệ mà không cần cân lại trọng số.
+
+## Vì sao không dùng ASSISTANT_MODE của workbook
+
+Workbook có cột `ASSISTANT_MODE` với ba giá trị `quiet` / `balance` / `proactive`.
+**Bản triển khai không có ba chế độ đó.** `GET /api/assistant/profiles` cho thấy
+trục tính cách thật là `assistantProfileId` với bảy giá trị: `normal` (mặc định),
+`sweet`, `chao`, `cheeky`, `bright`, `rustic`, `calm`.
+
+Giữ nguyên cột cũ thì cả ba ô sẽ cho kết quả giống hệt nhau — đo một yếu tố hệ
+thống không có. Nên lưới được dựng lại: prompt của workbook là **kích thích**,
+profile là **yếu tố cần đo**. Chỉ số prompt được xoay theo chỉ số tổ hợp để một
+profile không luôn đi kèm cùng một câu chữ, tránh nhập nhằng giữa cách diễn đạt
+và tính cách.
+
+## Chưa kiểm chứng: profile có được áp dụng không
+
+`POST /api/chat` nhận `{message, drivingContext, intent}`. Nhưng trong bundle
+của web, profile được đặt qua **một lời gọi riêng**:
+`POST /api/persona/session {sessionId, assistantProfileId}`.
+
+Task gửi `assistantProfileId` kèm mỗi tin nhắn qua `sessionBody`. **Chưa xác
+minh được máy chủ có đọc nó ở đó không.** Nếu không, mọi ô lưới sẽ giống nhau
+đúng như vấn đề mà thay đổi này định sửa. Xác minh cần đúng một lời gọi thật
+`/api/chat` — chưa làm.
 
 **Trial = 1 persona × 1 case.** Hai yếu tố thí nghiệm bơm vào request qua
 `sessionBody`.

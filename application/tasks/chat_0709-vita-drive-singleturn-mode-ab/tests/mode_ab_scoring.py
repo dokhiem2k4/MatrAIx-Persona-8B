@@ -48,7 +48,7 @@ def build_evaluation_payload(
             "label": "Assistant mode",
             "contextType": "assistant_mode",
             "facets": [
-                _facet("assistant_mode", "Chế độ trợ lý", "primary", "categorical", str(state.get("assistant_mode") or "")),
+                _facet("assistant_profile_id", "Profile trợ lý", "primary", "categorical", str(state.get("assistant_profile_id") or "")),
                 _facet("vehicle_state", "Trạng thái xe", "primary", "categorical", str(state.get("vehicle_state") or "")),
                 _facet("reply_char_count", "Độ dài phản hồi", "metric", "continuous", reply_length(reply)),
                 _facet("replied", "Có phản hồi", "control", "categorical", "yes" if reply.strip() else "no"),

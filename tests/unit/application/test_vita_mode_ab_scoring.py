@@ -19,7 +19,7 @@ CASE_RUN = {
         "parent_intent_code": "journey_navigation_places",
         "user_input": "Dẫn đường đến trạm xăng gần nhất.",
         "input_constraint": "none",
-        "state": {"vehicle_state": "driving", "assistant_mode": "quiet"},
+        "state": {"vehicle_state": "driving", "assistant_profile_id": "normal"},
         "source": "generated",
     },
     "observation": {
@@ -48,7 +48,7 @@ def test_reply_length_counts_trimmed_characters():
 
 def test_payload_carries_both_experiment_factors():
     facets = _facets(build_evaluation_payload(CASE_RUN, None))
-    assert facets["assistant_mode"] == "quiet"
+    assert facets["assistant_profile_id"] == "normal"
     assert facets["vehicle_state"] == "driving"
 
 

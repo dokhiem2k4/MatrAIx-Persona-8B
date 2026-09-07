@@ -98,13 +98,62 @@ def _read_rows(source: Path) -> list[dict[str, Any]]:
     return [dict(zip(header, row)) for row in rows[1:] if any(c is not None for c in row)]
 
 
+# --- rebuild against the SUT's real assistant profiles -----------------------
+
+# The workbook's ASSISTANT_MODE column (quiet/balance/proactive) describes modes
+# the deployed assistant does not have. Its real personality axis is
+# ``assistantProfileId``, listed by GET /api/assistant/profiles.
+REAL_PROFILES = ("normal", "sweet", "chao", "cheeky", "bright", "rustic", "calm")
+
+
+def rebuild_grid_over_profiles(
+    records: list[dict[str, Any]], profiles: tuple[str, ...] = REAL_PROFILES
+) -> list[dict[str, Any]]:
+    """Re-cross the workbook prompts against the assistant's real profiles.
+
+    The workbook holds three prompts for each (subintent, vehicle_state) pair.
+    Those pairs are the stimulus; the personality is the factor under test. So
+    the grid is rebuilt as pairs x profiles, and the prompt index is rotated by
+    the pair index so a profile is not always paired with the same prompt --
+    otherwise prompt wording and profile would be confounded.
+    """
+    by_pair: dict[tuple[str, str], list[dict[str, Any]]] = {}
+    for record in records:
+        key = (record["subintent_code"], record["state"]["vehicle_state"])
+        by_pair.setdefault(key, []).append(record)
+
+    out: list[dict[str, Any]] = []
+    for pair_index, (key, group) in enumerate(sorted(by_pair.items())):
+        prompts = sorted(group, key=lambda r: r["case_id"])
+        for profile_index, profile in enumerate(profiles):
+            source = prompts[(profile_index + pair_index) % len(prompts)]
+            out.append(
+                {
+                    **source,
+                    "case_id": "vd_{:04d}".format(len(out) + 1),
+                    "state": {
+                        "vehicle_state": key[1],
+                        "assistant_profile_id": profile,
+                    },
+                }
+            )
+    return out
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", required=True, type=Path)
     parser.add_argument("--out-dir", required=True, type=Path)
+    parser.add_argument(
+        "--real-profiles",
+        action="store_true",
+        help="re-cross prompts against the deployment's real assistantProfileId values",
+    )
     args = parser.parse_args()
 
     records = [build_demo_case_record(row, i) for i, row in enumerate(_read_rows(args.source))]
+    if args.real_profiles:
+        records = rebuild_grid_over_profiles(records)
     args.out_dir.mkdir(parents=True, exist_ok=True)
     path = args.out_dir / "cases.jsonl"
     path.write_text(
