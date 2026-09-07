@@ -18,18 +18,19 @@ def test_each_entry_carries_persona_and_case():
     assert entries[0]["kwargs"] == {"persona_path": "p/a.yaml", "case_id": "vg_0001"}
 
 
-def test_case_varies_fastest_so_a_truncated_run_still_spans_personas():
+def test_personas_are_interleaved_so_a_truncated_run_still_compares_them():
+    """Persona-major ordering would finish person A before person B started."""
     entries = build_case_agent_entries(["p/a.yaml", "p/b.yaml"], ["vg_0001", "vg_0002"], "m")
     assert [e["kwargs"]["persona_path"] for e in entries] == [
         "p/a.yaml",
-        "p/a.yaml",
         "p/b.yaml",
+        "p/a.yaml",
         "p/b.yaml",
     ]
     assert [e["kwargs"]["case_id"] for e in entries] == [
         "vg_0001",
-        "vg_0002",
         "vg_0001",
+        "vg_0002",
         "vg_0002",
     ]
 
@@ -113,3 +114,25 @@ def test_chat_trials_run_on_the_host_not_in_docker():
     """A docker trial container cannot resolve DNS, so the SUT call dies."""
     recipe = build_recipe(job_name="j", model_name="m", persona_paths=["p.yaml"], case_ids=["vg_0001"])
     assert recipe["environment"]["type"] == "host"
+
+
+def test_max_cases_caps_the_count_exactly():
+    assert len(load_case_ids(max_cases=64)) == 64
+
+
+def test_max_cases_deals_across_error_types_not_head_of_file():
+    """A plain head would return two or three error types out of ten."""
+    import json
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[3]
+    path = root / "application/tasks/chat_0709-vita-drive-golden-error-recovery/input/cases.jsonl"
+    with path.open(encoding="utf-8") as handle:
+        by_id = {json.loads(l)["case_id"]: json.loads(l)["error_type"] for l in handle if l.strip()}
+
+    picked = load_case_ids(max_cases=64)
+    assert len({by_id[c] for c in picked}) == 10
+
+
+def test_max_cases_larger_than_dataset_returns_everything():
+    assert len(load_case_ids(max_cases=10_000)) == 364

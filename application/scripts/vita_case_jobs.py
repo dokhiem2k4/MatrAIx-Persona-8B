@@ -21,7 +21,10 @@ def build_case_agent_entries(
 ) -> list[dict[str, Any]]:
     """Build one ``agents[]`` entry per persona x case pair.
 
-    Case varies fastest so that stopping a run early still covers every persona.
+    Personas are interleaved, so a run stopped early holds roughly the same
+    number of trials for each of them. Ordering by persona instead would finish
+    the first person's whole sweep before the second one started, and a run cut
+    short would compare nobody.
     """
     return [
         {
@@ -29,6 +32,6 @@ def build_case_agent_entries(
             "model_name": model_name,
             "kwargs": {"persona_path": persona_path, "case_id": case_id},
         }
-        for persona_path in persona_paths
         for case_id in case_ids
+        for persona_path in persona_paths
     ]

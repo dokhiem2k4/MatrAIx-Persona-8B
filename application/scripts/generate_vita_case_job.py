@@ -56,20 +56,37 @@ TASK_PATH = "application/tasks/chat_0709-vita-drive-golden-error-recovery"
 RECIPE_DIR = REPO_ROOT / "configs/jobs/application-task-job-recipe"
 
 
-def load_case_ids(*, per_error_type: int | None) -> list[str]:
-    """Return case ids, optionally sampling evenly across error types."""
+def load_case_ids(
+    *, per_error_type: int | None = None, max_cases: int | None = None
+) -> list[str]:
+    """Return case ids, sampled so every error type stays represented.
+
+    ``max_cases`` deals the cases round-robin across error types rather than
+    taking the first N: the dataset is ordered, so a plain head would return
+    only two or three of the ten error types and the run would answer nothing
+    about the rest.
+    """
     path = REPO_ROOT / TASK_PATH / "input" / "cases.jsonl"
     cases = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
-    if per_error_type is None:
+    if per_error_type is None and max_cases is None:
         return [case["case_id"] for case in cases]
+
     by_error_type: dict[str, list[str]] = collections.defaultdict(list)
     for case in cases:
         by_error_type[case["error_type"]].append(case["case_id"])
-    return list(
-        itertools.chain.from_iterable(
-            sorted(ids)[:per_error_type] for _, ids in sorted(by_error_type.items())
-        )
-    )
+    buckets = [sorted(ids) for _, ids in sorted(by_error_type.items())]
+
+    if per_error_type is not None:
+        return list(itertools.chain.from_iterable(b[:per_error_type] for b in buckets))
+
+    picked: list[str] = []
+    for index in range(max(len(b) for b in buckets)):
+        for bucket in buckets:
+            if index < len(bucket):
+                picked.append(bucket[index])
+                if len(picked) == max_cases:
+                    return picked
+    return picked
 
 
 def build_recipe(
@@ -103,12 +120,16 @@ def main() -> int:
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--smoke-per-error-type", type=int)
     group.add_argument("--all-cases", action="store_true")
+    group.add_argument(
+        "--max-cases", type=int, help="cap the case count, dealt across error types"
+    )
     args = parser.parse_args()
 
     model_name = resolve_model_name(args.model_name, os.environ)
 
     case_ids = load_case_ids(
-        per_error_type=None if args.all_cases else args.smoke_per_error_type
+        per_error_type=None if (args.all_cases or args.max_cases) else args.smoke_per_error_type,
+        max_cases=args.max_cases,
     )
     for persona in args.personas:
         if not (REPO_ROOT / persona).is_file():
