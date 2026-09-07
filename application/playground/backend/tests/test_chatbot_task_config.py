@@ -97,7 +97,7 @@ def test_harbor_chat_task_config_from_env_uses_task_path(tmp_path, monkeypatch) 
 
 
 def test_session_body_is_parsed(tmp_path) -> None:
-    task_dir = tmp_path / "application" / "tasks" / "chat_vita-drive-golden-error-recovery" / "input"
+    task_dir = tmp_path / "application" / "tasks" / "chat_0709-vita-drive-golden-error-recovery" / "input"
     task_dir.mkdir(parents=True)
     (task_dir / "chatbot.yaml").write_text(
         "\n".join(
@@ -115,7 +115,7 @@ def test_session_body_is_parsed(tmp_path) -> None:
         encoding="utf-8",
     )
     config = load_chatbot_task_config_for_task_path(
-        "application/tasks/chat_vita-drive-golden-error-recovery", repo_root=tmp_path
+        "application/tasks/chat_0709-vita-drive-golden-error-recovery", repo_root=tmp_path
     )
     assert config is not None
     assert config.protocol.static_body == {"drivingContext": "driving"}

@@ -13,8 +13,8 @@ so a person can judge the rest.
 
     uv run --with openpyxl python application/scripts/convert_vita_multiturn_dataset.py \
         --source "/path/to/Dataset - 46 Intent - Multiturn - 27Aug26.xlsx" \
-        --out-dir application/tasks/chat_vita-drive-multiturn-coverage/input \
-        --review-out application/tasks/chat_vita-drive-multiturn-coverage/seed_review.md
+        --out-dir application/tasks/chat_0709-vita-drive-multiturn-coverage/input \
+        --review-out application/tasks/chat_0709-vita-drive-multiturn-coverage/seed_review.md
 """
 
 from __future__ import annotations
@@ -118,7 +118,7 @@ def render_review(records: list[dict[str, Any]]) -> str:
     """Render every seed for human review; rules cannot catch label mismatch."""
     flagged = sum(1 for r in records if r["seed_quality"] != "ok")
     lines = [
-        "# Seed review — chat_vita-drive-multiturn-coverage",
+        "# Seed review — chat_0709-vita-drive-multiturn-coverage",
         "",
         "Mỗi dòng là lượt user đầu tiên của một hội thoại, dùng làm mục tiêu giao cho persona.",
         "",

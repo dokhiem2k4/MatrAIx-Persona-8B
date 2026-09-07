@@ -10,9 +10,9 @@ Ba bộ dataset hiện đang được test tay. Dựng **ba task** trong `applic
 
 | Task | Bộ | Lượt | Câu hỏi task trả lời |
 |---|---|---|---|
-| `chat_vita-drive-golden-error-recovery` | 1 | single | VITA hỏng ở nhóm lỗi nào, subintent nào |
-| `chat_vita-drive-multiturn-coverage` | 2 | multi | VITA có giữ được ngữ cảnh qua nhiều lượt, trên đủ 46 sub_intent |
-| `chat_vita-drive-singleturn-mode-ab` | 3 | single | Chế độ trợ lý × trạng thái xe ảnh hưởng thế nào tới trải nghiệm |
+| `chat_0709-vita-drive-golden-error-recovery` | 1 | single | VITA hỏng ở nhóm lỗi nào, subintent nào |
+| `chat_0709-vita-drive-multiturn-coverage` | 2 | multi | VITA có giữ được ngữ cảnh qua nhiều lượt, trên đủ 46 sub_intent |
+| `chat_0709-vita-drive-singleturn-mode-ab` | 3 | single | Chế độ trợ lý × trạng thái xe ảnh hưởng thế nào tới trải nghiệm |
 
 Ba task tách rời vì **khả năng chấm khác nhau**, không phải vì số lượt. Bộ 1 có
 nhãn cứng nên chấm so khớp; bộ 2 và 3 không có nhãn nên chấm bằng judge và
@@ -138,8 +138,8 @@ vào repo.
 
 Đầu vào: file xlsx bộ 1.
 Đầu ra:
-- `application/tasks/chat_vita-drive-golden-error-recovery/input/cases.jsonl` — 364 dòng
-- `application/tasks/chat_vita-drive-golden-error-recovery/input/intent_taxonomy.json` — 60 cặp
+- `application/tasks/chat_0709-vita-drive-golden-error-recovery/input/cases.jsonl` — 364 dòng
+- `application/tasks/chat_0709-vita-drive-golden-error-recovery/input/intent_taxonomy.json` — 60 cặp
 
 Một dòng `cases.jsonl`:
 
@@ -286,7 +286,7 @@ Khối này phục vụ **task 1 và task 3**. Task 2 không dùng vì bộ 2 kh
 
 ## 8. Khối 4 — Task folder (task 1)
 
-`application/tasks/chat_vita-drive-golden-error-recovery/`
+`application/tasks/chat_0709-vita-drive-golden-error-recovery/`
 
 ```
 task.toml
@@ -306,7 +306,7 @@ tests/
   verifier_env.sh
 ```
 
-`task.toml`: `[task].name = "application/vita-drive-golden-error-recovery"`,
+`task.toml`: `[task].name = "application/0709-vita-drive-golden-error-recovery"`,
 `[metadata].type = "chatbot"`, `[environment].definition = "application/shared-chat-persona"`.
 
 `chatbot.yaml`: `transport: external_http`, `maxTurns: 2`, và khối
@@ -390,7 +390,7 @@ tách bạch: accuracy thô và accuracy sau khi trừ case hỏng.
 
 Giữ nguyên hai contextRule `task_outcome` và `user_feedback` như các task chat khác.
 
-## 11. Task 2 — `chat_vita-drive-multiturn-coverage`
+## 11. Task 2 — `chat_0709-vita-drive-multiturn-coverage`
 
 Trạng thái: **đã dựng xong.** Verifier chấm bằng facet độ phủ + `lexical_topic_overlap`
 (proxy từ vựng, không phải điểm) + self-report của persona. Chưa có LLM-judge.
@@ -437,7 +437,7 @@ nghĩ chủ đề như `chat_vita-drive-assistant` đang làm.
 Task này **không cần `sessionBody`** (bộ 2 không có cột state), nhưng dùng lại
 goal context `assigned_case` ở khối 2.
 
-## 12. Task 3 — `chat_vita-drive-singleturn-mode-ab`
+## 12. Task 3 — `chat_0709-vita-drive-singleturn-mode-ab`
 
 Trạng thái: **đã dựng xong.** Verifier ghi hai yếu tố thí nghiệm, `reply_char_count`,
 và self-report của persona. Không chấm đúng/sai vì không có ground truth.

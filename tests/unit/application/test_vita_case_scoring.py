@@ -5,7 +5,7 @@ sys.path.insert(
     0,
     str(
         Path(__file__).resolve().parents[3]
-        / "application/tasks/chat_vita-drive-golden-error-recovery/tests"
+        / "application/tasks/chat_0709-vita-drive-golden-error-recovery/tests"
     ),
 )
 
@@ -189,7 +189,7 @@ import json  # noqa: E402
 
 CASES_PATH = (
     Path(__file__).resolve().parents[3]
-    / "application/tasks/chat_vita-drive-golden-error-recovery/input/cases.jsonl"
+    / "application/tasks/chat_0709-vita-drive-golden-error-recovery/input/cases.jsonl"
 )
 
 

@@ -4,7 +4,7 @@ from pathlib import Path
 
 TASK_DIR = (
     Path(__file__).resolve().parents[3]
-    / "application/tasks/chat_vita-drive-multiturn-coverage"
+    / "application/tasks/chat_0709-vita-drive-multiturn-coverage"
 )
 CASES_PATH = TASK_DIR / "input/cases.jsonl"
 

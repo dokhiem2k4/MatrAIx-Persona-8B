@@ -1,7 +1,7 @@
 """Generate a job recipe whose trials are persona x case pairs.
 
     uv run python application/scripts/generate_vita_case_job.py \
-        --job-name appSim-vita-golden-error-recovery-smoke-baseline \
+        --job-name appSim-0709-vita-golden-error-recovery-smoke-baseline \
         --model-name anthropic/claude-haiku-4-5 \
         --personas persona/datasets/matraix-persona-dev-sample/persona_0042.yaml \
         --smoke-per-error-type 2
@@ -21,7 +21,7 @@ from typing import Any
 import yaml
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-TASK_PATH = "application/tasks/chat_vita-drive-golden-error-recovery"
+TASK_PATH = "application/tasks/chat_0709-vita-drive-golden-error-recovery"
 RECIPE_DIR = REPO_ROOT / "configs/jobs/application-task-job-recipe"
 
 

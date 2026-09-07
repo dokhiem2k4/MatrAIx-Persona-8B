@@ -41,7 +41,7 @@ def test_smoke_selection_covers_every_error_type():
     from pathlib import Path
 
     repo_root = Path(__file__).resolve().parents[3]
-    cases_path = repo_root / "application/tasks/chat_vita-drive-golden-error-recovery/input/cases.jsonl"
+    cases_path = repo_root / "application/tasks/chat_0709-vita-drive-golden-error-recovery/input/cases.jsonl"
     error_type_by_id = {}
     with cases_path.open(encoding="utf-8") as handle:
         for line in handle:
@@ -66,6 +66,6 @@ def test_recipe_shape_matches_the_job_contract():
         case_ids=["vg_0001", "vg_0002"],
     )
     assert recipe["job_name"] == "j"
-    assert recipe["tasks"] == [{"path": "application/tasks/chat_vita-drive-golden-error-recovery"}]
+    assert recipe["tasks"] == [{"path": "application/tasks/chat_0709-vita-drive-golden-error-recovery"}]
     assert len(recipe["agents"]) == 2
     assert recipe["agents"][0]["kwargs"]["case_id"] == "vg_0001"

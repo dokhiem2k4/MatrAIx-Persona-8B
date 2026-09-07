@@ -7,7 +7,7 @@ than on matching a golden answer.
 
     uv run --with openpyxl python application/scripts/convert_vita_demo_dataset.py \
         --source "/path/to/Dataset - Vita Demo - 27Aug26 (1).xlsx" \
-        --out-dir application/tasks/chat_vita-drive-singleturn-mode-ab/input
+        --out-dir application/tasks/chat_0709-vita-drive-singleturn-mode-ab/input
 """
 
 from __future__ import annotations

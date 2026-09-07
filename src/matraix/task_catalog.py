@@ -59,7 +59,7 @@ APPLICATION_TASK_METADATA: dict[str, dict[str, object]] = {
             "multi turn chat",
         ],
     },
-    "chat_vita-drive-singleturn-mode-ab": {
+    "chat_0709-vita-drive-singleturn-mode-ab": {
         "type": "chatbot",
         "domain": DOMAIN_AUTOMOTIVE_AI,
         "tags": [
@@ -70,7 +70,7 @@ APPLICATION_TASK_METADATA: dict[str, dict[str, object]] = {
             "single turn",
         ],
     },
-    "chat_vita-drive-multiturn-coverage": {
+    "chat_0709-vita-drive-multiturn-coverage": {
         "type": "chatbot",
         "domain": DOMAIN_AUTOMOTIVE_AI,
         "tags": [
@@ -81,7 +81,7 @@ APPLICATION_TASK_METADATA: dict[str, dict[str, object]] = {
             "46 subintents",
         ],
     },
-    "chat_vita-drive-golden-error-recovery": {
+    "chat_0709-vita-drive-golden-error-recovery": {
         "type": "chatbot",
         "domain": DOMAIN_AUTOMOTIVE_AI,
         "tags": [

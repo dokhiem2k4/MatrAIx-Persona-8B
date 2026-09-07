@@ -2,19 +2,19 @@ version = "1.0"
 artifacts = [ "/app/output",]
 
 [task]
-name = "application/vita-drive-golden-error-recovery"
+name = "application/0709-vita-drive-multiturn-coverage"
 
 [metadata]
-difficulty = "hard"
+difficulty = "medium"
 type = "chatbot"
 domain = "automotive-ai"
-tags = [ "in-cabin assistant", "error handling", "fallback", "golden dataset", "single turn",]
+tags = [ "in-cabin assistant", "multi turn", "intent coverage", "context", "46 subintents",]
 
 [verifier]
 timeout_sec = 300.0
 
 [agent]
-timeout_sec = 600.0
+timeout_sec = 900.0
 
 [environment]
 definition = "application/shared-chat-persona"

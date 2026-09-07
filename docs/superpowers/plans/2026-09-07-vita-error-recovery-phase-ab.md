@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Dựng nền dùng chung (gán case cho trial, bơm state vào request) và task `chat_vita-drive-golden-error-recovery` chấm 364 golden case, chạy được smoke run đối chiếu persona 8B với một model mạnh hơn.
+**Goal:** Dựng nền dùng chung (gán case cho trial, bơm state vào request) và task `chat_0709-vita-drive-golden-error-recovery` chấm 364 golden case, chạy được smoke run đối chiếu persona 8B với một model mạnh hơn.
 
 **Architecture:** Trial = 1 persona × 1 case. Case đến từ `input/cases.jsonl`, gán qua `agents[].kwargs.case_id` trong job recipe — kênh đã có sẵn và đã được persist theo trial. Persona nhận case brief qua goal context mới `assigned_case`; state của case được bơm vào request qua `sessionBody` overlay. Runner phát artifact `case_run.json` gộp case + quan sát để verifier tự chứa.
 
@@ -34,7 +34,7 @@
 | `tests/unit/application/test_convert_vita_golden_dataset.py` | Test logic chuyển đổi từng dòng |
 | `packages/playground/src/playground/case_binding.py` | Đọc `cases.jsonl`, resolve `${case.*}`, dựng case brief |
 | `packages/playground/src/playground/tests/test_case_binding.py` | Test module trên |
-| `application/tasks/chat_vita-drive-golden-error-recovery/**` | Task folder đầy đủ |
+| `application/tasks/chat_0709-vita-drive-golden-error-recovery/**` | Task folder đầy đủ |
 
 **Sửa**
 
@@ -372,7 +372,7 @@ Run offline; the source workbook is not committed to the repository:
 
     uv run --with openpyxl python application/scripts/convert_vita_golden_dataset.py \\
         --source "/home/khiemdm/Downloads/golden_singleturn_cover intent_happy&fallback.xlsx" \\
-        --out-dir application/tasks/chat_vita-drive-golden-error-recovery/input
+        --out-dir application/tasks/chat_0709-vita-drive-golden-error-recovery/input
 """
 
 from __future__ import annotations
@@ -578,8 +578,8 @@ git commit -m "feat(vita): logic chuyển golden xlsx sang bản ghi case"
 ## Task A3: Sinh `cases.jsonl` thật và kiểm tra toàn cục
 
 **Files:**
-- Create: `application/tasks/chat_vita-drive-golden-error-recovery/input/cases.jsonl`
-- Create: `application/tasks/chat_vita-drive-golden-error-recovery/input/intent_taxonomy.json`
+- Create: `application/tasks/chat_0709-vita-drive-golden-error-recovery/input/cases.jsonl`
+- Create: `application/tasks/chat_0709-vita-drive-golden-error-recovery/input/intent_taxonomy.json`
 - Test: `tests/unit/application/test_vita_cases_dataset.py`
 
 **Interfaces:**
@@ -589,12 +589,12 @@ git commit -m "feat(vita): logic chuyển golden xlsx sang bản ghi case"
 - [ ] **Step 1: Chạy converter**
 
 ```bash
-mkdir -p application/tasks/chat_vita-drive-golden-error-recovery/input
+mkdir -p application/tasks/chat_0709-vita-drive-golden-error-recovery/input
 uv run --with openpyxl python application/scripts/convert_vita_golden_dataset.py \
   --source "/home/khiemdm/Downloads/golden_singleturn_cover intent_happy&fallback.xlsx" \
-  --out-dir application/tasks/chat_vita-drive-golden-error-recovery/input
+  --out-dir application/tasks/chat_0709-vita-drive-golden-error-recovery/input
 ```
-Expected: `wrote 364 cases to application/tasks/chat_vita-drive-golden-error-recovery/input/cases.jsonl`
+Expected: `wrote 364 cases to application/tasks/chat_0709-vita-drive-golden-error-recovery/input/cases.jsonl`
 
 Nếu báo `ConversionError`, đó là nhãn ngoài bảng map — bổ sung vào `SUBINTENT_BY_LABEL_VI` (và sửa `test_covers_exactly_sixty_labels`) chứ không nới lỏng kiểm tra.
 
@@ -608,7 +608,7 @@ from pathlib import Path
 
 CASES_PATH = (
     Path(__file__).resolve().parents[3]
-    / "application/tasks/chat_vita-drive-golden-error-recovery/input/cases.jsonl"
+    / "application/tasks/chat_0709-vita-drive-golden-error-recovery/input/cases.jsonl"
 )
 DECISIONS = {
     "execute",
@@ -696,7 +696,7 @@ Nếu `test_unhappy_cases_expect_no_tool_calls` thất bại thì dataset có d�
 - [ ] **Step 4: Commit**
 
 ```bash
-git add application/tasks/chat_vita-drive-golden-error-recovery/input/ tests/unit/application/test_vita_cases_dataset.py
+git add application/tasks/chat_0709-vita-drive-golden-error-recovery/input/ tests/unit/application/test_vita_cases_dataset.py
 git commit -m "feat(vita): sinh 364 case golden vào cases.jsonl"
 ```
 
@@ -716,7 +716,7 @@ git commit -m "feat(vita): sinh 364 case golden vào cases.jsonl"
 ```python
 # thêm vào cuối application/playground/backend/tests/test_chatbot_task_config.py
 def test_session_body_is_parsed(tmp_path) -> None:
-    task_dir = tmp_path / "application" / "tasks" / "chat_vita-drive-golden-error-recovery" / "input"
+    task_dir = tmp_path / "application" / "tasks" / "chat_0709-vita-drive-golden-error-recovery" / "input"
     task_dir.mkdir(parents=True)
     (task_dir / "chatbot.yaml").write_text(
         "\n".join(
@@ -734,7 +734,7 @@ def test_session_body_is_parsed(tmp_path) -> None:
         encoding="utf-8",
     )
     config = load_chatbot_task_config_for_task_path(
-        "application/tasks/chat_vita-drive-golden-error-recovery", repo_root=tmp_path
+        "application/tasks/chat_0709-vita-drive-golden-error-recovery", repo_root=tmp_path
     )
     assert config is not None
     assert config.protocol.static_body == {"drivingContext": "driving"}
@@ -1498,26 +1498,26 @@ git commit -m "feat(playground): runner chọn goal context theo case và phát 
 
 ---
 
-# GIAI ĐOẠN B — Task `chat_vita-drive-golden-error-recovery`
+# GIAI ĐOẠN B — Task `chat_0709-vita-drive-golden-error-recovery`
 
 ## Task B1: Task folder
 
 **Files:**
-- Create: `application/tasks/chat_vita-drive-golden-error-recovery/{task.toml,instruction.md,reporting.json,persona_strategy.json,README.md}`
-- Create: `application/tasks/chat_vita-drive-golden-error-recovery/input/{context.md,chatbot.yaml,self_report_schema.yaml}`
-- Create: `application/tasks/chat_vita-drive-golden-error-recovery/tests/verifier_env.sh`
+- Create: `application/tasks/chat_0709-vita-drive-golden-error-recovery/{task.toml,instruction.md,reporting.json,persona_strategy.json,README.md}`
+- Create: `application/tasks/chat_0709-vita-drive-golden-error-recovery/input/{context.md,chatbot.yaml,self_report_schema.yaml}`
+- Create: `application/tasks/chat_0709-vita-drive-golden-error-recovery/tests/verifier_env.sh`
 
 **Interfaces:**
 - Consumes: `input/cases.jsonl` (Task A3)
-- Produces: task path `application/tasks/chat_vita-drive-golden-error-recovery` thoả hợp đồng CI
+- Produces: task path `application/tasks/chat_0709-vita-drive-golden-error-recovery` thoả hợp đồng CI
 
 - [ ] **Step 1: Sao chép khung từ task chat gần nhất**
 
 ```bash
 cp application/tasks/chat_vita-drive-assistant/tests/verifier_env.sh \
-   application/tasks/chat_vita-drive-golden-error-recovery/tests/verifier_env.sh
+   application/tasks/chat_0709-vita-drive-golden-error-recovery/tests/verifier_env.sh
 cp application/tasks/chat_vita-drive-assistant/input/self_report_schema.yaml \
-   application/tasks/chat_vita-drive-golden-error-recovery/input/self_report_schema.yaml
+   application/tasks/chat_0709-vita-drive-golden-error-recovery/input/self_report_schema.yaml
 ```
 
 - [ ] **Step 2: Viết `task.toml`**
@@ -1527,7 +1527,7 @@ version = "1.0"
 artifacts = [ "/app/output",]
 
 [task]
-name = "application/vita-drive-golden-error-recovery"
+name = "application/0709-vita-drive-golden-error-recovery"
 
 [metadata]
 difficulty = "hard"
@@ -1701,8 +1701,8 @@ Expected: PASS. Test này quét mọi thư mục task nên nó là lưới an to
 - [ ] **Step 8: Commit**
 
 ```bash
-git add application/tasks/chat_vita-drive-golden-error-recovery/
-git commit -m "feat(vita): khung task chat_vita-drive-golden-error-recovery"
+git add application/tasks/chat_0709-vita-drive-golden-error-recovery/
+git commit -m "feat(vita): khung task chat_0709-vita-drive-golden-error-recovery"
 ```
 
 ---
@@ -1710,7 +1710,7 @@ git commit -m "feat(vita): khung task chat_vita-drive-golden-error-recovery"
 ## Task B2: Verifier — kiểm tra toàn vẹn case
 
 **Files:**
-- Create: `application/tasks/chat_vita-drive-golden-error-recovery/tests/case_scoring.py`
+- Create: `application/tasks/chat_0709-vita-drive-golden-error-recovery/tests/case_scoring.py`
 - Test: `tests/unit/application/test_vita_case_scoring.py`
 
 **Interfaces:**
@@ -1729,7 +1729,7 @@ sys.path.insert(
     0,
     str(
         Path(__file__).resolve().parents[3]
-        / "application/tasks/chat_vita-drive-golden-error-recovery/tests"
+        / "application/tasks/chat_0709-vita-drive-golden-error-recovery/tests"
     ),
 )
 
@@ -1777,7 +1777,7 @@ Expected: FAIL — `ModuleNotFoundError: No module named 'case_scoring'`
 - [ ] **Step 3: Viết module chấm**
 
 ```python
-# application/tasks/chat_vita-drive-golden-error-recovery/tests/case_scoring.py
+# application/tasks/chat_0709-vita-drive-golden-error-recovery/tests/case_scoring.py
 """Score one assigned case against what the persona and the assistant did."""
 
 from __future__ import annotations
@@ -1827,7 +1827,7 @@ Expected: PASS, 7 test.
 - [ ] **Step 5: Commit**
 
 ```bash
-git add application/tasks/chat_vita-drive-golden-error-recovery/tests/case_scoring.py tests/unit/application/test_vita_case_scoring.py
+git add application/tasks/chat_0709-vita-drive-golden-error-recovery/tests/case_scoring.py tests/unit/application/test_vita_case_scoring.py
 git commit -m "feat(vita): kiểm tra toàn vẹn ràng buộc đầu vào của case"
 ```
 
@@ -1836,9 +1836,9 @@ git commit -m "feat(vita): kiểm tra toàn vẹn ràng buộc đầu vào của
 ## Task B3: Verifier — khớp quyết định và tool call
 
 **Files:**
-- Modify: `application/tasks/chat_vita-drive-golden-error-recovery/tests/case_scoring.py`
-- Create: `application/tasks/chat_vita-drive-golden-error-recovery/tests/test_state.py`
-- Create: `application/tasks/chat_vita-drive-golden-error-recovery/tests/test.sh`
+- Modify: `application/tasks/chat_0709-vita-drive-golden-error-recovery/tests/case_scoring.py`
+- Create: `application/tasks/chat_0709-vita-drive-golden-error-recovery/tests/test_state.py`
+- Create: `application/tasks/chat_0709-vita-drive-golden-error-recovery/tests/test.sh`
 - Test: `tests/unit/application/test_vita_case_scoring.py` (mở rộng)
 
 **Interfaces:**
@@ -2188,7 +2188,7 @@ json.dump({
 }, open(sys.argv[1], "w"), ensure_ascii=False)
 PY
 HARBOR_OUTPUT_DIR="$TMP/output" HARBOR_VERIFIER_DIR="$TMP/verifier" \
-  python3 application/tasks/chat_vita-drive-golden-error-recovery/tests/test_state.py
+  python3 application/tasks/chat_0709-vita-drive-golden-error-recovery/tests/test_state.py
 cat "$TMP/verifier/structured_output.json" | head -20
 ```
 Expected: `PASS: case vg_0137 matched`, và `structured_output.json` có context `error_recovery`.
@@ -2196,8 +2196,8 @@ Expected: `PASS: case vg_0137 matched`, và `structured_output.json` có context
 - [ ] **Step 7: Commit**
 
 ```bash
-chmod +x application/tasks/chat_vita-drive-golden-error-recovery/tests/test.sh
-git add application/tasks/chat_vita-drive-golden-error-recovery/tests/ tests/unit/application/test_vita_case_scoring.py
+chmod +x application/tasks/chat_0709-vita-drive-golden-error-recovery/tests/test.sh
+git add application/tasks/chat_0709-vita-drive-golden-error-recovery/tests/ tests/unit/application/test_vita_case_scoring.py
 git commit -m "feat(vita): verifier chấm quyết định, tool call và toàn vẹn case"
 ```
 
@@ -2285,8 +2285,8 @@ git commit -m "feat(vita): sinh job recipe theo tích persona x case"
 ## Task B5: Smoke run — cửa chặn
 
 **Files:**
-- Create: `configs/jobs/application-task-job-recipe/appSim-vita-golden-error-recovery-smoke-8b.yaml`
-- Create: `configs/jobs/application-task-job-recipe/appSim-vita-golden-error-recovery-smoke-baseline.yaml`
+- Create: `configs/jobs/application-task-job-recipe/appSim-0709-vita-golden-error-recovery-smoke-8b.yaml`
+- Create: `configs/jobs/application-task-job-recipe/appSim-0709-vita-golden-error-recovery-smoke-baseline.yaml`
 
 **Interfaces:**
 - Consumes: mọi thứ ở trên
@@ -2298,7 +2298,7 @@ git commit -m "feat(vita): sinh job recipe theo tích persona x case"
 ```bash
 uv run python - <<'PY'
 import json, collections, itertools
-path = "application/tasks/chat_vita-drive-golden-error-recovery/input/cases.jsonl"
+path = "application/tasks/chat_0709-vita-drive-golden-error-recovery/input/cases.jsonl"
 cases = [json.loads(l) for l in open(path, encoding="utf-8") if l.strip()]
 by_type = collections.defaultdict(list)
 for c in cases:
@@ -2316,8 +2316,8 @@ Recipe `-8b` đặt `model_name` là model 8B; recipe `-baseline` đặt `anthro
 - [ ] **Step 3: Chạy cả hai**
 
 ```bash
-uv run python application/scripts/report_job.py --job appSim-vita-golden-error-recovery-smoke-8b
-uv run python application/scripts/report_job.py --job appSim-vita-golden-error-recovery-smoke-baseline
+uv run python application/scripts/report_job.py --job appSim-0709-vita-golden-error-recovery-smoke-8b
+uv run python application/scripts/report_job.py --job appSim-0709-vita-golden-error-recovery-smoke-baseline
 ```
 
 - [ ] **Step 4: Đọc ba con số trước khi đi tiếp**
@@ -2333,7 +2333,7 @@ uv run python application/scripts/report_job.py --job appSim-vita-golden-error-r
 - [ ] **Step 5: Commit recipe và ghi lại số liệu**
 
 ```bash
-git add configs/jobs/application-task-job-recipe/appSim-vita-golden-error-recovery-smoke-*.yaml
+git add configs/jobs/application-task-job-recipe/appSim-0709-vita-golden-error-recovery-smoke-*.yaml
 git commit -m "feat(vita): recipe smoke run đối chiếu persona 8B với baseline"
 ```
 
