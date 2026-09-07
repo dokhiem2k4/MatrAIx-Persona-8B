@@ -485,6 +485,7 @@ def harbor_output_artifacts_from_result(
     *,
     session_id: str,
     transcript_payload: Dict[str, Any],
+    assigned_case: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Dict[str, Any]]:
     application_context = result.config.application_context or result.config.domain
     application_result_payload = {
@@ -493,11 +494,15 @@ def harbor_output_artifacts_from_result(
         "applicationContext": application_context,
         "turnCount": len(result.transcript),
     }
-    return {
+    artifacts: Dict[str, Dict[str, Any]] = {
         "transcript.json": transcript_payload,
         "application_result.json": application_result_payload,
         "user_feedback.json": result.questionnaire.artifact_dict(),
     }
+    case_run = build_case_run_artifact(assigned_case, result.transcript)
+    if case_run is not None:
+        artifacts["case_run.json"] = case_run
+    return artifacts
 
 
 async def _write_output_artifacts(
@@ -529,6 +534,7 @@ async def _write_output_artifacts(
         result,
         session_id=session.session_id or "harbor-chat",
         transcript_payload=transcript_payload,
+        assigned_case=getattr(session, "assigned_case", None),
     )
     for filename, payload in artifacts.items():
         with tempfile.NamedTemporaryFile(
@@ -554,6 +560,7 @@ async def run_harbor_chat_eval(
     persona_yaml_path: Optional[str] = None,
     repo_root: Optional[Any] = None,
     job_dir: Optional[Any] = None,
+    trial_dir: Optional[Any] = None,
 ) -> PlaygroundResult:
     """Async chat eval loop using a Harbor sidecar session."""
     from playground.user_sim.runner import run_playground_async
@@ -569,6 +576,7 @@ async def run_harbor_chat_eval(
         persona_yaml_path=persona_yaml_path,
         repo_root=repo_root,
         job_dir=job_dir,
+        trial_dir=trial_dir,
     )
 
 
@@ -621,6 +629,7 @@ async def run_harbor_chat_eval_for_persona(
         persona_yaml_path=persona_path,
         repo_root=repo_root,
         job_dir=trial_dir.parent,
+        trial_dir=trial_dir,
     )
     if on_event is not None:
         on_event({"type": "phase", "phase": "harbor_collecting_artifacts"})

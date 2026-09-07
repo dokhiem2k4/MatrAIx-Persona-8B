@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import os
+
 from itertools import count
 import json
 from pathlib import Path
@@ -26,6 +28,7 @@ from playground.types import (
     PlaygroundTurn,
 )
 from playground.user_sim.chatbot_labels import chatbot_display_name
+from playground.case_binding import build_case_brief, case_id_from_trial, load_cases
 from playground.user_sim.kickoff import get_goal_context
 from playground.user_sim.port import (
     ChatSessionPort,
@@ -167,13 +170,30 @@ def run_playground(
     persona_yaml_path: Optional[str] = None,
     repo_root: Optional[Path] = None,
     job_dir: Optional[Path] = None,
+    trial_dir: Optional[Path] = None,
 ) -> PlaygroundResult:
     def emit(event: Dict[str, Any]) -> None:
         if on_event is not None:
             on_event(event)
 
     assert_budget_allows_request(job_dir)
-    goal_context = get_goal_context("scenario_default")
+    assigned_case = None
+    if task_path and repo_root is not None:
+        case_id = case_id_from_trial(trial_dir, os.environ)
+        if case_id:
+            assigned_case = load_cases(task_path, repo_root=repo_root).get(case_id)
+            if assigned_case is None:
+                raise ValueError(
+                    "trial requests case {!r} but {} ships no such case".format(
+                        case_id, task_path
+                    )
+                )
+    # A trial that silently fell back to a free goal would produce data that
+    # looks valid but measures nothing, so an unknown case_id is fatal above.
+    setattr(session, "assigned_case", assigned_case)
+    goal_context = get_goal_context(
+        "assigned_case" if assigned_case else "scenario_default"
+    )
     chatbot_label = chatbot_display_name(config.application_id)
     task_bundle = _load_task_bundle(task_path=task_path, repo_root=repo_root)
     task_config = _load_chatbot_runtime_config(task_path=task_path, repo_root=repo_root)
@@ -196,7 +216,11 @@ def run_playground(
         persona,
         persona_yaml_path=persona_yaml_path,
         task_bundle=task_bundle,
-        task_prompt=goal_context.description,
+        task_prompt=(
+            build_case_brief(assigned_case)
+            if assigned_case
+            else goal_context.description
+        ),
     )
     report_prompt = assemble_report_system_prompt(
         persona,
@@ -292,6 +316,7 @@ async def run_playground_async(
     persona_yaml_path: Optional[str] = None,
     repo_root: Optional[Path] = None,
     job_dir: Optional[Path] = None,
+    trial_dir: Optional[Path] = None,
 ) -> PlaygroundResult:
     """Like :func:`run_playground` but awaits async Harbor sidecar turns."""
 
@@ -300,7 +325,23 @@ async def run_playground_async(
             on_event(event)
 
     assert_budget_allows_request(job_dir)
-    goal_context = get_goal_context("scenario_default")
+    assigned_case = None
+    if task_path and repo_root is not None:
+        case_id = case_id_from_trial(trial_dir, os.environ)
+        if case_id:
+            assigned_case = load_cases(task_path, repo_root=repo_root).get(case_id)
+            if assigned_case is None:
+                raise ValueError(
+                    "trial requests case {!r} but {} ships no such case".format(
+                        case_id, task_path
+                    )
+                )
+    # A trial that silently fell back to a free goal would produce data that
+    # looks valid but measures nothing, so an unknown case_id is fatal above.
+    setattr(session, "assigned_case", assigned_case)
+    goal_context = get_goal_context(
+        "assigned_case" if assigned_case else "scenario_default"
+    )
     chatbot_label = chatbot_display_name(config.application_id)
     task_bundle = _load_task_bundle(task_path=task_path, repo_root=repo_root)
     task_config = _load_chatbot_runtime_config(task_path=task_path, repo_root=repo_root)
@@ -323,7 +364,11 @@ async def run_playground_async(
         persona,
         persona_yaml_path=persona_yaml_path,
         task_bundle=task_bundle,
-        task_prompt=goal_context.description,
+        task_prompt=(
+            build_case_brief(assigned_case)
+            if assigned_case
+            else goal_context.description
+        ),
     )
     report_prompt = assemble_report_system_prompt(
         persona,
