@@ -392,7 +392,14 @@ Giữ nguyên hai contextRule `task_outcome` và `user_feedback` như các task 
 
 ## 11. Task 2 — `chat_vita-drive-multiturn-coverage`
 
-Trạng thái: **hợp đồng đo đã chốt, chi tiết verifier cần một vòng thiết kế riêng.**
+Trạng thái: **đã dựng xong.** Verifier chấm bằng facet độ phủ + `lexical_topic_overlap`
+(proxy từ vựng, không phải điểm) + self-report của persona. Chưa có LLM-judge.
+
+Phát hiện khi convert: bộ này nhiễu nặng hơn mục 2 ghi. Ngoài dòng gán nhầm role,
+nhiều seed là mảnh vụn nhận dạng giọng nói hoặc nằm dưới `sub_intent` không khớp
+nội dung — `calendar_query` = `"gì"`, `source_queue` = `"usb"`, `calling` =
+`"đây là dấu hiệu của bệnh gì"`. Luật chỉ bắt được `seed_quality = too_short`
+(6/46); phần còn lại phải người đọc, nên converter xuất `seed_review.md`.
 
 Trial = 1 persona × 1 conversation seed. 46 seed.
 
@@ -432,7 +439,11 @@ goal context `assigned_case` ở khối 2.
 
 ## 12. Task 3 — `chat_vita-drive-assistant-mode-ab`
 
-Trạng thái: **hợp đồng đo đã chốt, chi tiết verifier cần một vòng thiết kế riêng.**
+Trạng thái: **đã dựng xong.** Verifier ghi hai yếu tố thí nghiệm, `reply_char_count`,
+và self-report của persona. Không chấm đúng/sai vì không có ground truth.
+
+Converter đối chiếu chéo `subintent_code` và `intent_code` của workbook với bảng
+taxonomy: cả 276 dòng khớp.
 
 Trial = 1 persona × 1 case. 276 case.
 
@@ -534,16 +545,16 @@ Task 1 đi trước vì nó trả tiền cho khối 2 và khối 3 mà hai task 
 5. **Smoke run: ~20 case × 1 persona × 2 model (8B và một model mạnh hơn)** — cửa chặn
 6. Sinh recipe 364 × 3–5 persona, chạy đầy đủ
 
-**Giai đoạn C — task 3** (trước task 2, vì dùng lại `sessionBody` đã có và dữ liệu sạch)
+**Giai đoạn C — task 3** ✅ dựng xong
 
-7. Converter bộ 3 + task folder + verifier judge-based
-8. Chạy 276 case, xuất bảng chéo mode × vehicle_state
+7. ~~Converter bộ 3 + task folder + verifier~~
+8. Chạy 276 case, xuất bảng chéo mode × vehicle_state — **chờ SUT + credential**
 
-**Giai đoạn D — task 2**
+**Giai đoạn D — task 2** ✅ dựng xong
 
-9. Review người làm sạch dòng gán nhầm role
-10. Converter bộ 2 + task folder + verifier judge-based
-11. Chạy 46 seed
+9. Review người trên `seed_review.md` — **chờ người làm**
+10. ~~Converter bộ 2 + task folder + verifier~~
+11. Chạy 46 seed — **chờ SUT + credential**
 
 ## 16. Tiêu chí nghiệm thu
 
