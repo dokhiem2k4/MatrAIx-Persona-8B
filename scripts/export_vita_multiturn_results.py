@@ -36,6 +36,7 @@ from persona_profile import build_persona_profile, load_labels  # noqa: E402
 COLUMNS = [
     "trial_id",
     "row_id",
+    "case_id",
     "intent_code",
     "subintent_code",
     "subintent_name",
@@ -59,6 +60,86 @@ COLUMNS = [
 ]
 
 
+def describe_persona(
+    persona_path: str | None,
+    labels: dict[str, str],
+    values: dict[str, dict[str, str]],
+    cache: dict[str, str],
+) -> str:
+    """The respondent's traits, or why they could not be read.
+
+    A blank cell here is ambiguous: it could mean the persona has no traits, or
+    that the file moved. Saying which keeps a reader from concluding the first
+    when the truth is the second -- jobs run from another worktree store an
+    absolute path into a persona pool this checkout may not have.
+    """
+    profile = build_persona_profile(
+        persona_path, labels=labels, values=values, cache=cache
+    )
+    if profile:
+        return profile
+    if not persona_path:
+        return "(trial ghi không có persona_path)"
+    return "(không đọc được hồ sơ persona: {})".format(persona_path)
+
+
+def stimulus_from_trial(trial: Path, result: dict[str, Any]) -> dict[str, Any]:
+    """Normalise the stimulus, whichever mechanism produced it.
+
+    Two mechanisms exist side by side after the branches merged: the pipeline's
+    ``seed`` rides in application_result.json, while case-bound tasks write
+    ``case_run.json``. A reader should not have to care which one a job used.
+    """
+    seed = result.get("seed") or {}
+    if seed:
+        return {
+            "row_id": seed.get("rowId", ""),
+            "case_id": "",
+            "intent_code": seed.get("intentCode", ""),
+            "subintent_code": seed.get("subintentCode", ""),
+            "subintent_name": seed.get("subintentName", ""),
+            "persona_id": seed.get("sourcePersonaId", ""),
+            "vehicle_state": seed.get("vehicleState", ""),
+            "assistant_mode": seed.get("assistantMode", ""),
+            "scenario": seed.get("scenario", ""),
+            "seed_first_input": seed.get("firstInput", ""),
+        }
+    run = read_json(trial / "artifacts" / "app" / "output" / "case_run.json") or {}
+    case = run.get("case") or {}
+    state = case.get("state") or {}
+    return {
+        "row_id": "",
+        "case_id": case.get("case_id", ""),
+        "intent_code": case.get("parent_intent_code", ""),
+        "subintent_code": case.get("subintent_code", ""),
+        "subintent_name": case.get("subintent_label_vi", ""),
+        "persona_id": "",
+        "vehicle_state": state.get("vehicle_state", "") or "",
+        # The deployment's real personality axis; the workbook's dead
+        # ASSISTANT_MODE column is not carried forward.
+        "assistant_mode": state.get("assistant_profile_id", "") or "",
+        "scenario": case.get("error_type", ""),
+        "seed_first_input": case.get("user_input", ""),
+    }
+
+
+def verifier_facets(trial: Path) -> dict[str, Any]:
+    """Flatten the verifier's facets so scoring lands beside the rating.
+
+    Facet keys differ per task, so they become columns discovered from the data
+    rather than a fixed list that would silently drop a new task's scores.
+    """
+    payload = read_json(trial / "verifier" / "structured_output.json") or {}
+    facets: dict[str, Any] = {}
+    for context in payload.get("contexts") or ():
+        if not isinstance(context, dict):
+            continue
+        for facet in context.get("facets") or ():
+            if isinstance(facet, dict) and facet.get("key"):
+                facets[str(facet["key"])] = facet.get("value")
+    return facets
+
+
 def read_json(path: Path) -> dict[str, Any] | None:
     try:
         return json.loads(path.read_text(encoding="utf-8"))
@@ -79,10 +160,13 @@ def collect(job_dir: Path) -> tuple[list[dict[str, Any]], list[str]]:
         feedback = read_json(out / "user_feedback.json")
         # A trial that died mid-flight leaves partial artifacts. Counting it as
         # a zero would quietly drag every average down, so drop it and say so.
-        if not result or not transcript or not feedback:
+        # A case-bound task scores from the verifier, so it can legitimately
+        # finish without user_feedback.json. Only the first two are required.
+        if not result or not transcript:
             skipped.append(trial.name)
             continue
-        seed = result.get("seed") or {}
+        feedback = feedback or {}
+        stimulus = stimulus_from_trial(trial, result)
         persona = read_json(trial / "persona_meta.json") or {}
         messages = transcript.get("messages") or []
         opening = next(
@@ -90,22 +174,20 @@ def collect(job_dir: Path) -> tuple[list[dict[str, Any]], list[str]]:
         )
         row = {
             "trial_id": trial.name.rsplit("__", 1)[-1],
-            "row_id": seed.get("rowId", ""),
-            "intent_code": seed.get("intentCode", ""),
-            "subintent_code": seed.get("subintentCode", ""),
-            "subintent_name": seed.get("subintentName", ""),
-            "persona_id": seed.get("sourcePersonaId", ""),
+            "row_id": stimulus["row_id"],
+            "case_id": stimulus["case_id"],
+            "intent_code": stimulus["intent_code"],
+            "subintent_code": stimulus["subintent_code"],
+            "subintent_name": stimulus["subintent_name"],
+            "persona_id": stimulus["persona_id"] or persona.get("persona_id", ""),
             "persona_name": persona.get("display_name", ""),
-            "persona_profile": build_persona_profile(
-                persona.get("persona_path"),
-                labels=labels,
-                values=values,
-                cache=profile_cache,
+            "persona_profile": describe_persona(
+                persona.get("persona_path"), labels, values, profile_cache
             ),
-            "vehicle_state": seed.get("vehicleState", ""),
-            "assistant_mode": seed.get("assistantMode", ""),
-            "scenario": seed.get("scenario", ""),
-            "seed_first_input": seed.get("firstInput", ""),
+            "vehicle_state": stimulus["vehicle_state"],
+            "assistant_mode": stimulus["assistant_mode"],
+            "scenario": stimulus["scenario"],
+            "seed_first_input": stimulus["seed_first_input"],
             "opening_message": opening,
             "turn_count": result.get("turnCount", len(messages) // 2),
             "need_satisfaction": feedback.get("needConstraintSatisfaction", ""),
@@ -117,6 +199,7 @@ def collect(job_dir: Path) -> tuple[list[dict[str, Any]], list[str]]:
             "asked_clarification": feedback.get("askedUsefulClarificationQuestions", ""),
             "clarifying_notes": feedback.get("clarifyingNotes", ""),
         }
+        row.update(verifier_facets(trial))
         rows.append(row)
         records.append({**row, "messages": messages})
     return rows, skipped, records
@@ -167,8 +250,14 @@ def main() -> int:
     # utf-8-sig, not utf-8: the rows are Vietnamese, and Excel decodes a
     # BOM-less CSV with the machine's ANSI codepage -- "Tôi" arrives as
     # "TÃ´i". The BOM is how Excel is told the file is UTF-8.
+    # Verifier facets differ per task, so append whatever the rows actually
+    # carry. A fixed list would drop a new task's scores without a word, and
+    # extrasaction="ignore" makes that silence total.
+    extra = sorted({key for row in rows for key in row} - set(COLUMNS))
     with csv_path.open("w", encoding="utf-8-sig", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=COLUMNS, extrasaction="ignore")
+        writer = csv.DictWriter(
+            handle, fieldnames=COLUMNS + extra, extrasaction="ignore", restval=""
+        )
         writer.writeheader()
         writer.writerows(rows)
 
