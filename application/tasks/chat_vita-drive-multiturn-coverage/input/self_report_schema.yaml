@@ -1,0 +1,27 @@
+artifactName: user_feedback.json
+instructions: |
+  Đánh giá trung thực trải nghiệm sử dụng trợ lý Vita khi đang lái xe.
+  Tập trung vào độ chính xác khi thực thi lệnh điều khiển xe, sự an toàn và cách giao tiếp.
+fields:
+  - key: needConstraintSatisfaction
+    prompt: Trợ lý Vita có đáp ứng tốt yêu cầu điều khiển/hỗ trợ của bạn không?
+    kind: enum
+    choices: [yes, partially, no]
+  - key: personalPreferenceSatisfaction
+    prompt: Giọng điệu và cách phản hồi có phù hợp với bạn khi lái xe không?
+    kind: enum
+    choices: [yes, partially, no]
+  - key: overallExperienceRating
+    prompt: Đánh giá tổng quan trải nghiệm từ 1 đến 10?
+    kind: integer
+    minimum: 1
+    maximum: 10
+    explanation:
+      key: reason
+      prompt: Nêu ngắn gọn lý do cho số điểm trên.
+  - key: askedUsefulClarificationQuestions
+    prompt: Trợ lý có hỏi lại hoặc xác nhận an toàn khi cần thiết không?
+    kind: boolean
+    explanation:
+      key: clarifyingNotes
+      prompt: Chi tiết phản hồi an toàn hoặc câu hỏi làm rõ.

@@ -168,5 +168,14 @@ def build_case_run_artifact(
             if first
             else [],
             "turn_count": len(ordered),
+            # Multi-turn tasks need every turn, not just the anchor turn.
+            "turns": [
+                {
+                    "turn_index": getattr(turn, "turn_index", index),
+                    "user_message": getattr(turn, "user_message", ""),
+                    "assistant_message": getattr(turn, "assistant_message", ""),
+                }
+                for index, turn in enumerate(ordered)
+            ],
         },
     }

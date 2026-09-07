@@ -70,6 +70,17 @@ APPLICATION_TASK_METADATA: dict[str, dict[str, object]] = {
             "single turn",
         ],
     },
+    "chat_vita-drive-multiturn-coverage": {
+        "type": "chatbot",
+        "domain": DOMAIN_AUTOMOTIVE_AI,
+        "tags": [
+            "in-cabin assistant",
+            "multi turn",
+            "intent coverage",
+            "context",
+            "46 subintents",
+        ],
+    },
     "chat_vita-drive-error-recovery": {
         "type": "chatbot",
         "domain": DOMAIN_AUTOMOTIVE_AI,

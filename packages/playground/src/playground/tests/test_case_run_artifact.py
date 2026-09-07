@@ -42,3 +42,14 @@ def test_empty_transcript_yields_empty_observation():
     assert observation["first_assistant_message"] == ""
     assert observation["structured_exposure"] == []
     assert observation["turn_count"] == 0
+
+
+def test_observation_carries_every_turn_for_multi_turn_tasks():
+    turns = build_case_run_artifact(CASE, TURNS)["observation"]["turns"]
+    assert [t["turn_index"] for t in turns] == [0, 1]
+    assert turns[1]["user_message"] == "Aeon Long Biên nhé"
+    assert turns[1]["assistant_message"] == "Dạ em dẫn đường ngay ạ."
+
+
+def test_turns_is_empty_for_an_empty_transcript():
+    assert build_case_run_artifact(CASE, [])["observation"]["turns"] == []
