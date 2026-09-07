@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita, đang lúc lái xe trên đường đông thế này thì tôi có thể ra lệnh cho cô những tính năng nào để vừa tập trung lái xe vừa xử lý nhanh công việc?"
+    },
+    {
+      "role": "support",
+      "content": "Khi xe đang chạy, mình có thể giúp bạn điều chỉnh điều hòa, quạt gió, nhiệt độ, kính lái, đèn trong xe, khóa cửa, gập gương, âm lượng, tắt tiếng, chế độ sưởi kính sau, và đọc thông tin trạng thái xe. Bạn cứ nói ngắn gọn, mình sẽ làm ngay."
+    },
+    {
+      "role": "customer",
+      "content": "Được rồi, vậy chỉnh giúp tôi nhiệt độ điều hòa bên ghế lái xuống 21 độ và bật gió mức trung bình nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa, chỉnh nhiệt độ ghế lái xuống 21°C và đặt gió mức trung bình rồi bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Kiểm tra giúp tôi mức pin hiện tại và phạm vi hoạt động còn lại trên xe xem sao."
+    },
+    {
+      "role": "support",
+      "content": "Pin xe hiện đang ở 78%, phạm vi hoạt động còn lại khoảng 312 km."
+    },
+    {
+      "role": "customer",
+      "content": "Rất tốt, cảm ơn Vita. Mọi thứ đã ổn, bây giờ tôi tập trung lái xe đây."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn. Lái xe an toàn nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

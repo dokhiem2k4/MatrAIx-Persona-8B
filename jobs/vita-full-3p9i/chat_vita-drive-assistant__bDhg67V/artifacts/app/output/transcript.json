@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, giúp tôi tạo lịch họp nhóm vào lúc 9 giờ sáng mai nhé."
+    },
+    {
+      "role": "support",
+      "content": "Rất tiếc, mình không thể tạo lịch họp hoặc quản lý lịch trên xe. Tính năng này hiện chưa được hỗ trợ. Bạn có thể dùng điện thoại để tạo lịch họp qua Google Calendar hoặc ứng dụng lịch khác. Nếu cần mình hỗ trợ việc gì khác trên xe như điều hòa, dẫn đường, hay giải trí thì cứ nói nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Vậy thôi bỏ qua lịch họp nhé. Giờ bật giúp tôi điều hòa 22 độ và tìm trạm sạc gần nhất trên đường đi với."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa 22°C và tìm đường đến trạm sạc gần nhất rồi bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita nhé, nhớ kiểm tra giúp tôi xem áp suất lốp xe hiện tại ổn chưa nữa."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Các chỉ số đều trong ngưỡng ổn định, bạn yên tâm nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Tuyệt vời, cảm ơn Vita nhiều nhé!"
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn! Có gì cần mình giúp thì cứ nói nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

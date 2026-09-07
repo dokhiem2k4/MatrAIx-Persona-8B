@@ -1,0 +1,48 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, đang chạy ngang qua đoạn Huế rồi, ở đây có món đặc sản nào ngon nổi tiếng vậy em?"
+    },
+    {
+      "role": "support",
+      "content": "Đặc sản Huế nổi tiếng lắm bạn ơi, như bún bò Huế, cơm hến, bánh bèo, nem lụi và chè Huế. Nếu có dịp ghé lại thì nhớ thử nha."
+    },
+    {
+      "role": "customer",
+      "content": "Nghe hấp dẫn đấy! Mà tiện thể kiểm tra giúp anh xem mức pin hiện tại còn bao nhiêu phần trăm để anh tính chỗ sạc luôn."
+    },
+    {
+      "role": "support",
+      "content": "Pin hiện tại của xe đang ở 78%, đi được khoảng 312 km nữa. Bạn cần tính chỗ sạc thì mình sẵn sàng hỗ trợ thêm."
+    },
+    {
+      "role": "customer",
+      "content": "Tìm giúp anh trạm sạc điện VinFast nào gần nhất trên tuyến đường này nhé."
+    },
+    {
+      "role": "support",
+      "content": "Để tìm trạm sạc VinFast gần nhất trên tuyến đường, mình cần biết điểm đến hiện tại của bạn. Hiện xe chưa có điểm đến nào được thiết lập trong navigation. Bạn muốn đi đâu ạ?"
+    },
+    {
+      "role": "customer",
+      "content": "À, anh đang chạy về hướng Đà Nẵng, em tìm trạm sạc nào thuận tiện dọc đường đó giúp anh nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tìm tuyến đường có trạm sạc dọc hướng Đà Nẵng, khoảng 56 km, ETA 179 phút. Bạn có thể bắt đầu di chuyển."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita nhé, vậy là yên tâm tiếp tục hành trình rồi."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn. Chúc bạn có chuyến đi an toàn và thoải mái nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

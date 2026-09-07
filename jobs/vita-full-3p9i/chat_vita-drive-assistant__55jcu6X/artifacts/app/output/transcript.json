@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, sao trời mưa to thế này mà kính xe cứ bị mờ đọng nước sương mù bên trong thế nhỉ?"
+    },
+    {
+      "role": "support",
+      "content": "Mình thấy độ ẩm trong xe đang cao, kết hợp với nhiệt độ ngoài trời 31 độ và mưa to dễ gây đọng sương trên kính. Mình có thể bật chế độ sấy kính sau hoặc chuyển luồng gió lên kính lái để làm khô nhanh hơn. Bạn muốn mình làm thử không?"
+    },
+    {
+      "role": "customer",
+      "content": "Ừ, bật sấy kính với chỉnh gió thổi lên kính lái giúp mình luôn đi Vita. Tiện thể bật gạt mưa tự động nhanh hơn chút nữa nhé."
+    },
+    {
+      "role": "support",
+      "content": "VF9 baseline không hỗ trợ sưởi kính trước; đã thực hiện set_airflow_mode; đã thực hiện set_wiper."
+    },
+    {
+      "role": "customer",
+      "content": "Sao lại không có sưởi kính trước hả Vita? Thế bật sưởi ghế cho mình với chỉnh điều hòa mát mẻ dễ chịu chút nhé."
+    },
+    {
+      "role": "support",
+      "content": "Về sưởi kính trước: VF9 không được trang bị sưởi kính chắn gió phía trước, chỉ hỗ trợ sưởi kính sau. Tuy nhiên, xe đang bật chế độ gió hướng kính (defrost) để giúp làm tan sương phía trước bằng luồng gió điều hòa. Về sưởi ghế: VF9 cũng không hỗ trợ sưởi ghế bạn nhé. Còn điều hòa thì mình thấy hiện tại đang ở 22°C, quạt mức 3, chế độ gió hướng kính. Bạn muốn mình chỉnh nhiệt độ xuống bao nhiêu và đổi hướng gió sang chế độ nào? Ví dụ gió mặt (face) cho mát trực tiếp, hay để tự động (auto)?"
+    },
+    {
+      "role": "customer",
+      "content": "Để nhiệt độ 21 độ C, quạt gió mức 4 và chuyển hướng gió ra mặt giúp mình nhé. Cảm ơn Vita."
+    },
+    {
+      "role": "support",
+      "content": "Đã chỉnh nhiệt độ 21°C, quạt gió mức 4 và hướng gió ra mặt cho bạn."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

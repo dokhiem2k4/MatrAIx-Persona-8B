@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 5,
+  "seed": {
+    "rowId": "row-0408",
+    "scenario": "Tôi đang lái xe trên tuyến quốc lộ chính để đến buổi kiểm tra thực địa, yêu cầu thông tin phải chuẩn xác tuyệt đối theo văn bản pháp luật.",
+    "firstInput": "Xác minh theo nguồn thông tin chính thức mới nhất của nhà nước xem hiện nay cả nước có bao nhiêu đơn vị hành chính cấp tỉnh, nhớ kèm trích dẫn nguồn.",
+    "intentCode": "general_qa_conversation",
+    "subintentCode": "verified_fact_qa",
+    "subintentName": "Hỏi đáp có nguồn kiểm chứng",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

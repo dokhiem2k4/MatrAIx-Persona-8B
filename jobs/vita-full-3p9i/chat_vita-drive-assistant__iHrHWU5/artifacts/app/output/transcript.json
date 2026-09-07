@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita, lát nữa khi xe gần về đến khu vực nhà tôi, nhớ nhắc tôi gọi điện cho đồng chí Trưởng phòng nhé."
+    },
+    {
+      "role": "support",
+      "content": "Hiện tại mình chưa có tính năng nhắc gọi điện dựa trên vị trí hoặc danh bạ. Mình có thể hỗ trợ bạn những việc khác như: - Điều hướng về nhà ngay bây giờ nếu bạn muốn. - Đặt lịch nhắc nhở thì xe chưa hỗ trợ, nhưng bạn có thể dùng điện thoại để đặt báo thức hoặc nhắc việc. Bạn có muốn mình mở Google Maps dẫn đường về nhà không?"
+    },
+    {
+      "role": "customer",
+      "content": "Tôi hiểu rồi, vậy thôi bỏ qua việc nhắc gọi điện nhé. Bây giờ bạn chỉnh giúp tôi nhiệt độ điều hòa ghế lái xuống 22 độ và bật thông gió ghế giúp."
+    },
+    {
+      "role": "support",
+      "content": "Đã chỉnh nhiệt độ ghế lái xuống 22°C và bật thông gió ghế rồi bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn bạn. Giờ kiểm tra giúp tôi dung lượng pin LFP hiện tại còn lại bao nhiêu phần trăm nhé."
+    },
+    {
+      "role": "support",
+      "content": "Pin hiện còn 78%."
+    },
+    {
+      "role": "customer",
+      "content": "Tuyệt vời, cảm ơn Vita. Mọi thứ như vậy là ổn rồi."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn. Mình luôn sẵn sàng khi cần nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

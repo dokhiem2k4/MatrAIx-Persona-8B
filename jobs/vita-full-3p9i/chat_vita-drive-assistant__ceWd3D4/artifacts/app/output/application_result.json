@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 4,
+  "seed": {
+    "rowId": "row-0612",
+    "scenario": "Tôi đang lái xe trên đường quốc lộ thì thấy máy rung bần bật rất khó chịu.",
+    "firstInput": "Vita, động cơ đang rung bất thường, chẩn đoán nhanh hộ tôi cái.",
+    "intentCode": "my_car",
+    "subintentCode": "diagnostics",
+    "subintentName": "Chẩn đoán",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62706e3ac3c2"
+  }
+}

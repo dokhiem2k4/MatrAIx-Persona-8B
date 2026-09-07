@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 5,
+  "seed": {
+    "rowId": "row-0606",
+    "scenario": "Tôi đang lái xe trên đường thì thấy đèn báo áp suất lốp sáng lên, hơi lo lắng vì sợ lốp bị dính đinh.",
+    "firstInput": "Vita, đèn lốp xe có chấm than là bị làm sao đấy.",
+    "intentCode": "my_car",
+    "subintentCode": "warning_explanation",
+    "subintentName": "Giải thích cảnh báo",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62706e3ac3c2"
+  }
+}

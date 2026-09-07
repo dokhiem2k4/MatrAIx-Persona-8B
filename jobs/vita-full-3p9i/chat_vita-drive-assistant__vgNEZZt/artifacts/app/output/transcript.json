@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita, tắt ngay mấy cái thông báo tin nhắn hiện trên màn hình hộ tôi nhé, đang tập trung lái xe."
+    },
+    {
+      "role": "support",
+      "content": "Xe mình hiện không có tính năng quản lý thông báo tin nhắn trên màn hình. Mình không thể tắt chúng giúp bạn được. Bạn có thể thử vào phần cài đặt thông báo trên màn hình trung tâm để tắt tạm thời, nhưng khi đang lái thì mình khuyên bạn nên tập trung đường trước đã, để thông báo đó xử lý sau khi dừng xe an toàn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Được rồi, thế chuyển sang điều hòa cho tôi nhé, hạ nhiệt độ bên ghế lái xuống 20 độ giúp."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt nhiệt độ ghế lái 20 độ."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn, tiện thể kiểm tra luôn áp suất lốp 4 bánh hộ tôi xem có ổn định không."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Các chỉ số đều trong ngưỡng ổn định."
+    },
+    {
+      "role": "customer",
+      "content": "Rất tốt, cảm ơn Vita. Giờ thì giữ nguyên không gian yên tĩnh giúp tôi nhé, không cần phát nhạc hay làm phiền gì thêm."
+    },
+    {
+      "role": "support",
+      "content": "Vâng, mình sẽ giữ yên tĩnh. Có gì cần bạn cứ gọi mình nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

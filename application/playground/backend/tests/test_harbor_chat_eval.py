@@ -254,8 +254,9 @@ async def test_run_harbor_chat_eval_for_persona_writes_output_artifacts(
         repo_root=None,
         job_dir=None,
         trial_dir=None,
+        seed=None,
     ):
-        del trial_dir
+        del trial_dir, seed
         del (
             persona,
             sut_description,

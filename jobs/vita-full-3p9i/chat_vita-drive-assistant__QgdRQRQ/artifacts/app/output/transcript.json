@@ -1,0 +1,24 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, kể cho tôi nghe một câu chuyện cười thật ngắn để tỉnh ngủ đi."
+    },
+    {
+      "role": "support",
+      "content": "Mình tìm thấy một câu chuyện cười ngắn: Cụ bà 86 tuổi trúng số độc đắc 200 triệu USD. Khi bác sĩ tâm lý hỏi cụ sẽ làm gì với số tiền đó, cụ đáp: 'Một nửa số tiền đó thuộc về ông!' khiến bác sĩ ngất xỉu. Hy vọng giúp bạn tỉnh táo hơn nhé!"
+    },
+    {
+      "role": "customer",
+      "content": "Câu chuyện vui đấy! Nhân tiện kiểm tra giúp tôi áp suất lốp 4 bánh xem sao nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Tất cả đều trong ngưỡng an toàn."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

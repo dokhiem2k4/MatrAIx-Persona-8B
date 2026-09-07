@@ -1,0 +1,56 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, phía trước có vẻ đang ùn tắc nghiêm trọng quá, tìm giúp tôi tuyến đường tránh nhanh nhất để kịp lịch trình nhé."
+    },
+    {
+      "role": "support",
+      "content": "Để mình tìm tuyến đường tránh cho bạn. Trước tiên, mình cần biết điểm đến của bạn là đâu nhé?"
+    },
+    {
+      "role": "customer",
+      "content": "Tôi đang cần tới Trung tâm Hội nghị Quốc gia ở Mỹ Đình, giúp tôi chọn tuyến đường nào tránh được đoạn ùn tắc và nhanh nhất nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã chọn tuyến đường tránh trạm thu phí từ Technopark đến Trung tâm Hội nghị Quốc gia, dài 48,9 km và dự kiến mất 156 phút. Tuy nhiên, bạn yêu cầu tránh ùn tắc và nhanh nhất, nhưng mình chỉ có thể thiết lập tránh trạm thu phí. Bạn có muốn đổi sang chế độ tối ưu giao thông không?"
+    },
+    {
+      "role": "customer",
+      "content": "Có chứ, đổi ngay sang chế độ tối ưu giao thông để né tắc đường giúp tôi, và kiểm tra xem pin xe hiện tại còn đủ đi quãng đường này không nhé."
+    },
+    {
+      "role": "support",
+      "content": "Tôi sẽ giúp bạn đổi chế độ dẫn đường và kiểm tra pin ngay. Trước tiên, tôi thấy xe đang dẫn đường đến Trung tâm Hội nghị Quốc gia, Mỹ Đình, Hà Nội với chế độ tránh thu phí (avoid_tolls), quãng đường 48.9 km , ETA khoảng 156 phút . Pin hiện tại còn 78% , tầm hoạt động 312 km . Tuy nhiên, chế độ \"tối ưu giao thông\" mà bạn yêu cầu không có sẵn trong các tùy chọn route của hệ thống. Các chế độ hiện có là: - Driving (lái xe thông thường) - Avoid tolls (tránh thu phí – đang dùng) - Charging (ưu tiên trạm sạc) Bạn muốn mình chuyển sang chế độ Driving (đường nhanh nhất, có thể qua trạm thu phí) để rút ngắn thời gian không? Với 312 km pin còn lại, quãng đường 48.9 km là hoàn toàn thoải mái, không cần lo về pin đâu."
+    },
+    {
+      "role": "customer",
+      "content": "Đúng rồi, chuyển sang chế độ Driving giúp tôi đi tuyến nhanh nhất, chấp nhận qua trạm thu phí để kịp giờ."
+    },
+    {
+      "role": "support",
+      "content": "Bạn xác nhận muốn chuyển sang chế độ lái Eco chứ?"
+    },
+    {
+      "role": "customer",
+      "content": "Không phải chế độ Eco, tôi bảo chuyển sang chế độ Driving (tuyến đường nhanh nhất có thu phí) cơ mà. Đổi ngay cho tôi đi."
+    },
+    {
+      "role": "support",
+      "content": "Đã chuyển sang chế độ Driving (tuyến nhanh nhất có thu phí) rồi bạn nhé. Lộ trình từ Tòa Technopark đến Trung tâm Hội nghị Quốc gia đã được cập nhật."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita, đồng thời tăng nhiệt độ điều hòa lên 24 độ giúp tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt nhiệt độ ghế lái 24 độ."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

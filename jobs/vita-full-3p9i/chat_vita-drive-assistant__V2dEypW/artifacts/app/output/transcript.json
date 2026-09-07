@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, xe của tôi cần kiểm tra định kỳ chút, không biết có xưởng dịch vụ nào của VinFast mở cửa vào ngày Chủ nhật không nhỉ?"
+    },
+    {
+      "role": "support",
+      "content": "Mình tìm thấy các xưởng dịch vụ VinFast tại Hà Nội như VinFast Hà An (59-63 Tràng Thi) và một số xưởng khác đều mở cửa cả Chủ nhật. Bạn có thể ghé qua bất kỳ lúc nào trong khung giờ hoạt động nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Thế chỗ nào gần khu vực Thanh Xuân hoặc Đống Đa hơn không em?"
+    },
+    {
+      "role": "support",
+      "content": "Để mình tra giúp bạn những điểm đến gần khu vực Thanh Xuân hoặc Đống Đa nhé. Nhưng trước hết, bạn muốn tìm loại địa điểm gì ạ? Ví dụ như trạm sạc, quán cà phê, nhà hàng, hay trung tâm thương mại?"
+    },
+    {
+      "role": "customer",
+      "content": "Ý anh là xưởng dịch vụ VinFast ở khu Thanh Xuân hoặc Đống Đa cơ, để anh đưa xe đi kiểm tra định kỳ ấy."
+    },
+    {
+      "role": "support",
+      "content": "Mình tìm thấy hai xưởng dịch vụ VinFast gần khu vực bạn cần: VinFast Mạnh Phát Thanh Xuân tại số 76 Nguyễn Trãi và VinFast Newway Hà Nội tại 183 Yên Lãng, Đống Đa. Bạn có thể đặt lịch qua ứng dụng VinFast hoặc gọi tổng đài 1900 23 23 89 để được hỗ trợ."
+    },
+    {
+      "role": "customer",
+      "content": "Tuyệt vời, cảm ơn Vita nhiều nhé. Anh nắm được thông tin rồi, để anh gọi điện đặt lịch sau."
+    },
+    {
+      "role": "support",
+      "content": "Không có gì anh. Khi nào cần hỗ trợ thêm, anh cứ nói mình nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

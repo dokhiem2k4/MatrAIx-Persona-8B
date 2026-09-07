@@ -1,0 +1,602 @@
+[
+  {
+    "questionId": "q0",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "web_search",
+    "subintent_name": "Tra cứu Web",
+    "seed_input": "Tìm nhanh trên web xem giá vàng trong nước hôm nay bao nhiêu.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q1",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "web_search",
+    "subintent_name": "Tra cứu Web",
+    "seed_input": "Tìm nhanh trên web xem giá vàng trong nước hôm nay bao nhiêu.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q2",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "web_search",
+    "subintent_name": "Tra cứu Web",
+    "seed_input": "Tìm trên mạng giúp tôi xem tối nay ở Đà Nẵng có sự kiện âm nhạc nào không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q3",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "web_search",
+    "subintent_name": "Tra cứu Web",
+    "seed_input": "Tìm trên mạng giúp tôi xem tối nay ở Đà Nẵng có sự kiện âm nhạc nào không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q4",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "web_search",
+    "subintent_name": "Tra cứu Web",
+    "seed_input": "Tra cứu giúp tôi tình hình kẹt xe mới nhất trên đèo Bảo Lộc.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q5",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "web_search",
+    "subintent_name": "Tra cứu Web",
+    "seed_input": "Tra cứu giúp tôi tình hình kẹt xe mới nhất trên đèo Bảo Lộc.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q6",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "web_search",
+    "subintent_name": "Tra cứu Web",
+    "seed_input": "Tìm trên web xem quán cà phê mới mở gần đây có chỗ đậu ô tô không.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q7",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "web_search",
+    "subintent_name": "Tra cứu Web",
+    "seed_input": "Tìm trên web xem quán cà phê mới mở gần đây có chỗ đậu ô tô không.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q8",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "web_search",
+    "subintent_name": "Tra cứu Web",
+    "seed_input": "Tra cứu giá vé hiện tại của khu du lịch Bà Nà Hills giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q9",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "web_search",
+    "subintent_name": "Tra cứu Web",
+    "seed_input": "Tra cứu giá vé hiện tại của khu du lịch Bà Nà Hills giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q10",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "web_search",
+    "subintent_name": "Tra cứu Web",
+    "seed_input": "Tìm giúp tôi các trạm sạc ô tô điện mới nhất quanh đây.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q11",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "web_search",
+    "subintent_name": "Tra cứu Web",
+    "seed_input": "Tìm giúp tôi các trạm sạc ô tô điện mới nhất quanh đây.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q12",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "general_qa",
+    "subintent_name": "Hỏi đáp",
+    "seed_input": "Vì sao kính ô tô thường bị mờ khi trời mưa?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q13",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "general_qa",
+    "subintent_name": "Hỏi đáp",
+    "seed_input": "Vì sao kính ô tô thường bị mờ khi trời mưa?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q14",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "general_qa",
+    "subintent_name": "Hỏi đáp",
+    "seed_input": "Đèn cảnh báo hình bình ắc quy trên bảng đồng hồ có nghĩa là gì?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q15",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "general_qa",
+    "subintent_name": "Hỏi đáp",
+    "seed_input": "Đèn cảnh báo hình bình ắc quy trên bảng đồng hồ có nghĩa là gì?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q16",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "general_qa",
+    "subintent_name": "Hỏi đáp",
+    "seed_input": "Lái xe đường dài thì bao lâu nên nghỉ một lần?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q17",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "general_qa",
+    "subintent_name": "Hỏi đáp",
+    "seed_input": "Lái xe đường dài thì bao lâu nên nghỉ một lần?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q18",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "general_qa",
+    "subintent_name": "Hỏi đáp",
+    "seed_input": "Vì sao bầu trời có màu xanh?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q19",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "general_qa",
+    "subintent_name": "Hỏi đáp",
+    "seed_input": "Vì sao bầu trời có màu xanh?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q20",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "general_qa",
+    "subintent_name": "Hỏi đáp",
+    "seed_input": "Tại sao phải để động cơ nguội trước khi kiểm tra nước làm mát?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q21",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "general_qa",
+    "subintent_name": "Hỏi đáp",
+    "seed_input": "Tại sao phải để động cơ nguội trước khi kiểm tra nước làm mát?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q22",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "general_qa",
+    "subintent_name": "Hỏi đáp",
+    "seed_input": "Giải thích giúp tôi hiện tượng thủy triều là gì?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q23",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "general_qa",
+    "subintent_name": "Hỏi đáp",
+    "seed_input": "Giải thích giúp tôi hiện tượng thủy triều là gì?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q24",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "weather_news",
+    "subintent_name": "Thời tiết/tin tức",
+    "seed_input": "Ngoài trời bây giờ có mưa không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q25",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "weather_news",
+    "subintent_name": "Thời tiết/tin tức",
+    "seed_input": "Ngoài trời bây giờ có mưa không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q26",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "weather_news",
+    "subintent_name": "Thời tiết/tin tức",
+    "seed_input": "Cho tôi biết tin tức mới nhất sáng nay.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q27",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "weather_news",
+    "subintent_name": "Thời tiết/tin tức",
+    "seed_input": "Cho tôi biết tin tức mới nhất sáng nay.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q28",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "weather_news",
+    "subintent_name": "Thời tiết/tin tức",
+    "seed_input": "Thời tiết chiều nay ở Đà Nẵng thế nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q29",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "weather_news",
+    "subintent_name": "Thời tiết/tin tức",
+    "seed_input": "Thời tiết chiều nay ở Đà Nẵng thế nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q30",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "weather_news",
+    "subintent_name": "Thời tiết/tin tức",
+    "seed_input": "Hôm nay Hà Nội có lạnh không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q31",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "weather_news",
+    "subintent_name": "Thời tiết/tin tức",
+    "seed_input": "Hôm nay Hà Nội có lạnh không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q32",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "weather_news",
+    "subintent_name": "Thời tiết/tin tức",
+    "seed_input": "Hôm nay trời có mưa không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q33",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "weather_news",
+    "subintent_name": "Thời tiết/tin tức",
+    "seed_input": "Hôm nay trời có mưa không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q34",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "weather_news",
+    "subintent_name": "Thời tiết/tin tức",
+    "seed_input": "Cập nhật giúp tôi tin tức mới nhất hôm nay.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q35",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "weather_news",
+    "subintent_name": "Thời tiết/tin tức",
+    "seed_input": "Cập nhật giúp tôi tin tức mới nhất hôm nay.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q36",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "verified_fact_qa",
+    "subintent_name": "Hỏi đáp có nguồn kiểm chứng",
+    "seed_input": "Hãy xác minh theo nguồn chính thức mới nhất xem Việt Nam hiện có bao nhiêu tỉnh, thành và phải kèm trích dẫn.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q37",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "verified_fact_qa",
+    "subintent_name": "Hỏi đáp có nguồn kiểm chứng",
+    "seed_input": "Hãy xác minh theo nguồn chính thức mới nhất xem Việt Nam hiện có bao nhiêu tỉnh, thành và phải kèm trích dẫn.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q38",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "verified_fact_qa",
+    "subintent_name": "Hỏi đáp có nguồn kiểm chứng",
+    "seed_input": "Kiểm chứng giúp tôi bằng nguồn nhà nước cập nhật nhất rằng tốc độ tối đa trên cao tốc Việt Nam là bao nhiêu, nhớ dẫn nguồn.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q39",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "verified_fact_qa",
+    "subintent_name": "Hỏi đáp có nguồn kiểm chứng",
+    "seed_input": "Kiểm chứng giúp tôi bằng nguồn nhà nước cập nhật nhất rằng tốc độ tối đa trên cao tốc Việt Nam là bao nhiêu, nhớ dẫn nguồn.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q40",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "verified_fact_qa",
+    "subintent_name": "Hỏi đáp có nguồn kiểm chứng",
+    "seed_input": "Tôi đang lái xe, hãy nói ngắn gọn tốc độ tối đa của ô tô trong khu đông dân cư theo quy định Việt Nam hiện hành, chỉ dùng nguồn chính thức và nêu nguồn.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q41",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "verified_fact_qa",
+    "subintent_name": "Hỏi đáp có nguồn kiểm chứng",
+    "seed_input": "Tôi đang lái xe, hãy nói ngắn gọn tốc độ tối đa của ô tô trong khu đông dân cư theo quy định Việt Nam hiện hành, chỉ dùng nguồn chính thức và nêu nguồn.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q42",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "verified_fact_qa",
+    "subintent_name": "Hỏi đáp có nguồn kiểm chứng",
+    "seed_input": "Khi xe đang đỗ, cho tôi biết Việt Nam có bao nhiêu di sản thế giới được UNESCO công nhận tính đến tháng 8 năm 2026; chỉ trả lời nếu có nguồn UNESCO và dẫn nguồn.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q43",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "verified_fact_qa",
+    "subintent_name": "Hỏi đáp có nguồn kiểm chứng",
+    "seed_input": "Khi xe đang đỗ, cho tôi biết Việt Nam có bao nhiêu di sản thế giới được UNESCO công nhận tính đến tháng 8 năm 2026; chỉ trả lời nếu có nguồn UNESCO và dẫn nguồn.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q44",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "verified_fact_qa",
+    "subintent_name": "Hỏi đáp có nguồn kiểm chứng",
+    "seed_input": "Xe đang đỗ rồi. Hãy kiểm chứng bằng nguồn WHO mới nhất xem người lớn nên vận động thể chất bao nhiêu phút mỗi tuần và trích dẫn nguồn.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q45",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "verified_fact_qa",
+    "subintent_name": "Hỏi đáp có nguồn kiểm chứng",
+    "seed_input": "Xe đang đỗ rồi. Hãy kiểm chứng bằng nguồn WHO mới nhất xem người lớn nên vận động thể chất bao nhiêu phút mỗi tuần và trích dẫn nguồn.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q46",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "verified_fact_qa",
+    "subintent_name": "Hỏi đáp có nguồn kiểm chứng",
+    "seed_input": "Trong lúc xe đang đỗ, hãy chủ động kiểm tra nguồn NASA chính thức và cho tôi biết một ngày trên Sao Hỏa dài bao lâu, kèm trích dẫn.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q47",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "verified_fact_qa",
+    "subintent_name": "Hỏi đáp có nguồn kiểm chứng",
+    "seed_input": "Trong lúc xe đang đỗ, hãy chủ động kiểm tra nguồn NASA chính thức và cho tôi biết một ngày trên Sao Hỏa dài bao lâu, kèm trích dẫn.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q48",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "conversation_entertainment",
+    "subintent_name": "Trò chuyện và giải trí",
+    "seed_input": "Đường hơi buồn ngủ, kể tôi một câu đùa thật ngắn nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q49",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "conversation_entertainment",
+    "subintent_name": "Trò chuyện và giải trí",
+    "seed_input": "Đường hơi buồn ngủ, kể tôi một câu đùa thật ngắn nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q50",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "conversation_entertainment",
+    "subintent_name": "Trò chuyện và giải trí",
+    "seed_input": "Kể tôi nghe một chuyện vui để chuyến đi bớt chán đi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q51",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "conversation_entertainment",
+    "subintent_name": "Trò chuyện và giải trí",
+    "seed_input": "Kể tôi nghe một chuyện vui để chuyến đi bớt chán đi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q52",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "conversation_entertainment",
+    "subintent_name": "Trò chuyện và giải trí",
+    "seed_input": "Trò chuyện với tôi một chút cho tỉnh táo khi lái xe nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q53",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "conversation_entertainment",
+    "subintent_name": "Trò chuyện và giải trí",
+    "seed_input": "Trò chuyện với tôi một chút cho tỉnh táo khi lái xe nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q54",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "conversation_entertainment",
+    "subintent_name": "Trò chuyện và giải trí",
+    "seed_input": "Trong lúc đỗ xe chờ bạn, kể tôi một câu đùa ngắn nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q55",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "conversation_entertainment",
+    "subintent_name": "Trò chuyện và giải trí",
+    "seed_input": "Trong lúc đỗ xe chờ bạn, kể tôi một câu đùa ngắn nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q56",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "conversation_entertainment",
+    "subintent_name": "Trò chuyện và giải trí",
+    "seed_input": "Xe đang đỗ rồi, kể tôi một truyện vui nho nhỏ đi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q57",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "conversation_entertainment",
+    "subintent_name": "Trò chuyện và giải trí",
+    "seed_input": "Xe đang đỗ rồi, kể tôi một truyện vui nho nhỏ đi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q58",
+    "field": "scenario",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "conversation_entertainment",
+    "subintent_name": "Trò chuyện và giải trí",
+    "seed_input": "Tôi đang ngồi trong xe đợi người nhà, nghĩ trò gì vui để chơi cùng tôi đi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q59",
+    "field": "first_input",
+    "intent_code": "general_qa_conversation",
+    "subintent_code": "conversation_entertainment",
+    "subintent_name": "Trò chuyện và giải trí",
+    "seed_input": "Tôi đang ngồi trong xe đợi người nhà, nghĩ trò gì vui để chơi cùng tôi đi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  }
+]

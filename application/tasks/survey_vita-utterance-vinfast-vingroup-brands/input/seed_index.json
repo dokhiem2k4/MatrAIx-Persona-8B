@@ -1,0 +1,602 @@
+[
+  {
+    "questionId": "q0",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_brand_products",
+    "subintent_name": "Thương hiệu và sản phẩm VinFast",
+    "seed_input": "VinFast hiện có những dòng ô tô điện nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q1",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_brand_products",
+    "subintent_name": "Thương hiệu và sản phẩm VinFast",
+    "seed_input": "VinFast hiện có những dòng ô tô điện nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q2",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_brand_products",
+    "subintent_name": "Thương hiệu và sản phẩm VinFast",
+    "seed_input": "VinFast hiện có những dòng ô tô điện nào vậy?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q3",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_brand_products",
+    "subintent_name": "Thương hiệu và sản phẩm VinFast",
+    "seed_input": "VinFast hiện có những dòng ô tô điện nào vậy?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q4",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_brand_products",
+    "subintent_name": "Thương hiệu và sản phẩm VinFast",
+    "seed_input": "Đang lái xe, cho tôi biết nhanh VF 6 phù hợp với nhóm khách hàng nào.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q5",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_brand_products",
+    "subintent_name": "Thương hiệu và sản phẩm VinFast",
+    "seed_input": "Đang lái xe, cho tôi biết nhanh VF 6 phù hợp với nhóm khách hàng nào.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q6",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_brand_products",
+    "subintent_name": "Thương hiệu và sản phẩm VinFast",
+    "seed_input": "VinFast có bán xe máy điện không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q7",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_brand_products",
+    "subintent_name": "Thương hiệu và sản phẩm VinFast",
+    "seed_input": "VinFast có bán xe máy điện không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q8",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_brand_products",
+    "subintent_name": "Thương hiệu và sản phẩm VinFast",
+    "seed_input": "VF 8 và VF 9 khác nhau chủ yếu ở điểm nào?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q9",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_brand_products",
+    "subintent_name": "Thương hiệu và sản phẩm VinFast",
+    "seed_input": "VF 8 và VF 9 khác nhau chủ yếu ở điểm nào?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q10",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_brand_products",
+    "subintent_name": "Thương hiệu và sản phẩm VinFast",
+    "seed_input": "Tôi đang đỗ xe, giới thiệu giúp một mẫu VinFast nhỏ gọn để đi trong thành phố.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q11",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_brand_products",
+    "subintent_name": "Thương hiệu và sản phẩm VinFast",
+    "seed_input": "Tôi đang đỗ xe, giới thiệu giúp một mẫu VinFast nhỏ gọn để đi trong thành phố.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q12",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_sales_policies",
+    "subintent_name": "Giá bán, chính sách và chương trình VinFast",
+    "seed_input": "Bảo hành ô tô điện VinFast thế nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q13",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_sales_policies",
+    "subintent_name": "Giá bán, chính sách và chương trình VinFast",
+    "seed_input": "Bảo hành ô tô điện VinFast thế nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q14",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_sales_policies",
+    "subintent_name": "Giá bán, chính sách và chương trình VinFast",
+    "seed_input": "Giá xe VinFast có bao gồm pin chưa?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q15",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_sales_policies",
+    "subintent_name": "Giá bán, chính sách và chương trình VinFast",
+    "seed_input": "Giá xe VinFast có bao gồm pin chưa?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q16",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_sales_policies",
+    "subintent_name": "Giá bán, chính sách và chương trình VinFast",
+    "seed_input": "VinFast hiện có ưu đãi gì cho người mua xe điện?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q17",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_sales_policies",
+    "subintent_name": "Giá bán, chính sách và chương trình VinFast",
+    "seed_input": "VinFast hiện có ưu đãi gì cho người mua xe điện?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q18",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_sales_policies",
+    "subintent_name": "Giá bán, chính sách và chương trình VinFast",
+    "seed_input": "VinFast VF 6 hiện có giá bán bao nhiêu?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q19",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_sales_policies",
+    "subintent_name": "Giá bán, chính sách và chương trình VinFast",
+    "seed_input": "VinFast VF 6 hiện có giá bán bao nhiêu?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q20",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_sales_policies",
+    "subintent_name": "Giá bán, chính sách và chương trình VinFast",
+    "seed_input": "Chính sách bảo hành pin của ô tô điện VinFast như thế nào?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q21",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_sales_policies",
+    "subintent_name": "Giá bán, chính sách và chương trình VinFast",
+    "seed_input": "Chính sách bảo hành pin của ô tô điện VinFast như thế nào?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q22",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_sales_policies",
+    "subintent_name": "Giá bán, chính sách và chương trình VinFast",
+    "seed_input": "Hiện VinFast có chương trình ưu đãi nào cho khách mua xe mới không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q23",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_sales_policies",
+    "subintent_name": "Giá bán, chính sách và chương trình VinFast",
+    "seed_input": "Hiện VinFast có chương trình ưu đãi nào cho khách mua xe mới không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q24",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_service_network",
+    "subintent_name": "Hệ thống bán hàng và dịch vụ VinFast",
+    "seed_input": "VinFast có xưởng dịch vụ nào làm việc vào Chủ nhật không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q25",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_service_network",
+    "subintent_name": "Hệ thống bán hàng và dịch vụ VinFast",
+    "seed_input": "VinFast có xưởng dịch vụ nào làm việc vào Chủ nhật không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q26",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_service_network",
+    "subintent_name": "Hệ thống bán hàng và dịch vụ VinFast",
+    "seed_input": "Showroom VinFast gần khu vực tôi đang đi có mở cửa tối nay không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q27",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_service_network",
+    "subintent_name": "Hệ thống bán hàng và dịch vụ VinFast",
+    "seed_input": "Showroom VinFast gần khu vực tôi đang đi có mở cửa tối nay không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q28",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_service_network",
+    "subintent_name": "Hệ thống bán hàng và dịch vụ VinFast",
+    "seed_input": "Xe tôi vừa báo lỗi giữa đường, VinFast có dịch vụ cứu hộ không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q29",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_service_network",
+    "subintent_name": "Hệ thống bán hàng và dịch vụ VinFast",
+    "seed_input": "Xe tôi vừa báo lỗi giữa đường, VinFast có dịch vụ cứu hộ không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q30",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_service_network",
+    "subintent_name": "Hệ thống bán hàng và dịch vụ VinFast",
+    "seed_input": "Tôi muốn mang xe đi sửa ở xưởng VinFast, cần đặt lịch trước không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q31",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_service_network",
+    "subintent_name": "Hệ thống bán hàng và dịch vụ VinFast",
+    "seed_input": "Tôi muốn mang xe đi sửa ở xưởng VinFast, cần đặt lịch trước không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q32",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_service_network",
+    "subintent_name": "Hệ thống bán hàng và dịch vụ VinFast",
+    "seed_input": "VinFast có những loại cơ sở dịch vụ nào vậy?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q33",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_service_network",
+    "subintent_name": "Hệ thống bán hàng và dịch vụ VinFast",
+    "seed_input": "VinFast có những loại cơ sở dịch vụ nào vậy?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q34",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_service_network",
+    "subintent_name": "Hệ thống bán hàng và dịch vụ VinFast",
+    "seed_input": "Xe tôi cần bảo dưỡng thì có thể mang đến đâu trong hệ thống VinFast?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q35",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vinfast_service_network",
+    "subintent_name": "Hệ thống bán hàng và dịch vụ VinFast",
+    "seed_input": "Xe tôi cần bảo dưỡng thì có thể mang đến đâu trong hệ thống VinFast?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q36",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_corporate_information",
+    "subintent_name": "Thông tin Tập đoàn Vingroup",
+    "seed_input": "Vingroup hoạt động trong những lĩnh vực nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q37",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_corporate_information",
+    "subintent_name": "Thông tin Tập đoàn Vingroup",
+    "seed_input": "Vingroup hoạt động trong những lĩnh vực nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q38",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_corporate_information",
+    "subintent_name": "Thông tin Tập đoàn Vingroup",
+    "seed_input": "Giới thiệu ngắn gọn cho tôi về Tập đoàn Vingroup.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q39",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_corporate_information",
+    "subintent_name": "Thông tin Tập đoàn Vingroup",
+    "seed_input": "Giới thiệu ngắn gọn cho tôi về Tập đoàn Vingroup.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q40",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_corporate_information",
+    "subintent_name": "Thông tin Tập đoàn Vingroup",
+    "seed_input": "Vingroup có nguồn gốc hình thành như thế nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q41",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_corporate_information",
+    "subintent_name": "Thông tin Tập đoàn Vingroup",
+    "seed_input": "Vingroup có nguồn gốc hình thành như thế nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q42",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_corporate_information",
+    "subintent_name": "Thông tin Tập đoàn Vingroup",
+    "seed_input": "Vingroup là doanh nghiệp gì?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q43",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_corporate_information",
+    "subintent_name": "Thông tin Tập đoàn Vingroup",
+    "seed_input": "Vingroup là doanh nghiệp gì?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q44",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_corporate_information",
+    "subintent_name": "Thông tin Tập đoàn Vingroup",
+    "seed_input": "Cho tôi biết vài nét về lịch sử phát triển của Vingroup.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q45",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_corporate_information",
+    "subintent_name": "Thông tin Tập đoàn Vingroup",
+    "seed_input": "Cho tôi biết vài nét về lịch sử phát triển của Vingroup.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q46",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_corporate_information",
+    "subintent_name": "Thông tin Tập đoàn Vingroup",
+    "seed_input": "Các mảng hoạt động chính của Vingroup hiện gồm những nhóm nào?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q47",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_corporate_information",
+    "subintent_name": "Thông tin Tập đoàn Vingroup",
+    "seed_input": "Các mảng hoạt động chính của Vingroup hiện gồm những nhóm nào?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q48",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_member_brands",
+    "subintent_name": "Các thương hiệu thành viên Vingroup",
+    "seed_input": "Đang lái xe, cho tôi biết Vinmec cung cấp dịch vụ gì?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q49",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_member_brands",
+    "subintent_name": "Các thương hiệu thành viên Vingroup",
+    "seed_input": "Đang lái xe, cho tôi biết Vinmec cung cấp dịch vụ gì?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q50",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_member_brands",
+    "subintent_name": "Các thương hiệu thành viên Vingroup",
+    "seed_input": "Vinhomes phát triển những loại hình bất động sản nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q51",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_member_brands",
+    "subintent_name": "Các thương hiệu thành viên Vingroup",
+    "seed_input": "Vinhomes phát triển những loại hình bất động sản nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q52",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_member_brands",
+    "subintent_name": "Các thương hiệu thành viên Vingroup",
+    "seed_input": "Vinpearl có những dịch vụ nghỉ dưỡng nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q53",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_member_brands",
+    "subintent_name": "Các thương hiệu thành viên Vingroup",
+    "seed_input": "Vinpearl có những dịch vụ nghỉ dưỡng nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q54",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_member_brands",
+    "subintent_name": "Các thương hiệu thành viên Vingroup",
+    "seed_input": "VinSchool là trường học hay trung tâm đào tạo?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q55",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_member_brands",
+    "subintent_name": "Các thương hiệu thành viên Vingroup",
+    "seed_input": "VinSchool là trường học hay trung tâm đào tạo?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q56",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_member_brands",
+    "subintent_name": "Các thương hiệu thành viên Vingroup",
+    "seed_input": "VinUniversity đào tạo những lĩnh vực nào?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q57",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_member_brands",
+    "subintent_name": "Các thương hiệu thành viên Vingroup",
+    "seed_input": "VinUniversity đào tạo những lĩnh vực nào?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q58",
+    "field": "scenario",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_member_brands",
+    "subintent_name": "Các thương hiệu thành viên Vingroup",
+    "seed_input": "So sánh giúp tôi dịch vụ của Vinmec và Vinpearl.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q59",
+    "field": "first_input",
+    "intent_code": "vinfast_vingroup_brands",
+    "subintent_code": "vingroup_member_brands",
+    "subintent_name": "Các thương hiệu thành viên Vingroup",
+    "seed_input": "So sánh giúp tôi dịch vụ của Vinmec và Vinpearl.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  }
+]

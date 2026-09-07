@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita, tạm dừng nhạc giúp tôi cái, đường đông quá tôi cần tập trung."
+    },
+    {
+      "role": "support",
+      "content": "Đã tắt tiếng."
+    },
+    {
+      "role": "customer",
+      "content": "Được rồi, cảm ơn em. Tiện thể kiểm tra giúp tôi mức pin và áp suất lốp hiện tại luôn nhé."
+    },
+    {
+      "role": "support",
+      "content": "Pin hiện tại 78%, đi được khoảng 312 km. Áp suất lốp: trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar."
+    },
+    {
+      "role": "customer",
+      "content": "Lốp sau bên trái hơi thấp một chút nhỉ, lát có trạm sạc nào gần đây thì nhắc tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã ghi nhận áp suất lốp sau bên trái thấp. Có trạm sạc tại hầm B2 tòa Technopark, Vinhomes Ocean Park đang hoạt động. Mình sẽ nhắc bạn khi tới gần."
+    },
+    {
+      "role": "customer",
+      "content": "Được rồi, cứ giữ lịch trình đó đi em."
+    },
+    {
+      "role": "support",
+      "content": "Vâng, mình sẽ giữ nguyên lịch trình hiện tại."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

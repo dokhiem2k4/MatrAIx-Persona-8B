@@ -1,0 +1,842 @@
+[
+  {
+    "questionId": "q0",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "calling",
+    "subintent_name": "Gọi điện",
+    "seed_input": "Gọi cho anh Nam ngay nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q1",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "calling",
+    "subintent_name": "Gọi điện",
+    "seed_input": "Gọi cho anh Nam ngay nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q2",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "calling",
+    "subintent_name": "Gọi điện",
+    "seed_input": "Gọi vào số 0901234567 giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q3",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "calling",
+    "subintent_name": "Gọi điện",
+    "seed_input": "Gọi vào số 0901234567 giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q4",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "calling",
+    "subintent_name": "Gọi điện",
+    "seed_input": "Gọi lại cuộc gọi nhỡ gần nhất đi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q5",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "calling",
+    "subintent_name": "Gọi điện",
+    "seed_input": "Gọi lại cuộc gọi nhỡ gần nhất đi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q6",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "calling",
+    "subintent_name": "Gọi điện",
+    "seed_input": "Kết thúc cuộc gọi hiện tại.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q7",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "calling",
+    "subintent_name": "Gọi điện",
+    "seed_input": "Kết thúc cuộc gọi hiện tại.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q8",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "calling",
+    "subintent_name": "Gọi điện",
+    "seed_input": "Xe đang đỗ rồi, gọi cho anh Minh giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q9",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "calling",
+    "subintent_name": "Gọi điện",
+    "seed_input": "Xe đang đỗ rồi, gọi cho anh Minh giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q10",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "calling",
+    "subintent_name": "Gọi điện",
+    "seed_input": "Gọi cho mẹ giúp tôi nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q11",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "calling",
+    "subintent_name": "Gọi điện",
+    "seed_input": "Gọi cho mẹ giúp tôi nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q12",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "messaging",
+    "subintent_name": "Nhắn tin",
+    "seed_input": "Tôi đang lái xe, nhắn cho Lan là tôi sẽ đến muộn mười phút.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q13",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "messaging",
+    "subintent_name": "Nhắn tin",
+    "seed_input": "Tôi đang lái xe, nhắn cho Lan là tôi sẽ đến muộn mười phút.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q14",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "messaging",
+    "subintent_name": "Nhắn tin",
+    "seed_input": "Nhắn cho anh Hùng rằng đường đang tắc, tôi đến sau nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q15",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "messaging",
+    "subintent_name": "Nhắn tin",
+    "seed_input": "Nhắn cho anh Hùng rằng đường đang tắc, tôi đến sau nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q16",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "messaging",
+    "subintent_name": "Nhắn tin",
+    "seed_input": "Nhắn cho vợ tôi là tôi đang lái xe về, khoảng hai mươi phút nữa tới.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q17",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "messaging",
+    "subintent_name": "Nhắn tin",
+    "seed_input": "Nhắn cho vợ tôi là tôi đang lái xe về, khoảng hai mươi phút nữa tới.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q18",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "messaging",
+    "subintent_name": "Nhắn tin",
+    "seed_input": "Xe đang đỗ, gửi cho Nam tin nhắn: tôi chờ ở cổng.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q19",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "messaging",
+    "subintent_name": "Nhắn tin",
+    "seed_input": "Xe đang đỗ, gửi cho Nam tin nhắn: tôi chờ ở cổng.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q20",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "messaging",
+    "subintent_name": "Nhắn tin",
+    "seed_input": "Nhắn cho chị Mai là em đã đỗ xe ở tầng hầm B2 rồi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q21",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "messaging",
+    "subintent_name": "Nhắn tin",
+    "seed_input": "Nhắn cho chị Mai là em đã đỗ xe ở tầng hầm B2 rồi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q22",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "messaging",
+    "subintent_name": "Nhắn tin",
+    "seed_input": "Gửi tin cho Tuấn là tôi đã tới bãi đỗ, bảo cậu ấy ra nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q23",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "messaging",
+    "subintent_name": "Nhắn tin",
+    "seed_input": "Gửi tin cho Tuấn là tôi đã tới bãi đỗ, bảo cậu ấy ra nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q24",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "contact_resolution",
+    "subintent_name": "Xác định liên hệ",
+    "seed_input": "Tìm giúp tôi liên hệ anh Nam với.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q25",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "contact_resolution",
+    "subintent_name": "Xác định liên hệ",
+    "seed_input": "Tìm giúp tôi liên hệ anh Nam với.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q26",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "contact_resolution",
+    "subintent_name": "Xác định liên hệ",
+    "seed_input": "Cho tôi đúng liên hệ của chị Hương.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q27",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "contact_resolution",
+    "subintent_name": "Xác định liên hệ",
+    "seed_input": "Cho tôi đúng liên hệ của chị Hương.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q28",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "contact_resolution",
+    "subintent_name": "Xác định liên hệ",
+    "seed_input": "Tìm người tôi lưu là bác sĩ giúp nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q29",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "contact_resolution",
+    "subintent_name": "Xác định liên hệ",
+    "seed_input": "Tìm người tôi lưu là bác sĩ giúp nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q30",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "contact_resolution",
+    "subintent_name": "Xác định liên hệ",
+    "seed_input": "Chọn giúp tôi liên hệ Tuấn.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q31",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "contact_resolution",
+    "subintent_name": "Xác định liên hệ",
+    "seed_input": "Chọn giúp tôi liên hệ Tuấn.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q32",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "contact_resolution",
+    "subintent_name": "Xác định liên hệ",
+    "seed_input": "Tôi cần tìm số của cô Mai trong danh bạ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q33",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "contact_resolution",
+    "subintent_name": "Xác định liên hệ",
+    "seed_input": "Tôi cần tìm số của cô Mai trong danh bạ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q34",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "contact_resolution",
+    "subintent_name": "Xác định liên hệ",
+    "seed_input": "Tìm đúng liên hệ của sếp tôi nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q35",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "contact_resolution",
+    "subintent_name": "Xác định liên hệ",
+    "seed_input": "Tìm đúng liên hệ của sếp tôi nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q36",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "content_discovery",
+    "subintent_name": "Tìm nội dung",
+    "seed_input": "Tìm gì vui vui để nghe đi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q37",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "content_discovery",
+    "subintent_name": "Tìm nội dung",
+    "seed_input": "Tìm gì vui vui để nghe đi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q38",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "content_discovery",
+    "subintent_name": "Tìm nội dung",
+    "seed_input": "Tìm cho tôi nội dung về du lịch Đà Lạt.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q39",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "content_discovery",
+    "subintent_name": "Tìm nội dung",
+    "seed_input": "Tìm cho tôi nội dung về du lịch Đà Lạt.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q40",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "content_discovery",
+    "subintent_name": "Tìm nội dung",
+    "seed_input": "Kiếm nội dung thư giãn cho chuyến đi này nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q41",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "content_discovery",
+    "subintent_name": "Tìm nội dung",
+    "seed_input": "Kiếm nội dung thư giãn cho chuyến đi này nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q42",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "content_discovery",
+    "subintent_name": "Tìm nội dung",
+    "seed_input": "Tìm chương trình nói về công nghệ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q43",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "content_discovery",
+    "subintent_name": "Tìm nội dung",
+    "seed_input": "Tìm chương trình nói về công nghệ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q44",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "content_discovery",
+    "subintent_name": "Tìm nội dung",
+    "seed_input": "Tìm giúp tôi một bộ phim hài.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q45",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "content_discovery",
+    "subintent_name": "Tìm nội dung",
+    "seed_input": "Tìm giúp tôi một bộ phim hài.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q46",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "content_discovery",
+    "subintent_name": "Tìm nội dung",
+    "seed_input": "Tìm nội dung mới phù hợp với sở thích của tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q47",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "content_discovery",
+    "subintent_name": "Tìm nội dung",
+    "seed_input": "Tìm nội dung mới phù hợp với sở thích của tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q48",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "playback_control",
+    "subintent_name": "Điều khiển phát",
+    "seed_input": "Tạm dừng nhạc.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q49",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "playback_control",
+    "subintent_name": "Điều khiển phát",
+    "seed_input": "Tạm dừng nhạc.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q50",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "playback_control",
+    "subintent_name": "Điều khiển phát",
+    "seed_input": "Bỏ qua bài này giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q51",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "playback_control",
+    "subintent_name": "Điều khiển phát",
+    "seed_input": "Bỏ qua bài này giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q52",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "playback_control",
+    "subintent_name": "Điều khiển phát",
+    "seed_input": "Phát tiếp nội dung đang nghe dở nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q53",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "playback_control",
+    "subintent_name": "Điều khiển phát",
+    "seed_input": "Phát tiếp nội dung đang nghe dở nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q54",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "playback_control",
+    "subintent_name": "Điều khiển phát",
+    "seed_input": "Tạm dừng nhạc giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q55",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "playback_control",
+    "subintent_name": "Điều khiển phát",
+    "seed_input": "Tạm dừng nhạc giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q56",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "playback_control",
+    "subintent_name": "Điều khiển phát",
+    "seed_input": "Phát tiếp bài nhạc đang nghe nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q57",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "playback_control",
+    "subintent_name": "Điều khiển phát",
+    "seed_input": "Phát tiếp bài nhạc đang nghe nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q58",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "playback_control",
+    "subintent_name": "Điều khiển phát",
+    "seed_input": "Bỏ qua bài này đi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q59",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "playback_control",
+    "subintent_name": "Điều khiển phát",
+    "seed_input": "Bỏ qua bài này đi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q60",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "source_queue",
+    "subintent_name": "Nguồn/danh sách phát",
+    "seed_input": "Chuyển nguồn âm thanh sang Bluetooth.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q61",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "source_queue",
+    "subintent_name": "Nguồn/danh sách phát",
+    "seed_input": "Chuyển nguồn âm thanh sang Bluetooth.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q62",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "source_queue",
+    "subintent_name": "Nguồn/danh sách phát",
+    "seed_input": "Thêm bài đang phát vào cuối hàng chờ.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q63",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "source_queue",
+    "subintent_name": "Nguồn/danh sách phát",
+    "seed_input": "Thêm bài đang phát vào cuối hàng chờ.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q64",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "source_queue",
+    "subintent_name": "Nguồn/danh sách phát",
+    "seed_input": "Xóa tất cả bài khỏi hàng chờ giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q65",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "source_queue",
+    "subintent_name": "Nguồn/danh sách phát",
+    "seed_input": "Xóa tất cả bài khỏi hàng chờ giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q66",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "source_queue",
+    "subintent_name": "Nguồn/danh sách phát",
+    "seed_input": "Đổi nguồn nhạc sang USB.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q67",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "source_queue",
+    "subintent_name": "Nguồn/danh sách phát",
+    "seed_input": "Đổi nguồn nhạc sang USB.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q68",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "source_queue",
+    "subintent_name": "Nguồn/danh sách phát",
+    "seed_input": "Đưa bài cuối hàng chờ lên phát kế tiếp.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q69",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "source_queue",
+    "subintent_name": "Nguồn/danh sách phát",
+    "seed_input": "Đưa bài cuối hàng chờ lên phát kế tiếp.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q70",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "source_queue",
+    "subintent_name": "Nguồn/danh sách phát",
+    "seed_input": "Chuyển sang nguồn radio FM.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q71",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "source_queue",
+    "subintent_name": "Nguồn/danh sách phát",
+    "seed_input": "Chuyển sang nguồn radio FM.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q72",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "volume_audio_zone",
+    "subintent_name": "Âm lượng/vùng âm thanh",
+    "seed_input": "Giảm âm lượng xuống một chút.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q73",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "volume_audio_zone",
+    "subintent_name": "Âm lượng/vùng âm thanh",
+    "seed_input": "Giảm âm lượng xuống một chút.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q74",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "volume_audio_zone",
+    "subintent_name": "Âm lượng/vùng âm thanh",
+    "seed_input": "Đặt âm lượng toàn xe ở mức 12.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q75",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "volume_audio_zone",
+    "subintent_name": "Âm lượng/vùng âm thanh",
+    "seed_input": "Đặt âm lượng toàn xe ở mức 12.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q76",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "volume_audio_zone",
+    "subintent_name": "Âm lượng/vùng âm thanh",
+    "seed_input": "Chỉ phát âm thanh ở hàng ghế trước.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q77",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "volume_audio_zone",
+    "subintent_name": "Âm lượng/vùng âm thanh",
+    "seed_input": "Chỉ phát âm thanh ở hàng ghế trước.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q78",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "volume_audio_zone",
+    "subintent_name": "Âm lượng/vùng âm thanh",
+    "seed_input": "Tắt tiếng trong xe.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q79",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "volume_audio_zone",
+    "subintent_name": "Âm lượng/vùng âm thanh",
+    "seed_input": "Tắt tiếng trong xe.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q80",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "volume_audio_zone",
+    "subintent_name": "Âm lượng/vùng âm thanh",
+    "seed_input": "Tăng âm lượng cho hàng ghế sau lên hai mức.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q81",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "volume_audio_zone",
+    "subintent_name": "Âm lượng/vùng âm thanh",
+    "seed_input": "Tăng âm lượng cho hàng ghế sau lên hai mức.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q82",
+    "field": "scenario",
+    "intent_code": "communication_media",
+    "subintent_code": "volume_audio_zone",
+    "subintent_name": "Âm lượng/vùng âm thanh",
+    "seed_input": "Chuyển âm thanh sang phía ghế lái.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q83",
+    "field": "first_input",
+    "intent_code": "communication_media",
+    "subintent_code": "volume_audio_zone",
+    "subintent_name": "Âm lượng/vùng âm thanh",
+    "seed_input": "Chuyển âm thanh sang phía ghế lái.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  }
+]

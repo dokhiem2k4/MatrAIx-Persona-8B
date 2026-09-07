@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, xe đang rung bần bật từ nãy giờ, chẩn đoán nhanh hộ tôi xem bị làm sao thế này."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã kiểm tra nhanh trạng thái xe. Xe đang đỗ ở P, áp suất lốp các bánh đều ở mức ổn định (2.3-2.4 bar), không có cảnh báo bất thường nào từ hệ thống. Tuy nhiên, mình thấy camera giám sát người lái (DMS) đang báo alert. Có thể rung động bạn cảm nhận đến từ mặt đường hoặc do một vật lạ dưới gầm xe. Bạn hãy kiểm tra kỹ khi ra khỏi xe nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Đang lái xe trên quốc lộ mà bảo xe đang đỗ ở P là sao hả Vita, kiểm tra lại áp suất lốp với gầm xe xem có vấn đề gì không đi!"
+    },
+    {
+      "role": "support",
+      "content": ":"
+    },
+    {
+      "role": "customer",
+      "content": "Vita ơi lỗi hệ thống à, trả lời gì mà cụt lủn thế? Kiểm tra lại áp suất lốp thật kỹ xem có bánh nào bị cán đinh không."
+    },
+    {
+      "role": "support",
+      "content": "Để mình kiểm tra áp suất lốp cho bạn ngay. Theo dữ liệu hiện tại, áp suất 4 bánh như sau: - Trước trái: 2.4 bar - Trước phải: 2.4 bar - Sau trái: 2.3 bar - Sau phải: 2.4 bar Nhìn chung áp suất các bánh khá đồng đều, chỉ có bánh sau trái hơi thấp hơn một chút (2.3 bar so với 2.4 bar). Mức chênh 0.1 bar là rất nhỏ, thường không phải dấu hiệu của việc cán đinh. Nếu bị đinh, áp suất thường tụt nhanh và rõ rệt hơn. Tuy nhiên, mình không thể xác nhận chắc chắn có đinh hay không chỉ qua cảm biến áp suất. Nếu bạn nghi ngờ, tốt nhất nên kiểm tra trực quan bánh sau trái khi dừng xe an toàn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Ừ, thế để lát tấp vào lề rồi kiểm tra trực quan xem sao. Cảm ơn Vita nhé."
+    },
+    {
+      "role": "support",
+      "content": "Không có gì bạn. Lúc nào cần thì gọi mình nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

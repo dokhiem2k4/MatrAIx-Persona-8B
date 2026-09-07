@@ -1,0 +1,48 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, tình hình giao thông thế này thì bao lâu nữa mới tới nơi nhỉ?"
+    },
+    {
+      "role": "support",
+      "content": "Hiện tại xe chưa có điểm đến nào được đặt, nên mình chưa thể ước lượng thời gian di chuyển. Bạn muốn đi đâu nhỉ?"
+    },
+    {
+      "role": "customer",
+      "content": "À quên, anh đang muốn đến sân bóng Thảo Điền ở quận 2, em tìm đường và dẫn giúp anh nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã tìm đường đến sân bóng Thảo Điền quận 2, khoảng 25 km, dự kiến 81 phút lái xe. Mình đang dẫn đường cho bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Đường kẹt xe thế này chắc lâu hơn đấy, với lại trong xe đang hơi nóng, em bật điều hòa giảm xuống 21 độ giúp anh nha."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa."
+    },
+    {
+      "role": "customer",
+      "content": "Chỉ nói chung chung thế, em chỉnh cụ thể nhiệt độ bên ghế lái xuống 21 độ và bật quạt gió mạnh lên giúp anh với."
+    },
+    {
+      "role": "support",
+      "content": "Đã chỉnh nhiệt độ ghế lái xuống 21°C và bật quạt gió mức mạnh."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em, thế này thì dễ chịu hơn nhiều rồi. Cứ theo lộ trình đó mà đi nhé!"
+    },
+    {
+      "role": "support",
+      "content": "Có gì đâu bạn. Mình sẽ tiếp tục dẫn đường đến sân bóng Thảo Điền. Còn 81 phút nữa thôi, bạn nghỉ ngơi nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

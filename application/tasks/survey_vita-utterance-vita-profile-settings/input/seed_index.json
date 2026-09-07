@@ -1,0 +1,722 @@
+[
+  {
+    "questionId": "q0",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_capabilities_usage",
+    "subintent_name": "Khả năng và cách sử dụng ViTa",
+    "seed_input": "ViTa ơi, khi đang lái xe thì tôi có thể nhờ bạn làm những gì?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q1",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_capabilities_usage",
+    "subintent_name": "Khả năng và cách sử dụng ViTa",
+    "seed_input": "ViTa ơi, khi đang lái xe thì tôi có thể nhờ bạn làm những gì?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q2",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_capabilities_usage",
+    "subintent_name": "Khả năng và cách sử dụng ViTa",
+    "seed_input": "Tôi gọi và sử dụng ViTa khi đang lái xe như thế nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q3",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_capabilities_usage",
+    "subintent_name": "Khả năng và cách sử dụng ViTa",
+    "seed_input": "Tôi gọi và sử dụng ViTa khi đang lái xe như thế nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q4",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_capabilities_usage",
+    "subintent_name": "Khả năng và cách sử dụng ViTa",
+    "seed_input": "ViTa có thể hỗ trợ những gì trên đường đi?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q5",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_capabilities_usage",
+    "subintent_name": "Khả năng và cách sử dụng ViTa",
+    "seed_input": "ViTa có thể hỗ trợ những gì trên đường đi?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q6",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_capabilities_usage",
+    "subintent_name": "Khả năng và cách sử dụng ViTa",
+    "seed_input": "Xe đang đỗ rồi, cho tôi biết nhanh ViTa dùng được vào những việc gì?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q7",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_capabilities_usage",
+    "subintent_name": "Khả năng và cách sử dụng ViTa",
+    "seed_input": "Xe đang đỗ rồi, cho tôi biết nhanh ViTa dùng được vào những việc gì?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q8",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_capabilities_usage",
+    "subintent_name": "Khả năng và cách sử dụng ViTa",
+    "seed_input": "Muốn bắt đầu nói chuyện với ViTa thì tôi cần làm gì?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q9",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_capabilities_usage",
+    "subintent_name": "Khả năng và cách sử dụng ViTa",
+    "seed_input": "Muốn bắt đầu nói chuyện với ViTa thì tôi cần làm gì?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q10",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_capabilities_usage",
+    "subintent_name": "Khả năng và cách sử dụng ViTa",
+    "seed_input": "Lúc xe đang đỗ, ViTa có thể chủ động giúp tôi những gì?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q11",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_capabilities_usage",
+    "subintent_name": "Khả năng và cách sử dụng ViTa",
+    "seed_input": "Lúc xe đang đỗ, ViTa có thể chủ động giúp tôi những gì?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q12",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_preferences",
+    "subintent_name": "Tùy chọn tương tác với ViTa",
+    "seed_input": "ViTa ơi, từ giờ trả lời tôi ngắn gọn hơn nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q13",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_preferences",
+    "subintent_name": "Tùy chọn tương tác với ViTa",
+    "seed_input": "ViTa ơi, từ giờ trả lời tôi ngắn gọn hơn nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q14",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_preferences",
+    "subintent_name": "Tùy chọn tương tác với ViTa",
+    "seed_input": "ViTa, đổi cách trả lời sang ngắn gọn hơn để tôi dễ nghe khi đang lái xe.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q15",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_preferences",
+    "subintent_name": "Tùy chọn tương tác với ViTa",
+    "seed_input": "ViTa, đổi cách trả lời sang ngắn gọn hơn để tôi dễ nghe khi đang lái xe.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q16",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_preferences",
+    "subintent_name": "Tùy chọn tương tác với ViTa",
+    "seed_input": "Từ giờ hãy chủ động nhắc tôi bằng giọng nữ khi đang lái xe nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q17",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_preferences",
+    "subintent_name": "Tùy chọn tương tác với ViTa",
+    "seed_input": "Từ giờ hãy chủ động nhắc tôi bằng giọng nữ khi đang lái xe nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q18",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_preferences",
+    "subintent_name": "Tùy chọn tương tác với ViTa",
+    "seed_input": "Xe đang đỗ rồi, đổi ViTa sang giọng nam và chỉ phản hồi thật khẽ thôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q19",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_preferences",
+    "subintent_name": "Tùy chọn tương tác với ViTa",
+    "seed_input": "Xe đang đỗ rồi, đổi ViTa sang giọng nam và chỉ phản hồi thật khẽ thôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q20",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_preferences",
+    "subintent_name": "Tùy chọn tương tác với ViTa",
+    "seed_input": "Đổi ngôn ngữ giao tiếp của ViTa sang tiếng Anh giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q21",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_preferences",
+    "subintent_name": "Tùy chọn tương tác với ViTa",
+    "seed_input": "Đổi ngôn ngữ giao tiếp của ViTa sang tiếng Anh giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q22",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_preferences",
+    "subintent_name": "Tùy chọn tương tác với ViTa",
+    "seed_input": "Khi xe đang đỗ, ViTa hãy chủ động giải thích chi tiết hơn cho tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q23",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "vita_preferences",
+    "subintent_name": "Tùy chọn tương tác với ViTa",
+    "seed_input": "Khi xe đang đỗ, ViTa hãy chủ động giải thích chi tiết hơn cho tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q24",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "user_profile_account",
+    "subintent_name": "Hồ sơ và tài khoản người dùng",
+    "seed_input": "Tôi đang lái xe, chuyển sang hồ sơ Minh và xác nhận thật ngắn thôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q25",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "user_profile_account",
+    "subintent_name": "Hồ sơ và tài khoản người dùng",
+    "seed_input": "Tôi đang lái xe, chuyển sang hồ sơ Minh và xác nhận thật ngắn thôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q26",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "user_profile_account",
+    "subintent_name": "Hồ sơ và tài khoản người dùng",
+    "seed_input": "Đồng bộ các tùy chọn cá nhân trên tài khoản của tôi vào hồ sơ xe này.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q27",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "user_profile_account",
+    "subintent_name": "Hồ sơ và tài khoản người dùng",
+    "seed_input": "Đồng bộ các tùy chọn cá nhân trên tài khoản của tôi vào hồ sơ xe này.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q28",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "user_profile_account",
+    "subintent_name": "Hồ sơ và tài khoản người dùng",
+    "seed_input": "Hãy tạo hồ sơ tài xế tên Lan và chủ động áp dụng các thiết lập quen dùng của tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q29",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "user_profile_account",
+    "subintent_name": "Hồ sơ và tài khoản người dùng",
+    "seed_input": "Hãy tạo hồ sơ tài xế tên Lan và chủ động áp dụng các thiết lập quen dùng của tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q30",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "user_profile_account",
+    "subintent_name": "Hồ sơ và tài khoản người dùng",
+    "seed_input": "Xe đang đỗ rồi, chuyển sang hồ sơ của tôi nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q31",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "user_profile_account",
+    "subintent_name": "Hồ sơ và tài khoản người dùng",
+    "seed_input": "Xe đang đỗ rồi, chuyển sang hồ sơ của tôi nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q32",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "user_profile_account",
+    "subintent_name": "Hồ sơ và tài khoản người dùng",
+    "seed_input": "Tạo cho tôi một hồ sơ mới tên Minh khi xe đang đỗ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q33",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "user_profile_account",
+    "subintent_name": "Hồ sơ và tài khoản người dùng",
+    "seed_input": "Tạo cho tôi một hồ sơ mới tên Minh khi xe đang đỗ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q34",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "user_profile_account",
+    "subintent_name": "Hồ sơ và tài khoản người dùng",
+    "seed_input": "Xe đang đỗ, đồng bộ các tùy chọn cá nhân của tôi vào hồ sơ hiện tại nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q35",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "user_profile_account",
+    "subintent_name": "Hồ sơ và tài khoản người dùng",
+    "seed_input": "Xe đang đỗ, đồng bộ các tùy chọn cá nhân của tôi vào hồ sơ hiện tại nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q36",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "device_service_connectivity",
+    "subintent_name": "Kết nối thiết bị và dịch vụ",
+    "seed_input": "Ngắt kết nối Bluetooth với điện thoại của tôi đi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q37",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "device_service_connectivity",
+    "subintent_name": "Kết nối thiết bị và dịch vụ",
+    "seed_input": "Ngắt kết nối Bluetooth với điện thoại của tôi đi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q38",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "device_service_connectivity",
+    "subintent_name": "Kết nối thiết bị và dịch vụ",
+    "seed_input": "Kết nối lại Bluetooth với điện thoại đã dùng gần nhất giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q39",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "device_service_connectivity",
+    "subintent_name": "Kết nối thiết bị và dịch vụ",
+    "seed_input": "Kết nối lại Bluetooth với điện thoại đã dùng gần nhất giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q40",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "device_service_connectivity",
+    "subintent_name": "Kết nối thiết bị và dịch vụ",
+    "seed_input": "Wi-Fi trên xe vừa mất kết nối, nối lại mạng đã lưu giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q41",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "device_service_connectivity",
+    "subintent_name": "Kết nối thiết bị và dịch vụ",
+    "seed_input": "Wi-Fi trên xe vừa mất kết nối, nối lại mạng đã lưu giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q42",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "device_service_connectivity",
+    "subintent_name": "Kết nối thiết bị và dịch vụ",
+    "seed_input": "Xe đang đỗ, bật chế độ ghép nối Bluetooth nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q43",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "device_service_connectivity",
+    "subintent_name": "Kết nối thiết bị và dịch vụ",
+    "seed_input": "Xe đang đỗ, bật chế độ ghép nối Bluetooth nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q44",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "device_service_connectivity",
+    "subintent_name": "Kết nối thiết bị và dịch vụ",
+    "seed_input": "Ghép nối điện thoại tên Galaxy S25 với xe giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q45",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "device_service_connectivity",
+    "subintent_name": "Kết nối thiết bị và dịch vụ",
+    "seed_input": "Ghép nối điện thoại tên Galaxy S25 với xe giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q46",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "device_service_connectivity",
+    "subintent_name": "Kết nối thiết bị và dịch vụ",
+    "seed_input": "Xe đang đỗ, liên kết dịch vụ nghe nhạc trên điện thoại với hệ thống xe nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q47",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "device_service_connectivity",
+    "subintent_name": "Kết nối thiết bị và dịch vụ",
+    "seed_input": "Xe đang đỗ, liên kết dịch vụ nghe nhạc trên điện thoại với hệ thống xe nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q48",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "system_app_settings",
+    "subintent_name": "Cài đặt hệ thống và ứng dụng",
+    "seed_input": "Tắt thông báo bật lên của ứng dụng tin nhắn đi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q49",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "system_app_settings",
+    "subintent_name": "Cài đặt hệ thống và ứng dụng",
+    "seed_input": "Tắt thông báo bật lên của ứng dụng tin nhắn đi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q50",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "system_app_settings",
+    "subintent_name": "Cài đặt hệ thống và ứng dụng",
+    "seed_input": "Đổi ngôn ngữ giao diện hệ thống sang tiếng Việt giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q51",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "system_app_settings",
+    "subintent_name": "Cài đặt hệ thống và ứng dụng",
+    "seed_input": "Đổi ngôn ngữ giao diện hệ thống sang tiếng Việt giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q52",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "system_app_settings",
+    "subintent_name": "Cài đặt hệ thống và ứng dụng",
+    "seed_input": "Bật chế độ tối tự động cho giao diện từ lúc hoàng hôn nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q53",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "system_app_settings",
+    "subintent_name": "Cài đặt hệ thống và ứng dụng",
+    "seed_input": "Bật chế độ tối tự động cho giao diện từ lúc hoàng hôn nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q54",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "system_app_settings",
+    "subintent_name": "Cài đặt hệ thống và ứng dụng",
+    "seed_input": "Xe đang đỗ, tắt âm thanh khi chạm trên màn hình nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q55",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "system_app_settings",
+    "subintent_name": "Cài đặt hệ thống và ứng dụng",
+    "seed_input": "Xe đang đỗ, tắt âm thanh khi chạm trên màn hình nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q56",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "system_app_settings",
+    "subintent_name": "Cài đặt hệ thống và ứng dụng",
+    "seed_input": "Đặt ứng dụng bản đồ mặc định thành ứng dụng Bản đồ của xe.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q57",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "system_app_settings",
+    "subintent_name": "Cài đặt hệ thống và ứng dụng",
+    "seed_input": "Đặt ứng dụng bản đồ mặc định thành ứng dụng Bản đồ của xe.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q58",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "system_app_settings",
+    "subintent_name": "Cài đặt hệ thống và ứng dụng",
+    "seed_input": "Xe đang đỗ, bật tự động cập nhật ứng dụng qua Wi-Fi nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q59",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "system_app_settings",
+    "subintent_name": "Cài đặt hệ thống và ứng dụng",
+    "seed_input": "Xe đang đỗ, bật tự động cập nhật ứng dụng qua Wi-Fi nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q60",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "permissions_privacy_data",
+    "subintent_name": "Quyền truy cập, quyền riêng tư và dữ liệu",
+    "seed_input": "Tôi đang lái xe, hãy tắt quyền truy cập vị trí của trợ lý.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q61",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "permissions_privacy_data",
+    "subintent_name": "Quyền truy cập, quyền riêng tư và dữ liệu",
+    "seed_input": "Tôi đang lái xe, hãy tắt quyền truy cập vị trí của trợ lý.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q62",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "permissions_privacy_data",
+    "subintent_name": "Quyền truy cập, quyền riêng tư và dữ liệu",
+    "seed_input": "Hãy xóa lịch sử lệnh thoại của tôi trong hôm nay.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q63",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "permissions_privacy_data",
+    "subintent_name": "Quyền truy cập, quyền riêng tư và dữ liệu",
+    "seed_input": "Hãy xóa lịch sử lệnh thoại của tôi trong hôm nay.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q64",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "permissions_privacy_data",
+    "subintent_name": "Quyền truy cập, quyền riêng tư và dữ liệu",
+    "seed_input": "Tắt việc lưu lịch sử hành trình và cho tôi biết khi đã xong.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q65",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "permissions_privacy_data",
+    "subintent_name": "Quyền truy cập, quyền riêng tư và dữ liệu",
+    "seed_input": "Tắt việc lưu lịch sử hành trình và cho tôi biết khi đã xong.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q66",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "permissions_privacy_data",
+    "subintent_name": "Quyền truy cập, quyền riêng tư và dữ liệu",
+    "seed_input": "Xe đang đỗ rồi, hãy thu hồi quyền dùng micro của ứng dụng thời tiết.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q67",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "permissions_privacy_data",
+    "subintent_name": "Quyền truy cập, quyền riêng tư và dữ liệu",
+    "seed_input": "Xe đang đỗ rồi, hãy thu hồi quyền dùng micro của ứng dụng thời tiết.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q68",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "permissions_privacy_data",
+    "subintent_name": "Quyền truy cập, quyền riêng tư và dữ liệu",
+    "seed_input": "Cho phép hệ thống chia sẻ dữ liệu chẩn đoán ẩn danh để cải thiện dịch vụ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q69",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "permissions_privacy_data",
+    "subintent_name": "Quyền truy cập, quyền riêng tư và dữ liệu",
+    "seed_input": "Cho phép hệ thống chia sẻ dữ liệu chẩn đoán ẩn danh để cải thiện dịch vụ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q70",
+    "field": "scenario",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "permissions_privacy_data",
+    "subintent_name": "Quyền truy cập, quyền riêng tư và dữ liệu",
+    "seed_input": "Xóa toàn bộ dữ liệu cá nhân mà trợ lý đã lưu và báo rõ kết quả cho tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q71",
+    "field": "first_input",
+    "intent_code": "vita_profile_settings",
+    "subintent_code": "permissions_privacy_data",
+    "subintent_name": "Quyền truy cập, quyền riêng tư và dữ liệu",
+    "seed_input": "Xóa toàn bộ dữ liệu cá nhân mà trợ lý đã lưu và báo rõ kết quả cho tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  }
+]

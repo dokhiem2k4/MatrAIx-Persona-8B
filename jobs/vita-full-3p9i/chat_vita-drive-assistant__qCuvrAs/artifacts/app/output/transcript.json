@@ -1,0 +1,48 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, từ giờ khi lái xe bạn trả lời gọn gàng giúp tôi nhé, tôi đang tập trung di chuyển ra sân đá bóng."
+    },
+    {
+      "role": "support",
+      "content": "Vâng, mình sẽ trả lời ngắn gọn khi xe đang chạy. Chúc bạn lái xe an toàn tới sân bóng nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn nha. Tiện thể kiểm tra hộ tôi áp suất lốp 4 bánh xem sao."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Cả bốn bánh đều ổn, bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Tuyệt vời. Giờ bật giúp tôi chế độ Sport và tăng nhiệt độ điều hòa lên 23 độ nhé."
+    },
+    {
+      "role": "support",
+      "content": "Xe đang ở vị trí P và đứng yên, mình sẽ thực hiện cả hai yêu cầu. Trước tiên, mình cần xác nhận với bạn về chế độ Sport: việc chuyển sang Sport sẽ thay đổi cảm giác lái, phản hồi ga nhanh và mạnh hơn. Bạn có chắc chắn muốn chuyển không? Về điều hòa, mình thấy hiện tại điều hòa đang tắt. Bạn muốn mình bật điều hòa lên và đặt nhiệt độ 23°C cho vị trí lái, đúng không?"
+    },
+    {
+      "role": "customer",
+      "content": "Đúng rồi, bật điều hòa 23 độ đi, còn chế độ Sport thì chuyển luôn cho tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa và chỉnh nhiệt độ ghế lái 23°C. Tuy nhiên, xe không có chế độ Sport để chuyển."
+    },
+    {
+      "role": "customer",
+      "content": "Ủa xe VF9 mà sao lại không có chế độ Sport hả bạn? Thôi bỏ qua đi, bật giúp tôi bài nhạc sôi động trên YouTube để lấy tinh thần ra sân nào."
+    },
+    {
+      "role": "support",
+      "content": "Đã mở nhạc sôi động thể thao ra sân."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

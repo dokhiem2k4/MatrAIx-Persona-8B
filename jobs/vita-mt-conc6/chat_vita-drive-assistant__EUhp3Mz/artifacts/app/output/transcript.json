@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita, kiểm tra xem còn bao nhiêu phút nữa thì tới điểm đến? Tôi đang khá vội."
+    },
+    {
+      "role": "support",
+      "content": "Hiện tại xe chưa có điểm đến nào được đặt, nên mình chưa thể tính thời gian đến nơi được. Bạn muốn đi đâu, mình giúp bạn dẫn đường nhé?"
+    },
+    {
+      "role": "customer",
+      "content": "Đặt gấp lộ trình đến Trung tâm Hội nghị Quốc gia giúp tôi. Chọn tuyến đường nào nhanh nhất để tránh kẹt xe, tôi sắp muộn họp báo rồi."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt lộ trình đến Trung tâm Hội nghị Quốc gia, tuyến đường nhanh nhất để tránh kẹt xe. Dự kiến đến nơi trong 28 phút, bạn yên tâm nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Đổi sang chế độ lái Sport và hạ điều hòa ghế lái xuống 21 độ giúp tôi. Pin xe hiện tại còn đủ chạy không?"
+    },
+    {
+      "role": "support",
+      "content": "Mình đã bật điều hòa và chỉnh nhiệt độ ghế lái xuống 21°C. Tuy nhiên, hiện tại mình chưa có thông tin về chế độ lái Sport và mức pin của xe."
+    },
+    {
+      "role": "customer",
+      "content": "Được rồi, thế kiểm tra nhanh áp suất lốp 4 bánh xem có ổn định không để tôi tập trung lái."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Cả bốn bánh đều ổn, bạn yên tâm lái nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

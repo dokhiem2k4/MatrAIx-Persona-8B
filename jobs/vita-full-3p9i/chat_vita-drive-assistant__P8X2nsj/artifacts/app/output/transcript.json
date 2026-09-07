@@ -1,0 +1,72 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, phía trước đang kẹt xe quá, tìm giúp tôi đường nào né đoạn ùn ứ này đi."
+    },
+    {
+      "role": "support",
+      "content": "Để mình kiểm tra tình trạng giao thông phía trước và tìm tuyến đường thay thế cho bạn. Trước tiên, mình cần biết điểm đến của bạn. Hiện tại xe chưa có điểm đến nào được cài đặt trong导航. Bạn muốn đi đâu ạ?"
+    },
+    {
+      "role": "customer",
+      "content": "À, tôi đang tính chạy về nhà ở khu đô thị Vinhomes Grand Park, quận Thủ Đức nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã sẵn sàng chỉ đường về Vinhomes Grand Park, Thủ Đức. Hành trình dự kiến khoảng 1.511 km, mất chừng 19 tiếng. Bạn có muốn kiểm tra lại điểm đến không?"
+    },
+    {
+      "role": "customer",
+      "content": "Khoan đã, sao mà hơn một ngàn rưỡi cây số thế, tôi đang ở ngay miền Nam mà! Hình như hệ thống nhầm điểm đến rồi, kiểm tra lại vị trí giúp tôi xem nào."
+    },
+    {
+      "role": "support",
+      "content": "Mình kiểm tra rồi, hệ thống đang hiển thị điểm xuất phát là Tòa Technopark, Hà Nội, còn điểm đến là Vinhomes Grand Park, Thủ Đức. Có vẻ như điểm xuất phát đang bị sai, bạn muốn mình cập nhật lại vị trí hiện tại của xe không?"
+    },
+    {
+      "role": "customer",
+      "content": "Đúng rồi, sửa lại vị trí xuất phát đi, tôi đang ở TP.HCM chứ có ở Hà Nội đâu. Nhớ tìm đường né kẹt xe luôn nhé."
+    },
+    {
+      "role": "support",
+      "content": "Tôi hiểu rồi. Tuy nhiên, tôi cần biết chính xác vị trí hiện tại của bạn ở TP.HCM để cập nhật điểm xuất phát. Bạn đang ở đâu trong TP.HCM vậy?"
+    },
+    {
+      "role": "customer",
+      "content": "Tôi đang ở đoạn cao tốc Long Thành - Dầu Giây hướng về TP.HCM nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã ghi nhận. Bạn đang trên cao tốc Long Thành - Dầu Giây hướng về TP.HCM. Cần mình hỗ trợ gì không?"
+    },
+    {
+      "role": "customer",
+      "content": "Ủa, vừa nãy bảo tìm đường tránh kẹt xe mà sao quên mất rồi? Giờ tìm cho tôi đường né đoạn ùn ứ trên cao tốc này đi chứ."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tra thông tin, hiện tại cao tốc Hà Nội đi TP Hồ Chí Minh không có báo cáo ùn tắc cụ thể. Bạn có muốn mình tìm đường thay thế không?"
+    },
+    {
+      "role": "customer",
+      "content": "Tôi đang đi cao tốc Long Thành - Dầu Giây ở miền Nam cơ mà, cứ nhầm sang Hà Nội hoài thế. Tìm lại đường tránh kẹt xe ngay trên tuyến này cho tôi đi!"
+    },
+    {
+      "role": "support",
+      "content": "Để mình kiểm tra lại tình hình trước đã nhé. Trước tiên, mình thấy xe đang ở chế độ P và không di chuyển, nên có thể thao tác an toàn. Tuy nhiên, navigation hiện tại đang dẫn từ Tòa Technopark, Hà Nội đến Vinhomes Grand Park, Thủ Đức – đây là tuyến đường dài Bắc-Nam, không phải tuyến cao tốc Long Thành - Dầu Giây. Để tìm lại đường tránh kẹt xe trên cao tốc Long Thành - Dầu Giây, mình cần biết: Bạn muốn đi từ đâu và đến đâu trên tuyến này? Ví dụ: từ Long Thành đi Dầu Giây, hay từ TP.HCM đi Phan Thiết qua cao tốc này?"
+    },
+    {
+      "role": "customer",
+      "content": "Hỏi gì lạ vậy Vita? Ban nãy tôi vừa bảo đi từ cao tốc Long Thành - Dầu Giây về Vinhomes Grand Park, Thủ Đức cơ mà. Thôi, bỏ qua đi, tôi tự lái vậy."
+    },
+    {
+      "role": "support",
+      "content": "Vâng, mình hiểu rồi. Bạn cứ lái thoải mái nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

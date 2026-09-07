@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 8,
+  "seed": {
+    "rowId": "row-0108",
+    "scenario": "Tôi đang lái xe trên đường về nhà sau một ngày làm việc dài, tâm trạng thoải mái và muốn ghé mua ít đồ.",
+    "firstInput": "Khi tôi lái xe đến gần nhà thì nhắc tôi ghé mua sữa nhé.",
+    "intentCode": "calendar_tasks",
+    "subintentCode": "contextual_reminder",
+    "subintentName": "Nhắc theo thời gian, vị trí, hành trình hoặc trạng thái xe",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62706e3ac3c2"
+  }
+}

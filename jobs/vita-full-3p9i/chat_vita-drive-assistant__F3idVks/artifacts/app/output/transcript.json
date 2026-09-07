@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, cho tôi hỏi Bệnh viện Đa khoa Quốc tế Vinmec hiện có những chuyên khoa và dịch vụ y tế trọng điểm nào nhỉ?"
+    },
+    {
+      "role": "support",
+      "content": "Theo thông tin mình tra được, Vinmec có các chuyên khoa trọng điểm như Trung tâm Ung bướu, Trung tâm Tim mạch, Cấp cứu và Trung tâm Y học Tái tạo, với đội ngũ chuyên gia và trang thiết bị hiện đại."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Sẵn tiện đang lái xe đến đó, em xem hộ tình trạng pin LFP hiện tại và áp suất lốp 4 bánh giúp tôi với nhé."
+    },
+    {
+      "role": "support",
+      "content": "Pin hiện tại 78%, đi được khoảng 312 km. Áp suất lốp: trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar."
+    },
+    {
+      "role": "customer",
+      "content": "Tốt rồi, cảm ơn em. Phiền em bật giúp chế độ sưởi nhẹ ghế lái và tăng nhiệt độ điều hòa thêm 1 độ cho ấm nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã bật điều hòa và tăng nhiệt độ bên lái lên 23°C rồi nhé. Còn sưởi ghế lái thì hiện tại xe chưa hỗ trợ tính năng này, bạn thông cảm."
+    },
+    {
+      "role": "customer",
+      "content": "À thế à, không sao. Vậy em bật giúp thông gió ghế lái thay cho sưởi nhé, cám ơn Vita."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt thông gió ghế mức 2."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

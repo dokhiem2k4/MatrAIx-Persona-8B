@@ -1,0 +1,56 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, lịch làm việc hôm nay của tôi có cuộc họp chiến lược nào quan trọng không thế?"
+    },
+    {
+      "role": "support",
+      "content": "Xin lỗi bạn, mình không có quyền truy cập vào lịch làm việc hay danh bạ cá nhân của bạn. Tính năng quản lý lịch hẹn hiện chưa được hỗ trợ trên xe. Bạn có thể kiểm tra lịch trên điện thoại của mình nhé. Nếu cần mình giúp gì khác như điều hướng đến địa điểm họp hay điều chỉnh cabin, cứ nói mình nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Hơi bất tiện nhỉ. Thôi, bạn tìm giúp tôi trạm sạc gần nhất trên tuyến đường đi văn phòng đi, chuẩn bị sẵn sàng cho yên tâm."
+    },
+    {
+      "role": "support",
+      "content": ":"
+    },
+    {
+      "role": "customer",
+      "content": "Vita ơi, hình như bạn chưa trả lời câu hỏi tìm trạm sạc. Tìm giúp tôi trạm sạc gần nhất trên tuyến đường đi văn phòng nhé."
+    },
+    {
+      "role": "support",
+      "content": "Để tìm trạm sạc gần nhất trên tuyến đường, trước tiên mình cần biết văn phòng của bạn ở đâu. Bạn cho mình biết địa chỉ văn phòng nhé?"
+    },
+    {
+      "role": "customer",
+      "content": "Văn phòng tôi ở tòa nhà Keangnam, Nam Từ Liêm, Hà Nội. Tìm giúp tôi trạm sạc VinFast trên đoạn đường đó nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình tìm thấy một số trạm sạc VinFast gần khu vực Keangnam, Nam Từ Liêm. Gần nhất có trạm tại Vinhomes Skylake, ngoài ra còn có các trạm ở Chung cư Intracom 1, Dream Town và Vinhomes West Point. Bạn muốn mình chỉ đường tới trạm nào?"
+    },
+    {
+      "role": "customer",
+      "content": "Chọn trạm ở Vinhomes Skylake đi Vita, tiện đường nhất. Đồng thời bật giúp tôi điều hòa 22 độ và quạt gió mức 3 nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã tìm đường đến trạm sạc Vinhomes Skylake, cách khoảng 20 km, ước tính 26 phút. Điều hòa 22°C và quạt gió mức 3 cũng đã bật xong."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita nhé, mọi thứ ổn rồi. Chúc bạn tiếp tục hành trình suôn sẻ."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn! Chúc bạn lái xe an toàn và vui vẻ nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

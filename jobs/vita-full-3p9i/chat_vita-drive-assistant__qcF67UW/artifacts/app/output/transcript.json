@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, hạ nhiệt độ bên ghế lái xuống 22 độ giúp anh nhé, anh đang hơi vội chút."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt nhiệt độ ghế lái 22 độ."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em. Kiểm tra giùm anh xem pin còn đi được bao nhiêu cây số nữa nhé."
+    },
+    {
+      "role": "support",
+      "content": "Pin còn 78%, đi được khoảng 312 km nữa anh ạ."
+    },
+    {
+      "role": "customer",
+      "content": "Tốt quá, cảm ơn em. Tìm giúp anh trạm sạc nào gần nhất trên đường đi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Để mình kiểm tra vị trí hiện tại và tìm trạm sạc gần nhất cho anh. Trước tiên, mình cần biết anh đang muốn đi đâu để tìm trạm sạc trên đường đi. Hiện tại xe chưa có điểm đến nào được thiết lập. Anh muốn tìm trạm sạc gần vị trí hiện tại (Tòa Technopark, Hà Nội) hay anh có điểm đến cụ thể nào không?"
+    },
+    {
+      "role": "customer",
+      "content": "À, anh đang lái xe đến Trung tâm Hội nghị Quốc gia, em tìm trạm sạc nào tiện đường giúp anh nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã tìm đường đến Trung tâm Hội nghị Quốc gia có ghé trạm sạc tiện đường, cách 24 km, mất khoảng 28 phút."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

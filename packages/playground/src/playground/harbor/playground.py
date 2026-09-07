@@ -647,6 +647,14 @@ def _harbor_failure_summary(job_dir: Path) -> str:
     return ""
 
 
+# Chat transcripts are written with the customer/support vocabulary (see
+# ``chat_eval.py`` ``_conversation_messages``) while survey-era artifacts use
+# user/assistant. Reading only one of the two silently yields zero turns, so the
+# debrief shows a conversation that happened as if it never did.
+_USER_ROLES = frozenset({"user", "customer"})
+_ASSISTANT_ROLES = frozenset({"assistant", "support"})
+
+
 def _build_turns_from_messages(transcript: Dict[str, Any]) -> List[Dict[str, Any]]:
     messages = transcript.get("messages") or []
     if not isinstance(messages, list):
@@ -657,11 +665,11 @@ def _build_turns_from_messages(transcript: Dict[str, Any]) -> List[Dict[str, Any
     for message in messages:
         if not isinstance(message, dict):
             continue
-        role = message.get("role")
+        role = str(message.get("role") or "").strip().lower()
         content = str(message.get("content") or "")
-        if role == "user":
+        if role in _USER_ROLES:
             pending_user = content
-        elif role == "assistant" and pending_user is not None:
+        elif role in _ASSISTANT_ROLES and pending_user is not None:
             index = len(turns)
             turns.append(
                 {

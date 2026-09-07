@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, chuyển ngay sang hồ sơ lái xe của anh nhé."
+    },
+    {
+      "role": "support",
+      "content": "Tôi cần biết tên hồ sơ mà bạn muốn chuyển sang. Bạn muốn chuyển sang hồ sơ nào ạ?"
+    },
+    {
+      "role": "customer",
+      "content": "Hồ sơ của anh là \"Sĩ Lim\" em nhé."
+    },
+    {
+      "role": "support",
+      "content": "Vâng, mình đã ghi nhớ. Từ giờ mình sẽ gọi bạn là Sĩ Lim."
+    },
+    {
+      "role": "customer",
+      "content": "Phải là chuyển sang cấu hình cài đặt hồ sơ của anh chứ không phải đổi tên. Ghế lái chỉnh lại nhiệt độ điều hòa 21 độ và bật quạt gió mức 2 cho anh luôn đi."
+    },
+    {
+      "role": "support",
+      "content": "Đã chuyển sang hồ sơ của bạn, ghế lái đã chỉnh, điều hòa 21°C và quạt gió mức 2 rồi nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Được rồi, cảm ơn em. Anh kiểm tra thấy ổn rồi đấy."
+    },
+    {
+      "role": "support",
+      "content": "Có gì cần hỗ trợ thêm thì bạn cứ nói nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

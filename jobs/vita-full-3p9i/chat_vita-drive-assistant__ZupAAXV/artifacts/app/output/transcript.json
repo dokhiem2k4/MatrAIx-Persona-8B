@@ -1,0 +1,56 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, tôi đang lái xe qua vùng đất này, cô có thể cho biết Huế nổi tiếng với những món ăn đặc sản nào không?"
+    },
+    {
+      "role": "support",
+      "content": "Huế nổi tiếng với nhiều món đặc sản như bún bò Huế, cơm hến, bánh bèo, bánh nậm, bánh lọc và tôm chua. Bạn có thể tham khảo thêm trên Wikipedia nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Nghe hấp dẫn đấy, vậy có quán nào bán bún bò ngon quanh khu vực này mà không quá đông đúc không?"
+    },
+    {
+      "role": "support",
+      "content": "Mình tìm thấy quán Huy Tuấn - Bún Bò Huế ở 225 Bùi Xương Trạch, quận Thanh Xuân, quán nhỏ bình dân, giá phải chăng. Bạn có thể ghé thử xem sao nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Đợi đã Vita, tôi đang lái xe ở Thừa Thiên Huế cơ mà, sao lại gợi ý ra tận Hà Nội thế? Tìm lại quán quanh đây giúp tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Để mình tìm quán quanh khu vực hiện tại của bạn. Bạn đang ở gần Tòa Technopark, Hà Nội. Bạn muốn tìm loại quán gì ạ? Ví dụ: quán cà phê, quán ăn, nhà hàng, hay quán nhậu?"
+    },
+    {
+      "role": "customer",
+      "content": "Vẫn nhầm rồi Vita, tôi đang ở thành phố Huế cơ. Chỉnh lại định vị GPS và tìm lại quán bún bò chuẩn vị ở ngay trung tâm thành phố Huế giúp tôi."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tìm được một số quán bún bò ngon ở trung tâm Huế, nổi bật nhất là Bún bò Mệ Kéo tại 20 Bạch Đằng, Bún bò Huế Kim Đồng 2 và Quán Cẩm. Bạn muốn mình dẫn đường đến quán nào?"
+    },
+    {
+      "role": "customer",
+      "content": "Chọn quán Mệ Kéo ở đường Bạch Đằng nhé, dẫn đường giúp tôi đến đó và sẵn tiện hạ nhiệt độ điều hòa bên ghế lái xuống 21 độ hộ tôi luôn."
+    },
+    {
+      "role": "support",
+      "content": "Đã tìm thấy quán Mệ Kéo ở đường Bạch Đằng, mình đang dẫn đường đến đó, cách 33 km, dự kiến 34 phút. Điều hòa ghế lái đã hạ xuống 21°C rồi bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita, thao tác rất chuẩn xác. Chúc bạn có một buổi làm việc hiệu quả."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn! Chúc bạn lái xe an toàn và có một buổi chiều thật hiệu quả nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

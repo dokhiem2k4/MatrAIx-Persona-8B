@@ -1,0 +1,122 @@
+{
+    "id": "6c0a3df0-c74d-4b6b-b375-25362a3c88d6",
+    "task_name": "application/vita-utterance-journey-navigation-places",
+    "trial_name": "survey_vita-utterance-journey-na__ovySZ2F",
+    "trial_uri": "file:///home/khiemdm/orca/workspaces/MatrAIx-Persona-8B/pearleye/jobs/vita-utt-nav-5models/survey_vita-utterance-journey-na__ovySZ2F",
+    "task_id": {
+        "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+    },
+    "source": null,
+    "task_checksum": "b7b64043bf8d9fb76d2aef0a224c7000c1d1dc799722374ec76b86ed9a576004",
+    "config": {
+        "task": {
+            "path": "application/tasks/survey_vita-utterance-journey-navigation-places",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "survey_vita-utterance-journey-na__ovySZ2F",
+        "trials_dir": "jobs/vita-utt-nav-5models",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "persona-json-survey",
+            "import_path": null,
+            "model_name": "openrouter/ag/claude-sonnet-4-6",
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "persona_path": "persona/datasets/matraix-persona-dev-sample/persona_0029.yaml",
+                "model_info": {
+                    "max_input_tokens": 72000,
+                    "max_output_tokens": 16384
+                }
+            },
+            "env": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "host",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "env": {},
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {},
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "6ff9a8a7-9d41-43a0-a11a-1d4d0a1c7e81"
+    },
+    "agent_info": {
+        "name": "persona-json-survey",
+        "version": "1.0.0",
+        "model_info": {
+            "name": "ag/claude-sonnet-4-6",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 12833,
+        "n_cache_tokens": null,
+        "n_output_tokens": 1179,
+        "cost_usd": 0.056184,
+        "rollout_details": null,
+        "metadata": {
+            "request_id": "chatcmpl-msg_vrtx_011CefrYTCCyx7FbDG5Fw5xu",
+            "model": "ag/claude-sonnet-4-6",
+            "provider": "openrouter",
+            "cost_source": "estimated"
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-09-03T04:13:12.267710Z",
+    "finished_at": "2026-09-03T04:13:30.398890Z",
+    "environment_setup": {
+        "started_at": "2026-09-03T04:13:12.273291Z",
+        "finished_at": "2026-09-03T04:13:12.273669Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-03T04:13:12.273737Z",
+        "finished_at": "2026-09-03T04:13:12.273762Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-03T04:13:12.273816Z",
+        "finished_at": "2026-09-03T04:13:30.357914Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-03T04:13:30.360424Z",
+        "finished_at": "2026-09-03T04:13:30.398828Z"
+    },
+    "step_results": null
+}

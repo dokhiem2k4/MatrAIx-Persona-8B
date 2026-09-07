@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 8,
+  "seed": {
+    "rowId": "row-0420",
+    "scenario": "Tôi đang lái xe một mình trên đường vành đai để đến văn phòng cho kịp cuộc họp sáng, tâm trạng có chút căng thẳng vì tiến độ công việc đang dồn dập.",
+    "firstInput": "Vita, tra nhanh giúp tôi giá vàng hôm nay bao nhiêu.",
+    "intentCode": "general_qa_conversation",
+    "subintentCode": "web_search",
+    "subintentName": "Tra cứu Web",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62706e3ac3c2"
+  }
+}

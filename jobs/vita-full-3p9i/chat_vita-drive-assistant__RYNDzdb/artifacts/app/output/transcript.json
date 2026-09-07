@@ -1,0 +1,48 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, sáng thứ Bảy này đặt lịch bảo dưỡng định kỳ giúp anh nhé."
+    },
+    {
+      "role": "support",
+      "content": "Rất tiếc, mình không có khả năng đặt lịch hẹn hay liên hệ với trung tâm bảo dưỡng. Việc này cần bạn gọi điện hoặc đặt qua ứng dụng VinFast trên điện thoại. Mình có thể giúp bạn những việc khác như mở Google Maps dẫn đến trạm dịch vụ VinFast gần nhất nếu bạn cần."
+    },
+    {
+      "role": "customer",
+      "content": "Thế thì tìm giúp anh trạm dịch vụ VinFast gần nhất nhé, để anh ghé qua hỏi trực tiếp luôn."
+    },
+    {
+      "role": "support",
+      "content": "Mình tìm thấy trạm sạc VinFast ngay tại hầm B2 tòa Technopark, Vinhomes Ocean Park, Kiêu Kỵ, Gia Lâm. Ngoài ra còn có Xưởng Dịch vụ VinFast ở tầng 1 TTTM Vincom Ocean Park. Bạn muốn chỉ đường đến địa điểm nào?"
+    },
+    {
+      "role": "customer",
+      "content": "Chọn xưởng dịch vụ Vincom Ocean Park giúp anh nhé. Tiện thể kiểm tra hộ anh áp suất 4 lốp xe xem có ổn áp không."
+    },
+    {
+      "role": "support",
+      "content": "Đã chọn xưởng dịch vụ Vincom Ocean Park và bắt đầu chỉ đường, cách đây 30 km, mất khoảng 97 phút. Còn kiểm tra áp suất lốp thì mình chưa có tính năng đó để hỗ trợ bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Treo áp suất lốp mà không xem được thì hơi căng nhỉ. Thôi kệ, em tăng nhiệt độ điều hòa lên thêm một độ giúp anh với."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt nhiệt độ ghế lái 23 độ."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em, thế là vừa vặn rồi. Giờ anh tập trung lái xe đây."
+    },
+    {
+      "role": "support",
+      "content": "Vâng, anh lái xe an toàn nhé. Có gì cần mình cứ gọi."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

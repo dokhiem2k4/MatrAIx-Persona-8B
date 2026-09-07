@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, tôi đang lái xe đây, hãy tắt quyền truy cập định vị giúp tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Xin lỗi bạn, mình không có khả năng tắt quyền truy cập định vị của xe. Tính năng này nằm ngoài các tác vụ mình có thể thực hiện. Bạn có thể vào phần Cài đặt > Quyền riêng tư trên màn hình trung tâm để tự điều chỉnh. Nếu cần hỗ trợ việc gì khác trong cabin, mình sẵn sàng nhé."
+    },
+    {
+      "role": "customer",
+      "content": "À được rồi, để lúc khác tôi tự chỉnh vậy. Nhân tiện, chỉnh nhiệt độ điều hòa giúp tôi xuống 22 độ và bật quạt gió mức trung bình nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa, chỉnh nhiệt độ xuống 22°C và quạt gió mức trung bình rồi bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita nhé, giờ thì ổn rồi. Tôi có thể kiểm tra áp suất lốp 4 bánh lúc này luôn không?"
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Các chỉ số đều trong ngưỡng an toàn."
+    },
+    {
+      "role": "customer",
+      "content": "Tuyệt vời, cảm ơn Vita nhiều. Thế là tôi yên tâm lái xe tiếp rồi."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn. Chúc bạn lái xe an toàn và thoải mái nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

@@ -1,0 +1,230 @@
+{
+    "schema_version": 1,
+    "created_at": "2026-09-03T04:52:56.553378Z",
+    "harbor": {
+        "version": "0.1.0",
+        "is_editable": false
+    },
+    "invocation": [
+        "/home/khiemdm/orca/workspaces/MatrAIx-Persona-8B/pearleye/.venv/bin/matraix",
+        "run",
+        "-c",
+        "configs/jobs/application-task-job-recipe/survey-vita-utterance-journey-navigation-places-n5-v2.yaml"
+    ],
+    "n_concurrent_trials": 1,
+    "retry": {
+        "max_retries": 0,
+        "exclude_exceptions": [
+            "VerifierTimeoutError",
+            "RewardFileEmptyError",
+            "AgentTimeoutError",
+            "RewardFileNotFoundError",
+            "VerifierOutputParseError"
+        ],
+        "wait_multiplier": 1.0,
+        "min_wait_sec": 1.0,
+        "max_wait_sec": 60.0
+    },
+    "trials": [
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:db1f14b6058bf6386f347a4ce8ee6cd2a3173bcd6ea30ab5e9374bbb0c6605c5",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-opus-4-6-thinking",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-dev-sample/persona_0164.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:db1f14b6058bf6386f347a4ce8ee6cd2a3173bcd6ea30ab5e9374bbb0c6605c5",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-dev-sample/persona_0029.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:db1f14b6058bf6386f347a4ce8ee6cd2a3173bcd6ea30ab5e9374bbb0c6605c5",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/gemini-3.7-flash-high",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-dev-sample/persona_0007.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:db1f14b6058bf6386f347a4ce8ee6cd2a3173bcd6ea30ab5e9374bbb0c6605c5",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/gemini-3.1-pro-low",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-dev-sample/persona_0190.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "survey_vita-utterance-journey-navigation-places",
+                "type": "local",
+                "digest": "sha256:db1f14b6058bf6386f347a4ce8ee6cd2a3173bcd6ea30ab5e9374bbb0c6605c5",
+                "path": "application/tasks/survey_vita-utterance-journey-navigation-places"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-json-survey",
+                "model_name": "openrouter/ag/gemini-3-flash",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/matraix-persona-dev-sample/persona_0071.yaml",
+                    "model_info": {
+                        "max_input_tokens": 72000,
+                        "max_output_tokens": 16384
+                    }
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "host",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        }
+    ]
+}

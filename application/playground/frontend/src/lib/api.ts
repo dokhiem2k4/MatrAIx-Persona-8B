@@ -51,14 +51,44 @@ export class ApiError extends Error {
   }
 }
 
+/**
+ * `fetch` waits forever by default. When the dev backend restarts mid-request
+ * -- it reloads whenever a persona dataset is rebuilt -- the socket stalls and
+ * the caller's spinner ("Loading all dimensions…") never resolves and never
+ * errors, so the UI reads as merely slow when the request is in fact dead.
+ * A request that has not answered in two minutes is not going to.
+ */
+const REQUEST_TIMEOUT_MS = 120_000;
+
+export class TimeoutError extends Error {
+  constructor(path: string, timeoutMs: number) {
+    super(`Request to ${path} timed out after ${Math.round(timeoutMs / 1000)}s`);
+    this.name = "TimeoutError";
+  }
+}
+
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(path, {
-    ...init,
-    headers: {
-      ...(init?.body ? { "Content-Type": "application/json" } : {}),
-      ...(init?.headers ?? {}),
-    },
-  });
+  // A caller-supplied signal still wins: this only adds a ceiling.
+  const timeout = AbortSignal.timeout(REQUEST_TIMEOUT_MS);
+  const signal = init?.signal
+    ? AbortSignal.any([init.signal, timeout])
+    : timeout;
+  let response: Response;
+  try {
+    response = await fetch(path, {
+      ...init,
+      signal,
+      headers: {
+        ...(init?.body ? { "Content-Type": "application/json" } : {}),
+        ...(init?.headers ?? {}),
+      },
+    });
+  } catch (error) {
+    if (timeout.aborted && !init?.signal?.aborted) {
+      throw new TimeoutError(path, REQUEST_TIMEOUT_MS);
+    }
+    throw error;
+  }
   const text = await response.text();
   const data = text ? JSON.parse(text) : null;
   if (!response.ok) {

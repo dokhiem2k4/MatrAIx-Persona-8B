@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 3,
+  "seed": {
+    "rowId": "row-0336",
+    "scenario": "Tôi đang lái xe ra ngoại thành để kịp buổi gặp mặt bạn bè buổi sáng, một mình trên xe và muốn kiểm tra nhanh mức năng lượng.",
+    "firstInput": "Pin còn đủ đi tiếp không Vita.",
+    "intentCode": "energy_charging",
+    "subintentCode": "range_sufficiency",
+    "subintentName": "Phạm vi di chuyển",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-9f3c655902f2"
+  }
+}

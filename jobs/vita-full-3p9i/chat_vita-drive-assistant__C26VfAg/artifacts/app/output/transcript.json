@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, em tra giúp tôi giá vàng hôm nay thế nào nhé."
+    },
+    {
+      "role": "support",
+      "content": "Giá vàng SJC hôm nay giảm 1,3 triệu đồng mỗi lượng, niêm yết ở mức 144,4 – 147,4 triệu đồng/lượng (mua vào – bán ra)."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em. Tiện thể em mở giúp tôi bài nhạc hòa tếu nhẹ nhàng để nghe lúc lái xe nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã mở nhạc hòa tấu nhẹ nhàng thư giãn."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em, nhạc nghe rất vừa tai. Bây giờ em kiểm tra giúp tôi áp suất lốp 4 bánh xem sao nhé."
+    },
+    {
+      "role": "support",
+      "content": "Dạ, áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Các chỉ số đều trong ngưỡng an toàn, bạn yên tâm nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

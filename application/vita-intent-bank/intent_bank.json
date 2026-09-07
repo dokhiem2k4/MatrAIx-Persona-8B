@@ -1,0 +1,1707 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "vita.intent_bank",
+  "intents": [
+    {
+      "intent_code": "journey_navigation_places",
+      "subintents": [
+        {
+          "subintent_code": "destination_poi",
+          "subintent_name": "Tìm điểm đến/POI",
+          "seeds": [
+            {
+              "input": "Dẫn đường đến trạm xăng gần nhất.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Tìm một quán phở gần đây rồi dẫn đường tới đó.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Đưa tôi đến bãi đỗ xe gần chợ Bến Thành.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Tìm một quán cà phê gần đây để tôi đến.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Dẫn đường đến Bảo tàng Chứng tích Chiến tranh.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tìm giúp tôi một nhà hàng Việt Nam gần đây để ăn trưa.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "route_management",
+          "subintent_name": "Lập và thay đổi tuyến",
+          "seeds": [
+            {
+              "input": "Đổi tuyến hiện tại sang đường tránh cao tốc.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Đổi tuyến hiện tại sang đường ít ùn tắc hơn giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Thêm Bưu điện Trung tâm Thành phố làm điểm dừng trên tuyến hiện tại.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Lập tuyến từ đây đến Hồ Hoàn Kiếm.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Xóa điểm dừng ở chợ Bến Thành khỏi hành trình.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Lập tuyến đến sân bay Nội Bài và ưu tiên đường cao tốc.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "traffic_eta",
+          "subintent_name": "Giao thông và thời gian dự kiến đến nơi (ETA)",
+          "seeds": [
+            {
+              "input": "Còn bao lâu nữa thì tới nơi?",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Tình hình giao thông phía trước thế nào?",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Mấy giờ tôi sẽ đến sân bay?",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Xe đang đỗ đây, nếu khởi hành bây giờ thì bao lâu nữa tôi đến công ty?",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Trước khi đi, kiểm tra giúp tôi tình hình giao thông đến sân bay và giờ đến dự kiến.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Nếu xuất phát ngay thì mấy giờ tôi tới trung tâm hội nghị?",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "parking_arrival",
+          "subintent_name": "Đỗ xe/đến nơi",
+          "seeds": [
+            {
+              "input": "Tôi sắp đến rồi, bật hướng dẫn vào bãi đỗ của tòa nhà nhé.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Gần tới nơi rồi, chỉ đường vào bãi đỗ xe tại điểm đến giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tôi sắp tới khách sạn, hướng dẫn tôi vào khu đón trả khách nhé.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Tôi đã đỗ xe rồi, kết thúc hành trình nhé.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Tôi đỗ xe xong rồi, kết thúc chuyến đi giúp tôi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Đến nơi rồi, lưu vị trí đỗ xe này giúp tôi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "local_travel_information",
+          "subintent_name": "Thông tin địa phương/du lịch",
+          "seeds": [
+            {
+              "input": "Huế nổi tiếng với món ăn nào?",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Phố cổ Hội An có gì đặc sắc vậy?",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Đà Lạt mùa này có đặc sản gì đáng thử?",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Chợ Bến Thành được xây từ bao giờ?",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Ở Ninh Bình, Tràng An có gì nổi bật?",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tôi đang đỗ xe ở Sa Pa, buổi tối ở đây có gì thú vị?",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intent_code": "energy_charging",
+      "subintents": [
+        {
+          "subintent_code": "range_sufficiency",
+          "subintent_name": "Phạm vi di chuyển",
+          "seeds": [
+            {
+              "input": "Pin hiện tại có đủ để tôi đi tiếp không?",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Xe có đủ pin để đến nơi không?",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tầm hoạt động còn lại có đủ cho chuyến này không?",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Lát nữa tôi đi thì pin có đủ không?",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Xe đang đỗ đây, pin còn lại có đủ cho chuyến sắp tới không?",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Nếu khởi hành bây giờ thì xe có đủ tầm hoạt động không?",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "charger_search",
+          "subintent_name": "Tìm trạm sạc",
+          "seeds": [
+            {
+              "input": "Tìm giúp tôi trạm sạc nhanh gần đây.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Tìm giúp tôi trạm sạc nhanh gần đây có chỗ đỗ thuận tiện.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tìm trạm sạc nhanh gần nhất đang mở cửa cho tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Tìm trạm sạc gần đây.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Tìm giúp tôi trạm sạc gần đây có đầu sạc CCS2 và đang mở cửa.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tìm giúp tôi trạm sạc nhanh gần bãi đỗ này.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "ev_routing",
+          "subintent_name": "Lập tuyến EV",
+          "seeds": [
+            {
+              "input": "Pin còn 18%, lập tuyến đến Đà Nẵng có điểm sạc phù hợp giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Xe chỉ còn đi được khoảng 70 km, hãy dẫn đường về Nha Trang và thêm điểm sạc dọc đường.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Lập tuyến đến Huế theo mức pin hiện tại, ưu tiên trạm sạc nhanh.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Pin còn 28%, lập tuyến đến Đà Lạt có trạm sạc dọc đường.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Lập giúp tôi tuyến đến Nha Trang, giữ pin tối thiểu 15% và thêm điểm sạc nếu cần.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Pin hiện còn 35%, hãy tìm tuyến đến Vũng Tàu và ưu tiên các trạm sạc nhanh đáng tin cậy.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "charging_status",
+          "subintent_name": "Trạng thái sạc",
+          "seeds": [
+            {
+              "input": "Cho tôi biết tình trạng sạc hiện tại.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Xe đang sạc tới đâu rồi?",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Kiểm tra trạng thái sạc giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Tình hình sạc của xe thế nào?",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Xe đang sạc được bao nhiêu phần trăm rồi?",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Kiểm tra giúp tôi tiến trình sạc hiện tại.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intent_code": "calendar_tasks",
+      "subintents": [
+        {
+          "subintent_code": "calendar_query",
+          "subintent_name": "Tra cứu",
+          "seeds": [
+            {
+              "input": "Hôm nay tôi còn lịch gì không?",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Đọc giúp tôi lịch hẹn tiếp theo.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Chiều nay tôi có lịch gì?",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Ngày mai tôi có cuộc hẹn nào không?",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Cho tôi biết các lịch đã có vào sáng mai.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Cuối tuần này lịch của tôi thế nào?",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "calendar_create_update_cancel",
+          "subintent_name": "Tạo/sửa/hủy lịch",
+          "seeds": [
+            {
+              "input": "Tạo lịch họp nhóm lúc 9 giờ sáng mai giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Dời lịch khám răng chiều mai từ 2 giờ sang 3 giờ nhé.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Hủy cuộc hẹn với anh Minh lúc 4 giờ chiều nay.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Thêm lịch ăn tối với gia đình lúc 7 giờ tối thứ Bảy.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Đổi tên lịch chiều thứ Sáu từ gặp khách hàng thành gặp đối tác.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tạo lịch bảo dưỡng xe lúc 8 giờ sáng thứ Hai tuần tới.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "task_management",
+          "subintent_name": "Việc cần làm",
+          "seeds": [
+            {
+              "input": "Thêm việc cần làm là gửi báo cáo doanh số.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Thêm việc kiểm tra áp suất lốp vào danh sách cần làm.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Đánh dấu việc gọi cho gara là đã hoàn thành.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Xóa việc rửa xe khỏi danh sách cần làm.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Đổi việc mua nước rửa kính thành mua nước làm mát.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Thêm việc kiểm tra áp suất lốp vào danh sách việc cần làm giúp tôi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "contextual_reminder",
+          "subintent_name": "Nhắc theo thời gian, vị trí, hành trình hoặc trạng thái xe",
+          "seeds": [
+            {
+              "input": "Khi tôi lái xe đến gần nhà thì nhắc tôi ghé mua sữa nhé.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Khi tôi đến gần trạm xăng trên đường thì nhắc tôi đổ xăng nhé.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Nhắc tôi gọi cho mẹ ngay khi tôi đỗ xe xong nhé.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Khi xe rời bãi đỗ, nhắc tôi gọi cho anh Minh.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Lúc tôi lái xe đến gần siêu thị, nhắc tôi mua sữa nhé.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Khi tôi đỗ xe ở công ty vào sáng mai, nhắc tôi mang tài liệu lên văn phòng.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intent_code": "cabin_vehicle_control",
+      "subintents": [
+        {
+          "subintent_code": "climate",
+          "subintent_name": "Điều hòa",
+          "seeds": [
+            {
+              "input": "Giảm nhiệt độ điều hòa bên tài xế xuống 22 độ.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Tăng nhiệt độ điều hòa bên ghế phụ lên 24 độ giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tăng nhiệt độ điều hòa bên ghế phụ lên 25 độ giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Đặt điều hòa bên lái xuống 24 độ.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Xe đang đỗ, chỉnh điều hòa bên ghế lái xuống 22 độ giúp tôi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Trước khi khởi hành, bật điều hòa tự động ở 24 độ nhé.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "seat_comfort",
+          "subintent_name": "Ghế và tiện nghi",
+          "seeds": [
+            {
+              "input": "Bật làm mát ghế lái mức 2.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Chỉnh tựa lưng ghế lái ngả thêm một chút.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tôi hơi mỏi lưng, bật massage ghế lái giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Tắt sưởi ghế phụ phía trước.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Xe đang đỗ rồi, đưa ghế lái về vị trí thư giãn nhé.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Bật sưởi ghế lái mức thấp trong lúc tôi chờ nhé.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "doors_windows_trunk",
+          "subintent_name": "Cửa/kính/cốp",
+          "seeds": [
+            {
+              "input": "Đóng hết cửa kính lại giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Hạ kính cửa bên phụ phía trước xuống một nửa.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Mở kính cửa ghế lái xuống một nửa giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Đóng cốp xe giúp tôi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Hạ kính cửa ghế lái xuống một nửa.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Khóa tất cả cửa xe.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "lights_mirrors_wipers",
+          "subintent_name": "Đèn/gương/gạt mưa",
+          "seeds": [
+            {
+              "input": "Bật gạt mưa mức thấp.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Trời bắt đầu mưa rồi, bật gạt mưa phía trước ở tốc độ vừa giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tối quá, bật đèn chiếu gần giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Gập hai gương chiếu hậu lại.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Bật đèn trong cabin giúp tôi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Xe đỗ rồi, chỉnh cả hai gương về vị trí mặc định nhé.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "supported_vehicle_settings",
+          "subintent_name": "Thiết lập xe được hỗ trợ",
+          "seeds": [
+            {
+              "input": "Chuyển xe sang chế độ lái Eco.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Tăng mức phanh tái sinh lên cao.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Đặt vô lăng sang mức trợ lực nhẹ giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Bật chế độ tự động khóa xe khi tôi bắt đầu chạy nhé.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Đặt thời gian tự tắt nguồn phụ kiện sau khi đỗ xe thành mười phút.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Bật cảnh báo bỏ quên đồ ở hàng ghế sau giúp tôi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intent_code": "communication_media",
+      "subintents": [
+        {
+          "subintent_code": "calling",
+          "subintent_name": "Gọi điện",
+          "seeds": [
+            {
+              "input": "Gọi cho anh Nam ngay nhé.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Gọi vào số 0901234567 giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Gọi lại cuộc gọi nhỡ gần nhất đi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Kết thúc cuộc gọi hiện tại.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Xe đang đỗ rồi, gọi cho anh Minh giúp tôi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Gọi cho mẹ giúp tôi nhé.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "messaging",
+          "subintent_name": "Nhắn tin",
+          "seeds": [
+            {
+              "input": "Tôi đang lái xe, nhắn cho Lan là tôi sẽ đến muộn mười phút.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Nhắn cho anh Hùng rằng đường đang tắc, tôi đến sau nhé.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Nhắn cho vợ tôi là tôi đang lái xe về, khoảng hai mươi phút nữa tới.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Xe đang đỗ, gửi cho Nam tin nhắn: tôi chờ ở cổng.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Nhắn cho chị Mai là em đã đỗ xe ở tầng hầm B2 rồi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Gửi tin cho Tuấn là tôi đã tới bãi đỗ, bảo cậu ấy ra nhé.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "contact_resolution",
+          "subintent_name": "Xác định liên hệ",
+          "seeds": [
+            {
+              "input": "Tìm giúp tôi liên hệ anh Nam với.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Cho tôi đúng liên hệ của chị Hương.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tìm người tôi lưu là bác sĩ giúp nhé.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Chọn giúp tôi liên hệ Tuấn.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Tôi cần tìm số của cô Mai trong danh bạ.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tìm đúng liên hệ của sếp tôi nhé.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "content_discovery",
+          "subintent_name": "Tìm nội dung",
+          "seeds": [
+            {
+              "input": "Tìm gì vui vui để nghe đi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Tìm cho tôi nội dung về du lịch Đà Lạt.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Kiếm nội dung thư giãn cho chuyến đi này nhé.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Tìm chương trình nói về công nghệ.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Tìm giúp tôi một bộ phim hài.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tìm nội dung mới phù hợp với sở thích của tôi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "playback_control",
+          "subintent_name": "Điều khiển phát",
+          "seeds": [
+            {
+              "input": "Tạm dừng nhạc.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Bỏ qua bài này giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Phát tiếp nội dung đang nghe dở nhé.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Tạm dừng nhạc giúp tôi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Phát tiếp bài nhạc đang nghe nhé.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Bỏ qua bài này đi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "source_queue",
+          "subintent_name": "Nguồn/danh sách phát",
+          "seeds": [
+            {
+              "input": "Chuyển nguồn âm thanh sang Bluetooth.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Thêm bài đang phát vào cuối hàng chờ.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Xóa tất cả bài khỏi hàng chờ giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Đổi nguồn nhạc sang USB.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Đưa bài cuối hàng chờ lên phát kế tiếp.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Chuyển sang nguồn radio FM.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "volume_audio_zone",
+          "subintent_name": "Âm lượng/vùng âm thanh",
+          "seeds": [
+            {
+              "input": "Giảm âm lượng xuống một chút.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Đặt âm lượng toàn xe ở mức 12.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Chỉ phát âm thanh ở hàng ghế trước.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Tắt tiếng trong xe.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Tăng âm lượng cho hàng ghế sau lên hai mức.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Chuyển âm thanh sang phía ghế lái.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intent_code": "my_car",
+      "subintents": [
+        {
+          "subintent_code": "vehicle_status",
+          "subintent_name": "Trạng thái xe",
+          "seeds": [
+            {
+              "input": "Xe đang chạy hay đang đỗ?",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Cho tôi biết trạng thái hiện tại của xe.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Xe hiện đang ở trạng thái nào?",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Xe đã đỗ hẳn chưa?",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Trạng thái xe bây giờ thế nào?",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Kiểm tra xem xe đang chạy hay đỗ.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "warning_explanation",
+          "subintent_name": "Giải thích cảnh báo",
+          "seeds": [
+            {
+              "input": "Đèn cảnh báo hình lốp xe có dấu chấm than nghĩa là gì?",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Biểu tượng bình ắc quy màu đỏ vừa sáng có ý nghĩa gì?",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Màn hình đang báo nhiệt độ động cơ cao, cảnh báo đó nghĩa là gì?",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Xe đang đỗ và hiện biểu tượng vô-lăng kèm dấu chấm than, nó nghĩa là gì?",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Đèn ABS sáng khi xe đang đỗ có nghĩa là gì?",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Cảnh báo chìa khóa không được phát hiện trên màn hình nghĩa là gì?",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "diagnostics",
+          "subintent_name": "Chẩn đoán",
+          "seeds": [
+            {
+              "input": "Động cơ đang rung bất thường khi xe chạy, chẩn đoán nhanh giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Xe đang chạy mà bị hụt ga, hãy kiểm tra nguyên nhân.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Xe đang chạy nhưng máy nóng và yếu đi, chẩn đoán ngay giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Xe đang đỗ, kiểm tra giúp vì sao động cơ rung khi chạy không tải.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Tôi đã đỗ xe rồi, hãy chẩn đoán nguyên nhân điều hòa không thổi khí lạnh.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Xe đang ở bãi đỗ, kiểm tra toàn bộ để tìm nguyên nhân gần đây xe khó khởi động.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "maintenance_service",
+          "subintent_name": "Bảo dưỡng/dịch vụ",
+          "seeds": [
+            {
+              "input": "Tôi đang lái xe, đặt lịch bảo dưỡng định kỳ vào sáng thứ Bảy giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Xe đang chạy, giúp tôi đặt lịch thay dầu vào chiều mai tại trung tâm dịch vụ gần nhất.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tôi đang lái xe và đồng hồ báo sắp đến hạn bảo dưỡng, hãy tìm trung tâm chính hãng gần nhất rồi đặt lịch sau 9 giờ sáng mai.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Xe đang đỗ, đặt lịch kiểm tra và đảo lốp vào thứ Hai tới.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Xe đang đỗ rồi, đặt lịch bảo dưỡng định kỳ cho tôi vào 9 giờ sáng thứ Bảy này nhé.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Xe đang đỗ, giúp tôi đặt lịch thay dầu vào chiều mai.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "vehicle_information",
+          "subintent_name": "Thông tin xe",
+          "seeds": [
+            {
+              "input": "Xe này có bao nhiêu túi khí?",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Dung tích khoang hành lý của xe là bao nhiêu?",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Mẫu xe này dùng loại động cơ gì?",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Xe này có hỗ trợ Apple CarPlay không?",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Chiều dài cơ sở của xe là bao nhiêu?",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Xe này có những chế độ lái nào?",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intent_code": "vita_profile_settings",
+      "subintents": [
+        {
+          "subintent_code": "vita_capabilities_usage",
+          "subintent_name": "Khả năng và cách sử dụng ViTa",
+          "seeds": [
+            {
+              "input": "ViTa ơi, khi đang lái xe thì tôi có thể nhờ bạn làm những gì?",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Tôi gọi và sử dụng ViTa khi đang lái xe như thế nào?",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "ViTa có thể hỗ trợ những gì trên đường đi?",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Xe đang đỗ rồi, cho tôi biết nhanh ViTa dùng được vào những việc gì?",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Muốn bắt đầu nói chuyện với ViTa thì tôi cần làm gì?",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Lúc xe đang đỗ, ViTa có thể chủ động giúp tôi những gì?",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "vita_preferences",
+          "subintent_name": "Tùy chọn tương tác với ViTa",
+          "seeds": [
+            {
+              "input": "ViTa ơi, từ giờ trả lời tôi ngắn gọn hơn nhé.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "ViTa, đổi cách trả lời sang ngắn gọn hơn để tôi dễ nghe khi đang lái xe.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Từ giờ hãy chủ động nhắc tôi bằng giọng nữ khi đang lái xe nhé.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Xe đang đỗ rồi, đổi ViTa sang giọng nam và chỉ phản hồi thật khẽ thôi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Đổi ngôn ngữ giao tiếp của ViTa sang tiếng Anh giúp tôi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Khi xe đang đỗ, ViTa hãy chủ động giải thích chi tiết hơn cho tôi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "user_profile_account",
+          "subintent_name": "Hồ sơ và tài khoản người dùng",
+          "seeds": [
+            {
+              "input": "Tôi đang lái xe, chuyển sang hồ sơ Minh và xác nhận thật ngắn thôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Đồng bộ các tùy chọn cá nhân trên tài khoản của tôi vào hồ sơ xe này.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Hãy tạo hồ sơ tài xế tên Lan và chủ động áp dụng các thiết lập quen dùng của tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Xe đang đỗ rồi, chuyển sang hồ sơ của tôi nhé.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Tạo cho tôi một hồ sơ mới tên Minh khi xe đang đỗ.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Xe đang đỗ, đồng bộ các tùy chọn cá nhân của tôi vào hồ sơ hiện tại nhé.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "device_service_connectivity",
+          "subintent_name": "Kết nối thiết bị và dịch vụ",
+          "seeds": [
+            {
+              "input": "Ngắt kết nối Bluetooth với điện thoại của tôi đi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Kết nối lại Bluetooth với điện thoại đã dùng gần nhất giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Wi-Fi trên xe vừa mất kết nối, nối lại mạng đã lưu giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Xe đang đỗ, bật chế độ ghép nối Bluetooth nhé.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Ghép nối điện thoại tên Galaxy S25 với xe giúp tôi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Xe đang đỗ, liên kết dịch vụ nghe nhạc trên điện thoại với hệ thống xe nhé.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "system_app_settings",
+          "subintent_name": "Cài đặt hệ thống và ứng dụng",
+          "seeds": [
+            {
+              "input": "Tắt thông báo bật lên của ứng dụng tin nhắn đi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Đổi ngôn ngữ giao diện hệ thống sang tiếng Việt giúp tôi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Bật chế độ tối tự động cho giao diện từ lúc hoàng hôn nhé.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Xe đang đỗ, tắt âm thanh khi chạm trên màn hình nhé.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Đặt ứng dụng bản đồ mặc định thành ứng dụng Bản đồ của xe.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Xe đang đỗ, bật tự động cập nhật ứng dụng qua Wi-Fi nhé.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "permissions_privacy_data",
+          "subintent_name": "Quyền truy cập, quyền riêng tư và dữ liệu",
+          "seeds": [
+            {
+              "input": "Tôi đang lái xe, hãy tắt quyền truy cập vị trí của trợ lý.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Hãy xóa lịch sử lệnh thoại của tôi trong hôm nay.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tắt việc lưu lịch sử hành trình và cho tôi biết khi đã xong.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Xe đang đỗ rồi, hãy thu hồi quyền dùng micro của ứng dụng thời tiết.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Cho phép hệ thống chia sẻ dữ liệu chẩn đoán ẩn danh để cải thiện dịch vụ.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Xóa toàn bộ dữ liệu cá nhân mà trợ lý đã lưu và báo rõ kết quả cho tôi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intent_code": "vinfast_vingroup_brands",
+      "subintents": [
+        {
+          "subintent_code": "vinfast_brand_products",
+          "subintent_name": "Thương hiệu và sản phẩm VinFast",
+          "seeds": [
+            {
+              "input": "VinFast hiện có những dòng ô tô điện nào?",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "VinFast hiện có những dòng ô tô điện nào vậy?",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Đang lái xe, cho tôi biết nhanh VF 6 phù hợp với nhóm khách hàng nào.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "VinFast có bán xe máy điện không?",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "VF 8 và VF 9 khác nhau chủ yếu ở điểm nào?",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tôi đang đỗ xe, giới thiệu giúp một mẫu VinFast nhỏ gọn để đi trong thành phố.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "vinfast_sales_policies",
+          "subintent_name": "Giá bán, chính sách và chương trình VinFast",
+          "seeds": [
+            {
+              "input": "Bảo hành ô tô điện VinFast thế nào?",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Giá xe VinFast có bao gồm pin chưa?",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "VinFast hiện có ưu đãi gì cho người mua xe điện?",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "VinFast VF 6 hiện có giá bán bao nhiêu?",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Chính sách bảo hành pin của ô tô điện VinFast như thế nào?",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Hiện VinFast có chương trình ưu đãi nào cho khách mua xe mới không?",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "vinfast_service_network",
+          "subintent_name": "Hệ thống bán hàng và dịch vụ VinFast",
+          "seeds": [
+            {
+              "input": "VinFast có xưởng dịch vụ nào làm việc vào Chủ nhật không?",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Showroom VinFast gần khu vực tôi đang đi có mở cửa tối nay không?",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Xe tôi vừa báo lỗi giữa đường, VinFast có dịch vụ cứu hộ không?",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Tôi muốn mang xe đi sửa ở xưởng VinFast, cần đặt lịch trước không?",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "VinFast có những loại cơ sở dịch vụ nào vậy?",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Xe tôi cần bảo dưỡng thì có thể mang đến đâu trong hệ thống VinFast?",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "vingroup_corporate_information",
+          "subintent_name": "Thông tin Tập đoàn Vingroup",
+          "seeds": [
+            {
+              "input": "Vingroup hoạt động trong những lĩnh vực nào?",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Giới thiệu ngắn gọn cho tôi về Tập đoàn Vingroup.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Vingroup có nguồn gốc hình thành như thế nào?",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Vingroup là doanh nghiệp gì?",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Cho tôi biết vài nét về lịch sử phát triển của Vingroup.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Các mảng hoạt động chính của Vingroup hiện gồm những nhóm nào?",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "vingroup_member_brands",
+          "subintent_name": "Các thương hiệu thành viên Vingroup",
+          "seeds": [
+            {
+              "input": "Đang lái xe, cho tôi biết Vinmec cung cấp dịch vụ gì?",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Vinhomes phát triển những loại hình bất động sản nào?",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Vinpearl có những dịch vụ nghỉ dưỡng nào?",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "VinSchool là trường học hay trung tâm đào tạo?",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "VinUniversity đào tạo những lĩnh vực nào?",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "So sánh giúp tôi dịch vụ của Vinmec và Vinpearl.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intent_code": "general_qa_conversation",
+      "subintents": [
+        {
+          "subintent_code": "web_search",
+          "subintent_name": "Tra cứu Web",
+          "seeds": [
+            {
+              "input": "Tìm nhanh trên web xem giá vàng trong nước hôm nay bao nhiêu.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Tìm trên mạng giúp tôi xem tối nay ở Đà Nẵng có sự kiện âm nhạc nào không?",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tra cứu giúp tôi tình hình kẹt xe mới nhất trên đèo Bảo Lộc.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Tìm trên web xem quán cà phê mới mở gần đây có chỗ đậu ô tô không.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Tra cứu giá vé hiện tại của khu du lịch Bà Nà Hills giúp tôi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tìm giúp tôi các trạm sạc ô tô điện mới nhất quanh đây.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "general_qa",
+          "subintent_name": "Hỏi đáp",
+          "seeds": [
+            {
+              "input": "Vì sao kính ô tô thường bị mờ khi trời mưa?",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Đèn cảnh báo hình bình ắc quy trên bảng đồng hồ có nghĩa là gì?",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Lái xe đường dài thì bao lâu nên nghỉ một lần?",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Vì sao bầu trời có màu xanh?",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Tại sao phải để động cơ nguội trước khi kiểm tra nước làm mát?",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Giải thích giúp tôi hiện tượng thủy triều là gì?",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "weather_news",
+          "subintent_name": "Thời tiết/tin tức",
+          "seeds": [
+            {
+              "input": "Ngoài trời bây giờ có mưa không?",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Cho tôi biết tin tức mới nhất sáng nay.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Thời tiết chiều nay ở Đà Nẵng thế nào?",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Hôm nay Hà Nội có lạnh không?",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Hôm nay trời có mưa không?",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Cập nhật giúp tôi tin tức mới nhất hôm nay.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "verified_fact_qa",
+          "subintent_name": "Hỏi đáp có nguồn kiểm chứng",
+          "seeds": [
+            {
+              "input": "Hãy xác minh theo nguồn chính thức mới nhất xem Việt Nam hiện có bao nhiêu tỉnh, thành và phải kèm trích dẫn.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Kiểm chứng giúp tôi bằng nguồn nhà nước cập nhật nhất rằng tốc độ tối đa trên cao tốc Việt Nam là bao nhiêu, nhớ dẫn nguồn.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tôi đang lái xe, hãy nói ngắn gọn tốc độ tối đa của ô tô trong khu đông dân cư theo quy định Việt Nam hiện hành, chỉ dùng nguồn chính thức và nêu nguồn.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Khi xe đang đỗ, cho tôi biết Việt Nam có bao nhiêu di sản thế giới được UNESCO công nhận tính đến tháng 8 năm 2026; chỉ trả lời nếu có nguồn UNESCO và dẫn nguồn.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Xe đang đỗ rồi. Hãy kiểm chứng bằng nguồn WHO mới nhất xem người lớn nên vận động thể chất bao nhiêu phút mỗi tuần và trích dẫn nguồn.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Trong lúc xe đang đỗ, hãy chủ động kiểm tra nguồn NASA chính thức và cho tôi biết một ngày trên Sao Hỏa dài bao lâu, kèm trích dẫn.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        },
+        {
+          "subintent_code": "conversation_entertainment",
+          "subintent_name": "Trò chuyện và giải trí",
+          "seeds": [
+            {
+              "input": "Đường hơi buồn ngủ, kể tôi một câu đùa thật ngắn nhé.",
+              "vehicle_state": "driving",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Kể tôi nghe một chuyện vui để chuyến đi bớt chán đi.",
+              "vehicle_state": "driving",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Trò chuyện với tôi một chút cho tỉnh táo khi lái xe nhé.",
+              "vehicle_state": "driving",
+              "assistant_mode": "proactive"
+            },
+            {
+              "input": "Trong lúc đỗ xe chờ bạn, kể tôi một câu đùa ngắn nhé.",
+              "vehicle_state": "parking",
+              "assistant_mode": "quiet"
+            },
+            {
+              "input": "Xe đang đỗ rồi, kể tôi một truyện vui nho nhỏ đi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "balance"
+            },
+            {
+              "input": "Tôi đang ngồi trong xe đợi người nhà, nghĩ trò gì vui để chơi cùng tôi đi.",
+              "vehicle_state": "parking",
+              "assistant_mode": "proactive"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

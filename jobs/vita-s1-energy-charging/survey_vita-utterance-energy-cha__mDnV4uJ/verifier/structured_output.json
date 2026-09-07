@@ -1,0 +1,1160 @@
+{
+  "schemaVersion": "1.0",
+  "artifactType": "matraix.trial_evaluation",
+  "taskType": "survey",
+  "presenceCheck": {
+    "passed": true,
+    "requiredArtifacts": [
+      "survey_result.json"
+    ],
+    "missingArtifacts": []
+  },
+  "sourceArtifacts": {
+    "surveyResult": "/app/output/survey_result.json"
+  },
+  "contexts": [
+    {
+      "key": "question.q0",
+      "label": "q0",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang một mình lái xe trên đường vành đai để đến sân bóng điều hành giải đấu giao hữu thể thao của công ty. Lịch trình khá gấp gáp nên tôi cần biết chính xác lượng pin còn lại có đưa tôi đến thẳng sân cỏ kịp giờ hay không."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q1",
+      "label": "q1",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, lượng pin này có đủ cho tôi chạy tiếp đến sân vận động không?"
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q2",
+      "label": "q2",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang chở hai đối tác thể thao sang trung tâm huấn luyện mới để ký kết hợp đồng tài trợ. Đường trưa tương đối thoáng đãng nhưng tôi muốn chủ động tính toán chặng đường để không làm lỡ lịch làm việc."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q3",
+      "label": "q3",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita ơi, kiểm tra xem pin xe có đủ chạy thẳng đến trung tâm huấn luyện không nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q4",
+      "label": "q4",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang trên cao tốc di chuyển xuống Bà Rịa để khảo sát địa điểm tổ chức giải chạy việt dã cuối tuần. Đi một mình với tâm trạng hào hứng, tôi muốn xem mức năng lượng hiện tại có cho phép chạy thoải mái mà không cần dừng lại giữa đường không."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q5",
+      "label": "q5",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, tầm hoạt động còn lại liệu có đủ cho anh chạy suốt hành trình này không?"
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q6",
+      "label": "q6",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang ngồi trong xe tại bãi đỗ của công ty chuẩn bị đi thị sát sân tập bóng đá vào đầu giờ chiều. Tôi muốn xem nhanh pin xe có đủ phục vụ cả lượt đi lẫn lượt về hay không để kịp thời cắm sạc."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q7",
+      "label": "q7",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, pin còn lại có đủ đi sân tập rồi về không?"
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q8",
+      "label": "q8",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe trước phòng gym sau buổi tập sáng, chuẩn bị chở huấn luyện viên trưởng đi ăn trưa và bàn chiến thuật cho đội bóng. Tâm trạng khá thư thái, tôi muốn rà soát lại quãng đường xe chạy được trước khi xuất phát."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q9",
+      "label": "q9",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita kiểm tra giúp anh xem pin hiện tại có đủ cho chặng đi sắp tới không nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q10",
+      "label": "q10",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi vừa kết thúc cuộc họp ban điều hành thể thao và đang ngồi trên xe chuẩn bị xuất phát đi sự kiện thể thao ở tỉnh lân cận. Lịch trình kín mít nên tôi cần trợ lý tính toán kỹ quãng đường di chuyển ngay từ bây giờ."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q11",
+      "label": "q11",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita ơi, nếu xuất phát luôn bây giờ thì tầm hoạt động của xe có bảo đảm không?"
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q12",
+      "label": "q12",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe một mình trên quốc lộ để kịp giờ khai mạc giải bóng đá của ngành nhưng đồng hồ báo pin đã xuống mức thấp. Tôi cần tìm gấp một trụ sạc công suất lớn dọc đường mà không phải rẽ quá xa."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q13",
+      "label": "q13",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, tìm trạm sạc nhanh gần nhất trên tuyến đường này."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q14",
+      "label": "q14",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang chở anh em trong ban huấn luyện đi công tác ngoại thành và thấy dung lượng pin sắp chạm mức cảnh báo. Cả xe đang cần tìm một điểm dừng chân vừa sạc xe nhanh vừa có chỗ đỗ rộng rãi để nghỉ ngơi chốc lát."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q15",
+      "label": "q15",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita tìm giúp anh trạm sạc nhanh gần đây có bãi đỗ rộng rãi và thuận tiện nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q16",
+      "label": "q16",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang chạy xe trên đường về sau trận đấu muộn, năng lượng xe cạn dần trong khi đêm đã khuya. Tôi muốn tìm ngay một trạm sạc đang hoạt động và sẵn sàng tiếp nhận xe nạp điện."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q17",
+      "label": "q17",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita tìm ngay cho anh trạm sạc nhanh gần nhất còn trụ trống và đang mở cửa nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q18",
+      "label": "q18",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe dưới tầng hầm tòa nhà văn phòng sau giờ làm, dự định sạc xe trước khi tối muộn lái xe về nhà. Vì muốn thao tác nhanh gọn nên tôi chỉ cần chỉ dẫn ngắn tới điểm sạc gần nhất."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q19",
+      "label": "q19",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, tìm trạm sạc quanh khu vực này."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q20",
+      "label": "q20",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe trước cổng khu liên hợp thể thao, chuẩn bị cho chuyến đi dài ngày cùng đối tác vào sáng mai. Tôi cần tìm một trạm sạc chuẩn CCS2 tương thích với xe và đang mở cửa phục vụ."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q21",
+      "label": "q21",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita tìm giúp anh trạm sạc chuẩn CCS2 gần đây đang mở cửa để vào nạp pin nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q22",
+      "label": "q22",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe chờ đón đoàn vận động viên tại bãi xe trung tâm hội nghị, nhận thấy pin chỉ còn dưới ba mươi phần trăm. Tôi muốn tranh thủ tìm điểm sạc nhanh ngay khu vực xung quanh để nạp điện trong lúc chờ đợi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q23",
+      "label": "q23",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita ơi, tìm giúp anh xem quanh bãi đỗ này có trạm sạc siêu nhanh nào không."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q24",
+      "label": "q24",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang cầm lái trên đường thiên lý vào Đà Nẵng để giám sát công tác chuẩn bị giải vô địch thể dục thể thao toàn quốc nhưng pin xe chỉ còn dưới hai mươi phần trăm. Tôi đang đi cùng trợ lý và cần lên lộ trình chuẩn xác có trạm sạc thích hợp."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q25",
+      "label": "q25",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, pin còn 18%, lập tuyến đường đi Đà Nẵng ghé điểm sạc phù hợp nhất."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q26",
+      "label": "q26",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang chạy xe vào Nha Trang dự hội thảo xúc tiến thể thao du lịch, đồng hồ xe hiển thị quãng đường đi được chỉ còn hơn sáu mươi cây số. Tâm thế tập trung lái xe nên tôi muốn hệ thống bổ sung trạm sạc tối ưu vào lộ trình hiện hành."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q27",
+      "label": "q27",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita dẫn đường giúp anh về Nha Trang và chèn thêm trạm sạc phù hợp dọc đường nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q28",
+      "label": "q28",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe ra Huế tham dự giải bóng đá lão tướng thường niên, lộ trình đường dài đòi hỏi phải dừng nạp năng lượng thông minh. Tôi muốn lộ trình được vạch ra tối ưu nhất dựa trên lượng pin thực tế."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q29",
+      "label": "q29",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita lập lộ trình đi Huế dựa theo dung lượng pin này và ưu tiên các trạm sạc siêu nhanh nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q30",
+      "label": "q30",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe trước cửa nhà chuẩn bị khởi hành lên Đà Lạt cùng vài người bạn trong câu lạc bộ thể thao để tập huấn độ cao. Nhìn mức pin gần ba mươi phần trăm, tôi cần hệ thống lên đường đi kèm trạm sạc dọc đường đèo."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q31",
+      "label": "q31",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, pin còn 28%, lên tuyến đi Đà Lạt có điểm sạc trên đường."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q32",
+      "label": "q32",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang ngồi trong xe đỗ tại trụ sở liên đoàn thể thao, sẵn sàng cho chuyến công tác kiểm tra sân bãi tại Nha Trang. Tôi muốn đảm bảo an toàn tuyệt đối cho hành trình bằng cách duy trì mức pin sàn tối thiểu mười lăm phần trăm."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q33",
+      "label": "q33",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita lập tuyến đường đi Nha Trang giúp anh, nhớ giữ mức pin dự phòng trên 15% nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q34",
+      "label": "q34",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe tại cơ quan, chuẩn bị lái xe xuống Vũng Tàu tham gia cuộc họp ban tổ chức giải bơi lội biển vào cuối tuần. Pin xe còn hơn một phần ba, tôi cần trợ lý gợi ý phương án hành trình dừng sạc nhanh chóng và thuận tiện nhất."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q35",
+      "label": "q35",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita ơi, pin còn 35%, tìm tuyến đi Vũng Tàu và gợi ý trạm sạc nhanh uy tín nhất cho anh nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q36",
+      "label": "q36",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe của đồng nghiệp đến điểm hẹn thi đấu giao hữu trong khi chiếc xe chính của mình đang cắm sạc ở trạm sạc công ty. Tôi muốn nắm nhanh tiến độ nạp điện mà không làm phân tâm việc lái xe."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q37",
+      "label": "q37",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, báo cáo trạng thái sạc hiện tại của xe."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q38",
+      "label": "q38",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang chạy xe máy điện quanh khuôn viên sân vận động kiểm tra sân bãi và kết nối qua hệ thống xe hơi đang cắm sạc ở sảnh chính. Tôi muốn biết lượng điện đã nạp vào xe đạt mức cần thiết cho chuyến đi chiều nay chưa."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q39",
+      "label": "q39",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita cho anh biết xe đang sạc đến mức nào rồi nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q40",
+      "label": "q40",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang lái xe dẫn đoàn xe thể thao di chuyển ra ngoại ô và cần theo dõi sát sao tình hình sạc pin xe phụ trợ của đội hậu cần qua hệ thống kết nối thông minh. Tôi muốn trợ lý cập nhật đầy đủ thông số sạc và dự kiến thời gian hoàn tất."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q41",
+      "label": "q41",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita kiểm tra chi tiết trạng thái sạc pin hiện tại giúp anh nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q42",
+      "label": "q42",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang ngồi nghỉ ngơi bên trong xe khi xe đang cắm sạc tại trạm nghỉ cao tốc sau nửa chặng đường lái xe đường dài. Tôi muốn biết nhanh thông tin sạc để tính thời gian uống xong tách cà phê là lên đường."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q43",
+      "label": "q43",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita, tình hình sạc pin thế nào rồi?"
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q44",
+      "label": "q44",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang ngồi trong xe nghe nhạc thư giãn tại trạm sạc của trung tâm thể dục thể thao, đợi pin nạp đủ để đi đón gia đình. Tâm trạng khoan khoái, tôi muốn hỏi mức phần trăm pin hiện tại một cách rõ ràng."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q45",
+      "label": "q45",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita kiểm tra giúp anh xem pin sạc được bao nhiêu phần trăm rồi."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q46",
+      "label": "q46",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Tôi đang đỗ xe cắm sạc ở bãi đỗ trung tâm mua sắm trong khi chờ giờ xem trận chung kết bóng đá, muốn trợ lý phân tích tiến trình sạc và đưa ra dự báo thời gian đạt mức pin tối ưu."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "question.q47",
+      "label": "q47",
+      "contextType": "question_response",
+      "facets": [
+        {
+          "key": "response",
+          "label": "Selected response",
+          "role": "primary",
+          "kind": "textual",
+          "value": "Vita ơi, kiểm tra tiến trình sạc hiện tại và báo cho anh thời gian dự kiến đầy pin nhé."
+        }
+      ],
+      "questionType": "free_text"
+    },
+    {
+      "key": "survey.summary",
+      "label": "Survey summary",
+      "contextType": "trial_summary",
+      "facets": [
+        {
+          "key": "answer_count",
+          "label": "Answer count",
+          "role": "score",
+          "kind": "numerical",
+          "value": 48
+        },
+        {
+          "key": "trajectory_event_count",
+          "label": "Trajectory event count",
+          "role": "score",
+          "kind": "numerical",
+          "value": 98
+        }
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "key": "question.q0.response",
+      "label": "Selected response",
+      "group": "question.q0",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang một mình lái xe trên đường vành đai để đến sân bóng điều hành giải đấu giao hữu thể thao của công ty. Lịch trình khá gấp gáp nên tôi cần biết chính xác lượng pin còn lại có đưa tôi đến thẳng sân cỏ kịp giờ hay không."
+    },
+    {
+      "key": "question.q1.response",
+      "label": "Selected response",
+      "group": "question.q1",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, lượng pin này có đủ cho tôi chạy tiếp đến sân vận động không?"
+    },
+    {
+      "key": "question.q2.response",
+      "label": "Selected response",
+      "group": "question.q2",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang chở hai đối tác thể thao sang trung tâm huấn luyện mới để ký kết hợp đồng tài trợ. Đường trưa tương đối thoáng đãng nhưng tôi muốn chủ động tính toán chặng đường để không làm lỡ lịch làm việc."
+    },
+    {
+      "key": "question.q3.response",
+      "label": "Selected response",
+      "group": "question.q3",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita ơi, kiểm tra xem pin xe có đủ chạy thẳng đến trung tâm huấn luyện không nhé."
+    },
+    {
+      "key": "question.q4.response",
+      "label": "Selected response",
+      "group": "question.q4",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang trên cao tốc di chuyển xuống Bà Rịa để khảo sát địa điểm tổ chức giải chạy việt dã cuối tuần. Đi một mình với tâm trạng hào hứng, tôi muốn xem mức năng lượng hiện tại có cho phép chạy thoải mái mà không cần dừng lại giữa đường không."
+    },
+    {
+      "key": "question.q5.response",
+      "label": "Selected response",
+      "group": "question.q5",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, tầm hoạt động còn lại liệu có đủ cho anh chạy suốt hành trình này không?"
+    },
+    {
+      "key": "question.q6.response",
+      "label": "Selected response",
+      "group": "question.q6",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang ngồi trong xe tại bãi đỗ của công ty chuẩn bị đi thị sát sân tập bóng đá vào đầu giờ chiều. Tôi muốn xem nhanh pin xe có đủ phục vụ cả lượt đi lẫn lượt về hay không để kịp thời cắm sạc."
+    },
+    {
+      "key": "question.q7.response",
+      "label": "Selected response",
+      "group": "question.q7",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, pin còn lại có đủ đi sân tập rồi về không?"
+    },
+    {
+      "key": "question.q8.response",
+      "label": "Selected response",
+      "group": "question.q8",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe trước phòng gym sau buổi tập sáng, chuẩn bị chở huấn luyện viên trưởng đi ăn trưa và bàn chiến thuật cho đội bóng. Tâm trạng khá thư thái, tôi muốn rà soát lại quãng đường xe chạy được trước khi xuất phát."
+    },
+    {
+      "key": "question.q9.response",
+      "label": "Selected response",
+      "group": "question.q9",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita kiểm tra giúp anh xem pin hiện tại có đủ cho chặng đi sắp tới không nhé."
+    },
+    {
+      "key": "question.q10.response",
+      "label": "Selected response",
+      "group": "question.q10",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi vừa kết thúc cuộc họp ban điều hành thể thao và đang ngồi trên xe chuẩn bị xuất phát đi sự kiện thể thao ở tỉnh lân cận. Lịch trình kín mít nên tôi cần trợ lý tính toán kỹ quãng đường di chuyển ngay từ bây giờ."
+    },
+    {
+      "key": "question.q11.response",
+      "label": "Selected response",
+      "group": "question.q11",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita ơi, nếu xuất phát luôn bây giờ thì tầm hoạt động của xe có bảo đảm không?"
+    },
+    {
+      "key": "question.q12.response",
+      "label": "Selected response",
+      "group": "question.q12",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe một mình trên quốc lộ để kịp giờ khai mạc giải bóng đá của ngành nhưng đồng hồ báo pin đã xuống mức thấp. Tôi cần tìm gấp một trụ sạc công suất lớn dọc đường mà không phải rẽ quá xa."
+    },
+    {
+      "key": "question.q13.response",
+      "label": "Selected response",
+      "group": "question.q13",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, tìm trạm sạc nhanh gần nhất trên tuyến đường này."
+    },
+    {
+      "key": "question.q14.response",
+      "label": "Selected response",
+      "group": "question.q14",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang chở anh em trong ban huấn luyện đi công tác ngoại thành và thấy dung lượng pin sắp chạm mức cảnh báo. Cả xe đang cần tìm một điểm dừng chân vừa sạc xe nhanh vừa có chỗ đỗ rộng rãi để nghỉ ngơi chốc lát."
+    },
+    {
+      "key": "question.q15.response",
+      "label": "Selected response",
+      "group": "question.q15",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita tìm giúp anh trạm sạc nhanh gần đây có bãi đỗ rộng rãi và thuận tiện nhé."
+    },
+    {
+      "key": "question.q16.response",
+      "label": "Selected response",
+      "group": "question.q16",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang chạy xe trên đường về sau trận đấu muộn, năng lượng xe cạn dần trong khi đêm đã khuya. Tôi muốn tìm ngay một trạm sạc đang hoạt động và sẵn sàng tiếp nhận xe nạp điện."
+    },
+    {
+      "key": "question.q17.response",
+      "label": "Selected response",
+      "group": "question.q17",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita tìm ngay cho anh trạm sạc nhanh gần nhất còn trụ trống và đang mở cửa nhé."
+    },
+    {
+      "key": "question.q18.response",
+      "label": "Selected response",
+      "group": "question.q18",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe dưới tầng hầm tòa nhà văn phòng sau giờ làm, dự định sạc xe trước khi tối muộn lái xe về nhà. Vì muốn thao tác nhanh gọn nên tôi chỉ cần chỉ dẫn ngắn tới điểm sạc gần nhất."
+    },
+    {
+      "key": "question.q19.response",
+      "label": "Selected response",
+      "group": "question.q19",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, tìm trạm sạc quanh khu vực này."
+    },
+    {
+      "key": "question.q20.response",
+      "label": "Selected response",
+      "group": "question.q20",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe trước cổng khu liên hợp thể thao, chuẩn bị cho chuyến đi dài ngày cùng đối tác vào sáng mai. Tôi cần tìm một trạm sạc chuẩn CCS2 tương thích với xe và đang mở cửa phục vụ."
+    },
+    {
+      "key": "question.q21.response",
+      "label": "Selected response",
+      "group": "question.q21",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita tìm giúp anh trạm sạc chuẩn CCS2 gần đây đang mở cửa để vào nạp pin nhé."
+    },
+    {
+      "key": "question.q22.response",
+      "label": "Selected response",
+      "group": "question.q22",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe chờ đón đoàn vận động viên tại bãi xe trung tâm hội nghị, nhận thấy pin chỉ còn dưới ba mươi phần trăm. Tôi muốn tranh thủ tìm điểm sạc nhanh ngay khu vực xung quanh để nạp điện trong lúc chờ đợi."
+    },
+    {
+      "key": "question.q23.response",
+      "label": "Selected response",
+      "group": "question.q23",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita ơi, tìm giúp anh xem quanh bãi đỗ này có trạm sạc siêu nhanh nào không."
+    },
+    {
+      "key": "question.q24.response",
+      "label": "Selected response",
+      "group": "question.q24",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang cầm lái trên đường thiên lý vào Đà Nẵng để giám sát công tác chuẩn bị giải vô địch thể dục thể thao toàn quốc nhưng pin xe chỉ còn dưới hai mươi phần trăm. Tôi đang đi cùng trợ lý và cần lên lộ trình chuẩn xác có trạm sạc thích hợp."
+    },
+    {
+      "key": "question.q25.response",
+      "label": "Selected response",
+      "group": "question.q25",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, pin còn 18%, lập tuyến đường đi Đà Nẵng ghé điểm sạc phù hợp nhất."
+    },
+    {
+      "key": "question.q26.response",
+      "label": "Selected response",
+      "group": "question.q26",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang chạy xe vào Nha Trang dự hội thảo xúc tiến thể thao du lịch, đồng hồ xe hiển thị quãng đường đi được chỉ còn hơn sáu mươi cây số. Tâm thế tập trung lái xe nên tôi muốn hệ thống bổ sung trạm sạc tối ưu vào lộ trình hiện hành."
+    },
+    {
+      "key": "question.q27.response",
+      "label": "Selected response",
+      "group": "question.q27",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita dẫn đường giúp anh về Nha Trang và chèn thêm trạm sạc phù hợp dọc đường nhé."
+    },
+    {
+      "key": "question.q28.response",
+      "label": "Selected response",
+      "group": "question.q28",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe ra Huế tham dự giải bóng đá lão tướng thường niên, lộ trình đường dài đòi hỏi phải dừng nạp năng lượng thông minh. Tôi muốn lộ trình được vạch ra tối ưu nhất dựa trên lượng pin thực tế."
+    },
+    {
+      "key": "question.q29.response",
+      "label": "Selected response",
+      "group": "question.q29",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita lập lộ trình đi Huế dựa theo dung lượng pin này và ưu tiên các trạm sạc siêu nhanh nhé."
+    },
+    {
+      "key": "question.q30.response",
+      "label": "Selected response",
+      "group": "question.q30",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe trước cửa nhà chuẩn bị khởi hành lên Đà Lạt cùng vài người bạn trong câu lạc bộ thể thao để tập huấn độ cao. Nhìn mức pin gần ba mươi phần trăm, tôi cần hệ thống lên đường đi kèm trạm sạc dọc đường đèo."
+    },
+    {
+      "key": "question.q31.response",
+      "label": "Selected response",
+      "group": "question.q31",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, pin còn 28%, lên tuyến đi Đà Lạt có điểm sạc trên đường."
+    },
+    {
+      "key": "question.q32.response",
+      "label": "Selected response",
+      "group": "question.q32",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang ngồi trong xe đỗ tại trụ sở liên đoàn thể thao, sẵn sàng cho chuyến công tác kiểm tra sân bãi tại Nha Trang. Tôi muốn đảm bảo an toàn tuyệt đối cho hành trình bằng cách duy trì mức pin sàn tối thiểu mười lăm phần trăm."
+    },
+    {
+      "key": "question.q33.response",
+      "label": "Selected response",
+      "group": "question.q33",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita lập tuyến đường đi Nha Trang giúp anh, nhớ giữ mức pin dự phòng trên 15% nhé."
+    },
+    {
+      "key": "question.q34.response",
+      "label": "Selected response",
+      "group": "question.q34",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe tại cơ quan, chuẩn bị lái xe xuống Vũng Tàu tham gia cuộc họp ban tổ chức giải bơi lội biển vào cuối tuần. Pin xe còn hơn một phần ba, tôi cần trợ lý gợi ý phương án hành trình dừng sạc nhanh chóng và thuận tiện nhất."
+    },
+    {
+      "key": "question.q35.response",
+      "label": "Selected response",
+      "group": "question.q35",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita ơi, pin còn 35%, tìm tuyến đi Vũng Tàu và gợi ý trạm sạc nhanh uy tín nhất cho anh nhé."
+    },
+    {
+      "key": "question.q36.response",
+      "label": "Selected response",
+      "group": "question.q36",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe của đồng nghiệp đến điểm hẹn thi đấu giao hữu trong khi chiếc xe chính của mình đang cắm sạc ở trạm sạc công ty. Tôi muốn nắm nhanh tiến độ nạp điện mà không làm phân tâm việc lái xe."
+    },
+    {
+      "key": "question.q37.response",
+      "label": "Selected response",
+      "group": "question.q37",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, báo cáo trạng thái sạc hiện tại của xe."
+    },
+    {
+      "key": "question.q38.response",
+      "label": "Selected response",
+      "group": "question.q38",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang chạy xe máy điện quanh khuôn viên sân vận động kiểm tra sân bãi và kết nối qua hệ thống xe hơi đang cắm sạc ở sảnh chính. Tôi muốn biết lượng điện đã nạp vào xe đạt mức cần thiết cho chuyến đi chiều nay chưa."
+    },
+    {
+      "key": "question.q39.response",
+      "label": "Selected response",
+      "group": "question.q39",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita cho anh biết xe đang sạc đến mức nào rồi nhé."
+    },
+    {
+      "key": "question.q40.response",
+      "label": "Selected response",
+      "group": "question.q40",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang lái xe dẫn đoàn xe thể thao di chuyển ra ngoại ô và cần theo dõi sát sao tình hình sạc pin xe phụ trợ của đội hậu cần qua hệ thống kết nối thông minh. Tôi muốn trợ lý cập nhật đầy đủ thông số sạc và dự kiến thời gian hoàn tất."
+    },
+    {
+      "key": "question.q41.response",
+      "label": "Selected response",
+      "group": "question.q41",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita kiểm tra chi tiết trạng thái sạc pin hiện tại giúp anh nhé."
+    },
+    {
+      "key": "question.q42.response",
+      "label": "Selected response",
+      "group": "question.q42",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang ngồi nghỉ ngơi bên trong xe khi xe đang cắm sạc tại trạm nghỉ cao tốc sau nửa chặng đường lái xe đường dài. Tôi muốn biết nhanh thông tin sạc để tính thời gian uống xong tách cà phê là lên đường."
+    },
+    {
+      "key": "question.q43.response",
+      "label": "Selected response",
+      "group": "question.q43",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita, tình hình sạc pin thế nào rồi?"
+    },
+    {
+      "key": "question.q44.response",
+      "label": "Selected response",
+      "group": "question.q44",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang ngồi trong xe nghe nhạc thư giãn tại trạm sạc của trung tâm thể dục thể thao, đợi pin nạp đủ để đi đón gia đình. Tâm trạng khoan khoái, tôi muốn hỏi mức phần trăm pin hiện tại một cách rõ ràng."
+    },
+    {
+      "key": "question.q45.response",
+      "label": "Selected response",
+      "group": "question.q45",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita kiểm tra giúp anh xem pin sạc được bao nhiêu phần trăm rồi."
+    },
+    {
+      "key": "question.q46.response",
+      "label": "Selected response",
+      "group": "question.q46",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Tôi đang đỗ xe cắm sạc ở bãi đỗ trung tâm mua sắm trong khi chờ giờ xem trận chung kết bóng đá, muốn trợ lý phân tích tiến trình sạc và đưa ra dự báo thời gian đạt mức pin tối ưu."
+    },
+    {
+      "key": "question.q47.response",
+      "label": "Selected response",
+      "group": "question.q47",
+      "role": "primary",
+      "kind": "textual",
+      "value": "Vita ơi, kiểm tra tiến trình sạc hiện tại và báo cho anh thời gian dự kiến đầy pin nhé."
+    },
+    {
+      "key": "survey.summary.answer_count",
+      "label": "Answer count",
+      "group": "survey.summary",
+      "role": "score",
+      "kind": "numerical",
+      "value": 48
+    },
+    {
+      "key": "survey.summary.trajectory_event_count",
+      "label": "Trajectory event count",
+      "group": "survey.summary",
+      "role": "score",
+      "kind": "numerical",
+      "value": 98
+    }
+  ]
+}

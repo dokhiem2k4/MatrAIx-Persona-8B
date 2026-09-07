@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 6,
+  "seed": {
+    "rowId": "row-0522",
+    "scenario": "Tôi đang lái xe trên đường cao tốc với tâm thế tập trung cao độ, muốn biết mình còn cách đích bao xa.",
+    "firstInput": "Vita, còn bao lâu nữa thì tới nơi?",
+    "intentCode": "journey_navigation_places",
+    "subintentCode": "traffic_eta",
+    "subintentName": "Giao thông và thời gian dự kiến đến nơi (ETA)",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

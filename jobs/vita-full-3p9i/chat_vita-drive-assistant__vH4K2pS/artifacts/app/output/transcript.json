@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita, kiểm tra giúp tôi trạng thái chung của xe nhé."
+    },
+    {
+      "role": "support",
+      "content": "Xe đang ở P, tốc độ 0 km/h. Pin 78%, đi được khoảng 312 km. Nhiệt độ trong xe 22°C, ngoài trời 31°C. Điều hòa đang tắt, các cửa sổ đều đóng. Đèn ngoài tắt, đèn trong tắt. Cốp sau đang đóng. Lốp các bánh đều ổn, khoảng 2,4 bar."
+    },
+    {
+      "role": "customer",
+      "content": "Được rồi, mở giúp tôi điều hòa 23 độ nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa."
+    },
+    {
+      "role": "customer",
+      "content": "Chỉnh nhiệt độ lên 24 độ và bật chế độ gió thổi chân giúp tôi."
+    },
+    {
+      "role": "support",
+      "content": "Đã chỉnh nhiệt độ vùng lái lên 24°C và bật chế độ gió thổi chân cho bạn."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita, mọi thứ rất ổn. Tiếp tục duy trì hành trình nhé."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn. Mình luôn sẵn sàng đồng hành cùng bạn trên mọi nẻo đường."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

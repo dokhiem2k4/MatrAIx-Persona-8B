@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 6,
+  "seed": {
+    "rowId": "row-0264",
+    "scenario": "Tôi đang lái xe đường dài một mình, muốn tìm chút âm thanh lịch sử hoặc bản tin thế giới để nghe cho đỡ buồn ngủ.",
+    "firstInput": "Tìm bản tin thời sự hoặc lịch sử nghe đi.",
+    "intentCode": "communication_media",
+    "subintentCode": "content_discovery",
+    "subintentName": "Tìm nội dung",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

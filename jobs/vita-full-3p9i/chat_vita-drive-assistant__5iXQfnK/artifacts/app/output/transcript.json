@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, kiểm tra giúp anh xem thời tiết ngoài trời lúc này có sắp mưa hay chuẩn bị đổ mưa không nhé."
+    },
+    {
+      "role": "support",
+      "content": "Theo dữ liệu thời tiết, Hà Nội hiện tại đang có mưa, nhiệt độ khoảng 26°C, độ ẩm cao. Dự báo đêm nay không mưa, nhưng trời vẫn còn ẩm."
+    },
+    {
+      "role": "customer",
+      "content": "Anh cảm ơn nhé. Nếu vậy Vita bật giúp anh chế độ gạt mưa tự động và sấy kính nhẹ để không bị mờ kính khi lái xe nha."
+    },
+    {
+      "role": "support",
+      "content": "đã thực hiện set_wiper; VF9 baseline không hỗ trợ sưởi kính trước; đã thực hiện set_window_defrost; đã thực hiện set_airflow_mode."
+    },
+    {
+      "role": "customer",
+      "content": "Bật thêm cho anh điều hòa 24 độ và quạt gió mức trung bình nhé Vita."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa 24°C và quạt gió mức trung bình cho anh rồi nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

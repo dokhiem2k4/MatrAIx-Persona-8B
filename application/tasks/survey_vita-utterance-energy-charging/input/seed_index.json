@@ -1,0 +1,482 @@
+[
+  {
+    "questionId": "q0",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "range_sufficiency",
+    "subintent_name": "Phạm vi di chuyển",
+    "seed_input": "Pin hiện tại có đủ để tôi đi tiếp không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q1",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "range_sufficiency",
+    "subintent_name": "Phạm vi di chuyển",
+    "seed_input": "Pin hiện tại có đủ để tôi đi tiếp không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q2",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "range_sufficiency",
+    "subintent_name": "Phạm vi di chuyển",
+    "seed_input": "Xe có đủ pin để đến nơi không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q3",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "range_sufficiency",
+    "subintent_name": "Phạm vi di chuyển",
+    "seed_input": "Xe có đủ pin để đến nơi không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q4",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "range_sufficiency",
+    "subintent_name": "Phạm vi di chuyển",
+    "seed_input": "Tầm hoạt động còn lại có đủ cho chuyến này không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q5",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "range_sufficiency",
+    "subintent_name": "Phạm vi di chuyển",
+    "seed_input": "Tầm hoạt động còn lại có đủ cho chuyến này không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q6",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "range_sufficiency",
+    "subintent_name": "Phạm vi di chuyển",
+    "seed_input": "Lát nữa tôi đi thì pin có đủ không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q7",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "range_sufficiency",
+    "subintent_name": "Phạm vi di chuyển",
+    "seed_input": "Lát nữa tôi đi thì pin có đủ không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q8",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "range_sufficiency",
+    "subintent_name": "Phạm vi di chuyển",
+    "seed_input": "Xe đang đỗ đây, pin còn lại có đủ cho chuyến sắp tới không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q9",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "range_sufficiency",
+    "subintent_name": "Phạm vi di chuyển",
+    "seed_input": "Xe đang đỗ đây, pin còn lại có đủ cho chuyến sắp tới không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q10",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "range_sufficiency",
+    "subintent_name": "Phạm vi di chuyển",
+    "seed_input": "Nếu khởi hành bây giờ thì xe có đủ tầm hoạt động không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q11",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "range_sufficiency",
+    "subintent_name": "Phạm vi di chuyển",
+    "seed_input": "Nếu khởi hành bây giờ thì xe có đủ tầm hoạt động không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q12",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "charger_search",
+    "subintent_name": "Tìm trạm sạc",
+    "seed_input": "Tìm giúp tôi trạm sạc nhanh gần đây.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q13",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "charger_search",
+    "subintent_name": "Tìm trạm sạc",
+    "seed_input": "Tìm giúp tôi trạm sạc nhanh gần đây.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q14",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "charger_search",
+    "subintent_name": "Tìm trạm sạc",
+    "seed_input": "Tìm giúp tôi trạm sạc nhanh gần đây có chỗ đỗ thuận tiện.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q15",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "charger_search",
+    "subintent_name": "Tìm trạm sạc",
+    "seed_input": "Tìm giúp tôi trạm sạc nhanh gần đây có chỗ đỗ thuận tiện.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q16",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "charger_search",
+    "subintent_name": "Tìm trạm sạc",
+    "seed_input": "Tìm trạm sạc nhanh gần nhất đang mở cửa cho tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q17",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "charger_search",
+    "subintent_name": "Tìm trạm sạc",
+    "seed_input": "Tìm trạm sạc nhanh gần nhất đang mở cửa cho tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q18",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "charger_search",
+    "subintent_name": "Tìm trạm sạc",
+    "seed_input": "Tìm trạm sạc gần đây.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q19",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "charger_search",
+    "subintent_name": "Tìm trạm sạc",
+    "seed_input": "Tìm trạm sạc gần đây.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q20",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "charger_search",
+    "subintent_name": "Tìm trạm sạc",
+    "seed_input": "Tìm giúp tôi trạm sạc gần đây có đầu sạc CCS2 và đang mở cửa.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q21",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "charger_search",
+    "subintent_name": "Tìm trạm sạc",
+    "seed_input": "Tìm giúp tôi trạm sạc gần đây có đầu sạc CCS2 và đang mở cửa.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q22",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "charger_search",
+    "subintent_name": "Tìm trạm sạc",
+    "seed_input": "Tìm giúp tôi trạm sạc nhanh gần bãi đỗ này.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q23",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "charger_search",
+    "subintent_name": "Tìm trạm sạc",
+    "seed_input": "Tìm giúp tôi trạm sạc nhanh gần bãi đỗ này.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q24",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "ev_routing",
+    "subintent_name": "Lập tuyến EV",
+    "seed_input": "Pin còn 18%, lập tuyến đến Đà Nẵng có điểm sạc phù hợp giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q25",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "ev_routing",
+    "subintent_name": "Lập tuyến EV",
+    "seed_input": "Pin còn 18%, lập tuyến đến Đà Nẵng có điểm sạc phù hợp giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q26",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "ev_routing",
+    "subintent_name": "Lập tuyến EV",
+    "seed_input": "Xe chỉ còn đi được khoảng 70 km, hãy dẫn đường về Nha Trang và thêm điểm sạc dọc đường.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q27",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "ev_routing",
+    "subintent_name": "Lập tuyến EV",
+    "seed_input": "Xe chỉ còn đi được khoảng 70 km, hãy dẫn đường về Nha Trang và thêm điểm sạc dọc đường.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q28",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "ev_routing",
+    "subintent_name": "Lập tuyến EV",
+    "seed_input": "Lập tuyến đến Huế theo mức pin hiện tại, ưu tiên trạm sạc nhanh.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q29",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "ev_routing",
+    "subintent_name": "Lập tuyến EV",
+    "seed_input": "Lập tuyến đến Huế theo mức pin hiện tại, ưu tiên trạm sạc nhanh.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q30",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "ev_routing",
+    "subintent_name": "Lập tuyến EV",
+    "seed_input": "Pin còn 28%, lập tuyến đến Đà Lạt có trạm sạc dọc đường.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q31",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "ev_routing",
+    "subintent_name": "Lập tuyến EV",
+    "seed_input": "Pin còn 28%, lập tuyến đến Đà Lạt có trạm sạc dọc đường.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q32",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "ev_routing",
+    "subintent_name": "Lập tuyến EV",
+    "seed_input": "Lập giúp tôi tuyến đến Nha Trang, giữ pin tối thiểu 15% và thêm điểm sạc nếu cần.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q33",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "ev_routing",
+    "subintent_name": "Lập tuyến EV",
+    "seed_input": "Lập giúp tôi tuyến đến Nha Trang, giữ pin tối thiểu 15% và thêm điểm sạc nếu cần.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q34",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "ev_routing",
+    "subintent_name": "Lập tuyến EV",
+    "seed_input": "Pin hiện còn 35%, hãy tìm tuyến đến Vũng Tàu và ưu tiên các trạm sạc nhanh đáng tin cậy.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q35",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "ev_routing",
+    "subintent_name": "Lập tuyến EV",
+    "seed_input": "Pin hiện còn 35%, hãy tìm tuyến đến Vũng Tàu và ưu tiên các trạm sạc nhanh đáng tin cậy.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q36",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "charging_status",
+    "subintent_name": "Trạng thái sạc",
+    "seed_input": "Cho tôi biết tình trạng sạc hiện tại.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q37",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "charging_status",
+    "subintent_name": "Trạng thái sạc",
+    "seed_input": "Cho tôi biết tình trạng sạc hiện tại.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q38",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "charging_status",
+    "subintent_name": "Trạng thái sạc",
+    "seed_input": "Xe đang sạc tới đâu rồi?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q39",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "charging_status",
+    "subintent_name": "Trạng thái sạc",
+    "seed_input": "Xe đang sạc tới đâu rồi?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q40",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "charging_status",
+    "subintent_name": "Trạng thái sạc",
+    "seed_input": "Kiểm tra trạng thái sạc giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q41",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "charging_status",
+    "subintent_name": "Trạng thái sạc",
+    "seed_input": "Kiểm tra trạng thái sạc giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q42",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "charging_status",
+    "subintent_name": "Trạng thái sạc",
+    "seed_input": "Tình hình sạc của xe thế nào?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q43",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "charging_status",
+    "subintent_name": "Trạng thái sạc",
+    "seed_input": "Tình hình sạc của xe thế nào?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q44",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "charging_status",
+    "subintent_name": "Trạng thái sạc",
+    "seed_input": "Xe đang sạc được bao nhiêu phần trăm rồi?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q45",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "charging_status",
+    "subintent_name": "Trạng thái sạc",
+    "seed_input": "Xe đang sạc được bao nhiêu phần trăm rồi?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q46",
+    "field": "scenario",
+    "intent_code": "energy_charging",
+    "subintent_code": "charging_status",
+    "subintent_name": "Trạng thái sạc",
+    "seed_input": "Kiểm tra giúp tôi tiến trình sạc hiện tại.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q47",
+    "field": "first_input",
+    "intent_code": "energy_charging",
+    "subintent_code": "charging_status",
+    "subintent_name": "Trạng thái sạc",
+    "seed_input": "Kiểm tra giúp tôi tiến trình sạc hiện tại.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita, kiểm tra giúp tôi quanh đây có trạm sạc VinFast nào gần nhất và dẫn đường tới đó nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã tìm thấy trạm sạc VinFast gần nhất và bắt đầu dẫn đường, cách đây khoảng 10 km, mất 12 phút."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Sẵn tiện kiểm tra giúp tôi pin xe hiện tại còn bao nhiêu phần trăm và tầm hoạt động còn lại khoảng bao nhiêu km?"
+    },
+    {
+      "role": "support",
+      "content": "Pin xe hiện còn 78%, tầm hoạt động còn lại khoảng 312 km."
+    },
+    {
+      "role": "customer",
+      "content": "Pin còn thoải mái thế này thì tốt rồi. Bật giúp tôi làm mát ghế lái ở mức 2 và hạ nhiệt độ điều hòa vùng lái xuống 22 độ nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa, hạ nhiệt vùng lái xuống 22°C và bật làm mát ghế lái mức 2 rồi bạn nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

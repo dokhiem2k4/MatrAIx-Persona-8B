@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 6,
+  "seed": {
+    "rowId": "row-0732",
+    "scenario": "Tôi đang trực tiếp lái xe đưa đồng nghiệp đi khảo sát tuyến đường trọng điểm, lịch trình gấp gáp yêu cầu sự chuyển đổi tài khoản liền mạch. Tôi cần thao tác nhanh chóng nhưng vẫn đảm bảo an toàn giao thông.",
+    "firstInput": "Vita, chuyển sang hồ sơ Minh và xác nhận thật nhanh giúp tôi.",
+    "intentCode": "vita_profile_settings",
+    "subintentCode": "user_profile_account",
+    "subintentName": "Hồ sơ và tài khoản người dùng",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

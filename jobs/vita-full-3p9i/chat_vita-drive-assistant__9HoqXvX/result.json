@@ -1,0 +1,133 @@
+{
+    "id": "461fffc6-1b01-4ebb-ba05-fd16306ca1ad",
+    "task_name": "application/vita-drive-assistant",
+    "trial_name": "chat_vita-drive-assistant__9HoqXvX",
+    "trial_uri": "file:///home/khiemdm/orca/workspaces/MatrAIx-Persona-8B/pearleye/jobs/vita-full-3p9i/chat_vita-drive-assistant__9HoqXvX",
+    "task_id": {
+        "path": "application/tasks/chat_vita-drive-assistant"
+    },
+    "source": null,
+    "task_checksum": "7ec689831c62a5dc3e84d0d6cce044da1360c427bd015f5da54dfc62b5dc8f83",
+    "config": {
+        "task": {
+            "path": "application/tasks/chat_vita-drive-assistant",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "chat_vita-drive-assistant__9HoqXvX",
+        "trials_dir": "jobs/vita-full-3p9i",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "persona-user-sim",
+            "import_path": null,
+            "model_name": "openrouter/google/gemini-3.5-flash-lite",
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-62c08cb727c5.yaml",
+                "seed": {
+                    "row_id": "row-0138",
+                    "scenario": "Tôi đang lái xe một mình trên đường cao tốc để đến văn phòng tỉnh ủy chuẩn bị cho cuộc họp chiến lược định kỳ, tâm trạng khá tập trung và nghiêm túc.",
+                    "first_input": "Kiểm tra lịch trình hôm nay cho tôi.",
+                    "intent_code": "calendar_tasks",
+                    "subintent_code": "calendar_query",
+                    "subintent_name": "Tra cứu",
+                    "vehicle_state": "driving",
+                    "ASSISTANT_MODE": "quiet",
+                    "persona_id": "wiki-62c08cb727c5"
+                },
+                "model_info": {
+                    "max_input_tokens": 72000,
+                    "max_output_tokens": 16384
+                }
+            },
+            "env": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "host",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "env": {},
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {},
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "5e8d9843-08a8-4205-87a0-b5f811078438"
+    },
+    "agent_info": {
+        "name": "persona-user-sim",
+        "version": "1.0.0",
+        "model_info": {
+            "name": "google/gemini-3.5-flash-lite",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 19522,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 650,
+        "cost_usd": 0.0074816,
+        "rollout_details": null,
+        "metadata": {
+            "request_id": "gen-1788426473-89CD1ewHjS2r6Fu6Ck47",
+            "model": "google/gemini-3.5-flash-lite",
+            "provider": "openrouter",
+            "cost_source": "provider"
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-09-03T09:07:12.678721Z",
+    "finished_at": "2026-09-03T09:08:07.059025Z",
+    "environment_setup": {
+        "started_at": "2026-09-03T09:07:12.707323Z",
+        "finished_at": "2026-09-03T09:07:12.707591Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-03T09:07:12.707618Z",
+        "finished_at": "2026-09-03T09:07:12.707635Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-03T09:07:12.707671Z",
+        "finished_at": "2026-09-03T09:08:01.767111Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-03T09:08:05.524897Z",
+        "finished_at": "2026-09-03T09:08:07.058619Z"
+    },
+    "step_results": null
+}

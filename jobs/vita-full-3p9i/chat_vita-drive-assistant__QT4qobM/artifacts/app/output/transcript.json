@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, tôi đang lái xe đến bệnh viện kiểm tra sức khỏe định kỳ đây. Bạn có thể cho tôi biết Vinmec có những dịch vụ khám chữa bệnh nào nổi bật không?"
+    },
+    {
+      "role": "support",
+      "content": "Vinmec nổi bật với hệ thống phẫu thuật robot công nghệ cao, ứng dụng robot AI và in 3D trong thay khớp gối, cùng các dịch vụ như chạy thận nhân tạo. Bạn cần mình hỗ trợ thêm gì không?"
+    },
+    {
+      "role": "customer",
+      "content": "Ừ, dịch vụ đó hay đấy. Tiện thể kiểm tra giúp tôi dung lượng pin hiện tại và phạm vi di chuyển còn lại xem có đủ đi khứ hồi không nhé."
+    },
+    {
+      "role": "support",
+      "content": "Pin hiện tại 78%, quãng đường còn lại 312 km. Bạn cần đi khứ hồi bao xa để mình xem có đủ không?"
+    },
+    {
+      "role": "customer",
+      "content": "Chắc khoảng gần bốn chục cây số thôi, vậy chắc là thoải mái rồi. Cảm ơn Vita nhé."
+    },
+    {
+      "role": "support",
+      "content": "Không có gì bạn. Chúc bạn có chuyến đi an toàn và thoải mái nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

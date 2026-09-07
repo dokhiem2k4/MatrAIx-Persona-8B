@@ -12,6 +12,7 @@ from playground.self_report_runtime import (
     resolve_self_report_schema,
 )
 from playground.types import Persona, PlaygroundTurn, Questionnaire
+from playground.user_sim.seed import ChatSeed
 from playground.user_sim.self_report_contract import (
     SelfReportSchema,
     schema_prompt_block,
@@ -21,12 +22,27 @@ _FEEDBACK_USER = """You have now FINISHED using {chatbot_label}. Here is the ful
 and user-visible structured information from the interaction \
 (you = user, {chatbot_label} = assistant):
 {transcript}
-
+{seed_block}
 {instructions}
+
+## How to rate
+A rating nobody can trace back is worthless. Every explanation field must:
+- Cite the turn number(s) it rests on, as "turn N" -- what was said or not said there.
+- Name the thing about YOU that made you read it that way: your expectations,
+  your situation while driving, how much patience you had. Two different people
+  can watch the same reply and rate it differently; say what made yours yours.
+- Follow from the conversation above, not from politeness. Use the whole range:
+  rate it low when it let you down, high only when it genuinely earned that.
 
 {schema_block}
 
 Return strict JSON only with no prose before or after the JSON object."""
+
+_SEED_BLOCK = """
+## What you came in wanting
+{situation}
+Judge the assistant against THIS need -- did you leave with it handled?
+"""
 
 
 def _format_exposure_value(value: Any, *, kind: str) -> str:
@@ -57,9 +73,10 @@ def _format_transcript_turns(
     chatbot_label: str,
 ) -> str:
     lines: List[str] = []
-    for turn in transcript:
-        lines.append("you: {}".format(turn.user_message))
-        lines.append("{}: {}".format(chatbot_label, turn.assistant_message))
+    # Number the turns: an explanation can only cite evidence it can point at.
+    for index, turn in enumerate(transcript, start=1):
+        lines.append("turn {} | you: {}".format(index, turn.user_message))
+        lines.append("turn {} | {}: {}".format(index, chatbot_label, turn.assistant_message))
         for item in turn.structured_exposure:
             label = str(item.get("label") or item.get("key") or "Visible detail")
             kind = str(item.get("format") or "text")
@@ -77,6 +94,7 @@ def final_self_report(
     transcript: List[PlaygroundTurn],
     schema: SelfReportSchema | None = None,
     chatbot_label: str = "Chatbot",
+    seed: "ChatSeed | None" = None,
 ) -> Questionnaire:
     questionnaire, _usage = final_self_report_with_usage(
         client,
@@ -85,6 +103,7 @@ def final_self_report(
         transcript=transcript,
         schema=schema,
         chatbot_label=chatbot_label,
+        seed=seed,
     )
     return questionnaire
 
@@ -97,12 +116,15 @@ def final_self_report_with_usage(
     transcript: List[PlaygroundTurn],
     schema: SelfReportSchema | None = None,
     chatbot_label: str = "Chatbot",
+    seed: "ChatSeed | None" = None,
 ) -> tuple[Questionnaire, Any]:
     del persona
     schema = resolve_self_report_schema(schema)
+    situation = "\n".join(seed.situation_lines()) if seed is not None else ""
     user = _FEEDBACK_USER.format(
         chatbot_label=chatbot_label,
         transcript=_format_transcript_turns(transcript, chatbot_label=chatbot_label),
+        seed_block=_SEED_BLOCK.format(situation=situation) if situation else "",
         instructions=schema.instructions
         or "Reflect honestly from your own point of view as this persona.",
         schema_block=schema_prompt_block(schema),

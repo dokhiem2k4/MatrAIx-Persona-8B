@@ -1,0 +1,48 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, sao đèn báo áp suất lốp có chấm than sáng lên thế này, kiểm tra hộ anh xem bánh nào bị vấn đề không."
+    },
+    {
+      "role": "support",
+      "content": "Dạ, theo dữ liệu xe hiện tại, áp suất các bánh đều trong ngưỡng bình thường: trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Đèn cảnh báo có thể do cảm biến tạm thời hoặc do áp suất giảm nhẹ khi lốp nóng lên. Anh cứ lái thêm một đoạn ngắn, nếu đèn vẫn sáng thì nên ra trạm kiểm tra lốp kỹ hơn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Ừ, để anh đi thêm một đoạn xem sao. Mà nhân tiện kiểm tra hộ anh xem pin VF9 còn bao nhiêu phần trăm và đi được khoảng bao nhiêu cây nữa nhé."
+    },
+    {
+      "role": "support",
+      "content": "Pin VF9 hiện còn 78%, đi được khoảng 312 km nữa anh nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Ổn rồi. Tiện thể chỉnh giúp anh điều hòa hàng ghế lái xuống 22 độ và bật thông gió ghế luôn nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt nhiệt độ ghế lái 22 độ."
+    },
+    {
+      "role": "customer",
+      "content": "Chưa thấy thông gió ghế hoạt động em ơi, bật cả chế độ thông gió ghế lái hộ anh với."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt thông gió ghế mức 2."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita nhé, giờ thì mát mẻ thoải mái rồi."
+    },
+    {
+      "role": "support",
+      "content": "Có gì đâu bạn, mình luôn sẵn lòng. Chúc bạn lái xe vui vẻ!"
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

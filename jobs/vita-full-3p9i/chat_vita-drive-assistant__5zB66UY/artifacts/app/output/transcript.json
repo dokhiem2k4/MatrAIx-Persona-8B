@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, xe đang cắm sạc ở trạm, kiểm tra giúp tôi dung lượng pin hiện tại và còn khoảng bao lâu thì đầy nhé."
+    },
+    {
+      "role": "support",
+      "content": "Pin hiện tại đang ở 78%, ước tính còn khoảng 32 phút nữa là đầy."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Tiện thể kiểm tra luôn áp suất lốp 4 bánh giúp tôi xem có ổn định không nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Cả bốn bánh đều trong ngưỡng ổn định, bạn yên tâm nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Tốt quá, cảm ơn Vita nhiều. Thế còn nhiệt độ trong xe đang để bao nhiêu vậy, tăng lên một độ giúp tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt nhiệt độ ghế lái 23 độ."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

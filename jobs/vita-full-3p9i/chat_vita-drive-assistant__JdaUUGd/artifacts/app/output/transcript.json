@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, gửi giúp anh tin nhắn cho Lan bảo là anh đến muộn tầm mười phút nhé."
+    },
+    {
+      "role": "support",
+      "content": "Rất tiếc, mình hiện chưa hỗ trợ gửi tin nhắn hay truy cập danh bạ trên xe. Bạn có thể dùng điện thoại để nhắn cho Lan nhé. Có việc gì khác mình giúp được không?"
+    },
+    {
+      "role": "customer",
+      "content": "Thôi vậy, em chỉnh giúp anh nhiệt độ điều hòa xuống 22 độ và bật quạt gió mạnh lên chút nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã bật điều hòa, chỉnh nhiệt độ xuống 22°C và tăng quạt gió lên mức 5 rồi nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em, xe mình đang ở mức pin bao nhiêu phần trăm vậy Vita?"
+    },
+    {
+      "role": "support",
+      "content": "Pin xe mình đang ở 78%, bạn nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

@@ -1,0 +1,56 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, bật giúp tôi chế độ thông gió ghế lái mức 2 nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt thông gió ghế mức 2."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Tiện thể kiểm tra hộ tôi áp suất lốp 4 bánh xem có ổn không nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Cả bốn bánh đều trong ngưỡng ổn định."
+    },
+    {
+      "role": "customer",
+      "content": "Tốt quá, cảm ơn Vita nhé. Đang vội nên nhờ Vita tìm giúp trạm sạc gần nhất trên tuyến đường đi luôn nha."
+    },
+    {
+      "role": "support",
+      "content": "Để tìm trạm sạc gần nhất trên tuyến đường, mình cần biết điểm đến của bạn trước. Hiện tại xe chưa có điểm đến nào được thiết lập. Bạn muốn đi đến đâu?"
+    },
+    {
+      "role": "customer",
+      "content": "À phải, tôi đang đi đến Nhà thi đấu Quần Ngựa. Bạn tìm giúp trạm sạc nào gần đó nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tìm thấy một số trạm sạc VinFast gần khu vực Quần Ngựa, như trạm tại bãi đỗ xe Khách sạn La Thành (226 Vạn Phúc) và Vincom Center Metropolis (29 Liễu Giai). Bạn muốn mình chỉ đường đến trạm nào không?"
+    },
+    {
+      "role": "customer",
+      "content": "Chọn trạm Vincom Center Metropolis giúp tôi nhé, rồi dẫn đường luôn."
+    },
+    {
+      "role": "support",
+      "content": "Đã chọn Vincom Center Metropolis và bắt đầu dẫn đường. Cách đây 17,9 km, ước tính 24 phút."
+    },
+    {
+      "role": "customer",
+      "content": "Tuyệt vời, cảm ơn Vita nhiều."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn. Có gì cần mình giúp thì cứ nói nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

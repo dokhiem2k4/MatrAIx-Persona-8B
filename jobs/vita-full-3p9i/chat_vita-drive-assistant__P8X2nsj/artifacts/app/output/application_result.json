@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 8,
+  "seed": {
+    "rowId": "row-0486",
+    "scenario": "Tôi đang lái xe trên đường cao tốc thì thấy phía trước báo kẹt xe nên muốn tìm cách né đoạn đường ùn ứ này.",
+    "firstInput": "Đổi tuyến sang đường tránh cao tốc.",
+    "intentCode": "journey_navigation_places",
+    "subintentCode": "route_management",
+    "subintentName": "Lập và thay đổi tuyến",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-9f3c655902f2"
+  }
+}

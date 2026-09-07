@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, tìm giúp tôi số liên lạc của anh Nam trong danh bạ với nhé, tôi đang lái xe nên cần gọi nhanh."
+    },
+    {
+      "role": "support",
+      "content": "Rất tiếc, mình không có quyền truy cập vào danh bạ hay danh sách liên lạc trên xe. Tính năng này hiện chưa được hỗ trợ. Nếu bạn cần gọi cho anh Nam, bạn có thể dùng điện thoại cá nhân qua Bluetooth đã kết nối với xe, hoặc dùng khẩu lệnh trên điện thoại để gọi nhanh. Mình có thể giúp gì thêm cho bạn không?"
+    },
+    {
+      "role": "customer",
+      "content": "Thôi được rồi, vậy chỉnh giúp tôi nhiệt độ điều hòa bên ghế lái xuống 21 độ nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt nhiệt độ ghế lái 21 độ."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn bạn, tiện thể bật luôn quạt gió điều hòa lên mức 3 giúp tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt quạt gió mức 3."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

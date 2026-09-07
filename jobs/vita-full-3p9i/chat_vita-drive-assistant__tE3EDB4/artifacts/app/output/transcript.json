@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita, tôi chuẩn bị tới nơi rồi, chuyển hệ thống sang dẫn đường tìm hầm gửi xe giúp tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tìm thấy thông tin về hầm gửi xe tại Tòa Technopark Tower. Tòa này có 3 tầng hầm để xe, phí gửi ô tô khoảng 1.500.000 đồng/tháng. Bạn muốn mình dẫn đường đến đó không?"
+    },
+    {
+      "role": "customer",
+      "content": "Có, dẫn đường ngay vào cổng hầm chính giúp tôi. Tiện thể bật quạt gió điều hòa mạnh lên một chút nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã dẫn đường đến cổng hầm chính, cách đây 16 km, khoảng 51 phút. Quạt gió điều hòa cũng đã được bật mạnh lên rồi bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "16 km mà sao tới 51 phút lận? Kiểm tra lại tuyến đường tránh tắc giúp tôi xem có đường nào nhanh hơn không."
+    },
+    {
+      "role": "support",
+      "content": "Tuyến đường hiện tại dài 16 km nhưng ước tính mất 51 phút do tắc đường trên Vành đai 2 qua cầu Vĩnh Tuy. Mình đã thử tìm đường tránh trạm thu phí, nhưng tuyến đó xa hơn và mất tới 60 phút, không nhanh hơn. Bạn muốn giữ tuyến cũ hay thử hướng khác?"
+    },
+    {
+      "role": "customer",
+      "content": "Được rồi, cứ giữ nguyên tuyến hiện tại đi. Tiện thể bật hệ thống massage ghế cho tôi luôn nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật massage ghế chế độ relax."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

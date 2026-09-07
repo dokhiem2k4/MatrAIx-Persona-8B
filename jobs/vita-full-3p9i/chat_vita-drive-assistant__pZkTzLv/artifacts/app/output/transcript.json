@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, nhân tiện đang lái xe trên cao tốc thế này, em nhắc lại giúp anh xem tập đoàn Vingroup nhà mình hiện đang hoạt động trong những lĩnh vực nào nhỉ?"
+    },
+    {
+      "role": "support",
+      "content": "Dạ, theo thông tin mới nhất năm 2026, Vingroup đang hoạt động trong 6 lĩnh vực trọng tâm: Công nghệ - Công nghiệp, Thương mại Dịch vụ, Hạ tầng, Năng lượng xanh, Văn hóa và Thiện nguyện Xã hội."
+    },
+    {
+      "role": "customer",
+      "content": "Ừ, cảm ơn em. Thế cụ thể trong mảng công nghệ - công nghiệp thì họ tập trung vào những sản phẩm chính nào vậy?"
+    },
+    {
+      "role": "support",
+      "content": "Dựa trên thông tin mình tìm được, VinFast tập trung vào phát triển thương hiệu, nghiên cứu và phát triển sản phẩm, với các sản phẩm chính là xe điện, bao gồm ô tô và xe đạp điện."
+    },
+    {
+      "role": "customer",
+      "content": "À thế hả, tiện thể điều chỉnh giúp anh nhiệt độ điều hòa bên ghế lái tăng lên 25 độ C với nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt nhiệt độ ghế lái 25 độ."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

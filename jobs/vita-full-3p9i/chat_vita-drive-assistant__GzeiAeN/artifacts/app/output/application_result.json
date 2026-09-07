@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 4,
+  "seed": {
+    "rowId": "row-0624",
+    "scenario": "Tôi đang lái xe đi sự kiện và tự dưng thắc mắc về các trang bị an toàn của dòng xe này.",
+    "firstInput": "Vita, xe này có mấy túi khí vậy em?",
+    "intentCode": "my_car",
+    "subintentCode": "vehicle_information",
+    "subintentName": "Thông tin xe",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62706e3ac3c2"
+  }
+}

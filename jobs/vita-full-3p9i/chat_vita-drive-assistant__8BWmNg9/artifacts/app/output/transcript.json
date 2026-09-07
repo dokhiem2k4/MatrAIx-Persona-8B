@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, tìm giúp tôi trạm sạc nhanh gần nhất nhé, tôi đang cần nạp gấp để kịp lịch họp."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tìm và gửi lộ trình đến trạm sạc nhanh gần nhất cho bạn rồi nhé. Xe đang đỗ, bạn có thể xuất phát bất cứ lúc nào."
+    },
+    {
+      "role": "customer",
+      "content": "Khoan đã Vita, xe tôi đang chạy trên đường chứ có đỗ đâu mà đỗ. Xem lại vị trí và cập nhật ngay trạm sạc nhanh tiếp theo trên tuyến đường giúp tôi."
+    },
+    {
+      "role": "support",
+      "content": "Xe bạn đang đỗ ở số P rồi, không chạy đâu ạ. Tuyến đường hiện tại đang dẫn đến trạm sạc nhanh gần nhất, còn 41 km và dự kiến 131 phút nữa tới nơi. Bạn yên tâm nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Vớ vẩn thật, tôi đang lái xe trên cao tốc với vận tốc 90 km/h mà dám bảo ở số P với mất hơn hai tiếng mới tới. Huỷ lộ trình đó ngay, tìm trạm sạc nhanh nào cách đây vòng 10-15 phút thôi!"
+    },
+    {
+      "role": "support",
+      "content": "Đã huỷ lộ trình cũ và tìm tuyến đến trạm sạc nhanh gần Technopark. Tuy nhiên tuyến này dài 60 km, mất khoảng 194 phút — xa hơn nhiều so với 10–15 phút bạn yêu cầu. Bạn muốn thử tìm trạm khác gần hơn không?"
+    },
+    {
+      "role": "customer",
+      "content": "Không ổn rồi, 194 phút thì trễ họp mất. Huỷ đi, để tôi tự xử lý vậy."
+    },
+    {
+      "role": "support",
+      "content": "Đã huỷ chỉ đường đến trạm sạc. Bạn tự xử lý nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 5,
+  "seed": {
+    "rowId": "row-0480",
+    "scenario": "Tôi đang lái xe trên phố chuẩn bị ghé qua câu lạc bộ thể thao sau buổi tập bóng bàn buổi sáng, xe hơi cạn nhiên liệu nên cần tìm chỗ tiếp nguyên liệu nhanh.",
+    "firstInput": "Dẫn đường đến trạm sạc gần nhất.",
+    "intentCode": "journey_navigation_places",
+    "subintentCode": "destination_poi",
+    "subintentName": "Tìm điểm đến/POI",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-9f3c655902f2"
+  }
+}

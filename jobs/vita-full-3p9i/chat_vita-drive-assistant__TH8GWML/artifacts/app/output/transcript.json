@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, kiểm tra giúp tôi xem bên ngoài trời lúc này có đang mưa không vậy?"
+    },
+    {
+      "role": "support",
+      "content": "Theo thông tin tra cứu, hiện tại Hà Nội đang có mưa nhẹ, nhiệt độ khoảng 26°C."
+    },
+    {
+      "role": "customer",
+      "content": "Thời tiết thế này thì bật hộ tôi sấy kính trước với gạt mưa chế độ tự động nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã kiểm tra thời tiết Hà Nội hiện tại đang có mưa, độ ẩm cao. Đã bật sấy kính trước và gạt mưa tự động cho bạn rồi nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Tiện thể kiểm tra luôn áp suất lốp 4 bánh và pin giúp tôi xem còn chạy được bao nhiêu phần trăm nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Pin còn 78%, đi được khoảng 312 km."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

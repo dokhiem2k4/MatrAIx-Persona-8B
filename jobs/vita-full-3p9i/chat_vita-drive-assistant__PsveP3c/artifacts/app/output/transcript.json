@@ -1,0 +1,48 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, em kiểm tra giúp anh xem hệ thống y tế Vinmec hiện tại có những gói dịch vụ khám sức khỏe tổng quát nào nổi bật nhé."
+    },
+    {
+      "role": "support",
+      "content": "Dạ, theo thông tin mình tra được, Vinmec năm 2026 có các gói khám sức khỏe tổng quát nổi bật như Cơ bản, Nâng cao, Người cao tuổi và VIP. Hiện đang có ưu đãi giảm 500.000 đồng cho mỗi gói, và giảm thêm nếu bạn là cư dân Vinhomes hoặc có hộ khẩu tại một số tỉnh thành. Bạn muốn tìm hiểu thêm gói nào không?"
+    },
+    {
+      "role": "customer",
+      "content": "Anh quan tâm đến gói Nâng cao hoặc VIP, em xem giúp anh gói VIP gồm những hạng mục chuyên sâu gì nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tìm kiếm thông tin về gói VIP cho VF 9 nhưng chưa thấy tài liệu chính thức nào liệt kê chi tiết các hạng mục chuyên sâu. Bạn có thể liên hệ trực tiếp đại lý VinFast hoặc hotline chăm sóc khách hàng để được tư vấn cụ thể nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Thôi không sao em, để anh tự xem lại sau. Giờ chuyển sang việc khác giúp anh, em chỉnh điều hòa khu vực ghế lái giảm xuống 21 độ và bật chế độ thông gió ghế giúp anh nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã giảm nhiệt độ ghế lái xuống 21°C và bật thông gió ghế rồi anh nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em, tiện thể kiểm tra giúp anh áp suất lốp 4 bánh xem sao nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Các bánh đều ổn, bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em, mọi thứ ổn rồi. Chúc em lái xe an toàn nhé!"
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn! Chúc bạn lái xe an toàn và có hành trình vui vẻ nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

@@ -30,6 +30,7 @@ from playground.types import (
 from playground.user_sim.chatbot_labels import chatbot_display_name
 from playground.case_binding import build_case_brief, case_id_from_trial, load_cases
 from playground.user_sim.kickoff import get_goal_context
+from playground.user_sim.seed import ChatSeed, resolve_chat_seed
 from playground.user_sim.port import (
     ChatSessionPort,
     normalize_agent_turn,
@@ -171,12 +172,19 @@ def run_playground(
     repo_root: Optional[Path] = None,
     job_dir: Optional[Path] = None,
     trial_dir: Optional[Path] = None,
+    seed: Any = None,
 ) -> PlaygroundResult:
     def emit(event: Dict[str, Any]) -> None:
         if on_event is not None:
             on_event(event)
 
     assert_budget_allows_request(job_dir)
+    # Two ways to hand the persona a stimulus, kept side by side after the
+    # merge: ``seed`` replays a dataset row supplied by the job recipe, while
+    # ``assigned_case`` binds a case from the task's own ``input/cases.jsonl``.
+    # A case wins when both are present, because it also drives state injection
+    # and the verifier's case_run.json.
+    seed = resolve_chat_seed(seed)
     assigned_case = None
     if task_path and repo_root is not None:
         case_id = case_id_from_trial(trial_dir, os.environ)
@@ -194,6 +202,12 @@ def run_playground(
     goal_context = get_goal_context(
         "assigned_case" if assigned_case else "scenario_default"
     )
+    if assigned_case is not None:
+        kickoff_text = build_case_brief(assigned_case)
+    elif seed is not None:
+        kickoff_text = seed.kickoff_text()
+    else:
+        kickoff_text = goal_context.description
     chatbot_label = chatbot_display_name(config.application_id)
     task_bundle = _load_task_bundle(task_path=task_path, repo_root=repo_root)
     task_config = _load_chatbot_runtime_config(task_path=task_path, repo_root=repo_root)
@@ -211,16 +225,13 @@ def run_playground(
         persona,
         persona_yaml_path=persona_yaml_path,
         task_bundle=task_bundle,
+        kickoff=kickoff_text,
     )
     prompts = prompt_bundle(
         persona,
         persona_yaml_path=persona_yaml_path,
         task_bundle=task_bundle,
-        task_prompt=(
-            build_case_brief(assigned_case)
-            if assigned_case
-            else goal_context.description
-        ),
+        task_prompt=kickoff_text,
     )
     report_prompt = assemble_report_system_prompt(
         persona,
@@ -228,6 +239,8 @@ def run_playground(
         task_bundle=task_bundle,
     )
     emit({"type": "prompts", "prompts": prompts})
+    if seed is not None:
+        emit({"type": "seed", "seed": seed.to_dict()})
 
     transcript: List[PlaygroundTurn] = []
     action = sim.opening_action()
@@ -286,6 +299,7 @@ def run_playground(
         transcript=transcript,
         schema=self_report_schema,
         chatbot_label=chatbot_label,
+        seed=seed,
     )
 
     result = _chat_result_with_usage(
@@ -317,6 +331,7 @@ async def run_playground_async(
     repo_root: Optional[Path] = None,
     job_dir: Optional[Path] = None,
     trial_dir: Optional[Path] = None,
+    seed: Any = None,
 ) -> PlaygroundResult:
     """Like :func:`run_playground` but awaits async Harbor sidecar turns."""
 
@@ -325,6 +340,12 @@ async def run_playground_async(
             on_event(event)
 
     assert_budget_allows_request(job_dir)
+    # Two ways to hand the persona a stimulus, kept side by side after the
+    # merge: ``seed`` replays a dataset row supplied by the job recipe, while
+    # ``assigned_case`` binds a case from the task's own ``input/cases.jsonl``.
+    # A case wins when both are present, because it also drives state injection
+    # and the verifier's case_run.json.
+    seed = resolve_chat_seed(seed)
     assigned_case = None
     if task_path and repo_root is not None:
         case_id = case_id_from_trial(trial_dir, os.environ)
@@ -342,6 +363,12 @@ async def run_playground_async(
     goal_context = get_goal_context(
         "assigned_case" if assigned_case else "scenario_default"
     )
+    if assigned_case is not None:
+        kickoff_text = build_case_brief(assigned_case)
+    elif seed is not None:
+        kickoff_text = seed.kickoff_text()
+    else:
+        kickoff_text = goal_context.description
     chatbot_label = chatbot_display_name(config.application_id)
     task_bundle = _load_task_bundle(task_path=task_path, repo_root=repo_root)
     task_config = _load_chatbot_runtime_config(task_path=task_path, repo_root=repo_root)
@@ -359,16 +386,13 @@ async def run_playground_async(
         persona,
         persona_yaml_path=persona_yaml_path,
         task_bundle=task_bundle,
+        kickoff=kickoff_text,
     )
     prompts = prompt_bundle(
         persona,
         persona_yaml_path=persona_yaml_path,
         task_bundle=task_bundle,
-        task_prompt=(
-            build_case_brief(assigned_case)
-            if assigned_case
-            else goal_context.description
-        ),
+        task_prompt=kickoff_text,
     )
     report_prompt = assemble_report_system_prompt(
         persona,
@@ -376,6 +400,8 @@ async def run_playground_async(
         task_bundle=task_bundle,
     )
     emit({"type": "prompts", "prompts": prompts})
+    if seed is not None:
+        emit({"type": "seed", "seed": seed.to_dict()})
 
     transcript: List[PlaygroundTurn] = []
     action = sim.opening_action()
@@ -434,6 +460,7 @@ async def run_playground_async(
         transcript=transcript,
         schema=self_report_schema,
         chatbot_label=chatbot_label,
+        seed=seed,
     )
 
     result = _chat_result_with_usage(

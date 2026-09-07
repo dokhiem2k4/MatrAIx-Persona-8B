@@ -1,0 +1,48 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, nhạc đang hơi lớn quá, tạm dừng giúp tôi cái nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã tắt tiếng."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Tiện thể kiểm tra hộ tôi luôn áp suất lốp xe thế nào rồi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: lốp trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Các chỉ số đều trong ngưỡng an toàn."
+    },
+    {
+      "role": "customer",
+      "content": "Tốt lắm. Giờ bật lại bài nhạc nhẹ lúc nãy với âm lượng vừa phải thôi nha Vita."
+    },
+    {
+      "role": "support",
+      "content": ":"
+    },
+    {
+      "role": "customer",
+      "content": "Vita ơi, hình như âm thanh bị lỗi rồi, phát lại bài nhạc nhẹ giúp tôi với nhé."
+    },
+    {
+      "role": "support",
+      "content": "Bài này đang phát rồi."
+    },
+    {
+      "role": "customer",
+      "content": "Ừ đúng rồi, nghe vừa tai đấy. Cảm ơn Vita nhé."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn. Có gì cần mình hỗ trợ thêm thì cứ nói nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

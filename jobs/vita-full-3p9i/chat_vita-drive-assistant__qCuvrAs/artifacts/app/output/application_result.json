@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 5,
+  "seed": {
+    "rowId": "row-0798",
+    "scenario": "Tôi đang tập trung lái xe trên đường vành đai để kịp đến sân cỏ đúng giờ, không muốn bị làm phiền bởi những thông báo dài dòng.",
+    "firstInput": "ViTa ơi, từ giờ trả lời tôi ngắn gọn hơn nhé.",
+    "intentCode": "vita_profile_settings",
+    "subintentCode": "vita_preferences",
+    "subintentName": "Tùy chọn tương tác với ViTa",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62706e3ac3c2"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 3,
+  "seed": {
+    "rowId": "row-0222",
+    "scenario": "Tôi đang lái xe trên đường cao tốc với tinh thần thư thái sau giờ làm, muốn nghe chút âm nhạc để giải trí.",
+    "firstInput": "Tìm gì vui vui để nghe đi.",
+    "intentCode": "communication_media",
+    "subintentCode": "content_discovery",
+    "subintentName": "Tìm nội dung",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62706e3ac3c2"
+  }
+}

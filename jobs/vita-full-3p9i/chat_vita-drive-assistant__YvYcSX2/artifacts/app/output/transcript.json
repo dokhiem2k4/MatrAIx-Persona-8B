@@ -1,0 +1,56 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, tự nhiên kẹt xe quá, tìm giúp đường khác né đoạn này gấp để anh kịp giờ hẹn đi em."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã kiểm tra, hiện tại chưa có tuyến đường nào đang được thiết lập để tìm đường khác. Bạn muốn đi đâu để mình tìm đường né kẹt xe nhé?"
+    },
+    {
+      "role": "customer",
+      "content": "Anh đang chuẩn bị đến Trung tâm Hội nghị Quốc gia ở Mỹ Đình. Em tìm đường nào né đoạn tắc này nhanh nhất giúp anh nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tra tình hình giao thông và thấy sáng nay nhiều tuyến như cầu Vĩnh Tuy, Xa La, Lê Văn Lương đang ùn tắc. Mình đã mở đường đi từ Technopark đến Trung tâm Hội nghị Quốc gia theo hướng né trạm thu phí, ước tính khoảng 156 phút. Bạn chạy theo chỉ dẫn trên bản đồ nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Khoan đã em, anh đang xuất phát từ khu vực nội đô chứ không phải Technopark, mà 156 phút thì quá lâu rồi. Em tính toán lại lộ trình xuất phát từ Thanh Xuân đi Trung tâm Hội nghị Quốc gia giúp anh xem có đường nào nhanh hơn không."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã cập nhật lộ trình từ Thanh Xuân đến Trung tâm Hội nghị Quốc gia, Mỹ Đình. Thời gian dự kiến giảm còn 132 phút, quãng đường 41,4 km. Bạn có thể xuất phát ngay nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Từ Thanh Xuân qua Mỹ Đình mà tận 41 cây với hơn 2 tiếng thì vô lý quá em ơi, xe đang báo pin thế nào, chỉnh lại giúp anh chế độ lái thể thao xem có nhanh nhẹn hơn không."
+    },
+    {
+      "role": "support",
+      "content": "Pin xe đang ở 78%, đi được khoảng 312 km nha anh. Tuyến Thanh Xuân – Mỹ Đình dài 41 km, dự kiến mất hơn 2 tiếng do đang kẹt xe. Xe đang đỗ, mình đã chuyển sang chế độ lái thể thao rồi, nhưng khi chạy thực tế sẽ còn phụ thuộc vào tình trạng giao thông nữa anh nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Được rồi, em chỉnh thêm điều hòa hàng ghế lái về 21 độ, tăng quạt gió lên mức 3 và bật sấy kính trước giúp anh để chuẩn bị di chuyển nhé."
+    },
+    {
+      "role": "support",
+      "content": "đã thực hiện set_hvac_power; đã thực hiện set_hvac_temperature; đã thực hiện set_fan_speed; VF9 baseline không hỗ trợ sưởi kính trước."
+    },
+    {
+      "role": "customer",
+      "content": "Không hỗ trợ sưởi kính trước cũng không sao, thôi em tranh thủ đóng toàn bộ các cửa sổ lại và bật nhạc sôi động chút cho tỉnh táo để anh tập trung lái xe nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã đóng hết cửa sổ và bật nhạc sôi động rồi, chúc bạn lái xe tập trung và an toàn nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

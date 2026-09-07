@@ -1,0 +1,615 @@
+{
+  "standardId": "vn_driver_persona",
+  "version": "1.0",
+  "schemaRef": "persona/schema/dimensions.json",
+  "schemaVersion": "1.1",
+  "title": "Chuẩn thu thập persona tài xế Việt Nam",
+  "purpose": "Bộ chiều tối thiểu cần thu thập từ tài xế Việt Nam thật để persona dùng được cho benchmark trợ lý trên xe. Cố ý nhỏ: chuẩn vàng GSS của repo (75.699 người thật) cũng chỉ grounded ~14,6 chiều/persona. Đủ và bằng nhau quan trọng hơn nhiều.",
+  "eligibility": {
+    "note": "Sàng lọc trước khi hỏi tiếp. Persona không lái xe không dùng để chấm trợ lý trên xe.",
+    "rules": [
+      {
+        "dimension": "demo_driver_status",
+        "mustBeOneOf": [
+          "Daily driver",
+          "Occasional driver"
+        ],
+        "reason": "Trong kho hiện tại, 69/216 giá trị đã điền là 'Non-driver' hoặc 'Cannot drive'. Benchmark VF9 đang được chấm bởi những persona như vậy."
+      }
+    ]
+  },
+  "coverageParity": {
+    "note": "Mọi người trả lời cùng một bộ câu hỏi. Bỏ trống thì ghi null thật, không bịa. Ghi lại groundedCount để kiểm soát khi phân tích.",
+    "requireIdenticalTierA": true,
+    "maxGroundedStdevInBatch": 3,
+    "reason": "Trên 541 persona hiện có, độ phủ dao động 7–1290 chiều (độ lệch chuẩn 390,7). Persona đầy hồ sơ nhất trong lượt chạy vita-full-3p9i lại chấm khắt nhất (632 chiều → 6,87) còn persona thưa hơn chấm rộng tay nhất (229 → 7,63). Chênh lệch độ phủ trở thành biến gây nhiễu không kiểm soát được."
+  },
+  "tierA": {
+    "note": "BẮT BUỘC. Mọi persona phải có giá trị hợp lệ ở toàn bộ 24 chiều này.",
+    "dimensions": [
+      {
+        "id": "demo_driver_status",
+        "index": null,
+        "group": "Sàng lọc",
+        "question": "Hiện tại anh/chị lái ô tô ở mức nào?",
+        "values": [
+          "Daily driver",
+          "Occasional driver",
+          "Licensed, rarely drives",
+          "Non-driver",
+          "Cannot drive"
+        ],
+        "labelsVi": [
+          "Lái hằng ngày",
+          "Thỉnh thoảng lái",
+          "Có bằng nhưng hiếm khi lái",
+          "Không lái",
+          "Không lái được"
+        ]
+      },
+      {
+        "id": "lstyle_commute_mode",
+        "group": "Sàng lọc",
+        "question": "Phương tiện anh/chị dùng nhiều nhất để đi lại hằng ngày?",
+        "values": [
+          "Car",
+          "Public transit",
+          "Bike",
+          "Walk",
+          "Remote",
+          "Rideshare"
+        ],
+        "labelsVi": [
+          "Ô tô",
+          "Phương tiện công cộng",
+          "Xe máy/xe đạp",
+          "Đi bộ",
+          "Làm việc từ xa",
+          "Xe công nghệ"
+        ]
+      },
+      {
+        "id": "age_bracket",
+        "group": "Nhân khẩu",
+        "question": "Anh/chị thuộc nhóm tuổi nào?",
+        "values": [
+          "18-24",
+          "25-34",
+          "35-44",
+          "45-54",
+          "55-64",
+          "65-74",
+          "75-84",
+          "85+"
+        ],
+        "warning": "KHÔNG ghi '65+'. Trong kho hiện có 70 lượt ghi '65+' — giá trị này không nằm trong enum và sẽ bị loại."
+      },
+      {
+        "id": "gender_identity",
+        "group": "Nhân khẩu",
+        "question": "Giới tính anh/chị nhận là?",
+        "values": [
+          "Woman",
+          "Man",
+          "Non-binary",
+          "Self-described",
+          "Prefer not to say"
+        ],
+        "labelsVi": [
+          "Nữ",
+          "Nam",
+          "Phi nhị nguyên",
+          "Tự mô tả",
+          "Không muốn nêu"
+        ],
+        "warning": "Phải khớp với display_name. Cả 3 persona dùng trong vita-full-3p9i đều ghi 'Man' nhưng mang tên nữ — model nhận hai tín hiệu mâu thuẫn, mà xưng hô tiếng Việt phụ thuộc vào giới tính."
+      },
+      {
+        "id": "region",
+        "group": "Nhân khẩu",
+        "question": "Khu vực sinh sống?",
+        "values": [
+          "Southeast Asia"
+        ],
+        "fixed": "Southeast Asia"
+      },
+      {
+        "id": "urbanicity",
+        "group": "Nhân khẩu",
+        "question": "Nơi anh/chị sống chủ yếu là?",
+        "values": [
+          "Dense urban",
+          "Suburban",
+          "Small town",
+          "Rural",
+          "Nomadic / remote"
+        ],
+        "labelsVi": [
+          "Nội đô đông đúc",
+          "Ven đô",
+          "Thị trấn nhỏ",
+          "Nông thôn",
+          "Di chuyển liên tục"
+        ]
+      },
+      {
+        "id": "life_stage",
+        "group": "Nhân khẩu",
+        "question": "Giai đoạn cuộc sống hiện tại?",
+        "values": [
+          "Student",
+          "Early career",
+          "Parent of young kids",
+          "Mid-life",
+          "Career change",
+          "Empty nester",
+          "Retirement"
+        ],
+        "labelsVi": [
+          "Đang đi học",
+          "Mới đi làm",
+          "Đang nuôi con nhỏ",
+          "Trung niên",
+          "Chuyển nghề",
+          "Con đã lớn ra riêng",
+          "Nghỉ hưu"
+        ]
+      },
+      {
+        "id": "socioeconomic_band",
+        "group": "Nhân khẩu",
+        "question": "Anh/chị tự xếp mức thu nhập hộ gia đình vào đâu?",
+        "values": [
+          "Low income",
+          "Lower-middle",
+          "Middle",
+          "Upper-middle",
+          "High income"
+        ],
+        "labelsVi": [
+          "Thu nhập thấp",
+          "Trung bình thấp",
+          "Trung bình",
+          "Trung bình khá",
+          "Thu nhập cao"
+        ]
+      },
+      {
+        "id": "skill_driving",
+        "group": "Lái xe",
+        "question": "Anh/chị tự đánh giá tay lái của mình?",
+        "values": [
+          "Master",
+          "Advanced",
+          "Intermediate",
+          "Beginner",
+          "None"
+        ],
+        "labelsVi": [
+          "Rất thành thạo",
+          "Thành thạo",
+          "Trung bình",
+          "Mới lái",
+          "Không lái được"
+        ],
+        "currentFillRate": 0.314
+      },
+      {
+        "id": "topic_cars",
+        "group": "Lái xe",
+        "question": "Mức độ quan tâm của anh/chị tới ô tô nói chung?",
+        "values": [
+          "Passionate",
+          "Interested",
+          "Neutral",
+          "Indifferent",
+          "Averse"
+        ],
+        "labelsVi": [
+          "Đam mê",
+          "Có quan tâm",
+          "Bình thường",
+          "Không quan tâm",
+          "Ngại"
+        ],
+        "currentFillRate": 0.209
+      },
+      {
+        "id": "att_electric_vehicles",
+        "group": "Lái xe",
+        "question": "Quan điểm của anh/chị về xe điện?",
+        "values": [
+          "Enthusiast",
+          "Positive",
+          "Neutral",
+          "Skeptical",
+          "Opposed"
+        ],
+        "labelsVi": [
+          "Rất ủng hộ",
+          "Tích cực",
+          "Trung lập",
+          "Hoài nghi",
+          "Phản đối"
+        ],
+        "currentFillRate": 0.139,
+        "note": "Chiều thưa nhất trong nhóm quan trọng — chỉ 13,9% persona hiện có được điền."
+      },
+      {
+        "id": "att_self_driving_cars",
+        "group": "Lái xe",
+        "question": "Quan điểm về xe tự lái / hỗ trợ lái tự động?",
+        "values": [
+          "Enthusiast",
+          "Positive",
+          "Neutral",
+          "Skeptical",
+          "Opposed"
+        ],
+        "labelsVi": [
+          "Rất ủng hộ",
+          "Tích cực",
+          "Trung lập",
+          "Hoài nghi",
+          "Phản đối"
+        ],
+        "currentFillRate": 0.218
+      },
+      {
+        "id": "cog_verbosity",
+        "group": "Cách nói & chấm điểm",
+        "question": "Khi nói chuyện, anh/chị thường nói?",
+        "values": [
+          "Terse",
+          "Concise",
+          "Balanced",
+          "Wordy",
+          "Rambling"
+        ],
+        "labelsVi": [
+          "Rất cộc lốc",
+          "Ngắn gọn",
+          "Vừa phải",
+          "Dài dòng",
+          "Lan man"
+        ],
+        "currentFillRate": 0.305,
+        "note": "Thuộc personaYamlProbeFields của schema nhưng rỗng 100% ở 3 persona đã dùng."
+      },
+      {
+        "id": "cog_formality",
+        "group": "Cách nói & chấm điểm",
+        "question": "Anh/chị nói chuyện với trợ lý/máy móc theo kiểu?",
+        "values": [
+          "Very formal",
+          "Formal",
+          "Neutral",
+          "Casual",
+          "Slangy"
+        ],
+        "labelsVi": [
+          "Rất trang trọng",
+          "Trang trọng",
+          "Trung tính",
+          "Thoải mái",
+          "Suồng sã"
+        ],
+        "currentFillRate": 0.307
+      },
+      {
+        "id": "cog_patience",
+        "group": "Cách nói & chấm điểm",
+        "question": "Khi máy móc hiểu sai ý, anh/chị kiên nhẫn tới mức nào?",
+        "values": [
+          "Very high",
+          "High",
+          "Moderate",
+          "Low",
+          "None"
+        ],
+        "labelsVi": [
+          "Rất kiên nhẫn",
+          "Kiên nhẫn",
+          "Vừa phải",
+          "Ít kiên nhẫn",
+          "Bỏ luôn"
+        ],
+        "currentFillRate": 0.287
+      },
+      {
+        "id": "cog_skepticism",
+        "group": "Cách nói & chấm điểm",
+        "question": "Khi trợ lý đưa thông tin, anh/chị có kiểm chứng lại không?",
+        "values": [
+          "Very high",
+          "High",
+          "Moderate",
+          "Low",
+          "None"
+        ],
+        "labelsVi": [
+          "Luôn kiểm chứng",
+          "Thường kiểm chứng",
+          "Thỉnh thoảng",
+          "Hiếm khi",
+          "Tin luôn"
+        ],
+        "currentFillRate": 0.292
+      },
+      {
+        "id": "tech_savviness",
+        "group": "Thái độ",
+        "question": "Anh/chị tiếp cận công nghệ mới thế nào?",
+        "values": [
+          "Digital native",
+          "Comfortable",
+          "Cautious adopter",
+          "Reluctant",
+          "Avoidant"
+        ],
+        "labelsVi": [
+          "Rất rành",
+          "Thoải mái",
+          "Thận trọng thử",
+          "Ngại dùng",
+          "Tránh né"
+        ]
+      },
+      {
+        "id": "risk_tolerance",
+        "group": "Thái độ",
+        "question": "Mức chấp nhận rủi ro của anh/chị?",
+        "values": [
+          "Risk-averse",
+          "Cautious",
+          "Balanced",
+          "Risk-tolerant",
+          "Risk-seeking"
+        ],
+        "labelsVi": [
+          "Rất ngại rủi ro",
+          "Thận trọng",
+          "Cân bằng",
+          "Chấp nhận rủi ro",
+          "Thích mạo hiểm"
+        ]
+      },
+      {
+        "id": "decision_style",
+        "group": "Thái độ",
+        "question": "Anh/chị ra quyết định theo kiểu?",
+        "values": [
+          "Analytical",
+          "Intuitive",
+          "Consensus-driven",
+          "Directive",
+          "Deliberative"
+        ],
+        "labelsVi": [
+          "Phân tích kỹ",
+          "Theo trực giác",
+          "Hỏi ý mọi người",
+          "Quyết đoán",
+          "Cân nhắc lâu"
+        ]
+      },
+      {
+        "id": "lang_vietnamese",
+        "group": "Ngôn ngữ",
+        "question": "Trình độ tiếng Việt?",
+        "values": [
+          "Native",
+          "Fluent",
+          "Conversational",
+          "Basic",
+          "None"
+        ],
+        "labelsVi": [
+          "Tiếng mẹ đẻ",
+          "Thành thạo",
+          "Giao tiếp được",
+          "Cơ bản",
+          "Không biết"
+        ]
+      },
+      {
+        "id": "register",
+        "group": "Ngôn ngữ",
+        "question": "Cách dùng từ hằng ngày của anh/chị gần với?",
+        "values": [
+          "Formal / standard",
+          "Colloquial",
+          "Regional dialect",
+          "Code-switching",
+          "Technical jargon"
+        ],
+        "labelsVi": [
+          "Chuẩn mực",
+          "Khẩu ngữ",
+          "Giọng/từ địa phương",
+          "Pha tiếng Anh",
+          "Nhiều thuật ngữ"
+        ]
+      },
+      {
+        "id": "multilingualism",
+        "group": "Ngôn ngữ",
+        "question": "Anh/chị dùng được mấy ngôn ngữ?",
+        "values": [
+          "Monolingual",
+          "Bilingual",
+          "Trilingual+"
+        ],
+        "labelsVi": [
+          "Một",
+          "Hai",
+          "Ba trở lên"
+        ]
+      },
+      {
+        "id": "primary_language",
+        "group": "Ngôn ngữ",
+        "question": "Ngôn ngữ chính anh/chị dùng hằng ngày?",
+        "values": [
+          "Vietnamese",
+          "English",
+          "Mandarin",
+          "French",
+          "Japanese"
+        ],
+        "note": "'Vietnamese' đã được thêm vào enum (schema 1291 chiều). Trước đây phải để trống."
+      },
+      {
+        "id": "vn_address_register",
+        "group": "Ngôn ngữ",
+        "question": "Anh/chị xưng hô thế nào khi nói với trợ lý trên xe?",
+        "values": [
+          "anh/em",
+          "chi/em",
+          "em/anh-chi",
+          "co-chu/con",
+          "bac/chau",
+          "toi/ban",
+          "minh/ban"
+        ],
+        "labelsVi": [
+          "anh–em",
+          "chị–em",
+          "em–anh/chị",
+          "cô-chú–con",
+          "bác–cháu",
+          "tôi–bạn",
+          "mình–bạn"
+        ],
+        "note": "Chiều mới index 1291. Phải khớp với age_bracket và gender_identity."
+      }
+    ]
+  },
+  "tierB": {
+    "note": "NÊN CÓ. Hỏi nếu người trả lời còn kiên nhẫn. Thiếu thì để null, không bịa.",
+    "dimensionIds": [
+      "demo_employment_status",
+      "years_experience",
+      "cult_vietnam",
+      "ind_transportation",
+      "domain",
+      "cultural_background",
+      "lifex_geographic_mobility",
+      "lifex_travel_breadth"
+    ]
+  },
+  "forbiddenValues": {
+    "note": "Validator phải loại. Đây là các lỗi ĐANG tồn tại trong kho hiện tại.",
+    "literalStrings": [
+      "null",
+      "Null",
+      "NULL",
+      "None",
+      "N/A",
+      "NA",
+      "Unknown",
+      "unknown",
+      ""
+    ],
+    "exception": {
+      "None": "Hợp lệ CHỈ khi 'None' nằm trong enum của chiều đó (vd skill_driving, cog_patience). Ở các chiều khác, 'None' là null bị serialize sai."
+    },
+    "observedProblems": [
+      {
+        "count": 255,
+        "dimension": "primary_language",
+        "value": "Vietnamese",
+        "issue": "Không nằm trong enum — enum chỉ có English/Mandarin/Spanish/Hindi/Arabic/French/Portuguese/Bengali/Russian/Japanese/German/Swahili."
+      },
+      {
+        "count": 1472,
+        "dimension": "6 chiều github/commit/pr/issue/code_review/release",
+        "value": "No coding activity",
+        "issue": "Không nằm trong enum của bất kỳ chiều nào trong nhóm."
+      },
+      {
+        "count": 82,
+        "dimension": "demo_household_income",
+        "value": "null",
+        "issue": "null bị ghi thành chuỗi 'null'."
+      },
+      {
+        "count": 71,
+        "dimension": "demo_driver_status",
+        "value": "null",
+        "issue": "null bị ghi thành chuỗi 'null'."
+      },
+      {
+        "count": 70,
+        "dimension": "age_bracket",
+        "value": "65+",
+        "issue": "Giá trị thô hơn enum; enum tách 65-74 / 75-84 / 85+."
+      }
+    ],
+    "corpusTotal": {
+      "assignments": 238528,
+      "outOfEnum": 6626,
+      "percent": 2.78,
+      "dimensionsAffected": 542
+    }
+  },
+  "schemaGaps": {
+    "note": "ĐÃ VÁ trong schema 1291 chiều. Giữ lại để ghi nhận lịch sử.",
+    "gaps": [
+      {
+        "id": "primary_language_missing_vietnamese",
+        "severity": "cao",
+        "problem": "primary_language không có giá trị 'Vietnamese'. 255 persona trong kho đang ghi giá trị ngoài enum.",
+        "workaroundNow": "ĐỂ TRỐNG primary_language. Dùng lang_vietnamese='Native' + cult_vietnam='Native' để biểu đạt.",
+        "properFix": "Thêm 'Vietnamese' vào enum của primary_language (không đổi số chiều, không đổi index).",
+        "status": "resolved",
+        "resolution": "Đã thêm 'Vietnamese' vào cuối enum primary_language (12->13 giá trị). Thêm ở cuối để không xô lệch mã 4-bit đã gán."
+      },
+      {
+        "id": "vn_address_register_missing",
+        "severity": "cao",
+        "problem": "Không có chiều nào cho hệ xưng hô tiếng Việt. register chỉ có Formal/Colloquial/Regional dialect/Code-switching/Technical jargon. Trong lượt chạy vita-full-3p9i persona lúc xưng 'tôi', lúc 'mình', lúc 'chị' — không nhất quán vì không có chiều nào quy định.",
+        "proposedDimension": {
+          "id": "vn_address_register",
+          "label": "Vietnamese address register",
+          "category": "Linguistic: Register",
+          "description": "Cặp đại từ persona dùng khi nói với trợ lý trên xe.",
+          "values": [
+            "anh/em",
+            "chị/em",
+            "em/anh-chị",
+            "cô-chú/con",
+            "bác/cháu",
+            "tôi/bạn",
+            "mình/bạn"
+          ],
+          "phrase": "addresses the assistant as {value}"
+        },
+        "impact": "targetDimensions 1290 -> 1291; phải cấp index mới ở cuối để không xô lệch index hiện có.",
+        "status": "resolved",
+        "resolution": "Đã thêm chiều vn_address_register ở index 1291. targetDimensions 1290->1291, ATTRIBUTE_COUNT 1291, ATTRIBUTE_BYTES 645->646."
+      }
+    ],
+    "migrationRequired": [
+      "persona/datasets/matraix-persona-1m/release/indexes/postings.sqlite phải dựng lại (mã đóng gói rộng 645 -> 646 byte).",
+      "Release parquet KHÔNG bị ảnh hưởng: mỗi chiều là một cột, chiều mới đọc ra null ở file cũ.",
+      "541 persona hiện có sẽ có vn_address_register = null cho tới khi được điền."
+    ]
+  },
+  "pipeline": {
+    "note": "Dùng đúng khuôn sẵn có của repo. Quy tắc xác định, không LLM — giống GSS / ConvAI2 / Afrobarometer.",
+    "steps": [
+      "1. Viết persona/curation/existing_data/scripts/crosswalks/vn_drivers.py ánh xạ câu hỏi khảo sát -> dimension id.",
+      "2. observed, _, _ = apply_crosswalk(row, CROSSWALK, allowed)",
+      "3. fields = normalize([], order, allowed, observed=observed)   # -> 1290 trường",
+      "4. python scripts/validate_vn_driver_persona.py --input <jsonl.gz>   # chuẩn này",
+      "5. python persona/human_extraction/scripts/validate_extraction.py --input <jsonl.gz> --schema persona/schema/dimensions.json   # 0 lỗi"
+    ],
+    "provenance": "observed cho chiều có câu trả lời thật; unobserved cho phần còn lại. Mơ hồ -> null, không đoán."
+  },
+  "sampleSize": {
+    "minimumForPersonaBreakdown": 20,
+    "recommended": 30,
+    "reason": "Lượt chạy vita-full-3p9i chỉ có 3 persona, mỗi người 46 hội thoại. Bảng điểm theo persona ở quy mô đó chỉ để tham khảo."
+  }
+}

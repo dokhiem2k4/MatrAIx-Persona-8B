@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 8,
+  "seed": {
+    "rowId": "row-0546",
+    "scenario": "Tôi đang lái xe trên quốc lộ để đi khảo sát thực địa dự án hạ tầng, sự chú ý dồn hết vào mặt đường và các cảnh báo.",
+    "firstInput": "Vita, đèn cảnh báo lốp nghĩa là gì.",
+    "intentCode": "my_car",
+    "subintentCode": "warning_explanation",
+    "subintentName": "Giải thích cảnh báo",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

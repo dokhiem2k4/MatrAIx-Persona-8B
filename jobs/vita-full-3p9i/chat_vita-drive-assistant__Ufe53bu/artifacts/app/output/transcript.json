@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, kiểm tra giúp tôi xem pin còn đủ chạy chuyến ra ngoại thành không nhé."
+    },
+    {
+      "role": "support",
+      "content": "Pin hiện còn 78%, dự kiến đi được khoảng 312 km. Bạn có thể kiểm tra thêm thông tin lộ trình cụ thể nếu cần."
+    },
+    {
+      "role": "customer",
+      "content": "78% là ổn rồi. Nhẵn giúp tôi thêm áp suất lốp 4 bánh xem sao nhé, để tôi yên tâm chạy xe."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại của xe bạn như sau: - Trước trái: 2.4 bar - Trước phải: 2.4 bar - Sau trái: 2.3 bar - Sau phải: 2.4 bar Cả bốn bánh đều trong ngưỡng bình thường, bạn yên tâm chạy nhé. Lốp sau trái hơi thấp hơn một chút (2.3 bar) nhưng vẫn ổn, không cần bơm gấp."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita, thế thì yên tâm rồi. Tiện thể bật giúp tôi bản nhạc nhẹ để nghe cho thư thái nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã mở nhạc nhẹ thư giãn không lời."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

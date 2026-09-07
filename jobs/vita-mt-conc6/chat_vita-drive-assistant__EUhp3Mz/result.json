@@ -1,0 +1,133 @@
+{
+    "id": "e2f827b1-b702-4639-b67a-b101cc9b2007",
+    "task_name": "application/vita-drive-assistant",
+    "trial_name": "chat_vita-drive-assistant__EUhp3Mz",
+    "trial_uri": "file:///home/khiemdm/orca/workspaces/MatrAIx-Persona-8B/pearleye/jobs/vita-mt-conc6/chat_vita-drive-assistant__EUhp3Mz",
+    "task_id": {
+        "path": "application/tasks/chat_vita-drive-assistant"
+    },
+    "source": null,
+    "task_checksum": "7ec689831c62a5dc3e84d0d6cce044da1360c427bd015f5da54dfc62b5dc8f83",
+    "config": {
+        "task": {
+            "path": "application/tasks/chat_vita-drive-assistant",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "chat_vita-drive-assistant__EUhp3Mz",
+        "trials_dir": "jobs/vita-mt-conc6",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "persona-user-sim",
+            "import_path": null,
+            "model_name": "openrouter/google/gemini-3.8-flash",
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-4531fd26332b.yaml",
+                "seed": {
+                    "row_id": "row-0162",
+                    "scenario": "Tôi đang chạy xe một mình đến địa điểm họp báo quan trọng, đã trễ hơn dự kiến và đang lo không kịp giờ.",
+                    "first_input": "Vita, còn bao lâu tới nơi?",
+                    "intent_code": "journey_navigation_places",
+                    "subintent_code": "traffic_eta",
+                    "subintent_name": "Giao thông và thời gian dự kiến đến nơi (ETA)",
+                    "vehicle_state": "driving",
+                    "ASSISTANT_MODE": "quiet",
+                    "persona_id": "wiki-4531fd26332b"
+                },
+                "model_info": {
+                    "max_input_tokens": 72000,
+                    "max_output_tokens": 16384
+                }
+            },
+            "env": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "host",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "env": {},
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {},
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "986c91ff-9a88-4eec-9b78-d145b7a2d661"
+    },
+    "agent_info": {
+        "name": "persona-user-sim",
+        "version": "1.0.0",
+        "model_info": {
+            "name": "google/gemini-3.8-flash",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 15380,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 2790,
+        "cost_usd": 0.0219975,
+        "rollout_details": null,
+        "metadata": {
+            "request_id": "gen-1788422474-WzxRfbwwT2bTmhhdeubW",
+            "model": "google/gemini-3.8-flash",
+            "provider": "openrouter",
+            "cost_source": "provider"
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-09-03T07:59:32.904519Z",
+    "finished_at": "2026-09-03T08:01:33.399948Z",
+    "environment_setup": {
+        "started_at": "2026-09-03T07:59:32.912551Z",
+        "finished_at": "2026-09-03T07:59:32.912804Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-03T07:59:32.912827Z",
+        "finished_at": "2026-09-03T07:59:32.912844Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-03T07:59:32.912878Z",
+        "finished_at": "2026-09-03T08:01:33.361768Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-03T08:01:33.364097Z",
+        "finished_at": "2026-09-03T08:01:33.399881Z"
+    },
+    "step_results": null
+}

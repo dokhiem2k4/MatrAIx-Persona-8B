@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, buồn ngủ quá rồi, kể cho anh nghe một câu chuyện cười ngắn thật vui để tỉnh táo lái tiếp xem nào."
+    },
+    {
+      "role": "support",
+      "content": "Mình có một câu chuyện cười ngắn này: Một anh chàng hỏi bạn: \"Cho tao mượn 1 triệu đi!\", bạn trả lời: \"Tao chỉ có 500k thôi.\" Anh chàng bảo: \"Thế cũng được, mày nợ tao 500k còn lại nhé!\" Nghe xong tỉnh táo chưa bạn? Nhưng nếu thấy buồn ngủ quá, mình khuyên bạn nên tấp vào trạm dừng nghỉ gần nhất để nghỉ ngơi một lát nhé, an toàn là trên hết."
+    },
+    {
+      "role": "customer",
+      "content": "Cũng tếu phết đấy! Tiện thể chỉnh giúp anh điều hòa hàng ghế lái tăng lên 25 độ và bật chế độ thông gió ghế nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã chỉnh điều hòa ghế lái lên 25°C và bật thông gió ghế cho bạn rồi nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Tuyệt vời, cảm ơn Vita nhé. Giờ mở giúp anh bản đồ tìm trạm sạc điện gần nhất trên tuyến đường này luôn nha."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã mở bản đồ và tìm trạm sạc điện gần nhất trên tuyến đường này cho bạn rồi nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

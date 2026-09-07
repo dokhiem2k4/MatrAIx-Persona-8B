@@ -11,6 +11,8 @@ export interface ToneChipProps {
   showDot?: boolean;
   pulseDot?: boolean;
   className?: string;
+  /** Native tooltip — lets a truncated chip still reveal its full text. */
+  title?: string;
   children: ReactNode;
 }
 
@@ -31,12 +33,14 @@ export function ToneChip({
   showDot = false,
   pulseDot = false,
   className = "",
+  title,
   children,
 }: ToneChipProps) {
   const toneClass = TONE_CLASS[tone];
   const variant = solid ? "tone-chip--solid" : muted ? "tone-chip--muted" : toneClass;
   return (
     <span
+      title={title}
       className={`tone-chip ${solid ? `${toneClass} tone-chip--solid` : variant} ${showDot ? "tone-chip--with-dot" : ""} ${pulseDot ? "tone-chip--pulse-dot" : ""} ${className}`}
     >
       {showDot && <span className="tone-chip__dot" aria-hidden />}

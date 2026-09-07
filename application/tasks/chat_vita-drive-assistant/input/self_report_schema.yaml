@@ -7,10 +7,20 @@ fields:
     prompt: Trợ lý Vita có đáp ứng tốt yêu cầu điều khiển/hỗ trợ của bạn không?
     kind: enum
     choices: [yes, partially, no]
+    explanation:
+      key: needNotes
+      prompt: >-
+        Dẫn số lượt (turn N) cho thấy yêu cầu được đáp ứng hay bị bỏ sót, và
+        nêu điều gì ở tình huống của bạn khiến bạn đánh giá như vậy.
   - key: personalPreferenceSatisfaction
     prompt: Giọng điệu và cách phản hồi có phù hợp với bạn khi lái xe không?
     kind: enum
     choices: [yes, partially, no]
+    explanation:
+      key: preferenceNotes
+      prompt: >-
+        Dẫn số lượt (turn N) có cách nói khiến bạn thấy hợp hoặc không hợp, và
+        nêu đặc điểm nào của bản thân bạn khiến bạn cảm nhận như thế.
   - key: overallExperienceRating
     prompt: Đánh giá tổng quan trải nghiệm từ 1 đến 10?
     kind: integer
@@ -18,7 +28,10 @@ fields:
     maximum: 10
     explanation:
       key: reason
-      prompt: Nêu ngắn gọn lý do cho số điểm trên.
+      prompt: >-
+        Vì sao đúng số điểm này chứ không cao hơn hay thấp hơn một bậc? Dẫn số
+        lượt (turn N) cụ thể, và nêu kỳ vọng nào của riêng bạn đã được hoặc
+        không được đáp ứng.
   - key: askedUsefulClarificationQuestions
     prompt: Trợ lý có hỏi lại hoặc xác nhận an toàn khi cần thiết không?
     kind: boolean

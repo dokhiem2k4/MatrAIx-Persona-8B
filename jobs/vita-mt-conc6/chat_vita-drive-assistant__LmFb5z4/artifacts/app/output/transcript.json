@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita, đằng trước có vẻ ùn ứ rồi đấy. Tìm ngay cho tôi lộ trình khác vòng qua cao tốc, tôi đang có việc gấp."
+    },
+    {
+      "role": "support",
+      "content": "Tôi thấy hiện tại xe chưa có điểm đến nào đang được thiết lập. Bạn muốn tôi tìm lộ trình đi đâu?"
+    },
+    {
+      "role": "customer",
+      "content": "Dẫn đường về Tòa nhà Landmark 81 gấp, chọn đường nào nhanh nhất né cao tốc ra. Tiện thể kiểm tra xem pin còn đủ chạy không."
+    },
+    {
+      "role": "support",
+      "content": "Đã bắt đầu dẫn đường đến Landmark 81, chọn đường né cao tốc. Tuyến đường dài 40,8 km, dự kiến mất khoảng 131 phút. Còn kiểm tra pin thì mình chưa có thông tin pin hiện tại, bạn xem trên màn hình giúp mình nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Trợ lý xe kiểu gì mà không đọc được pin thế? Thôi chuyển xe sang chế độ Sport và hạ điều hòa ghế lái xuống 21 độ đi, đi đường này mất thời gian quá."
+    },
+    {
+      "role": "support",
+      "content": "Bạn xác nhận muốn chuyển sang chế độ lái Sport chứ?"
+    },
+    {
+      "role": "customer",
+      "content": "Đúng rồi, chuyển Sport ngay đi. Với chỉnh cả điều hòa ghế lái xuống 21 độ nữa, làm nhanh giúp tôi."
+    },
+    {
+      "role": "support",
+      "content": "Đã chỉnh điều hòa ghế lái xuống 21°C. Còn chuyển sang chế độ Sport thì mình chưa thấy kết quả thực hiện, bạn có thể thử lại không?"
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, bụi đường bay vào nhiều quá, đóng giúp tôi tất cả các cửa kính lại với."
+    },
+    {
+      "role": "support",
+      "content": "Đã chỉnh tất cả cửa sổ về 0%."
+    },
+    {
+      "role": "customer",
+      "content": "Bật giúp tôi chế độ lấy gió trong luôn nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật lấy gió trong."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita, tiện thể kiểm tra giúp tôi áp suất lốp 4 bánh xem có ổn không."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Cả bốn bánh đều trong ngưỡng an toàn, bạn yên tâm nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Tốt quá, cảm ơn Vita nhé. Tôi chạy tiếp đây."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn. Chúc bạn lái xe an toàn!"
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

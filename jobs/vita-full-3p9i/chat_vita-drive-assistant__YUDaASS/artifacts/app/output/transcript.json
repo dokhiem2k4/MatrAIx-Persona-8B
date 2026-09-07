@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, đường dài quá hơi buồn ngủ, tìm hộ tôi cái gì hay hay để nghe giải trí dọc đường với."
+    },
+    {
+      "role": "support",
+      "content": ":"
+    },
+    {
+      "role": "customer",
+      "content": "Vita ơi, hình như em bị lỗi hay sao mà không nói gì thế? Tôi đang muốn nghe mấy chương trình thể thao hoặc tin tức cũ cho đỡ buồn ngủ."
+    },
+    {
+      "role": "support",
+      "content": "Mình thấy bạn đang nghe nhạc EDM remix rồi. Để mình chuyển sang nội dung thể thao hoặc tin tức nhé. Bạn muốn nghe về môn thể thao nào, hay tin tức tổng hợp?"
+    },
+    {
+      "role": "customer",
+      "content": "Tôi thích bóng bàn, xem có bản tin nào về giải đấu gần đây hay phân tích kỹ thuật thì mở giúp tôi nhé. À tiện thể điều chỉnh nhiệt độ điều hòa xuống 22 độ giúp luôn nha."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã tìm được một số tin tức về giải bóng bàn quốc gia 2026, nổi bật là Đinh Anh Hoàng bảo vệ ngôi vô địch đơn nam và Trần Mai Ngọc giành HCV đơn nữ. Nhiệt độ điều hòa phía bạn đã được chỉnh xuống 22°C rồi nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Tuyệt vời, đúng cái tôi đang quan tâm đấy. Cứ phát tiếp bản tin này và mở loa to lên một chút cho dễ nghe nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã tăng loa lên mức 55 và tiếp tục phát bản tin nhé bạn."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

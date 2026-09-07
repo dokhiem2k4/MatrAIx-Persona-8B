@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, cho tôi hỏi tập đoàn Vingroup hiện tại đang hoạt động chính trong những lĩnh vực nào nhỉ?"
+    },
+    {
+      "role": "support",
+      "content": "Hiện tại Vingroup hoạt động với 5 trụ cột chính: Công nghệ - Công nghiệp, Thương mại Dịch vụ, Hạ tầng, Năng lượng xanh và Thiện nguyện Xã hội. Ngoài ra tập đoàn cũng đang đẩy mạnh thêm lĩnh vực văn hóa."
+    },
+    {
+      "role": "customer",
+      "content": "Ừ, cảm ơn em. Nhân tiện điều chỉnh giúp tôi nhiệt độ điều hòa bên ghế lái xuống 21 độ C và bật quạt gió mức trung bình nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã điều chỉnh nhiệt độ ghế lái xuống 21°C và bật quạt gió mức trung bình rồi bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Tốt lắm. Giờ kiểm tra giúp tôi dung lượng pin còn lại và áp suất 4 lốp xe hiện tại ra sao."
+    },
+    {
+      "role": "support",
+      "content": "Pin còn 78%, đi được khoảng 312 km. Áp suất lốp: trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar."
+    },
+    {
+      "role": "customer",
+      "content": "Mọi thứ đều ổn định, cảm ơn Vita nhé."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn. Mình luôn sẵn sàng hỗ trợ nếu cần nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

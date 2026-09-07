@@ -22,12 +22,22 @@ from matraix.persona_job import (
 
 from backend.service.persona_sampling_alloc import sample_proportional_from_buckets
 
+# Order matters: the card renders the first four that are populated, skipping
+# any the persona lacks. Country-level locality leads because it is the
+# specific one -- every Vietnamese persona shares "Southeast Asia", so that
+# row costs a line and tells the reader nothing, while "Hà Nội" vs "Mekong
+# Delta" changes what an in-car assistant gets asked. Personas without a
+# locality fall through to region unchanged.
+# life_stage sits ahead of intent because it says something durable about the
+# person -- "Retirement", "Parent of young kids" -- while intent is what they
+# happen to want in one session and reads as noise on a persona card.
 PERSONA_CARD_DIMENSIONS = (
     "age_bracket",
-    "region",
+    "vn_locality",
     "domain",
-    "intent",
     "life_stage",
+    "region",
+    "intent",
     "source",
 )
 

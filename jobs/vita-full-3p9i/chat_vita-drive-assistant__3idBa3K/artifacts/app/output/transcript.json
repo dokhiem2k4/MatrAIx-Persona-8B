@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, giảm âm lượng nhạc xuống một chút giúp tôi nhé, đang qua đoạn đường trường học hơi đông."
+    },
+    {
+      "role": "support",
+      "content": "Đã chỉnh âm lượng về 35%."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita, vừa vặn rồi đấy. Tiện thể bật giúp tôi chế độ sưởi nhẹ cho ghế lái nhé, hơi mỏi lưng chút."
+    },
+    {
+      "role": "support",
+      "content": "Xe VF9 không có chức năng sưởi ghế, bạn nhé. Mình có thể bật massage ghế lái ở chế độ relax nếu bạn muốn thư giãn lưng."
+    },
+    {
+      "role": "customer",
+      "content": "Ừ đúng rồi, xe mình có thông gió với massage chứ nhỉ, bật chế độ massage nhẹ giúp tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật massage ghế chế độ relax."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

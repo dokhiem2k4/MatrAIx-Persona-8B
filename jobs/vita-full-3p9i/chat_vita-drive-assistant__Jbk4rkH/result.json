@@ -1,0 +1,133 @@
+{
+    "id": "ab9b1f19-30f2-4192-8e6a-396aa2000138",
+    "task_name": "application/vita-drive-assistant",
+    "trial_name": "chat_vita-drive-assistant__Jbk4rkH",
+    "trial_uri": "file:///home/khiemdm/orca/workspaces/MatrAIx-Persona-8B/pearleye/jobs/vita-full-3p9i/chat_vita-drive-assistant__Jbk4rkH",
+    "task_id": {
+        "path": "application/tasks/chat_vita-drive-assistant"
+    },
+    "source": null,
+    "task_checksum": "7ec689831c62a5dc3e84d0d6cce044da1360c427bd015f5da54dfc62b5dc8f83",
+    "config": {
+        "task": {
+            "path": "application/tasks/chat_vita-drive-assistant",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "chat_vita-drive-assistant__Jbk4rkH",
+        "trials_dir": "jobs/vita-full-3p9i",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "persona-user-sim",
+            "import_path": null,
+            "model_name": "openrouter/google/gemini-3.5-flash-lite",
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-62706e3ac3c2.yaml",
+                "seed": {
+                    "row_id": "row-0792",
+                    "scenario": "Tôi đang lái chiếc VF9 chạy trên đại lộ lúc sáng sớm để đến sân bóng đá tập trận cùng đội, tâm trạng đang rất phấn chấn và hào hứng.",
+                    "first_input": "ViTa ơi, khi đang lái xe thì tôi có thể nhờ bạn làm những gì?",
+                    "intent_code": "vita_profile_settings",
+                    "subintent_code": "vita_capabilities_usage",
+                    "subintent_name": "Khả năng và cách sử dụng ViTa",
+                    "vehicle_state": "driving",
+                    "ASSISTANT_MODE": "quiet",
+                    "persona_id": "wiki-62706e3ac3c2"
+                },
+                "model_info": {
+                    "max_input_tokens": 72000,
+                    "max_output_tokens": 16384
+                }
+            },
+            "env": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "host",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "env": {},
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {},
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "5e8d9843-08a8-4205-87a0-b5f811078438"
+    },
+    "agent_info": {
+        "name": "persona-user-sim",
+        "version": "1.0.0",
+        "model_info": {
+            "name": "google/gemini-3.5-flash-lite",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 13041,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 610,
+        "cost_usd": 0.0054373,
+        "rollout_details": null,
+        "metadata": {
+            "request_id": "gen-1788427681-HqLg11OPplNfDjB1NvTg",
+            "model": "google/gemini-3.5-flash-lite",
+            "provider": "openrouter",
+            "cost_source": "provider"
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-09-03T09:27:09.970778Z",
+    "finished_at": "2026-09-03T09:28:18.116183Z",
+    "environment_setup": {
+        "started_at": "2026-09-03T09:27:09.979318Z",
+        "finished_at": "2026-09-03T09:27:09.979580Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-03T09:27:09.979606Z",
+        "finished_at": "2026-09-03T09:27:09.979624Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-03T09:27:09.979660Z",
+        "finished_at": "2026-09-03T09:28:16.002834Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-03T09:28:16.008281Z",
+        "finished_at": "2026-09-03T09:28:18.115897Z"
+    },
+    "step_results": null
+}

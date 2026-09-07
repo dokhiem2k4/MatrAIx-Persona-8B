@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Chào Vita, tôi đang lái xe đến nhà thi đấu tập bóng bàn đây. Hôm nay thời tiết đẹp, bạn có thể giúp tôi những việc gì trên chiếc xe này nhỉ?"
+    },
+    {
+      "role": "support",
+      "content": "Chào bạn! Mình có thể giúp bạn điều khiển điều hòa, cửa kính, đèn, khóa cửa, gương, ghế, và một số tiện ích khác. Bạn cần gì cứ nói nhé!"
+    },
+    {
+      "role": "customer",
+      "content": "Vậy bạn giúp tôi chỉnh nhiệt độ bên ghế lái xuống 21 độ và bật chế độ thông gió ghế nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã chỉnh nhiệt độ ghế lái xuống 21°C và bật thông gió ghế."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn bạn, mát mẻ dễ chịu hẳn. Tiện thể kiểm tra hộ tôi áp suất lốp 4 bánh xem sao nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: bánh trước trái 2,4 bar, trước phải 2,4 bar, sau trái 2,3 bar, sau phải 2,4 bar. Tất cả đều trong ngưỡng an toàn."
+    },
+    {
+      "role": "customer",
+      "content": "Rất tốt, cảm ơn bạn. Chúc bạn một ngày làm việc hiệu quả nhé!"
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn! Chúc bạn lái xe an toàn và có một ngày tuyệt vời nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

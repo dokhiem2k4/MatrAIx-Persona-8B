@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, từ bây giờ bạn trả lời ngắn gọn và súc tích thôi nhé, để tôi tập trung lái xe."
+    },
+    {
+      "role": "support",
+      "content": "Vâng, mình sẽ nói ngắn gọn thôi ạ."
+    },
+    {
+      "role": "customer",
+      "content": "Tôi muốn kiểm tra xem pin còn lại bao nhiêu phần trăm và đi được khoảng bao nhiêu cây số nữa."
+    },
+    {
+      "role": "support",
+      "content": "Pin hiện còn 78%, đi được khoảng 312 km nữa bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn bạn. Bây giờ hãy giảm nhiệt độ điều hòa xuống 22 độ và bật thông gió ghế lái giúp tôi."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã kiểm tra trạng thái xe. Hiện điều hòa đang tắt, ghế lái chưa bật thông gió. Xe đang ở số P nên mình có thể thực hiện. Đã đặt nhiệt độ điều hòa xuống 22°C và bật thông gió ghế lái cho bạn."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

@@ -139,6 +139,13 @@ def estimate_completion_cost_usd(
                     value = None
                 if value is not None and value > 0:
                     return value, "provider"
+        # OpenRouter bills per request and reports it on ``usage.cost`` rather
+        # than the litellm-proxy ``_hidden_params`` convention above. Without
+        # this branch every openrouter/* run reports no cost at all, because
+        # litellm's model_cost table does not carry OpenRouter's model ids.
+        usage_cost = _provider_usage_cost(getattr(completion, "usage", None))
+        if usage_cost is not None:
+            return usage_cost, "provider"
         try:
             import litellm
 
@@ -279,3 +286,27 @@ def _maybe_int(value: Any) -> Optional[int]:
         return int(value)
     except (TypeError, ValueError):
         return None
+
+
+def _provider_usage_cost(usage: Any) -> Optional[float]:
+    """Return a positive ``usage.cost`` reported by the provider, else ``None``.
+
+    OpenRouter puts the billed amount on the usage block. The OpenAI SDK keeps
+    unknown fields in ``model_extra``, so check both spellings.
+    """
+    if usage is None:
+        return None
+    raw = getattr(usage, "cost", None)
+    if raw is None and isinstance(usage, Mapping):
+        raw = usage.get("cost")
+    if raw is None:
+        extra = getattr(usage, "model_extra", None)
+        if isinstance(extra, Mapping):
+            raw = extra.get("cost")
+    if raw is None:
+        return None
+    try:
+        value = float(raw)
+    except (TypeError, ValueError):
+        return None
+    return value if value > 0 else None

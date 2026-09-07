@@ -1,0 +1,48 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, bật giúp tôi chế độ thông gió ghế lái mức 2 với, ngồi lái nãy giờ hơi mồ hôi lưng."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt thông gió ghế mức 2."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Tiện thể giảm nhiệt độ điều hòa khu vực của tôi xuống 22 độ giúp nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt nhiệt độ ghế lái 22 độ."
+    },
+    {
+      "role": "customer",
+      "content": "Ủa Vita, tôi bảo giảm nhiệt độ điều hòa xuống 22 độ mà, sao lại chỉnh nhiệt độ ghế? Chỉnh lại giúp tôi điều hòa thành 22 độ nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt nhiệt độ ghế lái 22 độ."
+    },
+    {
+      "role": "customer",
+      "content": "Hình như Vita bị nhầm rồi, tôi bảo là nhiệt độ điều hòa khu vực ghế lái chứ không phải nhiệt độ ghế. Chỉnh lại nhiệt độ điều hòa xuống 22 độ cho tôi nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt nhiệt độ ghế lái 22 độ."
+    },
+    {
+      "role": "customer",
+      "content": "Thôi bỏ đi Vita, hình như hệ thống đang lỗi rồi. Tắt giúp tôi tính năng thông gió ghế lái luôn nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã tắt thông gió ghế."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

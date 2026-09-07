@@ -1,0 +1,48 @@
+{
+    "id": "986c91ff-9a88-4eec-9b78-d145b7a2d661",
+    "started_at": "2026-09-03T14:56:42.093942",
+    "updated_at": "2026-09-03T15:01:33.402870",
+    "finished_at": "2026-09-03T15:01:33.402870",
+    "n_total_trials": 6,
+    "stats": {
+        "n_completed_trials": 6,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "persona-user-sim__google/gemini-3.8-flash__adhoc": {
+                "n_trials": 6,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "pass_at_k": {
+                    "2": 1.0,
+                    "4": 1.0,
+                    "5": 1.0
+                },
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "chat_vita-drive-assistant__Cr8sbtW",
+                            "chat_vita-drive-assistant__uNWFcFe",
+                            "chat_vita-drive-assistant__SXc9nwz",
+                            "chat_vita-drive-assistant__LmFb5z4",
+                            "chat_vita-drive-assistant__vZikctj",
+                            "chat_vita-drive-assistant__EUhp3Mz"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 107809,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 15296,
+        "cost_usd": 0.13821675
+    }
+}

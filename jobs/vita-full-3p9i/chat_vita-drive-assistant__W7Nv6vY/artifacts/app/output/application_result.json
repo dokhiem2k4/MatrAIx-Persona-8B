@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 3,
+  "seed": {
+    "rowId": "row-0576",
+    "scenario": "Tôi đang trên đường đi mua dụng cụ thể thao thì thấy màn hình hiện đèn cảnh báo lạ, lòng hơi băn khoăn chút ít.",
+    "firstInput": "Vita, đèn cảnh báo lốp xe có nghĩa là gì vậy.",
+    "intentCode": "my_car",
+    "subintentCode": "warning_explanation",
+    "subintentName": "Giải thích cảnh báo",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-9f3c655902f2"
+  }
+}

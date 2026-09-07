@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 3,
+  "seed": {
+    "rowId": "row-0498",
+    "scenario": "Tôi đang lái xe tiến vào khu vực tòa nhà văn phòng và muốn tìm lối vào bãi đỗ xe ngầm.",
+    "firstInput": "Tôi sắp đến rồi, bật hướng dẫn vào bãi đỗ của tòa nhà nhé.",
+    "intentCode": "journey_navigation_places",
+    "subintentCode": "parking_arrival",
+    "subintentName": "Đỗ xe/đến nơi",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-9f3c655902f2"
+  }
+}

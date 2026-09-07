@@ -1,0 +1,602 @@
+[
+  {
+    "questionId": "q0",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_status",
+    "subintent_name": "Trạng thái xe",
+    "seed_input": "Xe đang chạy hay đang đỗ?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q1",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_status",
+    "subintent_name": "Trạng thái xe",
+    "seed_input": "Xe đang chạy hay đang đỗ?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q2",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_status",
+    "subintent_name": "Trạng thái xe",
+    "seed_input": "Cho tôi biết trạng thái hiện tại của xe.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q3",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_status",
+    "subintent_name": "Trạng thái xe",
+    "seed_input": "Cho tôi biết trạng thái hiện tại của xe.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q4",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_status",
+    "subintent_name": "Trạng thái xe",
+    "seed_input": "Xe hiện đang ở trạng thái nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q5",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_status",
+    "subintent_name": "Trạng thái xe",
+    "seed_input": "Xe hiện đang ở trạng thái nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q6",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_status",
+    "subintent_name": "Trạng thái xe",
+    "seed_input": "Xe đã đỗ hẳn chưa?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q7",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_status",
+    "subintent_name": "Trạng thái xe",
+    "seed_input": "Xe đã đỗ hẳn chưa?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q8",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_status",
+    "subintent_name": "Trạng thái xe",
+    "seed_input": "Trạng thái xe bây giờ thế nào?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q9",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_status",
+    "subintent_name": "Trạng thái xe",
+    "seed_input": "Trạng thái xe bây giờ thế nào?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q10",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_status",
+    "subintent_name": "Trạng thái xe",
+    "seed_input": "Kiểm tra xem xe đang chạy hay đỗ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q11",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_status",
+    "subintent_name": "Trạng thái xe",
+    "seed_input": "Kiểm tra xem xe đang chạy hay đỗ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q12",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "warning_explanation",
+    "subintent_name": "Giải thích cảnh báo",
+    "seed_input": "Đèn cảnh báo hình lốp xe có dấu chấm than nghĩa là gì?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q13",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "warning_explanation",
+    "subintent_name": "Giải thích cảnh báo",
+    "seed_input": "Đèn cảnh báo hình lốp xe có dấu chấm than nghĩa là gì?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q14",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "warning_explanation",
+    "subintent_name": "Giải thích cảnh báo",
+    "seed_input": "Biểu tượng bình ắc quy màu đỏ vừa sáng có ý nghĩa gì?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q15",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "warning_explanation",
+    "subintent_name": "Giải thích cảnh báo",
+    "seed_input": "Biểu tượng bình ắc quy màu đỏ vừa sáng có ý nghĩa gì?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q16",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "warning_explanation",
+    "subintent_name": "Giải thích cảnh báo",
+    "seed_input": "Màn hình đang báo nhiệt độ động cơ cao, cảnh báo đó nghĩa là gì?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q17",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "warning_explanation",
+    "subintent_name": "Giải thích cảnh báo",
+    "seed_input": "Màn hình đang báo nhiệt độ động cơ cao, cảnh báo đó nghĩa là gì?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q18",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "warning_explanation",
+    "subintent_name": "Giải thích cảnh báo",
+    "seed_input": "Xe đang đỗ và hiện biểu tượng vô-lăng kèm dấu chấm than, nó nghĩa là gì?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q19",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "warning_explanation",
+    "subintent_name": "Giải thích cảnh báo",
+    "seed_input": "Xe đang đỗ và hiện biểu tượng vô-lăng kèm dấu chấm than, nó nghĩa là gì?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q20",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "warning_explanation",
+    "subintent_name": "Giải thích cảnh báo",
+    "seed_input": "Đèn ABS sáng khi xe đang đỗ có nghĩa là gì?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q21",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "warning_explanation",
+    "subintent_name": "Giải thích cảnh báo",
+    "seed_input": "Đèn ABS sáng khi xe đang đỗ có nghĩa là gì?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q22",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "warning_explanation",
+    "subintent_name": "Giải thích cảnh báo",
+    "seed_input": "Cảnh báo chìa khóa không được phát hiện trên màn hình nghĩa là gì?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q23",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "warning_explanation",
+    "subintent_name": "Giải thích cảnh báo",
+    "seed_input": "Cảnh báo chìa khóa không được phát hiện trên màn hình nghĩa là gì?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q24",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "diagnostics",
+    "subintent_name": "Chẩn đoán",
+    "seed_input": "Động cơ đang rung bất thường khi xe chạy, chẩn đoán nhanh giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q25",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "diagnostics",
+    "subintent_name": "Chẩn đoán",
+    "seed_input": "Động cơ đang rung bất thường khi xe chạy, chẩn đoán nhanh giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q26",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "diagnostics",
+    "subintent_name": "Chẩn đoán",
+    "seed_input": "Xe đang chạy mà bị hụt ga, hãy kiểm tra nguyên nhân.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q27",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "diagnostics",
+    "subintent_name": "Chẩn đoán",
+    "seed_input": "Xe đang chạy mà bị hụt ga, hãy kiểm tra nguyên nhân.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q28",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "diagnostics",
+    "subintent_name": "Chẩn đoán",
+    "seed_input": "Xe đang chạy nhưng máy nóng và yếu đi, chẩn đoán ngay giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q29",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "diagnostics",
+    "subintent_name": "Chẩn đoán",
+    "seed_input": "Xe đang chạy nhưng máy nóng và yếu đi, chẩn đoán ngay giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q30",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "diagnostics",
+    "subintent_name": "Chẩn đoán",
+    "seed_input": "Xe đang đỗ, kiểm tra giúp vì sao động cơ rung khi chạy không tải.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q31",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "diagnostics",
+    "subintent_name": "Chẩn đoán",
+    "seed_input": "Xe đang đỗ, kiểm tra giúp vì sao động cơ rung khi chạy không tải.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q32",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "diagnostics",
+    "subintent_name": "Chẩn đoán",
+    "seed_input": "Tôi đã đỗ xe rồi, hãy chẩn đoán nguyên nhân điều hòa không thổi khí lạnh.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q33",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "diagnostics",
+    "subintent_name": "Chẩn đoán",
+    "seed_input": "Tôi đã đỗ xe rồi, hãy chẩn đoán nguyên nhân điều hòa không thổi khí lạnh.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q34",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "diagnostics",
+    "subintent_name": "Chẩn đoán",
+    "seed_input": "Xe đang ở bãi đỗ, kiểm tra toàn bộ để tìm nguyên nhân gần đây xe khó khởi động.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q35",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "diagnostics",
+    "subintent_name": "Chẩn đoán",
+    "seed_input": "Xe đang ở bãi đỗ, kiểm tra toàn bộ để tìm nguyên nhân gần đây xe khó khởi động.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q36",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "maintenance_service",
+    "subintent_name": "Bảo dưỡng/dịch vụ",
+    "seed_input": "Tôi đang lái xe, đặt lịch bảo dưỡng định kỳ vào sáng thứ Bảy giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q37",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "maintenance_service",
+    "subintent_name": "Bảo dưỡng/dịch vụ",
+    "seed_input": "Tôi đang lái xe, đặt lịch bảo dưỡng định kỳ vào sáng thứ Bảy giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q38",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "maintenance_service",
+    "subintent_name": "Bảo dưỡng/dịch vụ",
+    "seed_input": "Xe đang chạy, giúp tôi đặt lịch thay dầu vào chiều mai tại trung tâm dịch vụ gần nhất.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q39",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "maintenance_service",
+    "subintent_name": "Bảo dưỡng/dịch vụ",
+    "seed_input": "Xe đang chạy, giúp tôi đặt lịch thay dầu vào chiều mai tại trung tâm dịch vụ gần nhất.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q40",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "maintenance_service",
+    "subintent_name": "Bảo dưỡng/dịch vụ",
+    "seed_input": "Tôi đang lái xe và đồng hồ báo sắp đến hạn bảo dưỡng, hãy tìm trung tâm chính hãng gần nhất rồi đặt lịch sau 9 giờ sáng mai.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q41",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "maintenance_service",
+    "subintent_name": "Bảo dưỡng/dịch vụ",
+    "seed_input": "Tôi đang lái xe và đồng hồ báo sắp đến hạn bảo dưỡng, hãy tìm trung tâm chính hãng gần nhất rồi đặt lịch sau 9 giờ sáng mai.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q42",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "maintenance_service",
+    "subintent_name": "Bảo dưỡng/dịch vụ",
+    "seed_input": "Xe đang đỗ, đặt lịch kiểm tra và đảo lốp vào thứ Hai tới.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q43",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "maintenance_service",
+    "subintent_name": "Bảo dưỡng/dịch vụ",
+    "seed_input": "Xe đang đỗ, đặt lịch kiểm tra và đảo lốp vào thứ Hai tới.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q44",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "maintenance_service",
+    "subintent_name": "Bảo dưỡng/dịch vụ",
+    "seed_input": "Xe đang đỗ rồi, đặt lịch bảo dưỡng định kỳ cho tôi vào 9 giờ sáng thứ Bảy này nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q45",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "maintenance_service",
+    "subintent_name": "Bảo dưỡng/dịch vụ",
+    "seed_input": "Xe đang đỗ rồi, đặt lịch bảo dưỡng định kỳ cho tôi vào 9 giờ sáng thứ Bảy này nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q46",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "maintenance_service",
+    "subintent_name": "Bảo dưỡng/dịch vụ",
+    "seed_input": "Xe đang đỗ, giúp tôi đặt lịch thay dầu vào chiều mai.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q47",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "maintenance_service",
+    "subintent_name": "Bảo dưỡng/dịch vụ",
+    "seed_input": "Xe đang đỗ, giúp tôi đặt lịch thay dầu vào chiều mai.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q48",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_information",
+    "subintent_name": "Thông tin xe",
+    "seed_input": "Xe này có bao nhiêu túi khí?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q49",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_information",
+    "subintent_name": "Thông tin xe",
+    "seed_input": "Xe này có bao nhiêu túi khí?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q50",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_information",
+    "subintent_name": "Thông tin xe",
+    "seed_input": "Dung tích khoang hành lý của xe là bao nhiêu?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q51",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_information",
+    "subintent_name": "Thông tin xe",
+    "seed_input": "Dung tích khoang hành lý của xe là bao nhiêu?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q52",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_information",
+    "subintent_name": "Thông tin xe",
+    "seed_input": "Mẫu xe này dùng loại động cơ gì?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q53",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_information",
+    "subintent_name": "Thông tin xe",
+    "seed_input": "Mẫu xe này dùng loại động cơ gì?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q54",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_information",
+    "subintent_name": "Thông tin xe",
+    "seed_input": "Xe này có hỗ trợ Apple CarPlay không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q55",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_information",
+    "subintent_name": "Thông tin xe",
+    "seed_input": "Xe này có hỗ trợ Apple CarPlay không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q56",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_information",
+    "subintent_name": "Thông tin xe",
+    "seed_input": "Chiều dài cơ sở của xe là bao nhiêu?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q57",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_information",
+    "subintent_name": "Thông tin xe",
+    "seed_input": "Chiều dài cơ sở của xe là bao nhiêu?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q58",
+    "field": "scenario",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_information",
+    "subintent_name": "Thông tin xe",
+    "seed_input": "Xe này có những chế độ lái nào?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q59",
+    "field": "first_input",
+    "intent_code": "my_car",
+    "subintent_code": "vehicle_information",
+    "subintent_name": "Thông tin xe",
+    "seed_input": "Xe này có những chế độ lái nào?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  }
+]

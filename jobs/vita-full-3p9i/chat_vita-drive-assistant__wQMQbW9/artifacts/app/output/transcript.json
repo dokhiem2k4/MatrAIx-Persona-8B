@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, nhắn giùm anh cho Lan là anh bị kẹt xe chút chắc đến muộn khoảng mười phút nhé."
+    },
+    {
+      "role": "support",
+      "content": "Xe của mình hiện không hỗ trợ gửi tin nhắn hay truy cập danh bạ, nên mình không nhắn giùm cho Lan được. Bạn có thể dùng điện thoại để nhắn nhanh cho Lan nhé. Nếu cần mở loa ngoài hay hỗ trợ gì khác trong xe, mình sẵn sàng giúp."
+    },
+    {
+      "role": "customer",
+      "content": "Hơi bất tiện nhỉ, thôi không sao. Em chỉnh giúp anh điều hòa hạ xuống 22 độ và bật quạt gió mạnh lên chút để anh tỉnh táo cái nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã bật điều hòa, chỉnh xuống 22°C và tăng quạt gió lên mức mạnh rồi nhé. Hy vọng bạn tỉnh táo hơn."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em, đỡ ngột ngạt hẳn. Mà em kiểm tra giùm anh xem pin còn bao nhiêu phần trăm và áp suất lốp thế nào nhé?"
+    },
+    {
+      "role": "support",
+      "content": "Pin hiện còn 78%, đi được khoảng 312 km. Áp suất lốp: trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Tất cả đều ổn."
+    },
+    {
+      "role": "customer",
+      "content": "Tuyệt vời, cảm ơn Vita nhiều nhé! Giờ anh tập trung lái xe đây."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn! Chúc bạn lái xe an toàn và vui vẻ nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

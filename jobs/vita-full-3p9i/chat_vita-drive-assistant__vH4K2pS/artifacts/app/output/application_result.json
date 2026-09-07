@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 4,
+  "seed": {
+    "rowId": "row-0540",
+    "scenario": "Tôi đang lái chiếc VF9 trên đường vành đai để đến văn phòng bộ, tâm trạng rất tập trung và bình thản.",
+    "firstInput": "Vita, kiểm tra trạng thái xe.",
+    "intentCode": "my_car",
+    "subintentCode": "vehicle_status",
+    "subintentName": "Trạng thái xe",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

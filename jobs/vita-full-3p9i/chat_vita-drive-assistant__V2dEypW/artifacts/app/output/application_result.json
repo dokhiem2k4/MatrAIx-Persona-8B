@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 4,
+  "seed": {
+    "rowId": "row-0702",
+    "scenario": "Tôi đang lái xe gấp gáp trên đường phố đông đúc để tìm chỗ kiểm tra kỹ thuật định kỳ.",
+    "firstInput": "VinFast có xưởng dịch vụ nào làm việc vào Chủ nhật không.",
+    "intentCode": "vinfast_vingroup_brands",
+    "subintentCode": "vinfast_service_network",
+    "subintentName": "Hệ thống bán hàng và dịch vụ VinFast",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-9f3c655902f2"
+  }
+}

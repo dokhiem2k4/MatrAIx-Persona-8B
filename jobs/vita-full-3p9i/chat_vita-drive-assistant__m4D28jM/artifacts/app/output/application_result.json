@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 4,
+  "seed": {
+    "rowId": "row-0102",
+    "scenario": "Tôi đang lái xe trên đường cao tốc để đến công ty, vừa nhớ ra một việc quan trọng cần làm ngay.",
+    "firstInput": "Thêm việc cần làm là gửi báo cáo doanh số.",
+    "intentCode": "calendar_tasks",
+    "subintentCode": "task_management",
+    "subintentName": "Việc cần làm",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62706e3ac3c2"
+  }
+}

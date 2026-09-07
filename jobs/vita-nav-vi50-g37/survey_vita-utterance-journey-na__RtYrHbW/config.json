@@ -1,0 +1,65 @@
+{
+    "task": {
+        "path": "application/tasks/survey_vita-utterance-journey-navigation-places",
+        "git_url": null,
+        "git_commit_id": null,
+        "name": null,
+        "ref": null,
+        "overwrite": false,
+        "download_dir": null,
+        "source": null
+    },
+    "trial_name": "survey_vita-utterance-journey-na__RtYrHbW",
+    "trials_dir": "jobs/vita-nav-vi50-g37",
+    "timeout_multiplier": 4.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+        "name": "persona-json-survey",
+        "import_path": null,
+        "model_name": "openrouter/ag/gemini-3.7-flash-high",
+        "skills": [],
+        "override_timeout_sec": null,
+        "override_setup_timeout_sec": null,
+        "max_timeout_sec": null,
+        "extra_allowed_hosts": [],
+        "kwargs": {
+            "persona_path": "persona/datasets/matraix-persona-1m/cohorts/cohort-7729d026de5a/persona_wiki-59113b69156a.yaml",
+            "model_info": {
+                "max_input_tokens": 72000,
+                "max_output_tokens": 16384
+            }
+        },
+        "env": {},
+        "mcp_servers": []
+    },
+    "environment": {
+        "type": "host",
+        "import_path": null,
+        "force_build": false,
+        "delete": true,
+        "cpu_enforcement_policy": "auto",
+        "memory_enforcement_policy": "auto",
+        "override_cpus": null,
+        "override_memory_mb": null,
+        "override_storage_mb": null,
+        "override_gpus": null,
+        "override_tpu": null,
+        "mounts": null,
+        "extra_docker_compose": [],
+        "env": {},
+        "kwargs": {},
+        "extra_allowed_hosts": []
+    },
+    "verifier": {
+        "override_timeout_sec": null,
+        "max_timeout_sec": null,
+        "env": {},
+        "disable": false
+    },
+    "artifacts": [],
+    "extra_instruction_paths": [],
+    "job_id": "cd334449-33b5-4009-88b9-8f73477241ac"
+}

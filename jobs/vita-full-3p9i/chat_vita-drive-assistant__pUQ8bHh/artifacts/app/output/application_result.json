@@ -1,0 +1,17 @@
+{
+  "sessionId": "harbor-chat",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving",
+  "turnCount": 4,
+  "seed": {
+    "rowId": "row-0276",
+    "scenario": "Tôi đang lái xe một mình trên đường cao tốc, cần chuyển sang nguồn phát từ điện thoại để nghe danh sách phát riêng.",
+    "firstInput": "Chuyển nguồn âm thanh sang Bluetooth.",
+    "intentCode": "communication_media",
+    "subintentCode": "source_queue",
+    "subintentName": "Nguồn/danh sách phát",
+    "vehicleState": "driving",
+    "assistantMode": "quiet",
+    "sourcePersonaId": "wiki-62c08cb727c5"
+  }
+}

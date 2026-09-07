@@ -1,0 +1,58 @@
+{
+  "_comment": "Display strings for scripts/export_vn_driver_profiles.py. Keys are English identifiers; only the values are localised, so the generator itself carries no Vietnamese. Placeholders use Python str.format names.",
+  "locale": "vi",
+  "pageTitle": "Hồ sơ persona · {pool}",
+  "heading": "Hồ sơ toàn bộ persona · {pool}",
+  "subtitle": "{personas} persona · {dimensions} chiều mỗi persona · nguồn: {sources}",
+
+  "kpiPersonas": "persona",
+  "kpiMeasuredPer": "chiều đo được / persona",
+  "kpiObservedValues": "giá trị observed",
+  "kpiGeneratedValues": "giá trị generated",
+  "measuredVsGenerated": "Mỗi persona mang {dimensions} chiều, nhưng chỉ khoảng {scoreable} chiều là câu trả lời của người thật. Phần còn lại được lấy mẫu từ đồ thị tổng hợp, có ghim các chiều đã đo, và <b>không bao giờ được tính điểm</b>.",
+
+  "pairingWarnTitle": "Ghép cặp là ngẫu nhiên.",
+  "pairingWarnBody": "Vì vậy mọi tương quan giữa nhân khẩu học và hành vi lái xe trong bộ này là sản phẩm của việc ghép, không phải kết quả đo. Chỉ các quan hệ <i>trong cùng một lớp</i> mới là quan sát thật.",
+  "localityWarnTitle": "Nơi ở là sinh ra, không phải đo.",
+  "localityWarnBody": "WVS 2020 ghi tên tỉnh trước sáp nhập; ánh xạ sang 34 đơn vị hiện hành cần bảng sáp nhập chính thức. Nơi ở ở đây là bốc thăm theo phân bố dân số thật — đừng kết luận điều gì theo địa phương.",
+
+  "overlapHeading": "Tỉ lệ trùng nhau giữa các hồ sơ",
+  "overlapIntro": "So từng cặp trong {pairs} cặp: tỉ lệ chiều có <i>giá trị giống hệt nhau</i>.",
+  "colScope": "Phạm vi",
+  "colDimensionCount": "Số chiều",
+  "colMeanOverlap": "Trùng trung bình",
+  "colMin": "Thấp nhất",
+  "colMax": "Cao nhất",
+  "scopeAll": "Toàn bộ chiều",
+  "scopeObserved": "Chỉ chiều đo được (observed)",
+  "scopeGenerated": "Chỉ chiều sinh ra (generated)",
+  "kpiExactDupes": "persona trùng hoàn toàn",
+  "kpiConstantDims": "chiều giống hệt ở cả {personas} persona",
+
+  "topPairsHeading": "Cặp giống nhau nhất",
+  "colPair": "Cặp",
+  "colOverlap": "Trùng",
+
+  "spreadHeading": "Chiều đo được: mức phân tán",
+  "spreadIntro": "Giá trị phổ biến nhất chiếm bao nhiêu phần trăm. Càng cao thì chiều đó càng ít tách biệt được các persona, dù nó vẫn là số liệu đo thật.",
+  "colDimension": "Chiều",
+  "colDominantValue": "Giá trị áp đảo",
+  "colShare": "Chiếm",
+  "colDistinctValues": "Số giá trị",
+  "constantDimsSummary": "{count} chiều giống hệt nhau ở mọi persona",
+
+  "rosterHeading": "Danh sách {personas} persona",
+  "colIndex": "#",
+  "colName": "Tên",
+  "colId": "Mã",
+  "colMeasured": "Đo được",
+
+  "detailHeading": "Hồ sơ chi tiết",
+  "tagMeasured": "{count} đo được",
+  "tagGenerated": "{count} sinh ra",
+  "measuredSectionHeading": "Chiều đo được từ người thật",
+  "colValue": "Giá trị",
+  "colSource": "Nguồn",
+  "colEvidence": "Bằng chứng",
+  "generatedSummary": "{count} chiều còn lại — lấy mẫu từ <code>full_dag</code>, ghim theo các chiều đã đo"
+}

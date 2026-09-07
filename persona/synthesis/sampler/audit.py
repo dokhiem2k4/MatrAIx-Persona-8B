@@ -130,6 +130,9 @@ def consistency_issues(sample: Dict[str, str]) -> List[Dict[str, str]]:
         "English": "lang_english", "Mandarin": "lang_mandarin", "Spanish": "lang_spanish", "Hindi": "lang_hindi",
         "Arabic": "lang_arabic", "French": "lang_french", "Portuguese": "lang_portuguese", "Bengali": "lang_bengali",
         "Russian": "lang_russian", "Japanese": "lang_japanese", "German": "lang_german", "Swahili": "lang_swahili",
+        # Added with "Vietnamese" in the primary_language enum; without the
+        # entry the rule silently skips every Vietnamese persona.
+        "Vietnamese": "lang_vietnamese",
     }
     primary = sample.get("primary_language")
     if primary in lang_map and sample.get(lang_map[primary]) not in {"Native", "Fluent"}:
@@ -140,8 +143,14 @@ def consistency_issues(sample: Dict[str, str]) -> List[Dict[str, str]]:
     if sample.get("health_vision") == "Blind" and sample.get("demo_driver_status") in {"Daily driver", "Occasional driver", "Licensed but rarely drives"}:
         add("blind_current_or_licensed_driver", "hard", "health_driving")
 
-    if sample.get("demo_religion_affiliation") in {"Atheist / agnostic", "None"} and sample.get("religiosity") in {"Observant", "Devout"}:
-        add("unaffiliated_observant_or_devout", "hard", "religion")
+    # Only self-declared atheism contradicts observance. "None" means no
+    # denomination, which is not the same as no practice: ancestor veneration,
+    # temple visits and folk religion are widespread across East and Southeast
+    # Asia without any congregational membership, and WVS Wave 7 Vietnam holds
+    # real respondents who report exactly that. Treating it as impossible
+    # rejected 8 of 42 grounded Vietnamese personas whose answers were correct.
+    if sample.get("demo_religion_affiliation") == "Atheist / agnostic" and sample.get("religiosity") in {"Observant", "Devout"}:
+        add("atheist_observant_or_devout", "hard", "religion")
 
     return issues
 

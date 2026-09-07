@@ -1,0 +1,40 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, em xem giúp anh ngoài trời bây giờ có đang mưa không thế?"
+    },
+    {
+      "role": "support",
+      "content": "Hiện tại ngoài trời đang có mưa nhẹ, nhiệt độ khoảng 26°C, bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Vậy em bật gạt mưa tự động giúp anh với, sẵn tiện chỉnh nhiệt độ điều hòa tăng lên 27 độ C nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật gạt mưa tự động và chỉnh nhiệt độ điều hòa lên 27°C rồi anh nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn em nhiều. À, sẵn tiện em kiểm tra xem áp suất lốp 4 bánh hiện tại thế nào luôn nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Các chỉ số đều trong ngưỡng an toàn."
+    },
+    {
+      "role": "customer",
+      "content": "Mọi thứ đều ổn, cảm ơn em nhiều nha. Giờ anh tập trung lái xe tiếp đây."
+    },
+    {
+      "role": "support",
+      "content": "Vâng, anh lái xe an toàn nhé. Có gì cần thì gọi mình nha."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

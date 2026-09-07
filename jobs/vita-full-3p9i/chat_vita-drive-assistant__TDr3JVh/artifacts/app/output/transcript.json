@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, đóng hết cửa kính xe lại giúp tôi với, ngoài đường nhiều bụi quá."
+    },
+    {
+      "role": "support",
+      "content": "Đã chỉnh tất cả cửa sổ về 0%."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Tiện thể bật giúp tôi chế độ lấy gió trong và tăng mức quạt gió lên một chút nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa, chuyển sang chế độ lấy gió trong và tăng quạt lên mức 2 rồi bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita, không khí trong xe giờ dễ chịu hơn hẳn rồi."
+    },
+    {
+      "role": "support",
+      "content": "Cảm ơn bạn. Mình rất vui khi thấy bạn thoải mái hơn."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

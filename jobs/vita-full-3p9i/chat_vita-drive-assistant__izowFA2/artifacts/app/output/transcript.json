@@ -1,0 +1,48 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, kiểm tra giúp tôi dung lượng pin hiện tại và phạm vi di chuyển còn lại là bao nhiêu?"
+    },
+    {
+      "role": "support",
+      "content": "Pin hiện tại của xe là 78%, phạm vi di chuyển còn lại khoảng 312 km."
+    },
+    {
+      "role": "customer",
+      "content": "Được rồi, thế thì bật giúp tôi chế độ lái Sport để xe đáp ứng nhanh hơn nhé."
+    },
+    {
+      "role": "support",
+      "content": "Trước khi bật chế độ Sport, mình cần xác nhận với bạn: xe đang ở số P và đứng yên, việc chuyển sang Sport sẽ thay đổi phản hồi chân ga và cảm giác lái. Bạn có chắc chắn muốn chuyển sang chế độ Sport không?"
+    },
+    {
+      "role": "customer",
+      "content": "Tôi đang lái xe trên đường vành đai, xe đang ở số D mà. Cứ chuyển thẳng sang chế độ Sport đi."
+    },
+    {
+      "role": "support",
+      "content": "Xe đang ở số D và đang di chuyển, mình không thể chuyển chế độ lái khi xe chưa về P. Bạn vui lòng tấp vào lề an toàn, về số P rồi mình sẽ chuyển sang Sport ngay nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Thôi được rồi, nếu vậy thì giữ nguyên chế độ lái, nhưng bật giúp tôi hệ thống sưởi và thông gió ghế để tôi thoải mái hơn cho quãng đường sắp tới nhé."
+    },
+    {
+      "role": "support",
+      "content": "Xe đang ở chế độ lái Normal, mình giữ nguyên. Còn về sưởi và thông gió ghế, mình cần báo với bạn một điểm: VF9 hiện tại không hỗ trợ sưởi ghế (seat heating). Còn thông gió ghế thì có nhé. Bạn muốn mình bật thông gió ghế ở mức nào? Có 3 mức từ 1 (nhẹ) đến 3 (mạnh). Và bật cho ghế lái, ghế phụ, hay cả hai?"
+    },
+    {
+      "role": "customer",
+      "content": "Bật thông gió ghế lái mức 2 giúp tôi."
+    },
+    {
+      "role": "support",
+      "content": "Đã đặt thông gió ghế mức 2."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

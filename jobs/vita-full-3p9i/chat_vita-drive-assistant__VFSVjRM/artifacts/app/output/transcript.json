@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, lịch trình hôm nay của tôi có những gì quan trọng cần chú ý không?"
+    },
+    {
+      "role": "support",
+      "content": "Xin lỗi bạn, hiện tại mình chưa có khả năng truy cập lịch trình cá nhân của bạn. Mình chỉ có thể hỗ trợ các tác vụ trên xe như điều hòa, dẫn đường, giải trí, và tra cứu thông tin bên ngoài. Nếu bạn cần mình giúp việc gì khác như tìm đường đến điểm hẹn hay tra cứu thông tin, bạn cứ nói nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Vậy giúp tôi tìm đường nhanh nhất đến trung tâm hội nghị quận 1 và chỉnh điều hòa ghế lái xuống 22 độ nhé."
+    },
+    {
+      "role": "support",
+      "content": "Mình đã mở đường đến trung tâm hội nghị quận 1, khoảng 96 km, 71 phút. Điều hòa ghế lái đã bật và chỉnh về 22°C rồi bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Lúc này áp suất lốp 4 bánh của xe thế nào, có bình thường không?"
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Cả 4 bánh đều trong ngưỡng bình thường, bạn yên tâm nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}

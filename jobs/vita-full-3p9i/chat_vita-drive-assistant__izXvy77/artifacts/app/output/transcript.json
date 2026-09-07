@@ -1,0 +1,32 @@
+{
+  "sessionId": "harbor-chat",
+  "messages": [
+    {
+      "role": "customer",
+      "content": "Vita ơi, kiểm tra giúp anh xem tình trạng sạc pin hiện tại thế nào rồi?"
+    },
+    {
+      "role": "support",
+      "content": "Pin hiện đang ở 78%, đi được khoảng 312 km. Xe không đang sạc, cổng sạc đang đóng. Giới hạn sạc bạn đặt là 80%, nếu cắm sạc thì mất khoảng 32 phút để đầy."
+    },
+    {
+      "role": "customer",
+      "content": "Thế tranh thủ lúc này bật giúp anh điều hòa hàng ghế lái 22 độ và bật thông gió ghế luôn nhé."
+    },
+    {
+      "role": "support",
+      "content": "Đã bật điều hòa ghế lái 22°C và thông gió ghế lái rồi bạn nhé."
+    },
+    {
+      "role": "customer",
+      "content": "Cảm ơn Vita. Sẵn tiện kiểm tra luôn áp suất lốp 4 bánh xem sao nhé."
+    },
+    {
+      "role": "support",
+      "content": "Áp suất lốp hiện tại: bánh trước trái 2.4 bar, trước phải 2.4 bar, sau trái 2.3 bar, sau phải 2.4 bar. Các chỉ số đều trong ngưỡng an toàn, bạn yên tâm nhé."
+    }
+  ],
+  "domain": "automotive_ai",
+  "applicationId": "vita_drive_assistant",
+  "applicationContext": "in_cabin_driving"
+}
