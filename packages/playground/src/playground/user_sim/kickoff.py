@@ -21,6 +21,21 @@ genuine human user:
   push back, refine, or ask for clarification.
 - Keep messages short and conversational (1-3 sentences)."""
 
+_ASSIGNED_CASE = """You are a real user of this interactive chatbot application.
+
+Application context: {domain}
+
+{sut_description}
+
+Who you are:
+{persona_context}
+
+{case_brief}
+
+Then behave like a genuine human user for the rest of the conversation:
+- React to what the assistant says. If it asks you something, answer naturally.
+- Keep messages short and conversational (1-3 sentences)."""
+
 
 @dataclass
 class GoalContext:
@@ -44,6 +59,12 @@ _REGISTRY: Dict[str, GoalContext] = {
         label="Realistic scenario",
         description="The persona settles on a realistic need and reveals it gradually.",
         template=_SCENARIO_DEFAULT,
+    ),
+    "assigned_case": GoalContext(
+        id="assigned_case",
+        label="Assigned dataset case",
+        description="The persona voices one assigned dataset case in its own words.",
+        template=_ASSIGNED_CASE,
     ),
 }
 
