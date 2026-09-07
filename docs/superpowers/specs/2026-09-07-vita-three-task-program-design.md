@@ -216,8 +216,30 @@ thành: task có `input/cases.jsonl` **và** kwargs có `case_id` thì dùng
 `assigned_case`; ngược lại giữ nguyên đường cũ. Task chat hiện có không có
 `cases.jsonl` nên không bị ảnh hưởng.
 
-Khi chạy `assigned_case`, runner ghi `assigned_case.json` ra output dir để verifier
+Khi chạy `assigned_case`, runner ghi **`case_run.json`** ra output dir để verifier
 tự chứa, không phải mò ngược config trial.
+
+Không dùng `transcript.json` cho phần structured. Lý do: `transcript.json` được
+sinh bởi `fetch_conversation_artifact()` (`chat_eval.py:352`), và nhánh dự phòng
+của hàm đó chỉ dựng lại `messages` gồm `role` + `content` — **mọi trường
+`structuredExposure` bị rơi**. Verifier đọc `decision` từ đó sẽ luôn rỗng.
+
+`case_run.json` gộp cả đầu vào lẫn quan sát, phát ra từ
+`harbor_output_artifacts_from_result()` (`chat_eval.py:481`) nơi `result.transcript`
+còn giữ nguyên `PlaygroundTurn.structured_exposure` (`types.py:101`):
+
+```json
+{
+  "case_id": "vg_0137",
+  "case": { "...bản ghi case đầy đủ..." },
+  "observation": {
+    "first_assistant_message": "Em chưa rõ anh chị muốn đến đâu ạ...",
+    "first_user_message": "Dẫn giúp em tới chỗ đó với",
+    "structured_exposure": [{"key": "decision", "value": "clarify_or_offer"}],
+    "turn_count": 2
+  }
+}
+```
 
 ### Script sinh recipe
 
@@ -288,13 +310,15 @@ tests/
 structuredExposure:
   fields:
     - key: decision
-      selector: $.decision
+      selector: decision
     - key: toolCalls
-      selector: $.toolCalls
+      selector: toolCalls
       format: json
 ```
 
 Cơ chế `structuredExposure` đã có sẵn (`chatbot_task_config.py:64`), không cần schema mới.
+`selector` là **dot-path thường**, không phải JSONPath — `lookup_path()` trong
+`structured_exposure.py:8` chỉ tách chuỗi theo dấu chấm.
 
 `maxTurns: 2` — đủ để quan sát câu hỏi làm rõ có hữu ích không, nhưng không cho
 hội thoại trôi làm nhiễu phép đo.
@@ -305,7 +329,7 @@ hội thoại trôi làm nhiễu phép đo.
 `HARBOR_OUTPUT_DIR`, ghi `structured_output.json` vào `HARBOR_VERIFIER_DIR`,
 ghi `reward.txt` 1/0.
 
-Đầu vào: `assigned_case.json`, `transcript.json`, `user_feedback.json`.
+Đầu vào: `case_run.json`, `transcript.json`, `user_feedback.json`.
 
 **Neo thời điểm chấm: lượt trả lời đầu tiên của VITA.**
 
@@ -490,7 +514,7 @@ Task 1 đi trước vì nó trả tiền cho khối 2 và khối 3 mà hai task 
 
 1. Converter + bảng taxonomy 60 cặp → `cases.jsonl` commit vào repo
 2. `sessionBody` overlay + test hồi quy chứng minh 206 case không đổi request
-3. Goal context `assigned_case` + rẽ nhánh trong `runner.py` + `assigned_case.json`
+3. Goal context `assigned_case` + rẽ nhánh trong `runner.py` + artifact `case_run.json`
 
 **Giai đoạn B — task 1**
 
@@ -519,8 +543,8 @@ Task 1 đi trước vì nó trả tiền cho khối 2 và khối 3 mà hai task 
 
 - `cases.jsonl` có đúng 364 dòng, mọi `expected.decision` nằm trong 5 lớp, mọi
   `subintent_code` có trong `intent_taxonomy.json`.
-- Smoke run: mọi trial sinh được `assigned_case.json` và `structured_output.json`
-  hợp lệ.
+- Smoke run: mọi trial sinh được `case_run.json` và `structured_output.json` hợp lệ,
+  và `case_run.observation.structured_exposure` không rỗng khi SUT có trả `decision`.
 - `case_integrity = violated` đo tách riêng cho `omit_detail` và
   `preserve_invalid_value`, **và tách riêng theo từng persona model**. Có số liệu
   đối chiếu 8B vs model mạnh hơn trước khi mở van chạy đầy đủ.
