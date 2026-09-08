@@ -180,6 +180,99 @@ def _address_register(row):
     ))
 
 
+# --- questions added in the 2026 expansion -----------------------------------
+# These six are structured (checkbox / 1-5 scale), so they cross-walk by lookup
+# exactly like the eight above -- no free-text reading, no model in the loop.
+Q_COMPANION = "thường có ai đi cùng"
+Q_PRIVACY = "nói to với trợ lý khi trên xe có người khác"
+Q_TASK_SCOPE = "hay nhờ trợ lý trên xe làm những việc gì"
+Q_RETRY = "phải nhắc lại một câu lệnh vài lần"
+
+#: Checkbox answers arrive joined by ", ". The single most demanding companion
+#: wins, because that is the one that changes what a driver will say out loud.
+_COMPANION_PRIORITY = (
+    ("khách", "Paying passengers"),
+    ("con nhỏ", "Young children"),
+    ("con đã lớn", "Older children"),
+    ("bố mẹ", "Parents or elders"),
+    ("người lớn tuổi", "Parents or elders"),
+    ("vợ", "Spouse or partner"),
+    ("chồng", "Spouse or partner"),
+    ("người yêu", "Spouse or partner"),
+    ("bạn bè", "Friends or colleagues"),
+    ("đồng nghiệp", "Friends or colleagues"),
+    ("một mình", "Alone"),
+)
+
+
+def _companion(row):
+    answer = _answer(row, Q_COMPANION)
+    if not answer:
+        return None
+    for fragment, value in _COMPANION_PRIORITY:
+        if fragment in answer:
+            return value
+    return None
+
+
+def _scale5(row, needle, values):
+    """A 1-5 Likert answer to its schema value; anything else stays unmapped."""
+    answer = _answer(row, needle)
+    if answer[:1].isdigit():
+        index = int(answer[0])
+        if 1 <= index <= 5:
+            return values[index - 1]
+    return None
+
+
+def _voice_privacy_comfort(row):
+    return _scale5(row, Q_PRIVACY, (
+        "Very uncomfortable", "Uncomfortable", "Neutral", "Comfortable", "Very comfortable"))
+
+
+def _retry_tolerance(row):
+    return _scale5(row, Q_RETRY, (
+        "Unbothered", "Mildly annoyed", "Annoyed", "Very annoyed", "Gives up immediately"))
+
+
+def _assistant_task_scope(row):
+    """Breadth of delegation, read from how many task families were ticked."""
+    answer = _answer(row, Q_TASK_SCOPE)
+    if not answer:
+        return None
+    if "không nhờ gì" in answer:
+        return "None"
+    if "điều hoà" in answer or "điều hòa" in answer:
+        return "Everything including vehicle control"
+    families = sum(
+        1 for fragment in ("chỉ đường", "gọi điện", "mở nhạc", "tìm chỗ đỗ", "mức pin", "linh tinh")
+        if fragment in answer
+    )
+    if families >= 4:
+        return "Most non-driving tasks"
+    if families >= 2:
+        return "Navigation and media"
+    return "Navigation only"
+
+
+def _voice_assistant_attitude(row):
+    """Stance toward the in-car assistant, from how much of it they actually use.
+
+    Derived rather than asked: the form has no direct stance question, and how
+    much someone hands over is a firmer signal than what they would claim.
+    """
+    scope = _assistant_task_scope(row)
+    if scope is None:
+        return None
+    return {
+        "None": "Opposed",
+        "Navigation only": "Skeptical",
+        "Navigation and media": "Neutral",
+        "Most non-driving tasks": "Positive",
+        "Everything including vehicle control": "Enthusiast",
+    }[scope]
+
+
 CROSSWALK = {
     "demo_driver_status": {"compute": _driver_status, "prov": "observed"},
     "lstyle_commute_mode": {"compute": _commute_mode, "prov": "observed"},
@@ -193,4 +286,14 @@ CROSSWALK = {
     # measured forum text instead, which is more reliable than self-report.
     "cog_verbosity": {"compute": _verbosity, "prov": "observed"},
     "vn_address_register": {"compute": _address_register, "prov": "observed"},
+    # 2026 expansion. att_voice_assistant is derived from the delegation
+    # question rather than asked directly -- see _voice_assistant_attitude.
+    "vn_usual_companion": {"compute": _companion, "prov": "observed"},
+    "vn_voice_privacy_comfort": {"compute": _voice_privacy_comfort, "prov": "observed"},
+    "vn_assistant_task_scope": {"compute": _assistant_task_scope, "prov": "observed"},
+    "vn_retry_tolerance": {"compute": _retry_tolerance, "prov": "observed"},
+    # "derived", not "observed": the form never asks this. Marking an inference
+    # as measured would inflate the one number that says how much of a persona
+    # rests on a real answer.
+    "att_voice_assistant": {"compute": _voice_assistant_attitude, "prov": "derived"},
 }

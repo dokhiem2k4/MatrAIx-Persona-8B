@@ -16,7 +16,7 @@ Set `VITA_APP_PASSWORD` first if the deployment is password-gated.
 
 | Stage | What happens | Depends on `--task`? |
 |-------|--------------|----------------------|
-| 1 | Nine `survey_vita-utterance-*` tasks ask each persona what they would say in every cell of an intent grid | **No** |
+| 1 | Sixteen `survey_vita-utterance-*` tasks ask each persona what they would say in every cell of an intent grid | **No** |
 | 2 | Each stimulus row opens one multi-turn conversation against the application | **Yes** |
 | export | Three workbooks keyed by `--slug` | — |
 
@@ -44,7 +44,7 @@ harder questions.
 
 | File | One row per | Notes |
 |------|-------------|-------|
-| `data/vita-stimuli-<slug>.csv` | stimulus (~828 for 3 personas × 9 intents) | the full set, not only the rows stage 2 sampled |
+| `data/vita-stimuli-<slug>.csv` | stimulus (~1,368 for 3 personas × 16 intents) | the full set, not only the rows stage 2 sampled |
 | `data/vita-results-<slug>.csv` | conversation | scores, joined to the stimulus that caused them |
 | `data/vita-results-<slug>.jsonl` | conversation | same, with the transcript |
 
@@ -58,28 +58,46 @@ it is a draw from a distribution.
 
 ## Sizing the run
 
-`--per-subintent N` caps stage 2 at N conversations per subintent. There are 46
-subintents, so the default `3` yields **138 conversations** out of ~828 stimuli.
-Raising it multiplies stage-2 cost roughly linearly — running all 828 rows costs
-about six times as much as 138 for the same three personas.
+`--per-subintent N` caps stage 2 at N conversations per subintent. There are 76
+subintents, so the default `3` yields **228 conversations** out of ~1,368 stimuli.
+Raising it multiplies stage-2 cost roughly linearly — running all 1,368 rows costs
+about six times as much as 228 for the same three personas.
 
 Measured on `gemini-3.1-flash-lite` via the Google endpoint:
 
 | | Cost |
 |---|---:|
-| Stage 1, 27 trials | ~$0.22 |
+| Stage 1, 48 trials | ~$0.39 |
 | Stage 2, per conversation | ~$0.008 |
-| Stage 2, 138 conversations | ~$1.10 |
+| Stage 2, 228 conversations | ~$1.82 |
 
-Not included: what the **application under test** spends answering. 138
-conversations of 4+ turns is 550+ calls on its own LLM key, billed to whoever
+Not included: what the **application under test** spends answering. 228
+conversations of 4+ turns is 900+ calls on its own LLM key, billed to whoever
 runs the deployment.
 
 ## Which persona pool
 
-`--persona-pool vn-drivers-forum` (42 personas) is the grounded Vietnamese driver
-set. Pick ids from `persona/datasets/vn-drivers-forum/persona_*.yaml`. Sample
-them with a fixed seed if the choice must be reproducible from the repo alone.
+`--persona-pool vn-drivers-forum` (42 personas) is the one to use. Pick ids
+from `persona/datasets/vn-drivers-forum/persona_*.yaml`, and sample with a
+fixed seed if the choice must be reproducible from the repo alone.
+
+It is `vn-drivers-forum` with the sampler's self-contradictions removed. The
+synthesis graph draws each `lifex_*` field independently of the measured
+demographics, so 23 of the 42 arrived describing someone who is married *and*
+widowed, or 25-34 with an empty nest. The prompt rendered all of it as equally
+confident fact.
+
+```bash
+uv run python scripts/check_persona_coherence.py persona/datasets/<pool>          # report
+uv run python scripts/check_persona_coherence.py persona/datasets/<pool> \
+    --fix --out persona/datasets/<pool>-coherent                                  # repair
+```
+
+Only a **measured** value may overrule a drawn one, and the drawn value is
+removed rather than replaced — we know it is wrong, we do not know what is
+right, and a substitute would just be a second guess. Every removal is kept in
+`grounding` as `assignment_type: removed_incoherent` with the value and the
+dimension that refuted it, so the edit is auditable and reversible.
 
 ## When it fails
 

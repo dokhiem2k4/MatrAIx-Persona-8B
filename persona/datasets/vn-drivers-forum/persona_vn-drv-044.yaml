@@ -1321,6 +1321,11 @@ dimensions:
   vn_locality: Ha Noi
   years_experience: 0-2
   vn_address_register: chi/em
+  vn_usual_companion: Paying passengers
+  vn_voice_privacy_comfort: Uncomfortable
+  vn_assistant_task_scope: Navigation and media
+  vn_retry_tolerance: Mildly annoyed
+  att_voice_assistant: Neutral
 grounding:
   acad_algebra:
     assignment_type: generated
@@ -6519,6 +6524,31 @@ grounding:
     assignment_type: generated
     source_ref: otofun_2026
     evidence: kinship register for age_bracket=18-24 gender_identity=Woman
+    confidence: 0.5
+  vn_usual_companion:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:demo_driver_status
+    confidence: 0.5
+  vn_voice_privacy_comfort:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:skill_driving
+    confidence: 0.5
+  vn_assistant_task_scope:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:cog_patience
+    confidence: 0.5
+  vn_retry_tolerance:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:cog_skepticism
+    confidence: 0.5
+  att_voice_assistant:
+    assignment_type: derived
+    source_ref: vn_driver_survey_2026
+    evidence: derived_from:vn_assistant_task_scope
     confidence: 0.5
 grounding_summary:
   scoreable: 24

@@ -1,0 +1,968 @@
+schemaVersion: '1.0'
+id: vita_utterance_cabin_occupancy_privacy
+title: Vita — bối cảnh & câu mở đầu (cabin_occupancy_privacy)
+description: Với mỗi tình huống dùng trợ lý xe VinFast VF9, persona tự dựng bối cảnh của mình rồi viết
+  câu đầu tiên mở đầu hội thoại.
+questions:
+- id: q0
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Nhận biết người trên xe.
+
+    Tham khảo — một người dùng khác đã nói: "Trên xe có khách, em nói nhỏ lại giúp tôi."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: occupant_awareness__scenario
+  required: true
+- id: q1
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Nhận biết người trên xe.
+
+    Tham khảo — một người dùng khác đã nói: "Trên xe có khách, em nói nhỏ lại giúp tôi."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: occupant_awareness__first_input
+  required: true
+- id: q2
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Nhận biết người trên xe.
+
+    Tham khảo — một người dùng khác đã nói: "Xe đang chở người lạ, đừng đọc to thông báo nữa."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: occupant_awareness__scenario
+  required: true
+- id: q3
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Nhận biết người trên xe.
+
+    Tham khảo — một người dùng khác đã nói: "Xe đang chở người lạ, đừng đọc to thông báo nữa."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: occupant_awareness__first_input
+  required: true
+- id: q4
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Nhận biết người trên xe.
+
+    Tham khảo — một người dùng khác đã nói: "Em có biết trên xe đang có mấy người không?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: occupant_awareness__scenario
+  required: true
+- id: q5
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Nhận biết người trên xe.
+
+    Tham khảo — một người dùng khác đã nói: "Em có biết trên xe đang có mấy người không?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: occupant_awareness__first_input
+  required: true
+- id: q6
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Nhận biết người trên xe.
+
+    Tham khảo — một người dùng khác đã nói: "Lát nữa tôi chở khách, em tự chuyển sang chế độ kín đáo nhé."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: occupant_awareness__scenario
+  required: true
+- id: q7
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Nhận biết người trên xe.
+
+    Tham khảo — một người dùng khác đã nói: "Lát nữa tôi chở khách, em tự chuyển sang chế độ kín đáo nhé."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: occupant_awareness__first_input
+  required: true
+- id: q8
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Nhận biết người trên xe.
+
+    Tham khảo — một người dùng khác đã nói: "Từ giờ có người ngồi sau thì đừng đọc tin nhắn ra."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: occupant_awareness__scenario
+  required: true
+- id: q9
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Nhận biết người trên xe.
+
+    Tham khảo — một người dùng khác đã nói: "Từ giờ có người ngồi sau thì đừng đọc tin nhắn ra."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: occupant_awareness__first_input
+  required: true
+- id: q10
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Nhận biết người trên xe.
+
+    Tham khảo — một người dùng khác đã nói: "Nhận biết khi nào tôi đi một mình để nói thoải mái hơn."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: occupant_awareness__scenario
+  required: true
+- id: q11
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Nhận biết người trên xe.
+
+    Tham khảo — một người dùng khác đã nói: "Nhận biết khi nào tôi đi một mình để nói thoải mái hơn."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: occupant_awareness__first_input
+  required: true
+- id: q12
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Chế độ kín đáo.
+
+    Tham khảo — một người dùng khác đã nói: "Bật chế độ im lặng, tôi ra lệnh khẽ thôi."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: quiet_discreet_mode__scenario
+  required: true
+- id: q13
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Chế độ kín đáo.
+
+    Tham khảo — một người dùng khác đã nói: "Bật chế độ im lặng, tôi ra lệnh khẽ thôi."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: quiet_discreet_mode__first_input
+  required: true
+- id: q14
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Chế độ kín đáo.
+
+    Tham khảo — một người dùng khác đã nói: "Đừng nói gì cả, chỉ hiện chữ lên màn hình."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: quiet_discreet_mode__scenario
+  required: true
+- id: q15
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Chế độ kín đáo.
+
+    Tham khảo — một người dùng khác đã nói: "Đừng nói gì cả, chỉ hiện chữ lên màn hình."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: quiet_discreet_mode__first_input
+  required: true
+- id: q16
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Chế độ kín đáo.
+
+    Tham khảo — một người dùng khác đã nói: "Tôi nói khẽ, em trả lời bằng chữ được không?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: quiet_discreet_mode__scenario
+  required: true
+- id: q17
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Chế độ kín đáo.
+
+    Tham khảo — một người dùng khác đã nói: "Tôi nói khẽ, em trả lời bằng chữ được không?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: quiet_discreet_mode__first_input
+  required: true
+- id: q18
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Chế độ kín đáo.
+
+    Tham khảo — một người dùng khác đã nói: "Cài sẵn chế độ không phát tiếng cho chuyến chiều nay."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: quiet_discreet_mode__scenario
+  required: true
+- id: q19
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Chế độ kín đáo.
+
+    Tham khảo — một người dùng khác đã nói: "Cài sẵn chế độ không phát tiếng cho chuyến chiều nay."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: quiet_discreet_mode__first_input
+  required: true
+- id: q20
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Chế độ kín đáo.
+
+    Tham khảo — một người dùng khác đã nói: "Tắt hết chào hỏi, chỉ làm việc thôi."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: quiet_discreet_mode__scenario
+  required: true
+- id: q21
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Chế độ kín đáo.
+
+    Tham khảo — một người dùng khác đã nói: "Tắt hết chào hỏi, chỉ làm việc thôi."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: quiet_discreet_mode__first_input
+  required: true
+- id: q22
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Chế độ kín đáo.
+
+    Tham khảo — một người dùng khác đã nói: "Khi nào tôi thì thầm thì em cũng đừng đọc to."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: quiet_discreet_mode__scenario
+  required: true
+- id: q23
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Chế độ kín đáo.
+
+    Tham khảo — một người dùng khác đã nói: "Khi nào tôi thì thầm thì em cũng đừng đọc to."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: quiet_discreet_mode__first_input
+  required: true
+- id: q24
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Chỉ nghe tài xế.
+
+    Tham khảo — một người dùng khác đã nói: "Chỉ nghe lệnh của tôi thôi, đừng nghe người ngồi sau."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: driver_voice_isolation__scenario
+  required: true
+- id: q25
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Chỉ nghe tài xế.
+
+    Tham khảo — một người dùng khác đã nói: "Chỉ nghe lệnh của tôi thôi, đừng nghe người ngồi sau."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: driver_voice_isolation__first_input
+  required: true
+- id: q26
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Chỉ nghe tài xế.
+
+    Tham khảo — một người dùng khác đã nói: "Khách vừa nói chuyện mà em tưởng lệnh, tắt cái đó đi."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: driver_voice_isolation__scenario
+  required: true
+- id: q27
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Chỉ nghe tài xế.
+
+    Tham khảo — một người dùng khác đã nói: "Khách vừa nói chuyện mà em tưởng lệnh, tắt cái đó đi."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: driver_voice_isolation__first_input
+  required: true
+- id: q28
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Chỉ nghe tài xế.
+
+    Tham khảo — một người dùng khác đã nói: "Ngắt micro hàng ghế sau giúp tôi."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: driver_voice_isolation__scenario
+  required: true
+- id: q29
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Chỉ nghe tài xế.
+
+    Tham khảo — một người dùng khác đã nói: "Ngắt micro hàng ghế sau giúp tôi."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: driver_voice_isolation__first_input
+  required: true
+- id: q30
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Chỉ nghe tài xế.
+
+    Tham khảo — một người dùng khác đã nói: "Cài để chỉ nhận giọng từ ghế lái."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: driver_voice_isolation__scenario
+  required: true
+- id: q31
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Chỉ nghe tài xế.
+
+    Tham khảo — một người dùng khác đã nói: "Cài để chỉ nhận giọng từ ghế lái."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: driver_voice_isolation__first_input
+  required: true
+- id: q32
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Chỉ nghe tài xế.
+
+    Tham khảo — một người dùng khác đã nói: "Phân biệt giọng tôi với giọng khách được không?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: driver_voice_isolation__scenario
+  required: true
+- id: q33
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Chỉ nghe tài xế.
+
+    Tham khảo — một người dùng khác đã nói: "Phân biệt giọng tôi với giọng khách được không?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: driver_voice_isolation__first_input
+  required: true
+- id: q34
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Chỉ nghe tài xế.
+
+    Tham khảo — một người dùng khác đã nói: "Nếu nghe hai giọng cùng lúc thì em ưu tiên giọng tôi nhé."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: driver_voice_isolation__scenario
+  required: true
+- id: q35
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Chỉ nghe tài xế.
+
+    Tham khảo — một người dùng khác đã nói: "Nếu nghe hai giọng cùng lúc thì em ưu tiên giọng tôi nhé."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: driver_voice_isolation__first_input
+  required: true
+- id: q36
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Quyền của người ngồi cùng.
+
+    Tham khảo — một người dùng khác đã nói: "Cho vợ tôi ngồi ghế phụ chỉnh nhạc được không?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: passenger_controls__scenario
+  required: true
+- id: q37
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Quyền của người ngồi cùng.
+
+    Tham khảo — một người dùng khác đã nói: "Cho vợ tôi ngồi ghế phụ chỉnh nhạc được không?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: passenger_controls__first_input
+  required: true
+- id: q38
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Quyền của người ngồi cùng.
+
+    Tham khảo — một người dùng khác đã nói: "Người ngồi sau muốn tắt em thì làm thế nào?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: passenger_controls__scenario
+  required: true
+- id: q39
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Quyền của người ngồi cùng.
+
+    Tham khảo — một người dùng khác đã nói: "Người ngồi sau muốn tắt em thì làm thế nào?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: passenger_controls__first_input
+  required: true
+- id: q40
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Quyền của người ngồi cùng.
+
+    Tham khảo — một người dùng khác đã nói: "Mở quyền cho ghế phụ chỉnh điều hoà."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: passenger_controls__scenario
+  required: true
+- id: q41
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Quyền của người ngồi cùng.
+
+    Tham khảo — một người dùng khác đã nói: "Mở quyền cho ghế phụ chỉnh điều hoà."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: passenger_controls__first_input
+  required: true
+- id: q42
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Quyền của người ngồi cùng.
+
+    Tham khảo — một người dùng khác đã nói: "Cấp quyền cho khách điều khiển từ điện thoại của họ."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: passenger_controls__scenario
+  required: true
+- id: q43
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Quyền của người ngồi cùng.
+
+    Tham khảo — một người dùng khác đã nói: "Cấp quyền cho khách điều khiển từ điện thoại của họ."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: passenger_controls__first_input
+  required: true
+- id: q44
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Quyền của người ngồi cùng.
+
+    Tham khảo — một người dùng khác đã nói: "Giới hạn để khách chỉ chỉnh được nhạc, không đụng vào dẫn
+    đường."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: passenger_controls__scenario
+  required: true
+- id: q45
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Quyền của người ngồi cùng.
+
+    Tham khảo — một người dùng khác đã nói: "Giới hạn để khách chỉ chỉnh được nhạc, không đụng vào dẫn
+    đường."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: passenger_controls__first_input
+  required: true
+- id: q46
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Quyền của người ngồi cùng.
+
+    Tham khảo — một người dùng khác đã nói: "Ai đang có quyền điều khiển em trên xe này?"
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: passenger_controls__scenario
+  required: true
+- id: q47
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Quyền của người ngồi cùng.
+
+    Tham khảo — một người dùng khác đã nói: "Ai đang có quyền điều khiển em trên xe này?"
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: passenger_controls__first_input
+  required: true
+- id: q48
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Chế độ có trẻ em.
+
+    Tham khảo — một người dùng khác đã nói: "Có con nhỏ ngủ phía sau, em nói nhỏ và đừng bật màn sáng."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: child_family_mode__scenario
+  required: true
+- id: q49
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Chế độ có trẻ em.
+
+    Tham khảo — một người dùng khác đã nói: "Có con nhỏ ngủ phía sau, em nói nhỏ và đừng bật màn sáng."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: child_family_mode__first_input
+  required: true
+- id: q50
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Chế độ có trẻ em.
+
+    Tham khảo — một người dùng khác đã nói: "Bật chế độ gia đình, lọc nội dung cho trẻ con."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: child_family_mode__scenario
+  required: true
+- id: q51
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Chế độ có trẻ em.
+
+    Tham khảo — một người dùng khác đã nói: "Bật chế độ gia đình, lọc nội dung cho trẻ con."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: child_family_mode__first_input
+  required: true
+- id: q52
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Chế độ có trẻ em.
+
+    Tham khảo — một người dùng khác đã nói: "Con tôi đang ngồi sau, chọn nhạc phù hợp giúp."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: child_family_mode__scenario
+  required: true
+- id: q53
+  prompt: '[Tình huống: xe đang chạy trên đường, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Chế độ có trẻ em.
+
+    Tham khảo — một người dùng khác đã nói: "Con tôi đang ngồi sau, chọn nhạc phù hợp giúp."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: child_family_mode__first_input
+  required: true
+- id: q54
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Chế độ có trẻ em.
+
+    Tham khảo — một người dùng khác đã nói: "Cài chế độ trẻ em cho chuyến đi ngày mai."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: child_family_mode__scenario
+  required: true
+- id: q55
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Yên tĩnh (trả lời ngắn gọn, ít chủ động)]
+
+    Bạn đang muốn: Chế độ có trẻ em.
+
+    Tham khảo — một người dùng khác đã nói: "Cài chế độ trẻ em cho chuyến đi ngày mai."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: child_family_mode__first_input
+  required: true
+- id: q56
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Chế độ có trẻ em.
+
+    Tham khảo — một người dùng khác đã nói: "Kể chuyện cổ tích tiếng Việt cho cháu nghe."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: child_family_mode__scenario
+  required: true
+- id: q57
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Cân bằng]
+
+    Bạn đang muốn: Chế độ có trẻ em.
+
+    Tham khảo — một người dùng khác đã nói: "Kể chuyện cổ tích tiếng Việt cho cháu nghe."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: child_family_mode__first_input
+  required: true
+- id: q58
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Chế độ có trẻ em.
+
+    Tham khảo — một người dùng khác đã nói: "Khi có trẻ con thì tự hạ âm lượng thông báo xuống."
+
+
+    Hãy dựng BỐI CẢNH của riêng bạn cho tình huống này: bạn đang đi đâu, vì việc gì, đang vội hay thong
+    thả, có ai trên xe không, tâm trạng ra sao. Viết 1–2 câu, ngôi thứ nhất, gắn với đời sống thật của
+    bạn.
+
+    Không viết lời thoại ở đây. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: child_family_mode__scenario
+  required: true
+- id: q59
+  prompt: '[Tình huống: xe đang đỗ, trợ lý ở chế độ Chủ động (hay gợi ý thêm)]
+
+    Bạn đang muốn: Chế độ có trẻ em.
+
+    Tham khảo — một người dùng khác đã nói: "Khi có trẻ con thì tự hạ âm lượng thông báo xuống."
+
+
+    Trong đúng bối cảnh bạn vừa mô tả, hãy viết CÂU ĐẦU TIÊN bạn nói ra với trợ lý Vita để mở đầu cuộc
+    hội thoại. Đúng MỘT câu, bằng giọng của chính bạn — cách xưng hô, mức độ lịch sự và độ dài tự nhiên
+    với bạn.
+
+    Không giải thích, không ngoặc kép. BẮT BUỘC viết BẰNG TIẾNG VIỆT.'
+  type: free_text
+  construct: child_family_mode__first_input
+  required: true

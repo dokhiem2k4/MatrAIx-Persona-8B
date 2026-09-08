@@ -19,20 +19,40 @@ import { PersonaAvatar } from "./PersonaAvatar";
 import { personaRosterLines } from "./simulatedPersonaVisual";
 import { personaDimChipTone } from "./taskCardLabels";
 
+// Mirrors PERSONA_CARD_DIMENSIONS in the backend's persona_pool_service, which
+// leads with locality for a reason: every Vietnamese persona shares "Southeast
+// Asia", so that row costs a line and tells the reader nothing, while "Hà Nội"
+// vs "Mekong Delta" changes what an in-car assistant gets asked. `intent` is
+// dropped entirely -- it is what a persona happens to want in one session, not
+// a durable fact about the person, and a profile is read for the latter.
 const SPOTLIGHT_KEYS = [
   "age_bracket",
+  "vn_locality",
   "life_stage",
   "domain",
   "region",
-  "intent",
+  // The in-car assistant block. These decide how a persona behaves toward the
+  // product under test -- who is listening, how much they hand over, how long
+  // they persist -- so a profile that omits them describes the wrong person.
+  "vn_usual_companion",
+  "vn_voice_privacy_comfort",
+  "vn_assistant_task_scope",
+  "vn_retry_tolerance",
+  "att_voice_assistant",
 ] as const;
 
-const SPOTLIGHT_LABEL_KEYS: Record<(typeof SPOTLIGHT_KEYS)[number], MessageKey> = {
+// Partial on purpose: the persona label pack already names every dimension in
+// the schema, and dimLabel consults it first. Only the five chrome fields that
+// predate the pack need a UI translation of their own, so adding a dimension
+// here does not mean adding a key to eight locale files.
+const SPOTLIGHT_LABEL_KEYS: Partial<
+  Record<(typeof SPOTLIGHT_KEYS)[number], MessageKey>
+> = {
   age_bracket: "cockpitSetup.persona.field.age",
+  vn_locality: "cockpitSetup.persona.field.locality",
   life_stage: "cockpitSetup.persona.field.lifeStage",
   domain: "cockpitSetup.persona.field.domain",
   region: "cockpitSetup.persona.field.region",
-  intent: "cockpitSetup.persona.field.intent",
 };
 
 export interface BenchPersonaDetailPanelProps {
@@ -268,9 +288,18 @@ export function BenchPersonaDetailPanel({
       SPOTLIGHT_KEYS.map((key) => {
         const raw = dims[key];
         if (!raw) return null;
+        // Region is the coarse fallback, shown only when the persona has no
+        // locality. Rendering both would put "Hà Nội" and "Southeast Asia" on
+        // consecutive rows, where the second says nothing the first did not.
+        if (key === "region" && dims.vn_locality) return null;
         return {
           key,
-          label: labels.dimLabel(key, t(SPOTLIGHT_LABEL_KEYS[key])),
+          label: labels.dimLabel(
+            key,
+            SPOTLIGHT_LABEL_KEYS[key]
+              ? t(SPOTLIGHT_LABEL_KEYS[key] as MessageKey)
+              : key.replace(/_/g, " "),
+          ),
           value: labels.valueLabel(key, raw),
         };
       }).filter((item): item is { key: (typeof SPOTLIGHT_KEYS)[number]; label: string; value: string } =>
@@ -382,7 +411,11 @@ export function BenchPersonaDetailPanel({
             {spotlight.map(({ key, label, value }, index) => (
               <div
                 key={key}
-                className="grid grid-cols-[5.5rem_1fr] items-baseline gap-x-3"
+                // Labels here are dimension names, several of which are longer
+                // than their values ("Thoải mái khi có người" vs "Thoải mái").
+                // A narrow label column wrapped them to four lines while the
+                // value column sat half empty, so the label side gets the room.
+                className="grid grid-cols-[9rem_1fr] items-baseline gap-x-3"
               >
                 <dt className="text-[12px] text-text-dim">
                   <span

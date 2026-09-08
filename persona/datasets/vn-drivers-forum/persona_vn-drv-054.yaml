@@ -804,9 +804,7 @@ dimensions:
   lifex_languages_lifetime: Three
   lifex_loss_experience: No major loss
   lifex_military_history: Military family
-  lifex_parenting_journey: Teenagers
   lifex_public_recognition: Publicly notable
-  lifex_relationship_history: Married once
   lifex_service_history: Long-term volunteer
   lifex_travel_breadth: A few countries
   lifex_turning_point: Spiritual awakening
@@ -1321,6 +1319,11 @@ dimensions:
   vn_locality: Dien Bien
   years_experience: 0-2
   vn_address_register: chi/em
+  vn_usual_companion: Young children
+  vn_voice_privacy_comfort: Uncomfortable
+  vn_assistant_task_scope: Navigation and media
+  vn_retry_tolerance: Very annoyed
+  att_voice_assistant: Neutral
 grounding:
   acad_algebra:
     assignment_type: generated
@@ -4443,17 +4446,21 @@ grounding:
     source_ref: full_dag
     evidence: sampled conditioned on 23 observed dimensions
   lifex_parenting_journey:
-    assignment_type: generated
-    source_ref: full_dag
-    evidence: sampled conditioned on 23 observed dimensions
+    assignment_type: removed_incoherent
+    removed_value: Teenagers
+    refuted_by: demo_children_count
+    refuted_by_value: None
+    reason: child count a person reported refutes the drawn parenting stage
   lifex_public_recognition:
     assignment_type: generated
     source_ref: full_dag
     evidence: sampled conditioned on 23 observed dimensions
   lifex_relationship_history:
-    assignment_type: generated
-    source_ref: full_dag
-    evidence: sampled conditioned on 23 observed dimensions
+    assignment_type: removed_incoherent
+    removed_value: Married once
+    refuted_by: demo_marital_status
+    refuted_by_value: Single
+    reason: marital status a person reported refutes the drawn relationship history
   lifex_service_history:
     assignment_type: generated
     source_ref: full_dag
@@ -6519,6 +6526,31 @@ grounding:
     assignment_type: generated
     source_ref: otofun_2026
     evidence: kinship register for age_bracket=18-24 gender_identity=Woman
+    confidence: 0.5
+  vn_usual_companion:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:demo_driver_status
+    confidence: 0.5
+  vn_voice_privacy_comfort:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:skill_driving
+    confidence: 0.5
+  vn_assistant_task_scope:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:cog_patience
+    confidence: 0.5
+  vn_retry_tolerance:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:cog_skepticism
+    confidence: 0.5
+  att_voice_assistant:
+    assignment_type: derived
+    source_ref: vn_driver_survey_2026
+    evidence: derived_from:vn_assistant_task_scope
     confidence: 0.5
 grounding_summary:
   scoreable: 24

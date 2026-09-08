@@ -12838,5 +12838,57 @@
       "Cao Bang": "Cao Bằng",
       "Lai Chau": "Lai Châu"
     }
+  },
+  "vn_usual_companion": {
+    "label": "Người hay đi cùng",
+    "values": {
+      "Alone": "Đi một mình",
+      "Spouse or partner": "Vợ/chồng hoặc người yêu",
+      "Young children": "Con nhỏ",
+      "Older children": "Con đã lớn",
+      "Parents or elders": "Bố mẹ, người lớn tuổi",
+      "Friends or colleagues": "Bạn bè, đồng nghiệp",
+      "Paying passengers": "Khách trả tiền"
+    }
+  },
+  "vn_voice_privacy_comfort": {
+    "label": "Thoải mái khi có người",
+    "values": {
+      "Very uncomfortable": "Rất ngại",
+      "Uncomfortable": "Ngại",
+      "Neutral": "Bình thường",
+      "Comfortable": "Thoải mái",
+      "Very comfortable": "Rất thoải mái"
+    }
+  },
+  "att_voice_assistant": {
+    "label": "Thái độ: Trợ lý xe",
+    "values": {
+      "Enthusiast": "Đam mê",
+      "Positive": "Tích cực",
+      "Neutral": "Trung lập",
+      "Skeptical": "Hoài nghi",
+      "Opposed": "Phản đối"
+    }
+  },
+  "vn_assistant_task_scope": {
+    "label": "Việc giao cho trợ lý",
+    "values": {
+      "None": "Không giao gì",
+      "Navigation only": "Chỉ dẫn đường",
+      "Navigation and media": "Dẫn đường và giải trí",
+      "Most non-driving tasks": "Hầu hết việc ngoài lái",
+      "Everything including vehicle control": "Mọi thứ, kể cả điều khiển xe"
+    }
+  },
+  "vn_retry_tolerance": {
+    "label": "Chịu đựng nhắc lại",
+    "values": {
+      "Unbothered": "Không phiền",
+      "Mildly annoyed": "Hơi khó chịu",
+      "Annoyed": "Khó chịu",
+      "Very annoyed": "Rất khó chịu",
+      "Gives up immediately": "Bỏ luôn"
+    }
   }
 }

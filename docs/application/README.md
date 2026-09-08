@@ -48,6 +48,7 @@ uv run matraix run -c configs/jobs/application-task-job-recipe/<generated>.yaml
 | [Handbook](../README.md) | Docs home |
 | [Quickstart](../quickstart.md) | First runs |
 | [Vita persona pipeline](vita-persona-pipeline.md) | Two-stage scoring of a Vita task; swap `--task` to score a different one |
+| [Vita results explained (vi)](vita-results-explained.vi.md) | Plain-language walkthrough of how a results workbook is produced, for the people who read it |
 | [Task contracts](../../application/task-spec/README.md) | Specs and metrics |
 | [Persona](../persona/README.md) | Pools, 1M, sampling |
 | [Environment](../environment/README.md) | Matraix Playground, agents, images |

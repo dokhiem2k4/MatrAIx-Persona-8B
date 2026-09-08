@@ -806,7 +806,6 @@ dimensions:
   lifex_military_history: Never served
   lifex_parenting_journey: Grown children
   lifex_public_recognition: Locally known
-  lifex_relationship_history: Widowed
   lifex_service_history: None
   lifex_travel_breadth: Lived abroad
   lifex_turning_point: Near-miss / accident
@@ -1321,6 +1320,11 @@ dimensions:
   vn_locality: Tuyen Quang
   years_experience: 20+
   vn_address_register: chi/em
+  vn_usual_companion: Friends or colleagues
+  vn_voice_privacy_comfort: Comfortable
+  vn_assistant_task_scope: Navigation and media
+  vn_retry_tolerance: Annoyed
+  att_voice_assistant: Neutral
 grounding:
   acad_algebra:
     assignment_type: generated
@@ -4451,9 +4455,11 @@ grounding:
     source_ref: full_dag
     evidence: sampled conditioned on 23 observed dimensions
   lifex_relationship_history:
-    assignment_type: generated
-    source_ref: full_dag
-    evidence: sampled conditioned on 23 observed dimensions
+    assignment_type: removed_incoherent
+    removed_value: Widowed
+    refuted_by: demo_marital_status
+    refuted_by_value: Married
+    reason: marital status a person reported refutes the drawn relationship history
   lifex_service_history:
     assignment_type: generated
     source_ref: full_dag
@@ -6519,6 +6525,31 @@ grounding:
     assignment_type: generated
     source_ref: otofun_2026
     evidence: kinship register for age_bracket=35-44 gender_identity=Woman
+    confidence: 0.5
+  vn_usual_companion:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:demo_driver_status
+    confidence: 0.5
+  vn_voice_privacy_comfort:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:skill_driving
+    confidence: 0.5
+  vn_assistant_task_scope:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:cog_patience
+    confidence: 0.5
+  vn_retry_tolerance:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:cog_skepticism
+    confidence: 0.5
+  att_voice_assistant:
+    assignment_type: derived
+    source_ref: vn_driver_survey_2026
+    evidence: derived_from:vn_assistant_task_scope
     confidence: 0.5
 grounding_summary:
   scoreable: 24

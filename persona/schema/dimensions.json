@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "name": "matrAIx Persona Dimension Space",
   "headlineBehaviors": 8300000000,
-  "targetDimensions": 1292,
+  "targetDimensions": 1297,
   "note": "Flat unified dimension set. Every sampled persona is assigned exactly one value per dimension. The 'category' tag is for UI grouping/filtering only — it does not nest the schema. The full reachable persona space is the product of all value counts; the 8.3B headline is the corpus of behaviors already simulated within it.",
   "dimensions": [
     {
@@ -22165,6 +22165,88 @@
       ],
       "index": 1292,
       "phrase": "lives in {value}",
+      "defaultValue": null
+    },
+    {
+      "id": "vn_usual_companion",
+      "label": "Usual companion in the car",
+      "category": "Demographic: Core",
+      "description": "Who most often rides with this person. Passengers change what a driver is willing to ask an assistant out loud.",
+      "values": [
+        "Alone",
+        "Spouse or partner",
+        "Young children",
+        "Older children",
+        "Parents or elders",
+        "Friends or colleagues",
+        "Paying passengers"
+      ],
+      "phrase": "usually drives with {value}",
+      "index": 1293,
+      "defaultValue": null
+    },
+    {
+      "id": "vn_voice_privacy_comfort",
+      "label": "Comfort speaking to the assistant with others present",
+      "category": "Linguistic: Communication",
+      "description": "How comfortable this person is talking aloud to an in-car assistant while other people are in the vehicle.",
+      "values": [
+        "Very uncomfortable",
+        "Uncomfortable",
+        "Neutral",
+        "Comfortable",
+        "Very comfortable"
+      ],
+      "phrase": "is {value} speaking to the assistant with others present",
+      "index": 1294,
+      "defaultValue": null
+    },
+    {
+      "id": "att_voice_assistant",
+      "label": "Attitude: In-car voice assistant",
+      "category": "Worldview: Beliefs",
+      "description": "Stance toward voice assistants built into a vehicle, distinct from a general stance on AI.",
+      "values": [
+        "Enthusiast",
+        "Positive",
+        "Neutral",
+        "Skeptical",
+        "Opposed"
+      ],
+      "phrase": "a {value} stance on in-car voice assistants",
+      "index": 1295,
+      "defaultValue": null
+    },
+    {
+      "id": "vn_assistant_task_scope",
+      "label": "Range of tasks delegated to the assistant",
+      "category": "Interests: Culture",
+      "description": "How much of the driving task this person hands to the assistant, from navigation only to nearly everything.",
+      "values": [
+        "None",
+        "Navigation only",
+        "Navigation and media",
+        "Most non-driving tasks",
+        "Everything including vehicle control"
+      ],
+      "phrase": "delegates {value} to the assistant",
+      "index": 1296,
+      "defaultValue": null
+    },
+    {
+      "id": "vn_retry_tolerance",
+      "label": "Tolerance for repeating a command",
+      "category": "Linguistic: Communication",
+      "description": "How this person reacts when the assistant mishears and the command must be repeated. Decides which turn they give up on.",
+      "values": [
+        "Unbothered",
+        "Mildly annoyed",
+        "Annoyed",
+        "Very annoyed",
+        "Gives up immediately"
+      ],
+      "phrase": "is {value} when a command must be repeated",
+      "index": 1297,
       "defaultValue": null
     }
   ],

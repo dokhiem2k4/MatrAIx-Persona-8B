@@ -1,0 +1,482 @@
+[
+  {
+    "questionId": "q0",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "charger_availability",
+    "subintent_name": "Trạm sạc còn trống",
+    "seed_input": "Trạm sạc gần nhất còn trụ trống không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q1",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "charger_availability",
+    "subintent_name": "Trạm sạc còn trống",
+    "seed_input": "Trạm sạc gần nhất còn trụ trống không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q2",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "charger_availability",
+    "subintent_name": "Trạm sạc còn trống",
+    "seed_input": "Kiểm tra xem trạm ở Vincom có ai đang sạc không.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q3",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "charger_availability",
+    "subintent_name": "Trạm sạc còn trống",
+    "seed_input": "Kiểm tra xem trạm ở Vincom có ai đang sạc không.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q4",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "charger_availability",
+    "subintent_name": "Trạm sạc còn trống",
+    "seed_input": "Giữ chỗ hộ tôi một trụ ở trạm sắp tới.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q5",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "charger_availability",
+    "subintent_name": "Trạm sạc còn trống",
+    "seed_input": "Giữ chỗ hộ tôi một trụ ở trạm sắp tới.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q6",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "charger_availability",
+    "subintent_name": "Trạm sạc còn trống",
+    "seed_input": "Mai tôi đi Hải Phòng, dọc đường trạm nào hay đông?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q7",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "charger_availability",
+    "subintent_name": "Trạm sạc còn trống",
+    "seed_input": "Mai tôi đi Hải Phòng, dọc đường trạm nào hay đông?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q8",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "charger_availability",
+    "subintent_name": "Trạm sạc còn trống",
+    "seed_input": "Trụ nhanh gần đây còn hoạt động không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q9",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "charger_availability",
+    "subintent_name": "Trạm sạc còn trống",
+    "seed_input": "Trụ nhanh gần đây còn hoạt động không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q10",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "charger_availability",
+    "subintent_name": "Trạm sạc còn trống",
+    "seed_input": "Báo tôi khi có trụ trống ở trạm tôi đang tới.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q11",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "charger_availability",
+    "subintent_name": "Trạm sạc còn trống",
+    "seed_input": "Báo tôi khi có trụ trống ở trạm tôi đang tới.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q12",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "flood_road_conditions",
+    "subintent_name": "Ngập và mặt đường",
+    "seed_input": "Đoạn Phạm Hùng giờ có ngập không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q13",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "flood_road_conditions",
+    "subintent_name": "Ngập và mặt đường",
+    "seed_input": "Đoạn Phạm Hùng giờ có ngập không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q14",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "flood_road_conditions",
+    "subintent_name": "Ngập và mặt đường",
+    "seed_input": "Mưa thế này đường nào đang ngập nặng?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q15",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "flood_road_conditions",
+    "subintent_name": "Ngập và mặt đường",
+    "seed_input": "Mưa thế này đường nào đang ngập nặng?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q16",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "flood_road_conditions",
+    "subintent_name": "Ngập và mặt đường",
+    "seed_input": "Tránh giúp tôi mấy chỗ ngập trên tuyến này.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q17",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "flood_road_conditions",
+    "subintent_name": "Ngập và mặt đường",
+    "seed_input": "Tránh giúp tôi mấy chỗ ngập trên tuyến này.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q18",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "flood_road_conditions",
+    "subintent_name": "Ngập và mặt đường",
+    "seed_input": "Sáng mai triều cường có ảnh hưởng đường tôi đi không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q19",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "flood_road_conditions",
+    "subintent_name": "Ngập và mặt đường",
+    "seed_input": "Sáng mai triều cường có ảnh hưởng đường tôi đi không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q20",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "flood_road_conditions",
+    "subintent_name": "Ngập và mặt đường",
+    "seed_input": "Chỗ nào đang ngập sâu quá 30 phân thì báo tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q21",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "flood_road_conditions",
+    "subintent_name": "Ngập và mặt đường",
+    "seed_input": "Chỗ nào đang ngập sâu quá 30 phân thì báo tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q22",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "flood_road_conditions",
+    "subintent_name": "Ngập và mặt đường",
+    "seed_input": "Cập nhật tình hình ngập theo thời gian thực giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q23",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "flood_road_conditions",
+    "subintent_name": "Ngập và mặt đường",
+    "seed_input": "Cập nhật tình hình ngập theo thời gian thực giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q24",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "live_traffic_incident",
+    "subintent_name": "Sự cố giao thông",
+    "seed_input": "Phía trước có tai nạn gì không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q25",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "live_traffic_incident",
+    "subintent_name": "Sự cố giao thông",
+    "seed_input": "Phía trước có tai nạn gì không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q26",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "live_traffic_incident",
+    "subintent_name": "Sự cố giao thông",
+    "seed_input": "Đường vành đai 3 giờ tắc tới đâu rồi?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q27",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "live_traffic_incident",
+    "subintent_name": "Sự cố giao thông",
+    "seed_input": "Đường vành đai 3 giờ tắc tới đâu rồi?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q28",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "live_traffic_incident",
+    "subintent_name": "Sự cố giao thông",
+    "seed_input": "Có tuyến nào tránh được chỗ tắc này không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q29",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "live_traffic_incident",
+    "subintent_name": "Sự cố giao thông",
+    "seed_input": "Có tuyến nào tránh được chỗ tắc này không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q30",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "live_traffic_incident",
+    "subintent_name": "Sự cố giao thông",
+    "seed_input": "Mai 7 giờ sáng tuyến này thường tắc bao lâu?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q31",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "live_traffic_incident",
+    "subintent_name": "Sự cố giao thông",
+    "seed_input": "Mai 7 giờ sáng tuyến này thường tắc bao lâu?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q32",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "live_traffic_incident",
+    "subintent_name": "Sự cố giao thông",
+    "seed_input": "Báo tôi ngay khi có sự cố trên tuyến đang đi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q33",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "live_traffic_incident",
+    "subintent_name": "Sự cố giao thông",
+    "seed_input": "Báo tôi ngay khi có sự cố trên tuyến đang đi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q34",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "live_traffic_incident",
+    "subintent_name": "Sự cố giao thông",
+    "seed_input": "Cầu Nhật Tân có đang cấm gì không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q35",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "live_traffic_incident",
+    "subintent_name": "Sự cố giao thông",
+    "seed_input": "Cầu Nhật Tân có đang cấm gì không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q36",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "weather_alert",
+    "subintent_name": "Thời tiết bất lợi",
+    "seed_input": "Sắp mưa to không, tôi có nên đi luôn?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q37",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "weather_alert",
+    "subintent_name": "Thời tiết bất lợi",
+    "seed_input": "Sắp mưa to không, tôi có nên đi luôn?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q38",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "weather_alert",
+    "subintent_name": "Thời tiết bất lợi",
+    "seed_input": "Thời tiết Hà Nội chiều nay thế nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q39",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "weather_alert",
+    "subintent_name": "Thời tiết bất lợi",
+    "seed_input": "Thời tiết Hà Nội chiều nay thế nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q40",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "weather_alert",
+    "subintent_name": "Thời tiết bất lợi",
+    "seed_input": "Có cảnh báo gió mạnh trên cao tốc không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q41",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "weather_alert",
+    "subintent_name": "Thời tiết bất lợi",
+    "seed_input": "Có cảnh báo gió mạnh trên cao tốc không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q42",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "weather_alert",
+    "subintent_name": "Thời tiết bất lợi",
+    "seed_input": "Cuối tuần đi Sa Pa thời tiết ra sao?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q43",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "weather_alert",
+    "subintent_name": "Thời tiết bất lợi",
+    "seed_input": "Cuối tuần đi Sa Pa thời tiết ra sao?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q44",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "weather_alert",
+    "subintent_name": "Thời tiết bất lợi",
+    "seed_input": "Báo tôi nếu sắp có mưa đá hay sương mù dày.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q45",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "weather_alert",
+    "subintent_name": "Thời tiết bất lợi",
+    "seed_input": "Báo tôi nếu sắp có mưa đá hay sương mù dày.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q46",
+    "field": "scenario",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "weather_alert",
+    "subintent_name": "Thời tiết bất lợi",
+    "seed_input": "Tầm nhìn đoạn đèo phía trước có kém không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q47",
+    "field": "first_input",
+    "intent_code": "realtime_external_data",
+    "subintent_code": "weather_alert",
+    "subintent_name": "Thời tiết bất lợi",
+    "seed_input": "Tầm nhìn đoạn đèo phía trước có kém không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  }
+]

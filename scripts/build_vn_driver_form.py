@@ -78,6 +78,47 @@ def as_apps_script(spec: dict, include_optional: bool) -> str:
             "",
         ]
 
+    # Open questions carry no dimension and never reach the crosswalk, so they
+    # sit last: whoever abandons the form has already passed the eight closed
+    # questions a record needs to be usable. Whether they are required is the
+    # survey owner's call, read from the spec -- marking them required trades
+    # completion rate for depth, and loses the eight answers too when someone
+    # balks at writing.
+    for q in spec.get("openQuestions", []):
+        required = "true" if q.get("required", False) else "false"
+        kind = q.get("kind", "paragraph")
+        lines.append("  // open ({}) -- not mapped to any dimension".format(kind))
+        if kind == "checkbox":
+            labels = ", ".join("'{}'".format(_js(o)) for o in q["options"])
+            lines += [
+                "  form.addCheckboxItem()",
+                "      .setTitle('{}')".format(_js(q["text"])),
+                "      .setChoiceValues([{}])".format(labels),
+            ]
+        elif kind == "scale":
+            lines += [
+                "  form.addScaleItem()",
+                "      .setTitle('{}')".format(_js(q["text"])),
+                "      .setBounds({}, {})".format(q.get("min", 1), q.get("max", 5)),
+                "      .setLabels('{}', '{}')".format(
+                    _js(q.get("minLabel", "")), _js(q.get("maxLabel", ""))
+                ),
+            ]
+        elif kind == "text":
+            lines += [
+                "  form.addTextItem()",
+                "      .setTitle('{}')".format(_js(q["text"])),
+            ]
+        else:
+            lines += [
+                "  form.addParagraphTextItem()",
+                "      .setTitle('{}')".format(_js(q["text"])),
+            ]
+        # setHelpText is not available on ScaleItem; its labels carry the hint.
+        if q.get("hint") and kind != "scale":
+            lines.append("      .setHelpText('{}')".format(_js(q["hint"])))
+        lines += ["      .setRequired({});".format(required), ""]
+
     lines += [
         "  Logger.log('Form: ' + form.getPublishedUrl());",
         "  Logger.log('Edit: ' + form.getEditUrl());",
@@ -103,8 +144,41 @@ def as_text(spec: dict, include_optional: bool) -> str:
         if q.get("note"):
             out.append("     -- {}".format(q["note"]))
         out.append("")
+    open_questions = spec.get("openQuestions", [])
+    if open_questions:
+        required_count = sum(1 for q in open_questions if q.get("required"))
+        if required_count == len(open_questions):
+            heading = "-- Phần bổ sung (bắt buộc) --"
+        elif required_count:
+            heading = "-- Phần bổ sung ({}/{} bắt buộc) --".format(
+                required_count, len(open_questions)
+            )
+        else:
+            heading = "-- Phần bổ sung (không bắt buộc) --"
+        out += ["", heading, ""]
+        for i, q in enumerate(open_questions, start=len(questions) + 1):
+            mark = "" if q.get("required") else "  (không bắt buộc)"
+            out.append("{}. {}{}".format(i, q["text"], mark))
+            if q.get("hint"):
+                out.append("     ({})".format(q["hint"]))
+            kind = q.get("kind", "paragraph")
+            if kind == "checkbox":
+                out += ["     [ ] {}".format(o) for o in q["options"]]
+            elif kind == "scale":
+                lo, hi = q.get("min", 1), q.get("max", 5)
+                out.append("     {} {}  {}  {} {}".format(
+                    q.get("minLabel", ""), lo,
+                    " ".join(str(n) for n in range(lo + 1, hi)),
+                    hi, q.get("maxLabel", "")))
+            elif kind == "text":
+                out.append("     " + "_" * 60)
+            else:
+                out += ["     " + "_" * 60, "     " + "_" * 60]
+            out.append("")
+
     out += ["", "Quy tắc thu thập:"]
     out += ["  - " + r for r in spec.get("collectionRules", [])]
+    out += ["  - " + r for r in spec.get("openQuestionRules", [])]
     return "\n".join(out)
 
 
@@ -120,6 +194,19 @@ def write_csv(spec: dict, include_optional: bool, path: Path) -> None:
                 writer.writerow(
                     [i, q["dimension"], q["text"], o["label"], o["value"]]
                 )
+        # One row each, with the dimension column left empty -- a reviewer
+        # scanning for unmapped questions should see these are unmapped by
+        # design, not find them missing and assume the table is incomplete.
+        for i, q in enumerate(spec.get("openQuestions", []), start=len(questions) + 1):
+            kind = q.get("kind", "paragraph")
+            if kind == "checkbox":
+                for o in q["options"]:
+                    writer.writerow([i, "", q["text"], o, ""])
+            elif kind == "scale":
+                writer.writerow([i, "", q["text"],
+                                 "(thang {}-{})".format(q.get("min", 1), q.get("max", 5)), ""])
+            else:
+                writer.writerow([i, "", q["text"], "({})".format(kind), ""])
 
 
 def main() -> int:
@@ -140,11 +227,16 @@ def main() -> int:
     n = len(spec["questions"]) + (
         len(spec.get("optionalQuestions", [])) if args.include_optional else 0
     )
+    # Counted apart from n: these are the ones a record stays usable without,
+    # so a run that reports "8 + 6 open" is saying something different from
+    # one that reports 14.
+    n_open = len(spec.get("openQuestions", []))
+    tally = "{} questions{}".format(n, " + {} open".format(n_open) if n_open else "")
 
     if args.format == "csv":
         out = args.out or Path("vn_driver_questions.csv")
         write_csv(spec, args.include_optional, out)
-        print("wrote {} ({} questions)".format(out, n))
+        print("wrote {} ({})".format(out, tally))
         return 0
 
     body = (as_apps_script if args.format == "apps-script" else as_text)(
@@ -152,7 +244,7 @@ def main() -> int:
     )
     if args.out:
         args.out.write_text(body, encoding="utf-8")
-        print("wrote {} ({} questions)".format(args.out, n))
+        print("wrote {} ({})".format(args.out, tally))
     else:
         sys.stdout.write(body)
     return 0

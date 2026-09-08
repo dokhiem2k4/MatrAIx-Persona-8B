@@ -4,22 +4,18 @@
   "title": "Khảo sát trải nghiệm tài xế Việt Nam",
   "schemaRef": "persona/schema/dimensions.json",
   "standardRef": "persona/human_extraction/standards/vn_driver_persona_v1.json",
-
   "intro": "Khảo sát này thu thập 8 thông tin về thói quen lái xe và cách anh/chị tương tác với trợ lý trên xe. Mất khoảng 3 phút. Câu trả lời được dùng để xây dựng hồ sơ mô phỏng người dùng phục vụ kiểm thử trợ lý ảo trên ô tô.",
-
   "consent": {
     "required": true,
     "text": "Tôi đồng ý cho sử dụng câu trả lời của mình để xây dựng hồ sơ người dùng mô phỏng. Tôi hiểu rằng câu trả lời được lưu dưới dạng ẩn danh, không kèm tên, số điện thoại hay email, và có thể được công bố dưới dạng dữ liệu tổng hợp.",
     "note": "Bắt buộc theo Nghị định 13/2023 về bảo vệ dữ liệu cá nhân. Không thu thập thông tin định danh."
   },
-
   "collectionRules": [
     "MỘT người phải trả lời đủ cả 8 câu. Thiếu một câu thì bản ghi đó không dùng để ước lượng phân phối đồng thời được — đó là toàn bộ giá trị của khảo sát này.",
     "KHÔNG tuyển toàn người đam mê xe. Cần cả người trả lời 'Không quan tâm' ở câu 6, vì đó là nhóm đông nhất ngoài đời và khắt khe nhất với trợ lý giọng nói.",
     "Tối thiểu 20 người, khuyến nghị 30.",
     "Không hỏi tên, tuổi chi tiết, số điện thoại, email hay biển số."
   ],
-
   "questions": [
     {
       "n": 1,
@@ -28,11 +24,26 @@
       "screening": true,
       "text": "Hiện tại anh/chị lái ô tô ở mức nào?",
       "options": [
-        { "label": "Lái hằng ngày", "value": "Daily driver" },
-        { "label": "Thỉnh thoảng lái", "value": "Occasional driver" },
-        { "label": "Có bằng nhưng hiếm khi lái", "value": "Licensed, rarely drives" },
-        { "label": "Không lái", "value": "Non-driver" },
-        { "label": "Không lái được", "value": "Cannot drive" }
+        {
+          "label": "Lái hằng ngày",
+          "value": "Daily driver"
+        },
+        {
+          "label": "Thỉnh thoảng lái",
+          "value": "Occasional driver"
+        },
+        {
+          "label": "Có bằng nhưng hiếm khi lái",
+          "value": "Licensed, rarely drives"
+        },
+        {
+          "label": "Không lái",
+          "value": "Non-driver"
+        },
+        {
+          "label": "Không lái được",
+          "value": "Cannot drive"
+        }
       ],
       "note": "Câu sàng lọc. Chỉ 'Lái hằng ngày' và 'Thỉnh thoảng lái' đủ điều kiện chấm trợ lý trên xe."
     },
@@ -42,12 +53,30 @@
       "required": true,
       "text": "Phương tiện anh/chị dùng nhiều nhất để đi lại hằng ngày?",
       "options": [
-        { "label": "Ô tô", "value": "Car" },
-        { "label": "Xe máy / xe đạp", "value": "Bike" },
-        { "label": "Phương tiện công cộng", "value": "Public transit" },
-        { "label": "Xe công nghệ (Grab, Be, Xanh SM...)", "value": "Rideshare" },
-        { "label": "Đi bộ", "value": "Walk" },
-        { "label": "Làm việc từ xa, ít đi lại", "value": "Remote" }
+        {
+          "label": "Ô tô",
+          "value": "Car"
+        },
+        {
+          "label": "Xe máy / xe đạp",
+          "value": "Bike"
+        },
+        {
+          "label": "Phương tiện công cộng",
+          "value": "Public transit"
+        },
+        {
+          "label": "Xe công nghệ (Grab, Be, Xanh SM...)",
+          "value": "Rideshare"
+        },
+        {
+          "label": "Đi bộ",
+          "value": "Walk"
+        },
+        {
+          "label": "Làm việc từ xa, ít đi lại",
+          "value": "Remote"
+        }
       ]
     },
     {
@@ -56,11 +85,26 @@
       "required": true,
       "text": "Anh/chị tự đánh giá tay lái của mình ở mức nào?",
       "options": [
-        { "label": "Rất thành thạo — lái được mọi điều kiện đường", "value": "Master" },
-        { "label": "Thành thạo — tự tin trong hầu hết tình huống", "value": "Advanced" },
-        { "label": "Trung bình — lái ổn ở đường quen", "value": "Intermediate" },
-        { "label": "Mới lái — còn dè dặt", "value": "Beginner" },
-        { "label": "Không lái được", "value": "None" }
+        {
+          "label": "Rất thành thạo — lái được mọi điều kiện đường",
+          "value": "Master"
+        },
+        {
+          "label": "Thành thạo — tự tin trong hầu hết tình huống",
+          "value": "Advanced"
+        },
+        {
+          "label": "Trung bình — lái ổn ở đường quen",
+          "value": "Intermediate"
+        },
+        {
+          "label": "Mới lái — còn dè dặt",
+          "value": "Beginner"
+        },
+        {
+          "label": "Không lái được",
+          "value": "None"
+        }
       ]
     },
     {
@@ -69,11 +113,26 @@
       "required": true,
       "text": "Khi trợ lý giọng nói hoặc máy móc hiểu sai ý anh/chị, anh/chị thường?",
       "options": [
-        { "label": "Kiên trì giải thích lại nhiều lần cho tới khi được", "value": "Very high" },
-        { "label": "Nhắc lại vài lần rồi mới thôi", "value": "High" },
-        { "label": "Thử lại một hai lần", "value": "Moderate" },
-        { "label": "Nhanh chán, thường tự làm tay", "value": "Low" },
-        { "label": "Bỏ luôn ngay lần đầu", "value": "None" }
+        {
+          "label": "Kiên trì giải thích lại nhiều lần cho tới khi được",
+          "value": "Very high"
+        },
+        {
+          "label": "Nhắc lại vài lần rồi mới thôi",
+          "value": "High"
+        },
+        {
+          "label": "Thử lại một hai lần",
+          "value": "Moderate"
+        },
+        {
+          "label": "Nhanh chán, thường tự làm tay",
+          "value": "Low"
+        },
+        {
+          "label": "Bỏ luôn ngay lần đầu",
+          "value": "None"
+        }
       ],
       "note": "Quyết định persona bỏ cuộc ở lượt thứ mấy trong hội thoại mô phỏng."
     },
@@ -83,11 +142,26 @@
       "required": true,
       "text": "Khi trợ lý đưa ra thông tin (quãng đường, mức pin, chỉ dẫn), anh/chị có kiểm chứng lại không?",
       "options": [
-        { "label": "Luôn kiểm chứng lại bằng nguồn khác", "value": "Very high" },
-        { "label": "Thường kiểm chứng nếu là việc quan trọng", "value": "High" },
-        { "label": "Thỉnh thoảng", "value": "Moderate" },
-        { "label": "Hiếm khi", "value": "Low" },
-        { "label": "Tin luôn, không kiểm lại", "value": "None" }
+        {
+          "label": "Luôn kiểm chứng lại bằng nguồn khác",
+          "value": "Very high"
+        },
+        {
+          "label": "Thường kiểm chứng nếu là việc quan trọng",
+          "value": "High"
+        },
+        {
+          "label": "Thỉnh thoảng",
+          "value": "Moderate"
+        },
+        {
+          "label": "Hiếm khi",
+          "value": "Low"
+        },
+        {
+          "label": "Tin luôn, không kiểm lại",
+          "value": "None"
+        }
       ],
       "note": "Quyết định persona có vặn lại khi trợ lý báo sai hay không."
     },
@@ -97,11 +171,26 @@
       "required": true,
       "text": "Mức độ quan tâm của anh/chị tới ô tô nói chung?",
       "options": [
-        { "label": "Đam mê — theo dõi tin tức, thông số xe", "value": "Passionate" },
-        { "label": "Có quan tâm", "value": "Interested" },
-        { "label": "Bình thường", "value": "Neutral" },
-        { "label": "Không quan tâm — xe chỉ là phương tiện đi lại", "value": "Indifferent" },
-        { "label": "Ngại, thấy phiền", "value": "Averse" }
+        {
+          "label": "Đam mê — theo dõi tin tức, thông số xe",
+          "value": "Passionate"
+        },
+        {
+          "label": "Có quan tâm",
+          "value": "Interested"
+        },
+        {
+          "label": "Bình thường",
+          "value": "Neutral"
+        },
+        {
+          "label": "Không quan tâm — xe chỉ là phương tiện đi lại",
+          "value": "Indifferent"
+        },
+        {
+          "label": "Ngại, thấy phiền",
+          "value": "Averse"
+        }
       ],
       "note": "Chiều dễ bị thiên lệch nhất. Nếu mẫu không có ai chọn 'Không quan tâm' thì mẫu đã lệch."
     },
@@ -111,11 +200,26 @@
       "required": true,
       "text": "Quan điểm của anh/chị về xe điện?",
       "options": [
-        { "label": "Rất ủng hộ", "value": "Enthusiast" },
-        { "label": "Tích cực", "value": "Positive" },
-        { "label": "Trung lập", "value": "Neutral" },
-        { "label": "Hoài nghi", "value": "Skeptical" },
-        { "label": "Phản đối", "value": "Opposed" }
+        {
+          "label": "Rất ủng hộ",
+          "value": "Enthusiast"
+        },
+        {
+          "label": "Tích cực",
+          "value": "Positive"
+        },
+        {
+          "label": "Trung lập",
+          "value": "Neutral"
+        },
+        {
+          "label": "Hoài nghi",
+          "value": "Skeptical"
+        },
+        {
+          "label": "Phản đối",
+          "value": "Opposed"
+        }
       ]
     },
     {
@@ -124,25 +228,54 @@
       "required": true,
       "text": "Quan điểm của anh/chị về xe tự lái / hỗ trợ lái tự động?",
       "options": [
-        { "label": "Rất ủng hộ", "value": "Enthusiast" },
-        { "label": "Tích cực", "value": "Positive" },
-        { "label": "Trung lập", "value": "Neutral" },
-        { "label": "Hoài nghi", "value": "Skeptical" },
-        { "label": "Phản đối", "value": "Opposed" }
+        {
+          "label": "Rất ủng hộ",
+          "value": "Enthusiast"
+        },
+        {
+          "label": "Tích cực",
+          "value": "Positive"
+        },
+        {
+          "label": "Trung lập",
+          "value": "Neutral"
+        },
+        {
+          "label": "Hoài nghi",
+          "value": "Skeptical"
+        },
+        {
+          "label": "Phản đối",
+          "value": "Opposed"
+        }
       ]
     }
   ],
-
   "optionalQuestions": [
     {
       "dimension": "cog_verbosity",
       "text": "Khi nói chuyện với trợ lý trên xe, anh/chị thường nói?",
       "options": [
-        { "label": "Rất ngắn, chỉ ra lệnh", "value": "Terse" },
-        { "label": "Ngắn gọn", "value": "Concise" },
-        { "label": "Vừa phải", "value": "Balanced" },
-        { "label": "Nói khá dài, giải thích thêm", "value": "Wordy" },
-        { "label": "Nói lan man", "value": "Rambling" }
+        {
+          "label": "Rất ngắn, chỉ ra lệnh",
+          "value": "Terse"
+        },
+        {
+          "label": "Ngắn gọn",
+          "value": "Concise"
+        },
+        {
+          "label": "Vừa phải",
+          "value": "Balanced"
+        },
+        {
+          "label": "Nói khá dài, giải thích thêm",
+          "value": "Wordy"
+        },
+        {
+          "label": "Nói lan man",
+          "value": "Rambling"
+        }
       ],
       "note": "Hỏi nếu không dùng nguồn forum. Đo từ bài viết forum chính xác hơn tự khai."
     },
@@ -150,15 +283,208 @@
       "dimension": "vn_address_register",
       "text": "Anh/chị xưng hô thế nào khi nói với trợ lý trên xe?",
       "options": [
-        { "label": "anh – em", "value": "anh/em" },
-        { "label": "chị – em", "value": "chi/em" },
-        { "label": "em – anh/chị", "value": "em/anh-chi" },
-        { "label": "cô-chú – con", "value": "co-chu/con" },
-        { "label": "bác – cháu", "value": "bac/chau" },
-        { "label": "tôi – bạn", "value": "toi/ban" },
-        { "label": "mình – bạn", "value": "minh/ban" }
+        {
+          "label": "anh – em",
+          "value": "anh/em"
+        },
+        {
+          "label": "chị – em",
+          "value": "chi/em"
+        },
+        {
+          "label": "em – anh/chị",
+          "value": "em/anh-chi"
+        },
+        {
+          "label": "cô-chú – con",
+          "value": "co-chu/con"
+        },
+        {
+          "label": "bác – cháu",
+          "value": "bac/chau"
+        },
+        {
+          "label": "tôi – bạn",
+          "value": "toi/ban"
+        },
+        {
+          "label": "mình – bạn",
+          "value": "minh/ban"
+        }
       ],
       "note": "Chiều mới index 1291. Không khảo sát dân số nào có."
     }
+  ],
+  "openQuestions": [
+    {
+      "n": 1,
+      "kind": "checkbox",
+      "required": true,
+      "text": "Anh/chị hay nhờ trợ lý trên xe làm những việc gì? (chọn tất cả những gì đúng)",
+      "options": [
+        "Chỉ đường",
+        "Gọi điện / nhắn tin",
+        "Mở nhạc / radio / podcast",
+        "Chỉnh điều hoà / ghế / cửa sổ",
+        "Hỏi mức pin / xăng / quãng đường",
+        "Tìm chỗ đỗ / trạm sạc / quán ăn",
+        "Hỏi linh tinh cho đỡ buồn ngủ",
+        "Hầu như không nhờ gì"
+      ],
+      "purpose": "Nhóm chức năng thật sự được dùng, để biết nên sinh nhiều tình huống ở đâu."
+    },
+    {
+      "n": 2,
+      "kind": "checkbox",
+      "required": true,
+      "text": "Trên xe anh/chị thường có ai đi cùng? (chọn tất cả những gì đúng)",
+      "options": [
+        "Thường đi một mình",
+        "Vợ/chồng / người yêu",
+        "Con nhỏ",
+        "Con đã lớn",
+        "Bố mẹ / người lớn tuổi",
+        "Bạn bè / đồng nghiệp",
+        "Khách (chạy dịch vụ)"
+      ],
+      "purpose": "Có người ngồi cạnh đổi hẳn thứ người ta dám nhờ trợ lý làm."
+    },
+    {
+      "n": 3,
+      "kind": "checkbox",
+      "required": true,
+      "text": "Khi lái xe anh/chị hay nghe gì? (chọn tất cả những gì đúng)",
+      "options": [
+        "Nhạc Việt",
+        "Nhạc nước ngoài",
+        "Radio",
+        "Podcast / sách nói",
+        "Tin tức",
+        "Kinh / nhạc thiền",
+        "Không nghe gì"
+      ],
+      "purpose": "Nhu cầu giải trí thật, nuôi nhóm chức năng infotainment."
+    },
+    {
+      "n": 4,
+      "kind": "scale",
+      "required": true,
+      "min": 1,
+      "max": 5,
+      "minLabel": "Luôn kiểm lại",
+      "maxLabel": "Tin hẳn",
+      "text": "Anh/chị tin thông tin trợ lý đưa ra tới mức nào?",
+      "purpose": "Cường độ hoài nghi, mịn hơn ô trắc nghiệm 5 mức ở câu 5."
+    },
+    {
+      "n": 5,
+      "kind": "scale",
+      "required": true,
+      "min": 1,
+      "max": 5,
+      "minLabel": "Không phiền",
+      "maxLabel": "Rất bực",
+      "text": "Phải nhắc lại một câu lệnh vài lần thì anh/chị khó chịu tới mức nào?",
+      "purpose": "Ngưỡng chịu đựng khi trợ lý hiểu sai."
+    },
+    {
+      "n": 6,
+      "kind": "scale",
+      "required": true,
+      "min": 1,
+      "max": 5,
+      "minLabel": "Rất ngại",
+      "maxLabel": "Rất thoải mái",
+      "text": "Nói to với trợ lý khi trên xe có người khác, anh/chị thấy thế nào?",
+      "purpose": "Rào cản xã hội của giao diện giọng nói — hiếm khi ai hỏi."
+    },
+    {
+      "n": 7,
+      "kind": "text",
+      "required": true,
+      "text": "Anh/chị gọi trợ lý trên xe là gì, và xưng hô thế nào với nó?",
+      "hint": "Chép đúng như lúc nói, ví dụ: 'em ơi', 'mày', gọi thẳng tên.",
+      "purpose": "Cách xưng hô thật, gán được cho đúng người trả lời."
+    },
+    {
+      "n": 8,
+      "kind": "text",
+      "required": true,
+      "text": "Câu anh/chị hay nói với trợ lý nhất là câu nào? Chép đúng nguyên văn.",
+      "hint": "Viết đúng giọng mình, kể cả nói tắt hay chưa tròn câu.",
+      "purpose": "Nguồn câu lệnh thật cho stage 1."
+    },
+    {
+      "n": 9,
+      "kind": "paragraph",
+      "required": true,
+      "text": "Kể một lần trợ lý trên xe làm anh/chị bực mình. Chuyện gì đã xảy ra?",
+      "hint": "Anh/chị nói gì, nó trả lời sao, rồi anh/chị làm gì tiếp.",
+      "purpose": "Thất bại thật trông ra sao."
+    },
+    {
+      "n": 10,
+      "kind": "paragraph",
+      "required": true,
+      "text": "Khi trợ lý làm sai hoặc không hiểu ý, anh/chị muốn nó phản hồi thế nào cho phải?",
+      "hint": "Nói thẳng là không làm được? Xin lỗi rồi hỏi lại? Hay im lặng chờ mình nói lại?",
+      "purpose": "Kỳ vọng khi xảy ra lỗi — đúng chỗ trợ lý bị chấm thấp nhất."
+    },
+    {
+      "n": 11,
+      "kind": "paragraph",
+      "required": true,
+      "text": "Trợ lý có bao giờ nghe nhầm giọng của anh/chị không? Nhầm ở từ nào?",
+      "hint": "Tên đường, tên người, số điện thoại, hoặc từ địa phương.",
+      "purpose": "Vấn đề giọng vùng miền — không hỏi thì không bao giờ lộ ra."
+    },
+    {
+      "n": 12,
+      "kind": "paragraph",
+      "required": true,
+      "text": "Có lần nào trợ lý báo thông tin mà anh/chị thấy không tin? Lúc đó làm gì?",
+      "hint": "Ví dụ mức pin, quãng đường còn lại, hay chỉ đường thấy sai.",
+      "purpose": "Hành vi hoài nghi bằng chuyện thật."
+    },
+    {
+      "n": 13,
+      "kind": "paragraph",
+      "required": true,
+      "text": "Khi nào anh/chị dùng giọng nói, khi nào thà tự tay bấm? Vì sao?",
+      "hint": "Nêu tình huống cụ thể: cao tốc, tắc đường, chở con nhỏ...",
+      "purpose": "Bối cảnh sử dụng thật."
+    },
+    {
+      "n": 14,
+      "kind": "paragraph",
+      "required": true,
+      "text": "Tả một chuyến đi điển hình trong tuần của anh/chị.",
+      "hint": "Đi đâu, giờ nào, mất bao lâu, đường tắc hay thoáng.",
+      "purpose": "Bối cảnh để dựng tình huống, thay vì bịa."
+    },
+    {
+      "n": 15,
+      "kind": "paragraph",
+      "required": true,
+      "text": "Điều gì ở trợ lý khiến anh/chị thấy phiền hoặc không an toàn khi đang chạy?",
+      "hint": "Nói dài, đọc to lúc không nên, hỏi lại nhiều lần, làm mất tập trung...",
+      "purpose": "Tiêu chí an toàn theo lời người lái."
+    },
+    {
+      "n": 16,
+      "kind": "paragraph",
+      "required": true,
+      "text": "Anh/chị ước trợ lý làm được việc gì mà hiện giờ nó chưa làm được?",
+      "hint": "Bất cứ điều gì, kể cả nghe có vẻ khó.",
+      "purpose": "Nhu cầu chưa đáp ứng — gợi ý nhóm chức năng cần bổ sung."
+    }
+  ],
+  "openQuestionRules": [
+    "Tất cả câu tự luận đều BẮT BUỘC, theo yêu cầu của người chủ trì khảo sát.",
+    "Đánh đổi đã biết: người ngại viết sẽ bỏ cả bản ghi thay vì chỉ bỏ phần tự luận, nên tám câu trắc nghiệm cũng mất theo. Theo dõi tỉ lệ bỏ dở; nếu tụt sâu thì hạ một số câu xuống không bắt buộc.",
+    "Trộn nhiều dạng câu có chủ ý: chuyện thì để tự luận, cường độ thì dùng thang điểm, 'những cái nào' thì cho chọn nhiều. Hỏi tất cả bằng tự luận là cách biến phần này thành một bức tường chữ và làm người ta bỏ ngang.",
+    "Câu tự luận KHÔNG ánh xạ sang chiều nào trong schema, nên không đưa vào crosswalk. Chúng cần một bước đọc-và-mã-hoá riêng.",
+    "Đặt sau tám câu trắc nghiệm, để người bỏ dở vẫn đi qua phần quan trọng trước.",
+    "Nhãn của câu CHỌN NHIỀU không được chứa dấu phẩy: Google Forms nối các lựa chọn bằng ', ' khi xuất CSV, nên một nhãn có phẩy sẽ bị cắt vụn và cột đó không đọc được. Dùng ' / ' để ngăn cách. Câu chọn một không bị ảnh hưởng."
   ]
 }

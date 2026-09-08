@@ -1,0 +1,482 @@
+[
+  {
+    "questionId": "q0",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_vehicle_commands",
+    "subintent_name": "Lệnh trong xe khi mất mạng",
+    "seed_input": "Mất sóng rồi, em còn chỉnh được điều hoà không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q1",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_vehicle_commands",
+    "subintent_name": "Lệnh trong xe khi mất mạng",
+    "seed_input": "Mất sóng rồi, em còn chỉnh được điều hoà không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q2",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_vehicle_commands",
+    "subintent_name": "Lệnh trong xe khi mất mạng",
+    "seed_input": "Không có mạng thì lệnh nào vẫn dùng được?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q3",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_vehicle_commands",
+    "subintent_name": "Lệnh trong xe khi mất mạng",
+    "seed_input": "Không có mạng thì lệnh nào vẫn dùng được?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q4",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_vehicle_commands",
+    "subintent_name": "Lệnh trong xe khi mất mạng",
+    "seed_input": "Chỉnh âm lượng giúp tôi, đang không có sóng.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q5",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_vehicle_commands",
+    "subintent_name": "Lệnh trong xe khi mất mạng",
+    "seed_input": "Chỉnh âm lượng giúp tôi, đang không có sóng.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q6",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_vehicle_commands",
+    "subintent_name": "Lệnh trong xe khi mất mạng",
+    "seed_input": "Cài trước những lệnh chạy được offline.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q7",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_vehicle_commands",
+    "subintent_name": "Lệnh trong xe khi mất mạng",
+    "seed_input": "Cài trước những lệnh chạy được offline.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q8",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_vehicle_commands",
+    "subintent_name": "Lệnh trong xe khi mất mạng",
+    "seed_input": "Ở vùng cao không có mạng, em làm được gì?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q9",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_vehicle_commands",
+    "subintent_name": "Lệnh trong xe khi mất mạng",
+    "seed_input": "Ở vùng cao không có mạng, em làm được gì?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q10",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_vehicle_commands",
+    "subintent_name": "Lệnh trong xe khi mất mạng",
+    "seed_input": "Báo cho tôi biết khi nào em mất kết nối.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q11",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_vehicle_commands",
+    "subintent_name": "Lệnh trong xe khi mất mạng",
+    "seed_input": "Báo cho tôi biết khi nào em mất kết nối.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q12",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_navigation",
+    "subintent_name": "Dẫn đường khi mất mạng",
+    "seed_input": "Tải trước bản đồ vùng cao cho chuyến mai.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q13",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_navigation",
+    "subintent_name": "Dẫn đường khi mất mạng",
+    "seed_input": "Tải trước bản đồ vùng cao cho chuyến mai.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q14",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_navigation",
+    "subintent_name": "Dẫn đường khi mất mạng",
+    "seed_input": "Mất mạng giữa đường thì dẫn đường còn chạy không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q15",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_navigation",
+    "subintent_name": "Dẫn đường khi mất mạng",
+    "seed_input": "Mất mạng giữa đường thì dẫn đường còn chạy không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q16",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_navigation",
+    "subintent_name": "Dẫn đường khi mất mạng",
+    "seed_input": "Đường huyện này em có dữ liệu không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q17",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_navigation",
+    "subintent_name": "Dẫn đường khi mất mạng",
+    "seed_input": "Đường huyện này em có dữ liệu không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q18",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_navigation",
+    "subintent_name": "Dẫn đường khi mất mạng",
+    "seed_input": "Lưu tuyến này để dùng khi không có sóng.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q19",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_navigation",
+    "subintent_name": "Dẫn đường khi mất mạng",
+    "seed_input": "Lưu tuyến này để dùng khi không có sóng.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q20",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_navigation",
+    "subintent_name": "Dẫn đường khi mất mạng",
+    "seed_input": "Em có bản đồ ngoại tuyến khu vực này không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q21",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_navigation",
+    "subintent_name": "Dẫn đường khi mất mạng",
+    "seed_input": "Em có bản đồ ngoại tuyến khu vực này không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q22",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_navigation",
+    "subintent_name": "Dẫn đường khi mất mạng",
+    "seed_input": "Nếu mất sóng thì em tự chuyển sang bản đồ đã tải chứ?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q23",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "offline_navigation",
+    "subintent_name": "Dẫn đường khi mất mạng",
+    "seed_input": "Nếu mất sóng thì em tự chuyển sang bản đồ đã tải chứ?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q24",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "connectivity_failure_disclosure",
+    "subintent_name": "Nói rõ khi không làm được",
+    "seed_input": "Em không trả lời được thì nói thẳng, đừng im.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q25",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "connectivity_failure_disclosure",
+    "subintent_name": "Nói rõ khi không làm được",
+    "seed_input": "Em không trả lời được thì nói thẳng, đừng im.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q26",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "connectivity_failure_disclosure",
+    "subintent_name": "Nói rõ khi không làm được",
+    "seed_input": "Vừa nãy em bí là do mất mạng hay do không biết?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q27",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "connectivity_failure_disclosure",
+    "subintent_name": "Nói rõ khi không làm được",
+    "seed_input": "Vừa nãy em bí là do mất mạng hay do không biết?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q28",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "connectivity_failure_disclosure",
+    "subintent_name": "Nói rõ khi không làm được",
+    "seed_input": "Cho tôi biết em đang làm gì, đừng im lặng.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q29",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "connectivity_failure_disclosure",
+    "subintent_name": "Nói rõ khi không làm được",
+    "seed_input": "Cho tôi biết em đang làm gì, đừng im lặng.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q30",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "connectivity_failure_disclosure",
+    "subintent_name": "Nói rõ khi không làm được",
+    "seed_input": "Khi nào không chắc thì báo tôi, đừng đoán bừa.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q31",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "connectivity_failure_disclosure",
+    "subintent_name": "Nói rõ khi không làm được",
+    "seed_input": "Khi nào không chắc thì báo tôi, đừng đoán bừa.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q32",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "connectivity_failure_disclosure",
+    "subintent_name": "Nói rõ khi không làm được",
+    "seed_input": "Em vừa trả lời từ trên mạng hay từ trong xe?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q33",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "connectivity_failure_disclosure",
+    "subintent_name": "Nói rõ khi không làm được",
+    "seed_input": "Em vừa trả lời từ trên mạng hay từ trong xe?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q34",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "connectivity_failure_disclosure",
+    "subintent_name": "Nói rõ khi không làm được",
+    "seed_input": "Nếu không tra được thì nói rõ lý do cho tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q35",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "connectivity_failure_disclosure",
+    "subintent_name": "Nói rõ khi không làm được",
+    "seed_input": "Nếu không tra được thì nói rõ lý do cho tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q36",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "degraded_fallback",
+    "subintent_name": "Xoay xở khi thiếu dữ liệu",
+    "seed_input": "Không tra được trạm sạc thì cho tôi cái gần nhất em còn nhớ.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q37",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "degraded_fallback",
+    "subintent_name": "Xoay xở khi thiếu dữ liệu",
+    "seed_input": "Không tra được trạm sạc thì cho tôi cái gần nhất em còn nhớ.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q38",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "degraded_fallback",
+    "subintent_name": "Xoay xở khi thiếu dữ liệu",
+    "seed_input": "Mạng chậm quá, làm tạm cái gì đó được không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q39",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "degraded_fallback",
+    "subintent_name": "Xoay xở khi thiếu dữ liệu",
+    "seed_input": "Mạng chậm quá, làm tạm cái gì đó được không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q40",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "degraded_fallback",
+    "subintent_name": "Xoay xở khi thiếu dữ liệu",
+    "seed_input": "Không có dữ liệu thời gian thực thì cứ đưa số liệu cũ cũng được.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q41",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "degraded_fallback",
+    "subintent_name": "Xoay xở khi thiếu dữ liệu",
+    "seed_input": "Không có dữ liệu thời gian thực thì cứ đưa số liệu cũ cũng được.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q42",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "degraded_fallback",
+    "subintent_name": "Xoay xở khi thiếu dữ liệu",
+    "seed_input": "Chuẩn bị sẵn phương án cho đoạn không có sóng.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q43",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "degraded_fallback",
+    "subintent_name": "Xoay xở khi thiếu dữ liệu",
+    "seed_input": "Chuẩn bị sẵn phương án cho đoạn không có sóng.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q44",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "degraded_fallback",
+    "subintent_name": "Xoay xở khi thiếu dữ liệu",
+    "seed_input": "Nếu hỏi mạng lâu quá thì bỏ qua, làm việc khác trước.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q45",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "degraded_fallback",
+    "subintent_name": "Xoay xở khi thiếu dữ liệu",
+    "seed_input": "Nếu hỏi mạng lâu quá thì bỏ qua, làm việc khác trước.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q46",
+    "field": "scenario",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "degraded_fallback",
+    "subintent_name": "Xoay xở khi thiếu dữ liệu",
+    "seed_input": "Đừng chờ mạng, trả lời tôi bằng cái em có sẵn đi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q47",
+    "field": "first_input",
+    "intent_code": "offline_degraded_mode",
+    "subintent_code": "degraded_fallback",
+    "subintent_name": "Xoay xở khi thiếu dữ liệu",
+    "seed_input": "Đừng chờ mạng, trả lời tôi bằng cái em có sẵn đi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  }
+]

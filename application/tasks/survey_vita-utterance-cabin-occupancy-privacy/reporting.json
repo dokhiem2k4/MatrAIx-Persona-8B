@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "trial_summary"
+      },
+      "distributions": [
+        {
+          "id": "survey.summary.answer_count",
+          "facetKey": "answer_count",
+          "title": "Số câu đã sinh"
+        }
+      ]
+    }
+  ]
+}
