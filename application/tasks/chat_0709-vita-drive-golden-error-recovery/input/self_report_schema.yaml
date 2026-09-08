@@ -15,10 +15,23 @@ fields:
     prompt: Trợ lý Vita có đáp ứng tốt yêu cầu điều khiển/hỗ trợ của bạn không?
     kind: enum
     choices: [yes, partially, no]
+    # Không có ô này thì câu trả lời "partially" đứng trơ một mình: người đọc
+    # thấy "một phần" mà không biết phần nào được, phần nào hỏng.
+    explanation:
+      key: needNotes
+      prompt: >-
+        Nếu trả lời "partially", nói rõ phần nào được đáp ứng và phần nào
+        không. Dẫn lượt cụ thể ("ở lượt 2 Vita ..."), bằng tiếng Việt.
   - key: personalPreferenceSatisfaction
     prompt: Giọng điệu và cách phản hồi có phù hợp với bạn khi lái xe không?
     kind: enum
     choices: [yes, partially, no]
+    explanation:
+      key: preferenceNotes
+      prompt: >-
+        Nếu trả lời "partially", nói rõ chỗ nào hợp và chỗ nào chưa hợp với
+        bạn. Dẫn lượt cụ thể và nêu đặc điểm nào của bản thân khiến bạn thấy
+        như vậy, bằng tiếng Việt.
   - key: overallExperienceRating
     prompt: Đánh giá tổng quan trải nghiệm từ 1 đến 10?
     kind: integer

@@ -440,4 +440,7 @@ def test_payload_attaches_every_self_report_field():
         "asked_useful_clarification",
         "feedback_reason",
         "clarifying_notes",
+        # A bare "partially" needs the persona to say which half worked.
+        "need_satisfaction_notes",
+        "preference_satisfaction_notes",
     }

@@ -165,3 +165,22 @@ def test_process_notes_read_as_a_sentence_not_a_row_of_codes():
     ]
     assert "tình huống thuận lợi" in notes
     assert "happy_case" not in notes
+
+
+def test_every_partially_answer_has_a_place_for_its_reason():
+    """A bare "partially" tells a reader the assistant half worked and nothing
+    about which half. Each enum answer needs an explanation field beside it."""
+    import yaml
+
+    tasks = Path(__file__).resolve().parents[3] / "application/tasks"
+    for slug in (
+        "chat_0709-vita-drive-golden-error-recovery",
+        "chat_0709-vita-drive-singleturn-mode-ab",
+        "chat_0709-vita-drive-multiturn-coverage",
+    ):
+        schema = yaml.safe_load(
+            (tasks / slug / "input/self_report_schema.yaml").read_text(encoding="utf-8")
+        )
+        for field in schema["fields"]:
+            if field.get("kind") == "enum":
+                assert field.get("explanation"), (slug, field["key"])

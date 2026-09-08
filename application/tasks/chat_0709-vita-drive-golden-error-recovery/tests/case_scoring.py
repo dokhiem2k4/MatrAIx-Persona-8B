@@ -414,6 +414,22 @@ def self_report_facets(feedback: dict[str, Any]) -> list[dict[str, Any]]:
             "textual",
             str(feedback.get("clarifyingNotes") or ""),
         ),
+        # A bare "partially" says the assistant half worked and nothing about
+        # which half. These are the persona's own words on that.
+        _facet(
+            "need_satisfaction_notes",
+            "Đáp ứng nhu cầu — chi tiết",
+            "explanation",
+            "textual",
+            str(feedback.get("needNotes") or ""),
+        ),
+        _facet(
+            "preference_satisfaction_notes",
+            "Hợp sở thích — chi tiết",
+            "explanation",
+            "textual",
+            str(feedback.get("preferenceNotes") or ""),
+        ),
     ]
 
 

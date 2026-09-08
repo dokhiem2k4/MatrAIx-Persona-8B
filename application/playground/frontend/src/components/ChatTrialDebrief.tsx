@@ -26,6 +26,7 @@ import type { PlaygroundQuestionnaire } from "@/lib/types";
 import type {
   TrialEvaluationArtifact,
   TrialEvaluationContext,
+  TrialEvaluationFacet,
 } from "@/lib/types";
 import type { SelfReportSchema, UserFeedbackArtifact } from "@/lib/types";
 import { SchemaSelfReportPanel } from "./SchemaSelfReportPanel";
@@ -246,14 +247,55 @@ function ChatContractSummary({
   );
 }
 
+// Facets the summary cards already render whole. Repeating a value the reader
+// just looked at is not detail, it is noise.
+const SUMMARY_FACET_KEYS = new Set([
+  "outcome_status",
+  "resolution_basis",
+  "message_count",
+  "turn_count",
+  "clarification_question_count",
+  "overall_experience_rating",
+  "need_constraint_satisfaction",
+]);
+
+// The cards truncate their explanation to this; a shorter one was shown whole,
+// so only a longer one still has something left to say.
+const CARD_PREVIEW_LIMIT = 140;
+
+/** Facets worth showing again, per context. */
+function newFacetsIn(context: TrialEvaluationContext): TrialEvaluationFacet[] {
+  const seenProse = new Set<string>();
+  const kept: TrialEvaluationFacet[] = [];
+  for (const facet of context.facets ?? []) {
+    if (isBlankFacet(facet.value)) continue;
+    if (SUMMARY_FACET_KEYS.has(facet.key)) continue;
+    // "control" is how a task marks the metadata it slices reports by --
+    // case_type, group, error_type, input_constraint. It belongs in the CSV
+    // and the cohort breakdowns; on this page it is eight rows of codes
+    // restating what the process note already says in a sentence.
+    if (facet.role === "control") continue;
+    if (typeof facet.value === "string") {
+      const text = facet.value.trim();
+      // A verdict derived from the persona's own words repeats them verbatim:
+      // outcome_reason and feedback_reason are the same paragraph whenever
+      // resolution_basis is user_feedback.
+      const fingerprint = text.slice(0, 120);
+      if (seenProse.has(fingerprint)) continue;
+      if (text.length > CARD_PREVIEW_LIMIT) seenProse.add(fingerprint);
+    }
+    kept.push(facet);
+  }
+  return kept;
+}
+
 /**
- * Every facet the verifier wrote, in full.
+ * What the verifier recorded that the rest of the page has not already said.
  *
- * The three summary cards above are a headline: they show five of the fifteen
- * facets and truncate each one to a preview. That is the right shape for a
- * glance and the wrong shape for a review -- a reader deciding whether a
- * failure is the assistant's fault or the dataset's needs the whole sentence,
- * the whole conversation path, and the facets no card has a slot for.
+ * Not everything it recorded: the summary cards above show the headline facets
+ * in full, and repeating them here made a reader scan the same sentence three
+ * times before reaching anything new. So each facet is dropped when it is
+ * already legible somewhere else, and a context with nothing left disappears.
  *
  * Labels come from the task's own payload rather than a lookup here, so a task
  * that adds a facet gets it rendered without touching this file.
@@ -264,9 +306,9 @@ function EvaluationDetail({
   trialEvaluation: TrialEvaluationArtifact | null | undefined;
 }) {
   const { t } = useI18n();
-  const contexts = (trialEvaluation?.contexts ?? []).filter((context) =>
-    context.facets?.some((facet) => !isBlankFacet(facet.value)),
-  );
+  const contexts = (trialEvaluation?.contexts ?? [])
+    .map((context) => ({ ...context, facets: newFacetsIn(context) }))
+    .filter((context) => context.facets.length > 0);
   if (contexts.length === 0) return null;
 
   return (
@@ -296,9 +338,7 @@ function EvaluationContextBlock({
   context: TrialEvaluationContext;
   t: Translate;
 }) {
-  const facets = (context.facets ?? []).filter(
-    (facet) => !isBlankFacet(facet.value),
-  );
+  const facets = context.facets ?? [];
   const prose = facets.filter(
     (facet) => typeof facet.value === "string" && facet.value.trim().length > 60,
   );
