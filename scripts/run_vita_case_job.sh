@@ -41,6 +41,16 @@ DATA_DIR="data/${RUN_NAME}"
 # means the run already happened and its money is gone.
 [[ -e "${DATA_DIR}" ]] && { echo "run folder exists: ${DATA_DIR}" >&2; exit 1; }
 
+# Create it now so an in-flight run is visible on disk, and remove it on the
+# way out if nothing was written. A run that dies early -- the system under
+# test returning 500 for every trial, say -- would otherwise leave an empty
+# folder behind that blocks re-running under the same name.
+mkdir -p "${DATA_DIR}"
+cleanup_empty_run_dir() {
+    [[ -d "${DATA_DIR}" ]] && rmdir "${DATA_DIR}" 2>/dev/null || true
+}
+trap cleanup_empty_run_dir EXIT
+
 ENV_LOCAL="application/playground/.env.local"
 if [[ -f "${ENV_LOCAL}" ]]; then
     set -a; source "${ENV_LOCAL}"; set +a

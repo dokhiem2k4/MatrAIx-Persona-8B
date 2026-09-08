@@ -144,3 +144,20 @@ def test_launcher_refuses_to_reuse_a_run_folder_before_spending():
     guard = script.index('run folder exists')
     run = script.index("uv run matraix run")
     assert guard < run
+
+
+def test_launcher_creates_the_run_folder_before_running():
+    """An in-flight run should be visible on disk, not appear only at the end."""
+    script = (Path(__file__).resolve().parents[3] / "scripts/run_vita_case_job.sh").read_text(
+        encoding="utf-8"
+    )
+    assert script.index('mkdir -p "${DATA_DIR}"') < script.index("uv run matraix run")
+
+
+def test_launcher_removes_the_folder_when_the_run_produced_nothing():
+    """A run that dies early must not leave a folder blocking its own name."""
+    script = (Path(__file__).resolve().parents[3] / "scripts/run_vita_case_job.sh").read_text(
+        encoding="utf-8"
+    )
+    assert "trap cleanup_empty_run_dir EXIT" in script
+    assert "rmdir" in script

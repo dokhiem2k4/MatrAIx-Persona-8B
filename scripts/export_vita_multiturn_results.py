@@ -306,12 +306,16 @@ def main() -> int:
         # first would destroy results that cost real money and cannot be
         # reproduced -- the assistant under test is not deterministic.
         run_dir = REPO_ROOT / "data" / args.run_dir
-        if run_dir.exists():
+        # An empty folder is the launcher announcing an in-flight run, so write
+        # into it. A folder with files in it is somebody's earlier results, and
+        # those cannot be reproduced -- the assistant under test is not
+        # deterministic, so overwriting them destroys them for good.
+        if run_dir.exists() and any(run_dir.iterdir()):
             raise SystemExit(
-                "run folder already exists: {} -- pick another name or move it "
-                "aside; refusing to overwrite earlier results".format(run_dir)
+                "run folder already has results: {} -- pick another name or move "
+                "it aside; refusing to overwrite them".format(run_dir)
             )
-        run_dir.mkdir(parents=True)
+        run_dir.mkdir(parents=True, exist_ok=True)
         args.out = run_dir / "{}-results".format(args.run_dir)
 
     rows, skipped, records = collect(args.job)
