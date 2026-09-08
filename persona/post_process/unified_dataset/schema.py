@@ -12,7 +12,7 @@ import pyarrow as pa
 
 
 # Must match len(persona/schema/dimensions.json["dimensions"]).
-ATTRIBUTE_COUNT = 1292
+ATTRIBUTE_COUNT = 1297
 
 # One byte per attribute. The previous layout packed two 4-bit codes per byte,
 # which halved the blob but capped every dimension at 16 values -- Vietnam has
@@ -20,7 +20,7 @@ ATTRIBUTE_COUNT = 1292
 # or abusing attribute_overrides for ordinary values. A byte holds 256, which
 # clears the ceiling for every dimension in the schema with room to spare.
 #
-# The blob doubles (646 -> 1292 bytes per persona) and any index packed under
+# The blob doubles (one byte per attribute) and any index packed under
 # the old layout must be rebuilt; the released parquet is column-per-dimension
 # and is unaffected.
 ATTRIBUTE_BYTES = ATTRIBUTE_COUNT
