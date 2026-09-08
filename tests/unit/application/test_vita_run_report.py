@@ -163,3 +163,30 @@ def test_a_written_page_round_trips_from_a_jsonl(tmp_path: Path):
     records, source = report_module.load_records(run)
     assert source == "run-b-results.jsonl"
     assert records == [RECORD]
+
+
+def test_the_page_says_the_two_scales_measure_different_things():
+    """A pass at 3/10 reads as a bug until the page says what each label is."""
+    page = report_module.build_page([RECORD], "run-a", "src.jsonl")
+    assert "Đạt / Không đạt" in page
+    assert "người lái 6/10" in page
+
+
+def test_disagreements_count_faults_the_driver_did_not_notice():
+    records = [
+        {"outcome_status": "unresolved", "overall_rating": 9},   # sai, không bị phàn nàn
+        {"outcome_status": "unresolved", "overall_rating": 7},   # sai, không bị phàn nàn
+        {"outcome_status": "unresolved", "overall_rating": 6},   # sai và bị chấm thấp -- không tính
+        {"outcome_status": "resolved", "overall_rating": 3},     # đúng mà vẫn bị chê
+        {"outcome_status": "resolved", "overall_rating": 8},     # nhất trí -- không tính
+        {"outcome_status": "resolved", "overall_rating": ""},    # không chấm -- không tính
+    ]
+    assert report_module.disagreements(records) == (2, 1)
+
+
+def test_a_run_where_both_scales_agree_shows_no_disagreement_tiles():
+    page = report_module.build_page(
+        [{**RECORD, "outcome_status": "resolved", "overall_rating": 9}], "run-a", "s.jsonl"
+    )
+    assert "Sai mà không bị phàn nàn" not in page
+    assert "Đúng mà vẫn bị chê" not in page

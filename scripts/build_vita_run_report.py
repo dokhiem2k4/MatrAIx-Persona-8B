@@ -81,6 +81,9 @@ body { margin: 0; background: var(--bg); color: var(--text);
 .wrap { max-width: 1040px; margin: 0 auto; padding: 24px 16px 80px; }
 h1 { font-size: 22px; margin: 0 0 4px; }
 .sub { color: var(--dim); font-size: 14px; margin-bottom: 20px; }
+.legend { color: var(--dim); font-size: 13px; line-height: 1.7; margin: -12px 0 18px;
+  border-left: 3px solid var(--line); padding-left: 12px; }
+.legend b { color: var(--text); }
 .stats { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
 .stat { background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
   padding: 10px 14px; min-width: 110px; }
@@ -235,7 +238,7 @@ def trial_html(record: dict[str, Any]) -> str:
 <details class="trial" data-outcome="{outcome}" data-intent="{intent}"
          data-persona="{persona}" data-search="{search}">
   <summary>
-    <span class="tag {cls}">{status}</span>
+    <span class="tag {cls}" title="Bộ chấm so với đáp án trong bộ dữ liệu">{status}</span>
     <span class="who">{persona_name}</span>
     <span class="case">{case_id}</span>
     <span class="tag">{subintent}</span>
@@ -260,7 +263,11 @@ def trial_html(record: dict[str, Any]) -> str:
         case_id=esc(record.get("case_id") or record.get("trial_id")),
         subintent=esc(record.get("subintent_name") or record.get("intent_code")),
         rating_tag=(
-            '<span class="tag">{}/10</span>'.format(esc(rating)) if rating not in (None, "") else ""
+            '<span class="tag" title="Persona tự chấm trải nghiệm">người lái {}/10</span>'.format(
+                esc(rating)
+            )
+            if rating not in (None, "")
+            else ""
         ),
         gist=esc(opening),
         turns=turn_html(record.get("messages") or []),
@@ -281,9 +288,35 @@ def options(values: list[str], placeholder: str, labels: dict[str, str] | None =
     return '<option value="">{}</option>{}'.format(esc(placeholder), items)
 
 
+def rating_of(record: dict[str, Any]) -> int | None:
+    value = record.get("overall_rating")
+    return int(value) if str(value).strip().isdigit() else None
+
+
+def disagreements(records: list[dict[str, Any]]) -> tuple[int, int]:
+    """Where the two scales part ways.
+
+    ``missed`` is the interesting one: Vita did the wrong thing and the driver
+    rated the experience well anyway, which means the fault is invisible from
+    inside the car. ``annoyed`` is the mirror -- correct by the dataset, still
+    a bad drive.
+    """
+    missed = annoyed = 0
+    for record in records:
+        rating = rating_of(record)
+        if rating is None:
+            continue
+        status = record.get("outcome_status")
+        if status == "unresolved" and rating >= 7:
+            missed += 1
+        elif status == "resolved" and rating <= 5:
+            annoyed += 1
+    return missed, annoyed
+
+
 def build_page(records: list[dict[str, Any]], run_name: str, source: str) -> str:
     tally = Counter(str(r.get("outcome_status") or "") for r in records)
-    ratings = [int(r["overall_rating"]) for r in records if str(r.get("overall_rating", "")).isdigit()]
+    ratings = [value for value in map(rating_of, records) if value is not None]
     latencies = [
         float(r["response_latency_seconds"])
         for r in records
@@ -300,6 +333,12 @@ def build_page(records: list[dict[str, Any]], run_name: str, source: str) -> str
         stats.append(("Chờ trung bình", "{:.1f}s".format(sum(latencies) / len(latencies))))
         stats.append(("Chờ lâu nhất", "{:.1f}s".format(max(latencies))))
 
+    missed, annoyed = disagreements(records)
+    if missed:
+        stats.append(("Sai mà không bị phàn nàn", missed))
+    if annoyed:
+        stats.append(("Đúng mà vẫn bị chê", annoyed))
+
     stat_html = "".join(
         '<div class="stat"><b>{}</b><span>{}</span></div>'.format(esc(value), esc(label))
         for label, value in stats
@@ -313,6 +352,10 @@ def build_page(records: list[dict[str, Any]], run_name: str, source: str) -> str
 <body><div class="wrap">
 <h1>{run}</h1>
 <p class="sub">Sinh từ {source}. Mỗi thẻ là một trial: một persona hỏi một case.</p>
+<p class="legend">Hai thước đo khác nhau, đọc riêng: <b>Đạt / Không đạt</b> là bộ chấm
+so việc Vita làm với đáp án trong bộ dữ liệu — đúng hay sai, không bàn cảm giác.
+<b>Người lái x/10</b> là persona tự chấm trải nghiệm. Một case Vita làm đúng
+sách vẫn có thể khiến tài xế bực, và ngược lại.</p>
 <div class="stats">{stats}</div>
 <div class="controls">
   <select id="f-outcome">{outcomes}</select>
