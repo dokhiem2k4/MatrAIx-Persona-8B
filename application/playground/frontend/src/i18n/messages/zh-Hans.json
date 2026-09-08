@@ -1165,6 +1165,8 @@
   "runs.emptyTitle": "暂无运行记录",
   "runs.evaluation": "评估",
   "runs.evaluationDescription": "查看任务完成情况、评估器检查和数字人自我报告。",
+  "runs.evaluationDetail": "评估详情",
+  "runs.evaluationDetailDescription": "评估器记录的全部内容，未做截断。",
   "runs.eyebrow": "MatrAIx · 运行",
   "runs.failedChecks": "检查失败",
   "runs.failedTrials": "{statusLabel} · {count} 个试验失败",
@@ -1431,5 +1433,8 @@
   "turnBubble.persona": "数字人",
   "turnBubble.structuredWithoutReply": "应用返回了结构化详情，但这一轮没有捕获到回复文本。",
   "turnBubble.toolCallFailed": "工具调用失败",
-  "turnBubble.toolCallOk": "工具调用正常"
+  "turnBubble.toolCallOk": "工具调用正常",
+  "runs.resolved": "通过",
+  "runs.unresolved": "未通过",
+  "runs.partiallyResolved": "无法判定"
 }

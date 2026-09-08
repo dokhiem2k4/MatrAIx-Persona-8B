@@ -105,3 +105,63 @@ def test_conversation_summary_is_not_empty():
         f = _facets(module.build_evaluation_payload(run, FEEDBACK), "conversation_summary")
         assert f["conversation_path"], module.__name__
         assert f["process_notes"], module.__name__
+
+
+# The job report's headline panel (HarborJobDetail.buildHeadlineInsightChips)
+# only reads contexts every chatbot task has, and only colours a categorical
+# facet whose values are words it recognises as good or bad. A task's own
+# verdict vocabulary -- match/mismatch, carried/not_carried -- reads as neutral
+# there, so the numbers that decide whether a run passed never reached the
+# summary a reader sees first.
+HEADLINE_TONE_WORDS = {"yes", "no", "true", "false", "resolved", "unresolved", "passed", "failed"}
+
+HEADLINE_FACETS = {
+    "case_scoring": ("decision_correct", "tool_calls_correct", "case_integrity_ok"),
+    "mode_ab_scoring": ("profile_switched", "assistant_replied"),
+    "multiturn_scoring": ("context_carried", "reached_two_replies"),
+}
+
+
+def test_task_outcome_carries_a_verdict_the_job_report_can_colour():
+    for module, run in (
+        (case_scoring, GOLDEN_RUN),
+        (mode_ab_scoring, MODE_RUN),
+        (multiturn_scoring, MULTI_RUN),
+    ):
+        f = _facets(module.build_evaluation_payload(run, FEEDBACK), "task_outcome")
+        keys = HEADLINE_FACETS[module.__name__]
+        assert set(keys) <= set(f), (module.__name__, keys)
+        assert any(f[key] in HEADLINE_TONE_WORDS for key in keys), (
+            module.__name__,
+            {key: f[key] for key in keys},
+        )
+
+
+def test_conversation_path_covers_every_turn_not_just_the_first():
+    """A truncated path made a multi-turn trial unreadable in the debrief."""
+    run = {
+        "case_id": "vm_2",
+        "case": dict(MULTI_RUN["case"]),
+        "observation": {
+            "turn_count": 3,
+            "turns": [
+                {"user_message": "lượt một", "assistant_message": "đáp một"},
+                {"user_message": "lượt hai", "assistant_message": "đáp hai"},
+                {"user_message": "lượt ba", "assistant_message": "đáp ba"},
+            ],
+        },
+    }
+    path = _facets(multiturn_scoring.build_evaluation_payload(run, FEEDBACK), "conversation_summary")[
+        "conversation_path"
+    ]
+    for text in ("lượt một", "đáp một", "lượt ba", "đáp ba"):
+        assert text in path, text
+
+
+def test_process_notes_read_as_a_sentence_not_a_row_of_codes():
+    """A reviewer should not have to know what 'external_api_failure' means."""
+    notes = _facets(case_scoring.build_evaluation_payload(GOLDEN_RUN, FEEDBACK), "conversation_summary")[
+        "process_notes"
+    ]
+    assert "tình huống thuận lợi" in notes
+    assert "happy_case" not in notes

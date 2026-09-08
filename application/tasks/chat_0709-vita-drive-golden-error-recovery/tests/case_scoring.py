@@ -41,6 +41,15 @@ def classify_case_integrity(case: dict[str, Any], first_user_message: str) -> st
     return "not_applicable"
 
 
+# Người đọc báo cáo không thuộc năm mã này, nên mọi diễn giải nói bằng lời.
+DECISION_MEANING = {
+    "execute": "thực hiện yêu cầu",
+    "clarify_or_offer": "hỏi lại cho rõ trước khi làm",
+    "defer_retry": "báo chưa làm được và hẹn thử lại",
+    "guide_precondition": "hướng dẫn điều kiện cần làm trước",
+    "refuse_not_supported": "từ chối vì ngoài khả năng",
+}
+
 DECISION_KEY = "decision"
 TOOL_CALLS_KEY = "toolCalls"
 TOOL_RESULTS_KEY = "toolResults"
@@ -127,8 +136,137 @@ def tool_calls_match(expected: Any, observed: Any) -> bool:
     }
 
 
+ERROR_TYPE_MEANING = {
+    "happy_case": "tình huống thuận lợi, không có lỗi nào",
+    "missing_information": "người dùng nói thiếu thông tin",
+    "invalid_input": "người dùng đưa giá trị sai",
+    "bad_request": "tham số không hợp lệ",
+    "no_internet": "xe mất kết nối mạng",
+    "external_api_failure": "dịch vụ bên ngoài không phản hồi",
+    "resource_not_found": "không tìm thấy thứ người dùng hỏi",
+    "vehicle_state_unavailable": "cảm biến trên xe không đọc được",
+    "ambiguous_destination": "điểm đến mơ hồ, có nhiều lựa chọn",
+    "unsafe_command": "lệnh không an toàn khi đang lái",
+}
+
+CONSTRAINT_MEANING = {
+    "omit_detail": "người dùng cố tình nói thiếu chi tiết",
+    "preserve_invalid_value": "người dùng giữ nguyên một giá trị sai",
+}
+
+INTEGRITY_MEANING = {
+    "ok": "persona giữ đúng ràng buộc",
+    "violated": "persona phá ràng buộc, nên trial này không đo được Vita",
+    "not_applicable": "case này không đặt ràng buộc nào",
+}
+
+
+def _process_notes(case: dict[str, Any], integrity: str, observed_tools: list[str]) -> str:
+    """One sentence a reviewer can act on, not a row of codes."""
+    error_type = str(case.get("error_type") or "")
+    constraint = str(case.get("input_constraint") or "none")
+    bits = [
+        "Tình huống: {}.".format(ERROR_TYPE_MEANING.get(error_type, error_type)),
+    ]
+    if constraint in CONSTRAINT_MEANING:
+        bits.append("Ràng buộc: {}.".format(CONSTRAINT_MEANING[constraint]))
+    bits.append("Kiểm tra persona: {}.".format(INTEGRITY_MEANING.get(integrity, integrity)))
+    bits.append(
+        "Vita gọi công cụ: {}.".format(", ".join(observed_tools) if observed_tools else "không gọi gì")
+    )
+    bits.append("(mã case {})".format(case.get("case_id")))
+    return " ".join(bits)
+
+
+def conversation_path(observation: dict[str, Any]) -> str:
+    """The whole exchange, one line per speaker, nothing truncated.
+
+    The debrief renders this verbatim, so a reviewer judging whether Vita
+    answered the question can read what was actually said instead of scrolling
+    to the transcript and back. Only the anchor turn used to be here, which is
+    fine for a one-turn case and useless the moment a case runs longer.
+    """
+    turns = [turn for turn in (observation.get("turns") or ()) if isinstance(turn, dict)]
+    if not turns:
+        turns = [
+            {
+                "user_message": observation.get("first_user_message") or "",
+                "assistant_message": observation.get("first_assistant_message") or "",
+            }
+        ]
+    lines: list[str] = []
+    for index, turn in enumerate(turns, start=1):
+        said = str(turn.get("user_message") or "").strip()
+        replied = str(turn.get("assistant_message") or "").strip()
+        if said:
+            lines.append("Lượt {} · Người lái: {}".format(index, said))
+        if replied:
+            lines.append("Lượt {} · Vita: {}".format(index, replied))
+    return "\n".join(lines)
+
+
+def expected_behavior(case: dict[str, Any], wanted_tools: set[str]) -> str:
+    """What the dataset says a correct assistant would have done, in words.
+
+    Without this the panel shows only what happened, and a reader has to open
+    cases.jsonl to learn what was supposed to happen -- which is the one thing
+    they need in order to judge the verdict.
+    """
+    expected = dict(case.get("expected") or {})
+    decision = str(expected.get("decision") or "")
+    bits = [
+        "Bộ dữ liệu kỳ vọng Vita {}.".format(
+            DECISION_MEANING.get(decision, decision or "không nêu rõ")
+        )
+    ]
+    if wanted_tools:
+        bits.append("Kèm theo là gọi công cụ: {}.".format(", ".join(sorted(wanted_tools))))
+    elif expected.get("tool_calls"):
+        bits.append(
+            "Bộ dữ liệu kỳ vọng một công cụ mà bản triển khai này không có tương đương."
+        )
+    else:
+        bits.append("Và không được đụng vào xe ở lượt này.")
+    original = str(case.get("user_input") or "").strip()
+    if original:
+        bits.append("Câu gốc trong bộ dữ liệu: “{}”.".format(original))
+    return " ".join(bits)
+
+
+def clarification_count(observation: dict[str, Any]) -> int:
+    """How many times the assistant asked the driver something back.
+
+    Counted from the text rather than a flag, because the deployment only raises
+    ``needsFollowUp`` on some of the turns where it actually asks. The debrief
+    header shows this beside the turn count; without it the header read
+    "1 messages · - clarifications", which says nothing.
+    """
+    turns = observation.get("turns") or []
+    replies = [str(turn.get("assistant_message") or "") for turn in turns]
+    if not replies:
+        replies = [str(observation.get("first_assistant_message") or "")]
+    return sum(1 for reply in replies if "?" in reply)
+
+
 def _facet(key: str, label: str, role: str, kind: str, value: Any) -> dict[str, Any]:
     return {"key": key, "label": label, "role": role, "kind": kind, "value": value}
+
+
+def _as_yes_no(match: str) -> str:
+    """Restate a match verdict as yes / no / unknown.
+
+    The job report's headline panel only reads contexts every chatbot task has
+    -- task_outcome, conversation_summary, user_feedback -- and only colours a
+    categorical facet whose values are words it recognises as good or bad.
+    ``match`` / ``mismatch`` are neither, so the two numbers that decide whether
+    this whole task passed were being reported nowhere a reader looks first.
+    The diagnostic spelling stays in the error_recovery context below.
+    """
+    if match == "match":
+        return "yes"
+    if match == "mismatch":
+        return "no"
+    return "unknown"
 
 
 def _feedback_bucket(value: Any) -> str:
@@ -246,16 +384,43 @@ def build_evaluation_payload(
     # task_outcome, conversation_summary and user_feedback -- and ignores any
     # it does not know. Emitting only error_recovery left that panel showing a
     # single raw FAIL string while all fifteen facets sat unread in the file.
+    want = str(expected.get("decision") or "")
     if decision_match == "match" and tool_match == "match":
-        outcome_status, outcome_reason = "resolved", "Quyết định và tool call đều khớp kỳ vọng."
+        outcome_status = "resolved"
+        outcome_reason = "Vita xử lý đúng: {}. Công cụ gọi ra cũng khớp.".format(
+            DECISION_MEANING.get(want, want)
+        )
     elif decision_match in ("unknown", "unavailable"):
         outcome_status = "partially_resolved"
-        outcome_reason = "Không suy được quyết định từ tín hiệu SUT trả về ({}).".format(decision_source)
-    else:
-        outcome_status = "unresolved"
-        outcome_reason = "Kỳ vọng {!r} nhưng quan sát {!r}; tool {}.".format(
-            expected.get("decision"), decision or "(không có)", tool_match
+        outcome_reason = (
+            "Chưa kết luận được. Vita có trả lời, nhưng tín hiệu nó gửi kèm không đủ "
+            "để biết nó đã quyết định thế nào, nên không so được với kỳ vọng "
+            "\u201c{}\u201d.".format(DECISION_MEANING.get(want, want))
         )
+    else:
+        parts = []
+        if decision_match == "mismatch":
+            parts.append(
+                "Đáng lẽ Vita phải {}, nhưng nó lại {}.".format(
+                    DECISION_MEANING.get(want, want),
+                    DECISION_MEANING.get(decision, decision or "không làm gì rõ ràng"),
+                )
+            )
+        if tool_match == "mismatch":
+            parts.append(
+                "Công cụ nó gọi cũng không khớp: {}.".format(
+                    ", ".join(observed_tools) if observed_tools else "không gọi công cụ nào"
+                )
+            )
+        elif tool_match == "no_equivalent":
+            parts.append(
+                "Bộ dữ liệu kỳ vọng một năng lực mà bản triển khai này không có, "
+                "nên không trợ lý nào qua được case này."
+            )
+        elif tool_match == "unmapped":
+            parts.append("Tên công cụ trong bộ dữ liệu chưa ánh xạ sang tên thật của xe.")
+        outcome_status = "unresolved"
+        outcome_reason = " ".join(parts) or "Không khớp kỳ vọng."
     if integrity == "violated":
         outcome_status = "unresolved"
         outcome_reason = (
@@ -270,6 +435,27 @@ def build_evaluation_payload(
             "facets": [
                 _facet("outcome_status", "Kết quả", "primary", "categorical", outcome_status),
                 _facet("resolution_basis", "Căn cứ", "control", "categorical", "verifier_scoring"),
+                _facet(
+                    "decision_correct",
+                    "Quyết định đúng chưa",
+                    "evidence",
+                    "categorical",
+                    _as_yes_no(decision_match),
+                ),
+                _facet(
+                    "tool_calls_correct",
+                    "Gọi đúng công cụ chưa",
+                    "evidence",
+                    "categorical",
+                    _as_yes_no(tool_match),
+                ),
+                _facet(
+                    "case_integrity_ok",
+                    "Persona giữ đúng ràng buộc",
+                    "evidence",
+                    "categorical",
+                    {"ok": "yes", "violated": "no"}.get(integrity, "not_applicable"),
+                ),
                 _facet("outcome_reason", "Diễn giải", "explanation", "textual", outcome_reason),
             ],
         },
@@ -280,25 +466,32 @@ def build_evaluation_payload(
             "facets": [
                 _facet("message_count", "Số lượt", "metric", "continuous", int(observation.get("turn_count") or 0)),
                 _facet(
+                    "clarification_question_count",
+                    "Số lần hỏi lại",
+                    "metric",
+                    "continuous",
+                    clarification_count(observation),
+                ),
+                _facet(
                     "conversation_path",
                     "Diễn biến",
                     "explanation",
                     "textual",
-                    "Persona: {}\nVita: {}".format(
-                        str(observation.get("first_user_message") or "")[:400],
-                        str(observation.get("first_assistant_message") or "")[:400],
-                    ),
+                    conversation_path(observation),
+                ),
+                _facet(
+                    "expected_behavior",
+                    "Lẽ ra Vita phải làm gì",
+                    "explanation",
+                    "textual",
+                    expected_behavior(case, wanted),
                 ),
                 _facet(
                     "process_notes",
                     "Ghi chú chấm",
                     "explanation",
                     "textual",
-                    "Case {} · {} · ràng buộc {} · toàn vẹn {} · tool đã chạy [{}]".format(
-                        case.get("case_id"), case.get("error_type"),
-                        case.get("input_constraint"), integrity,
-                        ", ".join(observed_tools) or "không có",
-                    ),
+                    _process_notes(case, integrity, observed_tools),
                 ),
             ],
         },

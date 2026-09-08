@@ -172,9 +172,12 @@ function ChatContractSummary({
   const resolutionBasis = facetText(outcome, "resolution_basis");
   const outcomeReason = previewText(facetText(outcome, "outcome_reason"), 140);
 
-  const conversationPath = formatFacetToken(
-    facetValue(conversation, "conversation_path"),
-    t,
+  // Prose, not a token. formatFacetToken title-cases every word, which reads as
+  // nonsense in a language that does not capitalise that way: "Dẫn Tôi Đến
+  // Landmark 81 Đi."
+  const conversationPath = previewText(
+    facetText(conversation, "conversation_path"),
+    180,
   );
   const turnCount = facetNumber(conversation, "message_count");
   const clarificationCount = facetNumber(
@@ -241,6 +244,117 @@ function ChatContractSummary({
       </div>
     </div>
   );
+}
+
+/**
+ * Every facet the verifier wrote, in full.
+ *
+ * The three summary cards above are a headline: they show five of the fifteen
+ * facets and truncate each one to a preview. That is the right shape for a
+ * glance and the wrong shape for a review -- a reader deciding whether a
+ * failure is the assistant's fault or the dataset's needs the whole sentence,
+ * the whole conversation path, and the facets no card has a slot for.
+ *
+ * Labels come from the task's own payload rather than a lookup here, so a task
+ * that adds a facet gets it rendered without touching this file.
+ */
+function EvaluationDetail({
+  trialEvaluation,
+}: {
+  trialEvaluation: TrialEvaluationArtifact | null | undefined;
+}) {
+  const { t } = useI18n();
+  const contexts = (trialEvaluation?.contexts ?? []).filter((context) =>
+    context.facets?.some((facet) => !isBlankFacet(facet.value)),
+  );
+  if (contexts.length === 0) return null;
+
+  return (
+    <div className="space-y-3 glass-tile rounded-md p-4">
+      <div className="space-y-1">
+        <SubsectionHeading>{t("runs.evaluationDetail")}</SubsectionHeading>
+        <p className="text-[14px] leading-relaxed text-text-variant">
+          {t("runs.evaluationDetailDescription")}
+        </p>
+      </div>
+      {contexts.map((context) => (
+        <EvaluationContextBlock key={context.key} context={context} t={t} />
+      ))}
+    </div>
+  );
+}
+
+function isBlankFacet(value: string | number | boolean | null | undefined) {
+  return value === null || value === undefined || value === "";
+}
+
+/** Prose facets get their own paragraph; short values line up as a chip grid. */
+function EvaluationContextBlock({
+  context,
+  t,
+}: {
+  context: TrialEvaluationContext;
+  t: Translate;
+}) {
+  const facets = (context.facets ?? []).filter(
+    (facet) => !isBlankFacet(facet.value),
+  );
+  const prose = facets.filter(
+    (facet) => typeof facet.value === "string" && facet.value.trim().length > 60,
+  );
+  const compact = facets.filter((facet) => !prose.includes(facet));
+
+  return (
+    <div className="rounded-md glass-panel p-4">
+      <div className="hud text-[11px] text-text-dim">
+        {localizedContextLabel(context, t)}
+      </div>
+      {compact.length > 0 ? (
+        <dl className="mt-3 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
+          {compact.map((facet) => (
+            <div
+              key={facet.key}
+              className="flex items-baseline justify-between gap-3 border-b border-text-dim/10 pb-1.5"
+            >
+              <dt className="text-[13px] text-text-dim">{facet.label}</dt>
+              <dd className="text-right text-[14px] font-medium text-text-main">
+                {typeof facet.value === "string" && facet.kind === "textual"
+                  ? facet.value
+                  : formatFacetToken(facet.value, t)}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      ) : null}
+      {prose.map((facet) => (
+        <div key={facet.key} className="mt-3">
+          <div className="text-[13px] text-text-dim">{facet.label}</div>
+          {/* whitespace-pre-line: a turn-by-turn path is written one turn per
+              line, and collapsing it into a paragraph makes it unreadable. */}
+          <p className="mt-1 whitespace-pre-line text-[14px] leading-relaxed text-text-variant">
+            {String(facet.value)}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/** A known context type gets a translated heading; anything else keeps its own. */
+function localizedContextLabel(
+  context: TrialEvaluationContext,
+  t: Translate,
+): string {
+  switch (context.contextType) {
+    case "task_outcome":
+      return t("runs.taskOutcome");
+    case "conversation_summary":
+      return t("runs.conversationPath");
+    case "user_feedback":
+      return t("runs.userFeedback");
+    default:
+      return context.label || humanizeToken(context.contextType ?? context.key);
+  }
 }
 
 const _DEFAULT_FEEDBACK_KEYS = new Set([
@@ -508,6 +622,7 @@ export function ChatTrialDebriefBody({
           <ChatObjectiveEvaluation metrics={metricScores} verifier={verifier} />
         </div>
         <ChatContractSummary trialEvaluation={trialEvaluation} />
+        <EvaluationDetail trialEvaluation={trialEvaluation} />
         <div className="space-y-3 glass-tile rounded-md p-4">
           {showSectionHeadings && (
             <SubsectionHeading>{t("runs.personaSelfReport")}</SubsectionHeading>

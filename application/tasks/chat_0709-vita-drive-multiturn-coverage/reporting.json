@@ -2,19 +2,69 @@
   "schemaVersion": "1.0",
   "contextRules": [
     {
-      "match": { "contextType": "multiturn_coverage" },
+      "match": {
+        "contextType": "task_outcome"
+      },
       "distributions": [
-        { "id": "multiturn.by_subintent", "facetKey": "subintent_code", "title": "Subintent" },
-        { "id": "multiturn.by_parent_intent", "facetKey": "parent_intent_code", "title": "Nhóm intent" },
-        { "id": "multiturn.topic_overlap", "facetKey": "lexical_topic_overlap", "title": "Bám chủ đề (proxy từ vựng)" },
-        { "id": "multiturn.turn_count", "facetKey": "turn_count", "title": "Số lượt thực tế" },
-        { "id": "multiturn.seed_quality", "facetKey": "seed_quality", "title": "Chất lượng seed" }
+        {
+          "id": "task_outcome.status",
+          "facetKey": "outcome_status",
+          "title": "Kết quả chấm"
+        },
+        {
+          "id": "task_outcome.context_carried",
+          "facetKey": "context_carried",
+          "title": "Có bám chủ đề mở đầu"
+        },
+        {
+          "id": "task_outcome.reached_two_replies",
+          "facetKey": "reached_two_replies",
+          "title": "Đủ hai lượt trả lời"
+        }
       ]
     },
     {
-      "match": { "contextType": "user_feedback" },
+      "match": {
+        "contextType": "multiturn_coverage"
+      },
       "distributions": [
-        { "id": "user_feedback.rating_by_segment", "facetKey": "overall_experience_rating", "title": "Overall experience rating" }
+        {
+          "id": "multiturn.by_subintent",
+          "facetKey": "subintent_code",
+          "title": "Subintent"
+        },
+        {
+          "id": "multiturn.by_parent_intent",
+          "facetKey": "parent_intent_code",
+          "title": "Nhóm intent"
+        },
+        {
+          "id": "multiturn.topic_overlap",
+          "facetKey": "lexical_topic_overlap",
+          "title": "Bám chủ đề (proxy từ vựng)"
+        },
+        {
+          "id": "multiturn.turn_count",
+          "facetKey": "turn_count",
+          "title": "Số lượt thực tế"
+        },
+        {
+          "id": "multiturn.seed_quality",
+          "facetKey": "seed_quality",
+          "title": "Chất lượng seed"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "user_feedback"
+      },
+      "distributions": [
+        {
+          "id": "user_feedback.rating_by_segment",
+          "facetKey": "overall_experience_rating",
+          "title": "Overall experience rating"
+        }
       ]
     }
   ]

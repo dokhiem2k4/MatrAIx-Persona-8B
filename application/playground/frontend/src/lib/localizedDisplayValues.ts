@@ -29,6 +29,14 @@ export function localizedStructuredChoiceLabel(
       return t("runs.partially");
     case "unsure":
       return t("runs.unsure");
+    // Verifier outcome codes. Without these the raw English token leaks into
+    // every localised screen as "Unresolved".
+    case "resolved":
+      return t("runs.resolved");
+    case "unresolved":
+      return t("runs.unresolved");
+    case "partially_resolved":
+      return t("runs.partiallyResolved");
     default:
       return null;
   }

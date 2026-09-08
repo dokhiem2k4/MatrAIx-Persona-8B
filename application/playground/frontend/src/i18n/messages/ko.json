@@ -1165,6 +1165,8 @@
   "runs.emptyTitle": "아직 실행이 없습니다",
   "runs.evaluation": "평가",
   "runs.evaluationDescription": "작업 완료, 평가자 검사, 페르소나 자기보고를 검토합니다.",
+  "runs.evaluationDetail": "평가 상세",
+  "runs.evaluationDetailDescription": "평가기가 기록한 모든 항목을 생략 없이 보여줍니다.",
   "runs.eyebrow": "MatrAIx · 실행",
   "runs.failedChecks": "실패한 검사",
   "runs.failedTrials": "{statusLabel}: 실패한 트라이얼 {count}개",
@@ -1431,5 +1433,8 @@
   "turnBubble.persona": "페르소나",
   "turnBubble.structuredWithoutReply": "앱이 구조화 데이터를 반환했지만, 이 턴의 답장 텍스트는 기록되지 않았습니다.",
   "turnBubble.toolCallFailed": "도구 호출 실패",
-  "turnBubble.toolCallOk": "도구 호출 성공"
+  "turnBubble.toolCallOk": "도구 호출 성공",
+  "runs.resolved": "통과",
+  "runs.unresolved": "실패",
+  "runs.partiallyResolved": "판정 불가"
 }

@@ -302,17 +302,28 @@ def main() -> int:
         # first would destroy results that cost real money and cannot be
         # reproduced -- the assistant under test is not deterministic.
         run_dir = REPO_ROOT / "data" / args.run_dir
-        # An empty folder is the launcher announcing an in-flight run, so write
-        # into it. A folder with files in it is somebody's earlier results, and
-        # those cannot be reproduced -- the assistant under test is not
-        # deterministic, so overwriting them destroys them for good.
-        if run_dir.exists() and any(run_dir.iterdir()):
+        args.out = run_dir / "{}-results".format(args.run_dir)
+        # A folder holding only the run manifest is the launcher announcing an
+        # in-flight run, so write into it. Results already there are somebody's
+        # earlier run, and those cannot be reproduced -- the assistant under
+        # test is not deterministic, so overwriting them destroys them for good.
+        existing = [
+            path
+            for path in (
+                args.out.with_suffix(".csv"),
+                args.out.with_suffix(".jsonl"),
+                run_dir / "{}-stimuli.csv".format(args.run_dir),
+            )
+            if path.exists()
+        ]
+        if existing:
             raise SystemExit(
-                "run folder already has results: {} -- pick another name or move "
-                "it aside; refusing to overwrite them".format(run_dir)
+                "run folder already has results ({}): {} -- pick another name or "
+                "move it aside; refusing to overwrite them".format(
+                    ", ".join(path.name for path in existing), run_dir
+                )
             )
         run_dir.mkdir(parents=True, exist_ok=True)
-        args.out = run_dir / "{}-results".format(args.run_dir)
 
     rows, skipped, records = collect(args.job)
     if not rows:

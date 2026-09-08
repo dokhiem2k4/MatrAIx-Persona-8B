@@ -35,3 +35,34 @@ def build_case_agent_entries(
         for case_id in case_ids
         for persona_path in persona_paths
     ]
+
+
+def build_pair_agent_entries(
+    pairs: list[tuple[str, str]], model_name: str
+) -> list[dict[str, Any]]:
+    """Build one entry per already-decided persona x case pair.
+
+    Used by a replay, where the pairs come from an earlier run's manifest. The
+    order is copied verbatim rather than regenerated: it is the interleaving
+    that decides what a run stopped early covered, so a replay that reordered
+    would not compare like with like.
+    """
+    return [
+        {
+            "name": AGENT_NAME,
+            "model_name": model_name,
+            "kwargs": {"persona_path": persona_path, "case_id": case_id},
+        }
+        for persona_path, case_id in pairs
+    ]
+
+
+def pairs_from_agents(agents: list[dict[str, Any]]) -> list[tuple[str, str]]:
+    """Recover the persona x case pairs from a built recipe, in recipe order."""
+    return [
+        (
+            str((entry.get("kwargs") or {}).get("persona_path") or ""),
+            str((entry.get("kwargs") or {}).get("case_id") or ""),
+        )
+        for entry in agents
+    ]

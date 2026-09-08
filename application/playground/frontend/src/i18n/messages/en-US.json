@@ -1165,6 +1165,8 @@
   "runs.emptyTitle": "No runs yet",
   "runs.evaluation": "Evaluation",
   "runs.evaluationDescription": "Review task completion, evaluator checks, and the persona's self-report.",
+  "runs.evaluationDetail": "Evaluation detail",
+  "runs.evaluationDetailDescription": "Every check the evaluator recorded, in full.",
   "runs.eyebrow": "MatrAIx · Runs",
   "runs.failedChecks": "Failed checks",
   "runs.failedTrials": "{statusLabel}: {count} failed trials",
@@ -1431,5 +1433,8 @@
   "turnBubble.persona": "Persona",
   "turnBubble.structuredWithoutReply": "The app returned structured details, but no reply text was captured for this turn.",
   "turnBubble.toolCallFailed": "Tool call failed",
-  "turnBubble.toolCallOk": "Tool call OK"
+  "turnBubble.toolCallOk": "Tool call OK",
+  "runs.resolved": "Passed",
+  "runs.unresolved": "Failed",
+  "runs.partiallyResolved": "Inconclusive"
 }

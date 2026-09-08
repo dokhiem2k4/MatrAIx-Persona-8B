@@ -38,6 +38,74 @@ def reply_length(first_assistant_message: str) -> int:
     return len((first_assistant_message or "").strip())
 
 
+def conversation_path(observation: dict[str, Any]) -> str:
+    """The whole exchange, one line per speaker, nothing truncated.
+
+    The debrief renders this verbatim, so a reviewer can read what was actually
+    said instead of scrolling to the transcript and back.
+    """
+    turns = [turn for turn in (observation.get("turns") or ()) if isinstance(turn, dict)]
+    if not turns:
+        turns = [
+            {
+                "user_message": observation.get("first_user_message") or "",
+                "assistant_message": observation.get("first_assistant_message") or "",
+            }
+        ]
+    lines: list[str] = []
+    for index, turn in enumerate(turns, start=1):
+        said = str(turn.get("user_message") or "").strip()
+        replied = str(turn.get("assistant_message") or "").strip()
+        if said:
+            lines.append("Lượt {} · Người lái: {}".format(index, said))
+        if replied:
+            lines.append("Lượt {} · Vita: {}".format(index, replied))
+    return "\n".join(lines)
+
+
+# Người đọc báo cáo không thuộc các mã này, nên mọi diễn giải nói bằng lời.
+PROFILE_MEANING = {
+    "vita_default": "tính cách mặc định",
+    "vita_proactive": "chủ động gợi ý trước",
+    "vita_concise": "trả lời ngắn gọn",
+    "vita_friendly": "thân thiện, nhiều lời",
+    "vita_professional": "trang trọng, nghiêm túc",
+    "vita_humorous": "hài hước",
+    "vita_calm": "điềm tĩnh",
+}
+
+VEHICLE_STATE_MEANING = {
+    "driving": "xe đang chạy",
+    "parked": "xe đang đỗ",
+    "charging": "xe đang sạc",
+    "idle": "xe nổ máy nhưng đứng yên",
+}
+
+APPLIED_MEANING = {
+    "yes": "đúng profile được yêu cầu",
+    "no": "SAI profile — ô lưới này không đo được gì",
+    "unknown": "không kiểm được vì SUT không báo profile nào đang chạy",
+}
+
+
+def _describe(table: dict[str, str], code: Any) -> str:
+    text = str(code or "").strip()
+    return "{} ({})".format(table.get(text, text or "không rõ"), text) if text else "không rõ"
+
+
+def _process_notes(state: dict[str, Any], reply: str, applied: str) -> str:
+    """One sentence a reviewer can act on, not a row of codes."""
+    return (
+        "Ô lưới này ghép {} với {}. Profile chạy thực tế: {}. "
+        "Vita trả lời {} ký tự.".format(
+            _describe(PROFILE_MEANING, state.get("assistant_profile_id")),
+            _describe(VEHICLE_STATE_MEANING, state.get("vehicle_state")),
+            APPLIED_MEANING.get(applied, applied),
+            reply_length(reply),
+        )
+    )
+
+
 def _facet(key: str, label: str, role: str, kind: str, value: Any) -> dict[str, Any]:
     return {"key": key, "label": label, "role": role, "kind": kind, "value": value}
 
@@ -130,8 +198,13 @@ def build_evaluation_payload(
     elif not reply.strip():
         status, why = "unresolved", "Trợ lý không trả lời."
     else:
-        status, why = "resolved", "Đã thu được phản hồi dưới profile {!r}, trạng thái xe {!r}.".format(
-            str(state.get("assistant_profile_id") or ""), str(state.get("vehicle_state") or "")
+        status, why = "resolved", (
+            "Đã thu được phản hồi khi Vita chạy {} và {}. Ô lưới này đo được; "
+            "nó chỉ ghi lại hành vi, không chấm đúng sai — bộ dữ liệu A/B không "
+            "có đáp án đúng.".format(
+                _describe(PROFILE_MEANING, state.get("assistant_profile_id")),
+                _describe(VEHICLE_STATE_MEANING, state.get("vehicle_state")),
+            )
         )
 
     contexts: list[dict[str, Any]] = [
@@ -142,6 +215,24 @@ def build_evaluation_payload(
             "facets": [
                 _facet("outcome_status", "Kết quả", "primary", "categorical", status),
                 _facet("resolution_basis", "Căn cứ", "control", "categorical", "verifier_scoring"),
+                # yes/no, because the job report's headline panel only colours
+                # words it recognises -- and whether the profile actually
+                # switched is the one number that decides if this A/B grid
+                # measured anything at all.
+                _facet(
+                    "profile_switched",
+                    "Profile có đổi thật không",
+                    "evidence",
+                    "categorical",
+                    applied,
+                ),
+                _facet(
+                    "assistant_replied",
+                    "Trợ lý có trả lời",
+                    "evidence",
+                    "categorical",
+                    "yes" if reply.strip() else "no",
+                ),
                 _facet("outcome_reason", "Diễn giải", "explanation", "textual", why),
             ],
         },
@@ -152,12 +243,9 @@ def build_evaluation_payload(
             "facets": [
                 _facet("message_count", "Số lượt", "metric", "continuous", int(observation.get("turn_count") or 0)),
                 _facet("conversation_path", "Diễn biến", "explanation", "textual",
-                       "Persona: {}\nVita: {}".format(
-                           str(observation.get("first_user_message") or "")[:400], reply[:400])),
+                       conversation_path(observation)),
                 _facet("process_notes", "Ghi chú chấm", "explanation", "textual",
-                       "Profile {} · xe {} · {} ký tự phản hồi · profile có hiệu lực: {}".format(
-                           state.get("assistant_profile_id"), state.get("vehicle_state"),
-                           reply_length(reply), applied)),
+                       _process_notes(state, reply, applied)),
             ],
         },
         {

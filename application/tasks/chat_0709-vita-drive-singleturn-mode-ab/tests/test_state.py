@@ -19,7 +19,7 @@ FEEDBACK_PATH = OUTPUT_DIR / "user_feedback.json"
 
 
 def fail(message: str) -> None:
-    print("FAIL: {}".format(message), file=sys.stderr)
+    print("KHÔNG ĐẠT: {}".format(message), file=sys.stderr)
     raise SystemExit(1)
 
 
@@ -70,10 +70,10 @@ def main() -> int:
     # There is no ground truth here, so the reward can only mean "this trial
     # produced usable data", never "the assistant was right".
     if facets["replied"] != "yes":
-        fail("case {} produced no assistant reply".format(facets["case_id"]))
+        fail("Vita không trả lời gì (case {})".format(facets["case_id"]))
     for key in ("assistant_profile_id", "vehicle_state"):
         if not facets.get(key):
-            fail("case {} is missing experiment factor {}".format(facets["case_id"], key))
+            fail("Thiếu yếu tố thí nghiệm {} (case {})".format(key, facets["case_id"]))
     # Fail loudly rather than contribute a cell that silently ran the default
     # profile: a grid full of those would report "the profiles are the same".
     if facets.get("profile_applied") == "no":

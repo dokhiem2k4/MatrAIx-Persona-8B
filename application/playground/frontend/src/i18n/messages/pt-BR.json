@@ -1165,6 +1165,8 @@
   "runs.emptyTitle": "Ainda não há execuções",
   "runs.evaluation": "Avaliação",
   "runs.evaluationDescription": "Revise a conclusão da tarefa, as verificações do avaliador e o autorrelato da persona.",
+  "runs.evaluationDetail": "Detalhe da avaliação",
+  "runs.evaluationDetailDescription": "Tudo o que o avaliador registrou, sem cortes.",
   "runs.eyebrow": "MatrAIx · Execuções",
   "runs.failedChecks": "Verificações com falha",
   "runs.failedTrials": "{statusLabel}: {count} ensaios com falha",
@@ -1431,5 +1433,8 @@
   "turnBubble.persona": "Persona",
   "turnBubble.structuredWithoutReply": "O app retornou dados estruturados, mas nenhum texto de resposta foi capturado neste turno.",
   "turnBubble.toolCallFailed": "Chamada de ferramenta falhou",
-  "turnBubble.toolCallOk": "Chamada de ferramenta OK"
+  "turnBubble.toolCallOk": "Chamada de ferramenta OK",
+  "runs.resolved": "Aprovado",
+  "runs.unresolved": "Falhou",
+  "runs.partiallyResolved": "Inconclusivo"
 }

@@ -20,6 +20,13 @@
 #       --personas persona/datasets/vn-drivers-forum/persona_vn-drv-001.yaml \
 #                  persona/datasets/vn-drivers-forum/persona_vn-drv-003.yaml \
 #       --max-cases 64
+#
+# Re-run an earlier run's exact persona x case pairs, to compare before and
+# after a fix. The task comes from the manifest, so any slug is accepted here:
+#
+#   scripts/run_vita_case_job.sh chat_0709-vita-drive-golden-error-recovery \
+#       golden-2p-128-after \
+#       --replay data/golden-2p-128/golden-2p-128-manifest.json
 
 set -euo pipefail
 
@@ -42,12 +49,18 @@ DATA_DIR="data/${RUN_NAME}"
 [[ -e "${DATA_DIR}" ]] && { echo "run folder exists: ${DATA_DIR}" >&2; exit 1; }
 
 # Create it now so an in-flight run is visible on disk, and remove it on the
-# way out if nothing was written. A run that dies early -- the system under
-# test returning 500 for every trial, say -- would otherwise leave an empty
-# folder behind that blocks re-running under the same name.
+# way out if no results were written. A run that dies early -- the system under
+# test returning 500 for every trial, say -- would otherwise leave a folder
+# behind that blocks re-running under the same name. The recipe generator drops
+# a manifest in here before the run starts, so "nothing was written" means
+# "nothing but the manifest", and the manifest is reproducible from the recipe.
 mkdir -p "${DATA_DIR}"
 cleanup_empty_run_dir() {
-    [[ -d "${DATA_DIR}" ]] && rmdir "${DATA_DIR}" 2>/dev/null || true
+    [[ -d "${DATA_DIR}" ]] || return 0
+    if ! compgen -G "${DATA_DIR}/*-results.*" > /dev/null; then
+        rm -f "${DATA_DIR}/${RUN_NAME}-manifest.json"
+        rmdir "${DATA_DIR}" 2>/dev/null || true
+    fi
 }
 trap cleanup_empty_run_dir EXIT
 

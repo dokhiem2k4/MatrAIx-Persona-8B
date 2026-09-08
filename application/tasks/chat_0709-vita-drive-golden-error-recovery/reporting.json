@@ -2,19 +2,74 @@
   "schemaVersion": "1.0",
   "contextRules": [
     {
-      "match": { "contextType": "error_recovery" },
+      "match": {
+        "contextType": "task_outcome"
+      },
       "distributions": [
-        { "id": "error_recovery.match_by_error_type", "facetKey": "error_type", "title": "Nhóm lỗi" },
-        { "id": "error_recovery.match_by_subintent", "facetKey": "subintent_code", "title": "Subintent" },
-        { "id": "error_recovery.decision_match", "facetKey": "decision_match", "title": "Khớp quyết định" },
-        { "id": "error_recovery.case_integrity", "facetKey": "case_integrity", "title": "Toàn vẹn case" },
-        { "id": "error_recovery.decision_source", "facetKey": "decision_source", "title": "Nguồn quyết định" }
+        {
+          "id": "task_outcome.status",
+          "facetKey": "outcome_status",
+          "title": "Kết quả chấm"
+        },
+        {
+          "id": "task_outcome.decision_correct",
+          "facetKey": "decision_correct",
+          "title": "Quyết định đúng chưa"
+        },
+        {
+          "id": "task_outcome.tool_calls_correct",
+          "facetKey": "tool_calls_correct",
+          "title": "Gọi đúng công cụ chưa"
+        },
+        {
+          "id": "task_outcome.case_integrity_ok",
+          "facetKey": "case_integrity_ok",
+          "title": "Persona giữ đúng ràng buộc"
+        }
       ]
     },
     {
-      "match": { "contextType": "user_feedback" },
+      "match": {
+        "contextType": "error_recovery"
+      },
       "distributions": [
-        { "id": "user_feedback.rating_by_segment", "facetKey": "overall_experience_rating", "title": "Overall experience rating" }
+        {
+          "id": "error_recovery.match_by_error_type",
+          "facetKey": "error_type",
+          "title": "Nhóm lỗi"
+        },
+        {
+          "id": "error_recovery.match_by_subintent",
+          "facetKey": "subintent_code",
+          "title": "Subintent"
+        },
+        {
+          "id": "error_recovery.decision_match",
+          "facetKey": "decision_match",
+          "title": "Khớp quyết định"
+        },
+        {
+          "id": "error_recovery.case_integrity",
+          "facetKey": "case_integrity",
+          "title": "Toàn vẹn case"
+        },
+        {
+          "id": "error_recovery.decision_source",
+          "facetKey": "decision_source",
+          "title": "Nguồn quyết định"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "user_feedback"
+      },
+      "distributions": [
+        {
+          "id": "user_feedback.rating_by_segment",
+          "facetKey": "overall_experience_rating",
+          "title": "Overall experience rating"
+        }
       ]
     }
   ]

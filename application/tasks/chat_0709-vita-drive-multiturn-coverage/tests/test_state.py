@@ -20,7 +20,7 @@ MIN_TURNS = 2
 
 
 def fail(message: str) -> None:
-    print("FAIL: {}".format(message), file=sys.stderr)
+    print("KHÔNG ĐẠT: {}".format(message), file=sys.stderr)
     raise SystemExit(1)
 
 
@@ -72,20 +72,18 @@ def main() -> int:
     # happened", never "the assistant was right".
     if facets["turn_count"] < MIN_TURNS:
         fail(
-            "case {} only reached {} turn(s); a coverage trial needs at least {}".format(
-                facets["case_id"], facets["turn_count"], MIN_TURNS
-            )
+            "Hội thoại chỉ đi được {} lượt, cần ít nhất {} lượt mới đo được việc giữ "
+            "ngữ cảnh (case {})".format(facets["turn_count"], MIN_TURNS, facets["case_id"])
         )
     if facets["assistant_reply_count"] < MIN_TURNS:
         fail(
-            "case {} got {} assistant reply/replies across {} turns".format(
-                facets["case_id"], facets["assistant_reply_count"], facets["turn_count"]
+            "Vita chỉ trả lời {} lần trong {} lượt (case {})".format(
+                facets["assistant_reply_count"], facets["turn_count"], facets["case_id"]
             )
         )
     print(
-        "PASS: case {} ({}) ran {} turns, topic overlap {}".format(
-            facets["case_id"], facets["subintent_code"], facets["turn_count"],
-            facets["lexical_topic_overlap"],
+        "ĐẠT: hội thoại {} lượt về {} (case {})".format(
+            facets["turn_count"], facets["subintent_code"], facets["case_id"]
         )
     )
     return 0

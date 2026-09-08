@@ -1165,6 +1165,8 @@
   "runs.emptyTitle": "実行はまだありません",
   "runs.evaluation": "評価",
   "runs.evaluationDescription": "タスク完了、評価チェック、ペルソナの自己報告を確認します。",
+  "runs.evaluationDetail": "評価の詳細",
+  "runs.evaluationDetailDescription": "評価器が記録したすべての項目を省略せずに表示します。",
   "runs.eyebrow": "MatrAIx · 実行",
   "runs.failedChecks": "失敗したチェック",
   "runs.failedTrials": "{statusLabel}: 失敗したトライアル {count} 件",
@@ -1431,5 +1433,8 @@
   "turnBubble.persona": "ペルソナ",
   "turnBubble.structuredWithoutReply": "アプリは構造化データを返しましたが、このターンの返信テキストは記録されていません。",
   "turnBubble.toolCallFailed": "ツール呼び出し失敗",
-  "turnBubble.toolCallOk": "ツール呼び出し成功"
+  "turnBubble.toolCallOk": "ツール呼び出し成功",
+  "runs.resolved": "合格",
+  "runs.unresolved": "不合格",
+  "runs.partiallyResolved": "判定不能"
 }

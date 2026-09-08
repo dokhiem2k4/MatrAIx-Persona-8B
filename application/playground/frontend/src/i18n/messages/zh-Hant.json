@@ -1165,6 +1165,8 @@
   "runs.emptyTitle": "暫無執行記錄",
   "runs.evaluation": "評估",
   "runs.evaluationDescription": "檢視任務完成情況、評估器檢查結果與數位人的自我報告。",
+  "runs.evaluationDetail": "評估詳情",
+  "runs.evaluationDetailDescription": "評估器記錄的全部內容，未做截斷。",
   "runs.eyebrow": "MatrAIx · 執行紀錄",
   "runs.failedChecks": "檢查失敗",
   "runs.failedTrials": "{statusLabel} · {count} 個試驗失敗",
@@ -1431,5 +1433,8 @@
   "turnBubble.persona": "數位人",
   "turnBubble.structuredWithoutReply": "應用程式回傳了結構化資料，但本輪未擷取到回覆文字。",
   "turnBubble.toolCallFailed": "工具呼叫失敗",
-  "turnBubble.toolCallOk": "工具呼叫成功"
+  "turnBubble.toolCallOk": "工具呼叫成功",
+  "runs.resolved": "通過",
+  "runs.unresolved": "未通過",
+  "runs.partiallyResolved": "無法判定"
 }

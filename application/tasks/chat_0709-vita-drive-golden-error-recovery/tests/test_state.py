@@ -19,7 +19,7 @@ FEEDBACK_PATH = OUTPUT_DIR / "user_feedback.json"
 
 
 def fail(message: str) -> None:
-    print("FAIL: {}".format(message), file=sys.stderr)
+    print("KHÔNG ĐẠT: {}".format(message), file=sys.stderr)
     raise SystemExit(1)
 
 
@@ -78,35 +78,18 @@ def main() -> int:
     )
 
     facets = facets_of(payload)
-    # Say which of the two gates blocked, and why. "expected execute but
-    # observed execute" reads as nonsense when the real blocker is the tool
-    # name table, so name the actual reason first.
-    reasons = []
-    if facets["decision_match"] != "match":
-        reasons.append(
-            "decision {} (expected {!r}, observed {!r}, source {})".format(
-                facets["decision_match"],
-                facets["expected_decision"],
-                facets["observed_decision"],
-                facets["decision_source"],
-            )
-        )
-    if facets["tool_call_match"] != "match":
-        detail = {
-            "unmapped": "golden tool names are not mapped to the deployment's names yet",
-            "unavailable": "the SUT returned no structured signals",
-        }.get(facets["tool_call_match"], "observed [{}]".format(facets["observed_tools"]))
-        reasons.append("tool_call {} -- {}".format(facets["tool_call_match"], detail))
-    if reasons:
-        fail(
-            "case {} ({}, integrity {}): {}".format(
-                facets["case_id"],
-                facets["error_type"],
-                facets["case_integrity"],
-                "; ".join(reasons),
-            )
-        )
-    print("PASS: case {} matched".format(facets["case_id"]))
+    # This line is what the review screen shows, so it is written for a person,
+    # not for a log grep. The machine-readable version is in the facets.
+    outcome = {
+        f["key"]: f["value"]
+        for c in payload["contexts"]
+        if c["contextType"] == "task_outcome"
+        for f in c["facets"]
+    }
+    headline = outcome.get("outcome_reason") or ""
+    if facets["decision_match"] != "match" or facets["tool_call_match"] != "match":
+        fail("{} (case {})".format(headline, facets["case_id"]))
+    print("ĐẠT: {} (case {})".format(headline, facets["case_id"]))
     return 0
 
 

@@ -58,6 +58,67 @@ def lexical_topic_overlap(turns: Any) -> str:
     return "not_carried"
 
 
+def conversation_path(observation: dict[str, Any]) -> str:
+    """The whole exchange, one line per speaker, nothing truncated.
+
+    The debrief renders this verbatim, so a reviewer can read what was actually
+    said instead of scrolling to the transcript and back.
+    """
+    turns = [turn for turn in (observation.get("turns") or ()) if isinstance(turn, dict)]
+    if not turns:
+        turns = [
+            {
+                "user_message": observation.get("first_user_message") or "",
+                "assistant_message": observation.get("first_assistant_message") or "",
+            }
+        ]
+    lines: list[str] = []
+    for index, turn in enumerate(turns, start=1):
+        said = str(turn.get("user_message") or "").strip()
+        replied = str(turn.get("assistant_message") or "").strip()
+        if said:
+            lines.append("Lượt {} · Người lái: {}".format(index, said))
+        if replied:
+            lines.append("Lượt {} · Vita: {}".format(index, replied))
+    return "\n".join(lines)
+
+
+OVERLAP_MEANING = {
+    "carried": (
+        "có ít nhất một lượt sau dùng lại từ khoá người lái nêu ở đầu, nên nhiều "
+        "khả năng trợ lý vẫn bám chủ đề"
+    ),
+    "not_carried": (
+        "không lượt nào dùng lại từ khoá người lái nêu ở đầu — dấu hiệu có thể đã "
+        "lạc chủ đề, nhưng cũng có thể chỉ là diễn đạt lại bằng từ khác"
+    ),
+    "not_applicable": "hội thoại chưa đủ hai lượt nên không đo được",
+}
+
+SEED_QUALITY_MEANING = {
+    "ok": "seed đạt",
+    "too_short": "seed quá ngắn, cần người rà lại",
+    "unknown": "chưa đánh giá chất lượng seed",
+}
+
+
+def _process_notes(case: dict[str, Any], assistant_replies: int, overlap: str) -> str:
+    """One sentence a reviewer can act on, not a row of codes."""
+    return (
+        "Chủ đề: {} (nhóm {}). Trợ lý trả lời {} lượt. Bám chủ đề: {}. "
+        "Chất lượng seed: {}. (mã case {})".format(
+            case.get("subintent_label_vi") or case.get("subintent_code") or "không rõ",
+            case.get("parent_intent_code") or "không rõ",
+            assistant_replies,
+            OVERLAP_MEANING.get(overlap, overlap),
+            SEED_QUALITY_MEANING.get(
+                str(case.get("seed_quality") or "unknown"), case.get("seed_quality")
+            ),
+            case.get("case_id"),
+        )
+    )
+
+
 def _facet(key: str, label: str, role: str, kind: str, value: Any) -> dict[str, Any]:
     return {"key": key, "label": label, "role": role, "kind": kind, "value": value}
 
@@ -138,13 +199,29 @@ def build_evaluation_payload(
     )
 
     overlap = lexical_topic_overlap(turns)
+    reference_turns = int(case.get("reference_turn_count") or 0)
     if assistant_replies < 2:
-        status, why = "unresolved", "Hội thoại chỉ đạt {} lượt trả lời, chưa đủ để đo giữ ngữ cảnh.".format(assistant_replies)
+        status = "unresolved"
+        why = (
+            "Trợ lý chỉ trả lời {} lượt, chưa đủ hai lượt để xét việc giữ ngữ cảnh. "
+            "Bộ dữ liệu dựng hội thoại này dài khoảng {} lượt.".format(
+                assistant_replies, reference_turns or "vài"
+            )
+        )
     elif overlap == "not_carried":
-        status, why = "partially_resolved", "Trợ lý trả lời đủ lượt nhưng không lượt nào dùng lại từ khoá persona nêu ở đầu."
+        status = "partially_resolved"
+        why = (
+            "Trợ lý trả lời đủ {} lượt, nhưng {}. Task này không có đáp án đúng, "
+            "nên đây là dấu hiệu cần người xem lại hội thoại, chưa phải kết luận "
+            "trợ lý sai.".format(assistant_replies, OVERLAP_MEANING["not_carried"])
+        )
     else:
-        status, why = "resolved", "Hội thoại {} lượt, bám chủ đề mở đầu ({}).".format(
-            int(observation.get("turn_count") or 0), overlap)
+        status = "resolved"
+        why = (
+            "Hội thoại đi hết {} lượt và {}.".format(
+                int(observation.get("turn_count") or 0), OVERLAP_MEANING["carried"]
+            )
+        )
 
     contexts: list[dict[str, Any]] = [
         {
@@ -154,6 +231,23 @@ def build_evaluation_payload(
             "facets": [
                 _facet("outcome_status", "Kết quả", "primary", "categorical", status),
                 _facet("resolution_basis", "Căn cứ", "control", "categorical", "verifier_scoring"),
+                # yes/no, because the job report's headline panel only colours
+                # words it recognises; "carried" / "not_carried" read as neutral
+                # labels there and the signal never reached the summary.
+                _facet(
+                    "context_carried",
+                    "Có bám chủ đề mở đầu",
+                    "evidence",
+                    "categorical",
+                    {"carried": "yes", "not_carried": "no"}.get(overlap, "not_applicable"),
+                ),
+                _facet(
+                    "reached_two_replies",
+                    "Đủ hai lượt trả lời",
+                    "evidence",
+                    "categorical",
+                    "yes" if assistant_replies >= 2 else "no",
+                ),
                 _facet("outcome_reason", "Diễn giải", "explanation", "textual", why),
             ],
         },
@@ -164,15 +258,9 @@ def build_evaluation_payload(
             "facets": [
                 _facet("message_count", "Số lượt", "metric", "continuous", int(observation.get("turn_count") or 0)),
                 _facet("conversation_path", "Diễn biến", "explanation", "textual",
-                       "\n".join("Lượt {}: {} -> {}".format(
-                           i + 1,
-                           str(x.get("user_message") or "")[:120],
-                           str(x.get("assistant_message") or "")[:120],
-                       ) for i, x in enumerate(turns[:4]) if isinstance(x, dict))),
+                       conversation_path(observation)),
                 _facet("process_notes", "Ghi chú chấm", "explanation", "textual",
-                       "Subintent {} · seed {} · {} lượt trợ lý trả lời · bám chủ đề {}".format(
-                           case.get("subintent_code"), case.get("seed_quality"),
-                           assistant_replies, overlap)),
+                       _process_notes(case, assistant_replies, overlap)),
             ],
         },
         {
