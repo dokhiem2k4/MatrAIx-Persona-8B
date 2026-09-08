@@ -546,7 +546,6 @@ function ChatbotDebrief({ run }: { run: RunDetailView }) {
         selfReportSchema={run.selfReportSchema}
         metricScores={run.metricScores}
         verifier={run.verifier}
-        trialEvaluation={run.trialEvaluation}
         taskTitle={run.taskTitle}
       />
     </TrialDebriefChrome>
