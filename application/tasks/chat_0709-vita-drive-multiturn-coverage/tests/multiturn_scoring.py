@@ -110,7 +110,7 @@ def self_report_facets(feedback: dict[str, Any]) -> list[dict[str, Any]]:
             _feedback_bucket(feedback.get("askedUsefulClarificationQuestions")),
         ),
         _facet(
-            "rating_reason",
+            "feedback_reason",
             "Lý do chấm điểm",
             "explanation",
             "textual",
@@ -137,7 +137,44 @@ def build_evaluation_payload(
         1 for t in turns if isinstance(t, dict) and str(t.get("assistant_message") or "").strip()
     )
 
+    overlap = lexical_topic_overlap(turns)
+    if assistant_replies < 2:
+        status, why = "unresolved", "Hội thoại chỉ đạt {} lượt trả lời, chưa đủ để đo giữ ngữ cảnh.".format(assistant_replies)
+    elif overlap == "not_carried":
+        status, why = "partially_resolved", "Trợ lý trả lời đủ lượt nhưng không lượt nào dùng lại từ khoá persona nêu ở đầu."
+    else:
+        status, why = "resolved", "Hội thoại {} lượt, bám chủ đề mở đầu ({}).".format(
+            int(observation.get("turn_count") or 0), overlap)
+
     contexts: list[dict[str, Any]] = [
+        {
+            "key": "task_outcome.primary",
+            "label": "Task outcome",
+            "contextType": "task_outcome",
+            "facets": [
+                _facet("outcome_status", "Kết quả", "primary", "categorical", status),
+                _facet("resolution_basis", "Căn cứ", "control", "categorical", "verifier_scoring"),
+                _facet("outcome_reason", "Diễn giải", "explanation", "textual", why),
+            ],
+        },
+        {
+            "key": "conversation_summary.primary",
+            "label": "Conversation",
+            "contextType": "conversation_summary",
+            "facets": [
+                _facet("message_count", "Số lượt", "metric", "continuous", int(observation.get("turn_count") or 0)),
+                _facet("conversation_path", "Diễn biến", "explanation", "textual",
+                       "\n".join("Lượt {}: {} -> {}".format(
+                           i + 1,
+                           str(x.get("user_message") or "")[:120],
+                           str(x.get("assistant_message") or "")[:120],
+                       ) for i, x in enumerate(turns[:4]) if isinstance(x, dict))),
+                _facet("process_notes", "Ghi chú chấm", "explanation", "textual",
+                       "Subintent {} · seed {} · {} lượt trợ lý trả lời · bám chủ đề {}".format(
+                           case.get("subintent_code"), case.get("seed_quality"),
+                           assistant_replies, overlap)),
+            ],
+        },
         {
             "key": "multiturn_coverage.primary",
             "label": "Multi-turn coverage",

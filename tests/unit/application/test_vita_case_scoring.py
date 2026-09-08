@@ -181,10 +181,12 @@ def test_payload_marks_unknown_when_decision_unavailable():
     assert facets["decision_source"] == "unavailable"
 
 
-def test_payload_appends_user_feedback_when_present():
+def test_payload_appends_user_feedback_last():
     payload = build_evaluation_payload(CASE_RUN_MATCH, {"overallExperienceRating": 8})
     types = [context["contextType"] for context in payload["contexts"]]
-    assert types == ["error_recovery", "user_feedback"]
+    assert types[-1] == "user_feedback"
+    # error_recovery stays for reporting even though the screen ignores it.
+    assert "error_recovery" in types
 
 
 import json  # noqa: E402
@@ -411,7 +413,7 @@ def test_self_report_carries_the_reasons_not_only_the_score():
     """The sentences are the part a human reads; a score alone explains nothing."""
     f = {x["key"]: x["value"] for x in self_report_facets(FEEDBACK)}
     assert f["overall_experience_rating"] == 7
-    assert "dẫn sai địa điểm" in f["rating_reason"]
+    assert "dẫn sai địa điểm" in f["feedback_reason"]
     assert "Không hỏi lại vị trí" in f["clarifying_notes"]
 
 
@@ -425,7 +427,7 @@ def test_self_report_normalises_boolean_answers_to_buckets():
 def test_self_report_survives_a_missing_rating():
     f = {x["key"]: x["value"] for x in self_report_facets({"reason": "x"})}
     assert f["overall_experience_rating"] is None
-    assert f["rating_reason"] == "x"
+    assert f["feedback_reason"] == "x"
 
 
 def test_payload_attaches_every_self_report_field():
@@ -436,6 +438,6 @@ def test_payload_attaches_every_self_report_field():
         "need_constraint_satisfaction",
         "personal_preference_satisfaction",
         "asked_useful_clarification",
-        "rating_reason",
+        "feedback_reason",
         "clarifying_notes",
     }

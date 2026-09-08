@@ -179,7 +179,7 @@ def self_report_facets(feedback: dict[str, Any]) -> list[dict[str, Any]]:
             _feedback_bucket(feedback.get("askedUsefulClarificationQuestions")),
         ),
         _facet(
-            "rating_reason",
+            "feedback_reason",
             "Lý do chấm điểm",
             "explanation",
             "textual",
@@ -242,7 +242,66 @@ def build_evaluation_payload(
         case, str(observation.get("first_user_message") or "")
     )
 
+    # The chat debrief view renders three context types by name --
+    # task_outcome, conversation_summary and user_feedback -- and ignores any
+    # it does not know. Emitting only error_recovery left that panel showing a
+    # single raw FAIL string while all fifteen facets sat unread in the file.
+    if decision_match == "match" and tool_match == "match":
+        outcome_status, outcome_reason = "resolved", "Quyết định và tool call đều khớp kỳ vọng."
+    elif decision_match in ("unknown", "unavailable"):
+        outcome_status = "partially_resolved"
+        outcome_reason = "Không suy được quyết định từ tín hiệu SUT trả về ({}).".format(decision_source)
+    else:
+        outcome_status = "unresolved"
+        outcome_reason = "Kỳ vọng {!r} nhưng quan sát {!r}; tool {}.".format(
+            expected.get("decision"), decision or "(không có)", tool_match
+        )
+    if integrity == "violated":
+        outcome_status = "unresolved"
+        outcome_reason = (
+            "Persona phá ràng buộc đầu vào ({}), nên trial này không đo được SUT. "
+        ).format(case.get("input_constraint")) + outcome_reason
+
     contexts: list[dict[str, Any]] = [
+        {
+            "key": "task_outcome.primary",
+            "label": "Task outcome",
+            "contextType": "task_outcome",
+            "facets": [
+                _facet("outcome_status", "Kết quả", "primary", "categorical", outcome_status),
+                _facet("resolution_basis", "Căn cứ", "control", "categorical", "verifier_scoring"),
+                _facet("outcome_reason", "Diễn giải", "explanation", "textual", outcome_reason),
+            ],
+        },
+        {
+            "key": "conversation_summary.primary",
+            "label": "Conversation",
+            "contextType": "conversation_summary",
+            "facets": [
+                _facet("message_count", "Số lượt", "metric", "continuous", int(observation.get("turn_count") or 0)),
+                _facet(
+                    "conversation_path",
+                    "Diễn biến",
+                    "explanation",
+                    "textual",
+                    "Persona: {}\nVita: {}".format(
+                        str(observation.get("first_user_message") or "")[:400],
+                        str(observation.get("first_assistant_message") or "")[:400],
+                    ),
+                ),
+                _facet(
+                    "process_notes",
+                    "Ghi chú chấm",
+                    "explanation",
+                    "textual",
+                    "Case {} · {} · ràng buộc {} · toàn vẹn {} · tool đã chạy [{}]".format(
+                        case.get("case_id"), case.get("error_type"),
+                        case.get("input_constraint"), integrity,
+                        ", ".join(observed_tools) or "không có",
+                    ),
+                ),
+            ],
+        },
         {
             "key": "error_recovery.primary",
             "label": "Error recovery",

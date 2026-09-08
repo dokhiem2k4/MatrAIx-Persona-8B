@@ -92,7 +92,7 @@ def self_report_facets(feedback: dict[str, Any]) -> list[dict[str, Any]]:
             _feedback_bucket(feedback.get("askedUsefulClarificationQuestions")),
         ),
         _facet(
-            "rating_reason",
+            "feedback_reason",
             "Lý do chấm điểm",
             "explanation",
             "textual",
@@ -117,7 +117,49 @@ def build_evaluation_payload(
     state = dict(case.get("state") or {})
     reply = str(observation.get("first_assistant_message") or "")
 
+    applied = profile_applied(case, observation.get("structured_exposure"))
+    if applied == "no":
+        status, why = "unresolved", (
+            "SUT chạy profile {!r} thay vì {!r} được yêu cầu, nên ô lưới này không "
+            "đo được yếu tố cần đo.".format(
+                str(next((f.get("value") for f in (observation.get("structured_exposure") or [])
+                          if isinstance(f, dict) and f.get("key") == "assistantProfileId"), "") or "?"),
+                str(state.get("assistant_profile_id") or "?"),
+            )
+        )
+    elif not reply.strip():
+        status, why = "unresolved", "Trợ lý không trả lời."
+    else:
+        status, why = "resolved", "Đã thu được phản hồi dưới profile {!r}, trạng thái xe {!r}.".format(
+            str(state.get("assistant_profile_id") or ""), str(state.get("vehicle_state") or "")
+        )
+
     contexts: list[dict[str, Any]] = [
+        {
+            "key": "task_outcome.primary",
+            "label": "Task outcome",
+            "contextType": "task_outcome",
+            "facets": [
+                _facet("outcome_status", "Kết quả", "primary", "categorical", status),
+                _facet("resolution_basis", "Căn cứ", "control", "categorical", "verifier_scoring"),
+                _facet("outcome_reason", "Diễn giải", "explanation", "textual", why),
+            ],
+        },
+        {
+            "key": "conversation_summary.primary",
+            "label": "Conversation",
+            "contextType": "conversation_summary",
+            "facets": [
+                _facet("message_count", "Số lượt", "metric", "continuous", int(observation.get("turn_count") or 0)),
+                _facet("conversation_path", "Diễn biến", "explanation", "textual",
+                       "Persona: {}\nVita: {}".format(
+                           str(observation.get("first_user_message") or "")[:400], reply[:400])),
+                _facet("process_notes", "Ghi chú chấm", "explanation", "textual",
+                       "Profile {} · xe {} · {} ký tự phản hồi · profile có hiệu lực: {}".format(
+                           state.get("assistant_profile_id"), state.get("vehicle_state"),
+                           reply_length(reply), applied)),
+            ],
+        },
         {
             "key": "assistant_mode.primary",
             "label": "Assistant mode",

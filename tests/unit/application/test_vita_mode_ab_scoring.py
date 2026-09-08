@@ -84,7 +84,7 @@ def test_feedback_context_is_appended_when_present():
             "personalPreferenceSatisfaction": "partially",
         },
     )
-    assert [c["contextType"] for c in payload["contexts"]] == ["assistant_mode", "user_feedback"]
+    assert [c["contextType"] for c in payload["contexts"]][-1] == "user_feedback"
     fb = _facets(payload, "user_feedback")
     assert fb["overall_experience_rating"] == 7
     assert fb["need_constraint_satisfaction"] == "yes"
