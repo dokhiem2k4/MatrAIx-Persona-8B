@@ -2,6 +2,14 @@ artifactName: user_feedback.json
 instructions: |
   Đánh giá trung thực trải nghiệm sử dụng trợ lý Vita khi đang lái xe.
   Tập trung vào độ chính xác khi thực thi lệnh điều khiển xe, sự an toàn và cách giao tiếp.
+
+  VIẾT TOÀN BỘ PHẦN TỰ LUẬN BẰNG TIẾNG VIỆT. Người đọc báo cáo là người Việt,
+  và một bảng lẫn lộn hai thứ tiếng thì không lọc hay so sánh được. Giữ nguyên
+  tiếng Anh cho các giá trị chọn sẵn (yes / partially / no) vì đó là mã dữ liệu.
+
+  Nhắc tới lượt cụ thể khi có thể ("ở lượt 1 Vita ..."), và nêu điều đáng lẽ
+  trợ lý nên làm khác — nhận xét chung chung không giúp sửa được gì.
+
 fields:
   - key: needConstraintSatisfaction
     prompt: Trợ lý Vita có đáp ứng tốt yêu cầu điều khiển/hỗ trợ của bạn không?
@@ -18,10 +26,10 @@ fields:
     maximum: 10
     explanation:
       key: reason
-      prompt: Nêu ngắn gọn lý do cho số điểm trên.
+      prompt: Nêu lý do cho số điểm trên, bằng tiếng Việt, có dẫn lượt cụ thể.
   - key: askedUsefulClarificationQuestions
     prompt: Trợ lý có hỏi lại hoặc xác nhận an toàn khi cần thiết không?
     kind: boolean
     explanation:
       key: clarifyingNotes
-      prompt: Chi tiết phản hồi an toàn hoặc câu hỏi làm rõ.
+      prompt: Chi tiết phản hồi an toàn hoặc câu hỏi làm rõ, bằng tiếng Việt.
