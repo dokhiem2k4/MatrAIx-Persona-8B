@@ -312,3 +312,6 @@ environment/runtime/harbor/viewer/static/assets/*.map
 **/.playground_sidecar/
 site/
 .cache/
+
+# Vita run outputs: exported per-run data folders (raw jobs/ is already ignored)
+/data/vita-*/

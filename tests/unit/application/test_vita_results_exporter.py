@@ -98,3 +98,49 @@ def test_an_unreadable_persona_says_so_instead_of_going_blank():
 
 def test_a_missing_path_is_reported_too():
     assert describe_persona("", {}, {}, {}) == "(trial ghi không có persona_path)"
+
+
+from export_vita_multiturn_results import STIMULI_COLUMNS, stimuli_row  # noqa: E402
+
+
+def test_stimuli_row_puts_the_dataset_wording_beside_what_was_said():
+    """Judging a paraphrase needs both halves in the same row."""
+    got = stimuli_row({
+        "case_id": "vg_0068",
+        "seed_first_input": "Dẫn tôi đến bệnh viện",
+        "opening_message": "Vita ơi, dẫn tôi đến bệnh viện gần nhất đi.",
+        "case_integrity": "not_applicable",
+    })
+    assert got["seed_input"] == "Dẫn tôi đến bệnh viện"
+    assert got["first_input"] == "Vita ơi, dẫn tôi đến bệnh viện gần nhất đi."
+    assert got["case_integrity"] == "not_applicable"
+
+
+def test_stimuli_row_marks_provenance_by_mechanism():
+    assert stimuli_row({"case_id": "vg_0001"})["source"] == "golden"
+    assert stimuli_row({"case_id": ""})["source"] == "pipeline"
+
+
+def test_stimuli_columns_carry_the_scoring_context():
+    for key in ("expected_decision", "observed_decision", "input_constraint", "persona_profile"):
+        assert key in STIMULI_COLUMNS
+
+
+def test_launcher_sets_the_task_path_variable():
+    """Without it the runtime ignores chatbot.yaml and calls /v1/messages."""
+    script = (
+        Path(__file__).resolve().parents[3] / "scripts/run_vita_case_job.sh"
+    ).read_text(encoding="utf-8")
+    assert "MATRIX_CHATBOT_TASK_PATH" in script
+    assert "export_vita_multiturn_results.py" in script
+    assert "--run-dir" in script
+
+
+def test_launcher_refuses_to_reuse_a_run_folder_before_spending():
+    """A clash found at export time means the money is already gone."""
+    script = (
+        Path(__file__).resolve().parents[3] / "scripts/run_vita_case_job.sh"
+    ).read_text(encoding="utf-8")
+    guard = script.index('run folder exists')
+    run = script.index("uv run matraix run")
+    assert guard < run

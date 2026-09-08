@@ -140,6 +140,58 @@ def verifier_facets(trial: Path) -> dict[str, Any]:
     return facets
 
 
+STIMULI_COLUMNS = [
+    "case_id",
+    "intent_code",
+    "subintent_code",
+    "subintent_name",
+    "scenario",
+    "seed_input",
+    "first_input",
+    "input_constraint",
+    "case_integrity",
+    "expected_decision",
+    "observed_decision",
+    "vehicle_state",
+    "assistant_profile_id",
+    "source",
+    "persona_id",
+    "persona_name",
+    "persona_profile",
+    "model",
+]
+
+
+def stimuli_row(row: dict[str, Any]) -> dict[str, Any]:
+    """One row per trial, seen from the stimulus side.
+
+    ``seed_input`` is the dataset's own wording; ``first_input`` is what the
+    persona actually said. Reading them side by side is the only way to judge
+    whether a paraphrase stayed faithful -- and ``case_integrity`` says whether
+    the harness thought so too.
+    """
+    return {
+        "case_id": row.get("case_id", ""),
+        "intent_code": row.get("intent_code", ""),
+        "subintent_code": row.get("subintent_code", ""),
+        "subintent_name": row.get("subintent_name", ""),
+        "scenario": row.get("scenario", ""),
+        "seed_input": row.get("seed_first_input", ""),
+        "first_input": row.get("opening_message", ""),
+        "input_constraint": row.get("input_constraint", ""),
+        "case_integrity": row.get("case_integrity", ""),
+        "expected_decision": row.get("expected_decision", ""),
+        "observed_decision": row.get("observed_decision", ""),
+        "vehicle_state": row.get("vehicle_state", ""),
+        "assistant_profile_id": row.get("assistant_mode", ""),
+        "source": "golden" if row.get("case_id") else "pipeline",
+        "persona_id": row.get("persona_id", ""),
+        "persona_name": row.get("persona_name", ""),
+        "persona_profile": row.get("persona_profile", ""),
+        "model": row.get("model", ""),
+    }
+
+
 def read_json(path: Path) -> dict[str, Any] | None:
     try:
         return json.loads(path.read_text(encoding="utf-8"))
@@ -238,8 +290,29 @@ def summarise(rows: list[dict[str, Any]]) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("job", type=Path)
-    parser.add_argument("-o", "--out", type=Path, required=True, help="path without suffix")
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument("-o", "--out", type=Path, help="path without suffix")
+    group.add_argument(
+        "--run-dir",
+        help=(
+            "run name; writes data/<name>/<name>-results.csv, -results.jsonl and "
+            "-stimuli.csv. Refuses to overwrite an existing run."
+        ),
+    )
     args = parser.parse_args()
+
+    if args.run_dir:
+        # One folder per run, and never reuse one. A second run writing over the
+        # first would destroy results that cost real money and cannot be
+        # reproduced -- the assistant under test is not deterministic.
+        run_dir = REPO_ROOT / "data" / args.run_dir
+        if run_dir.exists():
+            raise SystemExit(
+                "run folder already exists: {} -- pick another name or move it "
+                "aside; refusing to overwrite earlier results".format(run_dir)
+            )
+        run_dir.mkdir(parents=True)
+        args.out = run_dir / "{}-results".format(args.run_dir)
 
     rows, skipped, records = collect(args.job)
     if not rows:
@@ -260,6 +333,16 @@ def main() -> int:
         )
         writer.writeheader()
         writer.writerows(rows)
+
+    stimuli_path = args.out.parent / (
+        args.out.name.replace("-results", "") + "-stimuli.csv"
+    )
+    with stimuli_path.open("w", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.DictWriter(
+            handle, fieldnames=STIMULI_COLUMNS, extrasaction="ignore", restval=""
+        )
+        writer.writeheader()
+        writer.writerows(stimuli_row(row) for row in rows)
 
     jsonl_path = args.out.with_suffix(".jsonl")
     with jsonl_path.open("w", encoding="utf-8") as handle:
