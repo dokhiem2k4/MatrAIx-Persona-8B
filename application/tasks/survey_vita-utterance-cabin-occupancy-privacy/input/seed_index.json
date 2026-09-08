@@ -1,0 +1,602 @@
+[
+  {
+    "questionId": "q0",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "occupant_awareness",
+    "subintent_name": "Nhận biết người trên xe",
+    "seed_input": "Trên xe có khách, em nói nhỏ lại giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q1",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "occupant_awareness",
+    "subintent_name": "Nhận biết người trên xe",
+    "seed_input": "Trên xe có khách, em nói nhỏ lại giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q2",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "occupant_awareness",
+    "subintent_name": "Nhận biết người trên xe",
+    "seed_input": "Xe đang chở người lạ, đừng đọc to thông báo nữa.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q3",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "occupant_awareness",
+    "subintent_name": "Nhận biết người trên xe",
+    "seed_input": "Xe đang chở người lạ, đừng đọc to thông báo nữa.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q4",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "occupant_awareness",
+    "subintent_name": "Nhận biết người trên xe",
+    "seed_input": "Em có biết trên xe đang có mấy người không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q5",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "occupant_awareness",
+    "subintent_name": "Nhận biết người trên xe",
+    "seed_input": "Em có biết trên xe đang có mấy người không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q6",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "occupant_awareness",
+    "subintent_name": "Nhận biết người trên xe",
+    "seed_input": "Lát nữa tôi chở khách, em tự chuyển sang chế độ kín đáo nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q7",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "occupant_awareness",
+    "subintent_name": "Nhận biết người trên xe",
+    "seed_input": "Lát nữa tôi chở khách, em tự chuyển sang chế độ kín đáo nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q8",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "occupant_awareness",
+    "subintent_name": "Nhận biết người trên xe",
+    "seed_input": "Từ giờ có người ngồi sau thì đừng đọc tin nhắn ra.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q9",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "occupant_awareness",
+    "subintent_name": "Nhận biết người trên xe",
+    "seed_input": "Từ giờ có người ngồi sau thì đừng đọc tin nhắn ra.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q10",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "occupant_awareness",
+    "subintent_name": "Nhận biết người trên xe",
+    "seed_input": "Nhận biết khi nào tôi đi một mình để nói thoải mái hơn.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q11",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "occupant_awareness",
+    "subintent_name": "Nhận biết người trên xe",
+    "seed_input": "Nhận biết khi nào tôi đi một mình để nói thoải mái hơn.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q12",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "quiet_discreet_mode",
+    "subintent_name": "Chế độ kín đáo",
+    "seed_input": "Bật chế độ im lặng, tôi ra lệnh khẽ thôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q13",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "quiet_discreet_mode",
+    "subintent_name": "Chế độ kín đáo",
+    "seed_input": "Bật chế độ im lặng, tôi ra lệnh khẽ thôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q14",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "quiet_discreet_mode",
+    "subintent_name": "Chế độ kín đáo",
+    "seed_input": "Đừng nói gì cả, chỉ hiện chữ lên màn hình.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q15",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "quiet_discreet_mode",
+    "subintent_name": "Chế độ kín đáo",
+    "seed_input": "Đừng nói gì cả, chỉ hiện chữ lên màn hình.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q16",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "quiet_discreet_mode",
+    "subintent_name": "Chế độ kín đáo",
+    "seed_input": "Tôi nói khẽ, em trả lời bằng chữ được không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q17",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "quiet_discreet_mode",
+    "subintent_name": "Chế độ kín đáo",
+    "seed_input": "Tôi nói khẽ, em trả lời bằng chữ được không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q18",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "quiet_discreet_mode",
+    "subintent_name": "Chế độ kín đáo",
+    "seed_input": "Cài sẵn chế độ không phát tiếng cho chuyến chiều nay.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q19",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "quiet_discreet_mode",
+    "subintent_name": "Chế độ kín đáo",
+    "seed_input": "Cài sẵn chế độ không phát tiếng cho chuyến chiều nay.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q20",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "quiet_discreet_mode",
+    "subintent_name": "Chế độ kín đáo",
+    "seed_input": "Tắt hết chào hỏi, chỉ làm việc thôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q21",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "quiet_discreet_mode",
+    "subintent_name": "Chế độ kín đáo",
+    "seed_input": "Tắt hết chào hỏi, chỉ làm việc thôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q22",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "quiet_discreet_mode",
+    "subintent_name": "Chế độ kín đáo",
+    "seed_input": "Khi nào tôi thì thầm thì em cũng đừng đọc to.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q23",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "quiet_discreet_mode",
+    "subintent_name": "Chế độ kín đáo",
+    "seed_input": "Khi nào tôi thì thầm thì em cũng đừng đọc to.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q24",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "driver_voice_isolation",
+    "subintent_name": "Chỉ nghe tài xế",
+    "seed_input": "Chỉ nghe lệnh của tôi thôi, đừng nghe người ngồi sau.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q25",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "driver_voice_isolation",
+    "subintent_name": "Chỉ nghe tài xế",
+    "seed_input": "Chỉ nghe lệnh của tôi thôi, đừng nghe người ngồi sau.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q26",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "driver_voice_isolation",
+    "subintent_name": "Chỉ nghe tài xế",
+    "seed_input": "Khách vừa nói chuyện mà em tưởng lệnh, tắt cái đó đi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q27",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "driver_voice_isolation",
+    "subintent_name": "Chỉ nghe tài xế",
+    "seed_input": "Khách vừa nói chuyện mà em tưởng lệnh, tắt cái đó đi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q28",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "driver_voice_isolation",
+    "subintent_name": "Chỉ nghe tài xế",
+    "seed_input": "Ngắt micro hàng ghế sau giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q29",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "driver_voice_isolation",
+    "subintent_name": "Chỉ nghe tài xế",
+    "seed_input": "Ngắt micro hàng ghế sau giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q30",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "driver_voice_isolation",
+    "subintent_name": "Chỉ nghe tài xế",
+    "seed_input": "Cài để chỉ nhận giọng từ ghế lái.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q31",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "driver_voice_isolation",
+    "subintent_name": "Chỉ nghe tài xế",
+    "seed_input": "Cài để chỉ nhận giọng từ ghế lái.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q32",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "driver_voice_isolation",
+    "subintent_name": "Chỉ nghe tài xế",
+    "seed_input": "Phân biệt giọng tôi với giọng khách được không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q33",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "driver_voice_isolation",
+    "subintent_name": "Chỉ nghe tài xế",
+    "seed_input": "Phân biệt giọng tôi với giọng khách được không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q34",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "driver_voice_isolation",
+    "subintent_name": "Chỉ nghe tài xế",
+    "seed_input": "Nếu nghe hai giọng cùng lúc thì em ưu tiên giọng tôi nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q35",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "driver_voice_isolation",
+    "subintent_name": "Chỉ nghe tài xế",
+    "seed_input": "Nếu nghe hai giọng cùng lúc thì em ưu tiên giọng tôi nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q36",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "passenger_controls",
+    "subintent_name": "Quyền của người ngồi cùng",
+    "seed_input": "Cho vợ tôi ngồi ghế phụ chỉnh nhạc được không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q37",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "passenger_controls",
+    "subintent_name": "Quyền của người ngồi cùng",
+    "seed_input": "Cho vợ tôi ngồi ghế phụ chỉnh nhạc được không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q38",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "passenger_controls",
+    "subintent_name": "Quyền của người ngồi cùng",
+    "seed_input": "Người ngồi sau muốn tắt em thì làm thế nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q39",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "passenger_controls",
+    "subintent_name": "Quyền của người ngồi cùng",
+    "seed_input": "Người ngồi sau muốn tắt em thì làm thế nào?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q40",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "passenger_controls",
+    "subintent_name": "Quyền của người ngồi cùng",
+    "seed_input": "Mở quyền cho ghế phụ chỉnh điều hoà.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q41",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "passenger_controls",
+    "subintent_name": "Quyền của người ngồi cùng",
+    "seed_input": "Mở quyền cho ghế phụ chỉnh điều hoà.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q42",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "passenger_controls",
+    "subintent_name": "Quyền của người ngồi cùng",
+    "seed_input": "Cấp quyền cho khách điều khiển từ điện thoại của họ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q43",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "passenger_controls",
+    "subintent_name": "Quyền của người ngồi cùng",
+    "seed_input": "Cấp quyền cho khách điều khiển từ điện thoại của họ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q44",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "passenger_controls",
+    "subintent_name": "Quyền của người ngồi cùng",
+    "seed_input": "Giới hạn để khách chỉ chỉnh được nhạc, không đụng vào dẫn đường.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q45",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "passenger_controls",
+    "subintent_name": "Quyền của người ngồi cùng",
+    "seed_input": "Giới hạn để khách chỉ chỉnh được nhạc, không đụng vào dẫn đường.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q46",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "passenger_controls",
+    "subintent_name": "Quyền của người ngồi cùng",
+    "seed_input": "Ai đang có quyền điều khiển em trên xe này?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q47",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "passenger_controls",
+    "subintent_name": "Quyền của người ngồi cùng",
+    "seed_input": "Ai đang có quyền điều khiển em trên xe này?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q48",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "child_family_mode",
+    "subintent_name": "Chế độ có trẻ em",
+    "seed_input": "Có con nhỏ ngủ phía sau, em nói nhỏ và đừng bật màn sáng.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q49",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "child_family_mode",
+    "subintent_name": "Chế độ có trẻ em",
+    "seed_input": "Có con nhỏ ngủ phía sau, em nói nhỏ và đừng bật màn sáng.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q50",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "child_family_mode",
+    "subintent_name": "Chế độ có trẻ em",
+    "seed_input": "Bật chế độ gia đình, lọc nội dung cho trẻ con.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q51",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "child_family_mode",
+    "subintent_name": "Chế độ có trẻ em",
+    "seed_input": "Bật chế độ gia đình, lọc nội dung cho trẻ con.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q52",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "child_family_mode",
+    "subintent_name": "Chế độ có trẻ em",
+    "seed_input": "Con tôi đang ngồi sau, chọn nhạc phù hợp giúp.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q53",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "child_family_mode",
+    "subintent_name": "Chế độ có trẻ em",
+    "seed_input": "Con tôi đang ngồi sau, chọn nhạc phù hợp giúp.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q54",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "child_family_mode",
+    "subintent_name": "Chế độ có trẻ em",
+    "seed_input": "Cài chế độ trẻ em cho chuyến đi ngày mai.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q55",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "child_family_mode",
+    "subintent_name": "Chế độ có trẻ em",
+    "seed_input": "Cài chế độ trẻ em cho chuyến đi ngày mai.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q56",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "child_family_mode",
+    "subintent_name": "Chế độ có trẻ em",
+    "seed_input": "Kể chuyện cổ tích tiếng Việt cho cháu nghe.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q57",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "child_family_mode",
+    "subintent_name": "Chế độ có trẻ em",
+    "seed_input": "Kể chuyện cổ tích tiếng Việt cho cháu nghe.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q58",
+    "field": "scenario",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "child_family_mode",
+    "subintent_name": "Chế độ có trẻ em",
+    "seed_input": "Khi có trẻ con thì tự hạ âm lượng thông báo xuống.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q59",
+    "field": "first_input",
+    "intent_code": "cabin_occupancy_privacy",
+    "subintent_code": "child_family_mode",
+    "subintent_name": "Chế độ có trẻ em",
+    "seed_input": "Khi có trẻ con thì tự hạ âm lượng thông báo xuống.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  }
+]

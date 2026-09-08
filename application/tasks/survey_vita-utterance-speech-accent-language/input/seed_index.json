@@ -1,0 +1,602 @@
+[
+  {
+    "questionId": "q0",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "regional_accent",
+    "subintent_name": "Giọng vùng miền",
+    "seed_input": "Nói lại đi, nãy giờ mày nghe giọng tao không ra.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q1",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "regional_accent",
+    "subintent_name": "Giọng vùng miền",
+    "seed_input": "Nói lại đi, nãy giờ mày nghe giọng tao không ra.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q2",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "regional_accent",
+    "subintent_name": "Giọng vùng miền",
+    "seed_input": "Tôi nói giọng miền Trung, chỉnh sao cho nghe hiểu tốt hơn được không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q3",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "regional_accent",
+    "subintent_name": "Giọng vùng miền",
+    "seed_input": "Tôi nói giọng miền Trung, chỉnh sao cho nghe hiểu tốt hơn được không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q4",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "regional_accent",
+    "subintent_name": "Giọng vùng miền",
+    "seed_input": "Mỗi lần tôi nói nhanh là em nghe sai, có cách nào khắc phục không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q5",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "regional_accent",
+    "subintent_name": "Giọng vùng miền",
+    "seed_input": "Mỗi lần tôi nói nhanh là em nghe sai, có cách nào khắc phục không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q6",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "regional_accent",
+    "subintent_name": "Giọng vùng miền",
+    "seed_input": "Đặt lại nhận giọng cho hợp với giọng Nghệ An của tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q7",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "regional_accent",
+    "subintent_name": "Giọng vùng miền",
+    "seed_input": "Đặt lại nhận giọng cho hợp với giọng Nghệ An của tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q8",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "regional_accent",
+    "subintent_name": "Giọng vùng miền",
+    "seed_input": "Bật chế độ nói chậm rõ để bố tôi dùng được.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q9",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "regional_accent",
+    "subintent_name": "Giọng vùng miền",
+    "seed_input": "Bật chế độ nói chậm rõ để bố tôi dùng được.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q10",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "regional_accent",
+    "subintent_name": "Giọng vùng miền",
+    "seed_input": "Tại sao em hay nghe nhầm khi tôi nói giọng địa phương?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q11",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "regional_accent",
+    "subintent_name": "Giọng vùng miền",
+    "seed_input": "Tại sao em hay nghe nhầm khi tôi nói giọng địa phương?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q12",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "proper_noun_recognition",
+    "subintent_name": "Nhận diện tên riêng",
+    "seed_input": "Dẫn tôi ra Nguyễn Xiển, không phải Nguyễn Xí nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q13",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "proper_noun_recognition",
+    "subintent_name": "Nhận diện tên riêng",
+    "seed_input": "Dẫn tôi ra Nguyễn Xiển, không phải Nguyễn Xí nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q14",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "proper_noun_recognition",
+    "subintent_name": "Nhận diện tên riêng",
+    "seed_input": "Tìm đường Trần Duy Hưng, em toàn ra Trần Zuy Hưng.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q15",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "proper_noun_recognition",
+    "subintent_name": "Nhận diện tên riêng",
+    "seed_input": "Tìm đường Trần Duy Hưng, em toàn ra Trần Zuy Hưng.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q16",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "proper_noun_recognition",
+    "subintent_name": "Nhận diện tên riêng",
+    "seed_input": "Gọi cho chị Thuỷ, không phải anh Thủy.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q17",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "proper_noun_recognition",
+    "subintent_name": "Nhận diện tên riêng",
+    "seed_input": "Gọi cho chị Thuỷ, không phải anh Thủy.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q18",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "proper_noun_recognition",
+    "subintent_name": "Nhận diện tên riêng",
+    "seed_input": "Lưu địa chỉ số nhà 18 ngõ 84 Xuân Thuỷ, đọc lại tôi nghe.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q19",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "proper_noun_recognition",
+    "subintent_name": "Nhận diện tên riêng",
+    "seed_input": "Lưu địa chỉ số nhà 18 ngõ 84 Xuân Thuỷ, đọc lại tôi nghe.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q20",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "proper_noun_recognition",
+    "subintent_name": "Nhận diện tên riêng",
+    "seed_input": "Em hay nghe nhầm tên phố nào nhất, cho tôi biết để tôi nói khác đi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q21",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "proper_noun_recognition",
+    "subintent_name": "Nhận diện tên riêng",
+    "seed_input": "Em hay nghe nhầm tên phố nào nhất, cho tôi biết để tôi nói khác đi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q22",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "proper_noun_recognition",
+    "subintent_name": "Nhận diện tên riêng",
+    "seed_input": "Nhớ giúp tôi cách đọc đúng tên khách hàng người Hàn.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q23",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "proper_noun_recognition",
+    "subintent_name": "Nhận diện tên riêng",
+    "seed_input": "Nhớ giúp tôi cách đọc đúng tên khách hàng người Hàn.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q24",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "code_switching",
+    "subintent_name": "Nói lẫn Việt - Anh",
+    "seed_input": "Mở playlist chill rồi dẫn tao về nhà.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q25",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "code_switching",
+    "subintent_name": "Nói lẫn Việt - Anh",
+    "seed_input": "Mở playlist chill rồi dẫn tao về nhà.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q26",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "code_switching",
+    "subintent_name": "Nói lẫn Việt - Anh",
+    "seed_input": "Bật cái podcast tiếng Anh tôi nghe dở hôm qua.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q27",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "code_switching",
+    "subintent_name": "Nói lẫn Việt - Anh",
+    "seed_input": "Bật cái podcast tiếng Anh tôi nghe dở hôm qua.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q28",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "code_switching",
+    "subintent_name": "Nói lẫn Việt - Anh",
+    "seed_input": "Cho tôi check email rồi báo lại bằng tiếng Việt.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q29",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "code_switching",
+    "subintent_name": "Nói lẫn Việt - Anh",
+    "seed_input": "Cho tôi check email rồi báo lại bằng tiếng Việt.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q30",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "code_switching",
+    "subintent_name": "Nói lẫn Việt - Anh",
+    "seed_input": "Đặt lịch meeting sáng mai lúc 9 giờ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q31",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "code_switching",
+    "subintent_name": "Nói lẫn Việt - Anh",
+    "seed_input": "Đặt lịch meeting sáng mai lúc 9 giờ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q32",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "code_switching",
+    "subintent_name": "Nói lẫn Việt - Anh",
+    "seed_input": "Tìm cái quán coffee gần chỗ tôi đỗ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q33",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "code_switching",
+    "subintent_name": "Nói lẫn Việt - Anh",
+    "seed_input": "Tìm cái quán coffee gần chỗ tôi đỗ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q34",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "code_switching",
+    "subintent_name": "Nói lẫn Việt - Anh",
+    "seed_input": "Em có hiểu khi tôi nói lẫn tiếng Anh trong câu không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q35",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "code_switching",
+    "subintent_name": "Nói lẫn Việt - Anh",
+    "seed_input": "Em có hiểu khi tôi nói lẫn tiếng Anh trong câu không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q36",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "noisy_environment",
+    "subintent_name": "Môi trường ồn",
+    "seed_input": "Nhạc đang to mà em vẫn nghe được tôi chứ?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q37",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "noisy_environment",
+    "subintent_name": "Môi trường ồn",
+    "seed_input": "Nhạc đang to mà em vẫn nghe được tôi chứ?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q38",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "noisy_environment",
+    "subintent_name": "Môi trường ồn",
+    "seed_input": "Tôi mở cửa sổ nên ồn, em nghe rõ không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q39",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "noisy_environment",
+    "subintent_name": "Môi trường ồn",
+    "seed_input": "Tôi mở cửa sổ nên ồn, em nghe rõ không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q40",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "noisy_environment",
+    "subintent_name": "Môi trường ồn",
+    "seed_input": "Giảm nhạc xuống rồi nghe tôi nói đây.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q41",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "noisy_environment",
+    "subintent_name": "Môi trường ồn",
+    "seed_input": "Giảm nhạc xuống rồi nghe tôi nói đây.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q42",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "noisy_environment",
+    "subintent_name": "Môi trường ồn",
+    "seed_input": "Sao lúc bật điều hoà số lớn là em không nghe thấy tôi?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q43",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "noisy_environment",
+    "subintent_name": "Môi trường ồn",
+    "seed_input": "Sao lúc bật điều hoà số lớn là em không nghe thấy tôi?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q44",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "noisy_environment",
+    "subintent_name": "Môi trường ồn",
+    "seed_input": "Có cách nào để em nghe rõ hơn khi xe ồn không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q45",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "noisy_environment",
+    "subintent_name": "Môi trường ồn",
+    "seed_input": "Có cách nào để em nghe rõ hơn khi xe ồn không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q46",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "noisy_environment",
+    "subintent_name": "Môi trường ồn",
+    "seed_input": "Trời mưa to gõ mui xe, em có nghe được lệnh của tôi không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q47",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "noisy_environment",
+    "subintent_name": "Môi trường ồn",
+    "seed_input": "Trời mưa to gõ mui xe, em có nghe được lệnh của tôi không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q48",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "spelling_confirmation",
+    "subintent_name": "Đánh vần và đọc lại",
+    "seed_input": "Tên đó đánh vần là T-H-U-Y, nghe kỹ nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q49",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "spelling_confirmation",
+    "subintent_name": "Đánh vần và đọc lại",
+    "seed_input": "Tên đó đánh vần là T-H-U-Y, nghe kỹ nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q50",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "spelling_confirmation",
+    "subintent_name": "Đánh vần và đọc lại",
+    "seed_input": "Đọc lại số điện thoại tôi vừa nói xem đúng chưa.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q51",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "spelling_confirmation",
+    "subintent_name": "Đánh vần và đọc lại",
+    "seed_input": "Đọc lại số điện thoại tôi vừa nói xem đúng chưa.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q52",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "spelling_confirmation",
+    "subintent_name": "Đánh vần và đọc lại",
+    "seed_input": "Nhắc lại địa chỉ tôi vừa đọc, tôi sợ em nghe nhầm số.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q53",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "spelling_confirmation",
+    "subintent_name": "Đánh vần và đọc lại",
+    "seed_input": "Nhắc lại địa chỉ tôi vừa đọc, tôi sợ em nghe nhầm số.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q54",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "spelling_confirmation",
+    "subintent_name": "Đánh vần và đọc lại",
+    "seed_input": "Xác nhận lại giúp tôi số tài khoản tôi vừa đọc.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q55",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "spelling_confirmation",
+    "subintent_name": "Đánh vần và đọc lại",
+    "seed_input": "Xác nhận lại giúp tôi số tài khoản tôi vừa đọc.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q56",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "spelling_confirmation",
+    "subintent_name": "Đánh vần và đọc lại",
+    "seed_input": "Số nhà là mười tám, không phải tám mươi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q57",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "spelling_confirmation",
+    "subintent_name": "Đánh vần và đọc lại",
+    "seed_input": "Số nhà là mười tám, không phải tám mươi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q58",
+    "field": "scenario",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "spelling_confirmation",
+    "subintent_name": "Đánh vần và đọc lại",
+    "seed_input": "Trước khi gọi thì đọc lại tên người tôi vừa nói.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q59",
+    "field": "first_input",
+    "intent_code": "speech_accent_language",
+    "subintent_code": "spelling_confirmation",
+    "subintent_name": "Đánh vần và đọc lại",
+    "seed_input": "Trước khi gọi thì đọc lại tên người tôi vừa nói.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  }
+]

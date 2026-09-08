@@ -1,0 +1,482 @@
+[
+  {
+    "questionId": "q0",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "fatigue_break",
+    "subintent_name": "Nhắc nghỉ khi mệt",
+    "seed_input": "Tôi chạy được ba tiếng rồi, có nên nghỉ không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q1",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "fatigue_break",
+    "subintent_name": "Nhắc nghỉ khi mệt",
+    "seed_input": "Tôi chạy được ba tiếng rồi, có nên nghỉ không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q2",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "fatigue_break",
+    "subintent_name": "Nhắc nghỉ khi mệt",
+    "seed_input": "Thấy tôi buồn ngủ thì nhắc tôi nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q3",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "fatigue_break",
+    "subintent_name": "Nhắc nghỉ khi mệt",
+    "seed_input": "Thấy tôi buồn ngủ thì nhắc tôi nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q4",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "fatigue_break",
+    "subintent_name": "Nhắc nghỉ khi mệt",
+    "seed_input": "Nói chuyện với tôi cho đỡ buồn ngủ đi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q5",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "fatigue_break",
+    "subintent_name": "Nhắc nghỉ khi mệt",
+    "seed_input": "Nói chuyện với tôi cho đỡ buồn ngủ đi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q6",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "fatigue_break",
+    "subintent_name": "Nhắc nghỉ khi mệt",
+    "seed_input": "Cài nhắc nghỉ mỗi hai tiếng cho chuyến đường dài mai.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q7",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "fatigue_break",
+    "subintent_name": "Nhắc nghỉ khi mệt",
+    "seed_input": "Cài nhắc nghỉ mỗi hai tiếng cho chuyến đường dài mai.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q8",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "fatigue_break",
+    "subintent_name": "Nhắc nghỉ khi mệt",
+    "seed_input": "Giọng tôi nghe có mệt không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q9",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "fatigue_break",
+    "subintent_name": "Nhắc nghỉ khi mệt",
+    "seed_input": "Giọng tôi nghe có mệt không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q10",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "fatigue_break",
+    "subintent_name": "Nhắc nghỉ khi mệt",
+    "seed_input": "Tìm chỗ dừng nghỉ gần nhất giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q11",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "fatigue_break",
+    "subintent_name": "Nhắc nghỉ khi mệt",
+    "seed_input": "Tìm chỗ dừng nghỉ gần nhất giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q12",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "road_hazard",
+    "subintent_name": "Cảnh báo đường sá",
+    "seed_input": "Phía trước có đoạn nào ngập không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q13",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "road_hazard",
+    "subintent_name": "Cảnh báo đường sá",
+    "seed_input": "Phía trước có đoạn nào ngập không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q14",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "road_hazard",
+    "subintent_name": "Cảnh báo đường sá",
+    "seed_input": "Đường này có ngõ nhỏ khó quay đầu không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q15",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "road_hazard",
+    "subintent_name": "Cảnh báo đường sá",
+    "seed_input": "Đường này có ngõ nhỏ khó quay đầu không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q16",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "road_hazard",
+    "subintent_name": "Cảnh báo đường sá",
+    "seed_input": "Báo tôi trước khi vào đoạn đường hẹp nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q17",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "road_hazard",
+    "subintent_name": "Cảnh báo đường sá",
+    "seed_input": "Báo tôi trước khi vào đoạn đường hẹp nhé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q18",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "road_hazard",
+    "subintent_name": "Cảnh báo đường sá",
+    "seed_input": "Mai mưa to, kiểm tra tuyến tôi hay đi có ngập không.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q19",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "road_hazard",
+    "subintent_name": "Cảnh báo đường sá",
+    "seed_input": "Mai mưa to, kiểm tra tuyến tôi hay đi có ngập không.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q20",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "road_hazard",
+    "subintent_name": "Cảnh báo đường sá",
+    "seed_input": "Cảnh báo triều cường khu này giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q21",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "road_hazard",
+    "subintent_name": "Cảnh báo đường sá",
+    "seed_input": "Cảnh báo triều cường khu này giúp tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q22",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "road_hazard",
+    "subintent_name": "Cảnh báo đường sá",
+    "seed_input": "Có đoạn nào đang sửa đường trên tuyến này không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q23",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "road_hazard",
+    "subintent_name": "Cảnh báo đường sá",
+    "seed_input": "Có đoạn nào đang sửa đường trên tuyến này không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q24",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "traffic_enforcement",
+    "subintent_name": "Cảnh báo giao thông",
+    "seed_input": "Sắp tới có điểm bắn tốc độ nào không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q25",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "traffic_enforcement",
+    "subintent_name": "Cảnh báo giao thông",
+    "seed_input": "Sắp tới có điểm bắn tốc độ nào không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q26",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "traffic_enforcement",
+    "subintent_name": "Cảnh báo giao thông",
+    "seed_input": "Đoạn này giới hạn bao nhiêu km/h?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q27",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "traffic_enforcement",
+    "subintent_name": "Cảnh báo giao thông",
+    "seed_input": "Đoạn này giới hạn bao nhiêu km/h?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q28",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "traffic_enforcement",
+    "subintent_name": "Cảnh báo giao thông",
+    "seed_input": "Báo tôi sớm hơn khi gần camera phạt nguội.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q29",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "traffic_enforcement",
+    "subintent_name": "Cảnh báo giao thông",
+    "seed_input": "Báo tôi sớm hơn khi gần camera phạt nguội.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q30",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "traffic_enforcement",
+    "subintent_name": "Cảnh báo giao thông",
+    "seed_input": "Tuyến mai đi có nhiều chốt kiểm tra không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q31",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "traffic_enforcement",
+    "subintent_name": "Cảnh báo giao thông",
+    "seed_input": "Tuyến mai đi có nhiều chốt kiểm tra không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q32",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "traffic_enforcement",
+    "subintent_name": "Cảnh báo giao thông",
+    "seed_input": "Nhắc tôi khi vào khu vực hạn chế tốc độ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q33",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "traffic_enforcement",
+    "subintent_name": "Cảnh báo giao thông",
+    "seed_input": "Nhắc tôi khi vào khu vực hạn chế tốc độ.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q34",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "traffic_enforcement",
+    "subintent_name": "Cảnh báo giao thông",
+    "seed_input": "Đường này có cấm ô tô giờ nào không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q35",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "traffic_enforcement",
+    "subintent_name": "Cảnh báo giao thông",
+    "seed_input": "Đường này có cấm ô tô giờ nào không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q36",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "blind_spot_overtake",
+    "subintent_name": "Điểm mù và xin vượt",
+    "seed_input": "Có xe nào đang xin vượt phía sau không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q37",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "blind_spot_overtake",
+    "subintent_name": "Điểm mù và xin vượt",
+    "seed_input": "Có xe nào đang xin vượt phía sau không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q38",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "blind_spot_overtake",
+    "subintent_name": "Điểm mù và xin vượt",
+    "seed_input": "Bên phải tôi có xe trong điểm mù không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q39",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "blind_spot_overtake",
+    "subintent_name": "Điểm mù và xin vượt",
+    "seed_input": "Bên phải tôi có xe trong điểm mù không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q40",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "blind_spot_overtake",
+    "subintent_name": "Điểm mù và xin vượt",
+    "seed_input": "Nhắc tôi khi có xe máy tạt đầu.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q41",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "blind_spot_overtake",
+    "subintent_name": "Điểm mù và xin vượt",
+    "seed_input": "Nhắc tôi khi có xe máy tạt đầu.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q42",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "blind_spot_overtake",
+    "subintent_name": "Điểm mù và xin vượt",
+    "seed_input": "Bật cảnh báo điểm mù cho chuyến đi cao tốc chiều nay.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q43",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "blind_spot_overtake",
+    "subintent_name": "Điểm mù và xin vượt",
+    "seed_input": "Bật cảnh báo điểm mù cho chuyến đi cao tốc chiều nay.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q44",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "blind_spot_overtake",
+    "subintent_name": "Điểm mù và xin vượt",
+    "seed_input": "Sau lưng tôi có xe tải không, tôi định chuyển làn.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q45",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "blind_spot_overtake",
+    "subintent_name": "Điểm mù và xin vượt",
+    "seed_input": "Sau lưng tôi có xe tải không, tôi định chuyển làn.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q46",
+    "field": "scenario",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "blind_spot_overtake",
+    "subintent_name": "Điểm mù và xin vượt",
+    "seed_input": "Cảnh báo sớm hơn khi có xe vượt bên trái.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q47",
+    "field": "first_input",
+    "intent_code": "proactive_safety_alerts",
+    "subintent_code": "blind_spot_overtake",
+    "subintent_name": "Điểm mù và xin vượt",
+    "seed_input": "Cảnh báo sớm hơn khi có xe vượt bên trái.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  }
+]

@@ -1,0 +1,482 @@
+[
+  {
+    "questionId": "q0",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "messaging_apps",
+    "subintent_name": "Ứng dụng nhắn tin",
+    "seed_input": "Đọc tin nhắn Zalo mới cho tôi nghe.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q1",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "messaging_apps",
+    "subintent_name": "Ứng dụng nhắn tin",
+    "seed_input": "Đọc tin nhắn Zalo mới cho tôi nghe.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q2",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "messaging_apps",
+    "subintent_name": "Ứng dụng nhắn tin",
+    "seed_input": "Trả lời Zalo cho anh Hùng là tôi đang lái, lát gọi lại.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q3",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "messaging_apps",
+    "subintent_name": "Ứng dụng nhắn tin",
+    "seed_input": "Trả lời Zalo cho anh Hùng là tôi đang lái, lát gọi lại.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q4",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "messaging_apps",
+    "subintent_name": "Ứng dụng nhắn tin",
+    "seed_input": "Có tin nhắn Telegram nào chưa đọc không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q5",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "messaging_apps",
+    "subintent_name": "Ứng dụng nhắn tin",
+    "seed_input": "Có tin nhắn Telegram nào chưa đọc không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q6",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "messaging_apps",
+    "subintent_name": "Ứng dụng nhắn tin",
+    "seed_input": "Soạn sẵn tin nhắn báo muộn cho nhóm công ty.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q7",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "messaging_apps",
+    "subintent_name": "Ứng dụng nhắn tin",
+    "seed_input": "Soạn sẵn tin nhắn báo muộn cho nhóm công ty.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q8",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "messaging_apps",
+    "subintent_name": "Ứng dụng nhắn tin",
+    "seed_input": "Tóm tắt mấy tin nhắn công việc gửi tới sáng nay.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q9",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "messaging_apps",
+    "subintent_name": "Ứng dụng nhắn tin",
+    "seed_input": "Tóm tắt mấy tin nhắn công việc gửi tới sáng nay.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q10",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "messaging_apps",
+    "subintent_name": "Ứng dụng nhắn tin",
+    "seed_input": "Từ giờ có tin Zalo thì đọc luôn cho tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q11",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "messaging_apps",
+    "subintent_name": "Ứng dụng nhắn tin",
+    "seed_input": "Từ giờ có tin Zalo thì đọc luôn cho tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q12",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "music_service_sync",
+    "subintent_name": "Đồng bộ nhạc",
+    "seed_input": "Mở playlist yêu thích trên Spotify của tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q13",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "music_service_sync",
+    "subintent_name": "Đồng bộ nhạc",
+    "seed_input": "Mở playlist yêu thích trên Spotify của tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q14",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "music_service_sync",
+    "subintent_name": "Đồng bộ nhạc",
+    "seed_input": "Đồng bộ lại nhạc, hôm qua nó bị lỗi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q15",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "music_service_sync",
+    "subintent_name": "Đồng bộ nhạc",
+    "seed_input": "Đồng bộ lại nhạc, hôm qua nó bị lỗi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q16",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "music_service_sync",
+    "subintent_name": "Đồng bộ nhạc",
+    "seed_input": "Phát danh sách tôi lưu trên điện thoại.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q17",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "music_service_sync",
+    "subintent_name": "Đồng bộ nhạc",
+    "seed_input": "Phát danh sách tôi lưu trên điện thoại.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q18",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "music_service_sync",
+    "subintent_name": "Đồng bộ nhạc",
+    "seed_input": "Kết nối tài khoản nhạc của tôi vào xe.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q19",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "music_service_sync",
+    "subintent_name": "Đồng bộ nhạc",
+    "seed_input": "Kết nối tài khoản nhạc của tôi vào xe.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q20",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "music_service_sync",
+    "subintent_name": "Đồng bộ nhạc",
+    "seed_input": "Bài này thêm vào playlist đi làm của tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q21",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "music_service_sync",
+    "subintent_name": "Đồng bộ nhạc",
+    "seed_input": "Bài này thêm vào playlist đi làm của tôi.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q22",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "music_service_sync",
+    "subintent_name": "Đồng bộ nhạc",
+    "seed_input": "Tự mở nhạc tôi hay nghe buổi sáng.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q23",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "music_service_sync",
+    "subintent_name": "Đồng bộ nhạc",
+    "seed_input": "Tự mở nhạc tôi hay nghe buổi sáng.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q24",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "smart_home",
+    "subintent_name": "Nhà thông minh",
+    "seed_input": "Bật điều hoà ở nhà trước khi tôi về.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q25",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "smart_home",
+    "subintent_name": "Nhà thông minh",
+    "seed_input": "Bật điều hoà ở nhà trước khi tôi về.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q26",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "smart_home",
+    "subintent_name": "Nhà thông minh",
+    "seed_input": "Tắt đèn phòng khách giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q27",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "smart_home",
+    "subintent_name": "Nhà thông minh",
+    "seed_input": "Tắt đèn phòng khách giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q28",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "smart_home",
+    "subintent_name": "Nhà thông minh",
+    "seed_input": "Tôi quên khoá cửa nhà, kiểm tra hộ.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q29",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "smart_home",
+    "subintent_name": "Nhà thông minh",
+    "seed_input": "Tôi quên khoá cửa nhà, kiểm tra hộ.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q30",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "smart_home",
+    "subintent_name": "Nhà thông minh",
+    "seed_input": "Hẹn bật bình nóng lạnh lúc tôi sắp về tới.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q31",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "smart_home",
+    "subintent_name": "Nhà thông minh",
+    "seed_input": "Hẹn bật bình nóng lạnh lúc tôi sắp về tới.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q32",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "smart_home",
+    "subintent_name": "Nhà thông minh",
+    "seed_input": "Mở cổng nhà khi tôi còn cách 200 mét.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q33",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "smart_home",
+    "subintent_name": "Nhà thông minh",
+    "seed_input": "Mở cổng nhà khi tôi còn cách 200 mét.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q34",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "smart_home",
+    "subintent_name": "Nhà thông minh",
+    "seed_input": "Nhà có ai đang ở đó không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q35",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "smart_home",
+    "subintent_name": "Nhà thông minh",
+    "seed_input": "Nhà có ai đang ở đó không?",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q36",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "payment",
+    "subintent_name": "Thanh toán",
+    "seed_input": "Thanh toán tiền sạc bằng giọng nói được không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q37",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "payment",
+    "subintent_name": "Thanh toán",
+    "seed_input": "Thanh toán tiền sạc bằng giọng nói được không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q38",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "payment",
+    "subintent_name": "Thanh toán",
+    "seed_input": "Trả phí gửi xe ở bãi này giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q39",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "payment",
+    "subintent_name": "Thanh toán",
+    "seed_input": "Trả phí gửi xe ở bãi này giúp tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q40",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "payment",
+    "subintent_name": "Thanh toán",
+    "seed_input": "Số dư tài khoản thu phí không dừng còn bao nhiêu?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q41",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "payment",
+    "subintent_name": "Thanh toán",
+    "seed_input": "Số dư tài khoản thu phí không dừng còn bao nhiêu?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q42",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "payment",
+    "subintent_name": "Thanh toán",
+    "seed_input": "Nạp thêm tiền vào thẻ ETC.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q43",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "payment",
+    "subintent_name": "Thanh toán",
+    "seed_input": "Nạp thêm tiền vào thẻ ETC.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q44",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "payment",
+    "subintent_name": "Thanh toán",
+    "seed_input": "Chuyến vừa rồi hết bao nhiêu tiền sạc?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q45",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "payment",
+    "subintent_name": "Thanh toán",
+    "seed_input": "Chuyến vừa rồi hết bao nhiêu tiền sạc?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q46",
+    "field": "scenario",
+    "intent_code": "third_party_integration",
+    "subintent_code": "payment",
+    "subintent_name": "Thanh toán",
+    "seed_input": "Tự trả phí cao tốc khi tôi qua trạm.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q47",
+    "field": "first_input",
+    "intent_code": "third_party_integration",
+    "subintent_code": "payment",
+    "subintent_name": "Thanh toán",
+    "seed_input": "Tự trả phí cao tốc khi tôi qua trạm.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  }
+]

@@ -1,0 +1,482 @@
+[
+  {
+    "questionId": "q0",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "recurring_places",
+    "subintent_name": "Nơi hay lui tới",
+    "seed_input": "Dẫn tôi tới chỗ khách quen hôm qua, khỏi đọc lại địa chỉ.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q1",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "recurring_places",
+    "subintent_name": "Nơi hay lui tới",
+    "seed_input": "Dẫn tôi tới chỗ khách quen hôm qua, khỏi đọc lại địa chỉ.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q2",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "recurring_places",
+    "subintent_name": "Nơi hay lui tới",
+    "seed_input": "Nhớ giúp tôi mấy trạm sạc tôi hay ghé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q3",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "recurring_places",
+    "subintent_name": "Nơi hay lui tới",
+    "seed_input": "Nhớ giúp tôi mấy trạm sạc tôi hay ghé.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q4",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "recurring_places",
+    "subintent_name": "Nơi hay lui tới",
+    "seed_input": "Chỗ tôi đỗ mọi hôm ấy, dẫn tới đó.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q5",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "recurring_places",
+    "subintent_name": "Nơi hay lui tới",
+    "seed_input": "Chỗ tôi đỗ mọi hôm ấy, dẫn tới đó.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q6",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "recurring_places",
+    "subintent_name": "Nơi hay lui tới",
+    "seed_input": "Lưu địa chỉ này thành nơi tôi hay tới.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q7",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "recurring_places",
+    "subintent_name": "Nơi hay lui tới",
+    "seed_input": "Lưu địa chỉ này thành nơi tôi hay tới.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q8",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "recurring_places",
+    "subintent_name": "Nơi hay lui tới",
+    "seed_input": "Kể tên những nơi tôi đến nhiều nhất tháng này.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q9",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "recurring_places",
+    "subintent_name": "Nơi hay lui tới",
+    "seed_input": "Kể tên những nơi tôi đến nhiều nhất tháng này.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q10",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "recurring_places",
+    "subintent_name": "Nơi hay lui tới",
+    "seed_input": "Sáng nào tôi cũng qua đây, tự gợi ý cho tôi lần sau nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q11",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "recurring_places",
+    "subintent_name": "Nơi hay lui tới",
+    "seed_input": "Sáng nào tôi cũng qua đây, tự gợi ý cho tôi lần sau nhé.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q12",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "schedule_learning",
+    "subintent_name": "Học lịch của tôi",
+    "seed_input": "Tôi làm ca đêm, đừng áp giờ hành chính lên tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q13",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "schedule_learning",
+    "subintent_name": "Học lịch của tôi",
+    "seed_input": "Tôi làm ca đêm, đừng áp giờ hành chính lên tôi.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q14",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "schedule_learning",
+    "subintent_name": "Học lịch của tôi",
+    "seed_input": "Dựa vào lịch của tôi mà gợi ý giờ khởi hành.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q15",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "schedule_learning",
+    "subintent_name": "Học lịch của tôi",
+    "seed_input": "Dựa vào lịch của tôi mà gợi ý giờ khởi hành.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q16",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "schedule_learning",
+    "subintent_name": "Học lịch của tôi",
+    "seed_input": "Mai tôi có hẹn lúc mấy giờ, đi lúc nào là vừa?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q17",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "schedule_learning",
+    "subintent_name": "Học lịch của tôi",
+    "seed_input": "Mai tôi có hẹn lúc mấy giờ, đi lúc nào là vừa?",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q18",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "schedule_learning",
+    "subintent_name": "Học lịch của tôi",
+    "seed_input": "Học lịch làm việc của tôi rồi nhắc trước khi tôi lên xe.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q19",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "schedule_learning",
+    "subintent_name": "Học lịch của tôi",
+    "seed_input": "Học lịch làm việc của tôi rồi nhắc trước khi tôi lên xe.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q20",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "schedule_learning",
+    "subintent_name": "Học lịch của tôi",
+    "seed_input": "Thứ bảy tôi không đi làm, đừng nhắc tuyến đi làm nữa.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q21",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "schedule_learning",
+    "subintent_name": "Học lịch của tôi",
+    "seed_input": "Thứ bảy tôi không đi làm, đừng nhắc tuyến đi làm nữa.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q22",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "schedule_learning",
+    "subintent_name": "Học lịch của tôi",
+    "seed_input": "Tự tính giúp tôi giờ đi để không bị muộn.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q23",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "schedule_learning",
+    "subintent_name": "Học lịch của tôi",
+    "seed_input": "Tự tính giúp tôi giờ đi để không bị muộn.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q24",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "content_resume",
+    "subintent_name": "Nghe tiếp phần đang dở",
+    "seed_input": "Bật tiếp cái podcast tôi nghe dở hôm qua.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q25",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "content_resume",
+    "subintent_name": "Nghe tiếp phần đang dở",
+    "seed_input": "Bật tiếp cái podcast tôi nghe dở hôm qua.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q26",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "content_resume",
+    "subintent_name": "Nghe tiếp phần đang dở",
+    "seed_input": "Tôi nghe tới đâu rồi, phát tiếp từ đó.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q27",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "content_resume",
+    "subintent_name": "Nghe tiếp phần đang dở",
+    "seed_input": "Tôi nghe tới đâu rồi, phát tiếp từ đó.",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q28",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "content_resume",
+    "subintent_name": "Nghe tiếp phần đang dở",
+    "seed_input": "Nhớ chỗ tôi đang nghe rồi mai mở lại.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q29",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "content_resume",
+    "subintent_name": "Nghe tiếp phần đang dở",
+    "seed_input": "Nhớ chỗ tôi đang nghe rồi mai mở lại.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q30",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "content_resume",
+    "subintent_name": "Nghe tiếp phần đang dở",
+    "seed_input": "Lưu lại vị trí bài đang nghe trước khi tôi xuống xe.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q31",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "content_resume",
+    "subintent_name": "Nghe tiếp phần đang dở",
+    "seed_input": "Lưu lại vị trí bài đang nghe trước khi tôi xuống xe.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q32",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "content_resume",
+    "subintent_name": "Nghe tiếp phần đang dở",
+    "seed_input": "Hôm qua tôi nghe cuốn sách nói nào ấy nhỉ?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q33",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "content_resume",
+    "subintent_name": "Nghe tiếp phần đang dở",
+    "seed_input": "Hôm qua tôi nghe cuốn sách nói nào ấy nhỉ?",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q34",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "content_resume",
+    "subintent_name": "Nghe tiếp phần đang dở",
+    "seed_input": "Tự phát tiếp phần dở khi tôi lên xe.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q35",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "content_resume",
+    "subintent_name": "Nghe tiếp phần đang dở",
+    "seed_input": "Tự phát tiếp phần dở khi tôi lên xe.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q36",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "preference_carryover",
+    "subintent_name": "Mang thiết lập theo người",
+    "seed_input": "Nhận ra tôi qua điện thoại và lấy lại thiết lập cũ.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q37",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "preference_carryover",
+    "subintent_name": "Mang thiết lập theo người",
+    "seed_input": "Nhận ra tôi qua điện thoại và lấy lại thiết lập cũ.",
+    "vehicle_state": "driving",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q38",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "preference_carryover",
+    "subintent_name": "Mang thiết lập theo người",
+    "seed_input": "Tôi đổi xe, mang hết cài đặt cũ sang đây được không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q39",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "preference_carryover",
+    "subintent_name": "Mang thiết lập theo người",
+    "seed_input": "Tôi đổi xe, mang hết cài đặt cũ sang đây được không?",
+    "vehicle_state": "driving",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q40",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "preference_carryover",
+    "subintent_name": "Mang thiết lập theo người",
+    "seed_input": "Lưu hồ sơ của tôi để lần sau khỏi cài lại.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q41",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "preference_carryover",
+    "subintent_name": "Mang thiết lập theo người",
+    "seed_input": "Lưu hồ sơ của tôi để lần sau khỏi cài lại.",
+    "vehicle_state": "driving",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q42",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "preference_carryover",
+    "subintent_name": "Mang thiết lập theo người",
+    "seed_input": "Chuyển thiết lập của tôi sang xe thuê tuần sau.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q43",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "preference_carryover",
+    "subintent_name": "Mang thiết lập theo người",
+    "seed_input": "Chuyển thiết lập của tôi sang xe thuê tuần sau.",
+    "vehicle_state": "parking",
+    "assistant_mode": "quiet"
+  },
+  {
+    "questionId": "q44",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "preference_carryover",
+    "subintent_name": "Mang thiết lập theo người",
+    "seed_input": "Vợ tôi lái thì tự đổi sang hồ sơ của cô ấy.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q45",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "preference_carryover",
+    "subintent_name": "Mang thiết lập theo người",
+    "seed_input": "Vợ tôi lái thì tự đổi sang hồ sơ của cô ấy.",
+    "vehicle_state": "parking",
+    "assistant_mode": "balance"
+  },
+  {
+    "questionId": "q46",
+    "field": "scenario",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "preference_carryover",
+    "subintent_name": "Mang thiết lập theo người",
+    "seed_input": "Nhớ sở thích của tôi rồi lọc địa điểm theo đúng gu.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  },
+  {
+    "questionId": "q47",
+    "field": "first_input",
+    "intent_code": "assistant_memory_personalisation",
+    "subintent_code": "preference_carryover",
+    "subintent_name": "Mang thiết lập theo người",
+    "seed_input": "Nhớ sở thích của tôi rồi lọc địa điểm theo đúng gu.",
+    "vehicle_state": "parking",
+    "assistant_mode": "proactive"
+  }
+]
