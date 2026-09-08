@@ -168,12 +168,21 @@ def build_case_run_artifact(
             if first
             else [],
             "turn_count": len(ordered),
-            # Multi-turn tasks need every turn, not just the anchor turn.
+            "duration_seconds": getattr(first, "duration_seconds", None) if first else None,
+            # Multi-turn tasks need every turn, not just the anchor turn --
+            # including what each turn ran and how long it took. Keeping the
+            # exposure only on the anchor turn meant a six-turn trial reported
+            # the tools of turn one and nothing about the other five.
             "turns": [
                 {
                     "turn_index": getattr(turn, "turn_index", index),
                     "user_message": getattr(turn, "user_message", ""),
                     "assistant_message": getattr(turn, "assistant_message", ""),
+                    "structured_exposure": [
+                        dict(item)
+                        for item in (getattr(turn, "structured_exposure", []) or ())
+                    ],
+                    "duration_seconds": getattr(turn, "duration_seconds", None),
                 }
                 for index, turn in enumerate(ordered)
             ],

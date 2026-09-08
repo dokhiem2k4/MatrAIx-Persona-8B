@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Run one case-bound Vita job end to end, and leave the three data files behind.
+# Run one case-bound Vita job end to end, and leave the run's data files behind.
 #
 # Running the job and exporting it used to be two commands, and the second one
 # was easy to forget -- the results then existed only as 128 folders of JSON
@@ -94,6 +94,11 @@ uv run matraix run -c "${RECIPE}"
 echo "### exporting to ${DATA_DIR}"
 uv run python scripts/export_vita_multiturn_results.py \
     "jobs/${RUN_NAME}" --run-dir "${RUN_NAME}"
+
+# The CSV and JSONL are for machines. This is the copy a person opens: one
+# page, every conversation, filterable. Generated here so it cannot be the
+# step somebody forgets.
+uv run python scripts/build_vita_run_report.py "${DATA_DIR}"
 
 echo "### done"
 ls -la "${DATA_DIR}"

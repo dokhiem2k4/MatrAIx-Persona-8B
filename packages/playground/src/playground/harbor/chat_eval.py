@@ -8,6 +8,7 @@ import os
 import shlex
 import tempfile
 import textwrap
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Callable, Dict, List, Optional
@@ -195,6 +196,7 @@ def _normalize_turn_view(
         "assistantMessage": assistant,
         "userMessage": user_message,
         "structuredExposure": exposure,
+        "durationSeconds": merged.get("durationSeconds"),
     }
 
 
@@ -340,11 +342,22 @@ class HarborSidecarChatSession:
             body[protocol.domain_field] = context_value
         if protocol.context_field:
             body[protocol.context_field] = context_value
+        # Timed here rather than read off the response: an external SUT is under
+        # no obligation to report its own latency, and the number a reviewer
+        # wants is how long the driver waited, which is the round trip measured
+        # from this side.
+        started = time.perf_counter()
         response = await self._request_json(protocol.method, protocol.path, body=body)
+        elapsed = time.perf_counter() - started
         session_id = response.get(protocol.response_session_id_field)
         if session_id:
             self._session_id = str(session_id)
         view = _normalize_turn_view(response, message, self.runtime)
+        # Only when the SUT did not report its own; a deployment that measures
+        # its internal work knows better than this wrapper does.
+        view.setdefault("durationSeconds", None)
+        if view.get("durationSeconds") is None:
+            view["durationSeconds"] = round(elapsed, 3)
         self.turns.append(view)
         return view
 

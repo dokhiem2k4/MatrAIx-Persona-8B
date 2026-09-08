@@ -178,6 +178,90 @@ def _process_notes(case: dict[str, Any], integrity: str, observed_tools: list[st
     return " ".join(bits)
 
 
+def tool_call_report(observation: dict[str, Any]) -> str:
+    """Every tool the vehicle ran, per turn, with what it changed and how long.
+
+    ``observed_tools`` is a list of names, which answers "did it touch the car"
+    and nothing else. A reviewer asking why a route came out 1,500 km long needs
+    the arguments the call actually landed -- and those are in the property
+    changes the deployment reports, not in the name.
+    """
+    turns = [turn for turn in (observation.get("turns") or ()) if isinstance(turn, dict)]
+    if not turns:
+        turns = [{}]
+    # Trials recorded before per-turn exposure existed carry it once, at the top
+    # of the observation, describing the anchor turn. Falling back to it keeps
+    # those runs readable instead of reporting "no tools" for all of them.
+    anchor_exposure = observation.get("structured_exposure") or []
+    lines: list[str] = []
+    for index, turn in enumerate(turns, start=1):
+        exposure = turn.get("structured_exposure")
+        if not exposure and index == 1:
+            exposure = anchor_exposure
+        results = _exposure_value(exposure, TOOL_RESULTS_KEY) or []
+        seconds = turn.get("duration_seconds")
+        timing = " · Vita trả lời sau {:.2f}s".format(seconds) if isinstance(seconds, (int, float)) else ""
+        if not results:
+            lines.append("Lượt {}: không gọi công cụ nào{}".format(index, timing))
+            continue
+        lines.append("Lượt {}: gọi {} công cụ{}".format(index, len(results), timing))
+        for result in results:
+            if not isinstance(result, dict):
+                continue
+            name = str(result.get("tool") or "?")
+            ok = result.get("success")
+            verdict = "chạy được" if ok is True else ("LỖI" if ok is False else "không rõ kết quả")
+            lines.append("  • {} — {}".format(name, verdict))
+            for change in result.get("changes") or ():
+                if not isinstance(change, dict):
+                    continue
+                old = change.get("oldValue")
+                new = change.get("newValue")
+                # Unchanged properties are noise: the deployment reports every
+                # field the tool touched, whether or not it moved.
+                if old == new:
+                    continue
+                lines.append(
+                    "      {}: {} → {}".format(
+                        change.get("property") or "?", _short(old), _short(new)
+                    )
+                )
+    return "\n".join(lines)
+
+
+def _short(value: Any) -> str:
+    text = "(trống)" if value in (None, "") else str(value)
+    return text if len(text) <= 80 else text[:79] + "…"
+
+
+def total_latency_seconds(observation: dict[str, Any]) -> float | None:
+    """Seconds the driver spent waiting on the assistant across the trial."""
+    turns = [turn for turn in (observation.get("turns") or ()) if isinstance(turn, dict)]
+    values = [
+        turn.get("duration_seconds")
+        for turn in turns
+        if isinstance(turn.get("duration_seconds"), (int, float))
+    ]
+    if not values:
+        single = observation.get("duration_seconds")
+        return round(float(single), 3) if isinstance(single, (int, float)) else None
+    return round(float(sum(values)), 3)
+
+
+def slowest_turn_seconds(observation: dict[str, Any]) -> float | None:
+    """The worst single wait. An average hides the one turn that took 30s."""
+    turns = [turn for turn in (observation.get("turns") or ()) if isinstance(turn, dict)]
+    values = [
+        turn.get("duration_seconds")
+        for turn in turns
+        if isinstance(turn.get("duration_seconds"), (int, float))
+    ]
+    if values:
+        return round(float(max(values)), 3)
+    single = observation.get("duration_seconds")
+    return round(float(single), 3) if isinstance(single, (int, float)) else None
+
+
 def conversation_path(observation: dict[str, Any]) -> str:
     """The whole exchange, one line per speaker, nothing truncated.
 
@@ -513,6 +597,27 @@ def build_evaluation_payload(
                 _facet("expected_decision", "Quyết định kỳ vọng", "evidence", "categorical", str(expected.get("decision") or "")),
                 _facet("observed_decision", "Quyết định quan sát", "evidence", "categorical", decision),
                 _facet("observed_tools", "Tool đã chạy", "evidence", "textual", ", ".join(observed_tools)),
+                _facet(
+                    "tool_call_report",
+                    "Chi tiết công cụ đã gọi",
+                    "evidence",
+                    "textual",
+                    tool_call_report(observation),
+                ),
+                _facet(
+                    "response_latency_seconds",
+                    "Tổng thời gian chờ (giây)",
+                    "metric",
+                    "continuous",
+                    total_latency_seconds(observation),
+                ),
+                _facet(
+                    "slowest_turn_seconds",
+                    "Lượt chờ lâu nhất (giây)",
+                    "metric",
+                    "continuous",
+                    slowest_turn_seconds(observation),
+                ),
                 _facet("sut_intent", "Intent SUT nhận", "evidence", "categorical", str(_exposure_value(exposure, "intent") or "")),
                 _facet("turn_count", "Số lượt", "metric", "continuous", int(observation.get("turn_count") or 0)),
             ],

@@ -58,6 +58,96 @@ def lexical_topic_overlap(turns: Any) -> str:
     return "not_carried"
 
 
+TOOL_RESULTS_KEY = "toolResults"
+
+
+def _exposure_value(exposure: Any, key: str) -> Any:
+    for field in exposure or ():
+        if isinstance(field, dict) and str(field.get("key") or "") == key:
+            return field.get("value")
+    return None
+
+
+def _short(value: Any) -> str:
+    text = "(trống)" if value in (None, "") else str(value)
+    return text if len(text) <= 80 else text[:79] + "…"
+
+
+def tool_call_report(observation: dict[str, Any]) -> str:
+    """Every tool the vehicle ran, per turn, with what it changed and how long.
+
+    A list of tool names answers "did it touch the car" and nothing else. The
+    arguments a call actually landed live in the property changes the
+    deployment reports, and those are what a reviewer needs.
+    """
+    turns = [turn for turn in (observation.get("turns") or ()) if isinstance(turn, dict)]
+    if not turns:
+        turns = [{}]
+    # Trials recorded before per-turn exposure existed carry it once, at the top
+    # of the observation, describing the anchor turn. Falling back to it keeps
+    # those runs readable instead of reporting "no tools" for all of them.
+    anchor_exposure = observation.get("structured_exposure") or []
+    lines: list[str] = []
+    for index, turn in enumerate(turns, start=1):
+        exposure = turn.get("structured_exposure")
+        if not exposure and index == 1:
+            exposure = anchor_exposure
+        results = _exposure_value(exposure, TOOL_RESULTS_KEY) or []
+        seconds = turn.get("duration_seconds")
+        timing = " · Vita trả lời sau {:.2f}s".format(seconds) if isinstance(seconds, (int, float)) else ""
+        if not results:
+            lines.append("Lượt {}: không gọi công cụ nào{}".format(index, timing))
+            continue
+        lines.append("Lượt {}: gọi {} công cụ{}".format(index, len(results), timing))
+        for result in results:
+            if not isinstance(result, dict):
+                continue
+            ok = result.get("success")
+            verdict = "chạy được" if ok is True else ("LỖI" if ok is False else "không rõ kết quả")
+            lines.append("  • {} — {}".format(str(result.get("tool") or "?"), verdict))
+            for change in result.get("changes") or ():
+                if not isinstance(change, dict):
+                    continue
+                old, new = change.get("oldValue"), change.get("newValue")
+                # Unchanged properties are noise: the deployment reports every
+                # field the tool touched, whether or not it moved.
+                if old == new:
+                    continue
+                lines.append(
+                    "      {}: {} → {}".format(
+                        change.get("property") or "?", _short(old), _short(new)
+                    )
+                )
+    return "\n".join(lines)
+
+
+def _turn_seconds(observation: dict[str, Any]) -> list[float]:
+    turns = [turn for turn in (observation.get("turns") or ()) if isinstance(turn, dict)]
+    return [
+        float(turn["duration_seconds"])
+        for turn in turns
+        if isinstance(turn.get("duration_seconds"), (int, float))
+    ]
+
+
+def total_latency_seconds(observation: dict[str, Any]) -> float | None:
+    """Seconds the driver spent waiting on the assistant across the trial."""
+    values = _turn_seconds(observation)
+    if values:
+        return round(sum(values), 3)
+    single = observation.get("duration_seconds")
+    return round(float(single), 3) if isinstance(single, (int, float)) else None
+
+
+def slowest_turn_seconds(observation: dict[str, Any]) -> float | None:
+    """The worst single wait. An average hides the one turn that took 30s."""
+    values = _turn_seconds(observation)
+    if values:
+        return round(max(values), 3)
+    single = observation.get("duration_seconds")
+    return round(float(single), 3) if isinstance(single, (int, float)) else None
+
+
 def conversation_path(observation: dict[str, Any]) -> str:
     """The whole exchange, one line per speaker, nothing truncated.
 
@@ -277,6 +367,27 @@ def build_evaluation_payload(
                 # A flagged seed is noisy input, not a model failure: reporting
                 # must be able to separate the two.
                 _facet("seed_quality", "Chất lượng seed", "control", "categorical", str(case.get("seed_quality") or "unknown")),
+                _facet(
+                    "tool_call_report",
+                    "Chi tiết công cụ đã gọi",
+                    "evidence",
+                    "textual",
+                    tool_call_report(observation),
+                ),
+                _facet(
+                    "response_latency_seconds",
+                    "Tổng thời gian chờ (giây)",
+                    "metric",
+                    "continuous",
+                    total_latency_seconds(observation),
+                ),
+                _facet(
+                    "slowest_turn_seconds",
+                    "Lượt chờ lâu nhất (giây)",
+                    "metric",
+                    "continuous",
+                    slowest_turn_seconds(observation),
+                ),
                 _facet("case_id", "Case", "control", "categorical", str(case.get("case_id") or "")),
             ],
         }
