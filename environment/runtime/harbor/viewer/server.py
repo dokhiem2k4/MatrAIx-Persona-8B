@@ -5,6 +5,7 @@ import json
 import math
 import shutil
 from contextlib import asynccontextmanager
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, TypedDict
 from urllib.parse import urlencode, urlparse
@@ -767,11 +768,18 @@ def _register_job_endpoints(app: FastAPI, jobs_dir: Path) -> None:
                     )
                 )
 
-        # Sort by started_at descending (most recent first), jobs without started_at go last
-        summaries.sort(
-            key=lambda s: (s.started_at is not None, s.started_at),
-            reverse=True,
-        )
+        # Sort by started_at descending (most recent first), jobs without started_at go last.
+        # Job results mix naive and tz-aware timestamps, so normalize naive ones to UTC
+        # before comparing.
+        def _sort_key(s: JobSummary) -> tuple[bool, datetime]:
+            started_at = s.started_at
+            if started_at is None:
+                return (False, datetime.min.replace(tzinfo=timezone.utc))
+            if started_at.tzinfo is None:
+                started_at = started_at.replace(tzinfo=timezone.utc)
+            return (True, started_at)
+
+        summaries.sort(key=_sort_key, reverse=True)
         return summaries
 
     @app.get("/api/jobs/filters", response_model=JobFilters)
