@@ -19,8 +19,12 @@ connection:
 protocol:
   sendMessage:
     method: POST
-    path: /api/chat
-    sessionIdField: sessionId
+    # /api/chat was removed on the deployment side (it now answers
+    # "Cannot POST /api/chat"). Their own web app posts to /api/turn, which
+    # returns the same shape: assistantText, metadata.*, vehicle.results.
+    path: /api/turn
+    # Their client sends conversationId, not sessionId.
+    sessionIdField: conversationId
     messageField: message
     titleField: ""
     botTypeField: ""
