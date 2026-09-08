@@ -161,3 +161,11 @@ def test_launcher_removes_the_folder_when_the_run_produced_nothing():
     )
     assert "trap cleanup_empty_run_dir EXIT" in script
     assert "rmdir" in script
+
+
+def test_exporter_has_no_columns_the_feedback_file_never_fills():
+    """needNotes/preferenceNotes do not exist; those columns were always blank."""
+    assert "need_notes" not in COLUMNS
+    assert "preference_notes" not in COLUMNS
+    for key in ("rating_reason", "clarifying_notes", "need_satisfaction"):
+        assert key in COLUMNS

@@ -393,3 +393,49 @@ def test_map_reports_the_three_outcomes_separately():
     assert names == {"set_hvac_temperature"}
     assert missing == ["phone.make_call"]
     assert unknown == ["nope.nope"]
+
+
+from case_scoring import self_report_facets  # noqa: E402
+
+FEEDBACK = {
+    "overallExperienceRating": 7,
+    "needConstraintSatisfaction": "partially",
+    "personalPreferenceSatisfaction": "yes",
+    "askedUsefulClarificationQuestions": False,
+    "reason": "Vita dẫn sai địa điểm ở turn 1, phải nhắc lại mới đúng.",
+    "clarifyingNotes": "Không hỏi lại vị trí hiện tại trước khi dẫn đường.",
+}
+
+
+def test_self_report_carries_the_reasons_not_only_the_score():
+    """The sentences are the part a human reads; a score alone explains nothing."""
+    f = {x["key"]: x["value"] for x in self_report_facets(FEEDBACK)}
+    assert f["overall_experience_rating"] == 7
+    assert "dẫn sai địa điểm" in f["rating_reason"]
+    assert "Không hỏi lại vị trí" in f["clarifying_notes"]
+
+
+def test_self_report_normalises_boolean_answers_to_buckets():
+    f = {x["key"]: x["value"] for x in self_report_facets(FEEDBACK)}
+    assert f["asked_useful_clarification"] == "no"
+    assert f["need_constraint_satisfaction"] == "partially"
+    assert f["personal_preference_satisfaction"] == "yes"
+
+
+def test_self_report_survives_a_missing_rating():
+    f = {x["key"]: x["value"] for x in self_report_facets({"reason": "x"})}
+    assert f["overall_experience_rating"] is None
+    assert f["rating_reason"] == "x"
+
+
+def test_payload_attaches_every_self_report_field():
+    payload = build_evaluation_payload(CASE_RUN_MATCH, FEEDBACK)
+    keys = {x["key"] for c in payload["contexts"] if c["contextType"] == "user_feedback" for x in c["facets"]}
+    assert keys == {
+        "overall_experience_rating",
+        "need_constraint_satisfaction",
+        "personal_preference_satisfaction",
+        "asked_useful_clarification",
+        "rating_reason",
+        "clarifying_notes",
+    }

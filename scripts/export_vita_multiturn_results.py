@@ -50,12 +50,10 @@ COLUMNS = [
     "opening_message",
     "turn_count",
     "need_satisfaction",
-    "need_notes",
     "preference_satisfaction",
-    "preference_notes",
+    "asked_clarification",
     "overall_rating",
     "rating_reason",
-    "asked_clarification",
     "clarifying_notes",
 ]
 
@@ -243,9 +241,7 @@ def collect(job_dir: Path) -> tuple[list[dict[str, Any]], list[str]]:
             "opening_message": opening,
             "turn_count": result.get("turnCount", len(messages) // 2),
             "need_satisfaction": feedback.get("needConstraintSatisfaction", ""),
-            "need_notes": feedback.get("needNotes", ""),
             "preference_satisfaction": feedback.get("personalPreferenceSatisfaction", ""),
-            "preference_notes": feedback.get("preferenceNotes", ""),
             "overall_rating": feedback.get("overallExperienceRating", ""),
             "rating_reason": feedback.get("reason", ""),
             "asked_clarification": feedback.get("askedUsefulClarificationQuestions", ""),
