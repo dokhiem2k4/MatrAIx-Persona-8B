@@ -11,6 +11,7 @@ import { ToneChip } from "./ToneChip";
 
 const DIM_LABEL_KEYS: Record<string, MessageKey> = {
   age_bracket: "cockpitSetup.persona.field.age",
+  vn_locality: "cockpitSetup.persona.field.locality",
   region: "cockpitSetup.persona.field.region",
   domain: "cockpitSetup.persona.field.domain",
   intent: "cockpitSetup.persona.field.intent",
