@@ -1321,6 +1321,11 @@ dimensions:
   vn_locality: Tay Ninh
   years_experience: 11-20
   vn_address_register: anh/em
+  vn_usual_companion: Older children
+  vn_voice_privacy_comfort: Comfortable
+  vn_assistant_task_scope: Everything including vehicle control
+  vn_retry_tolerance: Unbothered
+  att_voice_assistant: Enthusiast
 grounding:
   acad_algebra:
     assignment_type: generated
@@ -6519,6 +6524,31 @@ grounding:
     assignment_type: generated
     source_ref: otofun_2026
     evidence: kinship register for age_bracket=25-34 gender_identity=Man
+    confidence: 0.5
+  vn_usual_companion:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:demo_driver_status
+    confidence: 0.5
+  vn_voice_privacy_comfort:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:skill_driving
+    confidence: 0.5
+  vn_assistant_task_scope:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:cog_patience
+    confidence: 0.5
+  vn_retry_tolerance:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:cog_skepticism
+    confidence: 0.5
+  att_voice_assistant:
+    assignment_type: derived
+    source_ref: vn_driver_survey_2026
+    evidence: derived_from:vn_assistant_task_scope
     confidence: 0.5
 grounding_summary:
   scoreable: 24
