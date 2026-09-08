@@ -259,13 +259,37 @@ const SUMMARY_FACET_KEYS = new Set([
   "need_constraint_satisfaction",
 ]);
 
-// The cards truncate their explanation to this; a shorter one was shown whole,
-// so only a longer one still has something left to say.
-const CARD_PREVIEW_LIMIT = 140;
+// Where each card takes its prose from, and how much of it the card shows.
+// Repeating a facet whose card lost only a clause is not detail; repeating the
+// conversation path, of which the card shows a fifth, is the whole point.
+const CARD_PROSE_LIMITS: Record<string, number> = {
+  outcome_reason: 140,
+  process_notes: 140,
+  feedback_reason: 140,
+  conversation_path: 180,
+};
+// A card is "close enough to complete" until the full text is half again as
+// long as what it showed.
+const WORTH_REPEATING = 1.5;
 
-/** Facets worth showing again, per context. */
-function newFacetsIn(context: TrialEvaluationContext): TrialEvaluationFacet[] {
-  const seenProse = new Set<string>();
+// Above this, a string is a sentence worth checking for repetition. At or
+// below, it is a label and two facets may share one by coincidence.
+const PROSE_MIN_LENGTH = 60;
+
+// Facets that restate one another. The value is the facet that survives: the
+// one a reader can act on without decoding it.
+const SUPERSEDED_BY: Record<string, string> = {
+  decision_match: "decision_correct",
+  tool_call_match: "tool_calls_correct",
+  observed_tools: "tool_call_report",
+};
+
+/** Facets worth showing again, per context. Exported for tests. */
+export function newFacetsIn(
+  context: TrialEvaluationContext,
+  present: ReadonlySet<string>,
+  seenProse: Set<string>,
+): TrialEvaluationFacet[] {
   const kept: TrialEvaluationFacet[] = [];
   for (const facet of context.facets ?? []) {
     if (isBlankFacet(facet.value)) continue;
@@ -275,14 +299,26 @@ function newFacetsIn(context: TrialEvaluationContext): TrialEvaluationFacet[] {
     // and the cohort breakdowns; on this page it is eight rows of codes
     // restating what the process note already says in a sentence.
     if (facet.role === "control") continue;
+    // Two spellings of one verdict: "mismatch" and "no" say the same thing,
+    // and a name list is already inside the call report.
+    const winner = SUPERSEDED_BY[facet.key];
+    if (winner && present.has(winner)) continue;
+
     if (typeof facet.value === "string") {
       const text = facet.value.trim();
-      // A verdict derived from the persona's own words repeats them verbatim:
-      // outcome_reason and feedback_reason are the same paragraph whenever
-      // resolution_basis is user_feedback.
-      const fingerprint = text.slice(0, 120);
-      if (seenProse.has(fingerprint)) continue;
-      if (text.length > CARD_PREVIEW_LIMIT) seenProse.add(fingerprint);
+      const shown = CARD_PROSE_LIMITS[facet.key];
+      if (shown != null && text.length <= shown * WORTH_REPEATING) continue;
+      // Deduplicate prose only. Short values are labels, not paragraphs, and
+      // several of them legitimately read the same: "decision correct: no" and
+      // "tool calls correct: no" are two answers that happen to share a word.
+      if (text.length > PROSE_MIN_LENGTH) {
+        // A verdict derived from the persona's own words repeats them
+        // verbatim: outcome_reason and feedback_reason are the same paragraph
+        // whenever resolution_basis is user_feedback.
+        const fingerprint = text.slice(0, 120);
+        if (seenProse.has(fingerprint)) continue;
+        seenProse.add(fingerprint);
+      }
     }
     kept.push(facet);
   }
@@ -306,8 +342,22 @@ function EvaluationDetail({
   trialEvaluation: TrialEvaluationArtifact | null | undefined;
 }) {
   const { t } = useI18n();
-  const contexts = (trialEvaluation?.contexts ?? [])
-    .map((context) => ({ ...context, facets: newFacetsIn(context) }))
+  const all = trialEvaluation?.contexts ?? [];
+  // Superseding crosses contexts: decision_match sits in the task's own
+  // diagnostic block while the verdict it duplicates sits in task_outcome.
+  const present = new Set(
+    all.flatMap((context) =>
+      (context.facets ?? [])
+        .filter((facet) => !isBlankFacet(facet.value))
+        .map((facet) => facet.key),
+    ),
+  );
+  const seenProse = new Set<string>();
+  const contexts = all
+    .map((context) => ({
+      ...context,
+      facets: newFacetsIn(context, present, seenProse),
+    }))
     .filter((context) => context.facets.length > 0);
   if (contexts.length === 0) return null;
 
