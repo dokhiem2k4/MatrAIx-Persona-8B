@@ -122,6 +122,7 @@ def build_recipe(
     persona_paths: list[str],
     case_ids: list[str],
     task_path: str = DEFAULT_TASK_PATH,
+    concurrency: int = 6,
 ) -> dict[str, Any]:
     from application.scripts.vita_case_jobs import build_case_agent_entries
 
@@ -130,7 +131,7 @@ def build_recipe(
         "jobs_dir": "jobs",
         "n_attempts": 1,
         "timeout_multiplier": 1.0,
-        "n_concurrent_trials": 2,
+        "n_concurrent_trials": concurrency,
         "quiet": False,
         # host, not docker. A chat trial drives an external HTTP SUT and needs
         # no sandbox of its own; inside the docker environment the trial
@@ -147,6 +148,15 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--job-name", required=True)
     parser.add_argument("--task", default=DEFAULT_TASK_PATH, help="task path to run")
+    parser.add_argument(
+        "--concurrency",
+        type=int,
+        default=6,
+        help=(
+            "trials in flight at once. Costs the same either way; it only trades "
+            "wall time for load on the system under test."
+        ),
+    )
     parser.add_argument("--model-name", default=None)
     parser.add_argument("--personas", required=True, nargs="+")
     group = parser.add_mutually_exclusive_group(required=True)
@@ -174,6 +184,7 @@ def main() -> int:
         persona_paths=list(args.personas),
         case_ids=case_ids,
         task_path=args.task,
+        concurrency=args.concurrency,
     )
     RECIPE_DIR.mkdir(parents=True, exist_ok=True)
     path = RECIPE_DIR / "{}.yaml".format(args.job_name)

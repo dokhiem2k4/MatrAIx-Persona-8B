@@ -65,7 +65,7 @@ echo "### generating recipe"
 uv run python application/scripts/generate_vita_case_job.py \
     --job-name "${RUN_NAME}" --task "${TASK_PATH}" "$@"
 
-echo "### running (task ${TASK_SLUG}, model ${MATRIX_PERSONA_MODEL:-<default>})"
+echo "### running (task ${TASK_SLUG}, model ${MATRIX_PERSONA_MODEL:-<default>}, maxTurns ${MATRIX_CHATBOT_MAX_TURNS})"
 uv run matraix run -c "${RECIPE}"
 
 echo "### exporting to ${DATA_DIR}"
