@@ -136,3 +136,43 @@ def test_max_cases_deals_across_error_types_not_head_of_file():
 
 def test_max_cases_larger_than_dataset_returns_everything():
     assert len(load_case_ids(max_cases=10_000)) == 364
+
+
+from application.scripts.generate_vita_case_job import (  # noqa: E402
+    case_stratum,
+    strata_field,
+)
+
+MULTITURN = "application/tasks/chat_0709-vita-drive-multiturn-coverage"
+MODE_AB = "application/tasks/chat_0709-vita-drive-singleturn-mode-ab"
+
+
+def test_each_task_spreads_a_capped_sample_across_its_own_axis():
+    """The multi-turn set has no error_type; spreading by it would be a no-op."""
+    assert strata_field("application/tasks/chat_0709-vita-drive-golden-error-recovery") == "error_type"
+    assert strata_field(MULTITURN) == "parent_intent_code"
+    assert strata_field(MODE_AB) == "assistant_profile_id"
+
+
+def test_stratum_is_read_from_state_when_it_lives_there():
+    assert case_stratum({"state": {"assistant_profile_id": "cheeky"}}, "assistant_profile_id") == "cheeky"
+    assert case_stratum({"error_type": "no_internet"}, "error_type") == "no_internet"
+
+
+def test_multiturn_half_run_still_touches_every_parent_intent():
+    import json
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[3]
+    with (root / MULTITURN / "input/cases.jsonl").open(encoding="utf-8") as handle:
+        parent = {json.loads(l)["case_id"]: json.loads(l)["parent_intent_code"] for l in handle if l.strip()}
+
+    picked = load_case_ids(task_path=MULTITURN, max_cases=23)
+    assert len(picked) == 23
+    assert len({parent[c] for c in picked}) == len(set(parent.values()))
+
+
+def test_recipe_points_at_the_task_it_was_asked_for():
+    r = build_recipe(job_name="j", model_name="m", persona_paths=["p.yaml"],
+                     case_ids=["vm_0001"], task_path=MULTITURN)
+    assert r["tasks"] == [{"path": MULTITURN}]

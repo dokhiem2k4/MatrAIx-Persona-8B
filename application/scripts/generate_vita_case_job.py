@@ -52,12 +52,37 @@ def resolve_model_name(explicit: str | None, env: Mapping[str, str]) -> str:
             "(application/playground/.env.local)"
         )
     return value
-TASK_PATH = "application/tasks/chat_0709-vita-drive-golden-error-recovery"
+DEFAULT_TASK_PATH = "application/tasks/chat_0709-vita-drive-golden-error-recovery"
+
+# Which field to spread a capped sample across, per task. The golden set is
+# organised by failure mode; the multi-turn set has one case per subintent and
+# no error_type at all, so spreading it by parent intent is the only way a
+# half-size run still touches every area of the product.
+STRATA_FIELD_BY_TASK = {
+    "chat_0709-vita-drive-golden-error-recovery": "error_type",
+    "chat_0709-vita-drive-multiturn-coverage": "parent_intent_code",
+    "chat_0709-vita-drive-singleturn-mode-ab": "assistant_profile_id",
+}
+
+
+def strata_field(task_path: str) -> str:
+    """Field a capped sample is dealt across for this task."""
+    return STRATA_FIELD_BY_TASK.get(task_path.rstrip("/").rsplit("/", 1)[-1], "error_type")
+
+
+def case_stratum(case: dict[str, Any], field: str) -> str:
+    """Read the stratum value, looking inside ``state`` when it lives there."""
+    if field in case:
+        return str(case[field])
+    return str((case.get("state") or {}).get(field, ""))
 RECIPE_DIR = REPO_ROOT / "configs/jobs/application-task-job-recipe"
 
 
 def load_case_ids(
-    *, per_error_type: int | None = None, max_cases: int | None = None
+    *,
+    task_path: str = DEFAULT_TASK_PATH,
+    per_error_type: int | None = None,
+    max_cases: int | None = None,
 ) -> list[str]:
     """Return case ids, sampled so every error type stays represented.
 
@@ -66,15 +91,16 @@ def load_case_ids(
     only two or three of the ten error types and the run would answer nothing
     about the rest.
     """
-    path = REPO_ROOT / TASK_PATH / "input" / "cases.jsonl"
+    path = REPO_ROOT / task_path / "input" / "cases.jsonl"
     cases = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
     if per_error_type is None and max_cases is None:
         return [case["case_id"] for case in cases]
 
-    by_error_type: dict[str, list[str]] = collections.defaultdict(list)
+    field = strata_field(task_path)
+    by_stratum: dict[str, list[str]] = collections.defaultdict(list)
     for case in cases:
-        by_error_type[case["error_type"]].append(case["case_id"])
-    buckets = [sorted(ids) for _, ids in sorted(by_error_type.items())]
+        by_stratum[case_stratum(case, field)].append(case["case_id"])
+    buckets = [sorted(ids) for _, ids in sorted(by_stratum.items())]
 
     if per_error_type is not None:
         return list(itertools.chain.from_iterable(b[:per_error_type] for b in buckets))
@@ -90,7 +116,12 @@ def load_case_ids(
 
 
 def build_recipe(
-    *, job_name: str, model_name: str, persona_paths: list[str], case_ids: list[str]
+    *,
+    job_name: str,
+    model_name: str,
+    persona_paths: list[str],
+    case_ids: list[str],
+    task_path: str = DEFAULT_TASK_PATH,
 ) -> dict[str, Any]:
     from application.scripts.vita_case_jobs import build_case_agent_entries
 
@@ -108,13 +139,14 @@ def build_recipe(
         # Playground backend emits for the user_sim_chat trial profile.
         "environment": {"type": "host", "delete": True},
         "agents": build_case_agent_entries(persona_paths, case_ids, model_name),
-        "tasks": [{"path": TASK_PATH}],
+        "tasks": [{"path": task_path}],
     }
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--job-name", required=True)
+    parser.add_argument("--task", default=DEFAULT_TASK_PATH, help="task path to run")
     parser.add_argument("--model-name", default=None)
     parser.add_argument("--personas", required=True, nargs="+")
     group = parser.add_mutually_exclusive_group(required=True)
@@ -128,6 +160,7 @@ def main() -> int:
     model_name = resolve_model_name(args.model_name, os.environ)
 
     case_ids = load_case_ids(
+        task_path=args.task,
         per_error_type=None if (args.all_cases or args.max_cases) else args.smoke_per_error_type,
         max_cases=args.max_cases,
     )
@@ -140,6 +173,7 @@ def main() -> int:
         model_name=model_name,
         persona_paths=list(args.personas),
         case_ids=case_ids,
+        task_path=args.task,
     )
     RECIPE_DIR.mkdir(parents=True, exist_ok=True)
     path = RECIPE_DIR / "{}.yaml".format(args.job_name)
@@ -148,7 +182,7 @@ def main() -> int:
         "# Task: {}\n"
         "# Trial = 1 persona x 1 case | personas={} cases={} trials={}\n"
         "# Persona model: {}\n\n".format(
-            TASK_PATH,
+            args.task,
             len(args.personas),
             len(case_ids),
             len(recipe["agents"]),

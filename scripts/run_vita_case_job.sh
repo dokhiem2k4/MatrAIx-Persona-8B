@@ -53,13 +53,17 @@ export PYTHONPATH=".:environment/runtime:packages/playground/src:application/pla
 export MATRIX_CHATBOT_TASK_PATH="${TASK_PATH}"
 export MATRIX_CHATBOT_APPLICATION_ID="${MATRIX_CHATBOT_APPLICATION_ID:-vita_drive_assistant}"
 export MATRIX_CHATBOT_DOMAIN="${MATRIX_CHATBOT_DOMAIN:-automotive_ai}"
-export MATRIX_CHATBOT_MAX_TURNS="${MATRIX_CHATBOT_MAX_TURNS:-2}"
+# Read the turn budget from the task instead of defaulting: a 6-turn task run
+# with maxTurns=2 would cut every conversation short and the coverage numbers
+# would look like the assistant gave up.
+TASK_MAX_TURNS="$(sed -n 's/^  maxTurns: *//p' "${TASK_PATH}/input/chatbot.yaml" | head -1)"
+export MATRIX_CHATBOT_MAX_TURNS="${MATRIX_CHATBOT_MAX_TURNS:-${TASK_MAX_TURNS:-2}}"
 
 RECIPE="configs/jobs/application-task-job-recipe/${RUN_NAME}.yaml"
 
 echo "### generating recipe"
 uv run python application/scripts/generate_vita_case_job.py \
-    --job-name "${RUN_NAME}" "$@"
+    --job-name "${RUN_NAME}" --task "${TASK_PATH}" "$@"
 
 echo "### running (task ${TASK_SLUG}, model ${MATRIX_PERSONA_MODEL:-<default>})"
 uv run matraix run -c "${RECIPE}"
