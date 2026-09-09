@@ -1,0 +1,24 @@
+version = "1.0"
+artifacts = [ "/app/output",]
+
+[task]
+name = "application/0909-vita-discovery-ces"
+
+[metadata]
+difficulty = "medium"
+type = "chatbot"
+domain = "automotive-ai"
+tags = [ "in-cabin assistant", "discovery research", "CES", "capability coverage", "multi turn",]
+
+[verifier]
+timeout_sec = 300.0
+
+[agent]
+timeout_sec = 900.0
+
+[environment]
+definition = "application/shared-chat-persona"
+cpus = 1
+memory_mb = 2048
+storage_mb = 10240
+gpus = 0

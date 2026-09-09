@@ -82,6 +82,9 @@ STRATA_FIELD_BY_TASK = {
     "chat_0709-vita-drive-golden-error-recovery": "error_type",
     "chat_0709-vita-drive-multiturn-coverage": "parent_intent_code",
     "chat_0709-vita-drive-singleturn-mode-ab": "assistant_profile_id",
+    # The discovery guide's own axis: eight capability groups, and a capped run
+    # that missed one of them would leave a whole area of the product untested.
+    "chat_0909-vita-discovery-ces": "capability_number",
 }
 
 

@@ -1,0 +1,67 @@
+artifactName: user_feedback.json
+instructions: |
+  Bạn vừa thử một tình huống với trợ lý Vita trên xe. Hãy chấm bốn nhận định
+  dưới đây theo đúng cảm nhận của mình, thang 1 (rất không đồng ý) đến 7 (rất
+  đồng ý).
+
+  Bốn câu này là bộ đo CES lấy nguyên văn từ tài liệu nghiên cứu, không đổi
+  chữ nào. Chấm như một người lái xe thật, không phải như người chấm điểm sản
+  phẩm: nếu thấy bình thường thì cho điểm giữa, đừng nới tay cũng đừng khắt khe.
+
+  QUAN TRỌNG — bạn chỉ NGHE Vita, không nhìn màn hình. Với câu CES-3, hãy chấm
+  dựa trên những gì nghe được: câu trả lời dài hay ngắn, có bắt bạn phải nhớ
+  nhiều thứ cùng lúc không, có hợp với lúc đang lái không.
+
+  VIẾT TOÀN BỘ PHẦN TỰ LUẬN BẰNG TIẾNG VIỆT, và luôn dẫn lượt cụ thể
+  ("ở lượt 2 Vita ..."). Nhận xét chung chung thì không sửa được gì.
+
+fields:
+  - key: ces1Effort
+    prompt: Vita giúp tôi xử lý việc này một cách dễ dàng.
+    kind: integer
+    minimum: 1
+    maximum: 7
+    explanation:
+      key: ces1Reason
+      prompt: >-
+        Vì sao đúng số điểm đó? Nếu bạn chấm từ 4 trở xuống, nói rõ điều gì
+        khiến bạn thấy khó, dẫn lượt cụ thể.
+  - key: ces2Information
+    prompt: Thông tin Vita đưa ra đủ để tôi ra quyết định.
+    kind: integer
+    minimum: 1
+    maximum: 7
+    explanation:
+      key: ces2Reason
+      prompt: >-
+        Thiếu hoặc thừa thông tin gì? Nếu chấm từ 4 trở xuống, nói rõ bạn còn
+        cần biết thêm điều gì mới quyết định được.
+  - key: ces3Presentation
+    prompt: Cách Vita hiển thị trên màn hình lúc đó phù hợp với việc tôi đang lái xe.
+    kind: integer
+    minimum: 1
+    maximum: 7
+    explanation:
+      key: ces3Reason
+      prompt: >-
+        Bạn chỉ nghe được, không nhìn màn hình — hãy chấm theo phần nghe và nói
+        rõ vì sao. Nếu chấm từ 4 trở xuống, chỉ ra chỗ khiến bạn khó theo kịp.
+  - key: ces4Attention
+    prompt: Trong lúc đó tôi vẫn tập trung lái xe được bình thường.
+    kind: integer
+    minimum: 1
+    maximum: 7
+    explanation:
+      key: ces4Reason
+      prompt: >-
+        Đây là câu về an toàn. Nếu chấm từ 4 trở xuống, bắt buộc nói rõ điều gì
+        làm bạn phân tâm và ở lượt nào.
+  - key: taskCompleted
+    prompt: Cuối cùng bạn có làm xong việc mình định làm không?
+    kind: enum
+    choices: [yes, partially, no]
+    explanation:
+      key: taskCompletedNotes
+      prompt: >-
+        Nếu trả lời "partially", nói rõ phần nào xong và phần nào chưa. Dẫn lượt
+        cụ thể.
