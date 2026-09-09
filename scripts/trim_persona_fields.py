@@ -41,10 +41,15 @@ from __future__ import annotations
 import argparse
 import collections
 import shutil
+import sys
 from pathlib import Path
 from typing import Any
 
 import yaml
+
+SCRIPTS_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPTS_DIR))
+from persona_tiers import persona_paths  # noqa: E402
 
 #: Who belongs in the pool. These pick the 42; they barely steer an answer.
 SAMPLING = (
@@ -149,7 +154,7 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
-    paths = sorted(args.pool.glob("persona_*.yaml"))
+    paths = persona_paths(args.pool)
     if not paths:
         print("no persona_*.yaml under {}".format(args.pool))
         return 1

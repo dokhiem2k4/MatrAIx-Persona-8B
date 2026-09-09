@@ -37,6 +37,10 @@ from typing import Any, Callable
 
 import yaml
 
+SCRIPTS_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPTS_DIR))
+from persona_tiers import persona_paths  # noqa: E402
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 #: ``grounding`` assignment types meaning "a person answered this".
@@ -89,6 +93,21 @@ RULES = [
 ]
 
 
+#: Pairs where both sides are measured, so neither can overrule the other.
+#: These are reported and never repaired: a contradiction between two answers
+#: the same person gave is a fact about the instrument, not a bad draw, and
+#: silently picking a winner would hide the thing worth fixing. Found because a
+#: reviewer noticed a daily driver whose main transport was a bicycle.
+MEASURED_CONFLICTS = [
+    (
+        "demo_driver_status",
+        "lstyle_commute_mode",
+        lambda a, d: a == "Daily driver" and d in {"Bike", "Walk", "Public transit"},
+        "drives daily yet names a non-car mode as their main daily transport",
+    ),
+]
+
+
 def provenance(grounding: dict[str, Any], key: str) -> str:
     entry = grounding.get(key)
     if not isinstance(entry, dict):
@@ -138,7 +157,7 @@ def main() -> int:
     parser.add_argument("--out", type=Path, help="destination pool for --fix")
     args = parser.parse_args()
 
-    files = sorted(args.pool.glob("persona_*.yaml"))
+    files = persona_paths(args.pool)
     if not files:
         print("no persona_*.yaml under {}".format(args.pool))
         return 1
@@ -150,8 +169,20 @@ def main() -> int:
     affected = 0
     repaired_docs: list[tuple[Path, dict[str, Any]]] = []
 
+    measured_clashes: list[tuple[str, str, Any, str, Any, str]] = []
     for path in files:
         persona = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        dims_now = persona.get("dimensions") or {}
+        ground_now = persona.get("grounding") or {}
+        for left, right, clash, why in MEASURED_CONFLICTS:
+            if provenance(ground_now, left) not in OBSERVED:
+                continue
+            if provenance(ground_now, right) not in OBSERVED:
+                continue
+            if clash(dims_now.get(left), dims_now.get(right)):
+                measured_clashes.append(
+                    (path.stem, left, dims_now.get(left), right, dims_now.get(right), why)
+                )
         findings = findings_for(persona)
         if findings:
             affected += 1
@@ -163,6 +194,17 @@ def main() -> int:
         if args.fix:
             repair(persona, findings)
             repaired_docs.append((path, persona))
+
+    if measured_clashes:
+        print("\nBOTH SIDES MEASURED -- reported, not repaired ({} personas):".format(
+            len(measured_clashes)))
+        tallied: collections.Counter = collections.Counter()
+        for _, left, left_value, right, right_value, why in measured_clashes:
+            tallied["{} = {!r}  vs  {} = {!r}   ({})".format(
+                left, left_value, right, right_value, why)] += 1
+        for line, count in tallied.most_common():
+            print("   {:3d}  {}".format(count, line))
+        print("   Neither value can overrule the other. Fix the questionnaire, not the pool.")
 
     print("\n{}/{} personas carry at least one contradiction".format(affected, len(files)))
     for name, count in tally.most_common():

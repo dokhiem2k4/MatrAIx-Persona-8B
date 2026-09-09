@@ -28,6 +28,10 @@ from typing import Any
 
 import yaml
 
+SCRIPTS_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPTS_DIR))
+from persona_tiers import persona_paths  # noqa: E402
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 if str(REPO_ROOT / "src") not in sys.path:
     sys.path.insert(0, str(REPO_ROOT / "src"))
@@ -80,7 +84,7 @@ def build_persona_index(repo_root: Path, pool: str | None = None) -> dict[str, s
     if not root.is_dir():
         raise PersonaLookupError("persona pool not found: {}".format(root))
     index: dict[str, str] = {}
-    for path in sorted(root.rglob("persona_*.yaml")):
+    for path in persona_paths(root, recursive=True):
         persona_id = path.stem[len("persona_") :]
         index.setdefault(persona_id, str(path.relative_to(repo_root)))
     return index

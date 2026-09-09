@@ -32,6 +32,10 @@ from pathlib import Path
 
 import yaml
 
+SCRIPTS_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPTS_DIR))
+from persona_tiers import persona_paths  # noqa: E402
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
@@ -64,7 +68,7 @@ def main() -> int:
     )
     print("  {} nodes".format(len(sampler.nodes)), flush=True)
 
-    files = sorted(args.dataset.glob("persona_*.yaml"))
+    files = persona_paths(args.dataset)
     if not files:
         raise SystemExit("no persona_*.yaml under {}".format(args.dataset))
 

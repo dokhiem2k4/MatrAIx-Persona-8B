@@ -48,6 +48,10 @@ from typing import Any
 
 import yaml
 
+SCRIPTS_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPTS_DIR))
+from persona_tiers import persona_paths  # noqa: E402
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 if str(REPO_ROOT / "src") not in sys.path:
     sys.path.insert(0, str(REPO_ROOT / "src"))
@@ -108,7 +112,7 @@ def entropy(counter: collections.Counter) -> float:
 
 def load_pool(pool_dir: Path) -> list[tuple[str, dict[str, Any]]]:
     out = []
-    for path in sorted(pool_dir.glob("persona_*.yaml")):
+    for path in persona_paths(pool_dir):
         data = yaml.safe_load(path.read_text(encoding="utf-8"))
         if isinstance(data, dict) and isinstance(data.get("dimensions"), dict):
             out.append((path.name, data))
@@ -276,7 +280,13 @@ def main() -> int:
             "  " + " ".join("--persona={}".format(p) for p in manifest["personas"]) + " \\",
             "  --persona-pool {} \\".format(pool_arg),
             "  --out-dir configs/jobs/{}-{} \\".format(args.job_prefix, tag),
-            "  --job-prefix {}-{}".format(args.job_prefix, tag),
+            # The continuation backslash has to live on --job-prefix whenever a
+            # skip list follows it. Without it the command ended there and the
+            # skip line ran as its own (failing) command, so every arm quietly
+            # generated all sixteen intents instead of the two asked for -- an
+            # eightfold cost increase that the script still reported as success.
+            "  --job-prefix {}-{}{}".format(
+                args.job_prefix, tag, " \\" if skips else ""),
             *(["  " + " ".join("--skip-intent={}".format(s) for s in skips)] if skips else []),
             "for cfg in configs/jobs/{}-{}/*.yaml; do".format(args.job_prefix, tag),
             '  intent=$(basename "$cfg" .yaml | sed "s/^{}-{}-//")'.format(args.job_prefix, tag),

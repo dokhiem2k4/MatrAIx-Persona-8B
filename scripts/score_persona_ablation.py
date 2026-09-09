@@ -38,7 +38,13 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-KEY = ("persona_id", "intent_code", "subintent_code")
+# seed_input belongs in the key: a subintent carries six seeds, so keying on
+# the subintent alone collapsed six rows into one and silently discarded 83% of
+# every arm. Fifteen paired cells left the noise floor itself unstable -- two
+# runs of the identical base configuration measured it at 0.235 and 0.467 --
+# which is enough to flip a verdict on its own. With the seed included the same
+# CSVs give ninety cells at no extra cost.
+KEY = ("persona_id", "intent_code", "subintent_code", "seed_input")
 FIELD = "first_input"
 
 

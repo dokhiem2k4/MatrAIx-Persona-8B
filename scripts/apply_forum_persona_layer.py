@@ -32,9 +32,14 @@ import argparse
 import collections
 import json
 import shutil
+import sys
 from pathlib import Path
 
 import yaml
+
+SCRIPTS_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPTS_DIR))
+from persona_tiers import persona_paths  # noqa: E402
 
 SOURCE_REF = "otofun_2026"
 
@@ -83,7 +88,7 @@ def main() -> int:
     positioning = stats["self_positioning"]
     verbosity_dist = stats["cog_verbosity"]
 
-    paths = sorted(args.pool.glob("persona_*.yaml"))
+    paths = persona_paths(args.pool)
     personas = [(p, yaml.safe_load(p.read_text(encoding="utf-8"))) for p in paths]
     n = len(personas)
 
