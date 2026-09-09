@@ -85,9 +85,6 @@ STRATA_FIELD_BY_TASK = {
     # The discovery guide's own axis: eight capability groups, and a capped run
     # that missed one of them would leave a whole area of the product untested.
     "chat_0909-vita-discovery-ces": "capability_number",
-    # Four ways of meeting the assistant for the first time. A capped run that
-    # dropped one would measure the brand through fewer kinds of encounter.
-    "chat_0909-vita-brand-recognition": "encounter_code",
 }
 
 

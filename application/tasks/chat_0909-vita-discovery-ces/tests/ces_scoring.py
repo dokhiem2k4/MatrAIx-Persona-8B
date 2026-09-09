@@ -23,6 +23,7 @@ assistant instead.
 from __future__ import annotations
 
 import re
+import unicodedata
 from typing import Any
 
 TOOL_RESULTS_KEY = "toolResults"
@@ -193,6 +194,66 @@ def _completion(feedback: dict[str, Any]) -> str:
     return text if text in COMPLETION_MEANING else "unknown"
 
 
+# ---------------------------------------------------------------- brand
+
+# Section 3 of the guide -- what the driver took away about the assistant
+# itself -- asked at the end of each scenario rather than at the end of a whole
+# session. The guide shows a brand message and an avatar first; there is
+# neither here, so `impression_basis` records that the impression came from the
+# conversation alone.
+#
+# Asking it per scenario buys something the session format cannot give: the
+# same three questions after a route that went wrong and after one that went
+# smoothly, so the answers can be compared across capabilities.
+
+# Each axis is a set of stems a Vietnamese driver plausibly uses for it. Kept
+# small and specific: a broad list would match everything and measure nothing.
+BRAND_AXES: dict[str, tuple[str, tuple[str, ...]]] = {
+    "hieu_y": (
+        "Hiểu ý",
+        ("hieu y", "hieu duoc y", "nam duoc y", "hieu minh", "hieu nhanh",
+         "doan duoc", "biet minh muon", "hieu dung", "tinh y", "nhay"),
+    ),
+    "duoc_viec": (
+        "Được việc",
+        ("duoc viec", "lam duoc", "xong viec", "giai quyet", "huu ich", "tien loi",
+         "nhanh gon", "hieu qua", "gon le", "dut khoat", "tien ich"),
+    ),
+    "dung_muc": (
+        "Đúng mực",
+        ("dung muc", "lich su", "te nhi", "tinh te", "ton trong", "chung muc",
+         "diem dam", "nha nhan", "khong lam dung", "an toan", "than thien vua"),
+    ),
+}
+
+# What the guide wants a respondent to notice: that this is a daily-life
+# assistant, "không chỉ là trợ lý điều khiển xe bằng giọng nói".
+BROADER_SCOPE = "broader_daily_assistant"
+
+
+def _fold(text: str) -> str:
+    """Lowercase, strip diacritics, squeeze spaces -- for lexical matching only."""
+    stripped = unicodedata.normalize("NFD", (text or "").lower())
+    stripped = "".join(ch for ch in stripped if unicodedata.category(ch) != "Mn")
+    stripped = stripped.replace("đ", "d")
+    return re.sub(r"\s+", " ", stripped).strip()
+
+
+def axes_detected(*texts: str) -> list[str]:
+    """Which of the three brand axes the driver's own words touch."""
+    folded = " ".join(_fold(t) for t in texts)
+    return [
+        axis
+        for axis, (_label, stems) in BRAND_AXES.items()
+        if any(stem in folded for stem in stems)
+    ]
+
+
+def three_words(raw: str) -> list[str]:
+    """The three words the driver chose, however they punctuated them."""
+    parts = [p.strip(" .;–-") for p in re.split(r"[,;/]|\bvà\b", raw or "")]
+    return [p for p in parts if p][:3]
+
 def _facet(key: str, label: str, role: str, kind: str, value: Any) -> dict[str, Any]:
     return {"key": key, "label": label, "role": role, "kind": kind, "value": value}
 
@@ -307,6 +368,13 @@ def build_evaluation_payload(
     safety = safety_flag(feedback)
     low = low_scored_statements(scores)
 
+    role = str(feedback.get("assistantRole") or "").strip()
+    words_raw = str(feedback.get("threeWords") or "").strip()
+    words = three_words(words_raw)
+    scope = str(feedback.get("moreThanCarControl") or "unclear").strip()
+    trust = str(feedback.get("wouldTrust") or "unknown").strip()
+    axes = axes_detected(words_raw, role)
+
     # The assistant is graded on whether the driver got their task done and
     # whether it was safe to use, not on whether the persona spoke well.
     if completion == "no":
@@ -406,6 +474,40 @@ def build_evaluation_payload(
         },
     ]
 
+    if role or words or scope != "unclear":
+        contexts.append(
+            {
+                "key": "brand_recognition.primary",
+                "label": "Brand recognition",
+                "contextType": "brand_recognition",
+                "facets": [
+                    _facet(
+                        "scope_perceived",
+                        "Vita là loại trợ lý gì",
+                        "primary",
+                        "categorical",
+                        scope,
+                    ),
+                    _facet("brand_axes_hit", "Số trục thương hiệu chạm được", "metric", "continuous", len(axes)),
+                    _facet(
+                        "brand_axes",
+                        "Trục nào chạm được",
+                        "evidence",
+                        "textual",
+                        ", ".join(BRAND_AXES[a][0] for a in axes),
+                    ),
+                    # Lexical match only, and no poster was shown. Both are
+                    # recorded so a reader never mistakes this for the guide's
+                    # own measurement.
+                    _facet("brand_axis_basis", "Cách đối chiếu trục", "control", "categorical", "lexical_proxy"),
+                    _facet("impression_basis", "Cơ sở ấn tượng", "control", "categorical", "conversation_only"),
+                    _facet("three_words", "Ba từ mô tả Vita", "evidence", "textual", ", ".join(words)),
+                    _facet("would_trust", "Còn tin giao việc nữa không", "evidence", "categorical", trust),
+                    _facet("role_stated", "Vita là gì (nguyên văn)", "explanation", "textual", role),
+                ],
+            }
+        )
+
     if feedback:
         contexts.append(
             {
@@ -420,6 +522,8 @@ def build_evaluation_payload(
                     _facet("ces3_notes", "Vì sao chấm CES-3", "explanation", "textual", str(feedback.get("ces3Reason") or "")),
                     _facet("clarifying_notes", "Vì sao chấm CES-4 (an toàn)", "explanation", "textual", str(feedback.get("ces4Reason") or "")),
                     _facet("task_completed_notes", "Việc xong tới đâu", "explanation", "textual", str(feedback.get("taskCompletedNotes") or "")),
+                    _facet("three_words_notes", "Vì sao ba từ đó", "explanation", "textual", str(feedback.get("threeWordsReason") or "")),
+                    _facet("trust_notes", "Vì sao còn tin / hết tin", "explanation", "textual", str(feedback.get("wouldTrustReason") or "")),
                 ],
             }
         )

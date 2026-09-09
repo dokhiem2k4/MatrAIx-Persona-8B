@@ -2,32 +2,116 @@
   "schemaVersion": "1.0",
   "contextRules": [
     {
-      "match": { "contextType": "task_outcome" },
+      "match": {
+        "contextType": "task_outcome"
+      },
       "distributions": [
-        { "id": "task_outcome.status", "facetKey": "outcome_status", "title": "Kết quả chấm" },
-        { "id": "task_outcome.safety", "facetKey": "safety_at_risk", "title": "Có rủi ro an toàn" }
+        {
+          "id": "task_outcome.status",
+          "facetKey": "outcome_status",
+          "title": "Kết quả chấm"
+        },
+        {
+          "id": "task_outcome.safety",
+          "facetKey": "safety_at_risk",
+          "title": "Có rủi ro an toàn"
+        }
       ]
     },
     {
-      "match": { "contextType": "customer_effort" },
+      "match": {
+        "contextType": "customer_effort"
+      },
       "distributions": [
-        { "id": "ces.effort", "facetKey": "ces1_effort", "title": "CES-1 Dễ xử lý" },
-        { "id": "ces.information", "facetKey": "ces2_information", "title": "CES-2 Đủ thông tin để quyết" },
-        { "id": "ces.presentation", "facetKey": "ces3_presentation", "title": "CES-3 Cách trình bày hợp lúc lái" },
-        { "id": "ces.attention", "facetKey": "ces4_attention", "title": "CES-4 Vẫn tập trung lái" },
-        { "id": "ces.mean", "facetKey": "ces_mean", "title": "CES trung bình" }
+        {
+          "id": "ces.effort",
+          "facetKey": "ces1_effort",
+          "title": "CES-1 Dễ xử lý"
+        },
+        {
+          "id": "ces.information",
+          "facetKey": "ces2_information",
+          "title": "CES-2 Đủ thông tin để quyết"
+        },
+        {
+          "id": "ces.presentation",
+          "facetKey": "ces3_presentation",
+          "title": "CES-3 Cách trình bày hợp lúc lái"
+        },
+        {
+          "id": "ces.attention",
+          "facetKey": "ces4_attention",
+          "title": "CES-4 Vẫn tập trung lái"
+        },
+        {
+          "id": "ces.mean",
+          "facetKey": "ces_mean",
+          "title": "CES trung bình"
+        }
       ]
     },
     {
-      "match": { "contextType": "capability_coverage" },
+      "match": {
+        "contextType": "capability_coverage"
+      },
       "distributions": [
-        { "id": "coverage.by_capability", "facetKey": "capability_code", "title": "Nhóm năng lực" },
-        { "id": "coverage.by_vehicle_state", "facetKey": "vehicle_state", "title": "Trạng thái xe" },
-        { "id": "coverage.completed", "facetKey": "task_completed", "title": "Việc có xong không" },
-        { "id": "coverage.had_to_correct", "facetKey": "driver_had_to_correct", "title": "Người lái phải sửa lại" },
-        { "id": "coverage.choose_confirm", "facetKey": "asked_to_choose_or_confirm", "title": "Có bước chọn/xác nhận" },
-        { "id": "coverage.state_legible", "facetKey": "state_legible", "title": "Biết Vita đang làm gì" },
-        { "id": "coverage.latency", "facetKey": "response_latency_seconds", "title": "Thời gian chờ" }
+        {
+          "id": "coverage.by_capability",
+          "facetKey": "capability_code",
+          "title": "Nhóm năng lực"
+        },
+        {
+          "id": "coverage.by_vehicle_state",
+          "facetKey": "vehicle_state",
+          "title": "Trạng thái xe"
+        },
+        {
+          "id": "coverage.completed",
+          "facetKey": "task_completed",
+          "title": "Việc có xong không"
+        },
+        {
+          "id": "coverage.had_to_correct",
+          "facetKey": "driver_had_to_correct",
+          "title": "Người lái phải sửa lại"
+        },
+        {
+          "id": "coverage.choose_confirm",
+          "facetKey": "asked_to_choose_or_confirm",
+          "title": "Có bước chọn/xác nhận"
+        },
+        {
+          "id": "coverage.state_legible",
+          "facetKey": "state_legible",
+          "title": "Biết Vita đang làm gì"
+        },
+        {
+          "id": "coverage.latency",
+          "facetKey": "response_latency_seconds",
+          "title": "Thời gian chờ"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "brand_recognition"
+      },
+      "distributions": [
+        {
+          "id": "brand.scope",
+          "facetKey": "scope_perceived",
+          "title": "Vita là loại trợ lý gì"
+        },
+        {
+          "id": "brand.axes_hit",
+          "facetKey": "brand_axes_hit",
+          "title": "Số trục thương hiệu chạm được"
+        },
+        {
+          "id": "brand.trust",
+          "facetKey": "would_trust",
+          "title": "Còn tin giao việc nữa không"
+        }
       ]
     }
   ]

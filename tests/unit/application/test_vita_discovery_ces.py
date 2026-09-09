@@ -258,3 +258,69 @@ def test_a_case_with_no_goal_at_all_fails_loudly():
 
     with pytest.raises(ValueError, match="neither user_input nor scenario"):
         build_case_brief({"case_id": "vd_bad"})
+
+
+# ---------------------------------------------- section 3, asked per scenario
+
+# The guide asks these three at the end of a whole session, after showing a
+# brand message and an avatar. Neither exists here, so the basis is the
+# conversation -- and asking per scenario buys something the session format
+# cannot: the same questions after a route that went wrong and after one that
+# went smoothly.
+
+def test_the_brand_questions_ride_along_with_each_scenario():
+    feedback = {
+        "ces1Effort": 6, "ces2Information": 6, "ces3Presentation": 5, "ces4Attention": 6,
+        "taskCompleted": "yes",
+        "assistantRole": "Trợ lý hằng ngày, nắm được ý mình",
+        "threeWords": "hiểu ý, gọn lẹ, lịch sự",
+        "moreThanCarControl": "broader_daily_assistant",
+        "wouldTrust": "partially",
+    }
+    payload = ces_scoring.build_evaluation_payload(BASE_RUN, feedback)
+    brand = facets(payload, "brand_recognition")
+    assert brand["scope_perceived"] == "broader_daily_assistant"
+    assert brand["brand_axes_hit"] == 3
+    assert brand["would_trust"] == "partially"
+
+
+def test_the_brand_block_is_skipped_when_nothing_was_answered():
+    """An empty block would read as "the driver had no impression"."""
+    payload = ces_scoring.build_evaluation_payload(BASE_RUN, {"ces1Effort": 5})
+    assert "brand_recognition" not in {c["contextType"] for c in payload["contexts"]}
+
+
+def test_the_brand_payload_records_that_no_poster_was_shown():
+    payload = ces_scoring.build_evaluation_payload(BASE_RUN, {"assistantRole": "trợ lý"})
+    brand = facets(payload, "brand_recognition")
+    assert brand["impression_basis"] == "conversation_only"
+    assert brand["brand_axis_basis"] == "lexical_proxy"
+
+
+def test_the_three_brand_axes_are_detected_from_the_driver_s_words():
+    assert ces_scoring.axes_detected("nó nắm được ý mình") == ["hieu_y"]
+    assert ces_scoring.axes_detected("gọn lẹ, làm được việc") == ["duoc_viec"]
+    assert ces_scoring.axes_detected("lịch sự và tế nhị") == ["dung_muc"]
+    # People type without tone marks; the measurement should not care.
+    assert ces_scoring.axes_detected("nam duoc y minh") == ["hieu_y"]
+    # A miss is "not detected", never "the assistant failed".
+    assert ces_scoring.axes_detected("cũng tàm tạm") == []
+
+
+def test_three_words_split_on_whatever_punctuation_was_used():
+    assert ces_scoring.three_words("Thông minh, đáng tin và tinh tế") == [
+        "Thông minh", "đáng tin", "tinh tế"
+    ]
+    assert ces_scoring.three_words("nhanh/gọn/lịch sự") == ["nhanh", "gọn", "lịch sự"]
+    assert ces_scoring.three_words("a, b, c, d, e") == ["a", "b", "c"]
+    assert ces_scoring.three_words("") == []
+
+
+def test_the_verbatim_answer_is_kept_next_to_the_count():
+    """So a reader can overrule a lexical miss in one glance."""
+    payload = ces_scoring.build_evaluation_payload(
+        BASE_RUN, {"assistantRole": "nó cũng tàm tạm", "threeWords": "ổn, được, tạm"}
+    )
+    brand = facets(payload, "brand_recognition")
+    assert brand["brand_axes_hit"] == 0
+    assert brand["role_stated"] == "nó cũng tàm tạm"

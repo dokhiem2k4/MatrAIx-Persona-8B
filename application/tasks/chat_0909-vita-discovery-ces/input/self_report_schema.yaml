@@ -65,3 +65,35 @@ fields:
       prompt: >-
         Nếu trả lời "partially", nói rõ phần nào xong và phần nào chưa. Dẫn lượt
         cụ thể.
+
+  # Ba câu dưới là phần 3 của discussion guide (nhận biết vai trò, định vị,
+  # tính cách). Trong tài liệu chúng được hỏi sau khi xem thông điệp và hình
+  # ảnh đại diện; ở đây không có cả hai, nên căn cứ là chính cuộc vừa rồi.
+  - key: assistantRole
+    prompt: >-
+      Sau lần này, theo bạn Vita là gì và nó giúp bạn được những việc gì?
+    kind: string
+  - key: moreThanCarControl
+    prompt: >-
+      Bạn thấy Vita chỉ là trợ lý điều khiển xe bằng giọng nói, hay là trợ lý
+      hỗ trợ cuộc sống hằng ngày rộng hơn thế?
+    kind: enum
+    choices: [car_control_only, broader_daily_assistant, unclear]
+    explanation:
+      key: moreThanCarControlReason
+      prompt: Điều gì trong lần này làm bạn nghĩ vậy?
+  - key: threeWords
+    prompt: >-
+      Dùng đúng BA TỪ (hoặc ba cụm ngắn) để mô tả Vita, cách nhau bằng dấu phẩy.
+      Tả đúng cảm nhận sau lần này, kể cả khi đó là từ không hay.
+    kind: string
+    explanation:
+      key: threeWordsReason
+      prompt: Vì sao ba từ đó? Dẫn lượt cụ thể khiến bạn thấy vậy.
+  - key: wouldTrust
+    prompt: Sau lần này, bạn có tin tưởng giao việc tương tự cho Vita nữa không?
+    kind: enum
+    choices: [yes, partially, no]
+    explanation:
+      key: wouldTrustReason
+      prompt: Nếu "partially", nói rõ việc nào bạn giao được và việc nào chưa.
