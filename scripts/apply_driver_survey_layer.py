@@ -45,6 +45,14 @@ sys.path.insert(0, str(REPO_ROOT / "persona/curation/existing_data/scripts"))
 
 from crosswalks.vn_drivers import CROSSWALK  # noqa: E402
 
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+from validate_persona_rules import repair, violations  # noqa: E402
+from persona_tiers import (  # noqa: E402
+    OBSERVED_TYPES,
+    apply_tiers,
+    recompute_grounding_summary,
+)
+
 SOURCE_REF = "vn_driver_survey_2026"
 
 #: Only respondents who actually drive may shape a driver pool.
@@ -53,22 +61,51 @@ SCREEN_IN = ("Lái hằng ngày", "Thỉnh thoảng lái")
 #: Each new dimension is conditioned on the measured dimension that predicts it
 #: best (Cramér's V over the responses; all of these scored >= 0.44). Choosing
 #: the conditioner from the data beats guessing which trait ought to matter.
+#: Each generated field draws from the distribution for respondents who match
+#: this persona on ALL of these, not just one. Single-parent conditioning is
+#: what produced a bicycle commuter who owns no car, drives 150-300km a week,
+#: and has a built-in assistant: each value was defensible against its own
+#: parent and impossible against the others.
+#:
+#: Two relations from the first pass are gone rather than widened. trip_mix was
+#: conditioned on att_self_driving_cars and cabin_noise on
+#: att_electric_vehicles; both scored above the threshold on 81 responses and
+#: neither is a cause of anything. A stance on electric cars does not decide how
+#: loud a cabin is.
 CONDITIONED_ON = {
-    "vn_usual_companion": "demo_driver_status",
-    "vn_voice_privacy_comfort": "skill_driving",
-    "vn_assistant_task_scope": "cog_patience",
-    "vn_retry_tolerance": "cog_skepticism",
-    # Second round. Same rule: the conditioner is whichever measured dimension
-    # predicts this one best over the responses, not whichever seems apt.
-    "veh_class": "lstyle_commute_mode",
-    "veh_assistant_builtin": "cog_patience",
-    "drv_exposure": "demo_driver_status",
-    "trip_mix": "att_self_driving_cars",
-    "assistant_usage_freq": "demo_driver_status",
-    "need_state": "topic_cars",
-    "cabin_context": "topic_cars",
-    "cabin_noise": "att_electric_vehicles",
+    "vn_locality": ("urbanicity",),
+    "veh_class": ("lstyle_commute_mode", "socioeconomic_band"),
+    "drv_exposure": ("demo_driver_status", "lstyle_commute_mode", "veh_class"),
+    "veh_assistant_builtin": ("veh_class", "tech_savviness"),
+    "assistant_usage_freq": ("veh_assistant_builtin", "demo_driver_status"),
+    "vn_assistant_task_scope": ("att_self_driving_cars", "cog_patience", "cog_skepticism"),
+    "trip_mix": ("urbanicity", "vn_locality"),
+    "cabin_noise": ("veh_class", "vn_usual_companion"),
+    "cabin_context": ("demo_driver_status", "skill_driving"),
+    "vn_usual_companion": ("demo_driver_status", "demo_children_count"),
+    "vn_voice_privacy_comfort": ("skill_driving", "vn_usual_companion"),
+    "vn_retry_tolerance": ("cog_skepticism", "cog_patience"),
+    "need_state": ("topic_cars", "demo_driver_status"),
 }
+
+#: Order matters: fields early in this list are assigned before fields that
+#: condition on them. vn_usual_companion must exist before cabin_noise can use
+#: it, and veh_class before veh_assistant_builtin.
+ASSIGNMENT_ORDER = (
+    "vn_locality",
+    "vn_usual_companion",
+    "veh_class",
+    "drv_exposure",
+    "veh_assistant_builtin",
+    "assistant_usage_freq",
+    "trip_mix",
+    "cabin_noise",
+    "cabin_context",
+    "vn_voice_privacy_comfort",
+    "vn_retry_tolerance",
+    "vn_assistant_task_scope",
+    "need_state",
+)
 
 #: accent_region is deliberately NOT drawn from a distribution. The strongest
 #: conditioner the responses offer is att_electric_vehicles at V=0.33, which is
@@ -89,12 +126,17 @@ ACCENT_BY_REGION = {
 
 #: Follows from task scope by the same rule the crosswalk uses, so a persona
 #: never ends up enthusiastic about an assistant it delegates nothing to.
-SCOPE_TO_ATTITUDE = {
-    "None": "Opposed",
-    "Navigation only": "Skeptical",
-    "Navigation and media": "Neutral",
-    "Most non-driving tasks": "Positive",
-    "Everything including vehicle control": "Enthusiast",
+#: att_voice_assistant used to derive from vn_assistant_task_scope, which is
+#: itself generated -- a guess resting on a guess, and on vn-drv-001 the error
+#: was amplified into "Enthusiast" for someone who opposes self-driving cars.
+#: A derived field must rest on a measured one, so this now follows the
+#: respondent's own stance on autonomous driving.
+SELF_DRIVING_TO_ATTITUDE = {
+    "Enthusiast": "Enthusiast",
+    "Positive": "Positive",
+    "Neutral": "Neutral",
+    "Skeptical": "Skeptical",
+    "Opposed": "Opposed",
 }
 
 
@@ -124,19 +166,54 @@ def read_responses(path: Path) -> list[dict[str, Any]]:
 
 
 def conditional_weights(
-    records: list[dict[str, Any]], target: str, conditioner: str
-) -> tuple[dict[str, dict[str, float]], dict[str, float]]:
-    """P(target | conditioner) plus the marginal, both as raw counts."""
-    per_group: dict[str, collections.Counter] = collections.defaultdict(collections.Counter)
-    marginal: collections.Counter = collections.Counter()
+    records: list[dict[str, Any]], target: str, parents: tuple[str, ...]
+) -> dict[tuple, dict[str, int]]:
+    """Counts of ``target`` for every combination of ``parents`` seen."""
+    table: dict[tuple, collections.Counter] = collections.defaultdict(collections.Counter)
     for record in records:
-        value, group = record.get(target), record.get(conditioner)
+        value = record.get(target)
         if value is None:
             continue
-        marginal[value] += 1
-        if group is not None:
-            per_group[group][value] += 1
-    return ({g: dict(c) for g, c in per_group.items()}, dict(marginal))
+        key = tuple(record.get(p) for p in parents)
+        if any(k is None for k in key):
+            continue
+        table[key][value] += 1
+    return {k: dict(v) for k, v in table.items()}
+
+
+def weights_with_backoff(
+    records: list[dict[str, Any]],
+    target: str,
+    parents: tuple[str, ...],
+    persona_dims: dict[str, Any],
+    *,
+    min_support: int = 3,
+) -> tuple[dict[str, int], int]:
+    """Distribution for this persona, dropping parents until one has support.
+
+    Conditioning on three parents is the point of this change, but 81
+    respondents cannot populate every combination of three. Rather than fall
+    straight to the marginal -- which throws away the conditioning entirely --
+    the least important parent is dropped and the lookup retried, so a persona
+    keeps as much conditioning as the data can actually support. The number of
+    parents that survived is returned so the run can report how much
+    conditioning it really achieved rather than how much it asked for.
+    """
+    for depth in range(len(parents), 0, -1):
+        subset = parents[:depth]
+        key = tuple(persona_dims.get(p) for p in subset)
+        if any(k is None for k in key):
+            continue
+        table = conditional_weights(records, target, subset)
+        counts = table.get(key)
+        if counts and sum(counts.values()) >= min_support:
+            return counts, depth
+    marginal: collections.Counter = collections.Counter()
+    for record in records:
+        value = record.get(target)
+        if value is not None:
+            marginal[value] += 1
+    return dict(marginal), 0
 
 
 def main() -> int:
@@ -155,26 +232,27 @@ def main() -> int:
     personas = [(p, yaml.safe_load(p.read_text(encoding="utf-8")) or {}) for p in paths]
     print("{} eligible responses shape {} personas\n".format(len(records), len(personas)))
 
-    for target, conditioner in CONDITIONED_ON.items():
-        groups, marginal = conditional_weights(records, target, conditioner)
-
-        # Bucket personas by their own measured value of the conditioner.
-        buckets: dict[Any, list[int]] = collections.defaultdict(list)
-        for index, (_, persona) in enumerate(personas):
-            buckets[(persona.get("dimensions") or {}).get(conditioner)].append(index)
-
+    depth_report: dict[str, collections.Counter] = {}
+    for target in ASSIGNMENT_ORDER:
+        parents = CONDITIONED_ON[target]
+        depths: collections.Counter = collections.Counter()
         assigned: dict[int, str] = {}
-        fell_back = 0
-        for group, members in buckets.items():
-            # A persona whose conditioner value no respondent shares has no
-            # conditional distribution to draw from; the marginal is the honest
-            # fallback, and the count of those is reported rather than hidden.
-            weights = groups.get(group) or marginal
-            if group not in groups:
-                fell_back += len(members)
-            allocation = largest_remainder(len(members), weights)
+
+        # Personas sharing a parent combination are allocated together, so the
+        # pool matches the measured conditional distribution exactly rather
+        # than approximately.
+        groups: dict[tuple, list[int]] = collections.defaultdict(list)
+        for index, (_, persona) in enumerate(personas):
+            dims = persona.get("dimensions") or {}
+            counts, depth = weights_with_backoff(records, target, parents, dims)
+            depths[depth] += 1
+            groups[(tuple(dims.get(p) for p in parents[:depth]), depth)].append(index)
+
+        for (key, depth), members in groups.items():
+            dims = (personas[members[0]][1].get("dimensions") or {})
+            counts, _ = weights_with_backoff(records, target, parents, dims)
+            allocation = largest_remainder(len(members), counts)
             slots = [v for value, count in sorted(allocation.items()) for v in [value] * count]
-            # Sorted by persona id, so the same pool always yields the same map.
             for member, value in zip(sorted(members, key=lambda i: paths[i].stem), slots):
                 assigned[member] = value
 
@@ -186,17 +264,19 @@ def main() -> int:
             persona.setdefault("grounding", {})[target] = {
                 "assignment_type": "generated",
                 "source_ref": SOURCE_REF,
-                "evidence": "{}:conditional_on:{}".format(SOURCE_REF, conditioner),
+                "evidence": "{}:conditional_on:{}".format(SOURCE_REF, "+".join(parents)),
                 "confidence": 0.5,
             }
+        depth_report[target] = depths
 
-        spread = collections.Counter(assigned.values())
-        print("{}  (conditioned on {})".format(target, conditioner))
-        for value, count in spread.most_common():
-            print("   {:3d}  {}".format(count, value))
-        if fell_back:
-            print("   {} persona(s) used the marginal: conditioner value unseen in responses".format(fell_back))
-        print()
+    print("conditioning depth actually achieved (parents used / asked for):")
+    for target, depths in depth_report.items():
+        asked = len(CONDITIONED_ON[target])
+        detail = " ".join(
+            "{}p:{}".format(d if d else "marginal", n) for d, n in sorted(depths.items(), reverse=True)
+        )
+        print("  {:26s} asked {}  ->  {}".format(target, asked, detail))
+    print()
 
     # accent_region follows from where the persona lives, not from a draw.
     unplaced = []
@@ -211,10 +291,13 @@ def main() -> int:
             continue
         persona["dimensions"]["accent_region"] = accent
         persona.setdefault("grounding", {})["accent_region"] = {
-            "assignment_type": "derived",
+            # Not "derived": that type is reserved for a chain resting on a
+            # measured value, and vn_locality is itself sampled. The mapping is
+            # deterministic, but a deterministic function of a guess is a guess.
+            "assignment_type": "generated",
             "source_ref": SOURCE_REF,
-            "evidence": "derived_from:vn_locality",
-            "confidence": 0.9,
+            "evidence": "function_of:vn_locality",
+            "confidence": 0.6,
         }
     if unplaced:
         print("accent_region: {} persona(s) with an unmapped locality: {}".format(
@@ -222,17 +305,76 @@ def main() -> int:
     else:
         print("accent_region: derived from vn_locality for every persona\n")
 
-    # att_voice_assistant follows from the scope just assigned.
+    # att_voice_assistant now follows a measured field. A derived value resting
+    # on a generated one is a guess wearing a second coat of paint, and the
+    # build refuses it below.
     for _, persona in personas:
-        scope = (persona.get("dimensions") or {}).get("vn_assistant_task_scope")
-        if scope in SCOPE_TO_ATTITUDE:
-            persona["dimensions"]["att_voice_assistant"] = SCOPE_TO_ATTITUDE[scope]
+        dims = persona.get("dimensions") or {}
+        stance = dims.get("att_self_driving_cars")
+        if stance in SELF_DRIVING_TO_ATTITUDE:
+            dims["att_voice_assistant"] = SELF_DRIVING_TO_ATTITUDE[stance]
             persona.setdefault("grounding", {})["att_voice_assistant"] = {
                 "assignment_type": "derived",
                 "source_ref": SOURCE_REF,
-                "evidence": "derived_from:vn_assistant_task_scope",
-                "confidence": 0.5,
+                "evidence": "derived_from:att_self_driving_cars",
+                "confidence": 0.7,
             }
+
+    # Conditioning narrows the draw; it cannot guarantee a hard constraint,
+    # because the respondents themselves contain combinations a rule forbids.
+    # So the rules run after generation and before writing, and a violation is
+    # resampled rather than accepted. Bounded: a pool that will not converge is
+    # a fact about the rules, and looping forever would hide it.
+    import random
+
+    rng = random.Random(42)
+    pool_values: dict[str, list[str]] = collections.defaultdict(list)
+    for _, persona in personas:
+        for key, value in (persona.get("dimensions") or {}).items():
+            if value is not None:
+                pool_values[key].append(str(value))
+
+    MAX_PASSES = 8
+    for attempt in range(1, MAX_PASSES + 1):
+        offending = [(pa, pe) for pa, pe in personas if violations(pe)]
+        if not offending:
+            print("validator: clean after {} pass(es)".format(attempt - 1))
+            break
+        for _, persona in offending:
+            repair(persona, pool_values, rng=rng)
+    else:
+        remaining = {
+            str(pe.get("persona_id")): [c for c, _ in violations(pe)]
+            for _, pe in personas
+            if violations(pe)
+        }
+        raise SystemExit(
+            "validator did not converge in {} passes; still failing: {}".format(
+                MAX_PASSES, remaining)
+        )
+
+    # Acceptance criterion: a derived field must rest on a measured one. This is
+    # a build failure, not a warning -- the whole point of provenance is that a
+    # reader can trust what "derived" means without checking the chain by hand.
+    for path, persona in personas:
+        grounding = persona.get("grounding") or {}
+        for field, entry in grounding.items():
+            if not isinstance(entry, dict) or entry.get("assignment_type") != "derived":
+                continue
+            evidence = str(entry.get("evidence") or "")
+            if not evidence.startswith("derived_from:"):
+                continue
+            source = evidence.split("derived_from:", 1)[1].split(":")[0]
+            source_type = (grounding.get(source) or {}).get("assignment_type")
+            if source_type not in OBSERVED_TYPES:
+                raise SystemExit(
+                    "{}: {} is derived from {}, which is {!r}, not measured".format(
+                        path.name, field, source, source_type)
+                )
+
+    for _, persona in personas:
+        apply_tiers(persona)
+        recompute_grounding_summary(persona)
 
     args.out.mkdir(parents=True, exist_ok=True)
     # Copying a pool onto itself raises SameFileError, and it raised it before
