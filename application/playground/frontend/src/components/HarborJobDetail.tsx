@@ -769,6 +769,9 @@ const BUCKET_LABEL_KEYS: Record<string, MessageKey> = {
   // case integrity
   ok: "reports.bucket.ok",
   violated: "reports.bucket.violated",
+  // whether a later turn reused a word the user opened with
+  carried: "reports.bucket.carried",
+  not_carried: "reports.bucket.notCarried",
 }
 
 function formatBucketLabel(value: string, t?: ReportTranslate): string {

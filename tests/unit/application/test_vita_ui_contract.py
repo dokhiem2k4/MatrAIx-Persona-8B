@@ -184,3 +184,60 @@ def test_every_partially_answer_has_a_place_for_its_reason():
         for field in schema["fields"]:
             if field.get("kind") == "enum":
                 assert field.get("explanation"), (slug, field["key"])
+
+
+# The verdict facets come in pairs: a coded one in the task's own context
+# (decision_match: match/mismatch/unknown/unavailable) and a yes/no one in
+# task_outcome that the job report's headline panel can colour. Both are
+# useful, but a distribution for each printed the same table twice, side by
+# side, in the detailed report.
+PAIRED_FACETS = {
+    "chat_0709-vita-drive-golden-error-recovery": {
+        "decision_correct": "decision_match",
+        "tool_calls_correct": "tool_call_match",
+        "case_integrity_ok": "case_integrity",
+    },
+    "chat_0709-vita-drive-singleturn-mode-ab": {
+        "profile_switched": "profile_applied",
+        "assistant_replied": "replied",
+    },
+    "chat_0709-vita-drive-multiturn-coverage": {
+        "context_carried": "lexical_topic_overlap",
+    },
+}
+
+
+def _distribution_keys(slug: str) -> set[str]:
+    import json
+
+    report = json.loads(
+        (TASKS / slug / "reporting.json").read_text(encoding="utf-8")
+    )
+    return {
+        dist["facetKey"]
+        for rule in report["contextRules"]
+        for dist in rule["distributions"]
+    }
+
+
+def test_a_verdict_gets_one_table_not_two():
+    for slug, pairs in PAIRED_FACETS.items():
+        charted = _distribution_keys(slug)
+        for gathered, detailed in pairs.items():
+            assert not (gathered in charted and detailed in charted), (
+                slug,
+                "{} and {} chart the same verdict".format(gathered, detailed),
+            )
+
+
+def test_the_detailed_spelling_is_the_one_kept():
+    """It carries values the yes/no form folds away -- no_equivalent, unmapped."""
+    charted = _distribution_keys("chat_0709-vita-drive-golden-error-recovery")
+    assert {"decision_match", "tool_call_match", "case_integrity"} <= charted
+
+
+def test_the_headline_verdicts_survive_in_the_payload():
+    """Dropping a distribution must not drop the facet: the report's at-a-glance
+    chips read facets straight off the context, not through reporting.json."""
+    f = _facets(case_scoring.build_evaluation_payload(GOLDEN_RUN, FEEDBACK), "task_outcome")
+    assert {"decision_correct", "tool_calls_correct", "case_integrity_ok"} <= set(f)

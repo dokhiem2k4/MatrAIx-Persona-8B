@@ -10,21 +10,6 @@
           "id": "task_outcome.status",
           "facetKey": "outcome_status",
           "title": "Kết quả chấm"
-        },
-        {
-          "id": "task_outcome.decision_correct",
-          "facetKey": "decision_correct",
-          "title": "Quyết định đúng chưa"
-        },
-        {
-          "id": "task_outcome.tool_calls_correct",
-          "facetKey": "tool_calls_correct",
-          "title": "Gọi đúng công cụ chưa"
-        },
-        {
-          "id": "task_outcome.case_integrity_ok",
-          "facetKey": "case_integrity_ok",
-          "title": "Persona giữ đúng ràng buộc"
         }
       ]
     },
@@ -47,6 +32,11 @@
           "id": "error_recovery.decision_match",
           "facetKey": "decision_match",
           "title": "Khớp quyết định"
+        },
+        {
+          "id": "error_recovery.tool_call_match",
+          "facetKey": "tool_call_match",
+          "title": "Khớp tool call"
         },
         {
           "id": "error_recovery.case_integrity",
