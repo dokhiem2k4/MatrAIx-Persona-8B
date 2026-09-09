@@ -58,6 +58,33 @@ CONDITIONED_ON = {
     "vn_voice_privacy_comfort": "skill_driving",
     "vn_assistant_task_scope": "cog_patience",
     "vn_retry_tolerance": "cog_skepticism",
+    # Second round. Same rule: the conditioner is whichever measured dimension
+    # predicts this one best over the responses, not whichever seems apt.
+    "veh_class": "lstyle_commute_mode",
+    "veh_assistant_builtin": "cog_patience",
+    "drv_exposure": "demo_driver_status",
+    "trip_mix": "att_self_driving_cars",
+    "assistant_usage_freq": "demo_driver_status",
+    "need_state": "topic_cars",
+    "cabin_context": "topic_cars",
+    "cabin_noise": "att_electric_vehicles",
+}
+
+#: accent_region is deliberately NOT drawn from a distribution. The strongest
+#: conditioner the responses offer is att_electric_vehicles at V=0.33, which is
+#: a coincidence of a small sample -- a stance on electric cars does not decide
+#: where someone learned to speak. Where they live does, and every persona
+#: already carries a measured vn_locality, so this one is derived from it.
+ACCENT_BY_REGION = {
+    "Northern": {
+        "Ha Noi", "Bac Ninh", "Hung Yen", "Phu Tho", "Tuyen Quang", "Ninh Binh",
+        "Son La", "Dien Bien", "Lai Chau", "Thanh Hoa",
+    },
+    "Central": {"Da Nang", "Khanh Hoa", "Gia Lai", "Dak Lak", "Lam Dong"},
+    "Southern": {
+        "Ho Chi Minh City", "Dong Nai", "Tay Ninh", "An Giang", "Dong Thap",
+        "Vinh Long", "Ca Mau",
+    },
 }
 
 #: Follows from task scope by the same rule the crosswalk uses, so a persona
@@ -171,6 +198,30 @@ def main() -> int:
             print("   {} persona(s) used the marginal: conditioner value unseen in responses".format(fell_back))
         print()
 
+    # accent_region follows from where the persona lives, not from a draw.
+    unplaced = []
+    for _, persona in personas:
+        locality = (persona.get("dimensions") or {}).get("vn_locality")
+        accent = next(
+            (name for name, places in ACCENT_BY_REGION.items() if locality in places),
+            None,
+        )
+        if accent is None:
+            unplaced.append(locality)
+            continue
+        persona["dimensions"]["accent_region"] = accent
+        persona.setdefault("grounding", {})["accent_region"] = {
+            "assignment_type": "derived",
+            "source_ref": SOURCE_REF,
+            "evidence": "derived_from:vn_locality",
+            "confidence": 0.9,
+        }
+    if unplaced:
+        print("accent_region: {} persona(s) with an unmapped locality: {}".format(
+            len(unplaced), sorted({str(x) for x in unplaced})))
+    else:
+        print("accent_region: derived from vn_locality for every persona\n")
+
     # att_voice_assistant follows from the scope just assigned.
     for _, persona in personas:
         scope = (persona.get("dimensions") or {}).get("vn_assistant_task_scope")
@@ -184,9 +235,12 @@ def main() -> int:
             }
 
     args.out.mkdir(parents=True, exist_ok=True)
-    for extra in args.pool.iterdir():
-        if extra.is_file() and not extra.name.startswith("persona_"):
-            shutil.copy2(extra, args.out / extra.name)
+    # Copying a pool onto itself raises SameFileError, and it raised it before
+    # a single persona was written -- an in-place run silently did nothing.
+    if args.out.resolve() != args.pool.resolve():
+        for extra in args.pool.iterdir():
+            if extra.is_file() and not extra.name.startswith("persona_"):
+                shutil.copy2(extra, args.out / extra.name)
     for path, persona in personas:
         (args.out / path.name).write_text(
             yaml.safe_dump(persona, allow_unicode=True, sort_keys=False), encoding="utf-8"

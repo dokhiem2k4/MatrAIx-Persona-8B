@@ -273,6 +273,89 @@ def _voice_assistant_attitude(row):
     }[scope]
 
 
+# --- 2026 expansion, second round --------------------------------------------
+# Nine more closed questions, mapped the same way as the eight originals: by
+# the Vietnamese label a respondent clicked. All are single-select or scale
+# except cabin_context, where the most constraining answer wins -- a driver
+# with both hands on the wheel is bound by that, whatever else they ticked.
+Q_ACCENT = "giọng của anh/chị nghe rõ nhất"
+Q_VEH_CLASS = "xe anh/chị hay lái nhất thuộc hạng nào"
+Q_VEH_BUILTIN = "có sẵn trợ lý giọng nói của hãng"
+Q_EXPOSURE = "mỗi tuần anh/chị lái khoảng bao nhiêu"
+Q_TRIP_MIX = "phần lớn quãng đường anh/chị lái"
+Q_USAGE_FREQ = "dùng trợ lý giọng nói khi lái xe thường xuyên"
+Q_NEED_STATE = "mong chuyến đi mang lại cảm giác gì"
+Q_CABIN_CTX = "tay và mắt đang bận gì"
+Q_CABIN_NOISE = "thường ồn tới mức nào"
+
+
+def _accent_region(row):
+    return _pick(row, Q_ACCENT, (
+        ("giọng bắc", "Northern"), ("giọng trung", "Central"),
+        ("giọng nam", "Southern"), ("pha trộn", "Mixed")))
+
+
+def _veh_class(row):
+    return _pick(row, Q_VEH_CLASS, (
+        ("hatchback", "Hatchback"), ("sedan", "Sedan"), ("suv", "SUV or crossover"),
+        ("bán tải", "Pickup"), ("7 chỗ", "Seven seater or larger"),
+        ("xe tải", "Truck or commercial"), ("không sở hữu", "Does not own")))
+
+
+def _veh_assistant_builtin(row):
+    return _pick(row, Q_VEH_BUILTIN, (
+        ("có, và tôi dùng", "Built in and used"),
+        ("có, nhưng tôi không dùng", "Built in but unused"),
+        ("không có, tôi dùng trợ lý trên điện thoại", "None, uses phone assistant"),
+        ("không có, và tôi không dùng", "None, uses no assistant")))
+
+
+def _drv_exposure(row):
+    return _pick(row, Q_EXPOSURE, (
+        ("dưới 50", "Under 50 km"), ("50-150", "50-150 km"), ("150-300", "150-300 km"),
+        ("300-600", "300-600 km"), ("trên 600", "Over 600 km")))
+
+
+def _trip_mix(row):
+    return _pick(row, Q_TRIP_MIX, (
+        ("nội đô", "Mostly city"), ("cao tốc", "Mostly motorway"),
+        ("đường tỉnh", "Mostly provincial roads"), ("hỗn hợp", "Mixed")))
+
+
+def _assistant_usage_freq(row):
+    return _pick(row, Q_USAGE_FREQ, (
+        ("mỗi chuyến", "Almost every trip"), ("vài lần một tuần", "Several times a week"),
+        ("vài lần một tháng", "Several times a month"), ("hiếm khi", "Rarely"),
+        ("thôi hẳn", "Tried it and stopped")))
+
+
+def _need_state(row):
+    return _pick(row, Q_NEED_STATE, (
+        ("yên tĩnh", "Quiet and undisturbed"), ("kiểm soát", "In control"),
+        ("bầu bạn", "Accompanied"), ("đi nhanh", "Fast and done"),
+        ("giải trí", "Entertained")))
+
+
+def _cabin_context(row):
+    """Most constraining tick wins: hands and eyes bind harder than talking."""
+    answer = _answer(row, Q_CABIN_CTX)
+    if not answer:
+        return None
+    for fragment, value in (
+        ("hai tay", "Hands on wheel"), ("nhìn gương", "Watching the road"),
+        ("tìm địa chỉ", "Searching on phone"), ("ăn uống", "Eating or drinking"),
+        ("nói chuyện", "Talking to a passenger"), ("không bận", "Not occupied"),
+    ):
+        if fragment in answer:
+            return value
+    return None
+
+
+def _cabin_noise(row):
+    return _scale5(row, Q_CABIN_NOISE, (
+        "Very quiet", "Quiet", "Moderate", "Loud", "Very loud"))
+
+
 CROSSWALK = {
     "demo_driver_status": {"compute": _driver_status, "prov": "observed"},
     "lstyle_commute_mode": {"compute": _commute_mode, "prov": "observed"},
@@ -296,4 +379,15 @@ CROSSWALK = {
     # as measured would inflate the one number that says how much of a persona
     # rests on a real answer.
     "att_voice_assistant": {"compute": _voice_assistant_attitude, "prov": "derived"},
+    # Second round of the 2026 expansion. All observed: each is a question the
+    # respondent answered directly, unlike att_voice_assistant above.
+    "accent_region": {"compute": _accent_region, "prov": "observed"},
+    "veh_class": {"compute": _veh_class, "prov": "observed"},
+    "veh_assistant_builtin": {"compute": _veh_assistant_builtin, "prov": "observed"},
+    "drv_exposure": {"compute": _drv_exposure, "prov": "observed"},
+    "trip_mix": {"compute": _trip_mix, "prov": "observed"},
+    "assistant_usage_freq": {"compute": _assistant_usage_freq, "prov": "observed"},
+    "need_state": {"compute": _need_state, "prov": "observed"},
+    "cabin_context": {"compute": _cabin_context, "prov": "observed"},
+    "cabin_noise": {"compute": _cabin_noise, "prov": "observed"},
 }
