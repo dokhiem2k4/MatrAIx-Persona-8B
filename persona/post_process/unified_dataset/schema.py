@@ -12,7 +12,7 @@ import pyarrow as pa
 
 
 # Must match len(persona/schema/dimensions.json["dimensions"]).
-ATTRIBUTE_COUNT = 1297
+ATTRIBUTE_COUNT = 1306
 
 # One byte per attribute. The previous layout packed two 4-bit codes per byte,
 # which halved the blob but capped every dimension at 16 values -- Vietnam has

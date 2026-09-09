@@ -19,11 +19,11 @@ of definition are listed; anything merely improbable stays untouched, because a
 survey exists to capture improbable people.
 
     # report only (default)
-    uv run python scripts/check_persona_coherence.py persona/datasets/vn-drivers-forum
+    uv run python scripts/check_persona_coherence.py persona/datasets/vn-drivers
 
     # write a repaired copy, leaving the original pool untouched
-    uv run python scripts/check_persona_coherence.py persona/datasets/vn-drivers-forum \
-        --fix --out persona/datasets/vn-drivers-forum-coherent
+    uv run python scripts/check_persona_coherence.py persona/datasets/vn-drivers \
+        --fix --out persona/datasets/vn-drivers-coherent
 """
 
 from __future__ import annotations

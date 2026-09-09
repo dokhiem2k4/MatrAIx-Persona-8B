@@ -477,6 +477,183 @@
       "text": "Anh/chị ước trợ lý làm được việc gì mà hiện giờ nó chưa làm được?",
       "hint": "Bất cứ điều gì, kể cả nghe có vẻ khó.",
       "purpose": "Nhu cầu chưa đáp ứng — gợi ý nhóm chức năng cần bổ sung."
+    },
+    {
+      "n": 17,
+      "kind": "choice",
+      "required": true,
+      "text": "Giọng của anh/chị nghe rõ nhất là giọng vùng nào?",
+      "options": [
+        "Giọng Bắc",
+        "Giọng Trung",
+        "Giọng Nam",
+        "Pha trộn, khó nói rõ vùng nào"
+      ],
+      "purpose": "Không có trường này thì không đánh giá được nhận dạng tiếng nói.",
+      "maps_to": "accent_region"
+    },
+    {
+      "n": 18,
+      "kind": "choice",
+      "required": true,
+      "text": "Xe anh/chị hay lái nhất thuộc hạng nào?",
+      "options": [
+        "Hatchback / xe nhỏ",
+        "Sedan",
+        "SUV / Crossover",
+        "Bán tải",
+        "Xe 7 chỗ trở lên",
+        "Xe tải / xe dịch vụ",
+        "Không sở hữu, lái xe mượn hoặc thuê"
+      ],
+      "purpose": "Hạng xe quyết định có sẵn màn hình và trợ lý hay không.",
+      "maps_to": "veh_class"
+    },
+    {
+      "n": 19,
+      "kind": "choice",
+      "required": true,
+      "text": "Xe anh/chị hay lái có sẵn trợ lý giọng nói của hãng không?",
+      "options": [
+        "Có, và tôi dùng",
+        "Có, nhưng tôi không dùng",
+        "Không có, tôi dùng trợ lý trên điện thoại",
+        "Không có, và tôi không dùng trợ lý nào"
+      ],
+      "purpose": "Phân biệt người đã có trải nghiệm thật với người chỉ hình dung.",
+      "maps_to": "veh_assistant_builtin"
+    },
+    {
+      "n": 20,
+      "kind": "choice",
+      "required": true,
+      "text": "Trung bình mỗi tuần anh/chị lái khoảng bao nhiêu?",
+      "options": [
+        "Dưới 50 km",
+        "50-150 km",
+        "150-300 km",
+        "300-600 km",
+        "Trên 600 km"
+      ],
+      "purpose": "Cường độ lái, thay cho việc hỏi giờ ngồi sau vô lăng.",
+      "maps_to": "drv_exposure"
+    },
+    {
+      "n": 21,
+      "kind": "choice",
+      "required": true,
+      "text": "Phần lớn quãng đường anh/chị lái là loại đường nào?",
+      "options": [
+        "Chủ yếu nội đô",
+        "Chủ yếu cao tốc",
+        "Chủ yếu đường tỉnh / đường huyện",
+        "Hỗn hợp, không loại nào chiếm ưu thế"
+      ],
+      "purpose": "Nội đô hay cao tốc đổi hẳn loại việc trợ lý nên nhận.",
+      "maps_to": "trip_mix"
+    },
+    {
+      "n": 22,
+      "kind": "choice",
+      "required": true,
+      "text": "Anh/chị dùng trợ lý giọng nói khi lái xe thường xuyên tới mức nào?",
+      "options": [
+        "Gần như mỗi chuyến",
+        "Vài lần một tuần",
+        "Vài lần một tháng",
+        "Hiếm khi",
+        "Đã thử rồi thôi hẳn"
+      ],
+      "purpose": "Tần suất thật, tách người dùng đều với người đã bỏ.",
+      "maps_to": "assistant_usage_freq"
+    },
+    {
+      "n": 23,
+      "kind": "choice",
+      "required": true,
+      "text": "Khi lái xe, anh/chị mong chuyến đi mang lại cảm giác gì nhất?",
+      "options": [
+        "Yên tĩnh, không bị làm phiền",
+        "Kiểm soát được mọi thứ",
+        "Có ai đó bầu bạn",
+        "Đi nhanh, xong việc",
+        "Được giải trí"
+      ],
+      "purpose": "Nhu cầu cảm xúc của chuyến đi — chưa trường nào trong bộ nói tới.",
+      "maps_to": "need_state"
+    },
+    {
+      "n": 24,
+      "kind": "checkbox",
+      "required": true,
+      "text": "Lúc anh/chị hay cần trợ lý nhất thì tay và mắt đang bận gì? (chọn tất cả những gì đúng)",
+      "options": [
+        "Hai tay đang giữ vô lăng",
+        "Đang nhìn gương / quan sát đường",
+        "Đang tìm địa chỉ trên điện thoại",
+        "Đang nói chuyện với người trên xe",
+        "Đang ăn uống",
+        "Không bận gì đặc biệt"
+      ],
+      "purpose": "Điều kiện cabin — quyết định câu trả lời được phép dài bao nhiêu.",
+      "maps_to": "cabin_context"
+    },
+    {
+      "n": 25,
+      "kind": "scale",
+      "required": true,
+      "min": 1,
+      "max": 5,
+      "minLabel": "Rất yên tĩnh",
+      "maxLabel": "Rất ồn",
+      "text": "Trong xe anh/chị lúc đang chạy thường ồn tới mức nào?",
+      "purpose": "Mức ồn cabin, biến quyết định thiết kế giọng nói.",
+      "maps_to": "cabin_noise"
+    },
+    {
+      "n": 26,
+      "kind": "paragraph",
+      "required": true,
+      "text": "Kể một chuyến đi cụ thể gần đây mà anh/chị dùng trợ lý: đi đâu, lúc mấy giờ, đi với ai, và nhờ nó làm gì?",
+      "hint": "Càng cụ thể càng tốt — một chuyến thật, không phải nói chung chung.",
+      "purpose": "Khoảnh khắc sử dụng viết đủ 6W. Trường sinh ra nhiều ý tưởng tính năng nhất.",
+      "maps_to": "demand_space"
+    },
+    {
+      "n": 27,
+      "kind": "text",
+      "required": true,
+      "text": "Nếu phải nói gọn một câu: anh/chị thuê trợ lý trên xe để làm giúp việc gì?",
+      "hint": "Ví dụ: 'để tôi không phải rời tay khỏi vô lăng khi cần đổi đường'.",
+      "purpose": "Job chức năng, viết theo lời người dùng.",
+      "maps_to": "job_functional"
+    },
+    {
+      "n": 28,
+      "kind": "text",
+      "required": true,
+      "text": "Và anh/chị muốn cảm thấy thế nào khi nó làm xong việc đó?",
+      "hint": "Ví dụ: 'yên tâm là không đi nhầm', 'đỡ căng khi tắc đường'.",
+      "purpose": "Job cảm xúc — thứ quyết định trợ lý nên nói kiểu gì, không chỉ làm gì.",
+      "maps_to": "job_emotional"
+    },
+    {
+      "n": 29,
+      "kind": "paragraph",
+      "required": true,
+      "text": "Đã có lần nào anh/chị bỏ không dùng trợ lý nữa chưa? Chuyện gì khiến anh/chị bỏ?",
+      "hint": "Nếu chưa từng bỏ thì ghi rõ là chưa, và nêu điều gì suýt khiến anh/chị bỏ.",
+      "purpose": "Lý do rời bỏ — chưa trường nào trong bộ nói tới.",
+      "maps_to": "pain_assistant"
+    },
+    {
+      "n": 30,
+      "kind": "paragraph",
+      "required": true,
+      "text": "Lần đầu anh/chị thử dùng trợ lý trên xe là vì sao?",
+      "hint": "Ai giới thiệu, hay xe có sẵn, hay thấy quảng cáo, hay tự tò mò.",
+      "purpose": "Điều gì khiến người ta bắt đầu dùng.",
+      "maps_to": "adoption_driver"
     }
   ],
   "openQuestionRules": [
@@ -485,6 +662,7 @@
     "Trộn nhiều dạng câu có chủ ý: chuyện thì để tự luận, cường độ thì dùng thang điểm, 'những cái nào' thì cho chọn nhiều. Hỏi tất cả bằng tự luận là cách biến phần này thành một bức tường chữ và làm người ta bỏ ngang.",
     "Câu tự luận KHÔNG ánh xạ sang chiều nào trong schema, nên không đưa vào crosswalk. Chúng cần một bước đọc-và-mã-hoá riêng.",
     "Đặt sau tám câu trắc nghiệm, để người bỏ dở vẫn đi qua phần quan trọng trước.",
-    "Nhãn của câu CHỌN NHIỀU không được chứa dấu phẩy: Google Forms nối các lựa chọn bằng ', ' khi xuất CSV, nên một nhãn có phẩy sẽ bị cắt vụn và cột đó không đọc được. Dùng ' / ' để ngăn cách. Câu chọn một không bị ảnh hưởng."
+    "Nhãn của câu CHỌN NHIỀU không được chứa dấu phẩy: Google Forms nối các lựa chọn bằng ', ' khi xuất CSV, nên một nhãn có phẩy sẽ bị cắt vụn và cột đó không đọc được. Dùng ' / ' để ngăn cách. Câu chọn một không bị ảnh hưởng.",
+    "Bốn trường persona_archetype, persona_summary, segment_size_pct và persona_priority KHÔNG hỏi được tài xế: hai cái đầu do người dựng persona đặt sau khi đọc dữ liệu, hai cái sau là quyết định kinh doanh. Chúng nằm ngoài bảng hỏi, gán ở khâu phân tích."
   ]
 }

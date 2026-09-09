@@ -31,7 +31,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0030
       scenario: Tôi đang lái xe chở con đi học, trời hơi nóng nên tôi thấy khó chịu trong người.
@@ -48,7 +48,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0060
       scenario: Tôi đang lái xe đi đón con tan học, thời tiết hôm nay nóng quá nên tôi muốn chỉnh lại
@@ -66,7 +66,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0000
       scenario: Tôi đang lái xe đưa con đi học, đường phố đông đúc làm mình thấy hơi nóng bức và khó chịu.
@@ -83,7 +83,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0036
       scenario: Tôi đang lái xe đi gặp đối tác, lưng hơi nóng nên muốn làm mát ghế cho dễ chịu.
@@ -100,7 +100,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0066
       scenario: Tôi đang lái xe đường dài, cảm thấy lưng nóng nên muốn bật làm mát ghế cho thoải mái hơn.
@@ -117,7 +117,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0006
       scenario: Tôi đang lái xe đi làm trong ngày hè oi bức, thấy lưng hơi nóng.
@@ -134,7 +134,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0042
       scenario: Tôi đang lái xe qua khu vực nhiều bụi, cần đóng kính lại ngay.
@@ -151,7 +151,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0072
       scenario: Tôi đang lái xe qua khu vực bụi bặm, cần đóng cửa kính lại cho sạch.
@@ -168,7 +168,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0012
       scenario: Tôi đang lái xe trên đường bụi bặm, muốn đóng cửa kính cho yên tĩnh và sạch sẽ.
@@ -185,7 +185,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0048
       scenario: Trời bỗng đổ mưa bất ngờ khi tôi đang lái xe, tôi cần bật gạt mưa ngay.
@@ -202,7 +202,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0078
       scenario: Trời bất ngờ đổ mưa khi tôi đang lái xe, tôi cần bật gạt mưa ngay.
@@ -219,7 +219,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0018
       scenario: Tôi đang lái xe thì trời đổ mưa bất chợt, cần gạt mưa để đảm bảo tầm nhìn.
@@ -236,7 +236,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0054
       scenario: Tôi đang đi trên đường cao tốc, muốn chuyển sang chế độ tiết kiệm điện.
@@ -253,7 +253,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0084
       scenario: Tôi đang đi trên đường cao tốc, muốn tiết kiệm pin nên chuyển sang chế độ lái hiệu quả
@@ -271,7 +271,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0024
       scenario: Tôi đang lái xe trên đường dài, muốn tiết kiệm pin nên cần chuyển chế độ lái.
@@ -288,7 +288,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0114
       scenario: Tôi đang lái xe đi làm, tâm trạng khá bình thản dù đường hơi đông. Tôi chỉ muốn kiểm tra
@@ -306,7 +306,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0090
       scenario: Tôi đang lái xe đi đón con tan học, đường hơi đông nên tôi muốn kiểm tra xem chiều nay
@@ -324,7 +324,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0138
       scenario: Đang lái xe đưa con đi học buổi sáng, mình thấy hơi bận rộn và muốn kiểm tra nhanh lịch
@@ -342,7 +342,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0120
       scenario: Đang lái xe trên cao tốc, tôi nhớ ra cần phải họp nhóm gấp vào sáng mai. Tôi cần đặt lịch
@@ -360,7 +360,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0096
       scenario: Tôi đang lái xe đi công tác, nhớ ra cần họp nhóm sáng mai nên phải đặt lịch ngay.
@@ -377,7 +377,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0144
       scenario: Đang lái xe đi họp và sực nhớ ra cần tạo lịch cho buổi làm việc nhóm vào ngày mai.
@@ -394,7 +394,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0126
       scenario: Tôi đang lái xe tới công ty, chợt nhớ ra phải gửi báo cáo doanh số gấp. Tôi cần ghi lại
@@ -412,7 +412,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0102
       scenario: Tôi đang lái xe đi làm, nhớ ra cần gửi báo cáo gấp cho sếp nên phải ghi lại ngay.
@@ -429,7 +429,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0150
       scenario: Đang lái xe đi làm, mình sợ quên việc gửi báo cáo nên muốn ghi lại vào danh sách việc
@@ -447,7 +447,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0132
       scenario: Tôi đang lái xe về nhà sau ngày dài, sợ quên mua sữa nên muốn nhờ Vita nhắc. Tôi chỉ muốn
@@ -465,7 +465,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0108
       scenario: Tôi đang lái xe về nhà sau giờ làm, sợ về đến nơi lại quên mua sữa cho con.
@@ -482,7 +482,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0156
       scenario: Đang lái xe về nhà, mình muốn chắc chắn là sẽ ghé mua sữa cho con khi gần đến nơi.
@@ -499,7 +499,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0246
       scenario: Tôi đang lái xe đi giao hàng gấp, đường khá đông nên tôi không muốn bị phân tâm.
@@ -516,7 +516,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0162
       scenario: Tôi đang lái xe đi đón con tan học, đường hơi đông nên tôi khá sốt ruột và muốn gọi nhanh
@@ -534,7 +534,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0204
       scenario: Tôi đang lái xe đi đón con tan học, đường khá đông và tôi đang hơi vội.
@@ -551,7 +551,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0252
       scenario: Đường tắc quá, tôi đang vội đi họp nên phải báo cho Lan biết.
@@ -568,7 +568,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0168
       scenario: Đường đang tắc quá, tôi đang trên đường đến cuộc họp và cảm thấy khá lo lắng vì khả năng
@@ -586,7 +586,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0210
       scenario: Tôi đang lái xe đi họp và thấy đường tắc quá, chắc chắn sẽ đến muộn.
@@ -603,7 +603,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0258
       scenario: Tôi đang lái xe vội, cần tìm gấp số anh Nam để gọi.
@@ -620,7 +620,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0174
       scenario: Tôi đang lái xe đi làm và muốn gọi cho anh Nam nhưng không nhớ rõ số, tâm trạng hơi vội.
@@ -637,7 +637,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0216
       scenario: Tôi đang lái xe đi làm và muốn gọi cho anh Nam nhưng không nhớ số.
@@ -654,7 +654,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0264
       scenario: Tôi đang lái xe đường dài, thấy hơi buồn ngủ nên muốn nghe gì đó vui vẻ.
@@ -671,7 +671,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0180
       scenario: Tôi đang lái xe một mình trên đường dài, cảm thấy hơi buồn chán nên muốn tìm cái gì đó
@@ -689,7 +689,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0222
       scenario: Tôi đang lái xe một mình trên đường dài, cảm thấy hơi buồn chán.
@@ -706,7 +706,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0270
       scenario: Tôi đang lái xe, có cuộc điện thoại gọi đến nên cần tắt nhạc ngay.
@@ -723,7 +723,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0186
       scenario: Tôi đang lái xe và cần tập trung vào đường xá nên muốn tắt nhạc.
@@ -740,7 +740,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0228
       scenario: Tôi đang lái xe và có cuộc gọi đến, cần tạm dừng nhạc.
@@ -757,7 +757,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0276
       scenario: Tôi muốn nghe nhạc từ điện thoại qua Bluetooth cho tiện.
@@ -774,7 +774,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0192
       scenario: Tôi đang lái xe và muốn chuyển nhạc từ điện thoại qua Bluetooth để nghe danh sách phát
@@ -792,7 +792,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0234
       scenario: Tôi đang lái xe và muốn chuyển sang nghe nhạc từ điện thoại.
@@ -809,7 +809,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0282
       scenario: Âm thanh hơi to, tôi muốn giảm bớt một chút cho dễ chịu.
@@ -826,7 +826,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0198
       scenario: Tôi đang lái xe và âm thanh hơi to, muốn giảm xuống cho dễ chịu.
@@ -843,7 +843,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0240
       scenario: Tôi đang lái xe và nhạc hơi to, muốn giảm xuống.
@@ -860,7 +860,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0336
       scenario: Tôi đang lái xe về nhà sau buổi làm việc, đường hơi đông và tôi hơi mệt nên chỉ muốn về
@@ -878,7 +878,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0288
       scenario: Tôi đang lái xe đưa hai đứa nhỏ đi học giữa phố xá đông đúc, tâm trạng hơi lo lắng vì
@@ -896,7 +896,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0312
       scenario: Tôi đang lái xe đưa bọn trẻ đi học trong thành phố, lòng hơi lo vì thấy đèn báo pin sáng.
@@ -914,7 +914,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0342
       scenario: Tôi đang lái xe trên cao tốc, thấy pin báo thấp nên hơi lo lắng một chút.
@@ -931,7 +931,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0294
       scenario: Tôi đang lái xe trên cao tốc và thấy pin báo thấp, lòng hơi sốt ruột. Tôi cần tìm ngay
@@ -949,7 +949,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0318
       scenario: Tôi đang lái xe trên phố đông đúc, pin bắt đầu yếu nên cần tìm chỗ sạc nhanh gấp để không
@@ -967,7 +967,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0348
       scenario: Tôi đang lái xe đường dài, pin hơi thấp nên cần lập lộ trình có điểm dừng sạc hợp lý.
@@ -984,7 +984,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0300
       scenario: Tôi đang lái xe đi du lịch cùng gia đình, pin còn hơi ít nên tôi khá lo. Tôi cần lập lộ
@@ -1002,7 +1002,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0324
       scenario: Tôi đang lái xe đi Đà Nẵng, pin khá thấp nên cần lập tuyến đường có trạm sạc phù hợp.
@@ -1019,7 +1019,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0354
       scenario: Tôi đang chạy xe, muốn biết pin đã sạc được bao nhiêu rồi để ước lượng thời gian về nhà.
@@ -1036,7 +1036,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0306
       scenario: Tôi đang lái xe, thấy xe báo đang sạc ở nhà. Tôi chỉ muốn kiểm tra nhanh xem tiến độ đến
@@ -1054,7 +1054,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0330
       scenario: Tôi đang lái xe trên đường, muốn kiểm tra xem pin đã sạc được bao nhiêu rồi.
@@ -1071,7 +1071,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0420
       scenario: Tôi đang lái xe đi đón con tan học, đường hơi đông nên tôi muốn kiểm tra giá vàng một
@@ -1089,7 +1089,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0360
       scenario: Tôi đang lái xe đi đón con tan học, đường hơi đông nên tôi muốn kiểm tra nhanh giá vàng
@@ -1107,7 +1107,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0390
       scenario: Tôi đang lái xe đi đón con tan học, đường phố đông đúc nên tôi hơi căng thẳng và muốn
@@ -1125,7 +1125,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0426
       scenario: Tôi đang lái xe đi làm, trời mưa tầm tã làm kính mờ hết cả, cảm thấy hơi lo lắng.
@@ -1142,7 +1142,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0366
       scenario: Trời đang mưa to khi tôi lái xe đi làm, kính bị mờ khiến tôi thấy hơi khó chịu và mất
@@ -1160,7 +1160,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0396
       scenario: Trời đang đổ mưa lớn khi tôi đang lái xe, kính xe bị mờ khiến tôi hơi lo lắng về tầm nhìn.
@@ -1177,7 +1177,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0432
       scenario: Tôi đang lái xe đi giao hàng, trời âm u quá nên sợ lát nữa sẽ gặp mưa.
@@ -1194,7 +1194,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0372
       scenario: Tôi đang lái xe đi làm, muốn biết thời tiết bên ngoài thế nào để quyết định có cần mang
@@ -1212,7 +1212,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0402
       scenario: Tôi đang lái xe đi làm, trời âm u nên muốn biết nhanh xem có sắp mưa không để còn tính.
@@ -1229,7 +1229,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0438
       scenario: Tôi đang lái xe và chợt tranh luận với người ngồi cạnh về số lượng tỉnh thành, muốn có
@@ -1247,7 +1247,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0378
       scenario: Tôi đang lái xe và tranh luận với người bạn đi cùng về số lượng tỉnh thành ở Việt Nam,
@@ -1266,7 +1266,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0408
       scenario: Tôi đang lái xe trên đường và nảy ra tranh luận về số lượng tỉnh thành ở Việt Nam, cần
@@ -1285,7 +1285,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0444
       scenario: Tôi đang lái xe đường dài, cảm thấy hơi buồn ngủ nên muốn tìm cái gì vui để tỉnh táo hơn.
@@ -1302,7 +1302,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0384
       scenario: Tôi đang lái xe đường dài, cảm thấy hơi buồn ngủ nên muốn nghe một câu chuyện vui để tỉnh
@@ -1320,7 +1320,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0414
       scenario: Tôi đang lái xe một mình trên đường dài, hơi buồn ngủ nên muốn nghe một câu đùa cho vui.
@@ -1337,7 +1337,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0450
       scenario: Tôi đang lái xe chở mấy đứa nhỏ đi chơi thì thấy kim xăng báo gần hết, lòng hơi lo vì
@@ -1355,7 +1355,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0510
       scenario: Tôi đang lái xe đi làm, chợt nhớ ra xe sắp hết xăng mà lại đang vội nên cần tìm trạm gần
@@ -1373,7 +1373,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0480
       scenario: Tôi đang lái xe chở hai đứa nhỏ đi chơi thì thấy kim xăng báo sắp cạn, lòng cũng hơi lo
@@ -1391,7 +1391,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0456
       scenario: Đang lái xe trên cao tốc mà thấy phía trước kẹt quá, tôi muốn đổi hướng đi đường khác
@@ -1409,7 +1409,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0516
       scenario: Tôi đang lái xe trên cao tốc thì thấy biển báo ùn tắc phía trước, cần tìm đường tránh
@@ -1427,7 +1427,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0486
       scenario: Tôi đang lái xe trên cao tốc thì thấy biển báo phía trước có vẻ đang ùn tắc, tôi muốn
@@ -1445,7 +1445,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0462
       scenario: Đang lái xe trên đường mà lòng nôn nao quá, không biết bao giờ mới tới nơi.
@@ -1462,7 +1462,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0522
       scenario: Tôi đang lái xe về nhà sau giờ làm, muốn biết bao giờ mới tới nơi để còn chuẩn bị cơm
@@ -1480,7 +1480,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0492
       scenario: Tôi đang lái xe đưa con đi học, sợ muộn giờ nên sốt ruột không biết bao giờ mới tới.
@@ -1497,7 +1497,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0468
       scenario: Sắp đến tòa nhà rồi, tôi muốn Vita chỉ dẫn lối vào bãi đỗ cho đỡ phải tìm.
@@ -1514,7 +1514,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0528
       scenario: Tôi đang lái xe tới tòa nhà văn phòng, cần Vita hướng dẫn vào bãi đỗ xe cho nhanh.
@@ -1531,7 +1531,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0498
       scenario: Tôi đang lái xe gần tới tòa nhà văn phòng, cần vào bãi đỗ xe để kịp giờ làm.
@@ -1548,7 +1548,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0474
       scenario: Đang lái xe ngang qua Huế, tôi muốn biết thêm về ẩm thực ở đây xem có gì hay để thử.
@@ -1565,7 +1565,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0534
       scenario: Tôi đang lái xe đi ngang qua Huế, muốn tìm hiểu xem ở đây có món gì ngon để ghé ăn.
@@ -1582,7 +1582,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0504
       scenario: Tôi đang lái xe ngang qua Huế, muốn biết thêm về ẩm thực ở đây.
@@ -1599,7 +1599,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0570
       scenario: Tôi đang lái xe đi đón con tan học, đường hơi đông nên tôi muốn kiểm tra nhanh tình trạng
@@ -1617,7 +1617,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0600
       scenario: Tôi đang lái xe đi đón con tan học, đường hơi đông nên tôi muốn kiểm tra lại trạng thái
@@ -1635,7 +1635,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0540
       scenario: Tôi đang lái xe đi đón con tan học, đường hơi đông nên tôi muốn kiểm tra nhanh trạng thái
@@ -1653,7 +1653,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0576
       scenario: Tôi đang lái xe thì thấy đèn báo trên táp-lô sáng, hơi lo lắng vì đang chở gia đình đi
@@ -1671,7 +1671,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0606
       scenario: Tôi đang lái xe đi làm thì thấy đèn cảnh báo lốp sáng lên, cảm thấy hơi lo lắng một chút.
@@ -1688,7 +1688,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0546
       scenario: Đang trên đường đi làm thì đèn cảnh báo lốp sáng lên, tôi hơi lo nên muốn hỏi ngay.
@@ -1705,7 +1705,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0582
       scenario: Tôi đang lái xe trên đường thì thấy máy rung lạ, lo quá nên phải hỏi ngay.
@@ -1722,7 +1722,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0612
       scenario: Tôi đang lái xe trên đường đi làm, thấy động cơ rung bất thường nên khá lo lắng về độ
@@ -1740,7 +1740,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0552
       scenario: Xe đang rung bất thường khi lái, tôi rất lo nên muốn chẩn đoán nhanh.
@@ -1757,7 +1757,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0588
       scenario: Tôi đang lái xe đi làm, nhớ ra là sắp đến hạn bảo dưỡng nên muốn đặt lịch sớm.
@@ -1774,7 +1774,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0618
       scenario: Tôi đang lái xe đi làm và nhớ ra sắp đến lịch bảo dưỡng, muốn đặt lịch sớm cho yên tâm.
@@ -1791,7 +1791,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0558
       scenario: Đang lái xe đi làm, sực nhớ ra cần đặt lịch bảo dưỡng cho xe.
@@ -1808,7 +1808,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0594
       scenario: Tôi đang lái xe đưa con đi học, chợt thắc mắc về độ an toàn của xe.
@@ -1825,7 +1825,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0624
       scenario: Tôi đang lái xe chở gia đình, tự nhiên con hỏi về túi khí nên tôi muốn kiểm tra lại thông
@@ -1843,7 +1843,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0564
       scenario: Đang lái xe chở bạn, họ tò mò hỏi về an toàn của chiếc VF9 này.
@@ -1860,7 +1860,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0690
       scenario: Đang lái xe trên quốc lộ về Đồng Nai, mình muốn kiểm tra nhanh các dòng xe điện của hãng
@@ -1878,7 +1878,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0630
       scenario: Tôi đang lái xe đưa con đi học, đường khá đông nên tôi muốn tra cứu thông tin thật nhanh
@@ -1896,7 +1896,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0660
       scenario: Tôi đang lái xe đưa con đi học, đường phố đông đúc nên tôi muốn giữ tập trung và chỉ cần
@@ -1914,7 +1914,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0696
       scenario: Đang lái xe vội đi họp, tôi muốn hỏi nhanh về chính sách bảo hành để nắm thông tin.
@@ -1931,7 +1931,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0636
       scenario: Tôi đang lái xe trên cao tốc, cần biết nhanh thông tin bảo hành xe điện để không phải
@@ -1949,7 +1949,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0666
       scenario: Tôi đang lái xe đi đón con, tranh thủ hỏi nhanh về chính sách bảo hành để nắm thông tin
@@ -1967,7 +1967,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0702
       scenario: Đang lái xe đi công việc, tôi cần kiểm tra xem cuối tuần có xưởng nào làm việc không.
@@ -1984,7 +1984,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0642
       scenario: Tôi đang lái xe, cần tìm xưởng dịch vụ mở cửa Chủ nhật để đưa xe đi kiểm tra định kỳ.
@@ -2001,7 +2001,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0672
       scenario: Tôi đang lái xe đi làm, cần tìm xưởng dịch vụ gấp để sửa chữa vặt mà không biết chỗ nào
@@ -2019,7 +2019,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0708
       scenario: Đang lái xe về nhà, tự nhiên tò mò muốn biết Vingroup làm những gì.
@@ -2036,7 +2036,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0648
       scenario: Tôi đang lái xe, muốn biết nhanh Vingroup làm những lĩnh vực gì để giải đáp thắc mắc cho
@@ -2054,7 +2054,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0678
       scenario: Tôi đang lái xe đi làm, tranh thủ nghe tin tức về tập đoàn để cập nhật tình hình.
@@ -2071,7 +2071,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0714
       scenario: Đang lái xe, tôi muốn hỏi nhanh về dịch vụ y tế của Vinmec.
@@ -2088,7 +2088,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0654
       scenario: Tôi đang lái xe, muốn biết nhanh dịch vụ của Vinmec để chuẩn bị cho buổi khám sức khỏe
@@ -2106,7 +2106,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0684
       scenario: Tôi đang lái xe đi đón con, cần tìm hiểu dịch vụ của Vinmec để chuẩn bị cho buổi khám
@@ -2124,7 +2124,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0720
       scenario: Tôi đang lái xe đi đón con tan học, đường hơi đông nên tôi muốn biết nhanh xe có thể hỗ
@@ -2142,7 +2142,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0792
       scenario: Tôi đang lái xe đưa các con đi học, đường khá đông và tôi muốn tận dụng thời gian để tìm
@@ -2160,7 +2160,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0756
       scenario: Tôi đang lái xe đưa con đi học, đường đông nên hơi căng thẳng và muốn tận dụng thời gian
@@ -2178,7 +2178,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0726
       scenario: Tôi đang lái xe đi công việc gấp, Vita nói dài dòng quá làm tôi hơi mất tập trung.
@@ -2195,7 +2195,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0798
       scenario: Tôi đang lái xe trên đường cao tốc, Vita nói hơi nhiều làm tôi phân tâm quá.
@@ -2212,7 +2212,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0762
       scenario: Tôi đang vội đưa con đi khám, thấy trợ lý nói hơi dài dòng gây xao nhãng.
@@ -2229,7 +2229,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0732
       scenario: Tôi đang lái xe, muốn chuyển nhanh sang hồ sơ cá nhân để dùng các cài đặt quen thuộc của
@@ -2247,7 +2247,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0804
       scenario: Tôi đang lái xe, muốn chuyển nhanh sang hồ sơ cá nhân để nghe nhạc đúng gu.
@@ -2264,7 +2264,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0768
       scenario: Tôi đang lái xe đi đón con, cần chuyển hồ sơ lái xe cá nhân của mình cho nhanh.
@@ -2281,7 +2281,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0738
       scenario: Tôi đang lái xe mà điện thoại cứ báo kết nối lung tung, phiền quá.
@@ -2298,7 +2298,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0810
       scenario: Tôi đang lái xe, điện thoại cứ tự kết nối gây phiền phức nên muốn ngắt đi.
@@ -2315,7 +2315,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0774
       scenario: Tôi đang lái xe, điện thoại kết nối Bluetooth làm tôi mất tập trung.
@@ -2332,7 +2332,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0744
       scenario: Tôi đang lái xe, mấy cái thông báo tin nhắn cứ hiện lên làm tôi mất tập trung.
@@ -2349,7 +2349,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0816
       scenario: Tôi đang lái xe, thông báo tin nhắn cứ hiện lên làm tôi mất tập trung.
@@ -2366,7 +2366,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0780
       scenario: Tôi đang lái xe, thông báo tin nhắn cứ hiện lên làm tôi khó chịu.
@@ -2383,7 +2383,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-015.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-015.yaml
     seed:
       row_id: row-0750
       scenario: Tôi đang lái xe và muốn đảm bảo quyền riêng tư, không muốn xe biết vị trí của mình lúc
@@ -2401,7 +2401,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-032.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-032.yaml
     seed:
       row_id: row-0822
       scenario: Tôi đang lái xe, lo ngại về quyền riêng tư nên muốn tắt truy cập vị trí.
@@ -2418,7 +2418,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/models/gemini-3.1-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers-forum/persona_vn-drv-055.yaml
+    persona_path: persona/datasets/vn-drivers/persona_vn-drv-055.yaml
     seed:
       row_id: row-0786
       scenario: Tôi đang lái xe và muốn bảo mật vị trí của mình.

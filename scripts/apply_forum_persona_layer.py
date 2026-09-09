@@ -19,7 +19,11 @@ than it is:
 
 Usage:
     python apply_forum_layer.py --measurements otofun_measurements.json \
-        --pool persona/datasets/vn-drivers --out persona/datasets/vn-drivers-forum
+        --pool <base pool> --out persona/datasets/vn-drivers
+
+    The base pool this consumed was consolidated into vn-drivers and is no
+    longer a directory of its own; recover it with
+    ``git show b2ce5d8:persona/datasets/vn-drivers`` if the layer must be rerun.
 """
 
 from __future__ import annotations

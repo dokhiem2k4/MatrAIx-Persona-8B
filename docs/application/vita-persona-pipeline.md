@@ -77,11 +77,11 @@ runs the deployment.
 
 ## Which persona pool
 
-`--persona-pool vn-drivers-forum` (42 personas) is the one to use. Pick ids
-from `persona/datasets/vn-drivers-forum/persona_*.yaml`, and sample with a
+`--persona-pool vn-drivers` (42 personas) is the one to use. Pick ids
+from `persona/datasets/vn-drivers/persona_*.yaml`, and sample with a
 fixed seed if the choice must be reproducible from the repo alone.
 
-It is `vn-drivers-forum` with the sampler's self-contradictions removed. The
+It is `vn-drivers` with the sampler's self-contradictions removed. The
 synthesis graph draws each `lifex_*` field independently of the measured
 demographics, so 23 of the 42 arrived describing someone who is married *and*
 widowed, or 25-34 with an empty nest. The prompt rendered all of it as equally

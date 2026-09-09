@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "name": "matrAIx Persona Dimension Space",
   "headlineBehaviors": 8300000000,
-  "targetDimensions": 1297,
+  "targetDimensions": 1306,
   "note": "Flat unified dimension set. Every sampled persona is assigned exactly one value per dimension. The 'category' tag is for UI grouping/filtering only — it does not nest the schema. The full reachable persona space is the product of all value counts; the 8.3B headline is the corpus of behaviors already simulated within it.",
   "dimensions": [
     {
@@ -22107,7 +22107,7 @@
     {
       "id": "vn_address_register",
       "label": "Vietnamese address register",
-      "category": "Linguistic: Register",
+      "category": "Linguistic: Communication",
       "description": "Vietnamese pronoun pair the persona uses when speaking to an in-car assistant. Vietnamese address is chosen from the speaker's age and gender relative to the addressee, so the generic `register` dimension cannot express it.",
       "values": [
         "anh/em",
@@ -22247,6 +22247,150 @@
       ],
       "phrase": "is {value} when a command must be repeated",
       "index": 1297,
+      "defaultValue": null
+    },
+    {
+      "id": "accent_region",
+      "label": "Regional accent",
+      "category": "Linguistic: Language",
+      "description": "Which Vietnamese regional accent this person speaks. Without it a speech-recognition result cannot be read.",
+      "values": [
+        "Northern",
+        "Central",
+        "Southern",
+        "Mixed"
+      ],
+      "index": 1298,
+      "phrase": "speaks with a {value} accent",
+      "defaultValue": null
+    },
+    {
+      "id": "veh_class",
+      "label": "Vehicle class",
+      "category": "Interests: Culture",
+      "description": "Body class of the car this person drives most. Decides whether a built-in screen and assistant are present at all.",
+      "values": [
+        "Hatchback",
+        "Sedan",
+        "SUV or crossover",
+        "Pickup",
+        "Seven seater or larger",
+        "Truck or commercial",
+        "Does not own"
+      ],
+      "index": 1299,
+      "phrase": "drives a {value}",
+      "defaultValue": null
+    },
+    {
+      "id": "veh_assistant_builtin",
+      "label": "Built-in assistant availability",
+      "category": "Interests: Culture",
+      "description": "Whether the car ships with a manufacturer voice assistant, and whether this person uses it. Separates lived experience from imagination.",
+      "values": [
+        "Built in and used",
+        "Built in but unused",
+        "None, uses phone assistant",
+        "None, uses no assistant"
+      ],
+      "index": 1300,
+      "phrase": "their car assistant situation is {value}",
+      "defaultValue": null
+    },
+    {
+      "id": "drv_exposure",
+      "label": "Weekly driving distance",
+      "category": "Interests: Culture",
+      "description": "Kilometres behind the wheel in a typical week.",
+      "values": [
+        "Under 50 km",
+        "50-150 km",
+        "150-300 km",
+        "300-600 km",
+        "Over 600 km"
+      ],
+      "index": 1301,
+      "phrase": "drives {value} a week",
+      "defaultValue": null
+    },
+    {
+      "id": "trip_mix",
+      "label": "Dominant road type",
+      "category": "Interests: Culture",
+      "description": "Which road type most of their driving happens on. City versus motorway changes what an assistant should take on.",
+      "values": [
+        "Mostly city",
+        "Mostly motorway",
+        "Mostly provincial roads",
+        "Mixed"
+      ],
+      "index": 1302,
+      "phrase": "drives {value}",
+      "defaultValue": null
+    },
+    {
+      "id": "assistant_usage_freq",
+      "label": "Assistant usage frequency",
+      "category": "Interests: Culture",
+      "description": "How often the voice assistant is actually used while driving. Separates steady users from those who quit.",
+      "values": [
+        "Almost every trip",
+        "Several times a week",
+        "Several times a month",
+        "Rarely",
+        "Tried it and stopped"
+      ],
+      "index": 1303,
+      "phrase": "uses the assistant {value}",
+      "defaultValue": null
+    },
+    {
+      "id": "need_state",
+      "label": "Desired feeling of the trip",
+      "category": "Values & Motivation",
+      "description": "What this person most wants a drive to feel like. The emotional need behind the trip, distinct from the task.",
+      "values": [
+        "Quiet and undisturbed",
+        "In control",
+        "Accompanied",
+        "Fast and done",
+        "Entertained"
+      ],
+      "index": 1304,
+      "phrase": "wants a drive to feel {value}",
+      "defaultValue": null
+    },
+    {
+      "id": "cabin_context",
+      "label": "Hands and eyes at the moment of need",
+      "category": "Interests: Culture",
+      "description": "What the driver is occupied with when they most need the assistant. Sets the ceiling on how long an answer may be.",
+      "values": [
+        "Hands on wheel",
+        "Watching the road",
+        "Talking to a passenger",
+        "Searching on phone",
+        "Eating or drinking",
+        "Not occupied"
+      ],
+      "index": 1305,
+      "phrase": "typically has {value} when asking",
+      "defaultValue": null
+    },
+    {
+      "id": "cabin_noise",
+      "label": "Cabin noise level",
+      "category": "Interests: Culture",
+      "description": "How loud the cabin usually is while moving. A design constraint for anything spoken.",
+      "values": [
+        "Very quiet",
+        "Quiet",
+        "Moderate",
+        "Loud",
+        "Very loud"
+      ],
+      "index": 1306,
+      "phrase": "drives in a {value} cabin",
       "defaultValue": null
     }
   ],

@@ -88,7 +88,14 @@ def as_apps_script(spec: dict, include_optional: bool) -> str:
         required = "true" if q.get("required", False) else "false"
         kind = q.get("kind", "paragraph")
         lines.append("  // open ({}) -- not mapped to any dimension".format(kind))
-        if kind == "checkbox":
+        if kind == "choice":
+            labels = ", ".join("'{}'".format(_js(o)) for o in q["options"])
+            lines += [
+                "  form.addMultipleChoiceItem()",
+                "      .setTitle('{}')".format(_js(q["text"])),
+                "      .setChoiceValues([{}])".format(labels),
+            ]
+        elif kind == "checkbox":
             labels = ", ".join("'{}'".format(_js(o)) for o in q["options"])
             lines += [
                 "  form.addCheckboxItem()",
@@ -162,7 +169,9 @@ def as_text(spec: dict, include_optional: bool) -> str:
             if q.get("hint"):
                 out.append("     ({})".format(q["hint"]))
             kind = q.get("kind", "paragraph")
-            if kind == "checkbox":
+            if kind == "choice":
+                out += ["     ( ) {}".format(o) for o in q["options"]]
+            elif kind == "checkbox":
                 out += ["     [ ] {}".format(o) for o in q["options"]]
             elif kind == "scale":
                 lo, hi = q.get("min", 1), q.get("max", 5)
@@ -199,9 +208,9 @@ def write_csv(spec: dict, include_optional: bool, path: Path) -> None:
         # design, not find them missing and assume the table is incomplete.
         for i, q in enumerate(spec.get("openQuestions", []), start=len(questions) + 1):
             kind = q.get("kind", "paragraph")
-            if kind == "checkbox":
+            if kind in ("checkbox", "choice"):
                 for o in q["options"]:
-                    writer.writerow([i, "", q["text"], o, ""])
+                    writer.writerow([i, q.get("maps_to", ""), q["text"], o, ""])
             elif kind == "scale":
                 writer.writerow([i, "", q["text"],
                                  "(thang {}-{})".format(q.get("min", 1), q.get("max", 5)), ""])
