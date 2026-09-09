@@ -12890,5 +12890,95 @@
       "Very annoyed": "Rất khó chịu",
       "Gives up immediately": "Bỏ luôn"
     }
+  },
+  "accent_region": {
+    "label": "Giọng vùng miền",
+    "values": {
+      "Northern": "Giọng Bắc",
+      "Central": "Giọng Trung",
+      "Southern": "Giọng Nam",
+      "Mixed": "Pha trộn"
+    }
+  },
+  "veh_class": {
+    "label": "Hạng xe",
+    "values": {
+      "Hatchback": "Hatchback",
+      "Sedan": "Sedan",
+      "SUV or crossover": "SUV / Crossover",
+      "Pickup": "Bán tải",
+      "Seven seater or larger": "Xe 7 chỗ trở lên",
+      "Truck or commercial": "Xe tải / dịch vụ",
+      "Does not own": "Không sở hữu"
+    }
+  },
+  "veh_assistant_builtin": {
+    "label": "Trợ lý sẵn trên xe",
+    "values": {
+      "Built in and used": "Có sẵn, có dùng",
+      "Built in but unused": "Có sẵn, không dùng",
+      "None, uses phone assistant": "Không có, dùng điện thoại",
+      "None, uses no assistant": "Không dùng trợ lý nào"
+    }
+  },
+  "drv_exposure": {
+    "label": "Quãng đường mỗi tuần",
+    "values": {
+      "Under 50 km": "Dưới 50 km",
+      "50-150 km": "50-150 km",
+      "150-300 km": "150-300 km",
+      "300-600 km": "300-600 km",
+      "Over 600 km": "Trên 600 km"
+    }
+  },
+  "trip_mix": {
+    "label": "Loại đường chính",
+    "values": {
+      "Mostly city": "Chủ yếu nội đô",
+      "Mostly motorway": "Chủ yếu cao tốc",
+      "Mostly provincial roads": "Chủ yếu đường tỉnh",
+      "Mixed": "Hỗn hợp"
+    }
+  },
+  "assistant_usage_freq": {
+    "label": "Tần suất dùng trợ lý",
+    "values": {
+      "Almost every trip": "Gần như mỗi chuyến",
+      "Several times a week": "Vài lần một tuần",
+      "Several times a month": "Vài lần một tháng",
+      "Rarely": "Hiếm khi",
+      "Tried it and stopped": "Đã bỏ"
+    }
+  },
+  "need_state": {
+    "label": "Cảm giác mong muốn",
+    "values": {
+      "Quiet and undisturbed": "Yên tĩnh",
+      "In control": "Kiểm soát",
+      "Accompanied": "Có bầu bạn",
+      "Fast and done": "Nhanh, xong việc",
+      "Entertained": "Được giải trí"
+    }
+  },
+  "cabin_context": {
+    "label": "Tay mắt lúc cần trợ lý",
+    "values": {
+      "Hands on wheel": "Hai tay giữ vô lăng",
+      "Watching the road": "Đang quan sát đường",
+      "Talking to a passenger": "Đang nói chuyện",
+      "Searching on phone": "Đang tìm trên điện thoại",
+      "Eating or drinking": "Đang ăn uống",
+      "Not occupied": "Không bận gì"
+    }
+  },
+  "cabin_noise": {
+    "label": "Mức ồn trong xe",
+    "values": {
+      "Very quiet": "Rất yên",
+      "Quiet": "Yên",
+      "Moderate": "Vừa",
+      "Loud": "Ồn",
+      "Very loud": "Rất ồn"
+    }
   }
 }
