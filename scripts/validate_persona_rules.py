@@ -24,10 +24,15 @@ from __future__ import annotations
 import argparse
 import collections
 import json
+import sys
 from pathlib import Path
 from typing import Any, Callable
 
 import yaml
+
+SCRIPTS_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPTS_DIR))
+from persona_tiers import persona_paths  # noqa: E402
 
 URBAN_CLASS_I = {
     "Ha Noi", "Ho Chi Minh City", "Da Nang", "Hai Phong", "Can Tho",
@@ -45,6 +50,19 @@ class Rule:
 
 
 def _r1(d: dict) -> str | None:
+    """Owning no car is treated as having no car to be equipped or driven far.
+
+    VALIDITY: no counterexample among n=81 respondents. That is weak evidence,
+    not confirmation -- a behaviour occurring in ~2% of drivers would show zero
+    observations at this sample size fairly often. The rule assumes ownership
+    implies access, and a Vietnamese driver who uses a spouse's, a child's or a
+    company car would break it. Revisit when the sample grows.
+
+    DRIFT: resampling under this rule moved cabin_noise by 17 points of total
+    variation, on top of 26 from the DAG change -- the largest shift of any
+    field. cabin_noise is archive tier today; anyone promoting it to prompt tier
+    should know its distribution was reshaped here, not measured.
+    """
     if d.get("veh_class") != "Does not own":
         return None
     problems = []
@@ -57,15 +75,13 @@ def _r1(d: dict) -> str | None:
     return "owns no car but " + ", ".join(problems) if problems else None
 
 
-def _r2(d: dict) -> str | None:
-    if d.get("lstyle_commute_mode") != "Bike":
-        return None
-    if d.get("demo_driver_status") != "Occasional driver":
-        return None
-    if d.get("drv_exposure") in SHORT_DISTANCES or not d.get("drv_exposure"):
-        return None
-    return "commutes by bike and drives occasionally, yet drv_exposure={}".format(
-        d["drv_exposure"])
+# R2 stood here and is deliberately not coming back: "a bike commuter who
+# drives occasionally cannot cover more than 150km a week". One of the 81
+# respondents is exactly that person -- bikes to work every day, drives long
+# trips at weekends. Commute mode says how someone gets to work, not how much
+# they drive, and the two come apart for anyone who owns a car and does not
+# commute in it. The rule had already resampled personas to satisfy a
+# constraint that does not exist.
 
 
 def _r3(d: dict) -> str | None:
@@ -97,18 +113,25 @@ def _r5(d: dict) -> str | None:
 
 
 def _r6(d: dict) -> str | None:
-    builtin = str(d.get("veh_assistant_builtin") or "")
-    if not builtin.startswith("None"):
+    """Only the option that says they use no assistant at all constrains usage.
+
+    The first version fired on any answer starting "None", which swept in
+    "None, uses phone assistant" -- a person who plainly does use one, just not
+    the car's. 22 of 81 real respondents answered exactly that, so the rule was
+    wrong, not them, and it had already resampled sixteen personas to satisfy a
+    constraint that does not exist.
+    """
+    if d.get("veh_assistant_builtin") != "None, uses no assistant":
         return None
     freq = d.get("assistant_usage_freq")
     if freq in {None, "", "Rarely", "Tried it and stopped"}:
         return None
-    return "no built-in assistant yet assistant_usage_freq={}".format(freq)
+    return "uses no assistant at all yet assistant_usage_freq={}".format(freq)
 
 
 RULES = [
     Rule("R1", "no car, yet equipped and driving distance", _r1),
-    Rule("R2", "bike commuter driving occasionally cannot cover that distance", _r2),
+    # R2 removed -- see the block above _r3 for why.
     Rule("R3", "opposed to self-driving cannot delegate vehicle control", _r3),
     Rule("R4", "rural persona placed in a class-I city", _r4),
     Rule("R5", "native English without a reason to have it", _r5),
@@ -138,7 +161,6 @@ REPAIRS: dict[str, list[tuple[str, Callable[[dict], set[str] | None]]]] = {
         ("drv_exposure", lambda d: set(SHORT_DISTANCES)),
         ("cabin_noise", lambda d: None),
     ],
-    "R2": [("drv_exposure", lambda d: set(SHORT_DISTANCES))],
     "R3": [("vn_assistant_task_scope", lambda d: {
         "None", "Navigation only", "Navigation and media", "Most non-driving tasks"})],
     "R4": [("vn_locality", lambda d: None)],
@@ -185,7 +207,7 @@ def main() -> int:
     ap.add_argument("--json-out", type=Path)
     args = ap.parse_args()
 
-    paths = sorted(args.pool.glob("persona_*.yaml"))
+    paths = persona_paths(args.pool)
     if not paths:
         print("no persona_*.yaml under {}".format(args.pool))
         return 1

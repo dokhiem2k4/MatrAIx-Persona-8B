@@ -70,7 +70,7 @@ dimensions:
   att_voice_assistant: Skeptical
   veh_class: SUV or crossover
   veh_assistant_builtin: Built in and used
-  drv_exposure: Under 50 km
+  drv_exposure: 150-300 km
   trip_mix: Mostly city
   assistant_usage_freq: Several times a week
   need_state: Entertained
@@ -344,7 +344,7 @@ grounding:
   drv_exposure:
     assignment_type: generated
     source_ref: vn_driver_survey_2026
-    evidence: vn_driver_survey_2026:conditional_on:demo_driver_status+lstyle_commute_mode+veh_class
+    evidence: vn_driver_survey_2026:conditional_on:veh_class+demo_driver_status+lstyle_commute_mode
     confidence: 0.5
     tier: archive
     excluded_reason: consequence_not_cause

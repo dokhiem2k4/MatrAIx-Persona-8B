@@ -145,7 +145,67 @@ uv run python scripts/measure_forum_language.py <scratch>/otofun_posts.jsonl \
 uv run python scripts/apply_forum_persona_layer.py \
     --measurements persona/datasets/vn-drivers/forum_measurements.json \
     --pool <base pool> --out persona/datasets/vn-drivers
+uv run python scripts/apply_driver_survey_layer.py \
+    --responses <google forms export>.csv \
+    --pool persona/datasets/vn-drivers --out persona/datasets/vn-drivers
+uv run python scripts/write_prompt_views.py persona/datasets/vn-drivers
 ```
 
-The last two steps are deterministic. The crawl is not: the board moves, so a
-later run measures a later population.
+Everything after the crawl is deterministic. The crawl is not: the board moves,
+so a later run measures a later population.
+
+The prompt views are generated, never edited. `write_prompt_views.py --check`
+fails if any view on disk disagrees with the tier list, which is the only thing
+stopping the file the model reads from drifting away from the file it is
+derived from.
+
+## Known gaps, in the order they are worth closing
+
+Recorded here rather than in a tracker because each one is a property of the
+questionnaire or the pool, and whoever next reads this file is the person who
+can close it.
+
+### 1. The survey never asks which province someone lives in
+
+`vn_locality` is therefore generated, `urbanicity` is derived from it, and
+`trip_mix` — conditioned on both — falls all the way back to the pool marginal
+for all 42 personas. It is a random draw wearing the costume of a trait, and
+the prompt view now says so (`unconditioned: true`).
+
+This is the cheapest remaining unlock in the whole layer: one question, one
+dropdown, and three fields stop being guesses. `accent_region` is a tier-A
+field derived from `vn_locality`, so the question buys a measured accent too.
+
+### 2. Two fields whose Vietnamese labels both read as "trust"
+
+`trust_level` (trust in strangers, WVS wording) and `cog_skepticism` (doubt
+toward a claim) render under near-identical Vietnamese labels.
+`LABEL_OVERRIDES` in `scripts/persona_tiers.py` renames them at display time,
+and the prompt view carries the map — but the playground's own label pack is
+separate and has not been updated, so the UI still shows both as "trust". The
+rename is honoured where the model reads and ignored where a human reads,
+which is the wrong way round.
+
+### 3. Phone assistants are invisible
+
+`veh_assistant_builtin` collapses "None, uses phone assistant" and "None, uses
+no assistant" into one field, and 22 of 81 respondents (27%) picked the first.
+For an in-car assistant being evaluated against what drivers already do, that
+group is the most interesting one in the sample and currently cannot be
+selected for. It wants its own dimension, not another option on this one.
+
+### 4. Six respondents drive daily yet name a bicycle as their main transport
+
+Reported by `scripts/check_persona_coherence.py` under BOTH SIDES MEASURED and
+deliberately never repaired. Both answers are real, so the contradiction is in
+the instrument: "main daily transport" and "how often do you drive" are being
+read as the same question by the form and different questions by the
+respondent. Fix the wording, not the pool.
+
+### 5. Conditioning depth is capped by n=81, not by the DAG
+
+The layer prints the depth actually achieved per field on every run. Fields
+asking for three parents get three for a minority of personas —
+`vn_assistant_task_scope` got three for 8 of 42, one for 24. The DAG is now
+structurally sound; what limits it is sample size. Widening the DAG further
+before the sample grows would just deepen the backoff.

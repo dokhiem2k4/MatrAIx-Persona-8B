@@ -37,6 +37,10 @@ from typing import Any, Callable
 
 import yaml
 
+SCRIPTS_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPTS_DIR))
+from persona_tiers import persona_paths  # noqa: E402
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 #: ``grounding`` assignment types meaning "a person answered this".
@@ -153,7 +157,7 @@ def main() -> int:
     parser.add_argument("--out", type=Path, help="destination pool for --fix")
     args = parser.parse_args()
 
-    files = sorted(args.pool.glob("persona_*.yaml"))
+    files = persona_paths(args.pool)
     if not files:
         print("no persona_*.yaml under {}".format(args.pool))
         return 1

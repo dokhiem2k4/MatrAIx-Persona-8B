@@ -72,7 +72,7 @@ dimensions:
   veh_assistant_builtin: None, uses phone assistant
   drv_exposure: 50-150 km
   trip_mix: Mostly city
-  assistant_usage_freq: Tried it and stopped
+  assistant_usage_freq: Almost every trip
   need_state: In control
   cabin_context: Hands on wheel
   cabin_noise: null
@@ -344,7 +344,7 @@ grounding:
   drv_exposure:
     assignment_type: generated
     source_ref: vn_driver_survey_2026
-    evidence: vn_driver_survey_2026:conditional_on:demo_driver_status+lstyle_commute_mode+veh_class
+    evidence: vn_driver_survey_2026:conditional_on:veh_class+demo_driver_status+lstyle_commute_mode
     confidence: 0.5
     tier: archive
     excluded_reason: consequence_not_cause

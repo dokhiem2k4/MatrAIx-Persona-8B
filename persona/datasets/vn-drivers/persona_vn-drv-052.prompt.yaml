@@ -60,6 +60,9 @@ grounding:
   trip_mix:
     assignment_type: generated
     confidence: 0.5
+    unconditioned: true
+    unconditioned_reason: parents (urbanicity, vn_locality) are generated; no province
+      question in the survey
   cabin_context:
     assignment_type: generated
     confidence: 0.5

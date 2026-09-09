@@ -41,6 +41,10 @@ from typing import Any
 
 import yaml
 
+SCRIPTS_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPTS_DIR))
+from persona_tiers import persona_paths  # noqa: E402
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 #: Pinned to the front of the ranking. Losing any of these stops the profile
@@ -93,7 +97,7 @@ def main() -> int:
     args = ap.parse_args()
 
     pool_dir = REPO_ROOT / "persona" / "datasets" / args.pool
-    paths = sorted(pool_dir.glob("persona_*.yaml"))[: args.personas]
+    paths = persona_paths(pool_dir)[: args.personas]
     docs = [(p, yaml.safe_load(p.read_text(encoding="utf-8")) or {}) for p in paths]
     dims = [d.get("dimensions") or {} for _, d in docs]
     order = rank_fields(dims)

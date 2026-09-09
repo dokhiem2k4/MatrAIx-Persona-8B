@@ -25,6 +25,7 @@ there to answer "where did this come from".
 from __future__ import annotations
 
 import collections
+from pathlib import Path
 from typing import Any
 
 #: Answers the assistant actually differ on. Grouped the way the brief reasons
@@ -112,7 +113,34 @@ LABEL_OVERRIDES = {
     "cog_skepticism": "Nghi ngờ thông tin",
 }
 
+#: Prompt-tier fields whose conditioning parents are themselves generated, so
+#: the value carries no measured signal about this respondent -- it is a draw
+#: from the pool's marginal, dressed as a conditional. Flagged in the prompt
+#: view so a reader does not treat it as evidence.
+#:
+#: trip_mix is conditioned on urbanicity and vn_locality. Neither is asked: the
+#: questionnaire has no province or city question, so vn_locality is generated
+#: and urbanicity is derived from it. Adding one province question to the form
+#: is the cheapest way to make this field real.
+UNCONDITIONED = {
+    "trip_mix": "parents (urbanicity, vn_locality) are generated; no province "
+                "question in the survey",
+}
+
 OBSERVED_TYPES = {"observed", "direct", "forum_measured"}
+
+
+def persona_paths(pool: Path, *, recursive: bool = False) -> list[Path]:
+    """Persona files in a pool, excluding the prompt views beside them.
+
+    ``persona_*.yaml`` used to be unambiguous. Once ``persona_x.prompt.yaml``
+    started living in the same directory the glob matched both, and every
+    caller silently doubled its pool: the validator reported 84 personas out of
+    42 and passed on the views, which carry no guard fields for a rule to fire
+    against. A view is a projection, never an input.
+    """
+    it = pool.rglob("persona_*.yaml") if recursive else pool.glob("persona_*.yaml")
+    return sorted(p for p in it if not p.name.endswith(".prompt.yaml"))
 
 
 def tier_of(field_id: str) -> str:
@@ -172,6 +200,18 @@ def apply_tiers(persona: dict[str, Any]) -> dict[str, int]:
     return dict(counts)
 
 
+def _prompt_grounding(entry: dict[str, Any] | None, field: str) -> dict[str, Any]:
+    entry = entry or {}
+    out: dict[str, Any] = {
+        "assignment_type": entry.get("assignment_type"),
+        "confidence": entry.get("confidence"),
+    }
+    if field in UNCONDITIONED:
+        out["unconditioned"] = True
+        out["unconditioned_reason"] = UNCONDITIONED[field]
+    return out
+
+
 def prompt_view(persona: dict[str, Any]) -> dict[str, Any]:
     """The tier-A subset, ready to render.
 
@@ -187,12 +227,6 @@ def prompt_view(persona: dict[str, Any]) -> dict[str, Any]:
         "display_name": persona.get("display_name"),
         "tier": "prompt",
         "dimensions": kept,
-        "grounding": {
-            k: {
-                "assignment_type": (grounding.get(k) or {}).get("assignment_type"),
-                "confidence": (grounding.get(k) or {}).get("confidence"),
-            }
-            for k in kept
-        },
+        "grounding": {k: _prompt_grounding(grounding.get(k), k) for k in kept},
         "label_overrides": {k: v for k, v in LABEL_OVERRIDES.items() if k in kept},
     }

@@ -72,10 +72,17 @@ SCREEN_IN = ("Lái hằng ngày", "Thỉnh thoảng lái")
 #: att_electric_vehicles; both scored above the threshold on 81 responses and
 #: neither is a cause of anything. A stance on electric cars does not decide how
 #: loud a cabin is.
+#: ORDER IS LOAD-BEARING. weights_with_backoff keeps ``parents[:depth]``, so
+#: parents are dropped from the right. A parent that a hard rule depends on must
+#: therefore come FIRST, or thin data will drop exactly the conditioning that
+#: keeps the rule satisfiable and leave the validator to repair after the fact.
+#: With 24 of 42 personas backing off to a single parent on
+#: vn_assistant_task_scope, that is more than half the pool being fixed in post
+#: rather than generated right.
 CONDITIONED_ON = {
     "vn_locality": ("urbanicity",),
     "veh_class": ("lstyle_commute_mode", "socioeconomic_band"),
-    "drv_exposure": ("demo_driver_status", "lstyle_commute_mode", "veh_class"),
+    "drv_exposure": ("veh_class", "demo_driver_status", "lstyle_commute_mode"),
     "veh_assistant_builtin": ("veh_class", "tech_savviness"),
     "assistant_usage_freq": ("veh_assistant_builtin", "demo_driver_status"),
     "vn_assistant_task_scope": ("att_self_driving_cars", "cog_patience", "cog_skepticism"),
@@ -221,6 +228,11 @@ def main() -> int:
     parser.add_argument("--responses", type=Path, required=True)
     parser.add_argument("--pool", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
+    # Changing the DAG and adding the rules in one run makes any drift in the
+    # marginals un-attributable. This runs the generation half alone, so the
+    # rules' own effect can be measured against it.
+    parser.add_argument("--skip-rules", action="store_true",
+                        help="generate without the validator pass")
     args = parser.parse_args()
 
     records = read_responses(args.responses.expanduser())
@@ -228,7 +240,7 @@ def main() -> int:
         print("no eligible responses in {}".format(args.responses))
         return 1
 
-    paths = sorted(args.pool.glob("persona_*.yaml"))
+    paths = persona_paths(args.pool)
     personas = [(p, yaml.safe_load(p.read_text(encoding="utf-8")) or {}) for p in paths]
     print("{} eligible responses shape {} personas\n".format(len(records), len(personas)))
 
@@ -335,23 +347,30 @@ def main() -> int:
                 pool_values[key].append(str(value))
 
     MAX_PASSES = 8
-    for attempt in range(1, MAX_PASSES + 1):
-        offending = [(pa, pe) for pa, pe in personas if violations(pe)]
-        if not offending:
-            print("validator: clean after {} pass(es)".format(attempt - 1))
-            break
-        for _, persona in offending:
-            repair(persona, pool_values, rng=rng)
+    if args.skip_rules:
+        print("validator: skipped (--skip-rules)")
     else:
-        remaining = {
-            str(pe.get("persona_id")): [c for c, _ in violations(pe)]
-            for _, pe in personas
-            if violations(pe)
-        }
-        raise SystemExit(
-            "validator did not converge in {} passes; still failing: {}".format(
-                MAX_PASSES, remaining)
-        )
+      for attempt in range(1, MAX_PASSES + 1):
+          offending = [(pa, pe) for pa, pe in personas if violations(pe)]
+          if not offending:
+              print("validator: clean after {} pass(es)".format(attempt - 1))
+              break
+          for _, persona in offending:
+              repair(persona, pool_values, rng=rng)
+      else:
+          if args.skip_rules:
+              print("validator: skipped")
+              remaining = {}
+          else:
+              remaining = {
+              str(pe.get("persona_id")): [c for c, _ in violations(pe)]
+              for _, pe in personas
+              if violations(pe)
+          }
+          raise SystemExit(
+              "validator did not converge in {} passes; still failing: {}".format(
+                  MAX_PASSES, remaining)
+          )
 
     # Acceptance criterion: a derived field must rest on a measured one. This is
     # a build failure, not a warning -- the whole point of provenance is that a

@@ -30,11 +30,16 @@ from __future__ import annotations
 import argparse
 import itertools
 import shutil
+import sys
 import statistics
 from pathlib import Path
 from typing import Any
 
 import yaml
+
+SCRIPTS_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPTS_DIR))
+from persona_tiers import persona_paths  # noqa: E402
 
 #: Every value of every axis here survives into the coreset. Chosen because
 #: losing one removes a case the evaluation can no longer test: drop the only
@@ -58,7 +63,7 @@ COVER_AXES = (
 
 def load(pool: Path) -> list[tuple[Path, str, dict[str, Any]]]:
     out = []
-    for path in sorted(pool.glob("persona_*.yaml")):
+    for path in persona_paths(pool):
         data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
         out.append((path, str(data.get("persona_id") or path.stem), data))
     return out

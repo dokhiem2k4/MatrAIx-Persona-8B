@@ -18,9 +18,14 @@ from __future__ import annotations
 
 import argparse
 import os
+import sys
 from pathlib import Path
 
 import yaml
+
+SCRIPTS_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPTS_DIR))
+from persona_tiers import persona_paths  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -39,7 +44,7 @@ MAX_OUTPUT_TOKENS = 16384
 
 def persona_paths(pool: Path, limit: int | None) -> list[tuple[str, str, Path]]:
     out = []
-    for path in sorted(pool.glob("persona_*.yaml")):
+    for path in persona_paths(pool):
         raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
         out.append((raw.get("persona_id") or path.stem, raw.get("display_name") or "", path))
     return out[:limit] if limit else out

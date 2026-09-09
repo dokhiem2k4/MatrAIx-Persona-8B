@@ -28,9 +28,14 @@ import html
 import itertools
 import json
 import statistics
+import sys
 from pathlib import Path
 
 import yaml
+
+SCRIPTS_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPTS_DIR))
+from persona_tiers import persona_paths  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 LABELS_VI = REPO_ROOT / "persona/schema/labels/dimensions.labels.vi.json"
@@ -66,7 +71,7 @@ def load_labels() -> tuple[dict, dict]:
 
 def load_personas(pool: Path) -> list[dict]:
     out = []
-    for path in sorted(pool.glob("persona_*.yaml")):
+    for path in persona_paths(pool):
         raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
         out.append(
             {
