@@ -18,7 +18,7 @@ from application.scripts.vita_case_jobs import (
 )
 
 TASK = "application/tasks/chat_0709-vita-drive-golden-error-recovery"
-PERSONA = "persona/datasets/vn-drivers-forum/persona_vn-drv-001.yaml"
+PERSONA = "persona/datasets/vn-drivers/persona_vn-drv-001.yaml"
 
 
 def build(**overrides):
@@ -76,7 +76,7 @@ def test_drift_is_reported_when_a_persona_changed_or_vanished():
     assert any("persona changed" in problem for problem in manifest_module.check_drift(m))
 
     gone = build()
-    gone["personas"][0]["persona_path"] = "persona/datasets/vn-drivers-forum/nope.yaml"
+    gone["personas"][0]["persona_path"] = "persona/datasets/vn-drivers/nope.yaml"
     assert any("persona file is gone" in problem for problem in manifest_module.check_drift(gone))
 
 

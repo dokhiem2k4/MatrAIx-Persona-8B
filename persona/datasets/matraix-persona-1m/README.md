@@ -53,7 +53,7 @@ Ba đường, chưa đường nào được làm:
 2. Xin bản phát hành mới mã hoá theo số chiều hiện tại / 1 byte. Lưu ý số này
    còn tăng tiếp, nên một bản phát hành cố định sẽ lại lệch sau vài commit —
    đường 1 bền hơn.
-3. Dùng pool khác. `vn-drivers-forum` (42 tài xế Việt) hợp hơn cho các task Vita
+3. Dùng pool khác. `vn-drivers` (42 tài xế Việt) hợp hơn cho các task Vita
    hiện tại, vốn chỉ chạy 1–3 persona mỗi lượt.
 
 Dù chọn đường nào, nên **nâng `format_version`** khi bố cục nhị phân đổi. Nếu

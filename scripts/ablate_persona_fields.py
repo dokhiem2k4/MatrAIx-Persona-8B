@@ -32,7 +32,7 @@ two base runs every field looks alive and the experiment answers nothing.
 
     # screens + build the experiment
     uv run python scripts/ablate_persona_fields.py \\
-        --pool vn-drivers-forum --personas 8 --out-dir data/ablation
+        --pool vn-drivers --personas 8 --out-dir data/ablation
 """
 
 from __future__ import annotations
@@ -155,7 +155,7 @@ def rendered_profile(dimensions: dict[str, Any]) -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--pool", default="vn-drivers-forum")
+    ap.add_argument("--pool", default="vn-drivers")
     ap.add_argument("--personas", type=int, default=8, help="how many personas carry the experiment")
     ap.add_argument("--out-dir", type=Path, default=Path("data/ablation"))
     ap.add_argument("--job-prefix", default="abl")
