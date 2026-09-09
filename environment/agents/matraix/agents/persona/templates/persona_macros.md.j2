@@ -2,9 +2,9 @@
    Agent-facing text must read as direct identity — never mention simulation,
    persona IDs, schema versions, or "stay in character" roleplay cues. #}
 
-{% macro render_persona_narrative(paragraphs) -%}
+{% macro render_persona_narrative(paragraphs, locale='') -%}
 {% if paragraphs %}
-## Who you are
+## {{ {'vi': 'Bạn là ai'}.get(locale, 'Who you are') }}
 
 {% for paragraph in paragraphs -%}
 {{ paragraph }}

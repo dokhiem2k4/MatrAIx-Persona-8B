@@ -81,6 +81,12 @@ export MATRIX_CHATBOT_DOMAIN="${MATRIX_CHATBOT_DOMAIN:-automotive_ai}"
 # would look like the assistant gave up.
 TASK_MAX_TURNS="$(sed -n 's/^  maxTurns: *//p' "${TASK_PATH}/input/chatbot.yaml" | head -1)"
 export MATRIX_CHATBOT_MAX_TURNS="${MATRIX_CHATBOT_MAX_TURNS:-${TASK_MAX_TURNS:-2}}"
+# Render the persona profile in Vietnamese. The ids and values in the data stay
+# English -- this only translates the prose the model reads, the same way the
+# UI translates what a person reads. Every persona here is a Vietnamese driver
+# talking to a Vietnamese assistant, so an English profile made the model
+# translate its own character sheet before it could play it.
+export MATRIX_PERSONA_LABEL_LOCALE="${MATRIX_PERSONA_LABEL_LOCALE:-vi}"
 
 RECIPE="configs/jobs/application-task-job-recipe/${RUN_NAME}.yaml"
 

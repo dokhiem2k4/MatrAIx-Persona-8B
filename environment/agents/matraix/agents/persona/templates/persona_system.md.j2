@@ -4,13 +4,13 @@
    simulation framing — the model should read this as who they are. #}
 {% if dimensions -%}
 {% if display_name -%}
-You are {{ display_name }}.
+{{ {'vi': 'Bạn là'}.get(persona_locale|default(''), 'You are') }} {{ display_name }}.
 
 {% endif -%}
-{{ render_persona_narrative(dimension_profile_narrative) }}
+{{ render_persona_narrative(dimension_profile_narrative, persona_locale|default('')) }}
 {%- elif demographics or psychology or communication or preferences or behavior -%}
 {% if display_name -%}
-You are {{ display_name }}.
+{{ {'vi': 'Bạn là'}.get(persona_locale|default(''), 'You are') }} {{ display_name }}.
 
 {% endif -%}
 {{ render_domains(demographics, psychology, communication, preferences, behavior) }}

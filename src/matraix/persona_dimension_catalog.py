@@ -24,6 +24,89 @@ DEFAULT_CATALOG_PATH = "persona/schema/dimensions.json"
 # MATRAIX_PERSONA_PROFILE_MAX_CHARS only for emergency local debugging.
 DEFAULT_PROFILE_MAX_CHARS: int | None = None
 
+# A persona prompt is prose the model reads, so it follows the same rule as any
+# other display string: the ids and values stay English wherever data is
+# stored, filtered, stratified or scored, and only the rendered sentence is
+# translated. `cog_verbosity` is still `cog_verbosity` and `Balanced` is still
+# `Balanced` in every file, CSV column and score.
+#
+# Off unless MATRIX_PERSONA_LABEL_LOCALE names a pack, so no other task's
+# prompts change under it.
+LABEL_PACK_PATH = "persona/schema/labels/dimensions.labels.{locale}.json"
+LABEL_LOCALE_ENV = "MATRIX_PERSONA_LABEL_LOCALE"
+
+# Section headings and the two fixed phrases live in the code, not the pack:
+# the pack translates dimensions, and these are the frame around them.
+_SECTION_HEADINGS: dict[str, dict[str, str]] = {
+    "vi": {
+        "Identity": "Nhân thân",
+        "Career & education": "Nghề nghiệp & học vấn",
+        "Language & communication": "Ngôn ngữ & giao tiếp",
+        "Personality & values": "Tính cách & giá trị sống",
+        "Current interaction state": "Trạng thái lúc này",
+        "Worldview": "Thế giới quan",
+        "Interests": "Sở thích",
+        "Skills & expertise": "Kỹ năng & chuyên môn",
+        "Lifestyle & health": "Lối sống & sức khoẻ",
+        "Developer & AI": "Lập trình & AI",
+        "Other attributes": "Thuộc tính khác",
+    }
+}
+
+_OMISSION_NOTE: dict[str, str] = {
+    "vi": "_…và {n} thuộc tính khác được lược bớt cho vừa ngữ cảnh._",
+}
+
+
+def resolve_label_locale(locale: str | None = None) -> str:
+    """Locale for rendered persona prose, or "" to keep the catalog's English."""
+    if locale is not None:
+        return locale.strip()
+    return os.environ.get(LABEL_LOCALE_ENV, "").strip()
+
+
+@lru_cache(maxsize=4)
+def load_label_pack(locale: str) -> dict[str, Any]:
+    """Dimension label pack for a locale, or an empty mapping when absent.
+
+    Missing pack is not an error: a locale with no pack renders English, which
+    is what every task did before this existed.
+    """
+    if not locale:
+        return {}
+    path = Path(LABEL_PACK_PATH.format(locale=locale))
+    if not path.is_file():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    dimensions = data.get("dimensions")
+    return dimensions if isinstance(dimensions, dict) else {}
+
+
+def _localize_label(dim_id: str, label: str, pack: dict[str, Any]) -> str:
+    entry = pack.get(dim_id)
+    if isinstance(entry, dict) and entry.get("label"):
+        return str(entry["label"]).strip()
+    return label
+
+
+def _localize_value(dim_id: str, text: str, pack: dict[str, Any]) -> str:
+    """Translate a value, term by term, leaving anything unmapped in English.
+
+    Multi-valued dimensions arrive already joined with ", ", so each term is
+    looked up on its own; a half-translated list still reads better than an
+    untranslated one, and an unmapped term stays recognisable.
+    """
+    entry = pack.get(dim_id)
+    values = (entry or {}).get("values") if isinstance(entry, dict) else None
+    if not isinstance(values, dict):
+        return text
+    parts = [part.strip() for part in text.split(",")]
+    return ", ".join(str(values.get(part, part)) for part in parts)
+
+
 _NULLISH = frozenset(
     {
         "",
@@ -155,14 +238,21 @@ PRIMARY_LANGUAGE_OUTPUT_INSTRUCTION = (
     "Default written language: use your primary language for outputs."
 )
 
+_PRIMARY_LANGUAGE_OUTPUT_INSTRUCTION_BY_LOCALE: dict[str, str] = {
+    "vi": "Ngôn ngữ viết mặc định: dùng tiếng mẹ đẻ của bạn khi trả lời.",
+}
+
 
 def _primary_language_output_instruction(
     dimensions: dict[str, Any],
+    locale: str = "",
 ) -> str | None:
     primary_language = _dim_value(dimensions, "primary_language")
     if primary_language is None:
         return None
-    return PRIMARY_LANGUAGE_OUTPUT_INSTRUCTION
+    return _PRIMARY_LANGUAGE_OUTPUT_INSTRUCTION_BY_LOCALE.get(
+        locale, PRIMARY_LANGUAGE_OUTPUT_INSTRUCTION
+    )
 
 
 @lru_cache(maxsize=4)
@@ -294,8 +384,15 @@ def collect_dimension_items(
     dimensions: dict[str, Any],
     *,
     catalog_path: str = DEFAULT_CATALOG_PATH,
+    locale: str | None = None,
 ) -> dict[str, list[tuple[str, str, str]]]:
-    """Group keepable dims into section -> [(dim_id, label, value), ...]."""
+    """Group keepable dims into section -> [(dim_id, label, value), ...].
+
+    ``dim_id`` stays canonical whatever the locale: callers group, filter and
+    score on it. Only ``label`` and ``value`` are translated, and only for the
+    prose the model reads.
+    """
+    pack = load_label_pack(resolve_label_locale(locale))
     catalog = load_dimension_catalog(catalog_path)
     by_id: dict[str, dict[str, Any]] = catalog["by_id"]
     grouped: dict[str, list[tuple[str, str, str]]] = {h: [] for h, _ in _SECTIONS}
@@ -321,8 +418,10 @@ def collect_dimension_items(
 
         category = str((meta or {}).get("category") or "")
         heading = _section_for(dim_id, category)
-        label = _label_for(dim_id, meta)
-        grouped.setdefault(heading, []).append((dim_id, label, text))
+        label = _localize_label(dim_id, _label_for(dim_id, meta), pack)
+        grouped.setdefault(heading, []).append(
+            (dim_id, label, _localize_value(dim_id, text, pack))
+        )
 
     return {key: value for key, value in grouped.items() if value}
 
@@ -332,13 +431,18 @@ def build_dimension_narrative(
     *,
     catalog_path: str = DEFAULT_CATALOG_PATH,
     max_chars: int | None = None,
+    locale: str | None = None,
 ) -> list[str]:
     """Schema-driven profile sections for agent roleplay (full 1290, adaptive).
 
     Returns a list of markdown section blocks for the Jinja persona macros.
     """
     budget = resolve_profile_max_chars(max_chars)
-    grouped = collect_dimension_items(dimensions, catalog_path=catalog_path)
+    resolved_locale = resolve_label_locale(locale)
+    headings = _SECTION_HEADINGS.get(resolved_locale, {})
+    grouped = collect_dimension_items(
+        dimensions, catalog_path=catalog_path, locale=resolved_locale
+    )
     if not grouped:
         return []
 
@@ -372,13 +476,14 @@ def build_dimension_narrative(
             if not fitted:
                 omitted += len(items)
                 continue
-            block = _format_section(heading, fitted)
+            block = _format_section(headings.get(heading, heading), fitted)
         else:
             block = _format_section(
-                heading, [(label, value) for _dim_id, label, value in items]
+                headings.get(heading, heading),
+                [(label, value) for _dim_id, label, value in items],
             )
             required_instruction = (
-                _primary_language_output_instruction(dimensions)
+                _primary_language_output_instruction(dimensions, resolved_locale)
                 if heading == "Language & communication"
                 else None
             )
@@ -389,8 +494,11 @@ def build_dimension_narrative(
         used_chars += len(block) + 2  # blank line between sections
 
     if omitted > 0:
+        note = _OMISSION_NOTE.get(resolved_locale)
         rendered.append(
-            f"_…and {omitted} more attributes omitted to fit the context budget._"
+            note.format(n=omitted)
+            if note
+            else f"_…and {omitted} more attributes omitted to fit the context budget._"
         )
 
     return rendered
@@ -401,10 +509,18 @@ def build_template_context_extras(
     *,
     catalog_path: str = DEFAULT_CATALOG_PATH,
     max_chars: int | None = None,
+    locale: str | None = None,
 ) -> dict[str, Any]:
+    resolved_locale = resolve_label_locale(locale)
     return {
         "dimension_profile_narrative": build_dimension_narrative(
-            dimensions, catalog_path=catalog_path, max_chars=max_chars
+            dimensions,
+            catalog_path=catalog_path,
+            max_chars=max_chars,
+            locale=resolved_locale,
         ),
         "dimension_catalog_path": catalog_path,
+        # The Jinja templates read this for the fixed phrases around the
+        # profile ("You are ...", "Who you are").
+        "persona_locale": resolved_locale,
     }
