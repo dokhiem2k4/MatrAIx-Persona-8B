@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": { "contextType": "task_outcome" },
+      "distributions": [
+        { "id": "task_outcome.status", "facetKey": "outcome_status", "title": "Kết quả chấm" },
+        { "id": "task_outcome.broader_role", "facetKey": "recognised_broader_role", "title": "Nhận ra vai trò rộng hơn" }
+      ]
+    },
+    {
+      "match": { "contextType": "brand_recognition" },
+      "distributions": [
+        { "id": "brand.by_encounter", "facetKey": "encounter_code", "title": "Cách tiếp xúc" },
+        { "id": "brand.scope", "facetKey": "scope_perceived", "title": "Vita là loại trợ lý gì" },
+        { "id": "brand.axes_hit", "facetKey": "brand_axes_hit", "title": "Số trục thương hiệu chạm được" },
+        { "id": "brand.trust", "facetKey": "would_trust", "title": "Có tin tưởng giao việc" }
+      ]
+    }
+  ]
+}

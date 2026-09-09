@@ -1,0 +1,43 @@
+artifactName: user_feedback.json
+instructions: |
+  Bạn vừa nói chuyện với trợ lý Vita trên xe. Ba câu dưới đây hỏi về ấn tượng
+  của bạn về CHÍNH TRỢ LÝ ĐÓ — không phải về việc nó vừa làm xong hay chưa.
+
+  Trả lời như một người mới dùng, dựa trên đúng những gì vừa nghe. Đừng đoán
+  thêm những thứ nó chưa từng nói với bạn, và cũng đừng nhắc lại nguyên văn câu
+  của nó — hãy nói bằng lời của bạn.
+
+  VIẾT TOÀN BỘ BẰNG TIẾNG VIỆT.
+
+fields:
+  - key: assistantRole
+    prompt: Theo bạn, Vita là gì và nó giúp bạn được những việc gì?
+    kind: string
+  - key: assistantPromises
+    prompt: >-
+      Vita hứa hẹn mang lại cho bạn những giá trị gì? Kể ra những điều bạn cảm
+      nhận được, không cần đủ hay đúng thứ tự.
+    kind: string
+  - key: threeWords
+    prompt: >-
+      Dùng đúng BA TỪ (hoặc ba cụm ngắn) để mô tả Vita, cách nhau bằng dấu phẩy.
+    kind: string
+    explanation:
+      key: threeWordsReason
+      prompt: Vì sao ba từ đó? Dẫn chỗ trong cuộc nói chuyện khiến bạn thấy vậy.
+  - key: moreThanCarControl
+    prompt: >-
+      Bạn thấy Vita chỉ là trợ lý điều khiển xe bằng giọng nói, hay là trợ lý
+      hỗ trợ cuộc sống hằng ngày rộng hơn thế?
+    kind: enum
+    choices: [car_control_only, broader_daily_assistant, unclear]
+    explanation:
+      key: moreThanCarControlReason
+      prompt: Điều gì trong cuộc nói chuyện làm bạn nghĩ vậy?
+  - key: wouldTrust
+    prompt: Bạn có thấy tin tưởng để giao việc cho Vita không?
+    kind: enum
+    choices: [yes, partially, no]
+    explanation:
+      key: wouldTrustReason
+      prompt: Nếu trả lời "partially", nói rõ việc nào bạn giao được và việc nào chưa.
