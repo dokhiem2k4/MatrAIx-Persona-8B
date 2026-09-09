@@ -84,16 +84,27 @@ def observed_tool_names(exposure: Any) -> list[str]:
     return sorted(names)
 
 
-def decision_from_signals(exposure: Any) -> tuple[str, str]:
+def asks_a_question(reply: str) -> bool:
+    """Does this reply put a question back to the driver?
+
+    Trailing "?" only, on the last sentence. A reply that merely contains one
+    -- "Bạn hỏi trạm sạc à? Đã dẫn đường rồi nhé." -- is an assistant that
+    answered, not one that is waiting.
+    """
+    text = (reply or "").strip().rstrip("\"')]}")
+    return text.endswith("?") or text.endswith("？")
+
+
+def decision_from_signals(exposure: Any, reply: str = "") -> tuple[str, str]:
     """Derive the decision class from the deployment's metadata signals.
 
     Source is ``derived``, never ``structured``: these are typed signals the
     assistant emits about its own turn, but the mapping to the dataset's five
     classes is this file's judgement, not the deployment's.
 
-    Two classes are deliberately NOT derived. A plain conversational answer and
-    a refusal both surface as a completed turn with no tool and no flag, so
-    picking one would invent data; those stay ``unknown``.
+    A refusal and a plain conversational answer are still NOT derived: both
+    surface as a completed turn with no tool and no flag, and picking one would
+    invent data. Those stay ``unknown``.
     """
     if not exposure:
         return ("", "unavailable")
@@ -112,6 +123,19 @@ def decision_from_signals(exposure: Any) -> tuple[str, str]:
     if results:
         failed = any(isinstance(r, dict) and r.get("success") is False for r in results)
         return ("defer_retry" if failed else "execute", "derived")
+
+    # The deployment does not raise needsFollowUp reliably: the same assistant
+    # asking the same kind of question was seen reporting
+    # turnStatus=awaiting_clarification with the flag on in one run, and
+    # turnStatus=completed with the flag off in another. Reading the reply
+    # recovers those turns -- an assistant that ran no tool and ended on a
+    # question is waiting for an answer, whatever it flagged.
+    #
+    # Kept as a separate source so a report can subtract it: this is weaker
+    # evidence than a typed signal, and the number of trials that need it is
+    # itself the measurement of the reporting bug.
+    if asks_a_question(reply):
+        return ("clarify_or_offer", "derived_from_text")
 
     return ("", "unknown")
 
@@ -447,7 +471,9 @@ def build_evaluation_payload(
     # much of the number is inference.
     decision, decision_source = observed_decision(exposure)
     if decision_source != "structured":
-        decision, decision_source = decision_from_signals(exposure)
+        decision, decision_source = decision_from_signals(
+            exposure, str(observation.get("first_assistant_message") or "")
+        )
     if decision_source in ("unavailable", "unknown"):
         decision_match = decision_source
     else:

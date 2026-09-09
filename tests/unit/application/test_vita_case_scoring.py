@@ -444,3 +444,56 @@ def test_payload_attaches_every_self_report_field():
         "need_satisfaction_notes",
         "preference_satisfaction_notes",
     }
+
+
+# The deployment does not raise needsFollowUp reliably. The same assistant
+# asking the same kind of question reported awaiting_clarification with the
+# flag on in one run, and completed with the flag off in another -- so the
+# reply text is read as a fallback, under its own source name.
+def test_a_question_with_no_tool_is_read_as_a_clarification():
+    from case_scoring import decision_from_signals
+
+    exposure = _exp(needsFollowUp=False, turnStatus="completed")
+    assert decision_from_signals(exposure, "Bác muốn tìm loại địa điểm nào ạ?") == (
+        "clarify_or_offer",
+        "derived_from_text",
+    )
+
+
+def test_the_typed_flag_still_wins_over_the_text():
+    """A flag is stronger evidence; the fallback must not relabel its source."""
+    from case_scoring import decision_from_signals
+
+    got, source = decision_from_signals(_exp(needsFollowUp=True), "Bạn muốn gì ạ?")
+    assert (got, source) == ("clarify_or_offer", "derived")
+
+
+def test_a_question_asked_after_running_a_tool_is_not_a_clarification():
+    """Vita acted and then offered more. That is execute, not waiting."""
+    from case_scoring import decision_from_signals
+
+    exposure = _exp(toolResults=[{"tool": "open_google_maps_route", "success": True}])
+    assert decision_from_signals(exposure, "Đã dẫn đường. Bạn cần gì nữa không?") == (
+        "execute",
+        "derived",
+    )
+
+
+def test_a_statement_stays_unknown_rather_than_being_guessed():
+    """A refusal and a plain answer look identical here; guessing invents data."""
+    from case_scoring import decision_from_signals
+
+    exposure = _exp(turnStatus="completed")
+    assert decision_from_signals(exposure, "Mình không hỗ trợ việc đó.") == ("", "unknown")
+    assert decision_from_signals(exposure, "") == ("", "unknown")
+
+
+def test_only_a_trailing_question_counts():
+    """"Bạn hỏi trạm sạc à? Đã dẫn đường rồi." answered; it is not waiting."""
+    from case_scoring import asks_a_question
+
+    assert asks_a_question("Bác muốn tìm loại địa điểm nào ạ?")
+    assert asks_a_question('Bạn muốn đi đâu ạ?"')
+    assert not asks_a_question("Bạn hỏi trạm sạc à? Đã dẫn đường rồi nhé.")
+    assert not asks_a_question("Đã bật điều hòa.")
+    assert not asks_a_question("")
