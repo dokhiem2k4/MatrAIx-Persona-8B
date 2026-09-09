@@ -276,7 +276,13 @@ def main() -> int:
             "  " + " ".join("--persona={}".format(p) for p in manifest["personas"]) + " \\",
             "  --persona-pool {} \\".format(pool_arg),
             "  --out-dir configs/jobs/{}-{} \\".format(args.job_prefix, tag),
-            "  --job-prefix {}-{}".format(args.job_prefix, tag),
+            # The continuation backslash has to live on --job-prefix whenever a
+            # skip list follows it. Without it the command ended there and the
+            # skip line ran as its own (failing) command, so every arm quietly
+            # generated all sixteen intents instead of the two asked for -- an
+            # eightfold cost increase that the script still reported as success.
+            "  --job-prefix {}-{}{}".format(
+                args.job_prefix, tag, " \\" if skips else ""),
             *(["  " + " ".join("--skip-intent={}".format(s) for s in skips)] if skips else []),
             "for cfg in configs/jobs/{}-{}/*.yaml; do".format(args.job_prefix, tag),
             '  intent=$(basename "$cfg" .yaml | sed "s/^{}-{}-//")'.format(args.job_prefix, tag),
