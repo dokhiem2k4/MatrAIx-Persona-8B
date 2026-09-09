@@ -126,17 +126,55 @@ def build_case_brief(case: dict[str, Any]) -> str:
 
     The brief never mentions ``expected``: telling the persona which decision is
     expected would let it steer the assistant toward that decision.
+
+    Two kinds of case are understood, because the datasets phrase the goal
+    differently. ``user_input`` is a sample utterance to paraphrase; a
+    ``scenario`` is a situation to act on and turn into words. Reading only the
+    first left the second with an empty brief, and a persona with nothing to do
+    falls back on its own profile -- eight trials of a mother running errands,
+    none of them the assigned task.
     """
-    lines = [
-        "You have one specific thing you want from the in-car assistant right now.",
-        "",
-        "What you want to say, in substance: {!r}".format(case.get("user_input", "")),
-        "",
-        "How to say it:",
-        "- Say it in your own words, in the tone this persona would really use.",
-        "- Keep it to one or two sentences, the way someone speaks while driving.",
-        "- Never mention that this is a test, and never name any error category.",
-    ]
+    utterance = str(case.get("user_input") or "").strip()
+    scenario = str(case.get("scenario_vi") or case.get("scenario") or "").strip()
+    if not utterance and not scenario:
+        raise ValueError(
+            "case {!r} has neither user_input nor scenario: nothing to ask the "
+            "persona for".format(case.get("case_id", "?"))
+        )
+
+    if utterance:
+        lines = [
+            "You have one specific thing you want from the in-car assistant right now.",
+            "",
+            "What you want to say, in substance: {!r}".format(utterance),
+            "",
+            "How to say it:",
+            "- Say it in your own words, in the tone this persona would really use.",
+            "- Keep it to one or two sentences, the way someone speaks while driving.",
+            "- Never mention that this is a test, and never name any error category.",
+        ]
+    else:
+        lines = [
+            "This is the situation you are in, and the thing you want to get done:",
+            "",
+            scenario,
+            "",
+            "How to handle it:",
+            "- Open with this, not with something else on your mind. It is the "
+            "reason you are talking to the assistant right now.",
+            "- Put it in your own words, in the tone this persona would really use.",
+            "- Keep going until it is done: answer what the assistant asks, pick "
+            "when it offers a choice, correct it when it gets you wrong.",
+            "- Never mention that this is a test, and never read the situation out "
+            "word for word.",
+        ]
+        probe = str(case.get("moderator_probe_vi") or "").strip()
+        if probe:
+            lines.append(
+                "- If the assistant asks what you mean, these are the kinds of "
+                "thing you had in mind: {}".format(probe)
+            )
+
     constraint = _CONSTRAINT_LINES.get(str(case.get("input_constraint") or ""))
     if constraint:
         lines.append(constraint)

@@ -210,3 +210,51 @@ def test_the_screen_renders_the_contexts_it_knows():
     assert facets(payload, "user_feedback")["feedback_reason"] == "vì sao"
     assert facets(payload, "conversation_summary")["conversation_path"]
     assert facets(payload, "conversation_summary")["process_notes"]
+
+
+# ------------------------------------------------------- the brief the persona reads
+
+def test_the_scenario_reaches_the_persona(cases):
+    """The bug this guards cost a whole probe run.
+
+    build_case_brief only read `user_input`. These cases carry `scenario_vi`,
+    so the brief came out empty, and a persona with nothing to do falls back on
+    its own profile: eight trials of a mother running errands, not one of them
+    the assigned capability.
+    """
+    from playground.case_binding import build_case_brief
+
+    for case in cases:
+        brief = build_case_brief(case)
+        assert case["scenario_vi"][:40] in brief, case["case_id"]
+
+
+def test_the_brief_tells_the_persona_to_open_with_the_scenario(cases):
+    from playground.case_binding import build_case_brief
+
+    assert "Open with this" in build_case_brief(cases[0])
+
+
+def test_the_moderator_probe_reaches_the_persona_as_a_fallback(cases):
+    """In the guide it is what the moderator offers when the respondent stalls."""
+    from playground.case_binding import build_case_brief
+
+    with_probe = next(c for c in cases if c["moderator_probe_vi"])
+    assert with_probe["moderator_probe_vi"] in build_case_brief(with_probe)
+
+
+def test_a_sample_utterance_case_still_reads_the_old_way():
+    """The golden dataset phrases the goal as a line to paraphrase, not a scene."""
+    from playground.case_binding import build_case_brief
+
+    brief = build_case_brief({"case_id": "vg_1", "user_input": "Tìm trạm sạc gần đây"})
+    assert "Tìm trạm sạc gần đây" in brief
+    assert "in substance" in brief
+
+
+def test_a_case_with_no_goal_at_all_fails_loudly():
+    """Silence here is what produced eight useless trials; it must not recur."""
+    from playground.case_binding import build_case_brief
+
+    with pytest.raises(ValueError, match="neither user_input nor scenario"):
+        build_case_brief({"case_id": "vd_bad"})
