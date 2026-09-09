@@ -9,6 +9,7 @@ import os
 import re
 import tomllib
 from collections import Counter
+from functools import lru_cache
 from datetime import datetime, timezone
 from pathlib import Path
 from statistics import mean
@@ -2431,16 +2432,47 @@ def _directive_lens(directive: dict[str, Any], *, group_by_mode: str) -> str:
     return "task"
 
 
+@lru_cache(maxsize=1)
+def _persona_dimension_labels() -> dict[str, str]:
+    """Display label per dimension id, from the schema that defines them.
+
+    Deriving the label from the id instead produced "Att electric vehicles" and
+    "Demo children count" on every report, while the schema had "Attitude:
+    Electric vehicles" and "Children" sitting right there.
+    """
+    for candidate in (
+        Path("persona/schema/dimensions.json"),
+        Path(__file__).resolve().parents[4] / "persona/schema/dimensions.json",
+    ):
+        if not candidate.is_file():
+            continue
+        try:
+            payload = json.loads(candidate.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            return {}
+        rows = payload.get("dimensions") if isinstance(payload, dict) else payload
+        return {
+            str(row["id"]): str(row["label"]).strip()
+            for row in (rows or [])
+            if isinstance(row, dict) and row.get("id") and row.get("label")
+        }
+    return {}
+
+
 def _humanize_persona_dimension(dimension: str) -> str:
     key = str(dimension or "").strip().lower()
-    labels = {
+    # Shorter than the schema's own wording, and long-standing in these reports.
+    overrides = {
         "trust_level": "Trust level",
         "age_bracket": "Age",
         "age": "Age",
         "cog_skepticism": "Skepticism",
     }
-    if key in labels:
-        return labels[key]
+    if key in overrides:
+        return overrides[key]
+    label = _persona_dimension_labels().get(key)
+    if label:
+        return label
     cleaned = key.replace("_", " ").strip()
     return cleaned[:1].upper() + cleaned[1:] if cleaned else str(dimension)
 

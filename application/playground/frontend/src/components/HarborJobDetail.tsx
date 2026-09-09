@@ -750,6 +750,25 @@ const BUCKET_LABEL_KEYS: Record<string, MessageKey> = {
   artifact_exact: "reports.bucket.artifactExact",
   artifact_semantic: "reports.bucket.artifactSemantic",
   hybrid: "reports.bucket.hybrid",
+  // Verdicts from a task that scores against ground truth. These are not one
+  // task's private vocabulary -- any dataset with expected answers reports a
+  // match or a mismatch -- and without them a localised report reads
+  // "Mismatch" in the middle of Vietnamese headings.
+  match: "reports.bucket.match",
+  mismatch: "reports.bucket.mismatch",
+  unmapped: "reports.bucket.unmapped",
+  no_equivalent: "reports.bucket.noEquivalent",
+  unavailable: "reports.bucket.unavailable",
+  unknown: "reports.bucket.unknown",
+  // How the verdict was reached: a typed signal from the system under test, a
+  // field it named itself, or the reply text read as a fallback. A reader
+  // filtering out weak evidence needs to see which is which.
+  structured: "reports.bucket.sourceStructured",
+  derived: "reports.bucket.sourceDerived",
+  derived_from_text: "reports.bucket.sourceDerivedFromText",
+  // case integrity
+  ok: "reports.bucket.ok",
+  violated: "reports.bucket.violated",
 }
 
 function formatBucketLabel(value: string, t?: ReportTranslate): string {
