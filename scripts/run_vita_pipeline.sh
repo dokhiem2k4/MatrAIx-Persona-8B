@@ -30,7 +30,7 @@ cd "$(dirname "$0")/.."
 SLUG=""
 TASK="application/tasks/chat_vita-drive-assistant"
 ENDPOINT="${VITA_ASSISTANT_API_URL:-http://127.0.0.1:3001}"
-POOL="vn-drivers-forum"
+POOL="vn-drivers"
 PER_SUBINTENT=3
 REUSE_STIMULI=""
 PERSONAS=()

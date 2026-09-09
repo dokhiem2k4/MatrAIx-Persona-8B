@@ -4,9 +4,9 @@
 #
 # Run:
 #   export MATRIX_SURVEY_TASK_PATH=application/tasks/survey_vita-utterance-vita-profile-settings
-#   uv run matraix run -c configs/jobs/vita-drive-agent-v2-stage1/vita-drive-agent-v2-s1-vita-profile-settings.yaml
+#   uv run matraix run -c configs/jobs/vita-drive-agent-stage1/vita-drive-agent-s1-vita-profile-settings.yaml
 #
-job_name: vita-drive-agent-v2-s1-vita-profile-settings
+job_name: vita-drive-agent-s1-vita-profile-settings
 jobs_dir: jobs
 n_attempts: 1
 timeout_multiplier: 1.0
@@ -17,21 +17,21 @@ environment:
   delete: true
 agents:
 - name: persona-json-survey
-  model_name: openrouter/models/gemini-3.1-flash-lite
+  model_name: openrouter/google/gemini-3.5-flash-lite
   kwargs:
     persona_path: persona/datasets/vn-drivers/persona_vn-drv-017.yaml
     model_info:
       max_input_tokens: 72000
       max_output_tokens: 16384
 - name: persona-json-survey
-  model_name: openrouter/models/gemini-3.1-flash-lite
+  model_name: openrouter/google/gemini-3.5-flash-lite
   kwargs:
     persona_path: persona/datasets/vn-drivers/persona_vn-drv-026.yaml
     model_info:
       max_input_tokens: 72000
       max_output_tokens: 16384
 - name: persona-json-survey
-  model_name: openrouter/models/gemini-3.1-flash-lite
+  model_name: openrouter/google/gemini-3.5-flash-lite
   kwargs:
     persona_path: persona/datasets/vn-drivers/persona_vn-drv-041.yaml
     model_info:

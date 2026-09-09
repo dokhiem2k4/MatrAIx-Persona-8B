@@ -31,7 +31,7 @@ Two deliberate departures from a strict "cut what carries no bits" rule:
   permanently anxious, which is a bug wearing the costume of a trait.
 
 Usage:
-    uv run python scripts/trim_persona_fields.py persona/datasets/vn-drivers-forum
+    uv run python scripts/trim_persona_fields.py persona/datasets/vn-drivers
     uv run python scripts/trim_persona_fields.py <pool> --out <other-pool>
     uv run python scripts/trim_persona_fields.py <pool> --dry-run
 """

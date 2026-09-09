@@ -2,7 +2,9 @@
 
 Date: 2026-09-05
 Source: otofun.net.vn
-Pools: `persona/datasets/vn-drivers` (before) → `persona/datasets/vn-drivers-forum` (after)
+Pool: `persona/datasets/vn-drivers`. The layer once wrote a separate
+`vn-drivers-forum`; the two were consolidated, so it now reads and writes the
+same pool. The pre-layer base is in git at `b2ce5d8`.
 
 ## What was collected
 
@@ -23,7 +25,7 @@ reading reflects what the member wrote in that post and nothing else.
 
 The raw posts are **not** in this repository. They are the members' own
 writing; only the aggregate measurements below were kept, in
-`persona/datasets/vn-drivers-forum/forum_measurements.json`.
+`persona/datasets/vn-drivers/forum_measurements.json`.
 
 ## What was measured
 
@@ -139,10 +141,10 @@ was missing from his file.
 ```
 uv run python scripts/crawl_otofun_posts.py --out <scratch>/otofun_posts.jsonl
 uv run python scripts/measure_forum_language.py <scratch>/otofun_posts.jsonl \
-    -o persona/datasets/vn-drivers-forum/forum_measurements.json
+    -o persona/datasets/vn-drivers/forum_measurements.json
 uv run python scripts/apply_forum_persona_layer.py \
-    --measurements persona/datasets/vn-drivers-forum/forum_measurements.json \
-    --pool persona/datasets/vn-drivers --out persona/datasets/vn-drivers-forum
+    --measurements persona/datasets/vn-drivers/forum_measurements.json \
+    --pool <base pool> --out persona/datasets/vn-drivers
 ```
 
 The last two steps are deterministic. The crawl is not: the board moves, so a

@@ -24,8 +24,8 @@ run. This is exact and deterministic.
 Usage:
     uv run python scripts/apply_driver_survey_layer.py \
         --responses "~/Downloads/<google forms export>.csv" \
-        --pool persona/datasets/vn-drivers-forum \
-        --out persona/datasets/vn-drivers-forum
+        --pool persona/datasets/vn-drivers \
+        --out persona/datasets/vn-drivers
 """
 
 from __future__ import annotations
