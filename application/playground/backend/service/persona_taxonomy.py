@@ -210,6 +210,19 @@ def build_dimension_groups(
     resolved = schema_path or (resolve_schema_path(repo_root) if repo_root else None)
     meta = _load_field_meta(str(resolved)) if resolved is not None else {}
 
+    # resolve_schema_path prefers the 1M release schema, which is a frozen
+    # description of a published dataset and stops at 1,290 dimensions. Anything
+    # added since -- vn_locality, vn_address_register, the in-car assistant
+    # block -- is absent there, so it arrived with an empty category and fell
+    # into "Other". The live schema is the authority on which dimensions exist;
+    # overlay it for the ones the release does not know, without overriding the
+    # release's labels for the ones it does.
+    if repo_root is not None:
+        live = repo_root / "persona/schema/dimensions.json"
+        if live.is_file() and str(live) != str(resolved):
+            for field_id, info in _load_field_meta(str(live)).items():
+                meta.setdefault(field_id, info)
+
     # group_id -> subgroup_id -> items
     buckets: dict[str, dict[str, list[dict[str, str]]]] = {
         group_id: {subgroup_id: [] for subgroup_id, _, _ in subgroups}

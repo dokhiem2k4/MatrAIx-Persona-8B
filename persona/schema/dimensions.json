@@ -22107,7 +22107,7 @@
     {
       "id": "vn_address_register",
       "label": "Vietnamese address register",
-      "category": "Linguistic: Register",
+      "category": "Linguistic: Communication",
       "description": "Vietnamese pronoun pair the persona uses when speaking to an in-car assistant. Vietnamese address is chosen from the speaker's age and gender relative to the addressee, so the generic `register` dimension cannot express it.",
       "values": [
         "anh/em",
@@ -22252,7 +22252,7 @@
     {
       "id": "accent_region",
       "label": "Regional accent",
-      "category": "Linguistic: Register",
+      "category": "Linguistic: Language",
       "description": "Which Vietnamese regional accent this person speaks. Without it a speech-recognition result cannot be read.",
       "values": [
         "Northern",
@@ -22347,7 +22347,7 @@
     {
       "id": "need_state",
       "label": "Desired feeling of the trip",
-      "category": "Psychology: Motivation",
+      "category": "Values & Motivation",
       "description": "What this person most wants a drive to feel like. The emotional need behind the trip, distinct from the task.",
       "values": [
         "Quiet and undisturbed",
