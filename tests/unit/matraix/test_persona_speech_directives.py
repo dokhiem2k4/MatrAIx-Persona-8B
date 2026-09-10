@@ -25,7 +25,7 @@ from matraix.persona_speech import (
 )
 from matraix.persona_tiers import PROMPT_FIELDS, prompt_tier_dimensions
 
-VN_DRIVER = "persona/datasets/vn-drivers/persona_vn-drv-001.yaml"
+VN_DRIVER = "persona/datasets/vn-drivers/persona_row-000.yaml"
 SCHEMA = Path("persona/schema/dimensions.json")
 
 
@@ -77,8 +77,8 @@ def test_sections_render_as_imperatives_not_label_value_pairs():
     sections = build_directive_sections(dims)
     text = "\n".join(sections)
 
-    # vn-drv-001: chi/em, Balanced, Very formal, Concise, Northern, Annoyed
-    assert 'tự xưng là "chị"' in text
+    # row-000: anh/em, Balanced, Slangy, Concise, Northern, Annoyed
+    assert 'tự xưng là "anh"' in text
     assert "12-20 chữ" in text
     assert "cộc hơn" in text
 
@@ -115,11 +115,11 @@ def test_system_prompt_carries_directives_instead_of_style_labels():
     template = resolve_persona_template(persona, None, PERSONA_SYSTEM_TEMPLATE)
     prompt = render_persona_template(template, persona)
 
-    assert "Bùi Minh Châu" in prompt
-    assert 'tự xưng là "chị"' in prompt
+    assert "Lý Văn Hải" in prompt
+    assert 'tự xưng là "anh"' in prompt
     assert "12-20 chữ" in prompt
 
-    for label in ("Verbosity: Balanced", "Formality: Very formal",
+    for label in ("Verbosity: Balanced", "Formality: Slangy",
                   "Expected tone: Concise", "Regional accent: Northern"):
         assert label not in prompt, f"label survived beside its directive: {label}"
 

@@ -101,14 +101,14 @@ def test_pool_conflicts_are_counted_not_assumed():
     """
     paths = [p for p in glob.glob(f"{POOL}/persona_*.yaml")
              if not p.endswith(".prompt.yaml")]
-    assert len(paths) == 42
+    assert len(paths) == 81
 
     hits = [
         p for p in paths
         if style_conflict(yaml.safe_load(open(p))["dimensions"]) is not None
     ]
-    assert len(hits) <= 42 // 3, (
-        f"{len(hits)}/42 personas conflict -- too many for a rule about people"
+    assert len(hits) <= len(paths) // 3, (
+        f"{len(hits)}/{len(paths)} personas conflict -- too many for a rule about people"
     )
 
 

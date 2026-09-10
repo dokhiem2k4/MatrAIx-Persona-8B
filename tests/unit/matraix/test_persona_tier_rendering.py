@@ -23,7 +23,7 @@ from matraix.persona_tiers import (
     stamped_tiers,
 )
 
-VN_DRIVER = "persona/datasets/vn-drivers/persona_vn-drv-001.yaml"
+VN_DRIVER = "persona/datasets/vn-drivers/persona_row-000.yaml"
 UNTIERED = "persona/datasets/matraix-persona-dev-sample/persona_0018.yaml"
 
 
@@ -73,7 +73,12 @@ def test_narrative_drops_archive_fields():
 
 
 def test_rendered_prompt_drops_the_archive_bullets():
-    """Count the lines, not the characters: 45 attributes went in, 19 come out."""
+    """Count the lines, not the characters.
+
+    The pool was trimmed to the 31 fields something reads, so the untiered
+    render is 31 bullets rather than the 45 it was before. The tier filter is
+    what takes it to 19, and that is the number this test is about.
+    """
     persona = load_persona(VN_DRIVER)
     full = "\n".join(build_dimension_narrative(persona.dimensions))
     tiered = "\n".join(build_dimension_narrative(prompt_tier_dimensions(persona.data)))
@@ -81,9 +86,9 @@ def test_rendered_prompt_drops_the_archive_bullets():
     def bullets(text):
         return [line for line in text.splitlines() if line.startswith("- ")]
 
-    assert len(bullets(full)) > 40
-    assert len(bullets(tiered)) == 19
-    assert len(tiered) < len(full) * 0.6
+    assert len(bullets(full)) == 31, "every field the record still holds"
+    assert len(bullets(tiered)) == 19, "18 prompt tier plus the language contract"
+    assert len(tiered) < len(full) * 0.75
 
 
 @pytest.mark.parametrize(
@@ -110,13 +115,15 @@ def test_system_prompt_renders_only_the_prompt_tier():
     template = resolve_persona_template(persona, None, PERSONA_SYSTEM_TEMPLATE)
     prompt = render_persona_template(template, persona)
 
-    assert "Bùi Minh Châu" in prompt, "identity still leads the prompt"
+    assert "Lý Văn Hải" in prompt, "identity still leads the prompt"
     # tone_expected reaches the model as a directive now, not as a label.
     assert "đi thẳng vào việc" in prompt
 
-    for archived in ("2 children", "Citizen by birth", "Agriculture", "Spiritual"):
-        assert archived not in prompt, f"archive tier leaked: {archived}"
-    for guarded in ("Does not own", "35-44"):
+    # The trim removed most archive fields outright; the four still on file are
+    # kept for the rules, and must not reach the prompt either.
+    for archived in ("Secondary", "150-300 km", "Enthusiast"):
+        assert f"- {archived}" not in prompt, f"archive tier leaked: {archived}"
+    for guarded in ("SUV or crossover", "35-44", "Hung Yen"):
         assert guarded not in prompt, f"guard tier leaked: {guarded}"
 
 

@@ -14,7 +14,7 @@ agents:
 - name: persona-user-sim
   model_name: openrouter/google/gemini-3.5-flash-lite
   kwargs:
-    persona_path: persona/datasets/vn-drivers/persona_vn-drv-011.yaml
+    persona_path: persona/datasets/vn-drivers/persona_row-000.yaml
     model_info:
       max_input_tokens: 128000
       max_output_tokens: 16384

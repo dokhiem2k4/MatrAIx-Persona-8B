@@ -20,6 +20,11 @@ from __future__ import annotations
 
 from typing import Any
 
+#: Assignment types that mean "a person answered this". One definition: the
+#: sources block, the trim, the forum layer and the scripts all ask this same
+#: question and a second copy is where the drift starts.
+from matraix.persona_sources import MEASURED_TYPES as OBSERVED_TYPES  # noqa: F401
+
 PROMPT = "prompt"
 GUARD = "guard"
 ARCHIVE = "archive"

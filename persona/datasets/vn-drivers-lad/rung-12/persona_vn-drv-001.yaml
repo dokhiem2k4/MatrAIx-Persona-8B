@@ -1,0 +1,114 @@
+persona_id: vn-drv-001
+version: '1.0'
+source: vn-driver
+sources:
+  full_dag:
+    values: 1266
+    assignment_types:
+      generated: 1266
+    measured: false
+  wvs_wave7_vnm_2020:
+    values: 16
+    assignment_types:
+      observed: 16
+    measured: true
+  vn_driver_survey_2026:
+    values: 8
+    assignment_types:
+      observed: 8
+    measured: true
+  vn_names:
+    values: 1
+    assignment_types:
+      generated: 1
+    measured: false
+  vn_localities:
+    values: 1
+    assignment_types:
+      generated: 1
+    measured: false
+display_name: Bùi Minh Châu
+dimensions:
+  age_bracket: 35-44
+  cog_skepticism: Moderate
+  demo_driver_status: Occasional driver
+  demo_employment_status: Full-time
+  domain: Agriculture
+  gender_identity: Woman
+  religiosity: Spiritual
+  vn_address_register: chi/em
+  vn_usual_companion: Friends or colleagues
+  need_state: Accompanied
+  cabin_noise: Very quiet
+  accent_region: Northern
+grounding:
+  age_bracket:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704071187
+    confidence: 1.0
+  cog_skepticism:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:vn-drv-001
+    confidence: 1.0
+  demo_driver_status:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:vn-drv-001
+    confidence: 1.0
+  demo_employment_status:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704071187
+    confidence: 1.0
+  domain:
+    assignment_type: generated
+    source_ref: full_dag
+    evidence: sampled conditioned on 23 observed dimensions
+  gender_identity:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704071187
+    confidence: 1.0
+  religiosity:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704071187
+    confidence: 1.0
+  vn_address_register:
+    assignment_type: generated
+    source_ref: otofun_2026
+    evidence: kinship register for age_bracket=35-44 gender_identity=Woman
+    confidence: 0.5
+  vn_usual_companion:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:demo_driver_status
+    confidence: 0.5
+  need_state:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:topic_cars
+    confidence: 0.5
+  cabin_noise:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:att_electric_vehicles
+    confidence: 0.5
+  accent_region:
+    assignment_type: derived
+    source_ref: vn_driver_survey_2026
+    evidence: derived_from:vn_locality
+    confidence: 0.9
+grounding_summary:
+  scoreable: 24
+  byAssignmentType:
+    observed: 24
+    generated: 1268
+  sources:
+  - full_dag
+  - vn_driver_survey_2026
+  - vn_localities
+  - vn_names
+  - wvs_wave7_vnm_2020

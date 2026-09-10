@@ -39,6 +39,7 @@ from typing import Any
 #: site, never redeclared.
 from matraix.persona_tiers import (  # noqa: E402,F401
     ARCHIVE_REASONS,
+    OBSERVED_TYPES,
     CONSEQUENCE,
     DUPLICATE,
     GUARD_FIELDS,
@@ -50,7 +51,6 @@ from matraix.persona_tiers import (  # noqa: E402,F401
     tier_of,
 )
 
-OBSERVED_TYPES = {"observed", "direct", "forum_measured"}
 
 
 from matraix.persona_pool import persona_paths  # noqa: E402,F401

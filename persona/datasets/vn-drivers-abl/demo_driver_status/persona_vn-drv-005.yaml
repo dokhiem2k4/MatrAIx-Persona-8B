@@ -1,0 +1,324 @@
+persona_id: vn-drv-005
+version: '1.0'
+source: vn-driver
+sources:
+  full_dag:
+    values: 1265
+    assignment_types:
+      generated: 1265
+    measured: false
+  wvs_wave7_vnm_2020:
+    values: 17
+    assignment_types:
+      observed: 17
+    measured: true
+  vn_driver_survey_2026:
+    values: 8
+    assignment_types:
+      observed: 8
+    measured: true
+  vn_names:
+    values: 1
+    assignment_types:
+      generated: 1
+    measured: false
+  vn_localities:
+    values: 1
+    assignment_types:
+      generated: 1
+    measured: false
+display_name: Hồ Thị Thanh
+dimensions:
+  age_bracket: 65-74
+  att_electric_vehicles: Enthusiast
+  att_self_driving_cars: Positive
+  cog_formality: Neutral
+  cog_patience: Low
+  cog_skepticism: Low
+  cog_verbosity: Balanced
+  cult_vietnam: Native
+  demo_children_count: 3+ children
+  demo_citizenship_status: Citizen by birth
+  demo_driver_status: Cannot drive
+  demo_employment_status: Retired
+  demo_marital_status: Married
+  demo_religion_affiliation: None
+  domain: Business & Management
+  english_proficiency: Intermediate (B1-B2)
+  gender_identity: Woman
+  highest_education: Secondary
+  lang_vietnamese: Native
+  life_stage: Retirement
+  lstyle_commute_mode: Car
+  primary_language: Vietnamese
+  region: Southeast Asia
+  religiosity: Secular
+  safety_sensitivity: Benign
+  skill_driving: Intermediate
+  socioeconomic_band: Middle
+  tech_savviness: Comfortable
+  tone_expected: Concise
+  topic_cars: Neutral
+  trust_level: Skeptical
+  urbanicity: Small town
+  vn_locality: Ninh Binh
+  vn_address_register: bac/chau
+  vn_usual_companion: Friends or colleagues
+  vn_voice_privacy_comfort: Comfortable
+  vn_assistant_task_scope: Navigation and media
+  vn_retry_tolerance: Annoyed
+  att_voice_assistant: Neutral
+  veh_class: Hatchback
+  veh_assistant_builtin: Built in but unused
+  drv_exposure: 150-300 km
+  trip_mix: Mostly city
+  assistant_usage_freq: Rarely
+  need_state: Fast and done
+  cabin_context: Hands on wheel
+  cabin_noise: Moderate
+  accent_region: Northern
+grounding:
+  age_bracket:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070670
+    confidence: 1.0
+  att_electric_vehicles:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:vn-drv-005
+    confidence: 1.0
+  att_self_driving_cars:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:vn-drv-005
+    confidence: 1.0
+  cog_formality:
+    assignment_type: generated
+    source_ref: full_dag
+    evidence: sampled conditioned on 24 observed dimensions
+  cog_patience:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:vn-drv-005
+    confidence: 1.0
+  cog_skepticism:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:vn-drv-005
+    confidence: 1.0
+  cog_verbosity:
+    assignment_type: generated
+    source_ref: otofun_2026
+    evidence: pool share calibrated to median words per post on otofun.net.vn
+    confidence: 0.5
+  cult_vietnam:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070670
+    confidence: 1.0
+  demo_children_count:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070670
+    confidence: 1.0
+  demo_citizenship_status:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070670
+    confidence: 1.0
+  demo_driver_status:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:vn-drv-005
+    confidence: 1.0
+  demo_employment_status:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070670
+    confidence: 1.0
+  demo_marital_status:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070670
+    confidence: 1.0
+  demo_religion_affiliation:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070670
+    confidence: 1.0
+  domain:
+    assignment_type: generated
+    source_ref: full_dag
+    evidence: sampled conditioned on 24 observed dimensions
+  english_proficiency:
+    assignment_type: generated
+    source_ref: full_dag
+    evidence: sampled conditioned on 24 observed dimensions
+  gender_identity:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070670
+    confidence: 1.0
+  highest_education:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070670
+    confidence: 1.0
+  lang_vietnamese:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070670
+    confidence: 1.0
+  life_stage:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070670
+    confidence: 1.0
+  lstyle_commute_mode:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:vn-drv-005
+    confidence: 1.0
+  primary_language:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070670
+    confidence: 1.0
+  region:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070670
+    confidence: 1.0
+  religiosity:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070670
+    confidence: 1.0
+  safety_sensitivity:
+    assignment_type: generated
+    source_ref: full_dag
+    evidence: sampled conditioned on 24 observed dimensions
+  skill_driving:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:vn-drv-005
+    confidence: 1.0
+  socioeconomic_band:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070670
+    confidence: 1.0
+  tech_savviness:
+    assignment_type: generated
+    source_ref: full_dag
+    evidence: sampled conditioned on 24 observed dimensions
+  tone_expected:
+    assignment_type: generated
+    source_ref: full_dag
+    evidence: sampled conditioned on 24 observed dimensions
+  topic_cars:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:vn-drv-005
+    confidence: 1.0
+  trust_level:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070670
+    confidence: 1.0
+  urbanicity:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070670
+    confidence: 1.0
+  vn_locality:
+    assignment_type: generated
+    source_ref: vn_localities
+    evidence: population-weighted draw over the 34 units effective 2025-07-01
+  vn_address_register:
+    assignment_type: generated
+    source_ref: otofun_2026
+    evidence: kinship register for age_bracket=65-74 gender_identity=Woman
+    confidence: 0.5
+  vn_usual_companion:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:demo_driver_status
+    confidence: 0.5
+  vn_voice_privacy_comfort:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:skill_driving
+    confidence: 0.5
+  vn_assistant_task_scope:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:cog_patience
+    confidence: 0.5
+  vn_retry_tolerance:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:cog_skepticism
+    confidence: 0.5
+  att_voice_assistant:
+    assignment_type: derived
+    source_ref: vn_driver_survey_2026
+    evidence: derived_from:vn_assistant_task_scope
+    confidence: 0.5
+  veh_class:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:lstyle_commute_mode
+    confidence: 0.5
+  veh_assistant_builtin:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:cog_patience
+    confidence: 0.5
+  drv_exposure:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:demo_driver_status
+    confidence: 0.5
+  trip_mix:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:att_self_driving_cars
+    confidence: 0.5
+  assistant_usage_freq:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:demo_driver_status
+    confidence: 0.5
+  need_state:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:topic_cars
+    confidence: 0.5
+  cabin_context:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:topic_cars
+    confidence: 0.5
+  cabin_noise:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:att_electric_vehicles
+    confidence: 0.5
+  accent_region:
+    assignment_type: derived
+    source_ref: vn_driver_survey_2026
+    evidence: derived_from:vn_locality
+    confidence: 0.9
+grounding_summary:
+  scoreable: 25
+  byAssignmentType:
+    observed: 25
+    generated: 1267
+  sources:
+  - full_dag
+  - vn_driver_survey_2026
+  - vn_localities
+  - vn_names
+  - wvs_wave7_vnm_2020

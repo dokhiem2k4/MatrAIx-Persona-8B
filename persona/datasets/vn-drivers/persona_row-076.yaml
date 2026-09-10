@@ -1,0 +1,261 @@
+persona_id: row-076
+version: '1.0'
+source: vn-driver
+sources:
+  full_dag:
+    values: 4
+    assignment_types:
+      generated: 4
+    measured: false
+  otofun_2026:
+    values: 1
+    assignment_types:
+      generated: 1
+    measured: false
+  vn_driver_survey_2026:
+    values: 20
+    assignment_types:
+      observed: 20
+    measured: true
+  vn_localities:
+    values: 1
+    assignment_types:
+      generated: 1
+    measured: false
+  wvs_wave7_vnm_2020:
+    values: 5
+    assignment_types:
+      observed: 5
+    measured: true
+display_name: Đỗ Phương Thảo
+dimensions:
+  accent_region: Northern
+  age_bracket: 35-44
+  assistant_usage_freq: Almost every trip
+  att_electric_vehicles: Positive
+  att_self_driving_cars: Neutral
+  att_voice_assistant: Neutral
+  cabin_context: Hands on wheel
+  cog_formality: Very formal
+  cog_patience: High
+  cog_skepticism: High
+  cog_verbosity: Wordy
+  demo_driver_status: Daily driver
+  drv_exposure: 300-600 km
+  english_proficiency: None
+  gender_identity: Woman
+  highest_education: Secondary
+  lstyle_commute_mode: Car
+  primary_language: Vietnamese
+  skill_driving: Advanced
+  tech_savviness: Comfortable
+  tone_expected: Detailed
+  trip_mix: Mostly motorway
+  urbanicity: Small town
+  veh_assistant_builtin: Built in and used
+  veh_class: SUV or crossover
+  vn_address_register: minh/ban
+  vn_assistant_task_scope: Navigation and media
+  vn_locality: Nghe An
+  vn_retry_tolerance: Mildly annoyed
+  vn_usual_companion: Spouse or partner
+  vn_voice_privacy_comfort: Comfortable
+grounding:
+  accent_region:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:row-076
+    confidence: 1.0
+    tier: prompt
+  age_bracket:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070580
+    confidence: 1.0
+    tier: guard
+  assistant_usage_freq:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:row-076
+    confidence: 1.0
+    tier: guard
+  att_electric_vehicles:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:row-076
+    confidence: 1.0
+    tier: prompt
+  att_self_driving_cars:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:row-076
+    confidence: 1.0
+    tier: prompt
+  att_voice_assistant:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: derived_from:vn_assistant_task_scope
+    confidence: 1.0
+    tier: archive
+    excluded_reason: low_confidence
+  cabin_context:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:row-076
+    confidence: 1.0
+    tier: prompt
+  cog_formality:
+    assignment_type: generated
+    source_ref: full_dag
+    evidence: sampled conditioned on 24 observed dimensions
+    tier: prompt
+  cog_patience:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:row-076
+    confidence: 1.0
+    tier: prompt
+  cog_skepticism:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:row-076
+    confidence: 1.0
+    tier: prompt
+  cog_verbosity:
+    assignment_type: generated
+    source_ref: otofun_2026
+    evidence: pool share calibrated to median words per post on otofun.net.vn
+    confidence: 0.5
+    tier: prompt
+  demo_driver_status:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:row-076
+    confidence: 1.0
+    tier: prompt
+  drv_exposure:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:row-076
+    confidence: 1.0
+    tier: archive
+    excluded_reason: consequence_not_cause
+  english_proficiency:
+    assignment_type: generated
+    source_ref: full_dag
+    evidence: sampled conditioned on 24 observed dimensions
+    tier: archive
+    excluded_reason: no_effect_on_assistant_output
+  gender_identity:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070580
+    confidence: 1.0
+    tier: guard
+  highest_education:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070580
+    confidence: 1.0
+    tier: archive
+    excluded_reason: no_effect_on_assistant_output
+  lstyle_commute_mode:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:row-076
+    confidence: 1.0
+    tier: guard
+  primary_language:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070580
+    confidence: 1.0
+    tier: archive
+    excluded_reason: no_effect_on_assistant_output
+  skill_driving:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:row-076
+    confidence: 1.0
+    tier: prompt
+  tech_savviness:
+    assignment_type: generated
+    source_ref: full_dag
+    evidence: sampled conditioned on 24 observed dimensions
+    tier: prompt
+  tone_expected:
+    assignment_type: generated
+    source_ref: full_dag
+    evidence: sampled conditioned on 24 observed dimensions
+    tier: prompt
+  trip_mix:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:row-076
+    confidence: 1.0
+    tier: prompt
+  urbanicity:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070580
+    confidence: 1.0
+    tier: guard
+  veh_assistant_builtin:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:row-076
+    confidence: 1.0
+    tier: guard
+  veh_class:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:row-076
+    confidence: 1.0
+    tier: guard
+  vn_address_register:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:row-076
+    confidence: 1.0
+    tier: prompt
+  vn_assistant_task_scope:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:row-076
+    confidence: 1.0
+    tier: prompt
+  vn_locality:
+    assignment_type: generated
+    source_ref: vn_localities
+    evidence: population-weighted draw over the 34 units effective 2025-07-01
+    tier: guard
+  vn_retry_tolerance:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:row-076
+    confidence: 1.0
+    tier: prompt
+  vn_usual_companion:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:row-076
+    confidence: 1.0
+    tier: prompt
+  vn_voice_privacy_comfort:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:row-076
+    confidence: 1.0
+    tier: prompt
+grounding_summary:
+  scoreable: 25
+  byAssignmentType:
+    generated: 6
+    observed: 25
+  sources:
+  - full_dag
+  - otofun_2026
+  - vn_driver_survey_2026
+  - vn_localities
+  - wvs_wave7_vnm_2020
+  dimensionCount: 31
