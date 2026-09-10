@@ -1,0 +1,28 @@
+version = "1.0"
+artifacts = [ "/app/output",]
+
+[task]
+name = "application/0909-vita-tasklist"
+
+[metadata]
+difficulty = "medium"
+# Shown on the task card and the detail panel. Written for a human deciding
+# whether to run this, which is a different reader from the persona -- so it
+# does not live in instruction.md, which goes into the persona's prompt.
+summary = """Chạy Task List của discussion guide RISE Vita Phase Discovery bằng persona. Phủ 14/22 nhóm task: trọn 8 nhóm năng lực (15 kịch bản, đỗ xe và lái xe), 4 hành vi hội thoại đo tự động, và 2 mục nhận diện thương hiệu. Chưa phủ 8 nhóm còn lại vì chúng cần thao tác và nhìn màn hình prototype: 6 nhóm SETTING, mục kích hoạt bằng giọng, và mục nhận diện qua hình ảnh đại diện. Chấm bằng CES (4 câu, thang 7, nguyên văn tài liệu) cộng ba câu nhận diện. Hệ thống được chấm: trợ lý Vita của VoiceLab tại https://136.110.11.55.nip.io, endpoint POST /api/turn."""
+type = "chatbot"
+domain = "automotive-ai"
+tags = [ "in-cabin assistant", "discovery research", "CES", "capability coverage", "multi turn",]
+
+[verifier]
+timeout_sec = 300.0
+
+[agent]
+timeout_sec = 900.0
+
+[environment]
+definition = "application/shared-chat-persona"
+cpus = 1
+memory_mb = 2048
+storage_mb = 10240
+gpus = 0

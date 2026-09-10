@@ -63,6 +63,7 @@ def get_task_detail(task_path: str, *, repo_root: Path) -> dict[str, Any]:
     meta_type = ""
     domain = ""
     difficulty = ""
+    authored_summary = ""
     tags: list[str] = []
     task_name = task_dir.name
     toml_path = task_dir / "task.toml"
@@ -72,6 +73,7 @@ def get_task_detail(task_path: str, *, repo_root: Path) -> dict[str, Any]:
         meta_type = normalize_metadata_type(str(meta.get("type") or ""))
         domain = str(meta.get("domain") or "").strip()
         difficulty = str(meta.get("difficulty") or "").strip()
+        authored_summary = str(meta.get("summary") or "").strip()
         raw_tags = meta.get("tags")
         if isinstance(raw_tags, list):
             tags = [str(item) for item in raw_tags if str(item).strip()]
@@ -82,7 +84,9 @@ def get_task_detail(task_path: str, *, repo_root: Path) -> dict[str, Any]:
     from backend.service.persona_strategy import load_persona_strategy
 
     title = title_from_harbor_task_name(task_name) or _humanize_key(task_dir.name.replace("-", " "))
-    description = instruction_blurb
+    # Same precedence as the catalogue: a task's own summary beats the first
+    # line of the persona briefing.
+    description = authored_summary or instruction_blurb
     persona_strategy = load_persona_strategy(task_dir)
     bundle = load_task_content_bundle_for_task_path(normalized, repo_root=repo_root)
     if bundle.instruction_markdown.strip():

@@ -13,7 +13,7 @@ from pathlib import Path
 import pytest
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
-TASK = REPO_ROOT / "application/tasks/chat_0909-vita-discovery-ces"
+TASK = REPO_ROOT / "application/tasks/chat_0909-vita-tasklist"
 sys.path.insert(0, str(TASK / "tests"))
 sys.path.insert(0, str(REPO_ROOT))
 

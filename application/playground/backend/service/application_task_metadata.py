@@ -208,7 +208,14 @@ def parse_application_task(task_dir: Path) -> ApplicationTaskRecord | None:
     _, instruction_description = read_instruction_meta(task_dir / "instruction.md")
     # Display title always comes from ``[task].name``, not instruction H1.
     title = title_from_harbor_task_name(task_name) or humanize_folder(folder_name)
-    description = instruction_description or f"Harbor task ({folder_name})."
+    # ``[metadata].summary`` wins when a task writes one. instruction.md is the
+    # briefing the persona reads and goes into its prompt verbatim, so a task
+    # that wants to tell a human reader what it covers and what it runs against
+    # has nowhere else to put it without polluting the simulation.
+    authored_summary = str(meta.get("summary") or "").strip()
+    description = (
+        authored_summary or instruction_description or f"Harbor task ({folder_name})."
+    )
 
     return ApplicationTaskRecord(
         folder_name=folder_name,
