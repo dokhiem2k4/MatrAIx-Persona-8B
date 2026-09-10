@@ -3,30 +3,32 @@ version: '1.0'
 source: vn-driver
 sources:
   full_dag:
-    values: 1266
+    values: 7
     assignment_types:
-      generated: 1266
+      generated: 7
     measured: false
-  wvs_wave7_vnm_2020:
-    values: 16
+  otofun_2026:
+    values: 2
     assignment_types:
-      observed: 16
-    measured: true
+      generated: 2
+    measured: false
   vn_driver_survey_2026:
-    values: 8
+    values: 22
     assignment_types:
+      derived: 1
+      generated: 13
       observed: 8
-    measured: true
-  vn_names:
-    values: 1
-    assignment_types:
-      generated: 1
     measured: false
   vn_localities:
     values: 1
     assignment_types:
       generated: 1
     measured: false
+  wvs_wave7_vnm_2020:
+    values: 16
+    assignment_types:
+      observed: 16
+    measured: true
 display_name: Đặng Thị Lan
 dimensions:
   age_bracket: 18-24
@@ -67,7 +69,7 @@ dimensions:
   vn_voice_privacy_comfort: Uncomfortable
   vn_assistant_task_scope: Navigation and media
   vn_retry_tolerance: Mildly annoyed
-  att_voice_assistant: Positive
+  att_voice_assistant: Neutral
   veh_class: Sedan
   veh_assistant_builtin: Built in but unused
   drv_exposure: 50-150 km
@@ -319,10 +321,11 @@ grounding:
   att_voice_assistant:
     assignment_type: derived
     source_ref: vn_driver_survey_2026
-    evidence: derived_from:att_self_driving_cars
+    evidence: derived_from:vn_assistant_task_scope
     confidence: 0.7
     tier: archive
     excluded_reason: low_confidence
+    corrected_from: Positive
   veh_class:
     assignment_type: generated
     source_ref: vn_driver_survey_2026
