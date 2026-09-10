@@ -390,6 +390,8 @@ export interface ChatbotEvalTask {
   canStart?: boolean;
   healthUrl?: string;
   statusDetail?: string;
+  /** Scenarios in the task's cases.jsonl. A batch runs one trial per persona x case. */
+  caseCount?: number;
   capabilities?: Array<{
     id: string;
     label: string;

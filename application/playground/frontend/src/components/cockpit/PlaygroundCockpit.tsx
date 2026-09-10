@@ -420,6 +420,16 @@ function ChatbotEvalCockpit({
     () => chatbotTasks.find((task) => task.id === selectedTaskId) ?? null,
     [chatbotTasks, selectedTaskId],
   );
+  // A task shipping input/cases.jsonl runs one trial per persona x scenario.
+  // Default to every scenario: the task list is a list, and running one of its
+  // fifteen was never what the task meant.
+  const caseCount = selectedTask?.caseCount ?? 0;
+  const [caseSampleSize, setCaseSampleSize] = useState<number | null>(null);
+  useEffect(() => {
+    setCaseSampleSize(null);
+  }, [selectedTaskId]);
+  const casesUsed =
+    caseCount > 0 ? Math.max(1, Math.min(caseSampleSize ?? caseCount, caseCount)) : 0;
   const applicationId = (selectedTask?.applicationId ||
     (options?.defaults.applicationId as ApplicationId | undefined) ||
     "chatbot") as ApplicationId;
@@ -580,6 +590,7 @@ function ChatbotEvalCockpit({
           chatApplicationId: knownLaunchApplicationId ?? undefined,
           chatApplicationContext: launchChatApplicationContext,
           chatMaxTurns: maxTurns,
+          maxCases: caseCount > 0 ? casesUsed : undefined,
         },
       });
       return;
@@ -589,6 +600,8 @@ function ChatbotEvalCockpit({
     canLaunchCohort,
     isRunning,
     isBatchRun,
+    caseCount,
+    casesUsed,
     requestDomain,
     knownLaunchApplicationId,
     launchChatApplicationContext,
@@ -923,6 +936,9 @@ function ChatbotEvalCockpit({
               resolveCohortSize({ selectedPersonaIds, selectedCount }),
               visiblePersonaIds.length,
             )}
+            caseCount={caseCount}
+            caseSampleSize={casesUsed}
+            onCaseSampleSizeChange={setCaseSampleSize}
             parallelTrials={parallelTrials}
             onParallelTrialsChange={setParallelTrials}
             isRunning={runBusy}

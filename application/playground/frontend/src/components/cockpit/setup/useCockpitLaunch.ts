@@ -25,6 +25,7 @@ export type CockpitLaunchOverrides = Pick<
   | "chatMaxTurns"
   | "osAppSubmissionProfile"
   | "osAppBackend"
+  | "maxCases"
 >;
 
 /**

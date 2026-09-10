@@ -48,6 +48,16 @@ def load_cases(task_path: str, *, repo_root: Path) -> dict[str, dict[str, Any]]:
     return cases
 
 
+def case_ids_for_task(task_path: str, *, repo_root: Path) -> list[str]:
+    """Return the task's case ids in file order, or ``[]`` when it ships none.
+
+    File order is the contract: the job builder deals a capped run across this
+    list, and ``cases.jsonl`` is written grouped -- by capability, by error
+    type -- so the order carries which group a case belongs to.
+    """
+    return list(load_cases(task_path, repo_root=repo_root))
+
+
 def _lookup(case: dict[str, Any], dotted: str) -> Any:
     current: Any = case
     for part in dotted.split("."):

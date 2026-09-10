@@ -19,6 +19,9 @@ export interface CockpitRunCenterProps {
   canRun: boolean;
   isBatch: boolean;
   personaCount: number;
+  caseCount?: number;
+  caseSampleSize?: number;
+  onCaseSampleSizeChange?: (value: number) => void;
   parallelTrials: number;
   onParallelTrialsChange: (value: number) => void;
   runBusy: boolean;
@@ -50,6 +53,9 @@ export function CockpitRunCenter({
   canRun,
   isBatch,
   personaCount,
+  caseCount,
+  caseSampleSize,
+  onCaseSampleSizeChange,
   parallelTrials,
   onParallelTrialsChange,
   runBusy,
@@ -82,6 +88,9 @@ export function CockpitRunCenter({
         canRun={canRun}
         isBatch={isBatch}
         personaCount={personaCount}
+        caseCount={caseCount}
+        caseSampleSize={caseSampleSize}
+        onCaseSampleSizeChange={onCaseSampleSizeChange}
         parallelTrials={parallelTrials}
         onParallelTrialsChange={onParallelTrialsChange}
         isRunning={runBusy}

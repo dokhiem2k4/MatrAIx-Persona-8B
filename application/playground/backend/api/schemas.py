@@ -736,6 +736,9 @@ class HarborJobLaunchRequest(BaseModel):
     chatApplicationId: Optional[str] = None
     chatApplicationContext: Optional[str] = None
     chatMaxTurns: Optional[int] = None
+    # Tasks that ship input/cases.jsonl run one trial per persona x case.
+    # None means every case; a cap is dealt across the file, not off the head.
+    maxCases: Optional[int] = None
 
     @field_validator("mode")
     @classmethod

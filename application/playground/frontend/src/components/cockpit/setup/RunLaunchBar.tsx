@@ -9,6 +9,11 @@ export interface RunLaunchBarProps {
   canRun: boolean;
   isBatch: boolean;
   personaCount: number;
+  /** Scenarios the task ships. 0 or 1 means one trial per persona. */
+  caseCount?: number;
+  /** Scenarios this run will use, capped by the user. */
+  caseSampleSize?: number;
+  onCaseSampleSizeChange?: (value: number) => void;
   parallelTrials: number;
   onParallelTrialsChange: (value: number) => void;
   isRunning: boolean;
@@ -37,6 +42,9 @@ export function RunLaunchBar({
   canRun,
   isBatch,
   personaCount,
+  caseCount = 0,
+  caseSampleSize,
+  onCaseSampleSizeChange,
   parallelTrials,
   onParallelTrialsChange,
   isRunning,
@@ -61,7 +69,16 @@ export function RunLaunchBar({
   const failed = runPhase === "error";
   const done = runPhase === "done";
   const pct = Math.max(0, Math.min(100, progressPct));
-  const parallelMax = Math.max(1, personaCount);
+  // A case-driven task runs one trial per persona x scenario, so the number on
+  // the button is the product, not the cohort size. Showing the cohort size
+  // here understated a 15-scenario task list by 15x.
+  const casesAvailable = Math.max(0, caseCount);
+  const casesUsed =
+    casesAvailable > 0
+      ? Math.max(1, Math.min(caseSampleSize ?? casesAvailable, casesAvailable))
+      : 0;
+  const trialCount = personaCount * Math.max(1, casesUsed);
+  const parallelMax = Math.max(1, trialCount);
 
   return (
     <div className="glass-panel-strong w-full shrink-0 rounded-xl px-4 py-3 sm:px-5">
@@ -216,10 +233,21 @@ export function RunLaunchBar({
               {isRunning
                 ? t("cockpitSetup.run.launching")
                 : isBatch
-                  ? t("cockpitSetup.run.runBatch", { count: personaCount })
+                  ? t("cockpitSetup.run.runBatch", { count: trialCount })
                   : t("cockpitSetup.run.runLive")}
             </button>
-            {isBatch && personaCount > 1 && (
+            {isBatch && casesAvailable > 1 && onCaseSampleSizeChange && (
+              <CockpitInlineCount
+                label={t("cockpitSetup.run.cases")}
+                value={casesUsed}
+                onChange={onCaseSampleSizeChange}
+                min={1}
+                max={casesAvailable}
+                disabled={isRunning}
+                hint={t("cockpitSetup.run.atMost", { count: casesAvailable })}
+              />
+            )}
+            {isBatch && trialCount > 1 && (
               <CockpitInlineCount
                 label={t("cockpitSetup.run.parallel")}
                 value={Math.min(parallelTrials, parallelMax)}
@@ -233,7 +261,12 @@ export function RunLaunchBar({
           </div>
           <p className="mt-2 text-center text-[12px] text-text-dim">
             {isBatch
-              ? t("cockpitSetup.run.batchHint")
+              ? casesAvailable > 0
+                ? t("cockpitSetup.run.trialBreakdown", {
+                    personas: personaCount,
+                    cases: casesUsed,
+                  })
+                : t("cockpitSetup.run.batchHint")
               : t("cockpitSetup.run.liveHint")}
           </p>
         </>

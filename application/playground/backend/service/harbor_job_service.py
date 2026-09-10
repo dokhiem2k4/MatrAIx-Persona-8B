@@ -1001,6 +1001,7 @@ class HarborJobService:
         os_app_backend: str | None = None,
         cua_backend: str | None = None,
         execution_plane: str | None = None,
+        max_cases: int | None = None,
     ) -> str:
         from backend.service.execution_plane import (
             ExecutionPlaneError,
@@ -1123,6 +1124,9 @@ class HarborJobService:
             "execution_mode": execution_mode,
             "trial_profile": trial_profile,
             "cua_backend": os_app_backend,
+            # Tasks that ship input/cases.jsonl run one trial per persona x case.
+            # None means every case in the file.
+            "max_cases": max_cases,
             "agent": {"name": agent, "model_name": model},
             "job": {
                 "job_name": resolved_job_name,
@@ -1197,6 +1201,8 @@ class HarborJobService:
             "# Persona sources: {}\n"
             "# Persona filters: {}\n"
             "# Personas: {}\n"
+            "# Cases: {}\n"
+            "# Trials: {}\n"
             "# Jobs output: {}/\n\n".format(
                 task_path,
                 resolved_task_path,
@@ -1212,6 +1218,8 @@ class HarborJobService:
                 )
                 or "(none)",
                 ", ".join(job_meta.get("selected_persona_ids", []) if job_meta else []),
+                ", ".join(job_meta.get("case_ids", []) if job_meta else []) or "(none)",
+                len(job_config.get("agents", [])),
                 _rel_path(self.jobs_dir, self.repo_root),
             )
         )

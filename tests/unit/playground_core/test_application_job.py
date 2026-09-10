@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import pytest
@@ -11,6 +12,7 @@ from matraix.application_job import (
     resolve_job_environment,
     resolve_harbor_task_path,
     resolve_persona_entries,
+    select_case_ids,
 )
 
 
@@ -78,6 +80,95 @@ def test_build_application_job_config_with_explicit_persona_ids(tmp_path: Path) 
     assert meta["trial_profile"] == "json_survey"
     assert len(job["agents"]) == 1
     assert job["agents"][0]["kwargs"]["persona_path"].endswith("persona_0001.yaml")
+
+
+def _repo_with_cases(tmp_path: Path, case_ids: list[str]) -> Path:
+    repo = tmp_path
+    pool = repo / "persona" / "datasets" / "matraix-persona-dev-sample"
+    pool.mkdir(parents=True)
+    for persona_id in ("0001", "0002"):
+        (pool / "persona_{}.yaml".format(persona_id)).write_text(
+            "persona_id: '{}'\nversion: '1.0'\nsource: Nemotron\ndimensions: {{}}\n".format(
+                persona_id
+            ),
+            encoding="utf-8",
+        )
+    input_dir = repo / "application" / "tasks" / "chat_case-task" / "input"
+    input_dir.mkdir(parents=True)
+    (input_dir / "cases.jsonl").write_text(
+        "\n".join(
+            json.dumps({"case_id": case_id, "scenario_vi": "x"}) for case_id in case_ids
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    return repo
+
+
+def _case_job(repo: Path, **extra: object) -> dict:
+    return build_application_job_config(
+        {
+            "name": "case-job",
+            "task": "application/tasks/chat_case-task",
+            "persona_pool": "persona/datasets/matraix-persona-dev-sample",
+            "persona_ids": ["0001", "0002"],
+            "execution_mode": "auto",
+            "trial_profile": "user_sim_chat",
+            "agent": {"name": "persona-user-sim", "model_name": "anthropic/claude-haiku-4-5"},
+            "job": {"job_name": "case-job", "jobs_dir": "jobs"},
+            **extra,
+        },
+        repo_root=repo,
+    )
+
+
+def test_task_with_cases_runs_one_trial_per_persona_and_case(tmp_path: Path) -> None:
+    """The whole case file runs, not one improvised trial per persona.
+
+    Without this the Playground bound no case at all, and a 15-scenario task
+    list ran 15x fewer trials than it says it does -- on a fallback goal that
+    matches none of its scenarios.
+    """
+    repo = _repo_with_cases(tmp_path, ["c1", "c2", "c3"])
+
+    job = _case_job(repo)
+
+    kwargs = [agent["kwargs"] for agent in job["agents"]]
+    assert len(kwargs) == 6
+    assert [entry["case_id"] for entry in kwargs] == ["c1", "c1", "c2", "c2", "c3", "c3"]
+    # Personas interleave inside each case, so a run stopped early still holds
+    # roughly the same number of trials for each of them.
+    assert kwargs[0]["persona_path"] != kwargs[1]["persona_path"]
+    assert job["_job_meta"]["case_ids"] == ["c1", "c2", "c3"]
+
+
+def test_task_without_cases_keeps_one_trial_per_persona(tmp_path: Path) -> None:
+    repo = _repo_with_cases(tmp_path, [])
+    (repo / "application" / "tasks" / "chat_case-task" / "input" / "cases.jsonl").unlink()
+
+    job = _case_job(repo)
+
+    assert len(job["agents"]) == 2
+    assert all("case_id" not in agent["kwargs"] for agent in job["agents"])
+    assert job["_job_meta"]["case_ids"] == []
+
+
+def test_max_cases_spreads_the_picks_across_the_file(tmp_path: Path) -> None:
+    """A cap must not be a head: cases.jsonl is grouped, so the first N cluster."""
+    repo = _repo_with_cases(tmp_path, ["c1", "c2", "c3", "c4", "c5", "c6"])
+
+    job = _case_job(repo, max_cases=3)
+
+    assert job["_job_meta"]["case_ids"] == ["c1", "c3", "c5"]
+    assert len(job["agents"]) == 6
+
+
+def test_select_case_ids_passes_through_when_uncapped() -> None:
+    case_ids = ["c1", "c2", "c3"]
+    assert select_case_ids(case_ids, None) == case_ids
+    assert select_case_ids(case_ids, 0) == case_ids
+    assert select_case_ids(case_ids, 9) == case_ids
+    assert select_case_ids(case_ids, "not a number") == case_ids
 
 
 def test_resolve_job_environment_auto_native_profiles() -> None:

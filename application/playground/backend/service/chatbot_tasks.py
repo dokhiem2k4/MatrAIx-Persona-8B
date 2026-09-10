@@ -44,6 +44,9 @@ class ChatbotEvalTask:
     health_url: str = ""
     status_detail: str = ""
     capabilities: tuple[dict[str, Any], ...] = ()
+    # Scenarios in input/cases.jsonl. A batch run does one trial per persona x
+    # case, so this is the other half of the trial count the run button shows.
+    case_count: int = 0
 
     def _normalized_task_path(self) -> str:
         task_path = self.task_path
@@ -74,6 +77,7 @@ class ChatbotEvalTask:
             "capabilities": list(self.capabilities),
             "canStart": self.can_start,
             "healthUrl": self.health_url,
+            "caseCount": self.case_count,
         }
 
     def to_dict(self) -> Dict[str, Any]:
@@ -82,6 +86,25 @@ class ChatbotEvalTask:
             "available": self.available,
             "statusDetail": self.status_detail,
         }
+
+
+def _case_count(task_path: Union[str, Path]) -> int:
+    """How many scenarios ``input/cases.jsonl`` holds; 0 when the task has none.
+
+    Counted by line rather than parsed: this runs for every chatbot task on
+    registry build, and the job builder is what actually reads the records.
+    """
+    path = Path(task_path)
+    if not path.is_absolute():
+        path = repo_root() / path
+    cases_path = path / "input" / "cases.jsonl"
+    if not cases_path.is_file():
+        return 0
+    return sum(
+        1
+        for line in cases_path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    )
 
 
 def _static_sidecar_fields(task_config: ChatbotTaskConfig | None) -> dict[str, Any]:
@@ -171,6 +194,7 @@ def _build_registry() -> Dict[str, ChatbotEvalTask]:
             health_url=str(static_sidecar["health_url"] or ""),
             status_detail="",
             capabilities=capabilities,
+            case_count=_case_count(record.task_path),
         )
     return tasks
 

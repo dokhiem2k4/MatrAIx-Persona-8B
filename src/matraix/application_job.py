@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 from pathlib import Path
 from typing import Any
@@ -173,6 +174,45 @@ def resolve_persona_entries(
     return chosen
 
 
+def case_ids_for_task(task_path: str, *, repo_root: Path) -> list[str]:
+    """Case ids this task ships, in file order; empty when it ships none.
+
+    Read straight off disk rather than through ``playground.case_binding``:
+    that module pulls in the Playground backend, and this builder also runs
+    from the CLI recipe generator, where the backend is not importable.
+    """
+    path = (repo_root / task_path.strip().replace("\\", "/")) / "input" / "cases.jsonl"
+    if not path.is_file():
+        return []
+    case_ids: list[str] = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        text = line.strip()
+        if not text:
+            continue
+        case_id = str(json.loads(text).get("case_id") or "").strip()
+        if case_id:
+            case_ids.append(case_id)
+    return case_ids
+
+
+def select_case_ids(case_ids: list[str], max_cases: Any) -> list[str]:
+    """Cap the case list by spreading the picks across it, not taking the head.
+
+    ``cases.jsonl`` is written grouped -- all of capability 1, then all of
+    capability 2 -- so the first N cases sit in the first group or two and a
+    capped run would say nothing about the rest.
+    """
+    try:
+        cap = int(max_cases)
+    except (TypeError, ValueError):
+        return list(case_ids)
+    total = len(case_ids)
+    if cap <= 0 or cap >= total:
+        return list(case_ids)
+    step = total / cap
+    return [case_ids[int(index * step)] for index in range(cap)]
+
+
 def build_application_job_config(
     spec: dict[str, Any], *, repo_root: Path
 ) -> dict[str, Any]:
@@ -222,15 +262,30 @@ def build_application_job_config(
     job_spec = spec.get("job", {})
     job_slug = spec.get("name", "application-task-job")
 
+    # A task that ships input/cases.jsonl is asking for one trial per case, not
+    # one trial per persona. Leaving the case unbound does not fail: the trial
+    # falls back to a generic goal, so a 15-scenario task list quietly ran one
+    # improvised errand instead. Personas are interleaved inside each case, so
+    # a run stopped early holds roughly the same number of trials for each of
+    # them.
+    case_ids = select_case_ids(
+        case_ids_for_task(spec["task"], repo_root=repo_root),
+        spec.get("max_cases"),
+    )
     agents = [
         apply_persona_context_to_agent_spec(
             {
                 "name": agent_spec["name"],
                 "model_name": agent_spec["model_name"],
-                "kwargs": {"persona_path": entry["path"]},
+                "kwargs": (
+                    {"persona_path": entry["path"], "case_id": case_id}
+                    if case_id
+                    else {"persona_path": entry["path"]}
+                ),
             },
             model_name=str(agent_spec.get("model_name") or ""),
         )
+        for case_id in (case_ids or [""])
         for entry in chosen
     ]
 
@@ -255,6 +310,7 @@ def build_application_job_config(
             "job_slug": job_slug,
             "task": spec["task"],
             "sample_size": len(chosen),
+            "case_ids": case_ids,
             "sample_size_per_value_group": per_value_group,
             "seed": seed,
             "stratify_fields": stratify_fields,

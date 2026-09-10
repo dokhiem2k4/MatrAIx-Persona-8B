@@ -243,6 +243,8 @@ export const api = {
     useEntirePool?: boolean;
     osAppSubmissionProfile?: string | null;
     osAppBackend?: string | null;
+    /** Cap the scenarios a case-driven task runs. Omit to run every one. */
+    maxCases?: number | null;
   }) =>
     request<HarborJobLaunchResponse>("/api/harbor/jobs", {
       method: "POST",

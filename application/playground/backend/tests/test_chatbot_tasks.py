@@ -58,3 +58,29 @@ def test_get_chatbot_eval_task_reads_support_api_sidecar_defaults():
     assert task.application_context == "customer_support"
     assert task.can_start is True
     assert task.health_url == "http://127.0.0.1:8904"
+
+
+def test_case_count_matches_the_task_case_file():
+    """The run button multiplies personas by this, so it has to be the real count.
+
+    A batch of a case-driven task runs one trial per persona x case. Reporting
+    only the cohort size understated a 15-scenario task list by 15x, which is
+    also what it costs.
+    """
+    task = get_chatbot_eval_task("chat-vita-tasklist")
+    cases_path = (
+        REPO_ROOT / "application/tasks/chat_vita-tasklist/input/cases.jsonl"
+    )
+    expected = sum(
+        1 for line in cases_path.read_text(encoding="utf-8").splitlines() if line.strip()
+    )
+
+    assert expected > 1
+    assert task.case_count == expected
+    assert task.to_summary_dict()["caseCount"] == expected
+
+
+def test_case_count_is_zero_for_a_task_without_a_case_file():
+    task = get_chatbot_eval_task("chat-api-support-chatbot")
+
+    assert task.case_count == 0

@@ -820,6 +820,7 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
                 persona_filters=body.personaFilters,
                 cohort_id=body.cohortId,
                 use_entire_pool=body.useEntirePool,
+                max_cases=body.maxCases,
             )
         except ValueError as exc:
             raise HTTPException(status_code=422, detail=str(exc)) from exc
