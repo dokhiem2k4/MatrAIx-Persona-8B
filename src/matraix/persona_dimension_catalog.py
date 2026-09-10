@@ -211,7 +211,20 @@ def values_for_dimension(
     return [str(v) for v in meta.get("values") or []]
 
 
-def _dim_value(dimensions: dict[str, Any], key: str) -> str | None:
+def _dim_value(
+    dimensions: dict[str, Any],
+    key: str,
+    meta: dict[str, Any] | None = None,
+) -> str | None:
+    """Display text for one dimension, or None when it has no value.
+
+    A value that looks nullish is kept when the schema declares it for this
+    dimension. 420 of the 1,306 dimensions offer "None" as a value, and it is
+    usually the most informative one they have -- skill_driving=None is a
+    person who cannot drive, not a person whose driving skill is unknown.
+    Dropping it also quietly weakened the field ablation: an arm that flipped a
+    field to "None" removed a prompt line instead of changing one.
+    """
     raw = dimensions.get(key)
     if raw is None:
         return None
@@ -220,9 +233,21 @@ def _dim_value(dimensions: dict[str, Any], key: str) -> str | None:
         text = ", ".join(parts)
     else:
         text = str(raw).strip()
-    if not text or text.lower() in _NULLISH:
+    if not text:
+        return None
+    if text.lower() in _NULLISH and not _is_declared_value(text, meta):
         return None
     return text
+
+
+def _is_declared_value(text: str, meta: dict[str, Any] | None) -> bool:
+    """True when the schema lists this exact value for this dimension."""
+    if not meta:
+        return False
+    values = meta.get("values")
+    if not isinstance(values, (list, tuple)):
+        return False
+    return any(text == str(value) for value in values)
 
 
 def _is_default(value: Any, default: Any) -> bool:
@@ -261,7 +286,13 @@ def _section_for(dim_id: str, category: str) -> str:
     return "Other attributes"
 
 
-def _label_for(dim_id: str, meta: dict[str, Any] | None) -> str:
+def _label_for(
+    dim_id: str,
+    meta: dict[str, Any] | None,
+    overrides: dict[str, str] | None = None,
+) -> str:
+    if overrides and dim_id in overrides:
+        return str(overrides[dim_id]).strip()
     if meta and meta.get("label"):
         return str(meta["label"]).strip()
     return dim_id.replace("_", " ")
@@ -294,8 +325,17 @@ def collect_dimension_items(
     dimensions: dict[str, Any],
     *,
     catalog_path: str = DEFAULT_CATALOG_PATH,
+    label_overrides: dict[str, str] | None = None,
+    skip_defaults: bool = True,
 ) -> dict[str, list[tuple[str, str, str]]]:
-    """Group keepable dims into section -> [(dim_id, label, value), ...]."""
+    """Group keepable dims into section -> [(dim_id, label, value), ...].
+
+    ``skip_defaults`` drops a dimension sitting on its schema default. That is
+    right for an untiered profile, where 1,126 of 1,306 dimensions declare one
+    and printing them all would bury the handful that distinguish this person.
+    It is wrong once a tier has already chosen the fields: skill_driving
+    defaults to "None", so a driver who cannot drive lost the line saying so.
+    """
     catalog = load_dimension_catalog(catalog_path)
     by_id: dict[str, dict[str, Any]] = catalog["by_id"]
     grouped: dict[str, list[tuple[str, str, str]]] = {h: [] for h, _ in _SECTIONS}
@@ -309,19 +349,20 @@ def collect_dimension_items(
         meta = by_id.get(dim_id)
         if _should_skip_dim(dim_id, meta):
             continue
-        text = _dim_value(dimensions, dim_id)
+        text = _dim_value(dimensions, dim_id, meta)
         if text is None:
             continue
         raw = dimensions.get(dim_id)
-        if meta and _is_default(raw, meta.get("defaultValue")):
-            continue
-        # Also skip when string form equals stringified default.
-        if meta and _is_default(text, meta.get("defaultValue")):
-            continue
+        if skip_defaults and meta:
+            if _is_default(raw, meta.get("defaultValue")):
+                continue
+            # Also skip when string form equals stringified default.
+            if _is_default(text, meta.get("defaultValue")):
+                continue
 
         category = str((meta or {}).get("category") or "")
         heading = _section_for(dim_id, category)
-        label = _label_for(dim_id, meta)
+        label = _label_for(dim_id, meta, label_overrides)
         grouped.setdefault(heading, []).append((dim_id, label, text))
 
     return {key: value for key, value in grouped.items() if value}
@@ -332,13 +373,20 @@ def build_dimension_narrative(
     *,
     catalog_path: str = DEFAULT_CATALOG_PATH,
     max_chars: int | None = None,
+    label_overrides: dict[str, str] | None = None,
+    skip_defaults: bool = True,
 ) -> list[str]:
     """Schema-driven profile sections for agent roleplay (full 1290, adaptive).
 
     Returns a list of markdown section blocks for the Jinja persona macros.
     """
     budget = resolve_profile_max_chars(max_chars)
-    grouped = collect_dimension_items(dimensions, catalog_path=catalog_path)
+    grouped = collect_dimension_items(
+        dimensions,
+        catalog_path=catalog_path,
+        label_overrides=label_overrides,
+        skip_defaults=skip_defaults,
+    )
     if not grouped:
         return []
 
@@ -401,10 +449,34 @@ def build_template_context_extras(
     *,
     catalog_path: str = DEFAULT_CATALOG_PATH,
     max_chars: int | None = None,
+    label_overrides: dict[str, str] | None = None,
+    directives: bool = True,
+    tiered: bool = False,
 ) -> dict[str, Any]:
+    """Context for the persona templates: directives first, labels for the rest.
+
+    A field the directive pack covers is rendered as an instruction and must
+    not also appear as a label -- stating "Formality: Very formal" beside the
+    instruction that spells out what very formal means is the redundancy the
+    ablation was measuring.
+    """
+    from matraix.persona_speech import build_directive_sections, pack_for
+
+    directive_sections: list[str] = []
+    remaining = dimensions
+    pack = pack_for(dimensions) if directives else None
+    if pack is not None:
+        directive_sections = build_directive_sections(dimensions, pack=pack)
+        remaining = {k: v for k, v in dimensions.items() if k not in pack.directives}
+
     return {
         "dimension_profile_narrative": build_dimension_narrative(
-            dimensions, catalog_path=catalog_path, max_chars=max_chars
+            remaining,
+            catalog_path=catalog_path,
+            max_chars=max_chars,
+            label_overrides=label_overrides,
+            skip_defaults=not tiered,
         ),
+        "dimension_directive_sections": directive_sections,
         "dimension_catalog_path": catalog_path,
     }

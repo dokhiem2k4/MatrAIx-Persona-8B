@@ -8,6 +8,11 @@ from jinja2 import Environment, FileSystemLoader, StrictUndefined, TemplateNotFo
 
 from matraix.agents.persona.loader import Persona
 from matraix.persona_dimension_catalog import build_template_context_extras
+from matraix.persona_tiers import (
+    label_overrides,
+    prompt_tier_dimensions,
+    stamped_tiers,
+)
 
 PERSONA_SYSTEM_TEMPLATE = "persona_system.md.j2"
 PERSONA_INSTRUCTION_TEMPLATE = "persona_instruction.md.j2"
@@ -58,7 +63,16 @@ def render_persona_template(
     except TemplateNotFound as exc:
         raise FileNotFoundError(f"Persona template not found: {template_path}") from exc
 
+    # The record carries every field it was built from; only the prompt tier is
+    # meant to reach the model. No job config points at the rendered view, so
+    # filtering here is the only place the tier is honoured at all.
     return template.render(
         **persona.template_context(instruction=instruction),
-        **build_template_context_extras(persona.dimensions),
+        **build_template_context_extras(
+            prompt_tier_dimensions(persona.data),
+            label_overrides=label_overrides(persona.data),
+            # A tiered pool already chose these fields, so a value sitting on
+            # its schema default is still information and must not be elided.
+            tiered=bool(stamped_tiers(persona.data)),
+        ),
     ).strip()

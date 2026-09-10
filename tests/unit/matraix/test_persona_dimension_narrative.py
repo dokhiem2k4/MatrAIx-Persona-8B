@@ -9,8 +9,10 @@ from matraix.persona_agent_context import (
     persona_llm_model_info,
 )
 from matraix.persona_dimension_catalog import (
+    DEFAULT_CATALOG_PATH,
     build_dimension_narrative,
     collect_dimension_items,
+    load_dimension_catalog,
 )
 
 
@@ -58,11 +60,19 @@ def test_full_schema_render_skips_null_and_default_without_truncation():
     all_items = [item for items in grouped.values() for item in items]
     assert len(all_items) > 100
 
+    # "None" survives only where the schema declares it as a value -- see
+    # test_persona_declared_none.py. Placeholders that no dimension declares
+    # must still never reach a profile.
     values = {value.lower() for _dim_id, _label, value in all_items}
-    assert "none" not in values
     assert "n/a" not in values
     assert "not applicable" not in values
     assert "no coding activity" not in values
+
+    catalog = load_dimension_catalog(DEFAULT_CATALOG_PATH)["by_id"]
+    for dim_id, _label, value in all_items:
+        if value.lower() == "none":
+            declared = (catalog.get(dim_id) or {}).get("values") or []
+            assert "None" in declared, f"{dim_id} rendered an undeclared None"
 
     paragraphs = build_dimension_narrative(persona.dimensions)
     text = "\n\n".join(paragraphs)

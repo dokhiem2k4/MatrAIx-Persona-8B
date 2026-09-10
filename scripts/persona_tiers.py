@@ -33,120 +33,29 @@ import collections
 from pathlib import Path
 from typing import Any
 
-#: Answers the assistant actually differ on. Grouped the way the brief reasons
-#: about them: how the driver speaks, what they will accept, the situation the
-#: request comes from, and how long they persist before giving up.
-PROMPT_FIELDS = (
-    # how they speak
-    "vn_address_register",
-    "tone_expected",
-    "cog_verbosity",
-    "cog_formality",
-    "accent_region",
-    # what content is acceptable
-    "att_self_driving_cars",
-    "att_electric_vehicles",
-    "vn_assistant_task_scope",
-    "cog_skepticism",
-    "tech_savviness",
-    # the situation the request comes from
-    "demo_driver_status",
-    "skill_driving",
-    "trip_mix",
-    "cabin_context",
-    "vn_usual_companion",
-    # thresholds
-    "cog_patience",
-    "vn_retry_tolerance",
-    # Not in the original seventeen. Kept because 54% of surveyed drivers said
-    # they are uncomfortable speaking aloud with a passenger present, which
-    # decides whether a message may be read out at all. vn_usual_companion says
-    # who is there; this says what the driver does about it.
-    "vn_voice_privacy_comfort",
+#: The tier tables live in the package: the prompt renderer needs them too, and
+#: the second copy is where the drift starts -- the same lesson as
+#: ``matraix.persona_pool``. Re-exported here so the scripts keep one import
+#: site, never redeclared.
+from matraix.persona_tiers import (  # noqa: E402,F401
+    ARCHIVE_REASONS,
+    CONSEQUENCE,
+    DUPLICATE,
+    GUARD_FIELDS,
+    LABEL_OVERRIDES,
+    LOW_CONFIDENCE,
+    NO_EFFECT,
+    PROMPT_FIELDS,
+    UNCONDITIONED,
+    tier_of,
 )
-
-#: Never rendered. The validator reads these to decide whether the prompt tier
-#: describes a person who could exist.
-GUARD_FIELDS = (
-    "age_bracket",
-    "gender_identity",
-    "vn_locality",
-    "urbanicity",
-    "lstyle_commute_mode",
-    "veh_class",
-    "veh_assistant_builtin",
-    "assistant_usage_freq",
-)
-
-#: Why a field is neither rendered nor used as a constraint.
-NO_EFFECT = "no_effect_on_assistant_output"
-CONSEQUENCE = "consequence_not_cause"
-LOW_CONFIDENCE = "low_confidence"
-DUPLICATE = "duplicates_another_field"
-
-ARCHIVE_REASONS = {
-    "cult_vietnam": NO_EFFECT,
-    "demo_children_count": NO_EFFECT,
-    "demo_citizenship_status": NO_EFFECT,
-    "demo_employment_status": NO_EFFECT,
-    "demo_marital_status": NO_EFFECT,
-    "demo_religion_affiliation": NO_EFFECT,
-    "domain": NO_EFFECT,
-    "english_proficiency": NO_EFFECT,
-    "highest_education": NO_EFFECT,
-    "lang_vietnamese": NO_EFFECT,
-    "life_stage": NO_EFFECT,
-    "primary_language": NO_EFFECT,
-    "region": NO_EFFECT,
-    "religiosity": NO_EFFECT,
-    "safety_sensitivity": NO_EFFECT,
-    "socioeconomic_band": NO_EFFECT,
-    "topic_cars": DUPLICATE,
-    "trust_level": DUPLICATE,
-    "att_voice_assistant": LOW_CONFIDENCE,
-    "drv_exposure": CONSEQUENCE,
-    "need_state": CONSEQUENCE,
-    "cabin_noise": CONSEQUENCE,
-}
-
-#: Two fields whose Vietnamese labels both read as "trust". They measure
-#: different things -- one is how much a person trusts strangers, the other how
-#: much they doubt a claim -- and rendering both invites an incoherent
-#: character. Renamed at display time only; the ids stay put.
-LABEL_OVERRIDES = {
-    "trust_level": "Tin tưởng người lạ (WVS)",
-    "cog_skepticism": "Nghi ngờ thông tin",
-}
-
-#: Prompt-tier fields whose conditioning parents are themselves generated, so
-#: the value carries no measured signal about this respondent -- it is a draw
-#: from the pool's marginal, dressed as a conditional. Flagged in the prompt
-#: view so a reader does not treat it as evidence.
-#:
-#: trip_mix is conditioned on urbanicity and vn_locality. Neither is asked: the
-#: questionnaire has no province or city question, so vn_locality is generated
-#: and urbanicity is derived from it. Adding one province question to the form
-#: is the cheapest way to make this field real.
-UNCONDITIONED = {
-    "trip_mix": "parents (urbanicity, vn_locality) are generated; no province "
-                "question in the survey",
-}
 
 OBSERVED_TYPES = {"observed", "direct", "forum_measured"}
 
 
-#: Re-exported so the scripts keep one import site. The predicate itself lives
-#: in the package, because the playground and the job builder need it too and a
-#: second copy would drift.
 from matraix.persona_pool import persona_paths  # noqa: E402,F401
 
 
-def tier_of(field_id: str) -> str:
-    if field_id in PROMPT_FIELDS:
-        return "prompt"
-    if field_id in GUARD_FIELDS:
-        return "guard"
-    return "archive"
 
 
 def recompute_grounding_summary(persona: dict[str, Any]) -> dict[str, Any]:
