@@ -9,6 +9,11 @@ sampled files claimed ``generated: 1268`` while actually holding twenty-two,
 which makes the one field that says how much of a persona is evidence unusable.
 Any script that adds or removes a dimension must call this before writing.
 
+Fixing it also broke comparability: a corrected counter is indistinguishable
+from deleted data unless you know the counter was the thing that changed. See
+``docs/persona/grounding-summary-break.md`` before quoting any figure derived
+from ``grounding_summary`` on a persona written before commit 850a83c.
+
 ``TIERS`` splits the fields by what they are for, rather than deleting any:
 
   prompt   changes what the assistant would say back, so it is rendered
@@ -130,17 +135,10 @@ UNCONDITIONED = {
 OBSERVED_TYPES = {"observed", "direct", "forum_measured"}
 
 
-def persona_paths(pool: Path, *, recursive: bool = False) -> list[Path]:
-    """Persona files in a pool, excluding the prompt views beside them.
-
-    ``persona_*.yaml`` used to be unambiguous. Once ``persona_x.prompt.yaml``
-    started living in the same directory the glob matched both, and every
-    caller silently doubled its pool: the validator reported 84 personas out of
-    42 and passed on the views, which carry no guard fields for a rule to fire
-    against. A view is a projection, never an input.
-    """
-    it = pool.rglob("persona_*.yaml") if recursive else pool.glob("persona_*.yaml")
-    return sorted(p for p in it if not p.name.endswith(".prompt.yaml"))
+#: Re-exported so the scripts keep one import site. The predicate itself lives
+#: in the package, because the playground and the job builder need it too and a
+#: second copy would drift.
+from matraix.persona_pool import persona_paths  # noqa: E402,F401
 
 
 def tier_of(field_id: str) -> str:

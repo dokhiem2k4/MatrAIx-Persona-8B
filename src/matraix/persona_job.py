@@ -10,6 +10,8 @@ from typing import Any, Callable
 
 import yaml
 
+from matraix.persona_pool import persona_paths
+
 from matraix.persona_dimension_catalog import values_for_dimension
 from matraix.task_catalog import (
     confounder_values_from_grounding,
@@ -67,7 +69,7 @@ def load_manifest(pool_dir: Path, *, repo_root: Path) -> list[dict[str, Any]]:
         return entries
 
     entries: list[dict[str, Any]] = []
-    for path in sorted(pool_dir.glob("persona_*.yaml")):
+    for path in persona_paths(pool_dir):
         raw = yaml.safe_load(path.read_text(encoding="utf-8"))
         if not isinstance(raw, dict):
             continue
