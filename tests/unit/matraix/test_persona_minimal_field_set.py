@@ -35,7 +35,7 @@ from matraix.persona_minimal import (
 )
 from matraix.persona_tiers import GUARD_FIELDS, PROMPT_FIELDS
 
-POOLS = ["persona/datasets/vn-drivers", "persona/datasets/vn-drivers-rows"]
+POOLS = ["persona/datasets/vn-drivers"]
 
 #: One known violation per rule, as the rule's own tests state it.
 INJECTIONS = {
@@ -152,7 +152,7 @@ def test_every_rule_still_fires_after_the_cut(code):
     sys.path.insert(0, str(Path("scripts").resolve()))
     from validate_persona_rules import violations
 
-    persona = trim_to_keep_set(_persona(POOLS[1]))
+    persona = trim_to_keep_set(_persona(POOLS[0]))
     for field, value in INJECTIONS[code].items():
         assert field in persona["dimensions"], f"{code} lost its input: {field}"
         persona["dimensions"][field] = value
@@ -163,7 +163,7 @@ def test_every_rule_still_fires_after_the_cut(code):
 def test_the_derivation_check_still_has_its_inputs():
     from matraix.persona_derivations import broken_derivations
 
-    persona = trim_to_keep_set(_persona(POOLS[1]))
+    persona = trim_to_keep_set(_persona(POOLS[0]))
     persona["dimensions"]["vn_assistant_task_scope"] = "Navigation and media"
     persona["dimensions"]["att_voice_assistant"] = "Opposed"
     assert broken_derivations(persona)

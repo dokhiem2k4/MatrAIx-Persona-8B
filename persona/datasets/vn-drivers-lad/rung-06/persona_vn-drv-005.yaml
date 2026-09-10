@@ -1,0 +1,79 @@
+persona_id: vn-drv-005
+version: '1.0'
+source: vn-driver
+sources:
+  full_dag:
+    values: 1265
+    assignment_types:
+      generated: 1265
+    measured: false
+  wvs_wave7_vnm_2020:
+    values: 17
+    assignment_types:
+      observed: 17
+    measured: true
+  vn_driver_survey_2026:
+    values: 8
+    assignment_types:
+      observed: 8
+    measured: true
+  vn_names:
+    values: 1
+    assignment_types:
+      generated: 1
+    measured: false
+  vn_localities:
+    values: 1
+    assignment_types:
+      generated: 1
+    measured: false
+display_name: Hồ Thị Thanh
+dimensions:
+  age_bracket: 65-74
+  demo_driver_status: Occasional driver
+  gender_identity: Woman
+  vn_address_register: bac/chau
+  vn_usual_companion: Friends or colleagues
+  accent_region: Northern
+grounding:
+  age_bracket:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070670
+    confidence: 1.0
+  demo_driver_status:
+    assignment_type: observed
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:vn-drv-005
+    confidence: 1.0
+  gender_identity:
+    assignment_type: observed
+    source_ref: wvs_wave7_vnm_2020
+    evidence: wvs_wave7_vnm_2020:wvs-vn-704070670
+    confidence: 1.0
+  vn_address_register:
+    assignment_type: generated
+    source_ref: otofun_2026
+    evidence: kinship register for age_bracket=65-74 gender_identity=Woman
+    confidence: 0.5
+  vn_usual_companion:
+    assignment_type: generated
+    source_ref: vn_driver_survey_2026
+    evidence: vn_driver_survey_2026:conditional_on:demo_driver_status
+    confidence: 0.5
+  accent_region:
+    assignment_type: derived
+    source_ref: vn_driver_survey_2026
+    evidence: derived_from:vn_locality
+    confidence: 0.9
+grounding_summary:
+  scoreable: 25
+  byAssignmentType:
+    observed: 25
+    generated: 1267
+  sources:
+  - full_dag
+  - vn_driver_survey_2026
+  - vn_localities
+  - vn_names
+  - wvs_wave7_vnm_2020

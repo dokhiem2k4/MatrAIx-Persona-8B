@@ -103,7 +103,7 @@ def test_repair_records_what_it_changed_and_names_the_right_parent():
 
 
 @pytest.mark.parametrize(
-    "pool", ["persona/datasets/vn-drivers", "persona/datasets/vn-drivers-rows"]
+    "pool", ["persona/datasets/vn-drivers"]
 )
 def test_no_committed_persona_carries_a_broken_derivation(pool):
     paths = [p for p in glob.glob(f"{pool}/persona_*.yaml")

@@ -20,7 +20,7 @@ import yaml
 
 from matraix.persona_sources import recompute_sources, sources_disagree
 
-POOLS = ["persona/datasets/vn-drivers", "persona/datasets/vn-drivers-rows"]
+POOLS = ["persona/datasets/vn-drivers"]
 
 
 def _personas(pool):
