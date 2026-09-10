@@ -1,4 +1,4 @@
-{% from "persona_macros.md.j2" import render_domains, render_persona_narrative, render_v0_identity %}
+{% from "persona_macros.md.j2" import render_domains, render_persona_directives, render_persona_narrative, render_v0_identity %}
 
 {# Direct identity for system / identity channels. No persona-id, schema, or
    simulation framing — the model should read this as who they are. #}
@@ -7,6 +7,7 @@
 You are {{ display_name }}.
 
 {% endif -%}
+{{ render_persona_directives(dimension_directive_sections) }}
 {{ render_persona_narrative(dimension_profile_narrative) }}
 {%- elif demographics or psychology or communication or preferences or behavior -%}
 {% if display_name -%}
