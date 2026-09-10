@@ -3,9 +3,9 @@ version: '1.0'
 source: vn-driver
 sources:
   full_dag:
-    values: 7
+    values: 4
     assignment_types:
-      generated: 7
+      generated: 4
     measured: false
   otofun_2026:
     values: 2
@@ -13,9 +13,9 @@ sources:
       generated: 2
     measured: false
   vn_driver_survey_2026:
-    values: 22
+    values: 19
     assignment_types:
-      observed: 22
+      observed: 19
     measured: true
   vn_localities:
     values: 1
@@ -23,9 +23,9 @@ sources:
       generated: 1
     measured: false
   wvs_wave7_vnm_2020:
-    values: 16
+    values: 5
     assignment_types:
-      observed: 16
+      observed: 5
     measured: true
 display_name: Lê Quang Huy
 dimensions:
@@ -36,38 +36,21 @@ dimensions:
   att_self_driving_cars: Positive
   att_voice_assistant: Enthusiast
   cabin_context: Hands on wheel
-  cabin_noise: Loud
   cog_formality: Casual
   cog_patience: Moderate
   cog_skepticism: High
   cog_verbosity: Terse
-  cult_vietnam: Native
-  demo_children_count: None
-  demo_citizenship_status: Citizen by birth
   demo_driver_status: Daily driver
-  demo_employment_status: Full-time
-  demo_marital_status: Single
-  demo_religion_affiliation: None
-  domain: Public Sector
   drv_exposure: 150-300 km
   english_proficiency: Basic (A1-A2)
   gender_identity: Man
   highest_education: Secondary
-  lang_vietnamese: Native
-  life_stage: Student
   lstyle_commute_mode: Car
-  need_state: Quiet and undisturbed
   primary_language: Vietnamese
-  region: Southeast Asia
-  religiosity: Spiritual
-  safety_sensitivity: Benign
   skill_driving: Advanced
-  socioeconomic_band: Middle
   tech_savviness: Digital native
   tone_expected: Blunt
-  topic_cars: Interested
   trip_mix: Mostly city
-  trust_level: Skeptical
   urbanicity: Rural
   veh_assistant_builtin: Built in and used
   veh_class: SUV or crossover
@@ -121,13 +104,6 @@ grounding:
     evidence: vn_driver_survey_2026:row-049
     confidence: 1.0
     tier: prompt
-  cabin_noise:
-    assignment_type: observed
-    source_ref: vn_driver_survey_2026
-    evidence: vn_driver_survey_2026:row-049
-    confidence: 1.0
-    tier: archive
-    excluded_reason: consequence_not_cause
   cog_formality:
     assignment_type: generated
     source_ref: full_dag
@@ -151,60 +127,12 @@ grounding:
     evidence: pool share calibrated to median words per post on otofun.net.vn
     confidence: 0.5
     tier: prompt
-  cult_vietnam:
-    assignment_type: observed
-    source_ref: wvs_wave7_vnm_2020
-    evidence: wvs_wave7_vnm_2020:wvs-vn-704070639
-    confidence: 1.0
-    tier: archive
-    excluded_reason: no_effect_on_assistant_output
-  demo_children_count:
-    assignment_type: observed
-    source_ref: wvs_wave7_vnm_2020
-    evidence: wvs_wave7_vnm_2020:wvs-vn-704070639
-    confidence: 1.0
-    tier: archive
-    excluded_reason: no_effect_on_assistant_output
-  demo_citizenship_status:
-    assignment_type: observed
-    source_ref: wvs_wave7_vnm_2020
-    evidence: wvs_wave7_vnm_2020:wvs-vn-704070639
-    confidence: 1.0
-    tier: archive
-    excluded_reason: no_effect_on_assistant_output
   demo_driver_status:
     assignment_type: observed
     source_ref: vn_driver_survey_2026
     evidence: vn_driver_survey_2026:row-049
     confidence: 1.0
     tier: prompt
-  demo_employment_status:
-    assignment_type: observed
-    source_ref: wvs_wave7_vnm_2020
-    evidence: wvs_wave7_vnm_2020:wvs-vn-704070639
-    confidence: 1.0
-    tier: archive
-    excluded_reason: no_effect_on_assistant_output
-  demo_marital_status:
-    assignment_type: observed
-    source_ref: wvs_wave7_vnm_2020
-    evidence: wvs_wave7_vnm_2020:wvs-vn-704070639
-    confidence: 1.0
-    tier: archive
-    excluded_reason: no_effect_on_assistant_output
-  demo_religion_affiliation:
-    assignment_type: observed
-    source_ref: wvs_wave7_vnm_2020
-    evidence: wvs_wave7_vnm_2020:wvs-vn-704070639
-    confidence: 1.0
-    tier: archive
-    excluded_reason: no_effect_on_assistant_output
-  domain:
-    assignment_type: generated
-    source_ref: full_dag
-    evidence: sampled conditioned on 24 observed dimensions
-    tier: archive
-    excluded_reason: no_effect_on_assistant_output
   drv_exposure:
     assignment_type: observed
     source_ref: vn_driver_survey_2026
@@ -231,57 +159,17 @@ grounding:
     confidence: 1.0
     tier: archive
     excluded_reason: no_effect_on_assistant_output
-  lang_vietnamese:
-    assignment_type: observed
-    source_ref: wvs_wave7_vnm_2020
-    evidence: wvs_wave7_vnm_2020:wvs-vn-704070639
-    confidence: 1.0
-    tier: archive
-    excluded_reason: no_effect_on_assistant_output
-  life_stage:
-    assignment_type: generated
-    source_ref: full_dag
-    evidence: sampled conditioned on 24 observed dimensions
-    tier: archive
-    excluded_reason: no_effect_on_assistant_output
   lstyle_commute_mode:
     assignment_type: observed
     source_ref: vn_driver_survey_2026
     evidence: vn_driver_survey_2026:row-049
     confidence: 1.0
     tier: guard
-  need_state:
-    assignment_type: observed
-    source_ref: vn_driver_survey_2026
-    evidence: vn_driver_survey_2026:row-049
-    confidence: 1.0
-    tier: archive
-    excluded_reason: consequence_not_cause
   primary_language:
     assignment_type: observed
     source_ref: wvs_wave7_vnm_2020
     evidence: wvs_wave7_vnm_2020:wvs-vn-704070639
     confidence: 1.0
-    tier: archive
-    excluded_reason: no_effect_on_assistant_output
-  region:
-    assignment_type: observed
-    source_ref: wvs_wave7_vnm_2020
-    evidence: wvs_wave7_vnm_2020:wvs-vn-704070639
-    confidence: 1.0
-    tier: archive
-    excluded_reason: no_effect_on_assistant_output
-  religiosity:
-    assignment_type: observed
-    source_ref: wvs_wave7_vnm_2020
-    evidence: wvs_wave7_vnm_2020:wvs-vn-704070639
-    confidence: 1.0
-    tier: archive
-    excluded_reason: no_effect_on_assistant_output
-  safety_sensitivity:
-    assignment_type: generated
-    source_ref: full_dag
-    evidence: sampled conditioned on 24 observed dimensions
     tier: archive
     excluded_reason: no_effect_on_assistant_output
   skill_driving:
@@ -290,13 +178,6 @@ grounding:
     evidence: vn_driver_survey_2026:row-049
     confidence: 1.0
     tier: prompt
-  socioeconomic_band:
-    assignment_type: observed
-    source_ref: wvs_wave7_vnm_2020
-    evidence: wvs_wave7_vnm_2020:wvs-vn-704070639
-    confidence: 1.0
-    tier: archive
-    excluded_reason: no_effect_on_assistant_output
   tech_savviness:
     assignment_type: generated
     source_ref: full_dag
@@ -307,26 +188,12 @@ grounding:
     source_ref: full_dag
     evidence: sampled conditioned on 24 observed dimensions
     tier: prompt
-  topic_cars:
-    assignment_type: observed
-    source_ref: vn_driver_survey_2026
-    evidence: vn_driver_survey_2026:row-049
-    confidence: 1.0
-    tier: archive
-    excluded_reason: duplicates_another_field
   trip_mix:
     assignment_type: observed
     source_ref: vn_driver_survey_2026
     evidence: vn_driver_survey_2026:row-049
     confidence: 1.0
     tier: prompt
-  trust_level:
-    assignment_type: observed
-    source_ref: wvs_wave7_vnm_2020
-    evidence: wvs_wave7_vnm_2020:wvs-vn-704070639
-    confidence: 1.0
-    tier: archive
-    excluded_reason: duplicates_another_field
   urbanicity:
     assignment_type: observed
     source_ref: wvs_wave7_vnm_2020
@@ -381,14 +248,14 @@ grounding:
     confidence: 1.0
     tier: prompt
 grounding_summary:
-  scoreable: 38
+  scoreable: 24
   byAssignmentType:
-    generated: 10
-    observed: 38
+    generated: 7
+    observed: 24
   sources:
   - full_dag
   - otofun_2026
   - vn_driver_survey_2026
   - vn_localities
   - wvs_wave7_vnm_2020
-  dimensionCount: 48
+  dimensionCount: 31
