@@ -68,3 +68,53 @@ for p in persona_paths(__import__('pathlib').Path('persona/datasets/vn-drivers')
 ```
 
 The dimensions and grounding entries were never wrong. Only the summary was.
+
+---
+
+## The same break, three lines higher: `sources`
+
+`grounding_summary` was fixed in `850a83c`. `sources` sits directly above it in
+every persona file, counts the same thing from the same data, and was missed.
+
+Until the commit that added this section, `vn-drv-001` declared:
+
+```yaml
+sources:
+  full_dag:              {values: 1266}
+  vn_driver_survey_2026: {values: 8}
+```
+
+while its `grounding` held **seven** values from `full_dag` and **twenty-two**
+from the survey. The block was written before the trim step cut a persona from
+1,306 dimensions to 48, and nothing recomputed it — so the header described a
+persona twenty-seven times larger than the file underneath it, and understated
+the survey's contribution by a factor of three.
+
+**The same warning applies.** A `sources` figure quoted from a persona written
+before this fix is invalid, and a comparison spanning the fix invents a change:
+`full_dag` reads 1266 → 7 as though a thousand fields were deleted, when the
+count was the only thing that moved. The survey moves 8 → 22 in the flattering
+direction, which is worse, because nobody audits a number that improves.
+
+`matraix.persona_sources.recompute_sources` computes the block from the
+persona's own grounding; `sources_disagree` is asserted over both committed
+pools in `tests/unit/matraix/test_sources_block_matches_grounding.py`, so this
+cannot silently rot again.
+
+## And a derived field nobody evaluated
+
+Not a counter, but found in the same sweep and with the same shape — a value
+that claimed something the file did not support.
+
+`att_voice_assistant` is a **function** of `vn_assistant_task_scope`: a driver
+who delegates nothing is Opposed, one who delegates everything is Enthusiast.
+It therefore has exactly one correct value and nothing to disagree about. Two
+code paths computed it anyway, from two different parents: the crosswalk used
+the task scope, while the shipped pool recorded
+`derived_from:att_self_driving_cars`. **29 of 42 personas held a value the map
+does not produce** — `vn-drv-001` delegates navigation and media, which is
+Neutral, and was written Opposed.
+
+Any analysis that read `att_voice_assistant` on the 42-persona pool before this
+fix read a field that was, in 69% of cases, not derived from anything.
+`matraix.persona_derivations` evaluates it and records `corrected_from`.
