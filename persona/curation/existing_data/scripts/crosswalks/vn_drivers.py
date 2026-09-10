@@ -57,6 +57,25 @@ def _answer(row, needle):
     return ""
 
 
+#: Only respondents who actually drive may shape a driver pool. The screen is
+#: a claim about which answers belong in the population, so it lives beside the
+#: crosswalk that reads them rather than being restated by every caller --
+#: scripts/apply_driver_survey_layer.py and scripts/find_golden_questions.py
+#: each held their own copy, and a copy is where the drift starts.
+SCREEN_IN = ("Lái hằng ngày", "Thỉnh thoảng lái")
+
+
+def is_in_scope(row):
+    """True when this respondent drives often enough to shape a driver pool."""
+    answer = _answer(row, Q_DRIVER_STATUS)
+    return any(_norm(option) in answer for option in SCREEN_IN)
+
+
+def screen_rows(rows):
+    """The respondents a driver pool may be built from, in file order."""
+    return [row for row in rows if is_in_scope(row)]
+
+
 def _pick(row, needle, table):
     """Map an answer through ``table``; unrecognised text stays unmapped.
 
@@ -354,6 +373,29 @@ def _cabin_context(row):
 def _cabin_noise(row):
     return _scale5(row, Q_CABIN_NOISE, (
         "Very quiet", "Quiet", "Moderate", "Loud", "Very loud"))
+
+
+#: Vietnamese kinship self-reference that states the speaker's gender. Only
+#: two of the seven registers do: "anh" is an older brother, "chị" an older
+#: sister. "em", "bác" and the neutral pairs state nothing, and "cô-chú/con"
+#: bundles a female and a male term under one label -- all four stay None
+#: rather than being guessed.
+GENDER_BY_REGISTER = {
+    "anh/em": "Man",
+    "chi/em": "Woman",
+}
+
+
+def gender_stated_by_register(register):
+    """The speaker's gender when the register states it, else None.
+
+    Not part of CROSSWALK: only 5 of 81 respondents answer with a register that
+    states a gender, and a stratification key present on 6% of rows pairs worse
+    than no key at all. It is used to keep a persona's *name* consistent with
+    the register it was measured to use -- the name is generated, so aligning
+    it edits nothing anyone answered.
+    """
+    return GENDER_BY_REGISTER.get(register)
 
 
 CROSSWALK = {
