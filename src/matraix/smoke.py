@@ -6,6 +6,8 @@ production with a deterministic fake JSON client — no Docker, no provider call
 
 from __future__ import annotations
 
+from matraix.persona_pool import persona_paths
+
 import json
 import sys
 import tempfile
@@ -172,7 +174,7 @@ def _persona_paths(
 
     if not sample_dir.is_dir():
         raise FileNotFoundError(f"persona sample dir missing: {sample_dir}")
-    ranked = sorted(sample_dir.glob("persona_*.yaml"))
+    ranked = persona_paths(sample_dir)
     # Prefer 0042 first when present.
     preferred = sample_dir / "persona_0042.yaml"
     ordered: list[Path] = []

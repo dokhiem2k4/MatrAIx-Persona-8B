@@ -77,6 +77,28 @@ def largest_remainder(total: int, weights: dict[str, float]) -> dict[str, int]:
     return out
 
 
+#: Assignment types that mean "a person answered this". A value carrying one of
+#: them is evidence, and the layer's whole justification -- that these fields
+#: are dead -- does not apply to it.
+MEASURED_TYPES = {"observed", "direct", "forum_measured"}
+
+
+def may_overwrite(persona: dict, field: str) -> bool:
+    """False when this persona already answered ``field``.
+
+    The layer was written for a pool where vn_address_register was null on all
+    42 personas. Rebuilt from survey rows, 40 of 81 respondents state their own,
+    and filling them anyway replaced 35 measured answers with a draw. An
+    observed *null* is a skipped question, not an answer, so it may still be
+    filled.
+    """
+    value = (persona.get("dimensions") or {}).get(field)
+    if value is None or str(value).strip() == "":
+        return True
+    entry = (persona.get("grounding") or {}).get(field) or {}
+    return str(entry.get("assignment_type")) not in MEASURED_TYPES
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--measurements", type=Path, required=True)
@@ -124,6 +146,7 @@ def main() -> int:
         shutil.copy2(manifest, args.out / "manifest.json")
 
     applied = collections.Counter()
+    kept = collections.Counter()
     for slot, index in enumerate(order):
         path, persona = personas[index]
         dims = persona.setdefault("dimensions", {})
@@ -141,31 +164,42 @@ def main() -> int:
             register = bucket
             evidence = "neutral register; pool share calibrated to forum self-positioning"
 
-        dims["vn_address_register"] = register
-        grounding["vn_address_register"] = {
-            "assignment_type": "generated",
-            "source_ref": SOURCE_REF,
-            "evidence": evidence,
-            "confidence": 0.5,
-        }
-        applied[register] += 1
+        if may_overwrite(persona, "vn_address_register"):
+            dims["vn_address_register"] = register
+            grounding["vn_address_register"] = {
+                "assignment_type": "generated",
+                "source_ref": SOURCE_REF,
+                "evidence": evidence,
+                "confidence": 0.5,
+            }
+            applied[register] += 1
+        else:
+            kept["vn_address_register"] += 1
 
         band = verbosity_plan[slot]
-        dims["cog_verbosity"] = band
-        grounding["cog_verbosity"] = {
-            "assignment_type": "generated",
-            "source_ref": SOURCE_REF,
-            "evidence": "pool share calibrated to median words per post on {}".format(
-                stats["source"]
-            ),
-            "confidence": 0.5,
-        }
+        if may_overwrite(persona, "cog_verbosity"):
+            dims["cog_verbosity"] = band
+            grounding["cog_verbosity"] = {
+                "assignment_type": "generated",
+                "source_ref": SOURCE_REF,
+                "evidence": "pool share calibrated to median words per post on {}".format(
+                    stats["source"]
+                ),
+                "confidence": 0.5,
+            }
+        else:
+            kept["cog_verbosity"] += 1
 
         (args.out / path.name).write_text(
             yaml.safe_dump(persona, sort_keys=False, allow_unicode=True), encoding="utf-8"
         )
 
     print("wrote {} personas to {}".format(n, args.out))
+    for field, count in sorted(kept.items()):
+        print(
+            "  kept {} measured value(s) of {} -- the layer fills empty fields, "
+            "it does not overwrite answers".format(count, field)
+        )
     print("\nvn_address_register:")
     for value, count in applied.most_common():
         print("   {:14s} {:>3}".format(value, count))

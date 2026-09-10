@@ -43,7 +43,7 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "persona/curation/existing_data/scripts"))
 
-from crosswalks.vn_drivers import CROSSWALK  # noqa: E402
+from crosswalks.vn_drivers import CROSSWALK, SCREEN_IN  # noqa: E402
 
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 from validate_persona_rules import repair, violations  # noqa: E402
@@ -54,9 +54,6 @@ from persona_tiers import (  # noqa: E402
 )
 
 SOURCE_REF = "vn_driver_survey_2026"
-
-#: Only respondents who actually drive may shape a driver pool.
-SCREEN_IN = ("Lái hằng ngày", "Thỉnh thoảng lái")
 
 #: Each new dimension is conditioned on the measured dimension that predicts it
 #: best (Cramér's V over the responses; all of these scored >= 0.44). Choosing

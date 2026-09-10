@@ -161,6 +161,10 @@ derived from.
 
 ## Known gaps, in the order they are worth closing
 
+> Before comparing any grounding figure across 2026-09-09, read
+> [`grounding-summary-break.md`](grounding-summary-break.md). The counter was
+> wrong, fixing it looks like data loss, and the fix lands mid-history.
+
 Recorded here rather than in a tracker because each one is a property of the
 questionnaire or the pool, and whoever next reads this file is the person who
 can close it.

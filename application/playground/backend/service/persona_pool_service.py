@@ -7,6 +7,12 @@ import random
 import re
 import shutil
 import yaml
+
+from matraix.persona_pool import (
+    count_personas,
+    has_personas,
+    persona_paths,
+)
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -592,7 +598,7 @@ class PersonaPoolService:
             return False
         if (path / "manifest.json").is_file():
             return True
-        return next(path.glob("persona_*.yaml"), None) is not None
+        return has_personas(path)
 
     def _dataset_count_hint(self, path: Path) -> int:
         """Read pool size without loading multi‑MB manifests into memory."""
@@ -621,7 +627,7 @@ class PersonaPoolService:
                 except (OSError, ValueError):
                     pass
         try:
-            return sum(1 for _ in path.glob("persona_*.yaml"))
+            return count_personas(path)
         except OSError:
             return 0
 
@@ -742,7 +748,7 @@ class PersonaPoolService:
         if not src_dir.is_dir():
             raise FileNotFoundError(f"source pool not found: {src_rel}")
 
-        yaml_files = sorted(src_dir.glob("persona_*.yaml"))
+        yaml_files = persona_paths(src_dir)
         if not yaml_files:
             raise ValueError(f"source pool has no persona YAML files: {src_rel}")
 
@@ -763,6 +769,9 @@ class PersonaPoolService:
         for yaml_path in yaml_files:
             dest_yaml = dest_dir / yaml_path.name
             shutil.copy2(yaml_path, dest_yaml)
+            view = yaml_path.with_suffix(".prompt.yaml")
+            if view.is_file():
+                shutil.copy2(view, dest_dir / view.name)
             persona_id = yaml_path.stem.removeprefix("persona_")
             source = "unknown"
             card_dims: dict[str, str] = {}
@@ -983,6 +992,8 @@ class PersonaPoolService:
 
         emit("prepare", ratio=0.02, label="Preparing output folder…")
         if out_dir.exists():
+            # Deliberately the raw glob: rendered .prompt.yaml views are stale
+            # too, and an orphan view outlives the persona it projected.
             for stale in out_dir.glob("persona_*.yaml"):
                 stale.unlink()
 
@@ -1250,7 +1261,7 @@ class PersonaPoolService:
                     ids = []
 
         if not ids:
-            for path in sorted(pool_dir.glob("persona_*.yaml")):
+            for path in persona_paths(pool_dir):
                 stem = path.stem
                 if stem.startswith("persona_"):
                     pid = stem[len("persona_") :]

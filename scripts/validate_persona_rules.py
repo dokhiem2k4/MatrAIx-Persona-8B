@@ -34,6 +34,11 @@ SCRIPTS_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPTS_DIR))
 from persona_tiers import persona_paths  # noqa: E402
 
+from matraix.persona_style_rules import (  # noqa: E402
+    allowed_tones,
+    style_conflict,
+)
+
 URBAN_CLASS_I = {
     "Ha Noi", "Ho Chi Minh City", "Da Nang", "Hai Phong", "Can Tho",
     "Hue", "Nha Trang", "Da Lat", "Vinh", "Quy Nhon", "Bien Hoa", "Vung Tau",
@@ -52,16 +57,23 @@ class Rule:
 def _r1(d: dict) -> str | None:
     """Owning no car is treated as having no car to be equipped or driven far.
 
-    VALIDITY: no counterexample among n=81 respondents. That is weak evidence,
-    not confirmation -- a behaviour occurring in ~2% of drivers would show zero
-    observations at this sample size fairly often. The rule assumes ownership
-    implies access, and a Vietnamese driver who uses a spouse's, a child's or a
-    company car would break it. Revisit when the sample grows.
+    VALIDITY: two clauses survive. Owning no car and yet having a built-in
+    assistant, or driving hundreds of kilometres a week, are contradictions of
+    the rule's own claim. Describing the noise inside a car is not: people who
+    borrow, rent or are lent a car answer that question, and the form asks it.
 
-    DRIFT: resampling under this rule moved cabin_noise by 17 points of total
-    variation, on top of 26 from the DAG change -- the largest shift of any
-    field. cabin_noise is archive tier today; anyone promoting it to prompt tier
-    should know its distribution was reshaped here, not measured.
+    A third clause used to fire on any answer to cabin_noise at all. It refused
+    three real respondents -- bicycle commuters who own no car, drive under 50
+    km a week and use a phone assistant -- every value of which is an answer
+    someone gave. It survived only because cabin_noise was sampled in the
+    42-persona pool; rebuilding from survey rows made it evidence and the rule
+    failed against it. The docstring said "revisit when the sample grows"; the
+    sample grew. Same correction as R6.
+
+    DRIFT: while that clause stood, resampling under it moved cabin_noise by 17
+    points of total variation, on top of 26 from the DAG change -- the largest
+    shift of any field. Any cabin_noise distribution quoted from a pool written
+    before this fix was reshaped by a rule that should not have fired.
     """
     if d.get("veh_class") != "Does not own":
         return None
@@ -70,8 +82,6 @@ def _r1(d: dict) -> str | None:
         problems.append("veh_assistant_builtin={}".format(d["veh_assistant_builtin"]))
     if d.get("drv_exposure") not in SHORT_DISTANCES and d.get("drv_exposure"):
         problems.append("drv_exposure={}".format(d["drv_exposure"]))
-    if d.get("cabin_noise"):
-        problems.append("cabin_noise={}".format(d["cabin_noise"]))
     return "owns no car but " + ", ".join(problems) if problems else None
 
 
@@ -129,6 +139,17 @@ def _r6(d: dict) -> str | None:
     return "uses no assistant at all yet assistant_usage_freq={}".format(freq)
 
 
+def _r7(d: dict) -> str | None:
+    """Style axes drawn independently describing a speaker who cannot exist.
+
+    The three fields are kept separate on purpose -- curt and formal is a real
+    combination -- so only contradictions by definition are listed, in
+    ``matraix.persona_style_rules``. None of the three is measured, so no
+    respondent can falsify a pair; the table is kept narrow for that reason.
+    """
+    return style_conflict(d)
+
+
 RULES = [
     Rule("R1", "no car, yet equipped and driving distance", _r1),
     # R2 removed -- see the block above _r3 for why.
@@ -136,6 +157,7 @@ RULES = [
     Rule("R4", "rural persona placed in a class-I city", _r4),
     Rule("R5", "native English without a reason to have it", _r5),
     Rule("R6", "no assistant present but reported usage", _r6),
+    Rule("R7", "style axes contradict each other", _r7),
 ]
 
 
@@ -159,13 +181,17 @@ REPAIRS: dict[str, list[tuple[str, Callable[[dict], set[str] | None]]]] = {
         ("veh_assistant_builtin", lambda d: {"None, uses phone assistant",
                                              "None, uses no assistant"}),
         ("drv_exposure", lambda d: set(SHORT_DISTANCES)),
-        ("cabin_noise", lambda d: None),
     ],
     "R3": [("vn_assistant_task_scope", lambda d: {
         "None", "Navigation only", "Navigation and media", "Most non-driving tasks"})],
     "R4": [("vn_locality", lambda d: None)],
     "R5": [("english_proficiency", lambda d: {"None", "Basic", "Conversational", "Fluent"})],
     "R6": [("assistant_usage_freq", lambda d: {"Rarely", "Tried it and stopped"})],
+    # One field moves, not three. tone_expected is a bare synthesis-graph draw;
+    # cog_verbosity carries a forum word-count calibration and cog_formality
+    # feeds the address register, so both are left alone. Blanking all three
+    # would answer a contradiction by deleting the character.
+    "R7": [("tone_expected", allowed_tones)],
 }
 
 

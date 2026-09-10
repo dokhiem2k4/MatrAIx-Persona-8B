@@ -1,0 +1,82 @@
+persona_id: row-078
+display_name: Võ Thu Hà
+tier: prompt
+dimensions:
+  vn_address_register: minh/ban
+  tone_expected: Concise
+  cog_verbosity: Wordy
+  cog_formality: Casual
+  accent_region: Mixed
+  att_self_driving_cars: Neutral
+  att_electric_vehicles: Positive
+  vn_assistant_task_scope: Most non-driving tasks
+  cog_skepticism: High
+  tech_savviness: Digital native
+  demo_driver_status: Daily driver
+  skill_driving: Advanced
+  trip_mix: Mostly city
+  cabin_context: Hands on wheel
+  vn_usual_companion: Spouse or partner
+  cog_patience: Very high
+  vn_retry_tolerance: Gives up immediately
+  vn_voice_privacy_comfort: Neutral
+grounding:
+  vn_address_register:
+    assignment_type: observed
+    confidence: 1.0
+  tone_expected:
+    assignment_type: generated
+    confidence: null
+  cog_verbosity:
+    assignment_type: generated
+    confidence: 0.5
+  cog_formality:
+    assignment_type: generated
+    confidence: null
+  accent_region:
+    assignment_type: observed
+    confidence: 1.0
+  att_self_driving_cars:
+    assignment_type: observed
+    confidence: 1.0
+  att_electric_vehicles:
+    assignment_type: observed
+    confidence: 1.0
+  vn_assistant_task_scope:
+    assignment_type: observed
+    confidence: 1.0
+  cog_skepticism:
+    assignment_type: observed
+    confidence: 1.0
+  tech_savviness:
+    assignment_type: generated
+    confidence: null
+  demo_driver_status:
+    assignment_type: observed
+    confidence: 1.0
+  skill_driving:
+    assignment_type: observed
+    confidence: 1.0
+  trip_mix:
+    assignment_type: observed
+    confidence: 1.0
+    unconditioned: true
+    unconditioned_reason: parents (urbanicity, vn_locality) are generated; no province
+      question in the survey
+  cabin_context:
+    assignment_type: observed
+    confidence: 1.0
+  vn_usual_companion:
+    assignment_type: observed
+    confidence: 1.0
+  cog_patience:
+    assignment_type: observed
+    confidence: 1.0
+  vn_retry_tolerance:
+    assignment_type: observed
+    confidence: 1.0
+  vn_voice_privacy_comfort:
+    assignment_type: observed
+    confidence: 1.0
+label_overrides:
+  cog_skepticism: Nghi ngờ thông tin

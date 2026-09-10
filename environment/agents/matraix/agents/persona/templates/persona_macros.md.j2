@@ -2,6 +2,19 @@
    Agent-facing text must read as direct identity — never mention simulation,
    persona IDs, schema versions, or "stay in character" roleplay cues. #}
 
+{# Directives tell the model what to do; the narrative below states what is
+   left over as facts. A field that has a directive never appears as both. #}
+{% macro render_persona_directives(sections, locale='') -%}
+{% if sections %}
+## {{ {'vi': 'Cách bạn cư xử'}.get(locale, 'How you behave') }}
+
+{% for section in sections -%}
+{{ section }}
+
+{% endfor -%}
+{% endif -%}
+{% endmacro %}
+
 {% macro render_persona_narrative(paragraphs, locale='') -%}
 {% if paragraphs %}
 ## {{ {'vi': 'Bạn là ai'}.get(locale, 'Who you are') }}
