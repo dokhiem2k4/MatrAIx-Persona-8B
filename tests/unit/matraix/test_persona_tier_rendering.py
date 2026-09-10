@@ -73,7 +73,12 @@ def test_narrative_drops_archive_fields():
 
 
 def test_rendered_prompt_drops_the_archive_bullets():
-    """Count the lines, not the characters: 45 attributes went in, 19 come out."""
+    """Count the lines, not the characters.
+
+    The pool was trimmed to the 31 fields something reads, so the untiered
+    render is 30 bullets rather than the 45 it was before. The tier filter is
+    what takes it to 19, and that is the number this test is about.
+    """
     persona = load_persona(VN_DRIVER)
     full = "\n".join(build_dimension_narrative(persona.dimensions))
     tiered = "\n".join(build_dimension_narrative(prompt_tier_dimensions(persona.data)))
@@ -81,9 +86,9 @@ def test_rendered_prompt_drops_the_archive_bullets():
     def bullets(text):
         return [line for line in text.splitlines() if line.startswith("- ")]
 
-    assert len(bullets(full)) > 40
-    assert len(bullets(tiered)) == 19
-    assert len(tiered) < len(full) * 0.6
+    assert len(bullets(full)) == 30, "every field the record still holds"
+    assert len(bullets(tiered)) == 19, "18 prompt tier plus the language contract"
+    assert len(tiered) < len(full) * 0.75
 
 
 @pytest.mark.parametrize(
