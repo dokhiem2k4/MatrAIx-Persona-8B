@@ -84,7 +84,7 @@ from export_vita_multiturn_results import describe_persona, load_labels  # noqa:
 def test_a_real_persona_renders_its_traits():
     labels, values = load_labels()
     got = describe_persona(
-        "persona/datasets/vn-drivers/persona_vn-drv-001.yaml", labels, values, {}
+        "persona/datasets/vn-drivers/persona_row-000.yaml", labels, values, {}
     )
     assert "Nhóm tuổi" in got
     assert "Kiên nhẫn" in got

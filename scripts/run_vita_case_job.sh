@@ -17,8 +17,8 @@
 #
 #   scripts/run_vita_case_job.sh chat_0709-vita-drive-golden-error-recovery \
 #       golden-2p-128 \
-#       --personas persona/datasets/vn-drivers/persona_vn-drv-001.yaml \
-#                  persona/datasets/vn-drivers/persona_vn-drv-003.yaml \
+#       --personas persona/datasets/vn-drivers/persona_row-000.yaml \
+#                  persona/datasets/vn-drivers/persona_row-001.yaml \
 #       --max-cases 64
 #
 # Re-run an earlier run's exact persona x case pairs, to compare before and

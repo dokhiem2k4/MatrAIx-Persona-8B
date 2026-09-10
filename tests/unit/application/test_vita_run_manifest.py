@@ -18,7 +18,7 @@ from application.scripts.vita_case_jobs import (
 )
 
 TASK = "application/tasks/chat_0709-vita-drive-golden-error-recovery"
-PERSONA = "persona/datasets/vn-drivers/persona_vn-drv-001.yaml"
+PERSONA = "persona/datasets/vn-drivers/persona_row-000.yaml"
 
 
 def build(**overrides):
@@ -36,7 +36,7 @@ def build(**overrides):
 
 def test_manifest_names_the_personas_and_the_intents_of_the_run():
     m = build()
-    assert m["personas"][0]["persona_id"] == "vn-drv-001"
+    assert m["personas"][0]["persona_id"] == "row-000"
     assert m["personas"][0]["display_name"]
     # The intent of each case is on the manifest itself, so it reads as a
     # coverage list without cases.jsonl open beside it.

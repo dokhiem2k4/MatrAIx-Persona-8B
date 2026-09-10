@@ -21,7 +21,7 @@ from matraix.persona_dimension_catalog import (  # noqa: E402
     resolve_label_locale,
 )
 
-PERSONA = REPO_ROOT / "persona/datasets/vn-drivers/persona_vn-drv-001.yaml"
+PERSONA = REPO_ROOT / "persona/datasets/vn-drivers/persona_row-000.yaml"
 
 
 @pytest.fixture
@@ -41,7 +41,7 @@ def test_vietnamese_translates_headings_labels_and_values(dimensions):
     text = "\n".join(build_dimension_narrative(dimensions, locale="vi"))
     assert "### Nhân thân" in text          # heading
     assert "Nhóm tuổi:" in text             # label
-    assert "Đông Nam Á" in text             # value
+    assert "Nông thôn" in text              # value (urbanicity: Rural)
     assert "### Identity" not in text
     assert "Age bracket:" not in text
 
