@@ -2,7 +2,7 @@ version = "1.0"
 artifacts = [ "/app/output",]
 
 [task]
-name = "application/0909-vita-tasklist"
+name = "application/vita-tasklist"
 
 [metadata]
 difficulty = "medium"

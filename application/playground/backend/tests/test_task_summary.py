@@ -11,7 +11,7 @@ from pathlib import Path
 from backend.service.task_detail_service import get_task_detail
 
 REPO_ROOT = Path(__file__).resolve().parents[4]
-TASK = "application/tasks/chat_0909-vita-tasklist"
+TASK = "application/tasks/chat_vita-tasklist"
 
 
 def test_the_authored_summary_wins_over_the_persona_briefing():

@@ -11,7 +11,7 @@ were written to be read to a person without improvisation.
 Usage:
     uv run python application/scripts/convert_vita_discovery_tasklist.py \
         --source "~/Downloads/...(Task List) (1).csv" \
-        --out application/tasks/chat_0909-vita-tasklist/input/cases.jsonl
+        --out application/tasks/chat_vita-tasklist/input/cases.jsonl
 """
 
 from __future__ import annotations

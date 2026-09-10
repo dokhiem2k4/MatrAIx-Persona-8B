@@ -88,7 +88,7 @@ văn, persona được dặn chấm theo phần nghe được, và facet `ces3_b
 ## Chạy
 
 ```bash
-scripts/run_vita_case_job.sh chat_0909-vita-tasklist <tên-lượt> \
+scripts/run_vita_case_job.sh chat_vita-tasklist <tên-lượt> \
     --personas persona/datasets/vn-drivers/persona_vn-drv-001.yaml \
                persona/datasets/vn-drivers/persona_vn-drv-003.yaml \
                persona/datasets/vn-drivers/persona_vn-drv-005.yaml \

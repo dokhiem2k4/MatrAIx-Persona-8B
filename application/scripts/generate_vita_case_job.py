@@ -84,7 +84,7 @@ STRATA_FIELD_BY_TASK = {
     "chat_0709-vita-drive-singleturn-mode-ab": "assistant_profile_id",
     # The discovery guide's own axis: eight capability groups, and a capped run
     # that missed one of them would leave a whole area of the product untested.
-    "chat_0909-vita-tasklist": "capability_number",
+    "chat_vita-tasklist": "capability_number",
 }
 
 

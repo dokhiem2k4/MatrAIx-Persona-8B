@@ -144,6 +144,10 @@ export function TaskDetailModal({
   const failed =
     Boolean(taskPath) && detailQuery.isError && sections.length === 0;
 
+  // The card model carries only a short subtitle; the full summary comes with
+  // the task detail, which is where [metadata].summary lands.
+  const summary = (detailQuery.data?.description ?? card?.subtitle ?? "").trim();
+
   return (
     <RailInsetModal
       open={open && Boolean(card)}
@@ -161,6 +165,16 @@ export function TaskDetailModal({
     >
       {card && (
         <div className="space-y-4">
+          {/* What this task covers and what it scores against, straight under
+              the name. It comes from [metadata].summary in task.toml, which is
+              written for whoever is deciding whether to run it -- the tabs
+              below hold the persona's own briefing, which answers neither
+              question. */}
+          {summary && (
+            <p className="text-[14px] leading-relaxed text-text-variant">
+              {summary}
+            </p>
+          )}
           <div className="flex flex-wrap gap-1.5">
             {card.transport && (
               <ToneChip
