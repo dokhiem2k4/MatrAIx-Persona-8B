@@ -171,7 +171,7 @@ export function TaskDetailModal({
               below hold the persona's own briefing, which answers neither
               question. */}
           {summary && (
-            <p className="text-[14px] leading-relaxed text-text-variant">
+            <p className="whitespace-pre-line text-[14px] leading-relaxed text-text-variant">
               {summary}
             </p>
           )}

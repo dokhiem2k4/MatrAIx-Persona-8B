@@ -9,7 +9,13 @@ difficulty = "medium"
 # Shown on the task card and the detail panel. Written for a human deciding
 # whether to run this, which is a different reader from the persona -- so it
 # does not live in instruction.md, which goes into the persona's prompt.
-summary = """Chạy Task List của discussion guide RISE Vita Phase Discovery bằng persona. Phủ 14/22 nhóm task: trọn 8 nhóm năng lực (15 kịch bản, đỗ xe và lái xe), 4 hành vi hội thoại đo tự động, và 2 mục nhận diện thương hiệu. Chưa phủ 8 nhóm còn lại vì chúng cần thao tác và nhìn màn hình prototype: 6 nhóm SETTING, mục kích hoạt bằng giọng, và mục nhận diện qua hình ảnh đại diện. Chấm bằng CES (4 câu, thang 7, nguyên văn tài liệu) cộng ba câu nhận diện. Hệ thống được chấm: trợ lý Vita của VoiceLab tại https://136.110.11.55.nip.io, endpoint POST /api/turn."""
+summary = """Chạy Task List của tài liệu nghiên cứu người dùng Vita bằng persona, thay cho buổi phỏng vấn có người điều phối.
+
+Phủ 14/22 nhóm task: trọn 8 nhóm năng lực với 15 kịch bản ở hai bối cảnh đỗ xe và lái xe, 4 hành vi hội thoại đo tự động (tiếp tục, chọn/xác nhận, sửa/ngắt/huỷ, nhận biết trạng thái), và 2 mục nhận diện thương hiệu.
+
+Chưa phủ 8 nhóm còn lại vì chúng cần thao tác và nhìn màn hình prototype: 6 nhóm cài đặt, mục kích hoạt bằng giọng, và mục nhận diện qua hình ảnh đại diện.
+
+Chấm bằng CES 4 câu thang 7 lấy nguyên văn tài liệu, cộng ba câu nhận diện. Hệ thống được chấm: trợ lý Vita tại https://136.110.11.55.nip.io, endpoint POST /api/turn."""
 type = "chatbot"
 domain = "automotive-ai"
 tags = [ "in-cabin assistant", "discovery research", "CES", "capability coverage", "multi turn",]
