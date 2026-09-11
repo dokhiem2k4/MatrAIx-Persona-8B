@@ -1,0 +1,262 @@
+{
+  "project": "MatrAIx Persona 8B",
+  "blueprint": "docs/specs/blueprint.md",
+  "workflow": ".claude/workflow/pipeline.md",
+  "active_feature": "F05",
+  "legend": {
+    "status": [
+      "pending",
+      "in_progress",
+      "blocked",
+      "done",
+      "verified",
+      "deferred"
+    ],
+    "tier": [
+      "lite",
+      "standard",
+      "strict"
+    ],
+    "rule": "One feature at a time. 'done' needs evidence in progress.md. Dependencies must be done first. Replace the examples below with the real features of MatrAIx Persona 8B."
+  },
+  "_howto": "Every feature NEEDS: id, name, description, status (required by the validator). Add scope/done_when/verify so the Builder knows the boundaries and the test criteria. done_when must be testable. dependencies = list of ids that must finish first. doc = path to the dossier docs/features/<ID>-<slug>.md, REQUIRED once status is done/verified. tier = lite|standard|strict, ABSENT = standard; the Homeowner sets the tier, the agent may only RAISE it (verify-gate blocks every attempt to lower it). lite = exempt from the dossier + review, but still must run init.sh; strict = section 9 Rollback must have real content. ./init.sh docs checks according to the tier.",
+  "features": [
+    {
+      "id": "F01",
+      "name": "Tier reaches the prompt renderer",
+      "description": "A persona record carries 48 fields tiered by purpose, but loader.py never read grounding, so every job rendered all of them. The filter now reads the tier stamped in the persona's own file. Shipped in 7202c314.",
+      "dependencies": [],
+      "status": "verified",
+      "tier": "lite",
+      "scope": [
+        "prompt/guard/archive filter at render time",
+        "primary_language survives as an output contract",
+        "schema-declared \"None\" and schema defaults stop being silently dropped"
+      ],
+      "done_when": [
+        "vn-drv prompt drops from 1,750 to 844 characters",
+        "a pool with no tier stamped still renders every field"
+      ],
+      "verify": [
+        "pytest tests/unit/matraix/test_persona_tier_rendering.py",
+        "pytest tests/unit/matraix/test_persona_declared_none.py"
+      ]
+    },
+    {
+      "id": "F02",
+      "name": "Speech directives instead of attribute labels",
+      "description": "Prompt-tier fields reached the model as '- Formality: Very formal'. They now reach it as second-person instructions from a locale pack. Shipped in aa13b8ec.",
+      "dependencies": [
+        "F01"
+      ],
+      "status": "verified",
+      "tier": "lite",
+      "scope": [
+        "persona/schema/labels/speech_directives.vi.json covering all 18 prompt fields",
+        "locale gating on primary_language",
+        "a field with a directive never also renders as a label"
+      ],
+      "done_when": [
+        "every value of every covered dimension has a directive, asserted against the schema",
+        "an English-locale pool receives no Vietnamese directive"
+      ],
+      "verify": [
+        "pytest tests/unit/matraix/test_persona_speech_directives.py"
+      ]
+    },
+    {
+      "id": "F03",
+      "name": "Pool built from survey rows",
+      "description": "vn-drivers was 42 personas whose fields were allocated to match marginals. It is now 81 personas that are survey rows, so each combination belongs to a real person. Shipped in dc2ce659 and 615bc3b5.",
+      "dependencies": [
+        "F01"
+      ],
+      "status": "verified",
+      "tier": "lite",
+      "scope": [
+        "extraction shard rebuilt from the full 81-row export",
+        "forum layer stops overwriting measured answers",
+        "display name aligned to a measured address register"
+      ],
+      "done_when": [
+        "prompt-tier observed rises from 6/18 to 13.5/18",
+        "audit_persona_conflicts reports 0 flagged pairs, against 150 for the old pool"
+      ],
+      "verify": [
+        "python scripts/audit_persona_conflicts.py --pool persona/datasets/vn-drivers --responses <export.csv>",
+        "python scripts/validate_persona_rules.py persona/datasets/vn-drivers"
+      ]
+    },
+    {
+      "id": "F04",
+      "name": "Field count cut to what a consumer reads",
+      "description": "48 fields to 31: prompt tier, guard tier, the four archive fields a rule reads, and the language contract. Shipped in 2e1cd45b and 5a6bd5ed.",
+      "dependencies": [
+        "F01",
+        "F03"
+      ],
+      "status": "verified",
+      "tier": "lite",
+      "scope": [
+        "keep set defined by consumer, not by tier",
+        "grounding_summary and sources recomputed on trim"
+      ],
+      "done_when": [
+        "all 123 rendered prompts hash identically before and after",
+        "each of R1-R7 still fires on an injected violation"
+      ],
+      "verify": [
+        "pytest tests/unit/matraix/test_persona_minimal_field_set.py"
+      ]
+    },
+    {
+      "id": "F05",
+      "name": "Measure whether directives beat labels",
+      "description": "The directive rewrite (F02) is unverified: the ablation that would show it was never run. Run the 23 arms against the new renderer and compare with the committed control run.",
+      "dependencies": [
+        "F02"
+      ],
+      "status": "pending",
+      "tier": "standard",
+      "scope": [
+        "OUT_DIR=data/ablation-directives bash data/ablation/run_arms.sh",
+        "compare_ablation_runs.py over control and treatment",
+        "written finding, whichever way it falls"
+      ],
+      "done_when": [
+        "probe verdicts for cog_verbosity, cog_formality, tone_expected and vn_address_register reported side by side for both runs",
+        "vn_address_register compliance stated as a number, not an impression",
+        "a null result is recorded as a null result"
+      ],
+      "verify": [
+        "python scripts/compare_ablation_runs.py",
+        "the finding lands in docs/persona/, not only in a commit message"
+      ]
+    },
+    {
+      "id": "F06",
+      "name": "Ask the four questions that shape how a persona speaks",
+      "description": "tone_expected, cog_formality, cog_verbosity and tech_savviness are 0/81 measured and are half the speech group. Their apparent variety is uniform sampling: the generated speech fields sit at a 22-23% top value where measured ones cluster at 46-62%. Add them to the questionnaire.",
+      "dependencies": [],
+      "status": "pending",
+      "tier": "standard",
+      "scope": [
+        "four questions added via scripts/build_vn_driver_form.py",
+        "crosswalk entries mapping each answer to its schema value",
+        "vn_address_register converted from free text to a choice"
+      ],
+      "done_when": [
+        "find_golden_questions reports coverage > 0/81 for all four",
+        "the crosswalk maps every offered option, asserted against dimensions.json",
+        "no schema value is invented for an answer nobody can give"
+      ],
+      "verify": [
+        "python scripts/find_golden_questions.py --responses <export.csv>",
+        "pytest tests/unit/matraix"
+      ]
+    },
+    {
+      "id": "F07",
+      "name": "Probe the prompt fields that have none",
+      "description": "score_persona_probes covers 4 of 18 prompt-tier fields; the other 14 report NO PROBE. Fields whose directive changes meaning rather than form need a different instrument than word counts and pronoun matching.",
+      "dependencies": [
+        "F05"
+      ],
+      "status": "pending",
+      "tier": "standard",
+      "scope": [
+        "a probe, or an explicit and reasoned refusal, per remaining prompt field",
+        "semantic measurement where surface measurement cannot reach"
+      ],
+      "done_when": [
+        "every prompt-tier field is either probed or named under NO PROBE with a reason",
+        "each new probe has a unit test pinning what it matches"
+      ],
+      "verify": [
+        "python scripts/score_persona_probes.py data/ablation",
+        "pytest tests/unit/matraix/test_persona_probes.py"
+      ]
+    },
+    {
+      "id": "F08",
+      "name": "Guard tier actually constrains the prompt tier",
+      "description": "gender_identity is guard tier and its stated job is to constrain vn_address_register, but the WVS pairing is random and three personas hold a register their paired demographics contradict. Only the display name was realigned; the constraint itself does not hold.",
+      "dependencies": [
+        "F03"
+      ],
+      "status": "pending",
+      "tier": "standard",
+      "scope": [
+        "either a hinge that makes the pairing respect a measured register, or a rule that refuses the combination, or a written decision that the fusion cannot carry this and the guard claim is dropped"
+      ],
+      "done_when": [
+        "no persona holds a register its guard tier contradicts, or the guard documentation no longer claims it does",
+        "whichever way it goes, the reasoning is in the repo"
+      ],
+      "verify": [
+        "python scripts/validate_persona_rules.py persona/datasets/vn-drivers"
+      ]
+    },
+    {
+      "id": "F09",
+      "name": "Green the five failing suites",
+      "description": "Five tests fail on main and have failed throughout: a stale label-pack hash, a dev-sample manifest that disagrees with the catalog, a task-catalog mismatch, a persona-strategy gate, and a runtime snapshot-directory check. They predate this work and make every run read as partly broken.",
+      "dependencies": [],
+      "status": "pending",
+      "tier": "standard",
+      "scope": [
+        "each of the five diagnosed and either fixed or deleted with a reason"
+      ],
+      "done_when": [
+        "pytest tests/unit tests/environment exits 0",
+        "no test is skipped or weakened to reach that"
+      ],
+      "verify": [
+        "./init.sh build"
+      ]
+    },
+    {
+      "id": "F10",
+      "name": "Rebuild the ablation pool on the current persona pool",
+      "description": "persona/datasets/vn-drivers-abl derives from the 42-persona pool that no longer exists, so any ablation run against it measures a pool the project has replaced.",
+      "dependencies": [
+        "F03"
+      ],
+      "status": "pending",
+      "tier": "lite",
+      "scope": [
+        "arms regenerated from the current pool",
+        "data/ablation labelled with which pool produced it"
+      ],
+      "done_when": [
+        "every arm's persona resolves inside the current pool",
+        "the committed control run is not silently overwritten"
+      ],
+      "verify": [
+        "bash data/ablation/run_arms.sh with OUT_DIR set"
+      ]
+    },
+    {
+      "id": "F11",
+      "name": "Vietnamese out of source, into locale packs",
+      "description": "347 lines across 36 files hold Vietnamese in source that is not a locale pack: hard-coded UI headings in scripts/render_pool_review.py, prompt and task text in scripts/generate_vita_utterance_tasks.py, persona names in test fixtures. The rule the repo states -- Vietnamese only as display text from a locale pack -- has never been enforced mechanically until now.",
+      "dependencies": [],
+      "status": "pending",
+      "tier": "standard",
+      "scope": [
+        "display strings moved to locale packs beside speech_directives.vi.json",
+        "test fixtures using data the test loads, not names typed into the file",
+        "a decision, written down, for each file where Vietnamese genuinely belongs"
+      ],
+      "done_when": [
+        "./init.sh lang exits 0 with no skip added for a source file",
+        "every remaining skip in scripts/lang-words.txt names data, never code"
+      ],
+      "verify": [
+        "./init.sh lang",
+        "node scripts/check-lang.mjs files"
+      ]
+    }
+  ],
+  "_adoption_note": "The harness was adopted mid-project, on 2026-09-11. F01-F04 were built and shipped before it existed; they are recorded at tier lite so the dossier gate does not demand a retrospective write-up of work whose evidence is already in git history and docs/persona/. Everything from F05 on goes through the full pipeline."
+}

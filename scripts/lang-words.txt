@@ -1,0 +1,106 @@
+# Project vocabulary for the English-only invariant (scripts/check-lang.mjs).
+#
+# WHY THIS FILE EXISTS. The validator ships with a general word list, but it was derived from one
+# project and cannot cover yours. Worse, the non-English syllables most common in commercial code are
+# often English words too, so they can never live in a shared list without lighting up every English
+# repo that uses this harness. That trade-off is yours to make, inside your own repo — which is what
+# this file is.
+#
+# WITHOUT IT the check still works, but only on prose. Identifiers and short comments built from
+# vocabulary it does not know will pass. If you want them caught, fill this in.
+#
+# FORMAT
+#   one word per line (or several separated by spaces), lowercase
+#   # starts a comment
+#   !file-threshold N   how many distinct words across ONE FILE count as non-English (default 6).
+#                       Raise it if a legitimate file trips — a character table, a localisation
+#                       fixture, a list of proper nouns.
+#   !skip <fragment>    exclude any path containing <fragment>. Use for files that are supposed to
+#                       hold other languages: translation catalogues, test fixtures, sample data.
+#
+# HOW TO BUILD THE LIST for your project, the same way the shipped one was built:
+#   1. take the words your team actually writes in comments, identifiers and commit messages
+#   2. drop any that are also English words — they cannot be signal, they would flag English text
+#   3. drop any that are plausible identifiers in your stack for unrelated reasons
+#   4. add what remains here, and run ./init.sh lang to see whether anything English now trips
+#
+# A word only matters in combination: three distinct hits on one line, or !file-threshold across a
+# file. One word alone is an identifier, not prose, and is never flagged.
+
+# --- add your project's vocabulary below ------------------------------------
+
+# ---------------------------------------------------------------------------
+# MatrAIx Persona 8B — what the English-only rule actually means here
+#
+# This repo studies Vietnamese drivers. Vietnamese is not a defect in it; it is
+# the subject. The invariant the project has always held is narrower than
+# "everything is English":
+#
+#     identifiers, keys, schema values, code and documentation are English.
+#     Vietnamese appears only as display text, and only from a locale pack.
+#
+# So the scan is pointed at the places that rule governs -- src/, scripts/,
+# tests/, packages/, environment/, docs/ -- and away from the places where
+# Vietnamese is the data. Each skip below says which of the two it is; a skip
+# without a reason is how this gate stops meaning anything.
+
+# Locale packs. Their entire purpose is to hold the Vietnamese that code may
+# not. persona/schema/dimensions.json stays in scope: its ids and values are
+# canonical English and a Vietnamese one there would be the real violation.
+!skip persona/schema/labels
+!skip speech_directives
+
+# Persona records and the survey layer. Display names, address registers and
+# free-text answers are respondent data.
+!skip persona/datasets
+!skip persona/curation/existing_data/raw
+
+# Task definitions: the questionnaires are administered in Vietnamese, so the
+# prompts a respondent reads are Vietnamese by necessity.
+!skip application/tasks
+
+# Run outputs and generated artifacts. Nobody hand-writes these, and the
+# utterances inside them are the measurement.
+!skip data/
+!skip jobs/
+!skip reports/
+!skip configs/jobs
+
+# Local environment file, gitignored, personal notes.
+!skip .env.local
+
+# A file may hold a few Vietnamese tokens without being Vietnamese -- a
+# docstring quoting a survey answer, a test asserting on rendered output. The
+# threshold separates that from a file actually written in Vietnamese.
+!file-threshold 12
+
+# Frontend and docs locale packs -- the same category as persona/schema/labels:
+# files whose job is to hold the non-English text the code may not.
+!skip src/i18n/messages
+!skip docs/i18n
+!skip README.pt-BR
+!skip README.vi
+
+# Lockfiles. The hits in them are fragments of hashes and package names that
+# happen to spell Vietnamese syllables, not text anyone wrote.
+!skip package-lock.json
+!skip uv.lock
+
+# The intent bank is the stimulus corpus: every "input" in it is a Vietnamese
+# utterance a driver would say. It is data in the same sense as data/.
+!skip vita-intent-bank
+
+# Standards and reference corpora. The questionnaire is the instrument as it is
+# administered, and the v1 persona standard quotes it; both are records of what
+# respondents were shown, not text anyone is free to rewrite into English.
+!skip persona/human_extraction/standards
+
+# Name and place lists. Vietnamese given names and the 34 administrative units
+# are data that happens to live in a .py file; there is no English form of
+# "Hung Yen" that would still be the thing being named.
+!skip persona/human_extraction/vn_names.py
+!skip persona/human_extraction/vn_localities.py
+!skip scripts/locales
+
+# Documents written in Vietnamese for a Vietnamese audience, marked as such.
+!skip .vi.md
